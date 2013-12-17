@@ -71,6 +71,7 @@ namespace Fanex.Affiliate.Controllers
                 IsPopUp = true,
                 LanguageCode = CurrentSession.Language
             };
+
             if (setting.IsParlayPopUp)
             {
                 if (criteria.RefNo != null)
@@ -178,7 +179,7 @@ namespace Fanex.Affiliate.Controllers
                 ? BetListService.GetRNGCasinoResult(criteria)
                 : new List<RNGCasinoResult>();
 
-            data = ExchangeRNGCasinoValues(data);
+            ExchangeRNGCasinoValues(data);
             var total = new List<RNGCasinoResult>();
 
             if (data != null)
@@ -358,10 +359,8 @@ namespace Fanex.Affiliate.Controllers
         /// </summary>
         /// <param name="originalData">Original data.</param>
         /// <returns>Exchanged data.</returns>
-        public List<RNGCasinoResult> ExchangeRNGCasinoValues(List<RNGCasinoResult> originalData)
+        public void ExchangeRNGCasinoValues(List<RNGCasinoResult> originalData)
         {
-            var exchangedData = new List<RNGCasinoResult>();
-
             foreach (var item in originalData)
             {
                 item.BeginBalance *= CurrentSession.ExchangeRate;
@@ -370,11 +369,7 @@ namespace Fanex.Affiliate.Controllers
                 item.Stake *= CurrentSession.ExchangeRate;
                 item.Win *= CurrentSession.ExchangeRate;
                 item.WinLoss *= CurrentSession.ExchangeRate;
-
-                exchangedData.Add(item);
             }
-
-            return exchangedData;
         }
 
         /// <summary>
@@ -393,7 +388,7 @@ namespace Fanex.Affiliate.Controllers
                 : new BetListResultsRNGCasinoDetailViewModel();
 
             model.Param = criteria;
-            model = ExchangeRNGCasinoDetailValues(model);
+            ExchangeRNGCasinoDetailValues(model);
             
             if (string.IsNullOrEmpty(group))
             {
@@ -413,33 +408,14 @@ namespace Fanex.Affiliate.Controllers
         /// </summary>
         /// <param name="originalData">Original data.</param>
         /// <returns>Exchanged data.</returns>
-        public BetListResultsRNGCasinoDetailViewModel ExchangeRNGCasinoDetailValues(BetListResultsRNGCasinoDetailViewModel originalData)
+        public void ExchangeRNGCasinoDetailValues(BetListResultsRNGCasinoDetailViewModel originalData)
         {
-            var exchangedData = originalData;
-            exchangedData.CasinoDetailList = new List<RNGCasinoResultWinlossDetail>();
-            /*foreach (var item in originalData.CasinoDetailHeaderList)
-            {
-                item.CoinSizeBaseCurrencyValue = ExchangeBaseCurrencyValue(item.CoinSize);
-                item.WinBaseCurrencyValue = ExchangeBaseCurrencyValue(item.Win);
-                item.WinResultBaseCurrencyValue = ExchangeBaseCurrencyValue(item.WinResult);
-                item.BetBaseCurrencyValue = ExchangeBaseCurrencyValue(item.Bet);
-                item.WinLossResultBaseCurrecyValue = ExchangeBaseCurrencyValue(item.WinLossResult);
-                item.CoinSizeAmount = ExchangeCoinSizeValue(item.CoinSizeAmount);
-                
-                exchangedData.CasinoDetailHeaderList.Add(item);
-            }*/
-
             foreach (var detailItem in originalData.CasinoDetailList)
             {
-                LogService.Error("TEST RNG - Winloss:" + detailItem.WinLoss + "#Exchanged: " + (detailItem.WinLoss * CurrentSession.ExchangeRate));
                 detailItem.Bet *= CurrentSession.ExchangeRate;
                 detailItem.Win *= CurrentSession.ExchangeRate;
                 detailItem.WinLoss *= CurrentSession.ExchangeRate;
-
-                exchangedData.CasinoDetailList.Add(detailItem);
             }
-
-            return exchangedData;
         }
 
         /// <summary>
