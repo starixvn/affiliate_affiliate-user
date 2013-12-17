@@ -309,7 +309,7 @@ namespace Fanex.Affiliate.Services.Impl
 
                 if (headTable != null && headTable.Rows.Count > 0 && detailTable != null)
                 {
-                    ProcessResultDetail(criteria, resultModel, headTable, detailTable);
+                    ProcessResultDetail(resultModel, headTable, detailTable);
                 }
             }
 
@@ -497,56 +497,51 @@ namespace Fanex.Affiliate.Services.Impl
         /// <summary>
         /// Get result from API.
         /// </summary>
-        /// <param name="metalModel">The metal model.</param>
+        /// <param name="criteria">The metal model.</param>
         /// <param name="casinoList">The casino result.</param>
         /// <param name="dataTable">The data table.</param>
         private static void GetResultFromAPI(
-            BetListResultsRNGCasinoCriteria metalModel,
+            BetListResultsRNGCasinoCriteria criteria,
             out List<RNGCasinoResult> casinoList,
             out DataTable dataTable)
         {
             casinoList = new List<RNGCasinoResult>();
             var casinoLib = new CasinoLibrary.SBAgent.Report();
-            dataTable = casinoLib.WinLossHandHistory(metalModel.RefNo, metalModel.BetType, RNGCasinoResult._CASINO_GROUP1, metalModel.IsShowPic);
+            dataTable = casinoLib.WinLossHandHistory(criteria.RefNo, criteria.BetType, RNGCasinoResult._CASINO_GROUP1, criteria.IsShowPic);
 
             if (dataTable == null)
             {
                 dataTable = casinoLib.RealTimeWinLossHandHistory(
-                metalModel.FromDate,
-                metalModel.ToDate,
-                metalModel.CustId,
+                criteria.FromDate,
+                criteria.ToDate,
+                criteria.CustId,
                 RNGCasinoResult._CASINO_GROUP1,
-                metalModel.IsShowPic);
+                criteria.IsShowPic);
             }
         }
 
         /// <summary>
         /// Process result detail.
         /// </summary>
-        /// <param name="metaModel">The metal model.</param>
         /// <param name="resultModel">The result.</param>
         /// <param name="headTable">The header data.</param>
         /// <param name="detailTable">The detail data.</param>
         private void ProcessResultDetail(
-            BetListResultsRNGCasinoDetailCriteria metaModel,
             BetListResultsRNGCasinoDetailViewModel resultModel,
             DataTable headTable,
             DataTable detailTable)
         {
-            // get exchange rate
             var betTime = Converter.ToDateTime(GetDataRowExtension(headTable.Rows[0], "BetTime"));
 
             foreach (DataRow dr in headTable.Rows)
             {
                 var headItem = MapDataToHeaderItem(dr);
-                
                 resultModel.CasinoDetailHeaderList.Add(headItem);
             }
 
             foreach (DataRow dr in detailTable.Rows)
             {
                 var detailItem = MapDataToDetailItem(dr);
-                
                 resultModel.CasinoDetailList.Add(detailItem);
             }
         }

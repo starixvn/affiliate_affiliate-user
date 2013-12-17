@@ -33,7 +33,7 @@ namespace Fanex.Affiliate.Utilities
         /// <param name="ticket">Affiliate ticket object.</param>
         /// <param name="ticketHelper">Ticket helper.</param>
         /// <param name="ticketData">List of ticket data.</param>
-        /// <param name="metaModel">Meta model.</param>
+        /// <param name="criteria">Meta model.</param>
         /// <param name="currencyID">Currency ID.</param>
         /// <param name="currencyName">Currency Name.</param>
         /// <returns>Ticket status text.</returns>
@@ -42,7 +42,7 @@ namespace Fanex.Affiliate.Utilities
             AffTicket ticket,
             ITicketHelper ticketHelper,
             List<ITicketData> ticketData,
-            BetListCriteria metaModel,
+            BetListCriteria criteria,
             int currencyID,
             string currencyName)
         {
@@ -58,7 +58,7 @@ namespace Fanex.Affiliate.Utilities
                     return statusNormalText + string.Format(
                         casinoHandTemplate,
                         ticket.RefNo,
-                        GetCasinoHandHistoryParam(ticket, metaModel, currencyID, currencyName),
+                        GetCasinoHandHistoryParam(ticket, criteria, currencyID, currencyName),
                         "Results");
                 case 72:
                 case 73:
@@ -73,22 +73,22 @@ namespace Fanex.Affiliate.Utilities
         /// Get Casino Hand History Parameter.
         /// </summary>
         /// <param name="ticket">LRF Ticket object.</param>
-        /// <param name="metaModel">Meta model object.</param>
+        /// <param name="criteria">Meta model object.</param>
         /// <param name="currencyID">Currency ID.</param>
         /// <param name="currencyName">Currency Name.</param>
         /// <returns>Parameter for Casino Hand History.</returns>
-        private static string GetCasinoHandHistoryParam(AffTicket ticket, BetListCriteria metaModel, int currencyID, string currencyName)
+        private static string GetCasinoHandHistoryParam(AffTicket ticket, BetListCriteria criteria, int currencyID, string currencyName)
         {
             var param = string.Empty;
             param += "?RefNo=" + ticket.RefNo;
-            param += "&FromDate=" + metaModel.FromDate;
-            param += "&ToDate=" + metaModel.ToDate;
+            param += "&FromDate=" + criteria.FromDate;
+            param += "&ToDate=" + criteria.ToDate;
             param += "&SystemId=" + (string.IsNullOrEmpty(ticket.UserName) ? string.Empty : ticket.UserName);
             param += "&ExternalId=" + (string.IsNullOrEmpty(ticket.ExternalId) ? string.Empty : ticket.ExternalId);
-            param += "&CustId=" + (ticket.CustId == 0 ? metaModel.CustId : ticket.CustId);
+            param += "&CustId=" + (ticket.CustId == 0 ? criteria.CustId : ticket.CustId);
             param += "&CurrencyId=" + currencyID.ToString();
             param += "&CurrencyName=" + currencyName;
-            param += "&BaseCurrency=" + metaModel.BaseCurrency;
+            param += "&BaseCurrency=" + criteria.BaseCurrency;
 
             return param;
         }

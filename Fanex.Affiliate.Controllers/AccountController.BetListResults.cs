@@ -35,7 +35,13 @@ namespace Fanex.Affiliate.Controllers
     public partial class AccountController
     {
         #region Variables
+
+        private const int MIXPARLAY = 9;
+
+        private const int SYSTEMPARLAY = 29;
+
         private string _htmlResult;
+
         #endregion
 
         #region BetList.Results
@@ -67,7 +73,7 @@ namespace Fanex.Affiliate.Controllers
             {
                 SportType = sportType,
                 IsOutRight = criteria.IsOutRight.HasValue && criteria.IsOutRight.Value > 0,
-                IsParlayPopUp = criteria.Bettype == 9 || criteria.Bettype == 29,
+                IsParlayPopUp = criteria.Bettype == MIXPARLAY || criteria.Bettype == SYSTEMPARLAY,
                 IsPopUp = true,
                 LanguageCode = CurrentSession.Language
             };
@@ -165,11 +171,6 @@ namespace Fanex.Affiliate.Controllers
         [HttpGet]
         public ActionResult RNGCasinoData(BetListResultsRNGCasinoCriteria criteria)
         {
-            if (criteria == null)
-            {
-                return View("~/Views/Shared/Account/BetListResults.cshtml");
-            }
-
             var customerInfoBetlist = _cacheInstance.Get<CustomerInfoBetList>(CustomerInfoBetList);
             criteria.BaseCurrency = criteria.BaseCurrency ?? string.Empty;
             criteria.ExternalId = customerInfoBetlist.Username;
@@ -358,7 +359,6 @@ namespace Fanex.Affiliate.Controllers
         /// Exchange RNG Casino Values.
         /// </summary>
         /// <param name="originalData">Original data.</param>
-        /// <returns>Exchanged data.</returns>
         public void ExchangeRNGCasinoValues(List<RNGCasinoResult> originalData)
         {
             foreach (var item in originalData)
@@ -407,7 +407,6 @@ namespace Fanex.Affiliate.Controllers
         /// Exchange RNG Casino detail Values.
         /// </summary>
         /// <param name="originalData">Original data.</param>
-        /// <returns>Exchanged data.</returns>
         public void ExchangeRNGCasinoDetailValues(BetListResultsRNGCasinoDetailViewModel originalData)
         {
             foreach (var detailItem in originalData.CasinoDetailList)
