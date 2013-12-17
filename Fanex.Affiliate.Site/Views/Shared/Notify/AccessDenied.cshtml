@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = string.Format(Lang.AffiliateTitle, AppSettings.AffiliateName);
+    Layout = string.Format("../Layout/Layout{0}/_Layout_Notify.cshtml", AppSettings.Layout);
+}
+    
+@section title
+{
+    Access Denied
+}
+<div class="offset2 span3">
+    <div class="error ic-maintenance">
+    </div>
+</div>
+
+<div class="span5">
+    <ul class="notify-content">
+        @foreach (var lang in AppSettings.BaseLanguages)
+        {
+            switch (lang.LanguageId)
+            {
+                case "zh-TW":
+                    <li>訪問被拒絕! <br />
+                        在此行動中，您沒有權限. <br />
+                        請聯絡管理員.</li>
+                    break;
+                    
+                 case "zh-CN":
+                    <li>访问被拒绝! <br />
+                        在此行动中，您没有权限. <br />
+                        请联络管理员.</li>
+                    break;
+
+                 case "en-US":
+                    <li>Access Denied! <br />
+                        You don't have permission on this action. <br />
+                        Please contact your administrator.</li>
+                    break;
+
+                 case "id-ID":
+                    <li>Akses ditolak! <br />
+                        Anda tidak memiliki izin pada tindakan ini. <br />
+                        Harap menghubungi administrator Anda!</li>
+                    break;
+
+                case "th-TH":
+                    <li>ปฏิเสธการเข้าใช้! <br />
+                        คุณไม่ได้รับสิทธิ์ในการดำเนินการนี้. <br />
+                        กรุณาติดต่อผู้ดูแล.</li>
+                    break;
+                    
+               case "vi-VN":
+                    <li>Xin lỗi! <br />
+                        Bạn không có quyền thực hiện thao tác này. <br />
+                        Vui lòng liên hệ quản trị viên của chúng tôi.</li>
+                    break;
+                case "ko-KR":
+                    <li>접근 불가! <br />
+                        이 작업에 대한 권한이 없습니다. <br />
+                        관리자에게 문의하십시오.</li>
+                    break;
+            }
+        }
+    </ul>
+</div>

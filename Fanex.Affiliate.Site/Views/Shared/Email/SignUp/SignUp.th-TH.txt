@@ -1,0 +1,14 @@
+﻿<div>
+  เรียน @Model.FirstName,<br /><br />
+
+  ขอบคุณที่ได้สมัครเพื่อขอเป็นพันธมิตรกับทาง @Model.AffiliateName<br /><br />
+
+  ผู้จัดการฝ่ายพันธมิตรของเราจะติดต่อหาคุณ ภายในเวลา 3 วันทำการเพื่อแจ้งสถานะการสมัครของคุณ<br /><br />
+
+  หากคุณมีคำถามหรือต้องการความช่วยเหลือกรุณาอย่าลังเลที่จะติดต่อเรา <a href="mailto:@Model.MailContact">@Model.MailContact</a>.<br /><br />
+
+  ขอแสดงความนับถือ<br /><br />
+  
+  ทีมงานพันธมิตร @Model.AffiliateName<br />
+  <a href="mailto:@Model.MailContact">@Model.MailContact</a>
+</div>

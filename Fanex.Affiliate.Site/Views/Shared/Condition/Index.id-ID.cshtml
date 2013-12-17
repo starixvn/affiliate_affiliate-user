@@ -1,0 +1,259 @@
+﻿@{
+    ViewBag.Title = Lang.TermsConditions;
+    Layout = @String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
+}
+
+@{
+    var classThai = AppSession.Language.Equals("th-TH") ? AppSession.Language : string.Empty;
+    var classType = string.Format("class='span12 box-insite {0}'", classThai);
+}
+
+<div @Html.Raw(classType)>
+    <div class="top">
+        <div class="in-top">Terms & Conditions</div>
+        <div class="in-right">
+        </div>
+    </div>
+    <div class="content">
+        <div class="block">
+            <div class="content-block">
+                @string.Format("Untuk menjadi afiliasi dari Program Afiliasi kami Anda harus melakukan registrasi sebagai afiliasi dengan mengisi formulir online. Dengan mendaftar sebagai afiliasi dari Program Afiliasi {0} atau mengunduh kode banner dan menaruhnya pada situs web, atau pada beberapa situs web Anda, pesan email, atau format lainnya, Anda dianggap telah setuju untuk terikat oleh semua persyaratan dan ketentuan yang diuraikan dalam perjanjian ini.", AppSettings.SystemName)
+                <p></p>
+                @string.Format("JIKA ANDA MEMUTUSKAN UNTUK TIDAK MENERIMA SEMUA PERSYARATAN DAN KETENTUAN PERJANJIAN INI, JANGAN MENGUNDUH KODE BANNER, KODE TAUTAN TEKS, SALINAN PROMOSI, ATAU INFORMASI APA PUN YANG BERKAITAN DENGAN {0}.", AppSettings.SystemName)
+                <p></p>
+                Kami berhak mengakhiri Perjanjian ini jika kami memutuskan bahwa situs Anda tidak sesuai. Situs yang tidak sesuai dapat mencakup hal yang mempromosikan materi yang secara eksplisit bersifat seksual, ditargetkan kepada anak-anak atau di bawah usia, mempromosikan kekerasan, diskriminasi berdasarkan suku bangsa, jenis kelamin, agama, kebangsaan, kecacatan, orientasi seksual, mempromosikan aktivitas ilegal, atau melanggar hak kekayaan intelektual ("Hak IP").
+                <p></p>
+                @string.Format("Sebagai kebijakan, {0} tidak akan menerima permohonan online untuk pendaftaran sebagai afiliasi jika Anda mengiklankan dengan alamat Internet Protocol (IP) yang berlokasi di, atau berasal dari dalam yurisdiksi geografis Kerajaan Inggris.", AppSettings.SystemName)
+                <p></p>
+                @string.Format("Perjanjian ini merincikan semua persyaratan dan ketentuan keanggotaan Program Afiliasi {0}. \"Anda\",\"afiliasi\" merujuk kepada Anda, individu, grup, atau entitas korporat yang mendaftar ke kami sebagai afiliasi berdasarkan Perjanjian ini, dan akan dianggap mencakup setiap karyawan, pejabat, direktur, pemegang saham, pemilik, pihak pengendali dan individu serta entitas yang terafiliasi (dan \"milik Anda\" memiliki makna yang bersangkutan).", AppSettings.SystemName)
+            </div>
+        </div>
+        <div class="block">
+             <div class="title-block">
+                1. Tanggung Jawab Afiliasi <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <ol class="content-block">
+                <li>@string.Format("Sebagai Afiliasi, Anda bertanggung jawab untuk mempromosikan {0} dengan menayangkan iklan, banner dan URL pelacakan pada situs web, e-mail Anda, atau komunikasi lainnya.", AppSettings.SystemName)</li> 
+                <li>@string.Format("Anda akan menyetujui untuk mendaftar dan memelihara informasi kontak yang benar dan jujur pada {0}.", AppSettings.SystemName)</li>
+                <li>@string.Format("Anda hanya akan menampilkan isi dan topik pada situs Anda yang telah disetujui sebelumnya secara tertulis oleh {0}. Isi yang dianggap tidak sesuai berdasarkan kebijaksanaan kami sendiri akan mengakibatkan segera dihentikannya Perjanjian afiliasi.", AppSettings.SystemName)</li>
+                <li>@string.Format("Anda akan sepenuhnya bertanggung jawab untuk pengembangan, pengoperasian, pemeliharaan situs Anda dan untuk semua materi yang muncul pada situs Anda dan atas biaya Anda sendiri. Misalnya, Anda akan bertanggung jawab sepenuhnya untuk memastikan bahwa materi yang ditayangkan pada situs Anda tidak mencemarkan, atau ilegal, atau melanggar hak IP pihak ketiga. Karena kami tidak dapat mengendalikan situs Anda sendiri, kami melepaskan semua hak tanggung jawab untuk masalah ini. Selanjutnya, Anda akan membayar ganti-rugi dan tidak membebankan tanggung jawab kepada kami terhadap semua klaim, kerusakan, dan pengeluaran (termasuk, namun tidak terbatas pada biaya pengacara hukum), yang terkait dengan pengembangan, pengoperasian, pemeliharaan, dan konten situs Anda. Ketetapan atas pembayaran ganti rugi ini adalah tanpa prasangka bagi tindakan atau klaim terpisah terhadap Anda berdasarkan undang-undang yang berlaku.")</li>
+            </ol>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                2. Panduan Afiliasi <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <ol class="content-block">
+                <li>@string.Format("Anda hanya boleh menggunakan materi kreatif yang disetujui dan diberi tanda secara layak, yang kami sediakan untuk mempromosikan {0}. Pariwara dan endosemen pribadi yang diperbolehkan, tetapi semua materi yang tidak dirancang oleh {0} harus disetujui secara tertulis; persetujuan tersebut tidak akan ditunda semena-mena.", AppSettings.SystemName)</li>
+                <li>@string.Format("Anda tidak boleh memodifikasi, atau menggunakan untuk tujuan apa pun, hak IP, banner, atau materi kreatif lainnya, yang disediakan oleh kami, tanpa izin tertulis sebelumnya dari {0}. Semua pemberitahuan hak cipta atau hak IP pada setiap materi yang disediakan atau disetujui oleh {0} harus tetap demikian, dan tidak boleh dimodifikasi atau ditiadakan.", AppSettings.SystemName)</li>
+                <li>@string.Format("Dengan menyetujui untuk ikut serta pada Program Afiliasi {0}, Anda menyetujui untuk mengunduh spanduk, teks atau materi promosi dan menempatkannya pada situs Anda, menggunakannya dalam surat elektronik, pemasaran direk dengan menggunakan URL afiliasi Anda atau cetakan. Metode-2 ini merupakan metoda satu-satunya yang disetujui dimana Anda dapat mengiklankan produk-2 atau layanan-2 kami.", AppSettings.SystemName)</li>
+                <li>Banner dan tautan tidak boleh ditempatkan pada e-mail yang tidak diminta, posting grup berita yang tidak diotorisasi, atau chat room, atau melalui penggunaan "bots". Trafik yang dibuat secara ilegal tidak akan dihitung dan dapat menyebabkan penutupan rekening afiliasi Anda oleh kami.</li>
+                <li>@string.Format("Kami akan segera mengakhiri Perjanjian ini jika terdapat bentuk spamming apa pun atas nama Anda, atau jika Anda mendiskreditkan {0} melalui iklan palsu, secara tertulis atau ucapan kata-kata.", AppSettings.SystemName)</li>
+                <li>@string.Format("Anda tidak akan mengajukan klaim, representasi, atau memberikan jaminan yang berkaitan dengan {0} dan Anda tidak memiliki kewenangan untuk, dan tidak akan mengikat {0} terhadap kewajiban apa pun.", AppSettings.SystemName)</li>
+                <li>@string.Format("Tanpa persetujuan tertulis sebelumnya dari kami, Anda hanya dapat menggunakan banner dan tautan yang kami setujui, dan tidak dapat mengubah penampilannya, maupun mengirimkan materi promosi apa pun kepada kami. Penampilan dan sintaks tautan transfer hypertext dirancang dan ditentukan oleh kami, dan menjadi satu-satunya representasi {0} yang diotorisasi dan diizinkan.", AppSettings.SystemName)</li>
+                <li>@string.Format("Anda tidak akan secara sadar menarik keuntungan dari trafik yang diketahui atau yang diduga tidak dihasilkan dengan niat baik, terlepas apakah hal itu tidak menyebabkan, atau memang menyebabkan kerugian terhadap {0}. Jika aktivitas penipuan timbul melalui seseorang yang diarahkan ke situs melalui tautan Anda, kami berhak setiap saat menarik kembali komisi yang dibayarkan kepada Anda. Keputusan kami dalam hal ini adalah final dan tidak ada surat-menyurat yang akan dilakukan. Kami berhak menahan semua jumlah yang terutang kepada Anda berdasarkan Perjanjian ini jika kami secara wajar memiliki alasan untuk meyakini bahwa trafik tersebut terjadi dengan sepengetahuan Anda. Meskipun, seandainya Anda tidak menyadari telah menghasilkan trafik tersebut, kami berhak menahan komisi afiliasi sehubungan dengan hal tersebut.", AppSettings.SystemName)</li>
+                <li>@string.Format("Afiliasi dilarang bermain di buku olahraga apa pun yang dipromosikan oleh {0} melalui tautan afiliasi mereka sendiri, atau dari tautan afiliasi rekanan yang berbagi semua atau sebagian komisi dengan afiliasi atau pihak ketiga. Hal ini mencakup setiap orang atau grup permainan yang menjadi sumber penerimaan kompensasi Afiliasi atau remunerasi dalam jenis apa pun. Jika terjadi pelanggaran atas bagian ini, {0} dan masing-masing situs web yang sudah dimainkan, akan berhak menggugurkan semua permainan dan mengeliminasi setiap perolehan komisi yang berlaku dari permainan tersebut, dan mengeliminasi afiliasi dari Program Afiliasi kami yang kemudian memutuskan Perjanjian ini dan menggugurkan setiap permainan mendatang di {0}.", AppSettings.SystemName)</li>
+                <li>@string.Format("Anda tidak diperkenankan untuk secara bersamaan menggunakan kedua hubungan afiliasai dan rujukan dengan {0}. Pelanggaran atas ketentuan ini memberi hak pada {0} untuk secara sepihak mengakhiri baik hubungan afiliasi dan/atau rujukan atau keduanya. Hubungan rujukan mengacu kepada hubungan dengan {0} berdasarkan Program Refer-A-Friend (Rujuk-Seorang-Teman) (sebagaimana tercantum dan tersedia di Situs Web). ", AppSettings.SystemName)
+                    
+                </li>
+            </ol>
+        </div>
+        <div class="block">
+             <div class="title-block">
+                3. Pemberian Tanda Afiliasi <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <ol class="content-block">
+                <li>@string.Format("Anda hanya bertanggung jawab untuk mengarahkan pelanggan ke situs web {0}.", AppSettings.SystemName)</li>
+                <li>@string.Format("Hanya pelanggan yang diberi tanda secara layak, yang dapat ditetapkan ke afiliasi. Seandainya tanda afiliasi tidak disisipkan sebagaimana mestinya, atau tidak diterima dengan benar oleh server web {0}, pendaftaran pelanggan dan pembelian yang dihasilkan tidak akan ditetapkan ke afiliasi. Oleh sebab itu, afiliasi bertanggung jawab untuk memastikan bahwa tautan diberi tanda yang sesuai.", AppSettings.SystemName)</li>
+            </ol>
+        </div>
+        <div class="block">
+             <div class="title-block">
+                4. Berbagi & Pembayaran Pendapatan <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <ol class="content-block">
+                <li>@Html.Raw(string.Format("{0} akan membayar sebuah pembagian pendapatan atas Penghasilan Berkomisi yang didapat dari setiap nasabah, sebagamana ditetapkan oleh struktur pembagian komisi Program Afiliasi {0}, dengan ketentuan bahwa Anda sebagai afiliasi memiliki, setidaknya sebuah nomor Anggota Taruhan Aktif tertentu dalam akun Anda, dalam salah satu bulan kalender. Mohon dicatat, bahwa kelompok-2 komisi berbeda memiliki nomor-2 Anggota Taruhan Aktif tertentu yang berbeda. Silahkan hubungi administrator melalui {1} untuk rincian lebih lanjut.", AppSettings.SystemName, string.Format("<a href=mailto:{0}>{0}</a>", AppSettings.MailContact)))</li>
+                <li>@Html.Raw(string.Format("Anggota Taruhan Aktif merujuk kepada pelanggan yang masing-masing mencapai jumlah omzet taruhan minimum yang setara dengan ({0}{1}) dalam bulan kalender tertentu. Kami dapat menawarkan mata uang lebih banyak ke dalam sistem, mohon hubungai administrator di {2}", AppSettings.DefaultCurrencySymbol, AppSettings.MinimumWithdrawalAmount,
+                    string.Format("<a href=mailto:{0}>{0}</a>", AppSettings.MailContact)))</li>
+                <li>@string.Format("Penghasilan Berkomisi dihitung sebagai keuntungan {0}, dikurangi pengembalian, uang tambahan, penawaran uang cuma-2 dan insentif lain yang ditawarkan kepada nasabah, yang berasal dari setidaknya satu nomor Anggota Taruhan Aktif tertentu dalam satu bulan kalender. ", AppSettings.SystemName)</li>
+                <li>Tolak Bayar: Pemegang kartu kredit menemukan transaksi tidak lazim yang dilakukan pada Kartu Kredit/Debitnya, yang tidak diotorisasi olehnya. Pemegang kartu kredit kemudian meminta banknya untuk mengembalikan tagihan ini. Tolak bayar berkaitan dengan penggunaan penipuan oleh pihak ketiga pada kartu yang dimiliki oleh pemegang kartu kredit, atau nomor kartunya.</li>
+                <li>@string.Format("\"Keuntungan Kotor {0}\" adalah jumlah total dari seluruh nilai taruhan oleh setidaknya satu nomor Anggota Taruhan Aktif tertentu dalam satu bulan kalender, dikurangi seluruh nilai yang dimenangkan oleh atau dibayarkan kepada Anggota Taruhan Aktif Anda.", AppSettings.SystemName)</li>
+                <li>Tolak Bayar adalah jumlah yang dipotong apabila pelanggan yang juga merupakan pemegang kartu kredit menemukan permintaan pembayaran yang tidak diotorisasi serta tidak lazim, yang dibebankan pada Kartu Kredit/Debit pelanggan, dan pemegang kartu kredit meminta bank untuk mengembalikan tagihan-tagihan ini. Tolak bayar dapat berkaitan dengan, tetapi tidak terbatas pada penggunaan penipuan oleh pihak ketiga pada kartu yang dimiliki pemegang kartu kredit, atau nomor kartunya.</li>
+                <li>Seandainya pemain memproses tolak bayar, pendapatan yang dipersengketakan atau tolak bayar yang Anda buat sendiri akan disita dan oleh sebab itu akan dipotong dari total saldo yang terutang kepada Anda untuk bulan yang sedang berjalan. Jika pemotongan dari pendapatan yang terakumulasi ini melampaui jumlah yang saat ini terutang, maka saldo Anda akan kembali ke saldo negatif, dan Anda harus memperoleh pendapatan untuk menutup biaya tolak bayar sebelum Anda dapat mulai memperoleh lagi pendapatan.</li>
+                <li>@string.Format("Tolak bayar akan tetap jatuh tempo sampai pendapat yang dihasilkan oleh para pemain lain dari pihak Anda sudah melunasi jumlah yang jatuh tempo itu. Anda membenarkan bahwa {0} hanya dapat membayar persentase dari profit aktual mereka, bukan pendapatan yang palsu.", AppSettings.SystemName)</li>
+                <li>@string.Format("Bonus termasuk uang komplimen, penawaran uang gratis, kredit, bonus pendaftaran, jumlah promosi dan insentif lain yang dikreditkan ke rekening pelanggan. Karena pelanggan belum secara aktual membeli jumlah ini, {0} juga tidak dapat membayarkan komisi.", AppSettings.SystemName)</li>
+                <li>@string.Format("Bila Anda tidak berhasil untuk mendapatkan Penghasilan Berkomisi sesuai dengan Klausul 4.1, 4.2, dan 4.3 di atas karena gagal memiliki setidaknya nomor Anggota Taruhan Aktif tertentu dalam salah satu bulan, Anda diberikan (atas kebijaksanaan {0} sendiri) tenggang waktu sebanyak dua (2) bulan untuk dapat memenuhinya. Pada saat terpenuhi, komisi Anda untuk masa tersebut yang tidak melebihi tiga (3) bulan berturut turut akan dikonsolidasikan untuk menjadi Keuntungan Berkomisi Anda untuk tenggang waktu yang sama. (atas kebijaksanaan {0} sendiri)", AppSettings.SystemName)</li>
+                <li>@string.Format("Perolehan yang dapat diberikan komisi akan tunduk pada komisi yang dihitung menggunakan struktur komisi Program Afiliasi {0} yang diberlakukan sewaktu-waktu.", AppSettings.SystemName)</li>
+                <li>Perolehan negatif dipindahkan ke bulan berikutnya. Seandainya afiliasi memiliki saldo positif di akhir bulan, pembayaran akan dikeluarkan jika memenuhi persyaratan minimum, dan komisi akan dibayar atas saldo positif.</li>
+                <li>Pendapatan Komisi dari Affiliasi dihitung berdasarkan struktur komisi yang akan didapatkan pada semua transaksi yang dilakukan oleh pelanggan, selama affiliasi tetap menjadi anggota dari program Affiliasi.</li>
+                <li>@string.Format("Affiliasi tidak akan mendapatkan komisi dari pendapatan anggota atau keuntungan/kerugian anggota yang dihasilkan atau berhubungan dengan pemain-pemain balap kuda atau casino menggunakan website {0}.", AppSettings.SystemName)</li>
+            </ol>
+        </div>
+        <div class="block">
+             <div class="title-block">
+                5. Kebijakan & Kerahasiaan <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <ol class="content-block">
+                <li>@string.Format("{0} mengambil alih kepemilikan pelanggan pada saat kontak pertama dengan pelanggan. Anda, sebagai afiliasi, bertindak sebagai agen perujukan untuk {0}. Kami berhak menolak pelanggan (atau menutup rekening mereka) jika perlu untuk mematuhi persyaratan apa pun yang dapat kami terapkan secara berkala.", AppSettings.SystemName)</li>
+                <li>Dengan membuka rekening pada pelanggan, maka orang atau entitas itu akan menjadi Pelanggan kami dan, dengan sendirinya, semua peraturan, kebijakan dan prosedur operasi Klien akan berlaku bagi mereka.</li>
+                <li>Selama masa berlaku Perjanjian ini, Anda mungkin dipercayai untuk menerima informasi rahasia yang berkaitan dengan bisnis, operasi, atau teknologi yang mendasari program afiliasi kami (yang mencakup, misalnya, uang perujukan yang Anda peroleh berdasarkan program). Anda setuju untuk tidak mengungkapkan atau menggunakan informasi rahasia kepada orang ketiga atau pihak luar, kecuali Anda sudah mendapatkan izin tertulis sebelumnya dari kami, dan bahwa Anda akan menggunakan informasi rahasia hanya untuk tujuan yang diperlukan untuk memajukan lebih jauh tujuan Perjanjian ini. Kewajiban Anda sehubungan dengan informasi rahasia akan terus berlaku meskipun Perjanjian ini sudah berakhir.</li>
+            </ol>
+        </div>
+        <div class="block">
+             <div class="title-block">
+                6. Lisensi Terbatas <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <ol class="content-block">
+                <li>Dengan ini kami memberikan kepada Anda, lisensi pribadi, non-eksklusif, tidak dapat dialihkan yang sifatnya terbatas, selama jangka waktu Perjanjian ini, untuk menggunakan merek dagang kami (yang selanjutnya dilisensikan oleh kami, dari pemiliknya), semata-mata berkenaan dengan penayangan banner pada situs Anda.</li>
+                <li>Berdasarkan Perjanjian ini, kami memberi Anda hak non-eksklusif untuk mengarahkan pelanggan ke situs dan layanan kami, sesuai dengan persyaratan dan ketentuan Perjanjian ini. Perjanjian ini tidak memberi Anda hak eksklusif atau hak istimewa untuk membantu kami dalam penyediaan layanan yang muncul dari perujukan Anda, dan kami berhak untuk membuat kontrak dengan, dan memperoleh bantuan dari pihak lain setiap saat untuk melakukan layanan yang sifatnya sama atau serupa seperti yang Anda miliki. Anda tidak memiliki klaim atas biaya perujukan atau kompensasi lainnya atas bisnis yang didapatkan oleh, atau melalui orang, atau entitas selain Anda.</li>
+                <li>Lisensi ini tidak dapat disub-lisensikan, ditetapkan, atau dialihkan oleh Anda. Hak Anda untuk menggunakan merek dagang terbatas pada, dan hanya muncul dari lisensi ini untuk menggunakan banner. Anda tidak akan memaksakan ketidak-absahan, keadaan yang tidak dapat menguatkan, atau menyanggah kepemilikan merek dagang dalam tindakan, atau persidangan jenis apa pun, atau yang bersifat apa pun, dan tidak akan mengambil tindakan apa pun yang dapat menimbulkan prasangka atas hak pelisensi kami dalam merek dagang, menyerahkan generik yang sama, atau melemahkan keabsahan hak mereka, atau mengurangi itikad baik mereka yang terkait.</li>
+                <li>Kami berhak mencabut lisensi ini setiap saat, dan lisensi ini akan dianggap dicabut saat mengakhiri Perjanjian ini, untuk alasan apa pun.</li>
+            </ol>
+        </div>
+        <div class="block">
+             <div class="title-block">
+                7. Tanggung Jawab Hukum <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <ol class="content-block">
+                <li>Kepemilikan dan konten situs kami tetap milik kami masing-masing, dan tidak akan dianggap telah dialihkan kepada afiliasi melalui tindakan atau penghilangan apa pun sehubungan dengan Perjanjian afiliasi.</li>
+                <li>Kepemilikan, konten dan kewajiban situs afiliasi merupakan tanggung jawab afiliasi semata-mata. Anda akan sepenuhnya bertanggung jawab untuk pengembangan, pengoperasian, pemeliharaan situs Anda dan untuk semua materi yang muncul pada situs Anda dan atas biaya Anda sendiri.</li>
+                <li>Anda akan membayar ganti-rugi dan tidak membebankan tanggung jawab kepada kami terhadap semua klaim, kerusakan, dan pengeluaran (termasuk, namun tidak terbatas pada biaya pengacara hukum), yang terkait dengan pengembangan, pengoperasian, pemeliharaan, dan konten situs Anda. Ketetapan atas pembayaran ganti rugi ini adalah tanpa prasangka bagi tindakan atau klaim terpisah terhadap Anda berdasarkan undang-undang yang berlaku.</li>
+                <li>Afiliasi bertanggung jawab untuk mengikuti penautan dan prosedur pemberian tanda yang benar untuk memastikan pelacakan pelanggan baru dan pembayaran.</li>
+                <li>Penayangan banner & konten pada situs afiliasi adalah tanggung jawab afiliasi. Afiliasi harus memastikan bahwa konten kami ditayangkan sesuai dengan ketentuan yang diberikan.</li>
+                <li>Afiliasi harus memastikan bahwa materi apa pun yang ditayangkan pada situs mereka adalah sah dan tidak melanggar hak cipta atau hak apa pun.</li>
+                <li>Kami dapat memodifikasi persyaratan dan ketentuan apa pun yang terkandung dalam Perjanjian ini, setiap saat dan atas kebijaksanaan kami semata-mata, dengan menayangkan pemberitahuan perubahan atau perjanjian baru di situs kami. Modifikasi dapat mencakup, misalnya, perubahan yang mencakup uang perujukan yang tersedia, jadwal iuran, prosedur pembayaran, dan peraturan program perujukan. JIKA ADA MODIFIKASI YANG TIDAK DAPAT ANDA TERIMA, SATU-SATUNYA JAMINAN BAGI ANDA ADALAH MENGAKHIRI PERJANJIAN INI. KEBERLANJUTAN PARTISIPASI ANDA DALAM PROGRAM SETELAH KAMI MENAYANGKAN PEMBERITAHUAN PERUBAHAN, ATAU PERJANJIAN BARU PADA SITUS KAMI, AKAN MENAFSIRKAN PENGIKATAN ATAS PENERIMAAN PERUBAHAN DIMAKSUD.</li>
+                <li>Spam - Kami tidak mentolerir Spam.
+                    <ol type="a">
+                        <li>@string.Format("Setiap bentuk Spam akan menyebabkan rekening Anda ditinjau ulang dan semua dana yang terutang akan ditahan sambil menunggu penyelidikan pada rekening Anda. Anda harus mengetahui bahwa klien kami dibebani pengeluaran yang terjadi untuk menangani masalah surat Spam dan biaya tersebut akan dipotong dari rekening Anda jika klien kami meminta perlindungan ini. Dalam hal ini, jumlah yang ditentukan oleh klien yang bersangkutan akan adil dan dianggap final serta dapat diterima berdasarkan niat baik, dan jumlah tersebut akan dipungut sesuai hukum dan dianggap telah diterima oleh Anda sendiri sebagai hal yang adil dan wajar, dan sebagaimana yang disepakati melalui pendaftaran sebagai afiliasi {0}.", AppSettings.SystemName)</li>
+                        <li>Jika pengeluaran ini tidak tercakup oleh dana dalam rekening Anda, kami berhak menyelidiki cara lain untuk memperoleh pembayaran, misalnya: jika rekening Anda mencatat biaya pembelian, kami akan menahan pembayaran komisi untuk rekening ini sampai jumlah biaya pembelian dikembalikan ke dalam rekening. Seandainya rekening Anda tidak aktif, tetapi menghasilkan profit melalui pembayaran komisi, maka kami berhak menuntut pembayaran dari pemegang rekening.</li>
+                        <li>Anda dan kami adalah kontraktor mandiri, dan tidak ada satupun di dalam Perjanjian ini yang akan menciptakan kemitraan, usaha patungan, keagenan, waralaba, perwakilan penjualan, atau hubungan kepegawaian apa pun di antara kedua belah pihak. Anda tidak berwenang untuk membuat atau menerima penawaran atau representasi apa pun atas nama kami. Anda tidak akan membuat pernyataan apa pun, baik pada situs Anda atau lainnya, yang secara wajar akan bertentangan dengan apa pun dalam paragraf ini.</li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+        <div class="block">
+             <div class="title-block">
+                8. Lain-lain <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <ol class="content-block">
+                <li>
+                    Kemampuan Penugasan dan Ketahanan <br />
+                    Anda tidak boleh menetapkan Perjanjian ini, melalui tindakan hukum atau lainnya, tanpa izin tertulis sebelumnya dari kami. Berdasarkan pembatasan itu, Perjanjian ini akan mengikat, bertahan demi kepentingan, dan diberlakukan terhadap Anda dan kami serta masing-masing penerus dan pihak yang ditunjuk.
+                </li>
+                <li>
+                    Tidak Dikesampingkan <br />
+                    Kegagalan kami untuk mewajibkan Anda mematuhi secara ketat setiap ketetapan Perjanjian ini, tidak akan ditafsirkan sebagai pengesampingan hak kami untuk selanjutnya memberlakukan ketetapan tersebut, atau ketetapan lain apa pun dari Perjanjian ini. KAMI TIDAK MENGIZINKAN MAUPUN MENGAKUI MODIFIKASI, PENAMBAHAN, PENGHAPUSAN, ATAU PENYISIPAN PADA PERJANJIAN INI. Tidak ada karyawan, pejabat, atau agen kami yang dapat secara lisan mengganti, memodifikasi, atau mengesampingkan ketetapan apa pun pada Perjanjian ini.
+                </li>
+                <li>
+                    Ganti-rugi/Upaya Hukum <br />
+                    Hak dan upaya hukum kami di sini tidak akan sama-sama bersifat eksklusif, mis., pelaksanaan atas satu atau beberapa ketetapan Perjanjian ini tidak akan menghalangi pelaksanaan ketetapan lainnya yang manapun. Anda menyatakan, mengkonfirmasi, dan menyetujui, bahwa jumlah ganti-rugi mungkin tidak memadai untuk pelanggaran atau ancaman pelanggaran Perjanjian ini, dan jika terjadi pelanggaran, atau ancaman pelanggaran terhadap ketetapan apa pun dari Perjanjian ini, hak dan kewajiban masing-masing pihak dapat diberlakukan oleh pelaksanaan, perintah, atau perbaikan lainnya yang setara. Tidak ada satupun yang terkandung dalam Perjanjian ini akan membatasi, atau mempengaruhi hak hukum kami yang manapun, atau yang ditetapkan lain, untuk pelanggaran atau ancaman pelanggaran ketetapan apa pun dari Perjanjian ini, yang menjadi tujuan ketetapan ini untuk menjelaskan bahwa hak dan kewajiban kami masing-masing akan diberlakukan setara serta sesuai hukum atau bila ditetapkan lain.
+                </li>
+                <li>
+                    Keterpisahan / Pengesampingan <br />
+                    Bilamana memungkinkan, setiap ketetapan Perjanjian ini akan ditafsirkan sedemikian rupa agar efektif dan valid berdasarkan hukum yang berlaku, tetapi jika ketetapan apa pun dari Perjanjian ini ditahan karena tidak valid, ilegal atau tidak dapat diberlakukan dalam hal apa pun, maka ketetapan tersebut tidak akan diberlakukan sebatas ketidak-abasahan, atau keadaan yang tidak dapat diberlakukan itu, tanpa membatalkan keabsahan Perjanjian ini, atau ketetapan lain apa pun yang terkandung dalam perjanjian ini. Tidak ada penyanggahan yang akan tersirat dari pelaksanaan, atau kegagalan memberlakukan hak apa pun, dan harus secara tertulis agar bisa berlaku.
+                </li>
+            </ol>
+        </div>
+        <div class="block">
+             <div class="title-block">
+                9. Persyaratan & Pemutusan <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <ol class="content-block">
+                <li>
+                    Persyaratan Perjanjian ini akan berlaku saat Anda mengunduh kode tautan dan menautkannya ke situs kami, dan akan terus berlaku kecuali, dan apabila salah satu pihak memberitahukan kepada pihak lainnya secara tertulis, bahwa pihak tersebut ingin memutuskan Perjanjian, yang mana dalam hal ini Perjanjian ini akan segera diakhiri. PEMUTUSAN PERJANJIAN SEBAGAIMANA DIKEHENDAKI, KARENA ALASAN APA PUN, OLEH SALAH SATU PIHAK. Untuk tujuan pemberitahuan pemutusan, pengiriman melalui e-mail dianggap sebagai pemberitahuan tertulis dan bersifat segera.
+                </li>
+                <li>Jika terjadi pemutusan Perjanjian ini: 
+                    <ol type="a">
+                        <li>@string.Format("Anda harus menghapus banner {0} dari situs Anda, dan menonaktifkan setiap tautan dari situs Anda ke {0}.", AppSettings.SystemName)</li>
+                        <li>Semua hak dan lisensi yang diberikan kepada Anda dalam Perjanjian ini akan segera diputuskan.</li>
+                        <li>Anda hanya akan berhak atas uang perujukan yang belum dibayar jika perolehan Anda pada, atau sebelum tanggal pemutusan, kecuali apabila pemutusan tersebut akibat pelanggaran Anda terhadap persyaratan Perjanjian ini, sebagaimana dirincikan pada 9.2.d di bawah. Kami dapat menahan pembayaran final kepada Anda selama waktu yang wajar untuk memastikan bahwa jumlah yang dibayarkan benar.</li>
+                        <li>Jika Anda gagal memenuhi kewajiban dan tanggung jawab Anda, kami tidak akan membayar uang perujukan atau yang terutang kepada Anda saat pemutusan.</li>
+                        <li>Kami dapat menahan pembayaran final kepada Anda selama waktu yang wajar untuk memastikan bahwa jumlah yang dibayarkan benar.</li>
+                        <li>Jika kami terus mengizinkan aktivitas (menghasilkan pendapatan) dari pelanggan setelah pemutusan, ini tidak akan menafsirkan kelanjutan atau pembaruan Perjanjian ini, atau mengesampingkan pemutusan.</li>
+                        <li>Anda akan mengembalikan kepada kami setiap informasi rahasia, dan semua salinannya yang Anda miliki, berada dalam pengawasan dan pengendalian Anda, dan akan menghentikan semua penggunaan nama dagang, merek dagang, merek layanan, logo dan penunjukan pedagang lainnya.</li>
+                        <li>Anda dan kami akan dibebaskan dari semua kewajiban dan tanggung jawab terhadap satu sama lain, yang terjadi atau muncul setelah tanggal pemutusan tersebut, kecuali bila berkenaan dengan kewajiban yang sifatnya tetap berlaku setelah pemutusan, sebagaimana diuraikan di dalam Perjanjian ini. Pemutusan perjanjian tidak akan membebaskan Anda dari kewajiban/tanggung jawab apa pun yang muncul akibat pelanggaran terhadap Perjanjian ini, yang terjadi sebelum pemutusan.</li>
+                        <li>KAMI DAPAT MENGAKHIRI PERJANJIAN INI JIKA KAMI MEMUTUSKAN BAHWA (ATAS KEBIJAKSANAAN KAMI SEMATA-MATA) SITUS ANDA TIDAK SESUAI. Situs yang tidak sesuai dapat mencakup hal-hal yang ditujukan bagi anak-anak, mempromosikan materi yang secara eksplisit bersifat seksual, kekerasan, diskriminasi berdasarkan suku bangsa, jenis kelamin, agama, kebangsaan, kecacatan, orientasi seksual, atau usia, mempromosikan aktivitas ilegal, atau melanggar hak kekayaan intelektual.</li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                10. Hubungan dengan Pihak <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <div class="content-block">
+                Anda dan kami adalah kontraktor mandiri, dan tidak ada satupun di dalam Perjanjian ini yang akan menciptakan kemitraan, usaha patungan, keagenan, waralaba, perwakilan penjualan, atau hubungan kepegawaian apa pun di antara kedua belah pihak. Anda tidak berwenang untuk membuat atau menerima penawaran atau representasi apa pun atas nama kami. Anda tidak akan membuat pernyataan apa pun, baik pada situs Anda atau lainnya, untuk menentang hal apa pun dalam paragraf ini, atau yang secara wajar dianggap menentang paragraf ini.
+            </div>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                11. Ganti rugi <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <div class="content-block">
+                @string.Format("Dengan ini Anda menyetujui untuk memberikan ganti-rugi dan tidak membebankan tanggung jawab kepada {0} , entitas yang diwakilinya, afiliasinya, dan para direktur, pejabat, karyawan, agen, pemegang saham, mitra, anggota {0} serta pemilik lainnya, terhadap setiap dan semua klaim, tuntutan, kewajiban, kehilangan, kerusakan, penilaian, penyelesaian, pengeluaran (termasuk biaya pengacara yang sewajarnya), dan ongkos (setiap atau semua yang sedang berlangsung, yang untuk selanjutnya disebut sebagai \"Kerugian\") hingga sebatas Kerugian (atau tindakan yang berkenaan dengan hal dimaksud), yang muncul dari, atau berdasarkan ", AppSettings.SystemName):
+                <ol>
+                    <li>Setiap tuntutan dimana kami menggunakan Merek Dagang Afiliasi merugikan setiap merek dagang, nama dagang, merek layanan, hak cipta, lisensi, hak milik intelektual, atau hak kepemilikan lain dari setiap pihak ketiga</li>
+                    <li>Setiap penyalahgunaan pernyataan atau jaminan atau pelanggaran kesepakatan atau perjanjian yang Anda lakukan dalam perjanjian ini</li>
+                    <li>Perkembangan, pengoperasian, pemeliharaan dan isi dari Situs Anda dan produk serta layanan yang ditawarkan dari Situs Anda</li>
+                    <li>Setiap tuntutan menyangkut Situs Anda, termasuk, tanpa batasan, isi daripadanya yang tidak berkaitan dengan kami.</li>
+                </ol>
+            </div>                
+        </div>
+        <div class="block">
+            <div class="title-block">
+                12. Pelepasan tanggung jawab hukum <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <div class="content-block">
+                Kami tidak memberikan jaminan atau representasi secara tersurat maupun tersirat sehubungan dengan program perujukan, atau pengaturan pembayaran uang perujukan (termasuk, namun tidak terbatas pada fungsionalitas, jaminan keselarasan, kelayakan dagang, legalitas, tidak melanggar, atau jaminan tersirat apa pun yang timbul dari pelaksanaan, kesepakatan, atau penggunaan perdagangan). Selain itu, kami tidak membuat representasi bahwa pengoperasian situs kami tidak akan terganggu atau bebas kesalahan, dan tidak bertanggung jawab untuk konsekuensi dari gangguan maupun kesalahan apa pun.
+            </div>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                13. Batasan Tanggung Jawab <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <div class="content-block">
+                Kami tidak akan bertanggung jawab atas kerugian langsung, khusus, atau konsekuensial (atau kehilangan pendapatan, profit atau data apa pun) yang muncul sehubungan dengan Perjanjian ini, atau program perujukan, meskipun seandainya kami sudah diberitahu mengenai kemungkinan kerugian tersebut. Selanjutnya, ganti rugi agregat yang muncul sehubungan dengan Perjanjian ini dan Program, tidak akan melampaui total komisi yang dibayarkan, atau dapat dibayarkan kepada Anda berdasarkan Perjanjian ini. Tidak ada satupun dalam Perjanjian ini yang dapat ditafsirkan untuk memberikan hak, ganti rugi, atau manfaat apa pun kepada siapapun, atau entitas apa pun yang bukan merupakan pihak yang terlibat dalam Perjanjian ini. Kewajiban kami berdasarkan Perjanjian ini tidak menafsirkan kewajiban pribadi dari direktur, pejabat, atau pemegang saham kami. Setiap kewajiban bayar yang muncul berdasarkan Perjanjian ini akan dipenuhi semata-mata dari uang perujukan yang dihasilkan dan terbatas untuk biaya langsung.
+            </div>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                14. Penyelidikan mandiri <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <div class="content-block">
+                ANDA MENYATAKAN BAHWA ANDA SUDAH MEMBACA PERJANJIAN INI SERTA MENYETUJUI SEMUA PERSYARATAN DAN KETENTUANNYA. ANDA MEMAHAMI, BAHWA KAMI DAPAT SEWAKTU-WAKTU (SECARA LANGSUNG ATAU TIDAK LANGSUNG) MEMINTA PERUJUKAN PELANGGAN DENGAN PERSYARATAN YANG MUNGKIN BERBEDA DARI YANG TERKANDUNG DI DALAM PERJANJIAN INI, ATAU MENGOPERASIKAN SITUS WEB YANG SERUPA, ATAU BERSAING DENGAN SITUS WEB ANDA. ANDA TELAH SECARA MANDIRI MENGEVALUASI KEINGINAN UNTUK BERPARTISIPASI DALAM PROGRAM AFILIASI INI DAN TIDAK MENGANDALKAN PADA REPRESENTASI, GARANSI, ATAU PERNYATAAN LAIN SELAIN YANG DIURAIKAN DALAM PERJANJIAN INI
+            </div>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                15. Hukum dan Arbitrasi Yang Mengatur <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <div class="content-block">
+                Perjanjian ini akan diatur dan ditafsirkan sesuai dengan hukum negara Inggris. Setiap persengketaan, pertentangan atau klaim yang muncul dari, atau yang berkenaan dengan Perjanjian ini akan dirujukkan ke, dan ditentukan oleh kantor pengadilan yang terdiri atas satu abritrator yang akan ditunjuk oleh Pusat Arbitrasi. Kedudukan arbitrasi akan berada di London, Inggris, dan lokasinya akan ditentukan oleh Pusat Arbitrasi, bahasa arbitrasi yang akan digunakan adalah bahasa Inggris, dan peraturan yang ditetapkan oleh Pusat Arbitrasi akan mengatur prosesnya. Kantor pengadilan arbitrasi akan memiliki hak untuk mengeluarkan perintah dan keputusannya akan dipatuhi, final dan wajib dilaksanakan secara ketat oleh para Pihak yang kemudian akan mengesampingkan yurisdiksi atau tempat lainnya yang mungkin berlaku, dan setuju untuk tunduk pada keputusan arbitral yang mengesampingkan permohonan naik banding jenis apa pun.
+            </div>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                16. DENGAN KESAKSIAN <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <div class="content-block">
+                @string.Format("Setelah membaca persyaratan dan ketentuan, dan menyatakan hal tersebut dalam formulir pendaftaran afiliasi, Anda menyetujui semua persyaratan dan ketentuan yang dimuat dalam dokumen ini. {0} berhak menahan pembayaran dari afiliasi manapun yang melanggar persyaratan dan ketentuan yang dimuat dalam dokumen ini", AppSettings.SystemName)
+            </div>
+        </div>
+    </div>
+</div>

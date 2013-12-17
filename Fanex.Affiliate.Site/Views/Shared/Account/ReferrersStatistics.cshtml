@@ -1,0 +1,120 @@
+﻿@{
+    ViewBag.Title = Lang.Referrals;
+    Layout = @String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
+}
+@model TrafficStatisticsViewModel
+@section css
+{
+    <link href="@Url.Content(string.Format("~/Content/themes/theme{0}/jquery.ui.datepicker.css", AppSettings.Layout))" rel="stylesheet" />
+    <link href="@Url.Content(string.Format("~/Content/themes/theme{0}/calendar.less", AppSettings.Layout))" rel="stylesheet" />
+}
+@using (Html.BeginForm())
+{
+    <div class="span12 box-insite">
+        <div class="top">
+            <div class="in-top">
+                @Lang.Referrals
+            </div>
+            <div class="in-right">
+            </div>
+        </div>
+        <div class="content">
+            @Html.ValidationSummary()
+            <div class="block">
+                <div class="content-block">
+                    <div class="box-header">
+                        <div class="row">
+                            <div class="cell">
+                                <div class="label">@Lang.From:</div>
+                                <div class="editor">
+                                    @Html.TextBoxFor(m => m.FromDate, "{0:MM/dd/yyy}", new { @class = "datepicker", @id = "txtFromDate" })
+                                    <div class="icon-calendar">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <div class="label">@Lang.To:</div>
+                                <div class="editor">
+                                    @Html.TextBoxFor(m => m.ToDate, "{0:MM/dd/yyy}", new { @class = "datepicker", @id = "txtToDate" })
+                                    <div class="icon-calendar">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <div class="editor">
+                                    <input type="submit" value="@Lang.Submit" class="button"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-block">
+                    <table class="table odd-even list no-margin">
+                        <thead>
+                            <tr class="gradient-header">
+                                <th width="300px">
+                                    @Lang.SiteURL
+                                </th>
+                                <th width="100px">
+                                    @Lang.TotalClicks
+                                </th>
+                                <th width="120px">
+                                    @Lang.UniqueClicks
+                                </th>
+                                <th width="100px">
+                                    @Lang.SignUp
+                                </th>
+                                <th width="100px">
+                                    @Lang.FDM
+                                </th>
+                            </tr>
+                        </thead>
+                        @if (Model.ReferrersStatisticsList.Any())
+                        {
+                            <tbody>
+                                @{
+                            var i = 0;
+                            foreach (var item in Model.ReferrersStatisticsList)
+                            {
+                                i++;
+                                    <tr class="@(i % 2 == 0 ? "even" : "odd")">
+                                        <td>
+                                            @Html.Raw(string.Format("<a href='javascript:;' class='domain-view-detail' data-domain='{0}'>{1}</a>", @item.DomainReferrer, @item.DomainReferrer))
+                                        </td>
+                                        <td class="text-right">
+                                            @item.TotalClick
+                                        </td>
+                                        <td class="text-right">
+                                            @item.UniqueClick
+                                        </td>
+                                        <td class="text-right">
+                                            @item.Signups
+                                        </td>
+                                        <td class="text-right">
+                                            @item.FDM
+                                        </td>
+                                    </tr>
+                            }
+                                }
+                            </tbody>
+                        }
+                        else
+                        {
+                            <tfoot>
+                                <tr>
+                                    <td colspan="6" class="text-center">@Lang.NoInformation
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@Html.HiddenFor(m => m.FromDate)
+@Html.HiddenFor(m => m.ToDate)
+@section scriptspage
+{
+    <script src="~/Scripts/site/ReferrersStatistics.js" type="text/javascript"></script>
+}

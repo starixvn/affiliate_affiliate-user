@@ -1,0 +1,17 @@
+﻿@model SystemDateTime
+<div id="datetime">
+    <div class="clock">
+    </div>
+    <div id="lblDateTime">
+    </div>
+</div>
+<script type="text/javascript">
+    var sysGmt = ' @Model.GMTOffSet';
+    var sysYear = @Model.DatabaseDateTime.Year.ToString();
+    var sysMonth = @Model.DatabaseDateTime.Month.ToString();
+    var sysDay = @Model.DatabaseDateTime.Day.ToString();
+    var sysHour = @Model.DatabaseDateTime.Hour.ToString();
+    var sysMinute = @Model.DatabaseDateTime.Minute.ToString();
+    var sysSecond = @Model.DatabaseDateTime.Second.ToString();
+    var sysMonthName = ['@Lang.Jan', '@Lang.Feb', '@Lang.Mar', '@Lang.Apr', '@Lang.May', '@Lang.Jun', '@Lang.Jul', '@Lang.Aug', '@Lang.Sep', '@Lang.Oct', '@Lang.Nov', '@Lang.Dec'];
+</script>

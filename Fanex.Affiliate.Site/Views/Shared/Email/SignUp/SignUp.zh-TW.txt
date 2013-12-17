@@ -1,0 +1,14 @@
+﻿<div>
+  尊敬的 @Model.FirstName,<br /><br />
+
+  感謝您申請加盟 @Model.AffiliateName 合作夥伴計劃!<br /><br />
+
+  我們合作夥伴部門經理將在三個工作日內電郵答复您的加盟申請。<br /><br />
+
+  如有任何疑問，歡迎隨時聯繫我們<a href="mailto:@Model.MailContact">@Model.MailContact</a>.<br /><br />
+
+  誠摯的,<br /><br />
+  
+  @Model.AffiliateName 合作夥伴團隊<br />
+  <a href="mailto:@Model.MailContact">@Model.MailContact</a>
+</div>

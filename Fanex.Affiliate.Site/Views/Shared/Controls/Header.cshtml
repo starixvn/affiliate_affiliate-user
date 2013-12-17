@@ -1,0 +1,22 @@
+﻿@{
+    var currentSession = SessionManager.CurrentSession;
+}
+<div class="span12 top-header">
+    <div class="span5">
+        <div class="logo logo_en-US">
+        </div>
+    </div>
+    <div class="span7">
+        @Html.Action("Language", "Header")
+        @if (currentSession != null && currentSession.AffId > 0)
+        {
+            <div class="after-login-info">
+                <div class="icon-clock">
+                </div>
+                <div class="logout"> 
+                    <a href="~/User/Logout">@Lang.Logout</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>

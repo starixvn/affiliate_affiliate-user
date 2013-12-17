@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FAQ_AffiliateProgramIsFreeToJoin" xml:space="preserve">
+    <value>Miễn phí khi tham gia chương trình hội viên {0}. Chỉ cần điền vào {1} của chúng tôi bạn sẽ được liên hệ để chấp nhận tham gia chương trình trong vòng 3 ngày làm việc. Nếu đơn của bạn được chấp nhận, bạn sẽ nhận được một email có chứa ID hội viên duy nhất cho phép bạn truy cập vào các biểu ngữ, liên kết văn bản và nội dung khác cũng như công cụ tiếp thị để thêm vào trang web của bạn.</value>
+  </data>
+  <data name="FAQ_AffiliateProgramIsPartershipProgram" xml:space="preserve">
+    <value>Chương trình hội viên {0} là một chương trình cộng tác nơi bạn có thể kiếm được hoa hồng dựa trên hoạt động cá cược của người chơi mà bạn giới thiệu tới {1} từ trang web của bạn thông qua hình thức giới thiệu trực tuyến hoặc ngoại tuyến.</value>
+  </data>
+  <data name="FAQ_ByAccessingOurMediaGallery" xml:space="preserve">
+    <value>Bằng cách truy cập phần "Thư viện media" của chúng tôi, bạn sẽ có thể lựa chọn biểu ngữ mà bạn thích cũng như các liên kết văn bản cho trang web của mình.</value>
+  </data>
+  <data name="FAQ_CookiesAreMechanism" xml:space="preserve">
+    <value>Cookie là một cơ chế chung mà các kết nối về phía máy chủ có thể sử dụng để lưu trữ và truy xuất thông tin từ các kết nối về phía khách hàng. Cụ thể hơn, chúng là những tệp dữ liệu nhỏ được đặt trên máy tính của khách truy cập {0} từ các trang web được liên kết. Các tệp dữ liệu này chứa thông tin mà {0} sử dụng để theo dõi và ghi có cho các hội viên của mình một cách chính xác cho lưu lượng mà họ gửi tới. Việc theo dõi thông qua cookie có thể bao gồm, nhưng không giới hạn đối với các trang được truy cập cũng như ngày và giờ mà các trang cụ thể đó được truy cập.</value>
+  </data>
+  <data name="FAQ_CookiesAreOverwritten" xml:space="preserve">
+    <value>Các cookie được ghi đè để làm lợi cho hội viên cuối cùng khi một khách hàng được giới thiệu.</value>
+  </data>
+  <data name="FAQ_DoNegativeBalance" xml:space="preserve">
+    <value>Số dư bằng âm sẽ chuyển tiếp không?</value>
+  </data>
+  <data name="FAQ_DoYouReward" xml:space="preserve">
+    <value>Bạn có tặng thưởng cho hội viên đầu tiên hay hội viên cuối cùng vì đã giới thiệu khách hàng không?</value>
+  </data>
+  <data name="FAQ_ForMoreDetails" xml:space="preserve">
+    <value>Để biết thêm chi tiết, xin vui lòng liên hệ với chúng tôi tại {0}.</value>
+  </data>
+  <data name="FAQ_General" xml:space="preserve">
+    <value>Tổng quan</value>
+  </data>
+  <data name="FAQ_HowCanCheck" xml:space="preserve">
+    <value>Làm thế nào tôi có thể kiểm tra số tiền mình đã kiếm được?</value>
+  </data>
+  <data name="FAQ_HowDoSignUp" xml:space="preserve">
+    <value>Tôi làm cách nào để đăng ký chương trình hội viên {0}?</value>
+  </data>
+  <data name="FAQ_HowOftenCanIRequest" xml:space="preserve">
+    <value>Tôi có thể bao lâu rút tiền một lần?</value>
+  </data>
+  <data name="FAQ_HowSystemKeepTrack" xml:space="preserve">
+    <value>Hệ thống theo dõi người chơi của tôi như thế nào?</value>
+  </data>
+  <data name="FAQ_MarketingTracking" xml:space="preserve">
+    <value>Tiếp thị &amp; Theo dõi</value>
+  </data>
+  <data name="FAQ_MaximumOfWithdrawalRequest" xml:space="preserve">
+    <value>Hội viên chỉ có thể thực hiện rút tiền một lần vào mỗi tháng. Nhưng nếu được sự chấp thuận của giám đốc bộ phận kết nối, bạn cũng có thể trong vòng một tháng rút hai lần tiền hoa hồng. Hiện tại phục vụ rút tiền của chúng tôi hoàn toàn miễn phí, nhưng chúng tôi sẽ không chi trả bất kỳ phí thủ tục hoặc phí phát sinh nào khác.</value>
+  </data>
+  <data name="FAQ_MinimumAmountOfWithdrawalRequest" xml:space="preserve">
+    <value>Số tiền yêu cầu rút tối thiểu là {1}{0}.</value>
+  </data>
+  <data name="FAQ_NowYouCan" xml:space="preserve">
+    <value>Vâng, bạn hoàn toàn có thể! Công ty sẽ cung cấp cho bạn một địa chỉ liên kết "URL" có thông tin về tài khoản của bạn. Khi đó bạn có thể: </value>
+  </data>
+  <data name="FAQ_SendPageLink" xml:space="preserve">
+    <value>Gửi đường link này tới bất kỳ bạn bè, người chơi mà yêu thích thể thao hoặc yêu thích cá cược thể thao. Mỗi lần họ truy cập "URL" đó và đăng ký tài khoản, ngay lập tức họ sẽ trở thành người chơi bên dưới hệ thống của bạn.</value>
+  </data>
+  <data name="FAQ_UploadItOnAnyPublicWebsites" xml:space="preserve">
+    <value>Nhúng liên kết hình ảnh quảng cáo từ thư viện của chúng tôi tới các trang web công khai của bạn hoặc qua các diễn đàn để tìm kiếm người chơi của bạn về cho chúng tôi.</value>
+  </data>
+  <data name="FAQ_WeAreAbleToTrackVisitors" xml:space="preserve">
+    <value>Đúng. Chúng tôi có thể theo dõi khách truy cập không đăng ký ngay nhưng sau đó trở lại {0} &amp; đăng ký từ trang web hội viên của chúng tôi. Chúng tôi đặt giai đoạn bảo vệ là 90 ngày để bảo vệ hội viên giới thiệu đầu tiên. Công nghệ được sử dụng để quản lý việc này dựa trên các cookie.</value>
+  </data>
+  <data name="FAQ_WeDontTolerateSpamming" xml:space="preserve">
+    <value>Chúng tôi không cho phép các hội viên của mình gửi thư rác dưới bất kỳ hình thức nào. Nếu chúng tôi phát hiện ra một hội viên gửi thư rác, chúng tôi sẽ cảnh cáo hội viên đó (nếu xét thấy đó là trường hợp nhẹ). Nếu việc gửi thư rác vẫn tiếp tục, hội viên đó sẽ bị cấm tham gia chương trình hội viên {0} của chúng tôi vĩnh viễn. </value>
+  </data>
+  <data name="FAQ_WeEmployStartOfArtTechnology" xml:space="preserve">
+    <value>Chúng tôi sử dụng hệ thống theo dõi với công nghệ tiên tiến để đảm bảo bạn nhận được tín dụng cho 100% lưu lượng truy cập bạn gửi tới {0}. Các hội viên sử dụng URL duy nhất của mình được cung cấp trong khu vực "Thư viện media" để chỉ dẫn cho người chơi. Thông qua sử dụng cookie, khách truy cập nhấp vào URL duy nhất của một hội viên (biểu ngữ, liên kết văn bản, thông báo email, v.v...) được theo dõi và tín dụng tự động được cung cấp cho hội viên đó vì đã giới thiệu người chơi.</value>
+  </data>
+  <data name="FAQ_WeRolloverNegativeCommission" xml:space="preserve">
+    <value>Vâng ,chúng tôi sẽ chuyển tiếp số dư bằng âm đã tổng kết. Ví dụ đến cuối tháng tổng kết số dư trong tài khoản của bạn là số âm, số tiền này sẽ chuyển tiếp đến tháng sau, cho đến khi tiền hoa hồng bạn kiếm được là số dương có thể làm cho số âm đó thành 0.</value>
+  </data>
+  <data name="FAQ_WhatAreWithdrawalMethods" xml:space="preserve">
+    <value>Tôi có thể sử dụng những phương thức nào rút tiền?</value>
+  </data>
+  <data name="FAQ_WhatIfDontHaveWebsite" xml:space="preserve">
+    <value>Nếu tôi không có trang web, tôi có thể tham gia không?</value>
+  </data>
+  <data name="FAQ_WhatIsAffiliateProgram" xml:space="preserve">
+    <value>Chương trình hội viên {0} là gì?</value>
+  </data>
+  <data name="FAQ_WhatIsCookie" xml:space="preserve">
+    <value>Cookie là gì?</value>
+  </data>
+  <data name="FAQ_WhatIsMinimumWithdrawalRequest" xml:space="preserve">
+    <value>Mức hoa hồng thấp nhất có thể rút là bao nhiêu?</value>
+  </data>
+  <data name="FAQ_WhatKindsOfCurrencies" xml:space="preserve">
+    <value>Những loại tiền tệ nào được hỗ trợ khi rút tiền?</value>
+  </data>
+  <data name="FAQ_WhatYourPolicy" xml:space="preserve">
+    <value>Chính sách gửi thư rác của bạn là như thế nào?</value>
+  </data>
+  <data name="FAQ_WhereGetBanners" xml:space="preserve">
+    <value>Tôi lấy biểu ngữ và nội dung ở đâu?</value>
+  </data>
+  <data name="FAQ_WillYouTrack" xml:space="preserve">
+    <value>Bạn sẽ theo dõi và cung cấp tín dụng cho tôi khi tôi chưa phải là thành viên và đã không đăng ký vào lần truy cập đầu tiên thông qua liên kết hội viên của tôi nhưng sau đó trở lại {0} và trở thành thành viên chứ?</value>
+  </data>
+  <data name="FAQ_YouCanLogin" xml:space="preserve">
+    <value>Bạn có thể đăng nhập vào tài khoản hội viên {0} để kiểm tra số liệu thống kê tiền hoa hồng theo thời gian thực hiện khả dụng với bạn trong vòng 24 giờ một ngày, 7 ngày một tuần và 365 ngày một năm.</value>
+  </data>
+  <data name="FAQ_YouCanRequest" xml:space="preserve">
+    <value>Bạn có thể rút tiền trực tiếp thông qua tài khoản người chơi mà bạn tạo tại {0}.</value>
+  </data>
+  <data name="FAQ_YouCanWithdrawMoney" xml:space="preserve">
+    <value>Bạn có thể rút tiền thông qua các loại tiền tệ sau đây : {0}. Tỷ giá sẽ được áp dụng ngay ngày bạn rút tiền.</value>
+  </data>
+  <data name="PD_AffiliateEarnings" xml:space="preserve">
+    <value>Mức thu nhập của hội viên</value>
+  </data>
+  <data name="PD_AffiliateSupport" xml:space="preserve">
+    <value>Danh mục tiền tệ cho hội viên</value>
+  </data>
+  <data name="PD_AnyNegativeBalance" xml:space="preserve">
+    <value>Số tiền thưởng bằng âm bất kỳ trong 1 tháng sẽ được chuyển tiếp vào tháng sau. Ví dụ: nếu cuối tháng 1 sau khi tổng kết, số tiền trong tài khoản của hội viên là -{0}2,555, số tiền này sẽ chuyển tiếp vào tháng 2. Nếu tháng 2 số dư trong tài khoản là {0}3,400, thì số dư tài khoản sẽ là {0}845 ({0}3,400 trừ {0}2,555). Nhưng nếu tháng 2 số dư vẫn là số âm, ví dụ là -{0}1,600, thì sẽ tiếp tục tích lũy sổ âm của tháng trước đến tháng sau, vậy số tiền chuyển đến tháng 3 sẽ là -{0}4,155. Hội viên sẽ hưởng hoa hồng thu nhập tương ứng với cấp bậc tỷ lệ .</value>
+  </data>
+  <data name="PD_AsAffiliate" xml:space="preserve">
+    <value>Là hội viên của {0}, bạn sẽ được thanh toán tiền hoa hồng cho mỗi người chơi mà bạn giới thiệu tới {0} trong thời gian tồn tại tài khoản của người chơi. Hệ thống báo cáo trực tuyến của chúng tôi sẽ hoạt động 24 giờ/ngày, 7 ngày/tuần để bạn có thể sử dụng.</value>
+  </data>
+  <data name="PD_CompanyNetWinFormula" xml:space="preserve">
+    <value>"TỔNG LỢI NHUẬN THỰC TRONG THÁNG
+= |- Tổng thắng thua của người chơi - Bất kỳ tiền thưởng - Khoản bồi hoàn - Bất kỳ lợi nhuận doanh thu khác - Các khoản tín dụng, tiền bồi thường hoặc tiền hoàn lại cho thành viên |</value>
+  </data>
+  <data name="PD_DropSomeLastZeroDigits" xml:space="preserve">
+    <value>Trong các báo cáo và thiết lập hoa hồng, chúng tôi sẽ bỏ những chữ số 0 cuối cùng cho những loại tiền tệ như {0}. Ví dụ: 1{1} là {2}{1} theo giá trị thực.</value>
+  </data>
+  <data name="PD_GettingPaid" xml:space="preserve">
+    <value>Rút tiền hoa hồng</value>
+  </data>
+  <data name="PD_HowMuchYouEarn" xml:space="preserve">
+    <value>Số tiền bạn kiếm được tùy thuộc vào lượng lưu lượng bạn có thể gửi tới từ trang web của mình. Công việc của chúng tôi là hướng dẫn họ qua quá trình đăng ký, để họ thực hiện lần gửi tiền đầu tiên và duy trì việc hợp tác của họ với những khoản tiền thưởng và tiền tặng hấp dẫn. </value>
+  </data>
+  <data name="PD_NegativeBalance" xml:space="preserve">
+    <value>Số dư âm</value>
+  </data>
+  <data name="PD_NoteThatSample" xml:space="preserve">
+    <value>Xin lưu ý rằng, trên đây là 1 ví dụ cụ thể dành cho loại tiền </value>
+  </data>
+  <data name="PD_PurposeOfTable" xml:space="preserve">
+    <value>Giải thích cho bảng thiết lập hoa hồng mẫu trên đây:</value>
+  </data>
+  <data name="PD_RevenueShareModel" xml:space="preserve">
+    <value>Mô hình chia sẻ doanh thu</value>
+  </data>
+  <data name="PD_RevenueShareModelSplitIntoComponents" xml:space="preserve">
+    <value>Mô hình doanh thu chia sẻ của chúng tôi bao gồm các sản phẩm sau</value>
+  </data>
+  <data name="PD_TotalRevenue" xml:space="preserve">
+    <value>Tổng tiền doanh thu chia sẻ sẽ là tổng số doanh thu của tất cả các sản phẩm. Dưới đây là một mô hình mẫu từ hệ thống của chúng tôi</value>
+  </data>
+  <data name="PD_WeOfferCurrency" xml:space="preserve">
+    <value>Chúng tôi cung cấp những loại tiền tệ cơ bản sau</value>
+  </data>
+  <data name="PD_WeOfferWithdrawalMethod" xml:space="preserve">
+    <value>Chúng tôi cung cấp phương thức rút tiền thông qua tài khoản người chơi tại {0}. Số tiền tối thiểu cho mỗi đợt rút tiền được qui định cụ thể tùy theo loại tiền tệ mà bạn chọn.</value>
+  </data>
+  <data name="PD_YouRequestPayout" xml:space="preserve">
+    <value>Bạn có thể yêu cầu rút tiền bằng đơn vị tiền tệ như {0}. Tỷ lệ ngoại tệ sẽ được đổi dựa vào tỷ lệ ngày rút tiền hôm đó. </value>
+  </data>
+  <data name="TC_ActiveWageringMembers" xml:space="preserve">
+    <value>Thành viên đặt cược hoạt động tức là những khách hàng đạt được số tiền thu hồi đặt cược tối thiểu tương đương với ({0} {1}) một lần trong bất kỳ tháng dương lịch cho trước nào. Chúng tôi có thể cung cấp thêm nhiều loại tiền tệ khác trong hệ thống, xin vui lòng liên hệ với quản trị viên tại {2}.</value>
+  </data>
+  <data name="TC_AffiliateMustEnsure" xml:space="preserve">
+    <value>Hội viên phải đảm bảo rằng mọi tài liệu được đăng trên trang web của họ đều hợp pháp và không vi phạm bản quyền hay bất kỳ quyền nào khác.</value>
+  </data>
+  <data name="TC_AffiliateResponsibility" xml:space="preserve">
+    <value>Hội viên có trách nhiệm làm theo đúng thủ tục gắn thẻ và liên kết để đảm bảo theo dõi và thanh toán cho khách hàng mới.</value>
+  </data>
+  <data name="TC_AffiliatesAreProhibited" xml:space="preserve">
+    <value>Nghiêm cấm hội viên chơi ở bất kỳ sàn cược thể thao nào được {0} quảng bá qua liên kết hội viên riêng hoặc từ liên kết hội viên của một hội viên chia sẻ tất cả hoặc một phần hoa hồng với hội viên khác hoặc một bên thứ ba.  Hội viên này bao gồm bất kỳ cá nhân hoặc nhóm chơi nào mà phải thanh toán tiền đền bù hoặc tiền thưởng cho một hội viên khác dưới bất kỳ hình thức nào. Trong trường hợp vi phạm phần này, {0} và trang web tương ứng đã được chơi sẽ có quyền vô hiệu lực mọi lượt chơi và hủy bỏ mọi khoản hoa hồng đã kiếm được từ lượt chơi đó và xóa hội viên khỏi chương trình hội viên, chấm dứt thỏa thuận này và vô hiệu lực mọi lượt chơi trong tương lai tại {0}.</value>
+  </data>
+  <data name="TC_AffiliatesWillNotEarn" xml:space="preserve">
+    <value>Hội viên sẽ không được hưởng mức hoa hồng từ số tiền cá cược hoặc kết quả thắng thua mà thành viên tuyến dưới của bạn cá cược vào đua ngựa và casino tại {0}.</value>
+  </data>
+  <data name="TC_AffiliateTagging" xml:space="preserve">
+    <value>3. Gắn thẻ hội viên</value>
+  </data>
+  <data name="TC_AffiliationGuidelines" xml:space="preserve">
+    <value>2. Nguyên tắc dành cho hội viên</value>
+  </data>
+  <data name="TC_AllRightsAndLicenses" xml:space="preserve">
+    <value>Mọi quyền và giấy phép được cấp cho bạn trong thỏa thuận này sẽ bị chấm dứt ngay lập tức.</value>
+  </data>
+  <data name="TC_AnyClaimRelatedToYourSite" xml:space="preserve">
+    <value>Bất kỳ khiếu nại nào có liên quan đến trang web của bạn, bao gồm nhưng không giới hạn nội dung trong đó, không thể quy cho chúng tôi. </value>
+  </data>
+  <data name="TC_AnyClaimThat" xml:space="preserve">
+    <value>Bất kỳ khiếu nại nào về việc sử dụng thương hiệu hội viên của chúng tôi có vi phạm bất kỳ thương hiệu, tên thương mại, nhãn hiệu dịch vụ, bản quyền, giấy phép, tài sản trí tuệ hoặc quyền sở hữu trí tuệ của bất kỳ bên thứ ba nào khác</value>
+  </data>
+  <data name="TC_AnyFormOfSpam" xml:space="preserve">
+    <value>Bất kỳ hình thức gửi thư rác nào sẽ dẫn đến việc tài khoản của bạn bị xem xét lại và tất cả quỹ tiền sẽ bị giữ lại để chờ điều tra tài khoản của bạn. Bạn cần phải biết rằng khách hàng của chúng tôi có khả năng gánh chịu chi phí xử lý thư được tạo do thư rác và những khoản chi phí tương tự sẽ được trừ khỏi tài khoản của bạn nếu khách hàng của chúng tôi cần sự trợ giúp. Trong trường hợp này, số tiền được xác định bởi khách hàng có liên quan sẽ là công bằng và được coi là số tiền cuối cùng và có thể chấp nhận được dựa trên thiện chí và số tiền đó có thể sẽ được thu hồi theo luật pháp và được coi là đã được bạn chấp nhận là công bằng và hợp lý và theo như sự đồng ý của bạn khi đăng ký là thành viên của {0}.</value>
+  </data>
+  <data name="TC_AnyMisrepresentation" xml:space="preserve">
+    <value>Bất kỳ việc dẫn nào sai về sự đại diện hoặc bảo đảm hoặc vi phạm điều khoản hoặc thỏa thuận của bạn ở đây</value>
+  </data>
+  <data name="TC_AsPolicy" xml:space="preserve">
+    <value>Một chính sách của {0} là không chấp nhận việc nộp đơn đăng ký hội viên trực tuyến nếu bạn quảng cáo với địa chỉ Internet Protocol (IP) đặt tại hoặc xuất phát từ trong phạm vi quyền hạn quản lý của Vương quốc Anh.</value>
+  </data>
+  <data name="TC_AssignAbilityAndInurement" xml:space="preserve">
+    <value>Khả năng chuyển nhượng và làm quen</value>
+  </data>
+  <data name="TC_AssumeOwnershipOfCustomer" xml:space="preserve">
+    <value>{0} thừa nhận quyền sở hữu của khách hàng tại thời điểm thực hiện hợp đồng đầu tiên với khách hàng. Bạn, với tư cách là hội viên, có vai trò là người đại diện giới thiệu cho {0}. Chúng tôi bảo lưu quyền từ chối khách hàng (hoặc đóng tài khoản của khách hàng) nếu cần thiết để tuân theo mọi yêu cầu mà chúng tôi có thể thiết lập theo định kỳ.</value>
+  </data>
+  <data name="TC_BannersAndLinksMayNotBePlaced" xml:space="preserve">
+    <value>Các biểu ngữ và liên kết có thể không được đặt trong email tự gửi đi, các bài đăng trên nhóm tin không được phép hay các phòng trò chuyện hoặc qua việc sử dụng "bots". Lưu lượng được tạo trái phép sẽ không được tính và có thể dẫn đến việc chấm dứt tài khoản hội viên của bạn với chúng tôi.</value>
+  </data>
+  <data name="TC_BecomeAffiliate" xml:space="preserve">
+    <value>Để trở thành hội viên của chương trình hội viên {0}, bạn phải đăng ký bằng cách hoàn thành mẫu đơn trực tuyến này. Bằng cách đăng ký làm hội viên của chương trình hội viên {0} hoặc tải về mã biểu ngữ và đưa mã này vào các trang web, thông báo email hoặc các định dạng khác của bạn, bạn được coi là đồng ý bị ràng buộc bởi toàn bộ điều khoản và điều kiện được nêu trong thỏa thuận này.</value>
+  </data>
+  <data name="TC_BonusesInclucdeComplimentaryMoney" xml:space="preserve">
+    <value>Tiền thưởng bao gồm tiền tặng, tiền miễn phí, tín dụng, thưởng đăng ký, tiền khuyến mãi và các khoản khuyến khích khác được ghi có vào tài khoản của khách hàng. Vì khách hàng không thực sự mua những khoản tiền này nên {0} không thể trả hoa hồng cho chúng.</value>
+  </data>
+  <data name="TC_ByAgreeingToParticipate" xml:space="preserve">
+    <value>Với việc đồng ý tham gia chương trình hội viên {0}, bạn đồng ý tải xuống các biểu ngữ, văn bản hoặc tài liệu quảng cáo và đặt chúng vào trang web của bạn, sử dụng chúng trong email, quản lý tiếp thị bằng URL hội viên hoặc in. Các phương pháp này là những phương pháp được chấp thuận duy nhất mà bạn có thể quảng cáo sản phẩm và dịch vụ của {0}.</value>
+  </data>
+  <data name="TC_ByAgreementWeGrantYou" xml:space="preserve">
+    <value>Với thỏa thuận này, chúng tôi cấp cho bạn quyền không độc quyền được dẫn khách hàng tới trang web và dịch vụ của chúng tôi, tuân theo các điều khoản và điều kiện của thỏa thuận này. Thỏa thuận này không cấp cho bạn quyền độc quyền hay đặc quyền được trợ giúp chúng tôi trong việc cung cấp các dịch vụ phát sinh từ việc giới thiệu của bạn, và chúng tôi bảo lưu quyền ký kết hợp đồng với hoặc có được trợ giúp từ các bên khác vào bất kỳ thời điểm nào để thực hiện các dịch vụ có bản chất giống hoặc tương tự với dịch vụ của bạn. Bạn sẽ không được yêu cầu phí giới thiệu hoặc các khoản đền bù khác cho công việc đó hoặc thông qua những người hoặc tổ chức khác mà không phải là bạn bảo đảm.</value>
+  </data>
+  <data name="TC_ByHavingRead" xml:space="preserve">
+    <value>Bằng việc đọc và công nhận các điều khoản và điều kiện trong mẫu đăng ký hội viên, bạn đồng ý với tất cả điều khoản và điều kiện có trong tài liệu này. {0} bảo lưu quyền giữ lại thanh toán của bất kỳ hội viên nào vi phạm bất kỳ điều khoản và điều kiện nào có trong tài liệu này</value>
+  </data>
+  <data name="TC_ByOpeningAccountWithCustomer" xml:space="preserve">
+    <value>Bằng cách mở tài khoản với khách hàng thì người đó hoặc tổ chức đó sẽ trở thành khách hàng của chúng tôi, và theo đó, tất cả quy định, chính sách và thủ tục hoạt động dành cho khách hàng sẽ được áp dụng cho họ.</value>
+  </data>
+  <data name="TC_ChargebackCreditCard" xml:space="preserve">
+    <value>Tiền trả lại: Chủ thẻ tín dụng phát hiện ra các giao dịch bất thường được thực hiện trên thẻ tín dụng/thẻ ghi nợ của họ mà chưa được sự cho phép của họ. Sau đó, chủ thẻ tín dụng yêu cầu ngân hàng của mình trả lại các khoản tiền này. Tiền trả lại liên quan đến việc sử dụng phi pháp thẻ hoặc số thẻ của chủ thẻ tín dụng từ một bên thứ ba.</value>
+  </data>
+  <data name="TC_ChargebacksAreAmounts" xml:space="preserve">
+    <value>Tiền trả lại là khoản tiền bị trừ khi một khách hàng là một chủ thẻ tín dụng phát hiện ra các khoản tiền trả lại bất thường và chưa được phép của họ được thực hiện trên Thẻ Tín dụng/Thẻ Ghi nợ của khách hàng và chủ thẻ tín dụng yêu cầu ngân hàng trả lại các khoản tiền đó. Tiền trả lại có thể liên quan đến,  nhưng không giới hạn ở, việc sử dụng phi pháp thẻ hoặc số thẻ của chủ thẻ tín dụng từ một bên thứ ba.</value>
+  </data>
+  <data name="TC_ChargebackWillStayDue" xml:space="preserve">
+    <value>Tiền trả lại sẽ chỉ đến hạn cho đến khi doanh thu được những người chơi khác của bạn tạo ra đã trả hết số tiền phải trả. Bạn xác nhận rằng {0} chỉ có thể thanh toán một phần trăm lợi nhuận thực tế của họ chứ không phải là doanh thu gian lận.</value>
+  </data>
+  <data name="TC_CommissionableEarnings" xml:space="preserve">
+    <value>Lợi nhuận để tính hoa hồng : lợi nhuận mà {0} kiếm được từ sáu (6) thành viên cá cược hợp lệ trong vòng một tháng trừ đi cá khoản chi phí, mức chi chương trình phụ, tiền thưởng hoặc chi phí quảng bá. </value>
+  </data>
+  <data name="TC_CommissionableEarningsOfAffiliate" xml:space="preserve">
+    <value>Lợi nhuận để tính hoa hồng là căn cứ vào mức lợi nhuận trong mỗi lần giao dịch của thành viên tuyến dưới và bạn,rồi căn cứ vào cấu trúc hoa hồng để tính tỷ lệ,,chỉ cần bạn vẫn duy trì là Hội viện của chúng tôi, thì những giao dịch phát sinh từ khách hàng của bạn vẫn sẽ được cộng vào.</value>
+  </data>
+  <data name="TC_CommissionableEarningsWillBeSubject" xml:space="preserve">
+    <value>Lợi nhuận sẽ được cộng dồn dựa theo tỷ lệ kết cấu hoa hồng của {0}.</value>
+  </data>
+  <data name="TC_DevelopmentOperation" xml:space="preserve">
+    <value>Việc phát triển, hoạt động, duy trì và nội dung trên trang web của bạn, các sản phẩm và dịch vụ được cung cấp từ trang web của bạn.</value>
+  </data>
+  <data name="TC_Disclaimers" xml:space="preserve">
+    <value>12. Tuyên bố miễn trừ trách nhiệm</value>
+  </data>
+  <data name="TC_DuringTheTermsOfAgreement" xml:space="preserve">
+    <value>Theo điều khoản của thỏa thuận này, bạn có thể được giao phó một số thông tin mật liên quan đến công việc, hoạt động hay công nghệ cơ bản trong chương trình hội viên của chúng tôi (chẳng hạn như phí giới thiệu mà bạn kiếm được theo chương trình). Bạn đồng ý không tiết lộ hay sử dụng thông tin mật cho người thứ ba hoặc các bên khác trừ khi bạn có được sự đồng ý từ trước bằng văn bản và rằng bạn sẽ chỉ sử dụng thông tin mật cho những mục đích cần thiết nhằm xúc tiến các mục đích của thỏa thuận này. Nghĩa vụ của bạn liên quan đến thông tin mật sẽ là điều quyết định việc chúng tôi có chấm dứt thỏa thuận này hay không.</value>
+  </data>
+  <data name="TC_EventOfTermination" xml:space="preserve">
+    <value>Trong trường hợp chấm dứt thỏa thuận này</value>
+  </data>
+  <data name="TC_GoverningLaw" xml:space="preserve">
+    <value>15. Luật và Cơ chế trọng tài chi phối</value>
+  </data>
+  <data name="TC_GrossWinIsTotalOfAllAmount" xml:space="preserve">
+    <value>“Tổng Tiền cược Thắng của {0}” là tổng của toàn bộ các khoản đặt cược của ít nhất sáu (6) Thành viên Đặt cược Hoạt động trong tài khoản hội viên của bạn trong một tháng dương lịch, trừ đi toàn bộ số tiền thắng bởi hoặc được trả cho các Thành viên Đặt cược Hoạt động của bạn. </value>
+  </data>
+  <data name="TC_IfWeContinueToPermitActivity" xml:space="preserve">
+    <value>Nếu chúng tôi tiếp tục cho phép hoạt động (tạo doanh thu) từ các khách hàng sau khi đã chấm dứt thì điều đó sẽ không cấu thành việc tiếp tục hay gia hạn cho thỏa thuận này hay sự từ bỏ việc chấm dứt.</value>
+  </data>
+  <data name="TC_IfYouDecide" xml:space="preserve">
+    <value>NẾU BẠN QUYẾT ĐỊNH KHÔNG CHẤP NHẬN TẤT CẢ CÁC ĐIỀU KHOẢN VÀ ĐIỀU KIỆN CỦA THỎA THUẬN NÀY, VUI LÒNG KHÔNG TẢI XUỐNG ĐOẠN MÃ BIỂU NGỮ, ĐOẠN MÃ LIÊN KẾT VĂN BẢN, BẢN SAO QUẢNG CÁO HAY BẤT KỲ THÔNG TIN NÀO LIÊN QUAN ĐẾN {0}.</value>
+  </data>
+  <data name="TC_IfYouHaveFailedToFulfill" xml:space="preserve">
+    <value>Nếu bạn chưa thực hiện các nghĩa vụ và trách nhiệm của mình, chúng tôi sẽ không thanh toán cho bạn phí giới thiệu mà bạn sẽ được hưởng khi chấm dứt.</value>
+  </data>
+  <data name="TC_Indemnity" xml:space="preserve">
+    <value>11. Tiền bồi thường</value>
+  </data>
+  <data name="TC_IndependentInvestigation" xml:space="preserve">
+    <value>14. Điều tra độc lập</value>
+  </data>
+  <data name="TC_InWitnessWhereof" xml:space="preserve">
+    <value>16. TRƯỚC SỰ CHỨNG KIẾN CỦA CÁC BÊN</value>
+  </data>
+  <data name="TC_LegalResponsibility" xml:space="preserve">
+    <value>7. Trách nhiệm pháp lý</value>
+  </data>
+  <data name="TC_LimitationOfLiability" xml:space="preserve">
+    <value>13. Phạm vi trách nhiệm</value>
+  </data>
+  <data name="TC_LimitedLicense" xml:space="preserve">
+    <value>6. Giấy phép hạn chế</value>
+  </data>
+  <data name="TC_Miscellaneous" xml:space="preserve">
+    <value>8. Thông tin khác</value>
+  </data>
+  <data name="TC_NegativeEarningAreCarried" xml:space="preserve">
+    <value>Thu nhập âm sẽ được chuyển tiếp sang tháng tiếp theo. Nếu hội viên kết thúc tháng với số dư dương thì thanh toán sẽ được thực hiện nếu nó đáp ứng được yêu cầu tối thiểu và tiền hoa hồng sẽ được trả theo số dư dương.</value>
+  </data>
+  <data name="TC_NonWaiver" xml:space="preserve">
+    <value>Không khước từ</value>
+  </data>
+  <data name="TC_OnlyApprovedAndProperlyTagged" xml:space="preserve">
+    <value>Chỉ được phép sử dụng những tài liệu sáng tạo được gắn thẻ hợp lý và đã được chấp thuận, đôi khi là do chúng tôi cung cấp, để quảng bá cho {0}. Được phép sử dụng quảng cáo thương mại và quảng cáo cá nhân nhưng tất cả những tài liệu không phải do {0} xây dựng đều cần phải được chấp thuận bằng văn bản; chấp thuận đó sẽ không bị thu hồi nếu không có lý do chính đáng.</value>
+  </data>
+  <data name="TC_OnlyTaggedCustermor" xml:space="preserve">
+    <value>Chỉ những khách hàng được gắn thẻ đúng mới có thể được chỉ định làm hội viên. Nếu thẻ hội viên được gắn không đúng vào trang web của hội viên hoặc không được máy chủ của {0} tiếp nhận đúng cách thì quá trình đăng ký của khách hàng sẽ không được gán cho hội viên. Do đó, hội viên có trách nhiệm đảm bảo rằng tất cả liên kết đều được gắn thẻ đúng cách.</value>
+  </data>
+  <data name="TC_OurFailureToEnforce" xml:space="preserve">
+    <value>Việc chúng tôi không buộc bạn phải thực hiện nghiêm chỉnh bất kỳ điều khoản nào của thỏa thuận này không cấu thành việc từ bỏ quyền của chúng tôi trong việc buộc bạn thực hiện điều khoản đó hay bất kỳ điều khoản nào của thỏa thuận này về sau. CHÚNG TÔI KHÔNG CHO PHÉP VÀ SẼ KHÔNG CÔNG NHẬN BẤT KỲ SỬA ĐỔI, BỔ SUNG, XÓA BỚT HAY XEN VÀO NÀO ĐỐI VỚI THỎA THUẬN NÀY. Không nhân viên, viên chức hay người đại diện nào có thể thay đổi, sửa đổi hay khước từ bằng lời nói bất kỳ điều khoản nào của thỏa thuận này.</value>
+  </data>
+  <data name="TC_OurRightsAndRemedies" xml:space="preserve">
+    <value>Quyền và giải pháp của chúng tôi dưới đây sẽ không loại trừ lẫn nhau, tức là việc thực hiện một hoặc nhiều điều khoản của thỏa thuận này sẽ không ngăn cản việc thực hiện một điều khoản bất kỳ nào khác. Bạn thừa nhận, xác nhận và đồng ý rằng những thiệt hại có thể không tương xứng với vi phạm hoặc vi phạm có thể xảy ra đối với thỏa thuận này, và trong trường hợp có vi phạm hoặc vi phạm có thể xảy ra đối với bất kỳ điều khoản nào của thỏa thuận này thì các quyền và nghĩa vụ tương ứng của các bên có thể được thực thi bởi hoạt động, lệnh cụ thể hoặc phương pháp hợp lý khác. Không có điều nào trong thỏa thuận này sẽ giới hạn hay ảnh hưởng đến bất kỳ quyền nào của chúng tôi theo luật pháp, hay mặt khác, đối với vi phạm hay vi phạm có thể xảy ra đối với bất kỳ điều khoản nào của thỏa thuận này thì mục đích của điều khoản này là làm sáng rõ rằng các quyền và nghĩa vụ tương ứng của chúng tôi sẽ có thể được thực thi một cách hợp lý cũng như theo luật pháp hoặc cách khác.</value>
+  </data>
+  <data name="TC_OwnershipAndContentOfOurSites" xml:space="preserve">
+    <value>Quyền sở hữu và nội dung trên các trang web của chúng tôi vẫn giữ nguyên là tài sản tương ứng của chúng tôi và sẽ không bị coi là đã được chuyển giao cho hội viên thông qua bất kỳ hành động hay thiếu sót nào liên quan đến thỏa thuận hội viên này.</value>
+  </data>
+  <data name="TC_OwnershipContentAndLiability" xml:space="preserve">
+    <value>Quyền sở hữu, nội dung và trách nhiệm pháp lý đối với các trang web của hội viên là trách nhiệm của riêng hội viên. Bạn sẽ là người duy nhất chịu trách nhiệm cho việc phát triển, điều hành và duy trì trang web của mình và tất cả các tài liệu xuất hiện trên trang web đó và bạn cũng là người phải chịu chi phí.</value>
+  </data>
+  <data name="TC_PoliciesConfidentiality" xml:space="preserve">
+    <value>5. Chính sách &amp; Tính bí mật</value>
+  </data>
+  <data name="TC_PresentationOfOurBanner" xml:space="preserve">
+    <value>Việc thể hiện biểu ngữ &amp; nội dung của chúng tôi trên các trang web của hội viên là trách nhiệm của hội viên. Hội viên phải đảm bảo rằng nội dung của chúng tôi được thể hiện theo quy định của chúng tôi.</value>
+  </data>
+  <data name="TC_RelationshipOfParties" xml:space="preserve">
+    <value>10. Quan hệ của các bên</value>
+  </data>
+  <data name="TC_Remedies" xml:space="preserve">
+    <value>Phương pháp</value>
+  </data>
+  <data name="TC_ResponsibilitiesAffiliate" xml:space="preserve">
+    <value>1. Trách nhiệm của hội viên</value>
+  </data>
+  <data name="TC_RevenueSharingPayment" xml:space="preserve">
+    <value>4. Chia sẻ doanh thu &amp; Thanh toán</value>
+  </data>
+  <data name="TC_SeverabilityWaiver" xml:space="preserve">
+    <value>Hiệu lực từng phần / Quyền khước từ</value>
+  </data>
+  <data name="TC_ShouldPlayerProcess" xml:space="preserve">
+    <value>Nếu người chơi thực hiện thu tiền lại, thì doanh thu bị tranh chấp hoặc bị trả lại sẽ bị tước bỏ và do đó sẽ bị trừ khỏi số dư tổng của bạn cho tháng hiện tại. Nếu khấu trừ doanh thu tích lũy này vượt quá số tiền phải trả hiện tại của bạn thì số dư sẽ trở về số dư âm và bạn sẽ phải kiếm đủ doanh thu để trả cho số tiền đòi lại đó trước khi có thể bắt đầu kiếm lại doanh thu.</value>
+  </data>
+  <data name="TC_ShouldTheseExpenses" xml:space="preserve">
+    <value>Nếu các chi phí này không được các quỹ trong tài khoản của bạn bao trả thì chúng tôi bảo lưu quyền được tìm hiểu các phương pháp thay thế khác để lấy được thanh toán, ví dụ: nếu tài khoản của bạn đã tạo ra các tài khoản mua thì chúng tôi sẽ giữ khoản thanh toán hoa hồng cho các tài khoản này cho tới khi tài khoản chịu thiệt hại được trả hết. Nếu tài khoản của bạn không hoạt động và đang sinh lợi thông qua các khoản thanh toán hoa hồng, chúng tôi có quyền yêu cầu chủ tài khoản thanh toán.</value>
+  </data>
+  <data name="TC_ShouldYouFailToBeEntitled" xml:space="preserve">
+    <value>Nếu trong một tháng bất kỳ bạn không đạt được quy định trong điều khoản 4.1,4.2 và 4.3 là mỗi tháng ít nhất phải có sáu (6) thành viên cá cược hợp lệ, {0} sẽ tạm ngưng chi hoa hồng tháng đó. Trong vòng hai tháng tiếp theo ({0} sẽ có quyền đưa ra quyết định đối với tài khoản của bạn)bạn phải đạt được những đều khoản trên. Nói cách khác, hoa hồng trong vòng ba tháng liên tiếp của bạn sẽ cùng tổng kết một lần trong tháng nào bất kỳ khi đạt được yêu cầu thành viên cá cược hợp lệ ({0} sẽ có quyền đưa ra quyết định đối với tài khoản của bạn) </value>
+  </data>
+  <data name="TC_TermOfThisAgreement" xml:space="preserve">
+    <value>Thời hạn của thỏa thuận sẽ bắt đầu khi bạn tải mã liên kết về và liên kết mã này đến trang web của chúng tôi. Thời hạn sẽ tiếp tục trừ khi và cho đến khi một trong hai bên thông báo cho nhau bằng văn bản về việc muốn chấm dứt thỏa thuận, trong trường hợp đó thỏa thuận này có thể được chấm dứt ngay lập tức. CHẤM DỨT THEO Ý MUỐN, VÌ LÝ DO BẤT KỲ CỦA MỘT TRONG HAI BÊN. Với mục đích thông báo chấm dứt, thông báo qua email được coi là mẫu đơn thông báo trực tiếp và bằng văn bản.</value>
+  </data>
+  <data name="TC_TermTermination" xml:space="preserve">
+    <value>9. Thời hạn &amp; Chấm dứt</value>
+  </data>
+  <data name="TC_ThisAgreementDetails" xml:space="preserve">
+    <value>Thỏa thuận này trình bày chi tiết toàn bộ điều khoản và điều kiện của tư cách thành viên đối với chương trình hội viên {0}. "Bạn", "hội viên" là thuật ngữ đề cập đến bạn, cá nhân, thực thể là nhóm hoặc tập đoàn đăng ký làm đại lý của chúng tôi theo thỏa thuận này và sẽ được coi là bao gồm mọi nhân viên, viên chức, quản lý, cổ đông, chủ sở hữu, các bên quản trị, các cá nhân và thực thể phụ thuộc (và "của bạn" mang nghĩa sở hữu tương ứng).</value>
+  </data>
+  <data name="TC_ThisAgreementShallBeGoverned" xml:space="preserve">
+    <value>Thỏa thuận này sẽ được xây dựng và quản lý theo luật pháp nước Anh. Bất kỳ tranh chấp, tranh luận hoặc khiếu nại phát sinh hoặc có liên quan đến thỏa thuận này sẽ được đưa ra tòa và được tòa án với một thẩm phán do trung tâm trọng tài chỉ định quyết định. Trụ sở phân xử sẽ ở Luân Đôn, Vương quốc Anh, địa điểm do trung tâm trọng tài quyết định, ngôn ngữ phân xử là tiếng Anh và các quy tắc do trung tâm trọng tài thiết lập sẽ điều khiển quá trình này. Tòa án phân xử có quyền phát lệnh và quyết định của tòa sẽ là cuối cùng, hoàn toàn bắt buộc và có tính chất cưỡng bách đối với các bên lần lượt từ bỏ bất kỳ quyền hạn xét xử hoặc địa điểm xét xử nào khác có thể áp dụng và đồng ý tuân theo quyết định phân xử, từ bỏ mọi kháng cáo dưới bất kỳ hình thức nào.</value>
+  </data>
+  <data name="TC_ThisLicenseCannotBeSubLicensed" xml:space="preserve">
+    <value>Bạn không thể cấp phép bổ sung, ấn định hoặc theo cách khác, chuyển nhượng giấy phép này. Quyền sử dụng thương hiệu của bạn có giới hạn và chỉ thông qua các bảng biểu ngữ tuyên truyền quảng cáo. Bạn sẽ không xác nhận tính không hợp lệ, tính không hiệu lực, hoặc tranh cãi về quyền sở hữu các thương hiệu trong bất kỳ hành động hoặc tiến trình nào theo bất kỳ thể loại hoặc bản chất nào, và sẽ không thực hiện hành động có thể gây tổn hại đến các quyền của chúng tôi hoặc quyền của người cấp phép của chúng tôi trong các thương hiệu đó, cung cấp sản phẩm tương tự, hoặc theo cách khác làm suy yếu tính hợp lệ hoặc làm giảm thiện chí của họ.</value>
+  </data>
+  <data name="TC_WeAreIndependentContractors" xml:space="preserve">
+    <value>Bạn và chúng tôi là những nhà thầu độc lập và không điều nào trong thỏa thuận này sẽ tạo ra bất kỳ hiệp hội, liên doanh, đại lý, công ty, đại diện bán hàng hoặc quan hệ công việc nào giữa các bên. Bạn sẽ không có quyền để thực hiện hoặc chấp nhận bất kỳ đề nghị hoặc tuyên bố nào nhân danh chúng tôi. Bạn sẽ không đưa ra bất kỳ nhận định nào, cho dù trên trang web của bạn hoặc theo cách khác, trái với mọi điều trong đoạn này.</value>
+  </data>
+  <data name="TC_WeDontCondoneSpam" xml:space="preserve">
+    <value>Thư rác - Chúng tôi không bỏ qua thư rác.</value>
+  </data>
+  <data name="TC_WeHerebyGrantToYou" xml:space="preserve">
+    <value>Chúng tôi cấp cho bạn giấy phép có giới hạn cá nhân,  không chuyển nhượng để bạn có thể một mình sử dụng thương hiệu của chúng tôi trong suốt thời hạn của thỏa thuận này (được cấp phép từ chủ sở hữu thông qua chúng tôi) có liên quan đến hiển thị biểu ngữ trên trang web của bạn.</value>
+  </data>
+  <data name="TC_WeMakeNoExpress" xml:space="preserve">
+    <value>Chúng tôi không biểu lộ hoặc hàm ý bảo đảm hoặc đại diện cho chương trình giới thiệu hoặc dàn xếp thanh toán phí giới thiệu (bao gồm, nhưng không giới hạn chức năng, giấy bảo đảm sự phù hợp, khả năng bán, tính hợp pháp, sự không vi phạm hoặc bất kỳ bảo đảm hàm ý nào phát sinh ngoài quá trình thực hiện, giao dịch hoặc sử dụng thương mại). Ngoài ra, chúng tôi không tuyên bố rằng quá trình hoạt động của trang web chúng tôi sẽ không bị gián đoạn hoặc gặp phải lỗi nào và sẽ không chịu trách nhiệm pháp lý đối với hậu quả của bất kỳ gián đoạn hay lỗi nào.</value>
+  </data>
+  <data name="TC_WeMayModifyAnyTerm" xml:space="preserve">
+    <value>Chúng tôi có thể sửa đổi bất kỳ điều khoản và điều kiện nào có trong thỏa thuận này tại mọi thời điểm và theo quyết định duy nhất của chúng tôi, bằng cách đăng thông báo thay đổi hoặc thỏa thuận mới trên trang web của chúng tôi. Sửa đổi có thể bao gồm, ví dụ: thay đổi trong phạm vi phí giới thiệu hiện có, biểu phí, thủ tục thanh toán và các quy định của chương trình giới thiệu. NẾU BẠN KHÔNG ĐỒNG Ý VỚI BẤT KỲ SỬA ĐỔI NÀO, BẠN CÓ THỂ VIỆN ĐẾN QUYỀN TRUY ĐÒI DUY NHẤT CỦA MÌNH ĐỂ CHẤM DỨT THỎA THUẬN NÀY. SỰ THAM GIA LIÊN TỤC VÀO CHƯƠNG TRÌNH NÀY CỦA BẠN SAU KHI THÔNG BÁO THAY ĐỔI HOẶC THỎA THUẬN MỚI ĐƯỢC ĐĂNG TRÊN TRANG WEB CỦA CHÚNG TÔI SẼ ĐƯỢC COI LÀ CHẤP NHẬN THAY ĐỔI BẮT BUỘC.</value>
+  </data>
+  <data name="TC_WeMayTerminateAgreement" xml:space="preserve">
+    <value>CHÚNG TÔI CÓ THỂ CHẤM DỨT THỎA THUẬN NÀY NẾU ĐỊNH RÕ (THEO QUYẾT ĐỊNH DUY NHẤT CỦA CHÚNG TÔI) RẰNG TRANG WEB CỦA BẠN KHÔNG PHÙ HỢP. Trang web không phù hợp có thể bao gồm những trang: hướng vào trẻ em, quảng cáo các tài liệu khiêu dâm, cổ động bạo lực, cổ động nạn phân biệt chủng tộc, giới tính, tôn giáo, quốc tịch, tàn tật, định hướng giới tính hoặc tuổi tác, xúc tiến các hoạt động phi pháp hoặc vi phạm quyền sở hữu trí tuệ.</value>
+  </data>
+  <data name="TC_WeMayWithhold" xml:space="preserve">
+    <value>Chúng tôi có thể khấu trừ khoản thanh toán cuối cùng của bạn trong một thời gian hợp lý để đảm bảo thanh toán đúng số tiền.</value>
+  </data>
+  <data name="TC_WeReserveTheRight" xml:space="preserve">
+    <value>Chúng tôi có quyền chấm dứt thỏa thuận này nếu định rõ rằng trang web của bạn không phù hợp. Trang web không phù hợp có thể bao gồm những trang: quảng cáo các tài liệu khiêu dâm, nhắm tới trẻ em hoặc trẻ vị thành niên, cổ động bạo lực, cổ động nạn phân biệt chủng tộc, giới tính, tôn giáo, quốc tịch, tàn tật, định hướng giới tính, xúc tiến các hoạt động phi pháp hoặc vi phạm quyền sở hữu trí tuệ ("Quyền IP").</value>
+  </data>
+  <data name="TC_WeReserveTheRightToRevokeLicense" xml:space="preserve">
+    <value>Chúng tôi có quyền thu hồi giấy phép này tại mọi thời điểm và giấy phép sẽ được coi là đã thu hồi khi chấm dứt thỏa thuận này với bất cứ lý do gì.</value>
+  </data>
+  <data name="TC_WeWillNotBeLiable" xml:space="preserve">
+    <value>Chúng tôi sẽ không chịu trách nhiệm pháp lý cho những thiệt hại gián tiếp, riêng biệt hoặc do hậu quả (hoặc bất kỳ tổn thất doanh thu, lợi nhuận hoặc dữ liệu nào) phát sinh có liên quan đến thỏa thuận này hoặc chương trình giới thiệu, ngay cả khi chúng tôi đã được thông báo về khả năng xảy ra những thiệt hại đó. Hơn nữa, khoản nợ gộp chung của chúng tôi phát sinh có liên quan đến thỏa thuận và chương trình này sẽ không vượt quá tổng số tiền hoa hồng đã thanh toán hoặc phải thanh toán cho bạn theo thỏa thuận này. Không có điều nào trong thỏa thuận này được xây dựng để cấp quyền, biện pháp hoặc lợi ích cho bất kỳ cá nhân hoặc thực thể chứ không phải là một bên nào đối với thỏa thuận này. Nghĩa vụ của chúng tôi theo thỏa thuận này không hình thành nghĩa vụ cá nhân của những người quản lý, viên chức hoặc cổ đông của chúng tôi. Bất kỳ khoản nợ nào phát sinh theo thỏa thuận này sẽ chỉ được thanh toán bằng phí giới thiệu phát sinh và bị giới hạn đối với những thiệt hại trực tiếp.</value>
+  </data>
+  <data name="TC_WeWillTerminate" xml:space="preserve">
+    <value>Chúng tôi sẽ chấm dứt thỏa thuận này ngay lập tức nếu có bất kỳ hình thức gửi thư rác nào nhân danh bạn hoặc nếu bạn làm mất uy tín của {0} thông qua việc quảng cáo không đúng sự thật hoặc sử dụng từ ngữ không chính xác khi nói miệng hoặc trình bày trong văn bản.</value>
+  </data>
+  <data name="TC_WheneverPossible" xml:space="preserve">
+    <value>Bất cứ khi nào có thể, từng điều khoản của thỏa thuận này sẽ được hiểu theo cách thức có hiệu lực và hợp lệ theo luật áp dụng, tuy nhiên nếu bất kỳ điều khoản nào của thỏa thuận này được coi là không hợp lệ, bất hợp pháp hoặc không thể thực thi được theo bất kỳ khía cạnh nào thì điều khoản đó sẽ không có hiệu lực chỉ đối với phạm vi không còn hiệu lực hoặc không thể thực thi mà không làm mất hiệu lực các điều còn lại của thỏa thuận này hoặc bất kỳ điều khoản nào về việc này. Không hàm ý khước từ thực hiện hoặc không thi hành mọi quyền và khước từ phải được thể hiện bằng văn bản mới có hiệu lực.</value>
+  </data>
+  <data name="TC_WillPayoutRevenueShare" xml:space="preserve">
+    <value>{0} sẽ căn cứ vào lợi nhuận thực mà bạn kiếm được từ thành viên tuyến dưới sau đó dựa vào quy định của tỷ lệ hoa hồng để tính và chuyển vào tài khoản {0} của bạn, mỗi tháng tổng kết bạn phải có ít nhất từ sáu (6) thành viên cá cược hợp lệ. Xin lưu ý rằng, ở mỗi thiết lập hoa hồng sẽ xác định trước số lượng người chơi đạt chuẩn là bao nhiêu. Để biết thêm thông tin chi tiết, xin vui lòng liên hệ quản trị viên của chúng tôi thông qua địa chỉ email {1}.</value>
+  </data>
+  <data name="TC_WithoutOrPriorWrittenApproval" xml:space="preserve">
+    <value>Nếu không được chúng tôi phê chuẩn trước bằng văn bản, bạn sẽ chỉ sử dụng được các biểu ngữ và liên kết của chúng tôi và sẽ không thay đổi được giao diện của chúng hoặc giới thiệu bất kỳ tài liệu quảng cáo nào cho chúng tôi. Giao diện và cú pháp của các liên kết truyền siêu văn bản được chúng tôi thiết kế và chỉ định, đồng thời tạo thành đại diện được ủy quyền và thừa nhận duy nhất của {0}.</value>
+  </data>
+  <data name="TC_YouAcknowledge" xml:space="preserve">
+    <value>BẠN THỪA NHẬN ĐÃ ĐỌC THỎA THUẬN NÀY VÀ ĐỒNG Ý VỚI MỌI ĐIỀU KHOẢN VÀ ĐIỀU KIỆN CỦA THỎA THUẬN. BẠN HIỂU RẰNG CHÚNG TÔI CÓ THỂ THU HÚT GIỚI THIỆU KHÁCH HÀNG TẠI BẤT KỲ THỜI ĐIỂM NÀO (TRỰC TIẾP HOẶC GIÁN TIẾP) THEO CÁC ĐIỀU KHOẢN CÓ THỂ KHÁC VỚI ĐIỀU KHOẢN CÓ TRONG THỎA THUẬN NÀY HOẶC ĐIỀU HÀNH CÁC TRANG WEB TƯƠNG TỰ HOẶC CẠNH TRANH VỚI TRANG WEB CỦA BẠN. BẠN ĐÃ ĐỘC LẬP ĐÁNH GIÁ MONG MUỐN THAM GIA CHƯƠNG TRÌNH HỘI VIÊN NÀY VÀ KHÔNG DỰA VÀO BẤT KỲ TUYÊN BỐ, BẢO ĐẢM HOẶC NHẬN ĐỊNH NÀO KHÁC VỚI NHỮNG ĐIỀU ĐƯỢC NÊU RÕ TRONG THỎA THUẬN NÀY</value>
+  </data>
+  <data name="TC_YouAgreeToIndemnify" xml:space="preserve">
+    <value>Tại đây bạn đồng ý bảo đảm và thừa nhận rằng {0}, các thực thể mà {0} đại diện và các hội viên, những người quản lý, viên chức, nhân viên, đại lý, cổ đông, đối tác, thành viên và những người chủ sở hữu khác của {0} sẽ không chịu trách nhiệm cho bất kỳ và toàn bộ khiếu nại, hành động, yêu cầu, tiền nợ, tổn thất, thiệt hại, phán quyết, hòa giải, phí tổn (kể cả phí luật sư trung bình), và chi phí (bất kỳ hoặc toàn bộ những sự việc đã nói ở trên hoặc dưới đây được quy là "tổn thất") trong phạm vi tổn thất được hiểu theo nghĩa thông thường (hoặc các hành động có liên quan đến những sự việc đó) phát sinh ngoài hoặc dựa trên </value>
+  </data>
+  <data name="TC_YouAndWeAreIndependentContractors" xml:space="preserve">
+    <value>Bạn và chúng tôi là những nhà thầu độc lập và không điều nào trong thỏa thuận này sẽ tạo ra bất kỳ hiệp hội, liên doanh, đại lý, công ty, đại diện bán hàng hoặc quan hệ công việc nào giữa các bên. Bạn sẽ không có quyền để thực hiện hoặc chấp nhận bất kỳ đề nghị hoặc tuyên bố nào nhân danh chúng tôi. Bạn sẽ không đưa ra bất kỳ nhận định nào, cho dù trên trang web của bạn hoặc theo cách khác, trái với mọi điều trong đoạn này.</value>
+  </data>
+  <data name="TC_YouAndWeWillReleased" xml:space="preserve">
+    <value>Bạn và chúng tôi sẽ miễn trừ cho nhau mọi nghĩa vụ và trách nhiệm xảy ra hoặc phát sinh sau ngày chấm dứt thỏa thuận này, ngoại trừ các điều khoản có liên quan đến những nghĩa vụ, theo bản chất, được định rõ để luôn tồn tại và có hiệu lực ngay cả khi chấm dứt thỏa thuận, như đã trình bày trong thỏa thuận này. Chấm dứt thỏa thuận sẽ không giúp bạn tránh được bất kỳ trách nhiệm pháp lý nào phát sinh từ việc vi phạm thỏa thuận này, đã xảy ra trước khi chấm dứt thỏa thuận.</value>
+  </data>
+  <data name="TC_YouAreNotAllowed" xml:space="preserve">
+    <value>Bạn không được phép duy trì đồng thời cả quan hệ hội viên và quan hệ giới thiệu với {0}. {0} có quyền đơn phương chấm dứt một trong hai hoặc cả hai quan hệ hội viên và/hoặc giới thiệu nếu bạn vi phạm điều khoản này. Quan hệ giới thiệu đề cập đến mối quan hệ với {0} tùy theo chương trình giới thiệu một người bạn của {0} (như trình bày và hiện đăng trên trang web). </value>
+  </data>
+  <data name="TC_YouAreResponsible" xml:space="preserve">
+    <value>Là hội viên, bạn có trách nhiệm quảng bá cho {0} bằng cách thực hiện việc quảng cáo, đặt biểu ngữ và theo dõi các URL trên trang web, email và các liên lạc khác của bạn.</value>
+  </data>
+  <data name="TC_YouAreResponsibleForDirecting" xml:space="preserve">
+    <value>Bạn chỉ chịu trách nhiệm hướng khách hàng vào trang web của {0}.</value>
+  </data>
+  <data name="TC_YouMayNotAssign" xml:space="preserve">
+    <value>Bạn không thể ấn định thỏa thuận này bằng hiệu lực của luật pháp hoặc bằng cách khác mà không có sự cho phép trước bằng văn bản của chúng tôi. Tùy theo hạn chế đó, thỏa thuận này sẽ ràng buộc, có hiệu lực đối với lợi ích, và có thể thi hành chống lại bạn, chúng tôi và người thừa hưởng, người kế quyền của chúng tôi.</value>
+  </data>
+  <data name="TC_YouMayNotModifyOrUse" xml:space="preserve">
+    <value>Bạn không thể sửa đổi hoặc sử dụng bất kỳ quyền sở hữu trí tuệ, biểu ngữ hoặc tài liệu sáng tạo nào khác do chúng tôi cung cấp vì bất kỳ mục đích nào khác mà không có sự cho phép trước bằng văn bản của {0}. Mọi thông báo bản quyền hoặc quyền sở hữu trí tuệ trên bất kỳ tài liệu nào do {0} cung cấp và phê chuẩn phải giữ nguyên và không được sửa đổi hoặc loại bỏ.</value>
+  </data>
+  <data name="TC_YouMustRemoveBanners" xml:space="preserve">
+    <value>Bạn phải gỡ bỏ (các) biểu ngữ của {0} ra khỏi trang web của mình và vô hiệu mọi liên kết từ trang web của bạn đến {0}.</value>
+  </data>
+  <data name="TC_YouShallNotMakeAnyClaims" xml:space="preserve">
+    <value>Bạn sẽ không được đưa ra bất kỳ khiếu nại, tuyên bố hoặc bảo đảm nào có liên quan đến {0} và bạn sẽ không có thẩm quyền đối với {0} và không ràng buộc {0} vào bất kỳ nghĩa vụ nào.</value>
+  </data>
+  <data name="TC_YouWillAgree" xml:space="preserve">
+    <value>Bạn đồng ý đăng ký và duy trì thông tin liên hệ với {0} chính xác và đúng sự thật.</value>
+  </data>
+  <data name="TC_YouWillBeEntitled" xml:space="preserve">
+    <value>Bạn sẽ chỉ được hưởng các phí giới thiệu chưa thanh toán (nếu có) do bạn kiếm được vào hoặc trước ngày chấm dứt thỏa thuận, được quyền bảo lưu khi việc chấm dứt thỏa thuận là kết quả của việc bạn vi phạm các điều khoản trong thỏa thuận này, như được trình bày chi tiết tại điều 9.2.d bên dưới. Chúng tôi có thể khấu trừ khoản thanh toán cuối cùng của bạn trong một thời gian hợp lý để đảm bảo thanh toán đúng số tiền.</value>
+  </data>
+  <data name="TC_YouWillBeResponsible" xml:space="preserve">
+    <value>Bạn sẽ là người duy nhất chịu trách nhiệm cho việc phát triển, điều hành và duy trì trang web của mình và tất cả các tài liệu xuất hiện trên trang web đó và bạn cũng là người phải chịu chi phí. Ví dụ: bạn sẽ phải tự chịu trách nhiệm để đảm bảo rằng các tài liệu đăng trên trang web của bạn không phỉ báng hoặc bất hợp pháp hoặc vi phạm quyền sở hữu trí tuệ của các bên thứ ba. Vì chúng tôi không có quyền kiểm soát trang web riêng của bạn, do đó chúng tôi khước từ mọi trách nhiệm pháp lý đối với những vấn đề này. Hơn nữa, bạn phải đảm bảo mọi chi phí tranh chấp, khiếu nại vận hành trên trang web của bạn không ảnh hưởng đến chúng tôi (không chỉ giới hạn phí luật sư) có liên quan đến sự phát triển, hoạt động, duy trì và nội dung trong trang web của bạn. Điều khoản bồi thường này không tác động đến hành động riêng của chúng tôi hoặc khiếu nại chống lại bạn theo luật áp dụng.</value>
+  </data>
+  <data name="TC_YouWillIndemnify" xml:space="preserve">
+    <value>Hơn nữa, bạn phải đảm bảo mọi chi phí tranh chấp, khiếu nại vận hành trên trang web của bạn không ảnh hưởng đến chúng tôi (không chỉ giới hạn phí luật sư) có liên quan đến sự phát triển, hoạt động, duy trì và nội dung trong trang web của bạn. Điều khoản bồi thường này không tác động đến hành động riêng của chúng tôi hoặc khiếu nại chống lại bạn theo luật áp dụng.</value>
+  </data>
+  <data name="TC_YouWillNotKnowinglyBenefit" xml:space="preserve">
+    <value>Bạn sẽ không cố ý làm lợi từ lưu lượng truy cập xác định hoặc đáng ngờ không được tạo ra theo thiện ý cho dù điều đó thực sự hoặc không thực sự gây thiệt hại cho {0}. Nếu xuất hiện hoạt động gian lận do một người được hướng vào một trang web thông qua liên kết của bạn, chúng tôi có quyền rút lại số tiền hoa hồng đã thanh toán cho bạn vào bất kỳ thời điểm nào. Quyết định của chúng tôi trong vấn đề này sẽ là quyết định cuối cùng và sẽ không giải quyết bất kỳ trường hợp nào tương tự. Chúng tôi có quyền giữ lại toàn bộ số tiền phải trả cho bạn theo thỏa thuận này nếu chúng tôi có lý do chính đáng để tin rằng lưu lượng truy cập đó đã được tạo ra do chủ ý của bạn. Ngay cả khi bạn chưa tạo ra lưu lượng truy cập đó theo chủ ý, chúng tôi vẫn có quyền khấu trừ tiền hoa hồng của hội viên có liên quan đến sự việc này.</value>
+  </data>
+  <data name="TC_YouWillPresent" xml:space="preserve">
+    <value>Bạn sẽ chỉ trình bày nội dung và các chủ đề được {0} phê chuẩn trước bằng văn bản trên trang web của bạn. Nội dung được coi là không phù hợp theo quyết định duy nhất của {0} sẽ khiến thỏa thuận hội viên bị chấm dứt ngay lập tức.</value>
+  </data>
+  <data name="TC_YouWillReturnToUs" xml:space="preserve">
+    <value>Bạn sẽ trả lại cho chúng tôi bất kỳ thông tin bí mật nào và toàn bộ các bản sao thông tin mà bạn nắm giữ, bảo quản và kiểm soát và sẽ dừng toàn bộ việc sử dụng bất kỳ tên thương mại, thương hiệu, nhãn hiệu dịch vụ, biểu trưng và các tước hiệu buôn bán khác.</value>
+  </data>
+  <data name="Home_AMaximumOfOneWithdrawal" xml:space="preserve">
+    <value>Hội viên chỉ có thể thực hiện rút tiền một lần vào mỗi tháng. Nhưng nếu được sự chấp thuận của giám đốc bộ phận kết nối, bạn cũng có thể trong vòng một tháng rút hai lần tiền hoa hồng. Hiện tại phục vụ rút tiền của chúng tôi hoàn toàn miễn phí, nhưng chúng tôi sẽ không chi trả bất kỳ phí thủ tục hoặc phí phát sinh nào khác.</value>
+  </data>
+  <data name="PD_RevenueShareModel_Content" xml:space="preserve">
+    <value>Mô hình chia sẻ doanh thu được chia thành 2 phần : Doanh thu từ Casino và Doanh thu từ Thể Thao, việc tính toán sẽ được mô tả dưới đây.
+Tổng doanh thu sẽ được kết hợp cả hai thành phần của mô hình chia sẻ doanh thu.</value>
+  </data>
+  <data name="PD_AffilatesAreOnlyAllowed" xml:space="preserve">
+    <value>Mỗi tháng hội viên tối đa chỉ có thể rút tiền 1 lần. Nếu được sự chấp thuận của cơ quan cấp trên, bạn cũng có thể yêu cầu rút 2 lần trong 1 tháng. Hiện tại phục vụ rút tiền của chúng tôi hoàn toàn miễn phí, nhưng chúng tôi sẽ không chi trả bất kỳ phí thủ tục hoặc phí phát sinh nào khác. </value>
+  </data>
+  <data name="PD_Moneybookers" xml:space="preserve">
+    <value>Moneybookers</value>
+  </data>
+  <data name="PD_WireTransfer" xml:space="preserve">
+    <value>Wire Transfer</value>
+  </data>
+  <data name="PD_ThroughYourPlayer" xml:space="preserve">
+    <value>Thông qua tài khoản cá cược {0}</value>
+  </data>
+  <data name="PD_AnyNegativeBalanceForGivenMonth" xml:space="preserve">
+    <value>Số tiền thưởng bằng âm bất kỳ trong 1 tháng sẽ được chuyển tiếp vào tháng sau. Ví dụ: nếu cuối tháng 1 sau khi tổng kết, số tiền trong tài khoản của hội viên là -$2,555, số tiền này sẽ chuyển tiếp vào tháng 2. Nếu tháng 2 số dư trong tài khoản là $3,400, thì số dư tài khoản sẽ là $845 ($3,400 trừ $2,555). Nhưng nếu tháng 2 số dư vẫn là số âm, ví dụ là -$1,600, thì sẽ tiếp tục tích lũy sổ âm của tháng trước đến tháng sau, vậy số tiền chuyển đến tháng 3 sẽ là -$4,155. Hội viên sẽ hưởng hoa hồng thu nhập tương ứng với cấp bậc tỷ lệ .</value>
+  </data>
+  <data name="PD_Casino_Content2" xml:space="preserve">
+    <value>Theo mục đích của bảng trên, “Doanh Thu Thực" có nghĩa là số tiền cược của các thành viên trong tháng có liên quan : (i) trả lại (thắng), (ii) bất kỳ tiền thưởng; (iii) Khoản bồi hoàn; và (iv) bất kỳ lợi nhuận doanh thu khác, các khoản tín dụng, tiền bồi thường hoặc tiền hoàn lại cho thành viên.</value>
+  </data>
+  <data name="PD_TheMinimumWithdrawal" xml:space="preserve">
+    <value>Số tiền yêu cầu rút tối thiểu là 100USD.</value>
+  </data>
+  <data name="PD_WeOfferSeveralMethods" xml:space="preserve">
+    <value>Chúng tôi cung cấp những cách rút tiền sau:</value>
+  </data>
+  <data name="PD_YouCanRequestPayout" xml:space="preserve">
+    <value>Ngoài USD ra bạn có thể yêu cầu rút tiền bằng đơn vị tiền tệ khác, như GBP, EUR, RMB, MYR, THB, IDR, VND. Tỷ lệ ngoại tệ sẽ được đổi dựa vào tỷ lệ ngày rút tiền hôm đó.</value>
+  </data>
+  <data name="PD_Casino_Content1" xml:space="preserve">
+    <value>{0} cung cấp mô hình chia sẻ doanh thu cho các trò chơi casino. Đây là một mô hình tích lũy dựa trên số lượng các thành viên hoạt động mỗi tháng  trên casino.</value>
+  </data>
+  <data name="PD_Sportbook_Content" xml:space="preserve">
+    <value>{0} cung cấp một mô hình chia sẻ doanh thu cho các môn thể thao. Đây là một mô hình tích lũy dựa trên số lượng các thành viên hoạt động mỗi tháng trên thể thao.</value>
+  </data>
+  <data name="PD_Neteller" xml:space="preserve">
+    <value>Neteller</value>
+  </data>
+  <data name="FAQ_CanIRequest" xml:space="preserve">
+    <value>Ngoài USD ra, tôi có thể yêu cầu rút tiền bằng tiền tệ khác không?</value>
+  </data>
+  <data name="FAQ_TheCurrenciesOfferedAre" xml:space="preserve">
+    <value>Vâng. Chúng tôi có cung cấp tiền tệ như GBP, EUR, RMB, MYR,THB, IDR, VND. Tỷ lệ tiền tệ sẽ được quy đổi căn cứ vào tỷ lệ ngoại tệ ngày mà bạn rút tiền.</value>
+  </data>
+  <data name="FAQ_ToParticipateIn12BET" xml:space="preserve">
+    <value>Vâng bạn đã có thể tham gia, nếu bạn nghĩ rằng bạn có khách hàng, bạn có thể dễ dàng tạo ra trang web cá nhân ở trang liên kết đặc biệt của chúng tôi và tải lên bất cứ ý tưởng tiếp thị hoặc tin tức thể thao. Sau khi thực hiện, bạn ngay lập tức có thể gửi trang liên kết cho bạn bè hoặc địa chỉ liên lạc bất kỳ quan tâm đến thể thao hoặc cá cược thể thao và khi họ nhấp vào đường link liên kết, họ sẽ trở thành thành viên của bạn! Hãy gửi email tới  {0} để biết thêm chi tiết khác.</value>
+  </data>
+  <data name="FAQ_YouCanRequestForAWithdrawal" xml:space="preserve">
+    <value>Bạn có thể thông qua Moneybookers, Neteller, Wire Transfer để rút tiền,hoặc có thể trực tiếp chuyển tiền hoa hồng vào tài khoản cá cược {0}.</value>
+  </data>
+  <data name="FAQ_TheMinimumWithdrawal" xml:space="preserve">
+    <value>Số tiền yêu cầu rút tối thiểu là 100USD.</value>
+  </data>
+  <data name="FAQ_JoinOurAffProgram" xml:space="preserve">
+    <value>THAM GIA CHƯƠNG TRÌNH HỘI VIÊN {0}</value>
+  </data>
+  <data name="PD_CompanyNegativeNetWin" xml:space="preserve">
+    <value>Trong trường hợp lợi nhuận công ty thu về là số âm, hội viên phải chịu ít nhất {0}% tiền lợi nhuận âm đó cùng công ty cho mỗi sản phẩm được liệt kê ở trên.</value>
+  </data>
+</root>

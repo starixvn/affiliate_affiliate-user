@@ -1,0 +1,186 @@
+﻿@{
+    ViewBag.Title = Lang.ProgramDetails;
+    Layout = @String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
+}
+@model DefaultProductCommissionViewModel
+@{
+    string productList = string.Empty;
+
+    if (Model.ProductList.Count > 0)
+    {
+        foreach (var product in Model.ProductList)
+        {
+            productList += ProductsFormatter.Format(product.ProductName) + ", ";
+        }
+
+        productList = productList.Substring(0, productList.Length - 2);
+    }
+}
+
+@{
+    var classThai = AppSession.Language.Equals("th-TH") ? AppSession.Language : string.Empty;
+    var classType = string.Format("class='span12 box-insite {0}'", classThai);
+}
+
+<div @Html.Raw(classType)>
+    <div class="top">
+        <div class="in-top">@Lang.ProgramDetails</div>
+        <div class="in-right">
+        </div>
+    </div>
+    <div class="content">
+        <div class="block">
+            <div class="content-block">
+                <p>@Html.Raw(string.Format("成为{0}合作伙件后，由您推荐到{0}的每位玩家只要使用账户就可以为您带来即时的佣金。我们的线上汇报系统会7×24小时供您查阅。", AppSettings.AffiliateName))</p>
+                <p>您赚取的利润多少取决于您的网站引导带来的顾客浏览量，我们的任务是指导他们完成注册和首存，并用我们诱人的红利和水位留住他们。</p>
+            </div>
+        </div>
+        @if (!AppSettings.IsKiosk)
+        {
+            <div class="block">
+                <div class="title-block">
+                    加盟基础货币的支持信息 <a href="#" class="link-top"><span></span>@Lang.Top</a>
+                </div>
+                <div class="line-block">
+                </div>
+                <div class="content-block">
+                    <p>我们提供下列基础货币: @AppSettings.AffiliateBaseCurrencyList.</p>
+                    @{
+            var baseCurrencyList = AppSettings.AffiliateBaseCurrencyList.Split(',');
+            var multiplyByCurrencyList = AppSettings.AffiliateCurrencyListMultipliedBy.Split(',');
+            var commonCurrencyList = baseCurrencyList.Intersect(multiplyByCurrencyList);
+
+            if (commonCurrencyList.Any())
+            {
+                            <p>@string.Format("在我们的报告和佣金设置里，我们会删除下列货币的最后几个零位：{0}例如：{1}1为 {1}1*{2} 实际价值。", AppSettings.AffiliateCurrencyListMultipliedBy, FormaterCurrency.GetCurrencySymbol(commonCurrencyList.First()), AppSettings.MulitpliedBy)</p>
+            }
+                    }
+                </div>
+            </div>
+            <div class="block">
+                <div class="title-block">
+                    合作伙伴收入 <a href="#" class="link-top"><span></span>@Lang.Top</a>
+                </div>
+                <div class="line-block">
+                </div>
+                <div class="content-block">
+                    <p>
+                        <b>佣金分成模式</b>
+                        <br />
+                        收入分成模式分为下列几个部分: @productList.
+                    </p>
+                    <p>应当支付的加盟总收入分成为收入分成模式所有组成部分的总和。 下列为来自于我们系统的一个收入分成模式样本:</p>
+                    <table class="table odd-even list">
+                        <thead>
+                            <tr>
+                                <th style="width: 85px; text-align: center;">
+                                    @Lang.Product
+                                </th>
+                                <th style="width: 10px; text-align: center;">
+                                    @Lang.Tier
+                                </th>
+                                <th style="text-align: center;">
+                                    @string.Format(Lang.ComNetWin, AppSettings.DefaultCurrencySymbol)
+                                </th>
+                                <th style="width: 150px; text-align: center;">
+                                    @Lang.QualifyingMembers
+                                </th>
+                                <th style="width: 50px; text-align: center;">
+                                    @Lang.Commission
+                                </th>
+                            </tr>
+                        </thead>
+                        @if (Model.ProductList.Any())
+                        {
+                            <tbody>
+                                @{
+                            const int MAXQM = 1000000000;
+                            const long MAXAMOUNT = 100000000000000;
+                            var oldProductId = 0;
+                            var index = 0;
+                            foreach (var product in Model.ProductList)
+                            {
+                                var listGroupSetting = Model.GroupSetting.Where(p => (AppSettings.IsShowZeroCommission == "1") ? p.ProductId == product.ProductId : p.ProductId == product.ProductId && p.Commission != 0).ToList();
+                                int totalShownTier = listGroupSetting.Count;
+                                var noTier = 0;
+                                if (totalShownTier > 0)
+                                {
+                                    index++;
+                                    foreach (var groupSetting in listGroupSetting)
+                                    {
+
+                                            <tr class="@(index % 2 == 0 ? "even" : "odd")">
+                                                @if (oldProductId != groupSetting.ProductId)
+                                                {
+                                                    <td rowspan="@totalShownTier" class="bold text-center">
+                                                        @ProductsFormatter.Format(product.ProductName)
+                                                    </td>
+                                                }
+                                                <td class="text-center">
+                                                    @(++noTier)
+                                                </td>
+                                                <td class="text-right">
+                                                    @string.Format("{0}{1}", FormaterCurrency.Format(groupSetting.MinAmount),
+                                                    groupSetting.MaxAmount == MAXAMOUNT ? "+" : " - " + FormaterCurrency.Format(Convert.ToInt64(groupSetting.MaxAmount) + 0.99))
+                                                </td>
+                                                <td class="text-right">
+                                                    @string.Format("{0}{1}", groupSetting.MinQM,
+                                                    groupSetting.MaxQM == MAXQM ? "+" : " - " + groupSetting.MaxQM.ToString())
+                                                </td>
+                                                <td class="text-right">
+                                                    @string.Format("{0}%", Convert.ToDouble(groupSetting.Commission) * 100)
+                                                </td>
+                                            </tr>
+                                                oldProductId = product.ProductId;
+                                    }
+                                }
+                            }
+                                }
+                            </tbody>
+                        }
+                        else
+                        {
+                            <tfoot>
+                                <tr>
+                                    <td colspan="5" align="center">@Lang.NoInformation
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        }
+                    </table>
+                    <p>
+                        为实现上表的用途:
+                        <br />
+                        “本月公司净收益” = |–返款（收益或损失）–任何支付的奖金–退款–任何其它收入返款–给玩家的贷款、赔偿或退款|
+                        @if (AppSettings.CompanyNegativeNetWin > 0)
+                        {
+                            <p>@string.Format("如果公司净赢是负数，则子公司与该公司每月要承担{0}％（适用于每个产品）", AppSettings.CompanyNegativeNetWin)</p>
+                        }
+                    </p>
+                    <span></span>
+                </div>
+            </div>
+            <div class="block">
+                <div class="title-block">负余额<a href="#" class="link-top"><span></span>@Lang.Top</a>
+                </div>
+                <div class="line-block">
+                </div>
+                <div class="content-block">
+                    <p>@Html.Raw(string.Format("在其中一个月的任何负余额均会带到下一个月。例如若您在1月合作伙件的户口最终结余为-{0}2,555，这个余额将会带到二月。若您在2月合作伙件的户口最终结余为{0}3,400，那么您的户口总结余将为{0}845 ({0}3,400减{0}2,555)。不过若您的户口在2月依然是负数，例如-{0}1,600，这将会继续累积之前的负结余带落下一个月，那么带到3月的结余将会是-{0}4,155。 佣金收入将按相应的级别比例支付给合作伙伴。", AppSettings.DefaultCurrencySymbol))</p>
+                    <p>注意上述样本用于货币 @AppSettings.DefaultCurrency</p>
+                </div>
+            </div>
+            <div class="block">
+                <div class="title-block">
+                    佣金提取 <a href="#" class="link-top"><span></span>@Lang.Top</a>
+                </div>
+                <div class="line-block">
+                </div>
+                <div class="content-block">
+                    <p>@string.Format("您可以要求按{0}付款。 付款适用支付日相应的汇率。", string.Join(", ", AppSettings.PlayerCurrencies.OrderBy(c => c.CurrencyCode).Select(x => x.CurrencyCode).ToArray()))</p>
+                    <p>@string.Format("我们的提款方式仅通过您的{0}玩家账户提供给您。 提款请求的最低额度由每种加盟基础货币决定。", AppSettings.AffiliateName)</p>
+                </div>
+            </div>
+        }
+    </div>
+</div>

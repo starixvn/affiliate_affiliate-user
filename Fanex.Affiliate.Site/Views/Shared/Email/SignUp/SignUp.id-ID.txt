@@ -1,0 +1,14 @@
+﻿<div>
+  Yang terhormat @Model.FirstName,<br /><br />
+
+  Terima kasih kerana Anda sudah berjaya  mendaftar untuk menjadi afiliasi @Model.AffiliateName !<br /><br />
+
+  Salah satu Afiliasi Account Manager kami akan menghubungi Anda melalui email dalam waktu 3 hari kerja untuk menentukan status aplikasi Anda.<br /><br />
+
+  Jika Anda memiliki pertanyaan dan memerlukan bantuan jangan ragu untuk menghubungi saya. <a href="mailto:@Model.MailContact">@Model.MailContact</a>.<br /><br />
+
+  Hormat kami,<br /><br />
+
+  Afiliasi @Model.AffiliateName Tim<br />
+  <a href="mailto:@Model.MailContact">@Model.MailContact</a>
+</div>

@@ -1,0 +1,133 @@
+﻿@{
+    ViewBag.Title = Lang.LandingPagesStatistics;
+    Layout = @String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
+    var i = 0;
+}
+@model TrafficStatisticsViewModel
+@section css
+{
+    <link href="@Url.Content(string.Format("~/Content/themes/theme{0}/jquery.ui.datepicker.css", AppSettings.Layout))" rel="stylesheet" />
+    <link href="@Url.Content(string.Format("~/Content/themes/theme{0}/calendar.less", AppSettings.Layout))" rel="stylesheet" />
+}
+@using (Html.BeginForm())
+{
+    <div class="span12 box-insite">
+        <div class="top">
+            <div class="in-top">
+                @Lang.LandingPages
+            </div>
+            <div class="in-right">
+            </div>
+        </div>
+        <div class="content">
+            @Html.ValidationSummary()
+            <div class="block">
+                <div class="content-block">
+                    <div class="box-header">
+                        <div class="row">
+                            <div class="cell">
+                                <div class="label">@Lang.Page:</div>
+                                <div class="editor">@Html.DropDownListFor(m => m.PageSelected, Model.PageSelectListItem, new { id = "ProductPage", @class = "sport-book" })</div>
+                            </div>
+                            <div class="cell">
+                                <div class="label">@Lang.Language:</div>
+                                <div class="editor">@Html.DropDownListFor(m => m.LanguageSelected, Model.LanguageSelectListItem, new { id = "Language", @class = "language" })</div>
+                            </div>
+                            <div class="cell">
+                                <div class="label">@Lang.From:</div>
+                                <div class="editor">
+                                    @Html.TextBoxFor(m => m.FromDate, "{0:MM/dd/yyy}", new { @class = "datepicker" })
+                                    <div class="icon-calendar">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <div class="label">@Lang.To:</div>
+                                <div class="editor">
+                                    @Html.TextBoxFor(m => m.ToDate, "{0:MM/dd/yyy}", new { @class = "datepicker" })
+                                    <div class="icon-calendar">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <div class="editor">
+                                    <input id="submit" type="submit" value="@Lang.Submit" class="button"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-block" id="result">
+                    <table class="table odd-even list no-margin">
+                        <thead>
+                            <tr class="gradient-header">
+                                <th width="300px">
+                                    @Lang.Page
+                                </th>
+                                <th width="100px">
+                                    @Lang.Language
+                                </th>
+                                <th width="100px">
+                                    @Lang.TotalClicks
+                                </th>
+                                <th width="120px">
+                                    @Lang.UniqueClicks
+                                </th>
+                                <th width="100px">
+                                    @Lang.SignUp
+                                </th>
+                                <th width="100px">
+                                    @Lang.FDM
+                                </th>
+                            </tr>
+                        </thead>
+                        @if (Model.LandingPagesStatisticsList.Any())
+                        {
+                            <tbody>
+                                @foreach (var item in Model.LandingPagesStatisticsList)
+                                {
+                                    i++;
+                                    <tr class="@(i % 2 == 0 ? "even" : "odd")">
+                                        <td>
+                                            <a href="javascript:;" class="act-view-detail" productSelected="@item.SportCode" languageSelected="@item.LanguageCode">
+                                                @item.SportCode
+                                            </a>
+                                        </td>
+                                        <td>
+                                            @Common.GetLanguageOriginal(@item.LanguageCode)
+                                        </td>
+                                        <td class="text-right">
+                                            @item.TotalClick
+                                        </td>
+                                        <td class="text-right">
+                                            @item.UniqueClick
+                                        </td>
+                                        <td class="text-right">
+                                            @item.Signups
+                                        </td>
+                                        <td class="text-right">
+                                            @item.FDM
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        }
+                        else
+                        {
+                            <tfoot>
+                                <tr>
+                                    <td colspan="6" class="text-center">@Lang.NoInformation
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<div style="display:none" id="data" data-fromdate="@Model.FromDate.ToShortDateString()" data-todate="@Model.ToDate.ToShortDateString()"></div>
+@section scriptspage
+{
+    <script src="~/Scripts/site/ClicksLandingPages.js" type="text/javascript"></script>
+}

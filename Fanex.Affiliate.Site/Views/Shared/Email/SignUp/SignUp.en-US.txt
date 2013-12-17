@@ -1,0 +1,14 @@
+﻿<div>
+  Dear @Model.FirstName,<br /><br />
+
+  Thank you for applying to become a @Model.AffiliateName Affiliate!<br /><br />
+
+  One of our Affiliate Accounts Managers will contact you by email within 3 business days to determine the status of your application.<br /><br />
+
+  If you have any questions and require any help, please do not hesitate to contact us <a href="mailto:@Model.MailContact">@Model.MailContact</a>.<br /><br />
+
+  Sincerely,<br /><br />
+
+  @Model.AffiliateName Affiliates Team<br />
+  <a href="mailto:@Model.MailContact">@Model.MailContact</a>
+</div>

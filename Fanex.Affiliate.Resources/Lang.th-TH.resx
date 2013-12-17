@@ -1,0 +1,1109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountInformation" xml:space="preserve">
+    <value>ข้อมูลเกี่ยวกับบัญชี</value>
+  </data>
+  <data name="AccountOverview" xml:space="preserve">
+    <value>ข้อมูลโดยรวมเกี่ยวกับบัญชี</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>ที่อยู่</value>
+  </data>
+  <data name="AddressIsRequired" xml:space="preserve">
+    <value>ที่อยู่จำเป็นต้องกรอก</value>
+  </data>
+  <data name="AddUrl" xml:space="preserve">
+    <value>เพิ่ม Url</value>
+  </data>
+  <data name="Adjustment" xml:space="preserve">
+    <value>การปรับ</value>
+  </data>
+  <data name="Affiliate" xml:space="preserve">
+    <value>พันธมิตร</value>
+  </data>
+  <data name="AffiliateLogin" xml:space="preserve">
+    <value>ล๊อคอินเข้าระบบบัญชีพันธมิตร</value>
+  </data>
+  <data name="AffiliateTitle" xml:space="preserve">
+    <value>{0} โปรแกรมที่เกี่ยวข้อง</value>
+  </data>
+  <data name="AgreeTermNCondition" xml:space="preserve">
+    <value>ฉันยอมรับในกติกาและเงื่อนไขในโปรแกรม พันธมิตร {0}</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>ทั้งหมด</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>จำนวนเงิน</value>
+  </data>
+  <data name="Answer" xml:space="preserve">
+    <value>คำตอบของท่าน</value>
+  </data>
+  <data name="AnswerIsRequired" xml:space="preserve">
+    <value>คำตอบของท่านว่างเปล่า กรุณาตรวจสอบ !</value>
+  </data>
+  <data name="Approved" xml:space="preserve">
+    <value>อนุมัติ</value>
+  </data>
+  <data name="Apr" xml:space="preserve">
+    <value>Apr</value>
+  </data>
+  <data name="Aug" xml:space="preserve">
+    <value>Aug</value>
+  </data>
+  <data name="AvailableDomains" xml:space="preserve">
+    <value>โดเมนที่สามารถซื้อได้</value>
+  </data>
+  <data name="BalanceBroughtForward" xml:space="preserve">
+    <value>ยอดคงเหลือยกไป</value>
+  </data>
+  <data name="BalanceIsZero" xml:space="preserve">
+    <value>คุณไม่สามารถขอถอนเงินเพราะว่าคุณมียอดเงินคงเหลือไม่เพียงพอ</value>
+  </data>
+  <data name="BankTransfer" xml:space="preserve">
+    <value>โอนเงินผ่านธนาคาร</value>
+  </data>
+  <data name="Banner" xml:space="preserve">
+    <value>แบนเนอร์</value>
+  </data>
+  <data name="Bonus" xml:space="preserve">
+    <value>โบนัส</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>ยกเลิก</value>
+  </data>
+  <data name="Cancelled" xml:space="preserve">
+    <value>ยกเลิกแล้ว</value>
+  </data>
+  <data name="CancelRequest" xml:space="preserve">
+    <value>การขอยกเลิก</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>หัวข้อ</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>เปลี่ยน</value>
+  </data>
+  <data name="ChangePassErr" xml:space="preserve">
+    <value>การเปลี่ยนรหัสผ่านมีข้อผิดพลาด</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>เปลี่ยนรหัสผ่าน</value>
+  </data>
+  <data name="ChangePasswordEmailTitle" xml:space="preserve">
+    <value>พันธมิตร {0} - รหัสผ่านตัวใหม่ของคุณ</value>
+  </data>
+  <data name="ChangePasswordInstruction" xml:space="preserve">
+    <value>ใช้แบบฟอร์มนี้เพื่อเปลี่ยนรหัสผ่านของคุณ  เมื่อคุณเปลี่ยนแล้ว พาสเวริ์ดใหม่ของคุณจะสามารถใช้ได้ในการล๊อกอินครั้งต่อไป</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>จังหวัด</value>
+  </data>
+  <data name="CityIsRequired" xml:space="preserve">
+    <value>จำเป็นต้องกรอกจังหวัด</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>ความคิดเห็น</value>
+  </data>
+  <data name="CommentIsRequired" xml:space="preserve">
+    <value>ความคิดเห็นไม่ถูกต้อง</value>
+  </data>
+  <data name="Commission" xml:space="preserve">
+    <value>คอมมิชชั่น</value>
+  </data>
+  <data name="ComNetWin" xml:space="preserve">
+    <value>ยอดเล่นเสียสุทธ ({0})</value>
+  </data>
+  <data name="CompletedDate" xml:space="preserve">
+    <value>วันที่เสร็จสมบูรณ์</value>
+  </data>
+  <data name="CompleteForm" xml:space="preserve">
+    <value>กรุณากรอกแบบฟอร์มนี้เพื่อสมัครสมาชิกกับโปรแกรม พันธมิตร {0}</value>
+  </data>
+  <data name="ConfirmPasswordRequired" xml:space="preserve">
+    <value>โปรดยืนยันรหัสผ่าน</value>
+  </data>
+  <data name="ContactInfo" xml:space="preserve">
+    <value>รายละเอียดที่ใช้ในการติดต่อ</value>
+  </data>
+  <data name="ContactNumber" xml:space="preserve">
+    <value>หมายเลขโทรศัพท์ที่ใช้ติดต่อ</value>
+  </data>
+  <data name="ContactNumberIsRequired" xml:space="preserve">
+    <value>หมายเลขที่ติดต่อวางเปล่า กรุณาตรวจสอบ</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>ติดต่อเรา</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>ประเทศ</value>
+  </data>
+  <data name="CountryIsRequired" xml:space="preserve">
+    <value>กรุณาเลือกประเทศ</value>
+  </data>
+  <data name="CsdMailSubject" xml:space="preserve">
+    <value>{0} ความเกี่ยวข้อง - ผู้ใช้งานใหม่ ({1}) รอการอนุมัติ</value>
+  </data>
+  <data name="Currency" xml:space="preserve">
+    <value>เคอเรนซี่</value>
+  </data>
+  <data name="CurrencyIsRequired" xml:space="preserve">
+    <value>โปรดเลือกสกุลเงิน</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>ปัจจุบัน</value>
+  </data>
+  <data name="CurrentCommissionSetting" xml:space="preserve">
+    <value>จัดตั้งค่าคอมมิชชั่นปัจจุบัน</value>
+  </data>
+  <data name="DailyEarnings" xml:space="preserve">
+    <value>รายได้แต่ละวัน</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>วันที่</value>
+  </data>
+  <data name="Dec" xml:space="preserve">
+    <value>Dec</value>
+  </data>
+  <data name="Deposit" xml:space="preserve">
+    <value>ฝากเงิน</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>รายละเอียด</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>อีเมลล์แอดเดรส</value>
+  </data>
+  <data name="EmailFormat" xml:space="preserve">
+    <value>รูปแบบอีเมล</value>
+  </data>
+  <data name="EmailIsRequire" xml:space="preserve">
+    <value>จำเป็นต้องมีอีเมลล์แอดเดรส</value>
+  </data>
+  <data name="EmailMatch" xml:space="preserve">
+    <value>อีเมลล์แอดเดรสที่คุณกรอกไม่สอดคล้องกัน</value>
+  </data>
+  <data name="EmptyEmail" xml:space="preserve">
+    <value>โปรดกรอกอีเมล์</value>
+  </data>
+  <data name="ErrGender" xml:space="preserve">
+    <value>เพศ ว่างเปล่า กรุณาตรวจสอบ</value>
+  </data>
+  <data name="FAQs" xml:space="preserve">
+    <value>คำถามที่พบบ่อย</value>
+  </data>
+  <data name="FDM" xml:space="preserve">
+    <value>FDM</value>
+  </data>
+  <data name="Feb" xml:space="preserve">
+    <value>Feb</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>ผู้หญิง</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>ชื่อ</value>
+  </data>
+  <data name="FirstNameIsRequired" xml:space="preserve">
+    <value>ชื่อจริง จำเป็นต้องมี</value>
+  </data>
+  <data name="ForgetPassword" xml:space="preserve">
+    <value>ลืมพาสเวริ์ด</value>
+  </data>
+  <data name="ForgetPasswordEmailTitle" xml:space="preserve">
+    <value>บัญชีพันธมิตร {0} รายละเอียดการล๊อคอินของคุณ</value>
+  </data>
+  <data name="ForgetPasswordInstruction" xml:space="preserve">
+    <value>พาสเวิดใหม่จะถูกส่งไปยังอีเมลล์ของคุณ.&lt;br /&gt; หากคุณไม่รับอีเมลล์ดังกล่าว กรุณา{0}.</value>
+  </data>
+  <data name="ForgetPasswordSuccess" xml:space="preserve">
+    <value>รายละเอียดในการล๊อคอินของคุณได้ถูกส่งแล้ว.&lt;br/&gt;กรุณาตรวจสอบอีเมลล์แอดเดรสของคุณเพื่อที่จะค้นหารายละเอียดเกี่ยวกับชื่อที่ใช้เข้าระบบและรหัสผ่านของคุณ&lt;br/&gt; หากคุณไม่ได้รับอีเมลล์ กรุณา {0} เรายินดีช่วยเหลือ คะ</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>จาก</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>เพศ</value>
+  </data>
+  <data name="GenerateLink" xml:space="preserve">
+    <value>สร้างลิ๊งค์ใหม่</value>
+  </data>
+  <data name="Hobby" xml:space="preserve">
+    <value>งานอดิเรกที่คุณชื่นชอบคือ</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>หน้าหลัก</value>
+  </data>
+  <data name="HomeDetailed" xml:space="preserve">
+    <value>รายละเอียดของระบบที่ใช้ในการตรวจสอบ</value>
+  </data>
+  <data name="HomeEarn" xml:space="preserve">
+    <value>รับค่าคอมมิชชั่นสูงถึง 40% ของยอดเล่นเสียของผู้เล่น</value>
+  </data>
+  <data name="HomeNegative" xml:space="preserve">
+    <value>ยอดบัญชีติดลบ</value>
+  </data>
+  <data name="HomeOnline" xml:space="preserve">
+    <value>มีพนักงานคอยบริการลูกค้าตลอด 24 ชั่วโมงทุกวัน</value>
+  </data>
+  <data name="HomePrompt" xml:space="preserve">
+    <value>Prompt monthly payouts</value>
+  </data>
+  <data name="HomeWide" xml:space="preserve">
+    <value>ระบบวิธีการจ่ายเงินที่หลากหลาย</value>
+  </data>
+  <data name="HtmlFormat" xml:space="preserve">
+    <value>รูปแบบ HTML</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Important" xml:space="preserve">
+    <value>สำคัญ</value>
+  </data>
+  <data name="InputRequestAmount" xml:space="preserve">
+    <value>กรอกจำนวนเงินที่ต้องการร้องขอ</value>
+  </data>
+  <data name="Jan" xml:space="preserve">
+    <value>Jan</value>
+  </data>
+  <data name="Jul" xml:space="preserve">
+    <value>Jul</value>
+  </data>
+  <data name="Jun" xml:space="preserve">
+    <value>Jun</value>
+  </data>
+  <data name="LandingPages" xml:space="preserve">
+    <value>หน้าแรก</value>
+  </data>
+  <data name="LandingPagesStatistics" xml:space="preserve">
+    <value>สถิติหน้าเวปเพจ</value>
+  </data>
+  <data name="LandingPagesStatisticsDetail" xml:space="preserve">
+    <value>ข้อมูลสถิติหน้าเวปเพจ</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>ภาษา</value>
+  </data>
+  <data name="LanguageIsRequired" xml:space="preserve">
+    <value>กรุณาเลือกภาษาที่คุณต้องการใช้</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>นามสกุล</value>
+  </data>
+  <data name="LastNameIsRequired" xml:space="preserve">
+    <value>นามสกุลจำเป็น้</value>
+  </data>
+  <data name="LinkDefault" xml:space="preserve">
+    <value>ตัวเลือกอัตโนมัติ</value>
+  </data>
+  <data name="LinkTo" xml:space="preserve">
+    <value>ไปหน้า</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>ล๊อคอิน</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>ล๊อคเอ๊าท์</value>
+  </data>
+  <data name="MailingInfor" xml:space="preserve">
+    <value>รายละเอียดเกี่ยวกับการส่งเมลล์</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>ผู้ชาย</value>
+  </data>
+  <data name="Mar" xml:space="preserve">
+    <value>Mar</value>
+  </data>
+  <data name="MarketingTools" xml:space="preserve">
+    <value>เครื่องมือการตลาด</value>
+  </data>
+  <data name="May" xml:space="preserve">
+    <value>พฤษภาคม</value>
+  </data>
+  <data name="MediaGallery" xml:space="preserve">
+    <value>ที่รวบรวมสื่อโฆษณา</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>ข้อความ</value>
+  </data>
+  <data name="MessageHistory" xml:space="preserve">
+    <value>ข้อความย้อนหลัง</value>
+  </data>
+  <data name="MinimumWithdrawalAmount" xml:space="preserve">
+    <value>จำนวนเงินขั้นต่ำที่ขอถอนได้คือ</value>
+  </data>
+  <data name="Mobile" xml:space="preserve">
+    <value>หมายเลขโทรศัพท์มือถือ</value>
+  </data>
+  <data name="MobileNumberIsRequired" xml:space="preserve">
+    <value>หมายเลขโทรศัพท์มือถือวางเปล่า  กรุณาตรวจสอบ !</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>เดือน</value>
+  </data>
+  <data name="MonthlyWinlost" xml:space="preserve">
+    <value>ยอดได้เสียในแต่ละเดือน</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>เพิ่มเติม</value>
+  </data>
+  <data name="MotherName" xml:space="preserve">
+    <value>ชื่อจริงคุณแม่ของคุณคือ</value>
+  </data>
+  <data name="Movie" xml:space="preserve">
+    <value>หนังเรื่องโปรดของคุณคือ</value>
+  </data>
+  <data name="Msg101" xml:space="preserve">
+    <value>Wrong username or password.</value>
+  </data>
+  <data name="Msg102" xml:space="preserve">
+    <value>มีการปิดการใช้งานรหัสประจำตัวผู้ใช้งานนี้ กรุณาติดต่อผู้ดูแล</value>
+  </data>
+  <data name="Msg103" xml:space="preserve">
+    <value>รหัสประจำตัวผู้ใช้งานไม่สามารถใช้งานได้ชั่วคราว เนื่องจากการขออนุญาติเข้าใช้งานผิดพลาดเกิน 5 ครั้ง โปรดลองเข้าใช้งานอีกครั้งหลังจาก 10 นาที หรือติดต่อผู้ดูแล</value>
+  </data>
+  <data name="Msg104" xml:space="preserve">
+    <value>คุณได้ระบุอีเมลล์ที่มีในระบบแล้ว กรุณาเปลี่ยนและลองอีกครั้ง หรือ  {0}</value>
+  </data>
+  <data name="Msg105" xml:space="preserve">
+    <value>บัญชีของคุณไม่ได้รับการอนุมัติ กรุณาติดต่อฝ่ายบริการลูกค้า</value>
+  </data>
+  <data name="Msg106" xml:space="preserve">
+    <value>ที่อยู่ในการขอรับรหัสผ่านใหม่ไม่ถูกต้อง</value>
+  </data>
+  <data name="Msg107" xml:space="preserve">
+    <value>ไม่พบรหัสประจำตัวผู้ใช้งาน กรุณาติดต่อผู้ดูแล</value>
+  </data>
+  <data name="Msg119" xml:space="preserve">
+    <value>อีเมลล์แอดเดรสไม่ถูกต้อง</value>
+  </data>
+  <data name="Msg120" xml:space="preserve">
+    <value>จำเป็นต้องมีอีเมลล์แอดเดรส</value>
+  </data>
+  <data name="Msg121" xml:space="preserve">
+    <value>อีเมลล์นี้ได้ถูกใช้แล้ว กรุณาระบุข้อมูลใหม่คะ</value>
+  </data>
+  <data name="Msg122" xml:space="preserve">
+    <value>ข้อมูลเกี่ยวกับบัญชีพันธมิตรของท่านไม่ถูกต้อง</value>
+  </data>
+  <data name="Msg123" xml:space="preserve">
+    <value>การสร้างบัญชีของลูกค้าล้มเหลว กรุณารองใหม่อีกครั้ง</value>
+  </data>
+  <data name="Msg130" xml:space="preserve">
+    <value>คุณมีรายการที่ร้องขอ รอดำเนินการอยู่ เพื่อที่จะร้องขอทำรายการใหม่ กรุณายกเลิกรายการร้องขออันแรกที่รอดำเนินการหรือรอจนกว่ารายการร้องขออันแรกได้รับการอนุมัติก่อน</value>
+  </data>
+  <data name="Msg131" xml:space="preserve">
+    <value>ขออภัย บัญชีพันธมิตรนี้มียอดเงินไม่เพียงพอที่จะขอถอน</value>
+  </data>
+  <data name="Msg132" xml:space="preserve">
+    <value>ยูสเซอร์เนมของท่านไม่ถูกต้อง</value>
+  </data>
+  <data name="Msg133" xml:space="preserve">
+    <value>จำนวนเงินคงเหลือในบัญชีของท่านไม่ถูกต้อง หรือ ว่าสกุลเงินที่ท่านเลือกในการถอนเงินไม่สามารถทำได้</value>
+  </data>
+  <data name="Msg134" xml:space="preserve">
+    <value>การขอทำรายการ ล้มเหลว</value>
+  </data>
+  <data name="Msg135" xml:space="preserve">
+    <value>ขอโทษ จำนวนไม่ถูกต้อง</value>
+  </data>
+  <data name="Msg136" xml:space="preserve">
+    <value>จำนวนเงินที่ร้องขอจะต้องมากกว่าจำนวนเงินขั้นต่ำของการถอนเงินที่กำหนดไว้</value>
+  </data>
+  <data name="Msg137" xml:space="preserve">
+    <value>ขออภัย! ธุรกรรณการเงิน [Neteller, Bank Transfer,.. - affiliate's chosen one] นี้ไม่สามารถใช้ได้ หากต้องการทำธุรกรรมตอนนี้ต้องทำผ่าน "บัญชีผู้เล่น" เท่านั้นคะ กรุณาคลิ๊กที่นี่เพื่อเปลี่ยนวิธีการ</value>
+  </data>
+  <data name="Msg138" xml:space="preserve">
+    <value>ไม่รองรับสกุลเงินนี้ กรุณาติดต่อผู้ดูแล</value>
+  </data>
+  <data name="Msg139" xml:space="preserve">
+    <value>คุณไม่ได้รับอนุญาติให้ทำการเปลี่ยนแปลงในขั้นตอนนี้</value>
+  </data>
+  <data name="Msg140" xml:space="preserve">
+    <value>รายการนี้ไม่ใช่การถอนเงิน</value>
+  </data>
+  <data name="Msg141" xml:space="preserve">
+    <value>คุณไม่ได้รับอนุญาติให้ใช้ฟังก์ชั่นนี้</value>
+  </data>
+  <data name="Msg142" xml:space="preserve">
+    <value>ไม่มีผู้ใช้งานนี้</value>
+  </data>
+  <data name="Msg143" xml:space="preserve">
+    <value>กรุณาระบุยอดรวมการจ่ายเงิน</value>
+  </data>
+  <data name="Msg150" xml:space="preserve">
+    <value>พาสเวิร์ดเก่าไม่ถูกต้อง</value>
+  </data>
+  <data name="MsgEmptyCaptcha" xml:space="preserve">
+    <value>ต้องระบุรหัสที่ใช้งานได้</value>
+  </data>
+  <data name="MsgEmptyUsernamePassword" xml:space="preserve">
+    <value>โปรดกรอกรหัสประจำตัวผู้ใช้งานและรหัสผ่าน</value>
+  </data>
+  <data name="MsgIncorrectCaptchaMsg" xml:space="preserve">
+    <value>คุณกรอกรหัสตรวจสอบที่ไม่ถูกต้อง !</value>
+  </data>
+  <data name="MsgKickout" xml:space="preserve">
+    <value>มีคนเข้าระบบหรือว่าเวลาในระบบของคุณไม่ถูกต้อง  คุณถูกบังคับให้ออกจากระบบ</value>
+  </data>
+  <data name="NA" xml:space="preserve">
+    <value>ไม่มีข้อมูล</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>ชื่อ</value>
+  </data>
+  <data name="NameIsRequired" xml:space="preserve">
+    <value>ชื่อไม่ถูกต้อง</value>
+  </data>
+  <data name="NameOfBook" xml:space="preserve">
+    <value>หนังสือเล่มโปรดของคุณคือ</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>รหัสผ่านใหม่</value>
+  </data>
+  <data name="NewPasswordRequired" xml:space="preserve">
+    <value>จำเป็นต้องมีรหัสผ่านใหม่</value>
+  </data>
+  <data name="NewSignups" xml:space="preserve">
+    <value>สมัครสมาชิกใหม่</value>
+  </data>
+  <data name="NoInformation" xml:space="preserve">
+    <value>ไม่มีข้อมูลในขณะนี้</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>ปกติ</value>
+  </data>
+  <data name="Nov" xml:space="preserve">
+    <value>Nov</value>
+  </data>
+  <data name="Oct" xml:space="preserve">
+    <value>Oct</value>
+  </data>
+  <data name="OldPassErr" xml:space="preserve">
+    <value>พาสเวิร์ดเก่าไม่ถูกต้อง</value>
+  </data>
+  <data name="OldPassword" xml:space="preserve">
+    <value>พาสเวริ์ดเก่า</value>
+  </data>
+  <data name="OldPasswordRequired" xml:space="preserve">
+    <value>พาสเวริ์ดเดิมจำเป็นต้องมี</value>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>หน้า</value>
+  </data>
+  <data name="PageSize" xml:space="preserve">
+    <value>ขนาดหน้า</value>
+  </data>
+  <data name="Paging" xml:space="preserve">
+    <value>หน้า {0} ของ {1}</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>รหัสผ่าน</value>
+  </data>
+  <data name="PasswordNotMatched" xml:space="preserve">
+    <value>รหัสผ่านที่ยืนยัน ไม่ตรงกับรหัสผ่านใหม่ที่ระบุไว้</value>
+  </data>
+  <data name="PaymentInfo" xml:space="preserve">
+    <value>รายละเอียดการถอนเงิน</value>
+  </data>
+  <data name="PaymentMethod" xml:space="preserve">
+    <value>วิธีการจ่ายเงิน</value>
+  </data>
+  <data name="PaymentRequest" xml:space="preserve">
+    <value>การขอการถอนเงิน</value>
+  </data>
+  <data name="PaymentRequestCancel" xml:space="preserve">
+    <value>การขอถอนเงินของคุณได้รับการยกเลิกแล้ว</value>
+  </data>
+  <data name="PaymentRequestSuccess" xml:space="preserve">
+    <value>การขอถอนเงินของคุณได้ทำการเสนอเสร็จสมบูรณ์แล้ว</value>
+  </data>
+  <data name="PaymentTime" xml:space="preserve">
+    <value>คุณจะสามารถถอนเงินได้ระหว่างวันที่ 8 ถึงวันที่ 15 ของเดือนเท่านั้น</value>
+  </data>
+  <data name="PendingRequest" xml:space="preserve">
+    <value>การร้องขอของคุณอยู่ระหว่างการดำเนินการ</value>
+  </data>
+  <data name="PetName" xml:space="preserve">
+    <value>ชื่อสัตว์เลี้ยงที่ชื่นชอบของ?</value>
+  </data>
+  <data name="PlainText" xml:space="preserve">
+    <value>เฉพาะข้อความเท่านั้น</value>
+  </data>
+  <data name="PlayerAcc" xml:space="preserve">
+    <value>บัญชีที่ใช้เล่นใน</value>
+  </data>
+  <data name="PlayerUsername" xml:space="preserve">
+    <value>ชื่อที่ใช้เข้าระบบ</value>
+  </data>
+  <data name="PlayerUsernameIsRequired" xml:space="preserve">
+    <value>ยูสเซอร์เนม จำเป็นต้องมี</value>
+  </data>
+  <data name="Postal" xml:space="preserve">
+    <value>รหัสไปรษณีย์</value>
+  </data>
+  <data name="PostcodeZiIsRequired" xml:space="preserve">
+    <value>รหัสไปรษณีย์จำเป็นต้องมี</value>
+  </data>
+  <data name="PostDate" xml:space="preserve">
+    <value>วันที่ได้ลงรายการไว้</value>
+  </data>
+  <data name="Preference" xml:space="preserve">
+    <value>สิ่งที่ต้องการใช้</value>
+  </data>
+  <data name="Proccessing" xml:space="preserve">
+    <value>กำลังดำเนินการ</value>
+  </data>
+  <data name="Product" xml:space="preserve">
+    <value>กีฬา</value>
+  </data>
+  <data name="ProgramDetails" xml:space="preserve">
+    <value>รายละเอียดโปรแกรม</value>
+  </data>
+  <data name="PwdChanged" xml:space="preserve">
+    <value>การเปลี่ยนรหัสผ่านเสร็จสมบูรณ์เรียบร้อยแล้ว</value>
+  </data>
+  <data name="QualifyingMembers" xml:space="preserve">
+    <value>ผู้เล่นที่เข้าเกณฑ</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>คำถามคำตอบเพื่อความปลอดภัย</value>
+  </data>
+  <data name="QuestionIsRequired" xml:space="preserve">
+    <value>คำถามคำตอบเพื่อความปลอดภัยว่างเปล่ กรุณาตรวจสอบ !</value>
+  </data>
+  <data name="RecentPayment" xml:space="preserve">
+    <value>การจ่ายเงินยอดปัจจับัน</value>
+  </data>
+  <data name="RecoverPasswordFail" xml:space="preserve">
+    <value>ที่อยู่ในการขอรับรหัสผ่านใหม่ไม่ถูกต้อง</value>
+  </data>
+  <data name="ReenterNewPassword" xml:space="preserve">
+    <value>ยืนยันรหัสผ่าน</value>
+  </data>
+  <data name="Referrals" xml:space="preserve">
+    <value>ภาษาไทย</value>
+  </data>
+  <data name="ReferralsDetail" xml:space="preserve">
+    <value>ข้อมูลอ้างอิง</value>
+  </data>
+  <data name="ReferrersStatistics" xml:space="preserve">
+    <value>สถิติอ้างอิง</value>
+  </data>
+  <data name="ReferrersStatisticsDetail" xml:space="preserve">
+    <value>ข้อมูลสถิติอ้างอิง</value>
+  </data>
+  <data name="RefNo" xml:space="preserve">
+    <value>หมายเลขอ้างอิง</value>
+  </data>
+  <data name="RegisForm" xml:space="preserve">
+    <value>แบบฟอร์มการสมัคร</value>
+  </data>
+  <data name="Rejected" xml:space="preserve">
+    <value>ถูกปฏิเสธแล้ว</value>
+  </data>
+  <data name="RequestAmount" xml:space="preserve">
+    <value>จำนวนเงินที่ร้องขอ</value>
+  </data>
+  <data name="RequestDate" xml:space="preserve">
+    <value>วันที่ที่ร้องขอ</value>
+  </data>
+  <data name="RequestPaymentEmailTitle" xml:space="preserve">
+    <value>จดหมายการขอแจ้งถอนเงินในบัญชีพันธมิตร</value>
+  </data>
+  <data name="RequestPayout" xml:space="preserve">
+    <value>การขอจ่ายเงิน</value>
+  </data>
+  <data name="RequireInfo" xml:space="preserve">
+    <value>กรุณากรอก &lt;span class="txtRequire"&gt;*&lt;/span&gt;  ทุกช่องที่ระบบแนะนำ คะ</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>ปรับเปลี่ยน</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>ค้นหา</value>
+  </data>
+  <data name="SecretCode" xml:space="preserve">
+    <value>เลขรหัสลับของฉันคือ</value>
+  </data>
+  <data name="SelectOne" xml:space="preserve">
+    <value>เลือกอันใดอันหนึ่ง</value>
+  </data>
+  <data name="Sep" xml:space="preserve">
+    <value>Sep</value>
+  </data>
+  <data name="SignUp" xml:space="preserve">
+    <value>สมัคร</value>
+  </data>
+  <data name="SignUpMailSubject" xml:space="preserve">
+    <value>พันธมิตร {0} - การสมัครของคุณ</value>
+  </data>
+  <data name="SiteInfo" xml:space="preserve">
+    <value>รายละเอียดเกี่ยวกับเวบไซค์</value>
+  </data>
+  <data name="SiteURL" xml:space="preserve">
+    <value>ลิงค์เข้าเวบไซค์</value>
+  </data>
+  <data name="SiteURLIsRequired" xml:space="preserve">
+    <value>จำเป็นต้องมีลิ๊งค์ที่ใช้เข้าเวบไซค์</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>ขนาด</value>
+  </data>
+  <data name="Sport" xml:space="preserve">
+    <value>กีฬา</value>
+  </data>
+  <data name="SportTeam" xml:space="preserve">
+    <value>ทีมฟุตบอลที่คุณชื่นชอบคือ</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>จังหวัด</value>
+  </data>
+  <data name="StateIsRequired" xml:space="preserve">
+    <value>จังหวัดจำเป็นต้องมี</value>
+  </data>
+  <data name="StatementHistory" xml:space="preserve">
+    <value>ประวัติเกี่ยวกับการทำธุรกรรมทางการเงิน</value>
+  </data>
+  <data name="StatisticsFor" xml:space="preserve">
+    <value>สถิติสำหรับ {0}-{1}</value>
+  </data>
+  <data name="StatisticsUpToNow" xml:space="preserve">
+    <value>สถิติปัจจุบัน</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>สถานะ</value>
+  </data>
+  <data name="SubCategory" xml:space="preserve">
+    <value>หัวข้อย่อย</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>เรื่อง</value>
+  </data>
+  <data name="SubjectIsRequired" xml:space="preserve">
+    <value>เรื่องไม่ถูกต้อง</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>ส่งมอบ</value>
+  </data>
+  <data name="TermsConditions" xml:space="preserve">
+    <value>กติกาและเงื่อนไข</value>
+  </data>
+  <data name="TextBox" xml:space="preserve">
+    <value>กล่องข้อความ</value>
+  </data>
+  <data name="TextLink" xml:space="preserve">
+    <value>ลิ้งค์ข้อความ</value>
+  </data>
+  <data name="Tier" xml:space="preserve">
+    <value>ระดับ</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>ถึง</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>ด้านบน</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>ยอดรวม</value>
+  </data>
+  <data name="TotalActivePlayers" xml:space="preserve">
+    <value>ยอดรวมของลูกค้าที่ยังคงเล่นอยู่</value>
+  </data>
+  <data name="TotalClicks" xml:space="preserve">
+    <value>จำนวนรวมครั้งของการคลิ๊กทั้งหมด</value>
+  </data>
+  <data name="TotalDeposits" xml:space="preserve">
+    <value>ยอดรวมของการฝากเงิน</value>
+  </data>
+  <data name="TotalPlayers" xml:space="preserve">
+    <value>ยอดรวมของผู้เล่น</value>
+  </data>
+  <data name="TotalQualifiedActive" xml:space="preserve">
+    <value>จำนวนผู้เล่นทั้งหมดที่มียอดเกินหนึ่งร้อยเหรียญ ({0})</value>
+  </data>
+  <data name="TrackingCode" xml:space="preserve">
+    <value>รหัสที่ใช้ตรวจสอบ</value>
+  </data>
+  <data name="TrackingStatistics" xml:space="preserve">
+    <value>ตรวจสอบสถิติ</value>
+  </data>
+  <data name="TrafficStatistics" xml:space="preserve">
+    <value>สถิตการเข้าชม</value>
+  </data>
+  <data name="Transaction" xml:space="preserve">
+    <value>รายการ</value>
+  </data>
+  <data name="Turnover" xml:space="preserve">
+    <value>เทรินโอเวอร์</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>ชนิด</value>
+  </data>
+  <data name="UnauthorizedMsg" xml:space="preserve">
+    <value>สิ้นสุดเวลาในการดำเนินการ หรือ การร้องขอไม่ได้รับอนุญาติ</value>
+  </data>
+  <data name="UniqueClicks" xml:space="preserve">
+    <value>การคลิ๊กแต่ละครั้ง</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>ชื่อที่ใช้เข้าระบบ</value>
+  </data>
+  <data name="Validation" xml:space="preserve">
+    <value>หมายเลขตรวจสอบ</value>
+  </data>
+  <data name="VerifyEmail" xml:space="preserve">
+    <value>ตรวจสอบอีเมลล์แอดเดรส</value>
+  </data>
+  <data name="Winlost" xml:space="preserve">
+    <value>ได้เสีย</value>
+  </data>
+  <data name="YourEmail" xml:space="preserve">
+    <value>อีเมลล์แอดเดรสของคุณ</value>
+  </data>
+  <data name="Headlines" xml:space="preserve">
+    <value>ข่าวด่วน</value>
+  </data>
+  <data name="ViewMore" xml:space="preserve">
+    <value>ดูรายละเอียด</value>
+  </data>
+  <data name="ErrAuthorized" xml:space="preserve">
+    <value>คุณไม่ได้รับอนุญาติให้ใช้ฟังก์ชั่นนี้</value>
+  </data>
+  <data name="UpdateAccSuccess" xml:space="preserve">
+    <value>รายละเอียดเกี่ยวกับบัญชีของคุณได้รับการอัพเดทสำเร็จเรียบร้อยแล้ว</value>
+  </data>
+  <data name="ContactUsSuccess" xml:space="preserve">
+    <value>&lt;p&gt;ขอบคุณที่ติดต่อเรา&lt;/p&gt;
+&lt;p&gt;ข้อความของคุณได้ถูกส่งเรียบร้อยแล้ว เราจะตอบกลับหาคุณโดยเร็วที่สุด&lt;/p&gt;
+&lt;p&gt;ขอให้มีวันที่ดี&lt;/p&gt;
+&lt;p&gt;ขอแสดงความนับถือ, &lt;/p&gt;
+&lt;br /&gt;
+ทีมงานพันธมิตร {0}</value>
+  </data>
+  <data name="WebsiteUrl" xml:space="preserve">
+    <value>กรุณากรอกชื่อเวปไซค์ของคุณ</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>ลบ</value>
+  </data>
+  <data name="MoreSiteUrl" xml:space="preserve">
+    <value>ลิ้งค์ที่ใช้เข้าเวบไซค์ {0} จำเป็น</value>
+  </data>
+  <data name="Msg160" xml:space="preserve">
+    <value>ชื่อผู้สร้างนี้ไม่ถูกต้อง</value>
+  </data>
+  <data name="Msg161" xml:space="preserve">
+    <value>รูปแบบเนื้อหาการส่งนี้ไม่ถูกต้อง</value>
+  </data>
+  <data name="Msg162" xml:space="preserve">
+    <value>ชื่อผู้ส่งไม่ถูกต้อง</value>
+  </data>
+  <data name="Msg163" xml:space="preserve">
+    <value>ที่อยู่อีเมลล์นี้ไม่ถูกต้อง</value>
+  </data>
+  <data name="Msg164" xml:space="preserve">
+    <value>รูปแบบหัวข้อการส่งนี้ไม่ถูกต้อง</value>
+  </data>
+  <data name="Msg165" xml:space="preserve">
+    <value>รหัส IP. ของผู้ส่งไม่ถูกต้อง</value>
+  </data>
+  <data name="Msg166" xml:space="preserve">
+    <value>ชื่อเบราเซอร์นี้ไม่ถูกต้อง</value>
+  </data>
+  <data name="Msg167" xml:space="preserve">
+    <value>ID. ของ ASP.NET ไม่สามารถใช้งานได้</value>
+  </data>
+  <data name="Msg168" xml:space="preserve">
+    <value>สามารถส่งอีเมลล์ได้มากที่สุด 20 อีเมลล์ ในเวลา 10 นาที</value>
+  </data>
+  <data name="Msg169" xml:space="preserve">
+    <value>การเพิ่มอีเมลล์ผิดพลาด</value>
+  </data>
+  <data name="Msg170" xml:space="preserve">
+    <value>รหัสผู้ใช้งานนี้มีคำขอที่ยังไม่ได้ดำเนินการ กรุณาดำเนินการให้เสร็จสิ้น</value>
+  </data>
+  <data name="Msg171" xml:space="preserve">
+    <value>ไม่สามารถดำเนินการได้ เนื่องจากข้อมูลผู้ใช้งานไม่ถูกต้อง</value>
+  </data>
+  <data name="Msg172" xml:space="preserve">
+    <value>เกิดความผิดพลาด ไม่สามารถดำเนินการได้</value>
+  </data>
+  <data name="ApplicationForm" xml:space="preserve">
+    <value>แบบฟอร์มการสมัคร</value>
+  </data>
+  <data name="PleaseDirectAnyComment" xml:space="preserve">
+    <value>กรุณาส่งความคิดเห็นหรือคำถามมาได้ที่{0} หรือใช้แบบฟอร์มทางด้านล่าง</value>
+  </data>
+  <data name="Copyright" xml:space="preserve">
+    <value>ลิขสิทธิ์</value>
+  </data>
+  <data name="PasswordPattern" xml:space="preserve">
+    <value>รหัสผ่านต้องไม่ต่ำกว่า 6 อักขระ, ซึ่งประกอบไปด้วย ตัวหนังสืออย่างน้อย 2 ตัว และตัวเลขอย่างน้อย 2 ตัว</value>
+  </data>
+  <data name="FromDateIsRequired" xml:space="preserve">
+    <value>From date is required</value>
+  </data>
+  <data name="ToDateIsRequired" xml:space="preserve">
+    <value>To date is required</value>
+  </data>
+  <data name="BestViewIn" xml:space="preserve">
+    <value>แนะนำใช้ </value>
+  </data>
+  <data name="DailyEarningsDetail" xml:space="preserve">
+    <value>ข้อมูลรายวัน</value>
+  </data>
+  <data name="HotNews" xml:space="preserve">
+    <value>ข่าวด่วน</value>
+  </data>
+  <data name="CopyrightPacificSeaInvests" xml:space="preserve">
+    <value>ลิขสิทธิ์ {0} แปซิฟิคซี อินเว</value>
+  </data>
+  <data name="CustomizedBanners" xml:space="preserve">
+    <value>สื่อโฆษณา</value>
+  </data>
+  <data name="PromotionalDescriptions" xml:space="preserve">
+    <value>รายละเอียดโปรโมชั่น</value>
+  </data>
+  <data name="Sportsbook" xml:space="preserve">
+    <value>อัตราค่าตอบแทนจากหน้ากีฬา</value>
+  </data>
+  <data name="EnglishSupport" xml:space="preserve">
+    <value>ติดต่อบริการภาษาไทย</value>
+  </data>
+  <data name="ThaiSupport" xml:space="preserve">
+    <value>ติดต่อบริการภาษาไทย</value>
+  </data>
+  <data name="VietnameseSupport" xml:space="preserve">
+    <value>ภาษาเวียดนาม</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>ย้อนกลับ</value>
+  </data>
+  <data name="RegisSuccess" xml:space="preserve">
+    <value>ขอบคุณที่ส่งใบสมัครของคุณมายัง พันธมิตร {0} &lt;br/&gt;&lt;br/&gt; เมื่อทางเราได้พิจารณาเนื้อหาเวบไซด์และข้อมูล ว่าเหมาะสม เราจะทำการแจ้งคุณถึงสถานะ &lt;br/&gt;&lt;br/&gt; ภายใน 5 วันทำการ และคุณจะสามารถเข้าใช้ระบบพันธมิตรของเราได้คะ &lt;br/&gt;&lt;br/&gt; ด้วยความนับถือ &lt;br/&gt;&lt;br/&gt; ทีมงานพันธมิตร {0}</value>
+  </data>
+  <data name="ApplicationUnde" xml:space="preserve">
+    <value>ใบสมัครของคุณอย่ระหว่างการพิจารณา</value>
+  </data>
+  <data name="January" xml:space="preserve">
+    <value>มกราคม</value>
+  </data>
+  <data name="February" xml:space="preserve">
+    <value>กุมภาพันธ์</value>
+  </data>
+  <data name="March" xml:space="preserve">
+    <value>มีนาคม</value>
+  </data>
+  <data name="April" xml:space="preserve">
+    <value>เมษายน</value>
+  </data>
+  <data name="June" xml:space="preserve">
+    <value>มิถุนายน</value>
+  </data>
+  <data name="July" xml:space="preserve">
+    <value>กรกฏาคม</value>
+  </data>
+  <data name="August" xml:space="preserve">
+    <value>สิงหาคม</value>
+  </data>
+  <data name="September" xml:space="preserve">
+    <value>กันยายน</value>
+  </data>
+  <data name="October" xml:space="preserve">
+    <value>ตุลาคม</value>
+  </data>
+  <data name="November" xml:space="preserve">
+    <value>พฤศจิกายน</value>
+  </data>
+  <data name="December" xml:space="preserve">
+    <value>ธันวาคม</value>
+  </data>
+  <data name="FieldMustBeNumeric" xml:space="preserve">
+    <value>สนามต้องเป็นตัวเลข</value>
+  </data>
+  <data name="LandingPagesDetail" xml:space="preserve">
+    <value>ข้อมูลหน้าเวปเพจ</value>
+  </data>
+  <data name="Statistics" xml:space="preserve">
+    <value>สถิติ</value>
+  </data>
+  <data name="CustomerInfo" xml:space="preserve">
+    <value>Customer Information</value>
+  </data>
+  <data name="AmountError" xml:space="preserve">
+    <value>จำนวนเงินที่ร้องขอไม่ถูกต้อง  จำนวนเงินต้องอยู่ระหว่าง</value>
+  </data>
+  <data name="And" xml:space="preserve">
+    <value>และ</value>
+  </data>
+  <data name="FAQ_HowCanCheck" xml:space="preserve">
+    <value>ฉันจะสามารถตรวจสอบได้หรือไม่ว่าฉันได้รับรายได้เท่าไหร่ ?</value>
+  </data>
+  <data name="FAQ_HowDoSignUp" xml:space="preserve">
+    <value>ฉันจะสมัครเข้ามาในโปรแกรม {0} พันธมิตรได้อย่างไร ?</value>
+  </data>
+  <data name="FAQ_HowSystemKeepTrack" xml:space="preserve">
+    <value>ระบบจะสามารถตรวจสอบลูกค้าที่ฉันแนะนำได้อย่างไร ?</value>
+  </data>
+  <data name="FAQ_WhatAreWithdrawalMethods" xml:space="preserve">
+    <value>มีวิธีให้ฉันถอนเงินได้อย่างไรบ้าง?</value>
+  </data>
+  <data name="FAQ_WhatIfDontHaveWebsite" xml:space="preserve">
+    <value>แล้วถ้าฉันไม่มีเว็บไซต์ล่ะ ยังสามารถเข้าร่วมได้หรือไม่?</value>
+  </data>
+  <data name="FAQ_WhatIsAffiliateProgram" xml:space="preserve">
+    <value>โปรแกรม{0} พันธมิตรคืออะไร ?</value>
+  </data>
+  <data name="FAQ_WhatIsMinimumWithdrawalRequest" xml:space="preserve">
+    <value>จำนวนเงินต่ำสุดที่ฉันสามารถขอถอนได้คือเท่าไหร่ ?</value>
+  </data>
+  <data name="FAQ_WhereGetBanners" xml:space="preserve">
+    <value>ฉันจะได้รับแบนเนอร์และข้อความจากที่ไหน ?</value>
+  </data>
+  <data name="CompanyNegativeNetWin" xml:space="preserve">
+    <value>ถ้าชนะสุทธิของ บริษัท เป็นลบแล้วมี บริษัท ในเครือที่จะทน {0}% กับ บริษัท ในเดือนนั้น (ใช้สำหรับแต่ละผลิตภัณฑ์)</value>
+  </data>
+  <data name="LiveCasino" xml:space="preserve">
+    <value>Live Casino</value>
+  </data>
+  <data name="NumberGame" xml:space="preserve">
+    <value>Number Game</value>
+  </data>
+  <data name="RNGCasino" xml:space="preserve">
+    <value>RNG Casino</value>
+  </data>
+  <data name="Casino" xml:space="preserve">
+    <value>Casino</value>
+  </data>
+  <data name="Racebook" xml:space="preserve">
+    <value>Racebook</value>
+  </data>
+  <data name="BetList" xml:space="preserve">
+    <value>Bet List</value>
+  </data>
+  <data name="DontShowRunningBetList" xml:space="preserve">
+    <value>We don't support running bet list at the moment.</value>
+  </data>
+  <data name="BetListResults" xml:space="preserve">
+    <value>Results</value>
+  </data>
+</root>

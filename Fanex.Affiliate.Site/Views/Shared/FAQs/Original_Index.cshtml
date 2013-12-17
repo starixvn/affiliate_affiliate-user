@@ -1,0 +1,132 @@
+﻿@using Fanex.Affiliate.Web.Mvc
+@model SiteDomainInfo
+@{
+    ViewBag.Title = Lang.FAQs;
+    Layout = String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
+    var linkApplicationForm = new object();
+    if(SessionManager.CurrentSession == null)
+    {
+        linkApplicationForm = Html.ActionLink(Lang.ApplicationForm, "Index", "User");
+    }
+    else
+    {
+        linkApplicationForm = Lang.ApplicationForm; 
+    }
+}
+@{
+    var classThai = AppSession.Language.Equals("th-TH") ? AppSession.Language : string.Empty;
+    var classType = string.Format("class='span12 box-insite {0}'", classThai);
+}
+
+<div @Html.Raw(classType)>
+    <div class="top">
+        <div class="in-top">@Lang.FAQs</div>
+        <div class="in-right"></div>
+    </div>
+    <div class="content">
+        <div class="block">
+            <div class="title-block">
+                @Terms.FAQ_General <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block">
+            </div>
+            <div class="content-block">
+                <b id="f1">@string.Format(Terms.FAQ_WhatIsAffiliateProgram, AppSettings.AffiliateName)</b>
+                <br />
+                @Html.Raw(string.Format(Terms.FAQ_AffiliateProgramIsPartershipProgram, AppSettings.AffiliateName, Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                <p></p>
+                <b id="f2">@string.Format(Terms.FAQ_HowDoSignUp, AppSettings.AffiliateName) </b>
+                <br />
+                @Html.Raw(string.Format(Terms.FAQ_AffiliateProgramIsFreeToJoin, AppSettings.AffiliateName, linkApplicationForm))
+                <p></p>
+                <b id="f3">@Terms.FAQ_WhatIfDontHaveWebsite</b>
+                <br />
+                @Terms.FAQ_NowYouCan:
+                <ul>
+                    <li style="list-style-type: disc">@Terms.FAQ_UploadItOnAnyPublicWebsites</li>
+                    <li style="list-style-type: disc">@Terms.FAQ_SendPageLink</li>
+                </ul>
+                @Html.Raw(string.Format(Terms.FAQ_ForMoreDetails, string.Format("<a href=mailto:{0}>{0}</a>", AppSettings.MailContact)))
+            </div>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                @Terms.FAQ_MarketingTracking<a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block">
+            </div>
+            <div class="content-block">
+                <b id="f4">@Terms.FAQ_WhereGetBanners</b>
+                <br />
+                @Terms.FAQ_ByAccessingOurMediaGallery
+                <p></p>
+                <b id="f5">@Terms.FAQ_HowSystemKeepTrack</b>
+                <br />
+                @Html.Raw(string.Format(Terms.FAQ_WeEmployStartOfArtTechnology, Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                <p></p>
+                <b>@Html.Raw(string.Format(Terms.FAQ_WillYouTrack, Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))</b>
+                <br />
+                @Html.Raw(string.Format(Terms.FAQ_WeAreAbleToTrackVisitors, Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                <p>
+                </p>
+                <b>@Terms.FAQ_WhatIsCookie</b>
+                <br />
+                @Html.Raw(string.Format(Terms.FAQ_CookiesAreMechanism, Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                <p>
+                </p>
+                <b>@Terms.FAQ_DoYouReward</b>
+                <br />
+                @Terms.FAQ_CookiesAreOverwritten
+                <p>
+                </p>
+                <b id="f6">@Terms.FAQ_HowCanCheck</b>
+                <br />
+                @string.Format(Terms.FAQ_YouCanLogin, AppSettings.SystemName)
+                <p>
+                </p>
+                <b>@Terms.FAQ_WhatYourPolicy</b>
+                <br />
+                @string.Format(Terms.FAQ_WeDontTolerateSpamming, AppSettings.SystemName)
+            </div>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                @Terms.PD_GettingPaid<a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block">
+            </div>
+            <div class="content-block">
+                <b id="f7">@Terms.FAQ_WhatAreWithdrawalMethods</b>
+                <br />
+                @string.Format(Terms.FAQ_YouCanRequest, AppSettings.SystemName)
+                <p>
+                </p>
+                <b>@Terms.FAQ_WhatKindsOfCurrencies</b>
+                <br />
+                @string.Format(Terms.FAQ_YouCanWithdrawMoney, string.Join(", ", AppSettings.PlayerCurrencies.OrderBy(c=>c.CurrencyCode).Select(x => x.CurrencyCode).ToArray()))
+                <p>
+                </p>
+                <b id="f8">@Terms.FAQ_WhatIsMinimumWithdrawalRequest</b>
+                <br />
+                @string.Format(Terms.FAQ_MinimumAmountOfWithdrawalRequest, AppSettings.DefaultCurrencySymbol, AppSettings.MinimumWithdrawalAmount)
+                <p>
+                </p>
+                <b>@Terms.FAQ_DoNegativeBalance</b>
+                <br />
+                @Terms.FAQ_WeRolloverNegativeCommission
+                <p>
+                </p>
+                <b>@Terms.FAQ_HowOftenCanIRequest</b>
+                <br />
+                @Terms.FAQ_MaximumOfWithdrawalRequest
+            </div>
+            @if (SessionManager.CurrentSession == null)
+            {
+                <br />
+                <div class="joinUsButton">
+                    <a class="signup" href="~/User/Index"><span>@string.Format(Terms.FAQ_JoinOurAffProgram, AppSettings.SystemName).ToUpper()</span></a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,177 @@
+﻿@{
+    ViewBag.Title = Lang.DailyEarningsDetail;
+    Layout = string.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
+}
+@model DailyEarningsKioskDetailViewModel
+@section css
+{
+    <link href="@Url.Content(string.Format("~/Content/themes/theme{0}/jquery.ui.datepicker.css", AppSettings.Layout))" rel="stylesheet" />
+    <link href="@Url.Content(string.Format("~/Content/themes/theme{0}/calendar.less", AppSettings.Layout))" rel="stylesheet" />
+    <style type="text/css">
+        .ui-tooltip {
+            max-width: 400px;
+            color: Black;
+        }
+    </style>
+}
+@section scriptspage
+{
+    <script type="text/javascript" src="~/Scripts/site/DailyEarningsDetail.js"></script>
+}
+@using (Html.BeginForm())
+{
+    <div class="span12 box-insite">
+        <div class="top">
+            <div class="in-top">
+                @Lang.DailyEarningsDetail
+            </div>
+            <div class="in-right">
+            </div>
+        </div>
+        <div class="content">
+            @Html.ValidationSummary()
+            <div class="block">
+                <div class="content-block">
+                    <div class="box-header">
+                        <div class="row">
+                            <div class="cell">
+                                <div class="label">@Lang.Product:</div>
+                                <div class="editor">@RazorHelper.DropDownListProduct(Model.ListProduct, Model.ProductId, new Dictionary<string, object> { { "id", "ProductId" }, { "style", "width:100px;" } })</div>
+                            </div>
+                            <div class="cell">
+                                <div class="label">@Lang.Date:</div>
+                                <div class="editor">
+                                    @Html.TextBoxFor(m => m.MonthDate, "{0:d}", new { @class = "datepicker" })
+                                    <div class="icon-calendar">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <div class="editor">
+                                    <input id="submit" type="submit" value="@Lang.Submit" class="button"></div>
+                            </div>
+                            @if (AppSettings.IsShowDetailDailyEarnings)
+                            { 
+                                <div class="cell" style="float:right !important;">
+                                    <img id="betlistNote" style="cursor:hand;" src="~/Content/betlist/images/note.png" onmouseover="showBetlistTooltip()" title="@Lang.DontShowRunningBetList" />
+                                </div>
+                            }
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="content-block no-padding">
+                    <table class="table odd-even list no-margin">
+                        <thead>
+                            <tr class="gradient-header">
+                                <th style="width: 15px;">
+                                    &nbsp;
+                                </th>
+                                <th style="width: 80px;">
+                                    @Lang.Username
+                                </th>
+                                <th style="width: 100px;">
+                                    @string.Format("{0} ({1})", Lang.Deposit, FormaterCurrency.GetCurrencySymbol())
+                                </th>
+                                <th style="width: 100px;">
+                                    @string.Format("{0} ({1})", Lang.Turnover, FormaterCurrency.GetCurrencySymbol())
+                                </th>
+                                <th style="width: 100px;">
+                                    @string.Format("{0} ({1})", Lang.Winlost, FormaterCurrency.GetCurrencySymbol())
+                                </th>
+                                <th style="width: 70px;">
+                                    @string.Format("{0} ({1})", Lang.Bonus, FormaterCurrency.GetCurrencySymbol())
+                                </th>
+                                <th>
+                                    @string.Format("{0} ({1})", Lang.Adjustment, FormaterCurrency.GetCurrencySymbol())
+                                </th>
+                            </tr>
+                        </thead>
+                        @if (Model.ListDailyEarningDetail.Any())
+                        {
+                            <tbody>
+                                @{
+                            int count = 1;
+                            var i = 0;
+                            double totalDeposit = 0;
+                            double totalTurnover = 0;
+                            double totalWinlost = 0;
+                            double totalBonus = 0;
+                            double totalAdjustment = 0;
+
+                            foreach (var dailyEarningDetail in Model.ListDailyEarningDetail)
+                            {
+                                i++;
+                                totalDeposit += dailyEarningDetail.Deposit;
+                                totalTurnover += dailyEarningDetail.Turnover;
+                                totalWinlost += dailyEarningDetail.Winlost;
+                                totalBonus += dailyEarningDetail.Bonus;
+                                totalAdjustment += dailyEarningDetail.Adjustment;
+
+                                        <tr class="@(i % 2 == 0 ? "even" : "odd")">
+                                            <td class="text-center">@count.ToString()
+                                            </td>
+                                            <td class="text-center">
+                                                @if(dailyEarningDetail.Turnover > 0)
+                                                {
+                                                    var selectedProduct = Model.ListProduct.Where(l => l.ProductId == Model.ProductId);
+                                                    var selectedProductName = selectedProduct.Count() > 0
+                                                        ? selectedProduct.First().ProductName
+                                                        : "All";
+                                                    @Html.Raw(string.Format("<a href='javascript:;' class='domain-view-detail' data-domain-username='{0}' data-domain-product='{1}' data-domain-winlostdate='{2}' data-domain-currency='{3}' data-domain-affcurrency='{4}'>{5}</a>", dailyEarningDetail.Username, selectedProductName, Model.MonthDate, dailyEarningDetail.Currency, ViewBag.AffiliateCurrency, dailyEarningDetail.Username));
+                                                }
+                                                else
+                                                {
+                                                    @Html.Raw(dailyEarningDetail.Username);
+                                                }
+                                            </td>
+                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarningDetail.Deposit))
+                                            </td>
+                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarningDetail.Turnover))
+                                            </td>
+                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarningDetail.Winlost))
+                                            </td>
+                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarningDetail.Bonus))
+                                            </td>
+                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarningDetail.Adjustment))
+                                            </td>
+                                        </tr>
+
+                                count++;
+                            }
+
+                                    <!-- Summary Row if (Model.ProductId != 2) -->
+                                        <tr class="gradient-summary">
+                                            <td colspan="2" class="text-right">@Lang.Total
+                                            </td>
+                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(totalDeposit))
+                                            </td>
+                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(totalTurnover))
+                                            </td>
+                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(totalWinlost))
+                                            </td>
+                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(totalBonus))
+                                            </td>
+                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(totalAdjustment))
+                                            </td>
+                                        </tr>
+                                }
+                            </tbody>
+                        }
+                        else
+                        {
+                            <tfoot>
+                                <tr>
+                                    <td colspan="7" style="text-align: center;">@Lang.NoInformation
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+}

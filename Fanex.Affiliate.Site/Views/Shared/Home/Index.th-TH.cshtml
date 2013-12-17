@@ -1,0 +1,186 @@
+﻿@{
+    ViewBag.Title = Lang.ProgramDetails;
+    Layout = @String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
+}
+@model DefaultProductCommissionViewModel
+@{
+    string productList = string.Empty;
+
+    if (Model.ProductList.Count > 0)
+    {
+        foreach (var product in Model.ProductList)
+        {
+            productList += ProductsFormatter.Format(product.ProductName) + ", ";
+        }
+
+        productList = productList.Substring(0, productList.Length - 2);
+    }
+}
+
+@{
+    var classThai = AppSession.Language.Equals("th-TH") ? AppSession.Language : string.Empty;
+    var classType = string.Format("class='span12 box-insite {0}'", classThai);
+}
+
+<div @Html.Raw(classType)>
+    <div class="top">
+        <div class="in-top">@Lang.ProgramDetails</div>
+        <div class="in-right">
+        </div>
+    </div>
+    <div class="content">
+        <div class="block">
+            <div class="content-block">
+                <p>@Html.Raw(string.Format("ในฐานะที่เป็น {0}, คุณจะได้รับค่าตอบแทนในทุกผู้ใช้งานที่อ้างอิงถึง {0} ตลอดช่วงเวลาในการใช้งาน โดยระบบรายงานผลออนไลน์ของเราจะเปิดให้บริการทุกวันตลอด 24 ชั่วโมง", AppSettings.AffiliateName))</p>
+                <p>รายได้จะมากน้อยขึ้นอยู่กับจำนวนลูกค้าที่สมัครกับเราผ่านทางเวบไซค์คุณ สำหรับหน้าที่อื่นในการแนะนำเกี่ยวกับการสมัคร การแนะนำการฝากเงิน และการให้โบนัสโปรโมชั่นกับลูกค้า จะเป็นหน้าที่ของเราทั้งหมด</p>
+            </div>
+        </div>
+        @if (!AppSettings.IsKiosk)
+        {
+            <div class="block">
+                <div class="title-block">
+                    สกุลเงินหุ้นส่วนที่สนับสนุน <a href="#" class="link-top"><span></span>@Lang.Top</a>
+                </div>
+                <div class="line-block">
+                </div>
+                <div class="content-block">
+                    <p>เรามีสกุลเงินดังนี้: @AppSettings.AffiliateBaseCurrencyList.</p>
+                    @{
+            var baseCurrencyList = AppSettings.AffiliateBaseCurrencyList.Split(',');
+            var multiplyByCurrencyList = AppSettings.AffiliateCurrencyListMultipliedBy.Split(',');
+            var commonCurrencyList = baseCurrencyList.Intersect(multiplyByCurrencyList);
+
+            if (commonCurrencyList.Any())
+            {
+                            <p>@string.Format("ในรายงานและการตั้งค่าค่านายหน้าของเรา เราจะตัดศูนย์ตัวหลังๆ สำหรับสกุลเงินดังนี้: {0} ตัวอย่างเช่น: {1}1 คือ {1}1*{2} ในมูลค่าจริง", AppSettings.AffiliateCurrencyListMultipliedBy, FormaterCurrency.GetCurrencySymbol(commonCurrencyList.First()), AppSettings.MulitpliedBy)</p>
+            }
+                    }
+                </div>
+            </div>
+            <div class="block">
+                <div class="title-block">
+                    ค่าตอบแทนจากโปรแกรมพันธมิตร <a href="#" class="link-top"><span></span>@Lang.Top</a>
+                </div>
+                <div class="line-block">
+                </div>
+                <div class="content-block">
+                    <p>
+                        <b>หลักเกณฑ์รายได้ของพันธมิตร</b>
+                        <br />
+                        โมเดลส่วนแบ่งรายได้แบ่งออกเป็นองค์ประกอบดังต่อไปนี้: @productList.
+                    </p>
+                    <p>ส่วนแบ่งรายได้ทั้งหมดที่จ่ายให้แก่หุ้นส่วนจะเป็นผลรวมขององค์ประกอบทั้งหมดของโมเดลส่วนแบ่งรายได้ ด้านล่างนี้เป็นตัวอย่างโมเดลส่วนแบ่งรายได้จากระบบของเรา:</p>
+                    <table class="table odd-even list">
+                        <thead>
+                            <tr>
+                                <th style="width: 85px; text-align: center;">
+                                    @Lang.Product
+                                </th>
+                                <th style="width: 10px; text-align: center;">
+                                    @Lang.Tier
+                                </th>
+                                <th style="text-align: center;">
+                                    @string.Format(Lang.ComNetWin, AppSettings.DefaultCurrencySymbol)
+                                </th>
+                                <th style="width: 150px; text-align: center;">
+                                    @Lang.QualifyingMembers
+                                </th>
+                                <th style="width: 50px; text-align: center;">
+                                    @Lang.Commission
+                                </th>
+                            </tr>
+                        </thead>
+                        @if (Model.ProductList.Any())
+                        {
+                            <tbody>
+                                @{
+                            const int MAXQM = 1000000000;
+                            const long MAXAMOUNT = 100000000000000;
+                            var oldProductId = 0;
+                            var index = 0;
+                            foreach (var product in Model.ProductList)
+                            {
+                                var listGroupSetting = Model.GroupSetting.Where(p => (AppSettings.IsShowZeroCommission == "1") ? p.ProductId == product.ProductId : p.ProductId == product.ProductId && p.Commission != 0).ToList();
+                                int totalShownTier = listGroupSetting.Count;
+                                var noTier = 0;
+                                if (totalShownTier > 0)
+                                {
+                                    index++;
+                                    foreach (var groupSetting in listGroupSetting)
+                                    {
+
+                                            <tr class="@(index % 2 == 0 ? "even" : "odd")">
+                                                @if (oldProductId != groupSetting.ProductId)
+                                                {
+                                                    <td rowspan="@totalShownTier" class="bold text-center">
+                                                        @ProductsFormatter.Format(product.ProductName)
+                                                    </td>
+                                                }
+                                                <td class="text-center">
+                                                    @(++noTier)
+                                                </td>
+                                                <td class="text-right">
+                                                    @string.Format("{0}{1}", FormaterCurrency.Format(groupSetting.MinAmount),
+                                                    groupSetting.MaxAmount == MAXAMOUNT ? "+" : " - " + FormaterCurrency.Format(Convert.ToInt64(groupSetting.MaxAmount) + 0.99))
+                                                </td>
+                                                <td class="text-right">
+                                                    @string.Format("{0}{1}", groupSetting.MinQM,
+                                                    groupSetting.MaxQM == MAXQM ? "+" : " - " + groupSetting.MaxQM.ToString())
+                                                </td>
+                                                <td class="text-right">
+                                                    @string.Format("{0}%", Convert.ToDouble(groupSetting.Commission) * 100)
+                                                </td>
+                                            </tr>
+                                                oldProductId = product.ProductId;
+                                    }
+                                }
+                            }
+                                }
+                            </tbody>
+                        }
+                        else
+                        {
+                            <tfoot>
+                                <tr>
+                                    <td colspan="5" align="center">@Lang.NoInformation
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        }
+                    </table>
+                    <p>
+                        เพื่อจุดประสงค์ของตารางด้านบน:
+                        <br />
+                        "COMPANY NET WIN FOR THE MONTH" คำนวณจาก |–ผลประกอบการณ์(กำไรหรือขาดทุน) – การจ่ายเงินโบนัสพิเศษ – การเรียกเก็บเงิน – จำนวนเงินคืนภาษี – เครดิต หรือผลตอบแทนแก่ผู้ใช้งาน|
+                        @if (AppSettings.CompanyNegativeNetWin > 0)
+                        {
+                            <p>@string.Format("ถ้าชนะสุทธิของ บริษัท เป็นลบแล้วมี บริษัท ในเครือที่จะทน {0}% กับ บริษัท ในเดือนนั้น (ใช้สำหรับแต่ละผลิตภัณฑ์)", AppSettings.CompanyNegativeNetWin)</p>
+                        }
+                    </p>
+                    <span></span>
+                </div>
+            </div>
+            <div class="block">
+                <div class="title-block">ยอดบัญชีติดลบ<a href="#" class="link-top"><span></span>@Lang.Top</a>
+                </div>
+                <div class="line-block">
+                </div>
+                <div class="content-block">
+                    <p>@Html.Raw(string.Format("ยอดติดลบของเดือนที่ให้จะถูกยกยอดไป ตัวอย่างเช่น บัญชีพันธมิตรของเดือนมกราคมของคุณ มียอดติดลบที่ -{0}2,555 โดยจำนวนนี้จะถูกยกยอดไปไว้ในเดือนกุมภาพันธ์ และตอนสิ้นเดือนกุมภาพันธ์บัญชีคุณมียอดรายรับเข้ามาที่ {0}3,400 โดยบัญชีคุณจะมียอดคงเหลือที่ {0}845 (มาจาก {0}3,400 ลบด้วย -{0}2,555). อย่างไรก็ตาม หากเดือนกุมภาพันธ์คุณยังมียอดติดลบอีก เช่น -{0}1,600 ทางเราจะนำยอดนี้ไปบวกเพิ่ม ในยอดติดลบก่อนหน้านี้ เพื่อยกยอดไปยังเดือนถัดไปคือ เดือนมีนาคม รวมเป็นยอดติดลบทั้งหมด -{0}4,155.", AppSettings.DefaultCurrencySymbol))</p>
+                    <p>โปรดทราบว่าตัวอย่างข้างต้นใช้สกุลเงิน @AppSettings.DefaultCurrency</p>
+                </div>
+            </div>
+            <div class="block">
+                <div class="title-block">
+                    การได้รับเงิน <a href="#" class="link-top"><span></span>@Lang.Top</a>
+                </div>
+                <div class="line-block">
+                </div>
+                <div class="content-block">
+                    <p>@string.Format("คุณขอให้จ่ายเงินในสกุล {0} ได้ จะใช้อัตราแลกเปลี่ยนในวันจ่ายเงิน", string.Join(", ", AppSettings.PlayerCurrencies.OrderBy(c => c.CurrencyCode).Select(x => x.CurrencyCode).ToArray()))</p>
+                    <p>@string.Format("เราแนะนำให้คุณถอนเงินผ่านทางบัญชีผู้ใช้งาน {0} ของคุณเท่านั้น ปริมาณขั้นต่ำที่ถอนขึ้นอยู่กับแต่ละสกุลเงิน", AppSettings.AffiliateName)</p>
+                </div>
+            </div>
+        }
+    </div>
+</div>

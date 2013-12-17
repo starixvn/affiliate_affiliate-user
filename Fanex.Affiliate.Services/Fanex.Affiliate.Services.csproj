@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DC36D3CB-5626-4B55-9102-9BBD76850A1B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fanex.Affiliate.Services</RootNamespace>
+    <AssemblyName>Fanex.Affiliate.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CasinoLibrary">
+      <HintPath>..\Dependencies\CasinoLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="CasinoSetting">
+      <HintPath>..\Dependencies\CasinoSetting.dll</HintPath>
+    </Reference>
+    <Reference Include="CasinoUtility">
+      <HintPath>..\Dependencies\CasinoUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Fanex.BetList.Core, Version=1.0.5071.26993, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Dependencies\Fanex.BetList.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Fanex.BetList.Core.TicketHelper">
+      <HintPath>..\Dependencies\Fanex.BetList.Core.TicketHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Fanex.Caching">
+      <HintPath>..\Dependencies\Fanex.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Fanex.Common">
+      <HintPath>..\Dependencies\Fanex.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Fanex.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Dependencies\Fanex.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Fanex.NAP.Framework">
+      <HintPath>..\Dependencies\Fanex.NAP.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Fanex.Result.Core">
+      <HintPath>..\Dependencies\Fanex.Result.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.AspNet">
+      <HintPath>..\packages\Glimpse.AspNet.1.3.1\lib\net40\Glimpse.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.Core">
+      <HintPath>..\packages\Glimpse.1.4.2\lib\net40\Glimpse.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.Mvc4">
+      <HintPath>..\packages\Glimpse.Mvc4.1.3.2\lib\net40\Glimpse.Mvc4.dll</HintPath>
+    </Reference>
+    <Reference Include="HandHistoryLibrary">
+      <HintPath>..\Dependencies\HandHistoryLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="ILogger">
+      <HintPath>..\Dependencies\ILogger.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\Dependencies\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NetUtility">
+      <HintPath>..\Dependencies\NetUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorEngine">
+      <HintPath>..\Dependencies\RazorEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Sunplus.Libraries.AOP">
+      <HintPath>..\Dependencies\Sunplus.Libraries.AOP.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GlimpseSecurityPolicy.cs" />
+    <Compile Include="Impl\AccountService.cs" />
+    <Compile Include="Impl\ContactUsService.cs" />
+    <Compile Include="Impl\BannerService.cs" />
+    <Compile Include="Impl\BetListService.cs" />
+    <Compile Include="Impl\HotNewsService.cs" />
+    <Compile Include="Impl\MessageService.cs" />
+    <Compile Include="Impl\EmailTemplateResolverService.cs" />
+    <Compile Include="Impl\PaymentService.cs" />
+    <Compile Include="Impl\ProductService.cs" />
+    <Compile Include="Impl\ServiceWrapper.cs" />
+    <Compile Include="Impl\TrackingSystemService.cs" />
+    <Compile Include="Impl\TrafficStatisticService.cs" />
+    <Compile Include="Impl\MarketingService.cs" />
+    <Compile Include="Impl\UserService.cs" />
+    <Compile Include="Interface\IBetListService.cs" />
+    <Compile Include="Interface\IBannerService.cs" />
+    <Compile Include="Interface\IHotNewsService.cs" />
+    <Compile Include="Interface\IContactUsService.cs" />
+    <Compile Include="Interface\IServiceWrapper.cs" />
+    <Compile Include="Interface\IMessageService.cs" />
+    <Compile Include="Interface\IAccountService.cs" />
+    <Compile Include="Interface\IEmailTemplateResolverService.cs" />
+    <Compile Include="Interface\IMarketingService.cs" />
+    <Compile Include="Interface\IPaymentService.cs" />
+    <Compile Include="Interface\IProductService.cs" />
+    <Compile Include="Interface\ITrackingSystemService.cs" />
+    <Compile Include="Interface\ITrafficStatisticService.cs" />
+    <Compile Include="Interface\IUserService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\MemberSiteService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fanex.Affiliate.Criterias\Fanex.Affiliate.Criterias.csproj">
+      <Project>{F514AD89-3B07-486D-A0AF-1CF5569BCF0E}</Project>
+      <Name>Fanex.Affiliate.Criterias</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fanex.Affiliate.DataAccess\Fanex.Affiliate.DataAccess.csproj">
+      <Project>{E9A307C0-57A3-4689-86AE-DFF6CFA1E5B7}</Project>
+      <Name>Fanex.Affiliate.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fanex.Affiliate.DTO\Fanex.Affiliate.DTO.csproj">
+      <Project>{9E0AFD07-A5ED-430B-AB87-8045B051436A}</Project>
+      <Name>Fanex.Affiliate.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fanex.Affiliate.ViewModels\Fanex.Affiliate.ViewModels.csproj">
+      <Project>{C47B10A7-DA2E-4619-A7E4-FDA66B098688}</Project>
+      <Name>Fanex.Affiliate.ViewModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fanex.Affiliate\Fanex.Affiliate.csproj">
+      <Project>{ED4E400D-0509-4CEC-A2B7-1B8C71A380BA}</Project>
+      <Name>Fanex.Affiliate</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Service References\MemberSiteService\service.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\MemberSiteService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MemberSiteService\service.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MemberSiteService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MemberSiteService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MemberSiteService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

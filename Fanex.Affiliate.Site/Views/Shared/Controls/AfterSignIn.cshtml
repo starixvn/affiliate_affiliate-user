@@ -1,0 +1,30 @@
+﻿<div class="title-block">
+    <div class="iconUser">
+        @SessionManager.CurrentSession.Username
+    </div>
+</div>
+<ul class="after-login-block">
+    @Html.Raw(ViewBag.MenuList)
+    @{
+        var userRole = AppSettings.IsKiosk ? "Kiosk" : "Normal";
+        var menuItems = MenuSettings.Menus().Where(l => l.Roles == userRole || l.Roles == "All").Select(h => h);
+        foreach (var menuItem in menuItems)
+        {
+            if (menuItem.ActionName != string.Empty && menuItem.ControllerName != string.Empty)
+            {
+                if (menuItem.ParentName == string.Empty)
+                {
+                    <li>@Html.ActionLink(new System.Resources.ResourceManager(typeof(Lang)).GetString(menuItem.MenuName), menuItem.ActionName, menuItem.ControllerName)</li>
+                }
+                else
+                {
+                    <li class="sub"><span class="leftArrow">&nbsp;</span>@Html.ActionLink(new System.Resources.ResourceManager(typeof(Lang)).GetString(menuItem.MenuName), menuItem.ActionName, menuItem.ControllerName)</li>
+                }
+            }
+            else
+            {
+                <li><a href="javascript:void(0)">@(new System.Resources.ResourceManager(typeof(Lang)).GetString(menuItem.MenuName))</a></li>
+            }
+        }
+    }
+</ul>

@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FAQ_AffiliateProgramIsFreeToJoin" xml:space="preserve">
+    <value>{0}合作伙伴计划是免费参加的。简单来说只要填好{1}，我们将会在三个工作天内审核您的申请。若你的申请被接纳的话，您会收到电邮通知包括您的独有的合作伙伴号码，令您可以在您的网站上加上广告横额、文字连接及其他内容与及市场推广工具等。</value>
+  </data>
+  <data name="FAQ_AffiliateProgramIsPartershipProgram" xml:space="preserve">
+    <value>{0} 加盟计划是一项合作伙伴计划，您可以凭这份计划赚取佣金，佣金的计算依据是您通过在线或离线介绍的方式从您的网站介绍到{1}的玩家的投注活动。</value>
+  </data>
+  <data name="FAQ_ByAccessingOurMediaGallery" xml:space="preserve">
+    <value>透过我们的媒体册，您可以选取你偏爱的广告横额或者文字连接放到您的网站。</value>
+  </data>
+  <data name="FAQ_CookiesAreMechanism" xml:space="preserve">
+    <value>Cookies是伺服器连接的常用配置，可以用作从客户端储存及提取资料。更特别是，透过会员介绍连接到访{0}的访客，他们的电脑都会保存很多细小的资料档案，这些档案包括协助{0}追踪及发放会员介绍奖励时的所需资料，以确保有关往来资讯准确无误。Cookies包含追踪功能，但不会被限制，当某些网页被浏览过，它可以查找出被浏览的页面、浏览日期及时间。</value>
+  </data>
+  <data name="FAQ_CookiesAreOverwritten" xml:space="preserve">
+    <value>Cookies会不断更新，所以我们会向最后介绍链接的提供者给予奖励。</value>
+  </data>
+  <data name="FAQ_DoNegativeBalance" xml:space="preserve">
+    <value>负结余会带帐滚存吗？</value>
+  </data>
+  <data name="FAQ_DoYouReward" xml:space="preserve">
+    <value>会员介绍奖励会给予最初的介绍链接提供者，还是给予最后那位？</value>
+  </data>
+  <data name="FAQ_ForMoreDetails" xml:space="preserve">
+    <value>欲知更多详情，请与我们联系，我们的电子邮箱地址是{0}.</value>
+  </data>
+  <data name="FAQ_General" xml:space="preserve">
+    <value>一般</value>
+  </data>
+  <data name="FAQ_HowCanCheck" xml:space="preserve">
+    <value>我如何得知自己赚取了多少奖额？</value>
+  </data>
+  <data name="FAQ_HowDoSignUp" xml:space="preserve">
+    <value>我如何登记{0}合作伙伴计划？</value>
+  </data>
+  <data name="FAQ_HowOftenCanIRequest" xml:space="preserve">
+    <value>我可以每隔多久提出一次提款申请？</value>
+  </data>
+  <data name="FAQ_HowSystemKeepTrack" xml:space="preserve">
+    <value>系统怎样去追踪我的玩家？</value>
+  </data>
+  <data name="FAQ_MarketingTracking" xml:space="preserve">
+    <value>市场推广及追踪</value>
+  </data>
+  <data name="FAQ_MaximumOfWithdrawalRequest" xml:space="preserve">
+    <value>合伙人每月最多可以作出一次提款申请。如果得到会员介绍合作计划的经理批准，你也可以在同一个月内做出第二次提款申请。目前我们给予大家的提款申请服务是免费的，但我们并不会负担任何转帐时的手续费或电子转帐所需服务费用。</value>
+  </data>
+  <data name="FAQ_MinimumAmountOfWithdrawalRequest" xml:space="preserve">
+    <value>最低佣金提取要求是{1}{0}。</value>
+  </data>
+  <data name="FAQ_NowYouCan" xml:space="preserve">
+    <value>是的，您现在就可以加盟！ 本公司将为您提供一个网页链接（与您的账户相关），您可以</value>
+  </data>
+  <data name="FAQ_SendPageLink" xml:space="preserve">
+    <value>向对体育或体育投注感兴趣的朋友、熟人发送这个网页链接，当他们点击这个链接时，他们就会成为您所介绍的会员！</value>
+  </data>
+  <data name="FAQ_UploadItOnAnyPublicWebsites" xml:space="preserve">
+    <value>在任何公共网站或论坛上发布这个链接，以便推广我们的加盟计划。</value>
+  </data>
+  <data name="FAQ_WeAreAbleToTrackVisitors" xml:space="preserve">
+    <value>是的。我们能够从我们加盟会员的网站上追踪那些未直接注册，但在较晚时候回到{0}并注册的访问者。我们对第一名推荐会员设定了90天的保护期。管理该保护期的技术取决于信息记录程序cookies。</value>
+  </data>
+  <data name="FAQ_WeDontTolerateSpamming" xml:space="preserve">
+    <value>我们不容忍会员介绍合伙人作出任何形式的滥发广告行为。如果有关合伙人的滥发行为被我们发现到，我们会向该合伙人发出一次警告(如果只是较小型问题的话)；如果合伙人仍然不停止有关滥发行为，{0}的会员介绍系统会立即封停该合伙人的会员介绍合伙关系。</value>
+  </data>
+  <data name="FAQ_WeEmployStartOfArtTechnology" xml:space="preserve">
+    <value>我们在追踪系统上利用了最先进的科技确保了从您网站过来{0}的浏览量100%正确。玩家介绍会员将根据媒体中心提供的网路地址识别。通过使用cookies识别，访客经由指定网路地址连结(广告横幅、文本连接、电子邮件等) 点击成为会员，成功介绍会员的玩家将被自动追踪及奖励。</value>
+  </data>
+  <data name="FAQ_WeRolloverNegativeCommission" xml:space="preserve">
+    <value>会的，我们会累积计算负数佣金结存。假如到月底结算日你的户口有负数佣金结存，有关帐目将被带帐到下期帐单结算，直至你赚取的正数佣金金额把有关负数帐目结存变回零。</value>
+  </data>
+  <data name="FAQ_WhatAreWithdrawalMethods" xml:space="preserve">
+    <value>有哪些可行的提款方式？</value>
+  </data>
+  <data name="FAQ_WhatIfDontHaveWebsite" xml:space="preserve">
+    <value>我没有自己的网站，还能加盟吗？</value>
+  </data>
+  <data name="FAQ_WhatIsAffiliateProgram" xml:space="preserve">
+    <value>{0}合作伙伴计划是甚么？</value>
+  </data>
+  <data name="FAQ_WhatIsCookie" xml:space="preserve">
+    <value>什么是cookies?</value>
+  </data>
+  <data name="FAQ_WhatIsMinimumWithdrawalRequest" xml:space="preserve">
+    <value>最低的佣金提取额是多少？</value>
+  </data>
+  <data name="FAQ_WhatKindsOfCurrencies" xml:space="preserve">
+    <value>提款支持哪些货币？</value>
+  </data>
+  <data name="FAQ_WhatYourPolicy" xml:space="preserve">
+    <value>你们的滥发广告政策定义是甚么？</value>
+  </data>
+  <data name="FAQ_WhereGetBanners" xml:space="preserve">
+    <value>我怎样得到广告横额与及内容？</value>
+  </data>
+  <data name="FAQ_WillYouTrack" xml:space="preserve">
+    <value>如果有会员首次浏览时未有登记成为会员，但后来登记了，而他们是透过我提供的会员介绍连结接触到{0}的，你们也会追踪到及向我发放奖励吗？</value>
+  </data>
+  <data name="FAQ_YouCanLogin" xml:space="preserve">
+    <value>你可以登入你在{0}的合作伙伴会员户口，查核你所赚取所得的回佣金额。{0}为您提供全年7X24小时查核服务。</value>
+  </data>
+  <data name="FAQ_YouCanRequest" xml:space="preserve">
+    <value>您可以直接在{0} 中您的玩家账户中要求提款。</value>
+  </data>
+  <data name="FAQ_YouCanWithdrawMoney" xml:space="preserve">
+    <value>您可以按照{0}提款。 提款适用支付日相应的汇率。</value>
+  </data>
+  <data name="PD_AffiliateEarnings" xml:space="preserve">
+    <value>合作伙伴收入</value>
+  </data>
+  <data name="PD_AffiliateSupport" xml:space="preserve">
+    <value>加盟基础货币的支持信息</value>
+  </data>
+  <data name="PD_AnyNegativeBalance" xml:space="preserve">
+    <value>在其中一个月的任何负余额均会带到下一个月。例如若您在1月合作伙件的户口最终结余为-{0}2,555，这个余额将会带到二月。若您在2月合作伙件的户口最终结余为{0}3,400，那么您的户口总结余将为{0}845 ({0}3,400减{0}2,555)。不过若您的户口在2月依然是负数，例如-{0}1,600，这将会继续累积之前的负结余带落下一个月，那么带到3月的结余将会是-{0}4,155。 佣金收入将按相应的级别比例支付给合作伙伴。</value>
+  </data>
+  <data name="PD_AsAffiliate" xml:space="preserve">
+    <value>成为{0}合作伙件后，由您推荐到{0}的每位玩家只要使用账户就可以为您带来即时的佣金。我们的线上汇报系统会7×24小时供您查阅。</value>
+  </data>
+  <data name="PD_CompanyNetWinFormula" xml:space="preserve">
+    <value>“本月公司净收益” = |–返款（收益或损失）–任何支付的奖金–退款–任何其它收入返款–给玩家的贷款、赔偿或退款|</value>
+  </data>
+  <data name="PD_DropSomeLastZeroDigits" xml:space="preserve">
+    <value>在我们的报告和佣金设置里，我们会删除下列货币的最后几个零位：{0}例如：{1}1为 {1}1*{2} 实际价值。</value>
+  </data>
+  <data name="PD_GettingPaid" xml:space="preserve">
+    <value>佣金提取</value>
+  </data>
+  <data name="PD_HowMuchYouEarn" xml:space="preserve">
+    <value>您赚取的利润多少取决于您的网站引导带来的顾客浏览量，我们的任务是指导他们完成注册和首存，并用我们诱人的红利和水位留住他们。</value>
+  </data>
+  <data name="PD_NegativeBalance" xml:space="preserve">
+    <value>负余额</value>
+  </data>
+  <data name="PD_NoteThatSample" xml:space="preserve">
+    <value>注意上述样本用于货币</value>
+  </data>
+  <data name="PD_PurposeOfTable" xml:space="preserve">
+    <value>为实现上表的用途</value>
+  </data>
+  <data name="PD_RevenueShareModel" xml:space="preserve">
+    <value>佣金分成模式</value>
+  </data>
+  <data name="PD_RevenueShareModelSplitIntoComponents" xml:space="preserve">
+    <value>收入分成模式分为下列几个部分</value>
+  </data>
+  <data name="PD_TotalRevenue" xml:space="preserve">
+    <value>应当支付的加盟总收入分成为收入分成模式所有组成部分的总和。 下列为来自于我们系统的一个收入分成模式样本</value>
+  </data>
+  <data name="PD_WeOfferCurrency" xml:space="preserve">
+    <value>我们提供下列基础货币</value>
+  </data>
+  <data name="PD_WeOfferWithdrawalMethod" xml:space="preserve">
+    <value>我们的提款方式仅通过您的{0}玩家账户提供给您。 提款请求的最低额度由每种加盟基础货币决定。</value>
+  </data>
+  <data name="PD_YouRequestPayout" xml:space="preserve">
+    <value>您可以要求按{0}付款。 付款适用支付日相应的汇率。</value>
+  </data>
+  <data name="TC_ActiveWageringMembers" xml:space="preserve">
+    <value>活跃投注会员标准为：每个会员在单月中累积投注在{1}{0}（或等值其他国家货币）以上。我们为本系统提供了更多可用货币，请通过{2}与管理员联系。</value>
+  </data>
+  <data name="TC_AffiliateMustEnsure" xml:space="preserve">
+    <value>加盟商必须确保任何出现在他们网站的素材是合法的，并且不会侵犯版权或破坏其他权利。</value>
+  </data>
+  <data name="TC_AffiliateResponsibility" xml:space="preserve">
+    <value>加盟商有责任依照正确的连接和标签处理确保新客户的追踪和付款。</value>
+  </data>
+  <data name="TC_AffiliatesAreProhibited" xml:space="preserve">
+    <value>加盟代理商被禁止通过自己的加盟代理连接或会分享全部或部分佣金的代理商或第三方的连接来玩任何形式的{0}体育博彩推广活动。这包括任何加盟商收取任何形式的津贴或佣金的独立的个体或群体。如果违反这部分规定，{0}和各自的有被投注过的网站有权取消所有相应的投注，并删减任何通过这样的活动而获得的佣金，以及将此加盟代理商从我们的加盟代理计划中删除并终止此协议，并且令将来任何在{0}的投注失效。</value>
+  </data>
+  <data name="TC_AffiliatesWillNotEarn" xml:space="preserve">
+    <value>合作伙伴将不能从其下线会员在{0}赛马和娱乐场产品中的投注及输赢中获得佣金。</value>
+  </data>
+  <data name="TC_AffiliateTagging" xml:space="preserve">
+    <value>3. 加盟代理标签</value>
+  </data>
+  <data name="TC_AffiliationGuidelines" xml:space="preserve">
+    <value>2. 加盟代理指引</value>
+  </data>
+  <data name="TC_AllRightsAndLicenses" xml:space="preserve">
+    <value>在此协议中授予您的所有权利和授权应该即时终止。</value>
+  </data>
+  <data name="TC_AnyClaimRelatedToYourSite" xml:space="preserve">
+    <value>任何与贵方网站相关的索赔，包括但不限于其中不能归属于我方的内容。 </value>
+  </data>
+  <data name="TC_AnyClaimThat" xml:space="preserve">
+    <value>任何因我们对加盟商标的使用而侵犯任何第三方的任何商标、商号、服务标记、版权、许可、知识产权或其它专有权所引起的索赔。</value>
+  </data>
+  <data name="TC_AnyFormOfSpam" xml:space="preserve">
+    <value>任何形式的垃圾邮件将会导致您的帐户被处理为审核状态，所有的资金被冻结，直到对您的帐户调查处理完成。你需要知道我们的客户可能会因为处理您的滥发所产生的邮件而导致费用产生，如果我们的客户寻求追索权，所有这些相同的费用将会从您的帐户上进行扣减。在此情形下，由于您同意注册成为{0}的加盟商，由相关客户决定的费用金额将会被诚实地认为是最终及可接受的，这些费用金额是根据法律上收取的，并公平地被您接受。</value>
+  </data>
+  <data name="TC_AnyMisrepresentation" xml:space="preserve">
+    <value> 在此由贵方所做的任何虚假陈述或保证或对约定和协议的违背</value>
+  </data>
+  <data name="TC_AsPolicy" xml:space="preserve">
+    <value>根据条例，{0}无法接受您成为合作伙伴的申请，如果您是由或通过英国管辖区的互联网地址(IP)来进行宣传。</value>
+  </data>
+  <data name="TC_AssignAbilityAndInurement" xml:space="preserve">
+    <value>分派能力和适用性</value>
+  </data>
+  <data name="TC_AssumeOwnershipOfCustomer" xml:space="preserve">
+    <value>{0}以第一次接触到客户的那一刻作为取得客户的标准。您，作为加盟代理，为{0}做推介代理。如果有需要适应我们不同时期的要求，我们保留拒绝客户（或关闭客户帐户）的权利。</value>
+  </data>
+  <data name="TC_BannersAndLinksMayNotBePlaced" xml:space="preserve">
+    <value>横幅广告和连接不可以置放于募集电邮、非授权新闻组、聊天室或利用“机器人”发送。产生的非法流量将不会被计算，并会导致您与我们的加盟代理合作终止。</value>
+  </data>
+  <data name="TC_BecomeAffiliate" xml:space="preserve">
+    <value>要成为我们加盟计划之一员，您必须完成这份在线表格，注册成为一名加盟会员。通过{0}的加盟代理登记程序注册成为加盟商，或下载横幅广告代码并摆放在您的网站、电邮信息或其他方式，您就被认为已经了解并接受此协议所有的条件和条款。</value>
+  </data>
+  <data name="TC_BonusesInclucdeComplimentaryMoney" xml:space="preserve">
+    <value>奖金包括赠送款项、免费项目、贷款、注册奖金、促销金额及其它贷记到客户账户上的奖励金额。因为客户未实际购买这些金额，所以{0}支付的佣金中不会包含该金额。</value>
+  </data>
+  <data name="TC_ByAgreeingToParticipate" xml:space="preserve">
+    <value>您不可与{0}同时保持加盟和推荐关系。 若违反本规定，则{0}有权单方面终止这一加盟以及/或者推荐关系。推荐关系是指根据我们的《推荐朋友计划》可查询本网站）与{0}建立的关系。</value>
+  </data>
+  <data name="TC_ByAgreementWeGrantYou" xml:space="preserve">
+    <value>通过此协议，我们授予您在符合此协议条款及条件下非独家的权利指引客户来使用我们的网站和服务。此协议并不授予您提供介绍客户的服务的独家或优先权，同时我们保留在任何时候收回或协助我们其他合作方提供与您相同或相似的服务的权利。您不能通过您以外的其他个人或组织索偿与此业务有关的介绍费用或补偿。</value>
+  </data>
+  <data name="TC_ByHavingRead" xml:space="preserve">
+    <value>阅读过条款和条件，并知道这样的签名表格后，您同意所有此协议中包含的条款和条件。{0}保留权利暂时停止向违反此协议中任何条件和条款的任何加盟代理商付款的权利。</value>
+  </data>
+  <data name="TC_ByOpeningAccountWithCustomer" xml:space="preserve">
+    <value>通过开设帐户,个人或组织就将成为我们的客户，而相应地，客户规则、政策和操作流程将会适用。</value>
+  </data>
+  <data name="TC_ChargebackCreditCard" xml:space="preserve">
+    <value>索回：未经信用卡持卡人授权就产生的他/她的信用卡/借记卡的非常规消费。信用卡持卡人要求发卡银行退回这些收费。索回费用是由于第三方欺骗性地使用信用卡持卡人的信用卡或信用卡号而产生的。</value>
+  </data>
+  <data name="TC_ChargebacksAreAmounts" xml:space="preserve">
+    <value>退款是当一名本身为信用卡持有者的客户发现其信用卡/借记卡上有非常规未经授权的退款，并且该信用卡持有人要求银行撤销这些退款时所扣除的金额。退款扣除可能与第三方冒用信用卡持有者的卡或卡号有关，但也不仅限于此种情况。</value>
+  </data>
+  <data name="TC_ChargebackWillStayDue" xml:space="preserve">
+    <value>直到您的其他玩家产生的收入弥补了应退的金额时，退款才可支付。您认同{0}只会按实际利润，而非欺诈收入的百分比进行支付。</value>
+  </data>
+  <data name="TC_CommissionableEarnings" xml:space="preserve">
+    <value>由一个日历月内至少预定数量的活跃投注会员所形成的佣金收入是作为{0} 的利润计算的，其中除去了退款、赠送款项、免费项目及其它提供给客户的奖金。 </value>
+  </data>
+  <data name="TC_CommissionableEarningsOfAffiliate" xml:space="preserve">
+    <value>用于佣金结算的盈利是基于下线会员同商家的每笔交易中的贡献的利润按照一定的分成比例计算，只要加盟代理商一直保持作为此加盟代理协议的会员，那么所有这个客户发生的交易都会一直计算下去。</value>
+  </data>
+  <data name="TC_CommissionableEarningsWillBeSubject" xml:space="preserve">
+    <value>可计算佣金的赢利额将会使用{0}加盟代理程序佣金结构来不断计算佣金。</value>
+  </data>
+  <data name="TC_DevelopmentOperation" xml:space="preserve">
+    <value>贵方网站的开发、运行、维护和内容以及贵方网站所提供的产品和服务</value>
+  </data>
+  <data name="TC_Disclaimers" xml:space="preserve">
+    <value>12. 免责声明</value>
+  </data>
+  <data name="TC_DuringTheTermsOfAgreement" xml:space="preserve">
+    <value>在此协议有效期内，您要确保与此业务、操作或相关的加盟代理程序技术（包括，例如，根据你在此程序下取得的介绍费用）有关的信息保密。您同意不会将此保密信息披露或用于第三方个人或外部方面，除非您得到了我们事前书面的批准，您将只将此保密信息用于此协议下必要的更多用途。您有责任尊重此保密信息，否则此协议将会被终止。</value>
+  </data>
+  <data name="TC_EventOfTermination" xml:space="preserve">
+    <value>终止本协议的事件中</value>
+  </data>
+  <data name="TC_GoverningLaw" xml:space="preserve">
+    <value>15. 法律监督和仲裁</value>
+  </data>
+  <data name="TC_GrossWinIsTotalOfAllAmount" xml:space="preserve">
+    <value>“{0} 总收益”为您的加盟会员账户中一个日历月内至少预定数量的活跃投注会员所投注的总金额，其中减去了由您的活跃投注会员所赢得或应当支付给他们的款项总金额。</value>
+  </data>
+  <data name="TC_IfWeContinueToPermitActivity" xml:space="preserve">
+    <value>如果我们允许客户在终止协议之后继续活动（产生营业收入），这并不构成我们续约或继续执行此协议，或放弃终止协议。</value>
+  </data>
+  <data name="TC_IfYouDecide" xml:space="preserve">
+    <value>如果您决定不接受本协议所有的条件和条款，请不要下载广告横幅代码、文字连接代码、推广内容或其他任何与{0}相关的信息。</value>
+  </data>
+  <data name="TC_IfYouHaveFailedToFulfill" xml:space="preserve">
+    <value>如果您没有完成您的义务和责任，我们将不会在您终止协议时支付介绍费。</value>
+  </data>
+  <data name="TC_Indemnity" xml:space="preserve">
+    <value>11. 保障赔偿</value>
+  </data>
+  <data name="TC_IndependentInvestigation" xml:space="preserve">
+    <value>14. 独立调查</value>
+  </data>
+  <data name="TC_InWitnessWhereof" xml:space="preserve">
+    <value>16. 以资证明</value>
+  </data>
+  <data name="TC_LegalResponsibility" xml:space="preserve">
+    <value>7. 法律责任</value>
+  </data>
+  <data name="TC_LimitationOfLiability" xml:space="preserve">
+    <value>13. 责任范围</value>
+  </data>
+  <data name="TC_LimitedLicense" xml:space="preserve">
+    <value>6. 有限授权</value>
+  </data>
+  <data name="TC_Miscellaneous" xml:space="preserve">
+    <value>8. 其他约定</value>
+  </data>
+  <data name="TC_NegativeEarningAreCarried" xml:space="preserve">
+    <value>负赢利将会带入下一个月。一个加盟商以正数结束一个月的结余，如果最低的要求满足的话，佣金将会按照正数的结余额计算并支付。</value>
+  </data>
+  <data name="TC_NonWaiver" xml:space="preserve">
+    <value>不可撤销</value>
+  </data>
+  <data name="TC_OnlyApprovedAndProperlyTagged" xml:space="preserve">
+    <value>只有由我们不断提供的、经过审核并认为是适合的创作素材，才可以用于推广{0}。广告或个人代言是被允许的，但所有的非{0}创作的素材需要由{0}审核撰写；这些审核不应被无理由地阻止。</value>
+  </data>
+  <data name="TC_OnlyTaggedCustermor" xml:space="preserve">
+    <value>只有正确被标识的客户才能被分派为某个加盟代理下的客户。如果加盟商的标签没有正确地插入到加盟商的网站，或没有被{0}的网站服务器正确地接收，那么就会导致注册和购买了产品服务的客户不能被正确地分派成为某个加盟代理商的客户。因此加盟代理商有责任确保所有连接被正确地标记。</value>
+  </data>
+  <data name="TC_OurFailureToEnforce" xml:space="preserve">
+    <value>我们没有强制您严格履行此协议的任何条款，并不构成我们放弃以后强制执行此协议的其他条款。此协议被修改、增加、删减或加插内容都不被我们允许，也不会被认可。我们的任何雇员、官员或代理都不能口头替换、修改或撤销此协议中任何条款。</value>
+  </data>
+  <data name="TC_OurRightsAndRemedies" xml:space="preserve">
+    <value>我们在下文的权利和补救措施不会彼此矛盾，例如，我们在此协议中的一部分或更多的条款并不会妨碍其他条款的实行。您了解、确认并同意，对于违反或被迫违反此协议，赔偿金并不会充分，同时，在违反或被迫违反此协定的情况下，各方各自的权利和义务由各自特定的履行情况、裁定执行或其他公平的补救方案强制执行。本协定中所包含的内容，不应因为违反或被迫违反本协议的任何条款而限制或影响我们的法律或其他权利。这表示此条款清楚的表明了我们各自的权利和义务应该在法律上或其他方面公正地执行。</value>
+  </data>
+  <data name="TC_OwnershipAndContentOfOurSites" xml:space="preserve">
+    <value>我们网站的所有权和内容仍为我们各自的资产，并不应认为会通过任何此加盟代理协议的行为或疏忽而被转移到加盟商。</value>
+  </data>
+  <data name="TC_OwnershipContentAndLiability" xml:space="preserve">
+    <value>加盟商网站的所有权、内容和可靠性由加盟商独立负责。您将独立负责您的网站所有的发展、运营以及维护，所有出现在您网站的素材都将由您自行负担成本。</value>
+  </data>
+  <data name="TC_PoliciesConfidentiality" xml:space="preserve">
+    <value>5. 政策与机密</value>
+  </data>
+  <data name="TC_PresentationOfOurBanner" xml:space="preserve">
+    <value>在加盟商的网站呈现我们的广告横幅和内容是加盟商的责任。加盟商必须确保我们的内容按照我们的规定被正确地呈现。</value>
+  </data>
+  <data name="TC_RelationshipOfParties" xml:space="preserve">
+    <value>10. 双方关系</value>
+  </data>
+  <data name="TC_Remedies" xml:space="preserve">
+    <value>补救措施</value>
+  </data>
+  <data name="TC_ResponsibilitiesAffiliate" xml:space="preserve">
+    <value>1. 加盟代理的责任</value>
+  </data>
+  <data name="TC_RevenueSharingPayment" xml:space="preserve">
+    <value>4. 营业收入分成和支付</value>
+  </data>
+  <data name="TC_SeverabilityWaiver" xml:space="preserve">
+    <value>可分割性 / 弃权</value>
+  </data>
+  <data name="TC_ShouldPlayerProcess" xml:space="preserve">
+    <value>如果玩家进行了退款，这笔有争议的或被退款的收入将会被没收，并从您当月总收入余额中扣除。如果此项累积收入的扣除额超过了您当前应得的余额，则您的余额将为负数，在开始获得收入之前，您必需赚取收入用以弥补退款损失。</value>
+  </data>
+  <data name="TC_ShouldTheseExpenses" xml:space="preserve">
+    <value>如果这些费用不能由您帐户上的资金所弥补，我们保留调查其他替代方法来获得赔付的权利，例如：如果您的代理帐户下产生了消费帐户，我们将会截留这些帐户佣金的支付直到这个帐户造成的损失完全消除。如果您的帐户尚未激活或通过佣金支付产生利润，我们保留要求帐户持有人赔付的权利。</value>
+  </data>
+  <data name="TC_ShouldYouFailToBeEntitled" xml:space="preserve">
+    <value>如果根据上述4.1、4.2和4.3条所述，您因为未能在一个日历月内保持至少预定数量的活跃投注会员而无权获得佣金收入，(由{0}自行决定，)您可获得一个为期两（2）个月的宽限期，以便在此期间遵守相应规定。 只要您遵守规定，在这一不超过连续三（3）个月的宽限期内您的佣金将会合并构成同一时期您的佣金收入。 (这由{0}自行决定)</value>
+  </data>
+  <data name="TC_TermOfThisAgreement" xml:space="preserve">
+    <value>本协议的条款自您从我们的网站下载连接代码和连接时开始一直有效，除非直到其中一方书面通知另外一方终止本协议，在那样的情况下本协议将会即时终止。终止协议是其中任何一方以任何理由任意地终止的。以电子邮件发送终止协议的通知被认可为书面及即时的通知形式。</value>
+  </data>
+  <data name="TC_TermTermination" xml:space="preserve">
+    <value>9. 期限和终止</value>
+  </data>
+  <data name="TC_ThisAgreementDetails" xml:space="preserve">
+    <value>本协议详尽地列明了所有的{0}加盟代理会员的条款和条件。“您”，“加盟代理”指的是您、独立自然人、群体或公司组织，在本协议下注册成为我们的加盟商，并应该同时被认为包括任何雇员、官员、行政管理人员、股东、企业所有者、实际控制方以及加盟代理的自然人和组织（“您的”则有相对应的含义）。</value>
+  </data>
+  <data name="TC_ThisAgreementShallBeGoverned" xml:space="preserve">
+    <value>此协议应受英国法律监督并可理解为符合英国法律。任何与此协议有关联的诉讼、争议或索偿都应由包括仲裁中心指派的仲裁官在内的法官席裁决。仲裁席将在英国伦敦，地点由仲裁中心决定，仲裁语言为英语，仲裁中心建立的规章将监督此过程。仲裁法庭将有权签署判决，它的决定将是强制性的、最终的并严格地强制协议方放弃任何其他可能适用司法管辖区域或审判地，并同意因此仲裁决定放弃其他任何形式的上诉。</value>
+  </data>
+  <data name="TC_ThisLicenseCannotBeSubLicensed" xml:space="preserve">
+    <value>此授权不能有其他分支、分配或被您转让。您使用此商标的权利是有限制的，并且只能通过使用横幅广告而使用此授权。您不应以任何行为或处理方式声称此广告商标无效、无强制性或争夺其所有权。同时您不应采取任何行动阻止我们或我们的授权人在此商标上的权利、表达相同的统称、或其他可能减弱它们的有效性或降低他们附带的信誉。</value>
+  </data>
+  <data name="TC_WeAreIndependentContractors" xml:space="preserve">
+    <value>您和我们都是独立的契约方，此协议并不在各方之间造成任何合作、合资、代理、特许经销、销售代表或雇佣关系。您无权代表我们发出或接受任何要约。无论是在您的网站还是其他地方，您不能发表任何与本段文字有任何抵触的声明。</value>
+  </data>
+  <data name="TC_WeDontCondoneSpam" xml:space="preserve">
+    <value>垃圾邮件——我们不会接受垃圾邮件</value>
+  </data>
+  <data name="TC_WeHerebyGrantToYou" xml:space="preserve">
+    <value>我们在此授予您一份个人、非独家、不可转让的有限授权，在此协议有效期内，使用我们的品牌（我们从它们的所有人处得到的授权）并唯一连接到在您的网站上展示的广告横幅。</value>
+  </data>
+  <data name="TC_WeMakeNoExpress" xml:space="preserve">
+    <value>我们不会明白或隐晦地发表涉及此客户介绍计划或介绍费支付安排的承诺或表述（包括并不只限于，它们功能，可用性、商业性、合法性、非侵权的保证，或其他由于履行、处理或交易过程引起的隐含的保证。）此外，我们不会声明我们网站的运作不会中断或无误，我们将不会对任何中断或错误的后果负责。</value>
+  </data>
+  <data name="TC_WeMayModifyAnyTerm" xml:space="preserve">
+    <value>我们可能在任何时候通过在我们的网站张贴通告或新的协议，来修改此协议中任何条款。修改内容可能包括，例如，有效介绍费范围的更改，费用日程表，付款处理，以及介绍费程序规则。如果有任何修改是不可接受的，您唯一的追索权是终止此协议。您继续遵照我们的更改通告或新的协议参与此计划，将会构成一起接受这些变更。</value>
+  </data>
+  <data name="TC_WeMayTerminateAgreement" xml:space="preserve">
+    <value>如果我们认定您的网站为不适合网站，我们将保留独家决定权终止此协议。不适合的网站包含以下内容：面向儿童；宣扬色情内容；宣扬暴力；宣扬种族歧视、性别歧视、宗教歧视、国别歧视、残障歧视、性歧视或年龄歧视；宣扬非法活动或者侵犯知识产权。</value>
+  </data>
+  <data name="TC_WeMayWithhold" xml:space="preserve">
+    <value>我们可能会保留向您支付的最后一笔款项一段合理的时间，以确保正确的金额被支付。</value>
+  </data>
+  <data name="TC_WeReserveTheRight" xml:space="preserve">
+    <value>如果我们觉得您的网站并不适合成为我们的加盟代理，我们保留终止此协议的权利。不适合的网站包括：针对儿童或未成年人明确地宣传色情的网站，宣传暴力，宣传种族、性别、宗教、国籍、残疾人歧视、性取向等歧视的网站，宣传非法活动或破坏知识产权的网站。</value>
+  </data>
+  <data name="TC_WeReserveTheRightToRevokeLicense" xml:space="preserve">
+    <value>我们保留在任何时候以任何理由撤销此授权并同时撤销此协议的权利。</value>
+  </data>
+  <data name="TC_WeWillNotBeLiable" xml:space="preserve">
+    <value>我们不会对于此协议或介绍计划有关而导致的间接、特别的或后果性的损害（或任何收入、利润、数据的损失）负有责任，即使我们曾被告知这些损害可能会出现。而且，我们在此协议和计划所导致的的责任总计将不会超过在此协议下已经支付或可支付给您的的佣金总额。此协议中没有任何部分可以理解为向非本协议方的任何个人或组织提供任何权利、义务或利益。我们在此协议下的义务并不会构成任何我们的行政人员、官员或股东个人的义务。任何由此协议产生的义务将只满足于所产生的介绍费，并且只限于直接赔偿。</value>
+  </data>
+  <data name="TC_WeWillTerminate" xml:space="preserve">
+    <value>如果你通过任何滥发信息的行为或通过错误的广告词语令{0}声誉受损,我们将会即时终止此协议。</value>
+  </data>
+  <data name="TC_WheneverPossible" xml:space="preserve">
+    <value>无论何时，此协议的每一个条款都应该被适用的法律有效地诠释，但是，如果此协议中任何一个条款失效、非法或不在任何方面不可执行，这样的条款仅仅本身无效或无法执行，并不会使本协议其他条款无效。在处理或无法行使任何权利的时候，不会包含任何隐含的放弃， 只有书面的弃权处理才生效。</value>
+  </data>
+  <data name="TC_WillPayoutRevenueShare" xml:space="preserve">
+    <value>只要您保持在您加盟会员的账户中，在任何既定日历月内拥有至少预定数量的活跃投注会员，{0} 将根据每名客户产生的佣金收入支付收入分成，该收入分成由{0}《加盟计划》的佣金结构所决定。 注意，对于不同的佣金群体，预定的活跃投注会员的数量亦不相同。 有关更多详情，请发邮件至{1}与管理员联系。</value>
+  </data>
+  <data name="TC_WithoutOrPriorWrittenApproval" xml:space="preserve">
+    <value>没有我们事先书面同意，您将只能使用我们审核通过的广告横幅、连接，以及不但不应将他们的外观进行替代，也不应让其在任何推广素材中不与我们相关联。这些转发连接的外观和参数是由我们设计并命名的，并且只被授权允许代表{0}。</value>
+  </data>
+  <data name="TC_YouAcknowledge" xml:space="preserve">
+    <value>您知道您已经阅读过此协议并同意所有条款和条件。您明白我们会在任何时候（直接或间接）按照有可能与您的协议有所不同的条款在与您的网站相似或有竞争的网站上征集客户介绍。您已经独立地评估过参与此加盟计划的有利因素，并且不会依赖此协议上文提到以外的任何表述、承诺或声明。</value>
+  </data>
+  <data name="TC_YouAgreeToIndemnify" xml:space="preserve">
+    <value>在此您同意保障及令{0}、它代表的组织和加盟商、{0}的管理人员、官员、雇员、代理、股东、合作方、会员或其他所有人免于受损，免于任何和所有索偿、行动、要求、义务、损失、赔偿、法庭判决、清算、花费（包括合理的律师费），在这些范围的损失（或涉及的行动）所导致的成本（前述部分或全部以下称为“损失”）或基于以下而产生的成本：</value>
+  </data>
+  <data name="TC_YouAndWeAreIndependentContractors" xml:space="preserve">
+    <value>您和我们都是独立的契约方，此协议并不在各方之间造成任何合作、合资、代理、特许经销、销售代表或雇佣关系。您无权代表我们发出或接受任何要约。无论是在您的网站还是其他地方，您不能发表任何与本段文字有任何抵触的声明。</value>
+  </data>
+  <data name="TC_YouAndWeWillReleased" xml:space="preserve">
+    <value>您和我们自此协议终止之日起，除了协议中列明的各自在协议终止中自然产生的责任外，将不再对彼此有任何责任和义务。终止协议并不会解除您要承担在终止协议之前就产生的侵害的义务。如果我们判定（我们对此拥有唯一决定权）您的网站是不合适的，我们可能终止此协议。不合适的网站包括：针对儿童推广色情素材，宣传暴力，宣传种族、性别、宗教、国籍、残疾人、性取向或年龄等歧视，宣传非法行为或破坏知识产权。</value>
+  </data>
+  <data name="TC_YouAreNotAllowed" xml:space="preserve">
+    <value>您不可与 {0}同时保持加盟和推荐关系。 若违反本规定，则{0}有权单方面终止这一加盟以及/或者推荐关系。推荐关系是指根据我们的《推荐朋友计划》（可查询本网站）与{0}建立的关系。</value>
+  </data>
+  <data name="TC_YouAreResponsible" xml:space="preserve">
+    <value>作为加盟代理，您有责任将广告横幅和相应的追踪连接摆放在您的网站、电子邮件和其他通讯方式来推广宣传{0}。</value>
+  </data>
+  <data name="TC_YouAreResponsibleForDirecting" xml:space="preserve">
+    <value>您只负责引导客户到{0}网站。</value>
+  </data>
+  <data name="TC_YouMayNotAssign" xml:space="preserve">
+    <value>在我们事先书面同意之前您不能通过法律行动或其他方式将此协议分派给他人。出于此规限，此协议将对您和我们以及我们各自的继承人和受让人约束、利益生效和可强制执行。</value>
+  </data>
+  <data name="TC_YouMayNotModifyOrUse" xml:space="preserve">
+    <value>您不能将我们提供的有任何知识产权的产品、广告横幅或其他创作素材，未经{0}的书面许可就进行修改或用于其他用途。所有在{0}提供或审核的素材上的版权或知识产权声明都必须保留，且不能被修改或删减。</value>
+  </data>
+  <data name="TC_YouMustRemoveBanners" xml:space="preserve">
+    <value>您必须从您的网站中移走{0}的广告横幅，并使任何到{0}的连接失效。</value>
+  </data>
+  <data name="TC_YouShallNotMakeAnyClaims" xml:space="preserve">
+    <value>您不应提出任何与{0}有关的索偿、代表或承诺，并且您无权也不应将{0}与任何法律责任相关联。</value>
+  </data>
+  <data name="TC_YouWillAgree" xml:space="preserve">
+    <value>您同意在{0}登记并保持正确、真实的联络信息。</value>
+  </data>
+  <data name="TC_YouWillBeEntitled" xml:space="preserve">
+    <value>您将只能获得那些到协议终止日或之前的有赢利而未付的介绍费，余下的作为您终止此协议的结果进行处理，详细请见下文9.2.d。我们会保留向您支付的最后一笔款项一段合理的时间，以确保正确的金额被支付。</value>
+  </data>
+  <data name="TC_YouWillBeResponsible" xml:space="preserve">
+    <value>您将要独立负责您的网站的发展、运营和维护，以及所有素材的成本。例如，您将要独立负责确保所有张贴在您的网站的素材不会含有诽谤文字或其他非法内容，或侵犯第三方的知识产权。因为我们并不会控制您的网站，我们不会承认这些素材的可靠性。而且，您将有义务保障我们免于受这些与您的网站发展、运营、维护和内容有关的索偿、赔偿、花费（包括但不限于律师费用等）所带来的损害。这些保障条款对于我们在适用的法律条款下对您采取的独立行动或索偿不能有所冲突。</value>
+  </data>
+  <data name="TC_YouWillIndemnify" xml:space="preserve">
+    <value>您要保障并令我们免于所有与您的网站发展、运营、维护以及内容方面有关的索偿、赔偿以及花费（包括，并不只限于，律师费用）。此保障条款并不会对我们在适当的法律条款下对您采取的另外的行动或索偿有所冲突。</value>
+  </data>
+  <data name="TC_YouWillNotKnowinglyBenefit" xml:space="preserve">
+    <value>您将不能从任何已知或被怀疑不是真实产生的流量中获利，无论它是否令{0}受损害。如果通过您的连接直接来到网站的某人发生了欺骗行为，我们保留在任何时候收回已经支付给您的佣金的权利。我们在这方面的决定是最终的，并且不会进行任何这方面的讨论。如果我们确信这样的流量是在您知情的情况下发生的，我们保留收回您在此协议下所获得的全部金额的佣金的权利。即使您对此产生的流量并不知情，如果我们有所怀疑，我们保留截留您的佣金的权利。</value>
+  </data>
+  <data name="TC_YouWillPresent" xml:space="preserve">
+    <value>您只需要提交事先经{0}书面批准的您网站的内容与主题即可。 如有由我们自行认定的不当内容出现，则将立即终止加盟协议。</value>
+  </data>
+  <data name="TC_YouWillReturnToUs" xml:space="preserve">
+    <value>您将要归还我们所有保密信息和所有在您处理、保管和控制的副本，并停止使用所有商标名、商标、服务标志、标识以及其他与此业务有关的称号。</value>
+  </data>
+  <data name="PD_RevenueShareModel_Content" xml:space="preserve">
+    <value>佣金分成模式由2个部分组成：体育博彩和娱乐城，具体的佣金计算如下所述。合作伙伴的收入是由以下两个部分的佣金总和组成。</value>
+  </data>
+  <data name="PD_AffilatesAreOnlyAllowed" xml:space="preserve">
+    <value>合伙人每月最多可以作出一次提款申请。如果得到合作伙伴部门经理的批准，你也可以在同一个月内做出第二次提款申请。目前我们给予大家的提款申请服务是免费的，但我们并不会负担任何转帐手续费或电子转帐所需服务费用。</value>
+  </data>
+  <data name="PD_Moneybookers" xml:space="preserve">
+    <value>Moneybookers</value>
+  </data>
+  <data name="PD_WireTransfer" xml:space="preserve">
+    <value>Wire Transfer</value>
+  </data>
+  <data name="PD_ThroughYourPlayer" xml:space="preserve">
+    <value>通过您的{0}玩家帐户</value>
+  </data>
+  <data name="PD_AnyNegativeBalanceForGivenMonth" xml:space="preserve">
+    <value>在其中一个月的任何负余额均会带到下一个月。例如若您在1月合作伙件的户口最终结余为-$2,555，这个余额将会带到二月。若您在2月合作伙件的户口最终结余为$3,400，那么您的户口总结余将为$845 ($3,400减$2,555)。不过若您的户口在2月依然是负数，例如-$1,600，这将会继续累积之前的负结余带落下一个月，那么带到3月的结余将会是-$4,155。 佣金收入将按相应的级别比例支付给合作伙伴。</value>
+  </data>
+  <data name="PD_Casino_Content2" xml:space="preserve">
+    <value>就上表中所述，“净收入”是指在相关月份中下线会员的总投注额删减: (i)盈利；(ii)已领取的红利数额；(iii)扣款和(iv) 其他任何相关费用如补偿或退款给会员。</value>
+  </data>
+  <data name="PD_TheMinimumWithdrawal" xml:space="preserve">
+    <value>最低佣金提取要求是100美元。</value>
+  </data>
+  <data name="PD_WeOfferSeveralMethods" xml:space="preserve">
+    <value>我们提供以下几种提款方法:</value>
+  </data>
+  <data name="PD_YouCanRequestPayout" xml:space="preserve">
+    <value>您可以要求提取美金之外的其他货币，例如英镑、欧元、人民币、马来西亚林吉特，泰铢或印尼盾。相关汇率将会以支出当日为准 </value>
+  </data>
+  <data name="PD_Casino_Content1" xml:space="preserve">
+    <value>{0}提供娱乐城的佣金分成模式。这是一个累积的模式，每月根据合作伙伴所推荐的玩家，在娱乐城相关的投注活跃程度去赚取佣金。</value>
+  </data>
+  <data name="PD_Sportbook_Content" xml:space="preserve">
+    <value>{0}提供体育博彩的佣金分成模式。这是一个累积的模式，每月根据合作伙伴所推荐的玩家，在体育博彩相关的投注活跃程度去赚取佣金。</value>
+  </data>
+  <data name="PD_Neteller" xml:space="preserve">
+    <value>Neteller</value>
+  </data>
+  <data name="FAQ_CanIRequest" xml:space="preserve">
+    <value>除了美元以外，我可以要求以其他货币形式提取佣金吗？</value>
+  </data>
+  <data name="FAQ_TheCurrenciesOfferedAre" xml:space="preserve">
+    <value>可以。我们提供英镑，欧元，人民币，马币，泰铢及印尼盾等货币提款服务。有关的汇率计算将根据付款操作当日的汇率而定。</value>
+  </data>
+  <data name="FAQ_ToParticipateIn12BET" xml:space="preserve">
+    <value>是的，现在可以！如果您认为您有联络方式，您可以在我们合作伙伴特色专栏里很容易的建立属于您的个性化页面并且上传任何核准的营销思路或体育信息。一旦做了，您可以立即发送页面链接给对体育或体育博彩有兴趣的任何朋友或联络人，当他们点击链接，他们就成为您的下线会员。欲知更多详情，请发邮件到 {0}。</value>
+  </data>
+  <data name="FAQ_YouCanRequestForAWithdrawal" xml:space="preserve">
+    <value>你可以透过Moneybookers, Neteller, Wire Transfer提出佣金，也可以直接将佣金转入您的{0}玩家帐号</value>
+  </data>
+  <data name="FAQ_TheMinimumWithdrawal" xml:space="preserve">
+    <value>最低佣金提取要求是100美元。</value>
+  </data>
+  <data name="FAQ_JoinOurAffProgram" xml:space="preserve">
+    <value>加入{0}会员介绍合作计划</value>
+  </data>
+  <data name="PD_CompanyNegativeNetWin" xml:space="preserve">
+    <value>如果公司净赢是负数，则子公司与该公司每月要承担{0}％（适用于每个产品）</value>
+  </data>
+</root>

@@ -1,0 +1,17 @@
+﻿<div> 
+@Model.FirstName 귀중,<br /><br />
+
+요청 참조 번호는 일자 @Model.PaymentRequestDate 의 @Model.PaymentID 입니다.<br /><br />
+ 
+귀하의 지불요청 금액 @Model.PaymentAmount 이 취소되었습니다.<br /><br />
+                                         
+이 공지는 시스템에서 자동으로 생성된 이메일입니다. 이 메일에 직접 회신하지 마시기 바랍니다.<br />
+질문이 있으시면 주저마시고 저희에게 연락해주시거나 <a href="mailto:@Model.MailContact">@Model.MailContact</a>로 코멘트를 보내주시기 바랍니다.<br /><br />
+                                         
+즐거운 하루가 되기 바랍니다!<br /><br />
+                                         
+감사합니다,<br /><br />
+
+@Model.AffiliateName 가맹자 팀  배상<br />
+<a href="mailto:@Model.MailContact">@Model.MailContact</a>
+</div>

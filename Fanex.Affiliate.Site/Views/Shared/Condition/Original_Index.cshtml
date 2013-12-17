@@ -1,0 +1,259 @@
+﻿@{
+    ViewBag.Title = Lang.TermsConditions;
+    Layout = @String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
+}
+
+@{
+    var classThai = AppSession.Language.Equals("th-TH") ? AppSession.Language : string.Empty;
+    var classType = string.Format("class='span12 box-insite {0}'", classThai);
+}
+
+<div @Html.Raw(classType)>
+    <div class="top">
+        <div class="in-top">@Lang.TermsConditions</div>
+        <div class="in-right">
+        </div>
+    </div>
+    <div class="content">
+        <div class="block">
+            <div class="content-block">
+                @string.Format(Terms.TC_BecomeAffiliate, AppSettings.SystemName)
+                <p></p>
+                @string.Format(Terms.TC_IfYouDecide, AppSettings.SystemName)
+                <p></p>
+                @Terms.TC_WeReserveTheRight
+                <p></p>
+                @string.Format(Terms.TC_AsPolicy, AppSettings.SystemName)
+                <p></p>
+                @string.Format(Terms.TC_ThisAgreementDetails, AppSettings.SystemName)
+            </div>
+        </div>
+        <div class="block">
+             <div class="title-block">
+                @Terms.TC_ResponsibilitiesAffiliate <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <ol class="content-block">
+                <li>@string.Format(Terms.TC_YouAreResponsible, AppSettings.SystemName)</li> 
+                <li>@string.Format(Terms.TC_YouWillAgree, AppSettings.SystemName)</li>
+                <li>@string.Format(Terms.TC_YouWillPresent, AppSettings.SystemName)</li>
+                <li>@string.Format(Terms.TC_YouWillBeResponsible)</li>
+            </ol>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                @Terms.TC_AffiliationGuidelines <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <ol class="content-block">
+                <li>@string.Format(Terms.TC_OnlyApprovedAndProperlyTagged, AppSettings.SystemName)</li>
+                <li>@string.Format(Terms.TC_YouMayNotModifyOrUse, AppSettings.SystemName)</li>
+                <li>@string.Format(Terms.TC_ByAgreeingToParticipate, AppSettings.SystemName)</li>
+                <li>@Terms.TC_BannersAndLinksMayNotBePlaced</li>
+                <li>@string.Format(Terms.TC_WeWillTerminate, AppSettings.SystemName)</li>
+                <li>@string.Format(Terms.TC_YouShallNotMakeAnyClaims, AppSettings.SystemName)</li>
+                <li>@string.Format(Terms.TC_WithoutOrPriorWrittenApproval, AppSettings.SystemName)</li>
+                <li>@string.Format(Terms.TC_YouWillNotKnowinglyBenefit, AppSettings.SystemName)</li>
+                <li>@string.Format(Terms.TC_AffiliatesAreProhibited, AppSettings.SystemName)</li>
+                <li>@string.Format(Terms.TC_YouAreNotAllowed, AppSettings.SystemName)
+                    
+                </li>
+            </ol>
+        </div>
+        <div class="block">
+             <div class="title-block">
+                @Terms.TC_AffiliateTagging <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <ol class="content-block">
+                <li>@string.Format(Terms.TC_YouAreResponsibleForDirecting, AppSettings.SystemName)</li>
+                <li>@string.Format(Terms.TC_OnlyTaggedCustermor, AppSettings.SystemName)</li>
+            </ol>
+        </div>
+        <div class="block">
+             <div class="title-block">
+                @Terms.TC_RevenueSharingPayment <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <ol class="content-block">
+                <li>@Html.Raw(string.Format(Terms.TC_WillPayoutRevenueShare, AppSettings.SystemName, string.Format("<a href=mailto:{0}>{0}</a>", AppSettings.MailContact)))</li>
+                <li>@Html.Raw(string.Format(Terms.TC_ActiveWageringMembers, AppSettings.DefaultCurrencySymbol, AppSettings.MinimumWithdrawalAmount,
+                    string.Format("<a href=mailto:{0}>{0}</a>", AppSettings.MailContact)))</li>
+                <li>@string.Format(Terms.TC_CommissionableEarnings, AppSettings.SystemName)</li>
+                <li>@Terms.TC_ChargebackCreditCard</li>
+                <li>@string.Format(Terms.TC_GrossWinIsTotalOfAllAmount, AppSettings.SystemName)</li>
+                <li>@Terms.TC_ChargebacksAreAmounts</li>
+                <li>@Terms.TC_ShouldPlayerProcess</li>
+                <li>@string.Format(Terms.TC_ChargebackWillStayDue, AppSettings.SystemName)</li>
+                <li>@string.Format(Terms.TC_BonusesInclucdeComplimentaryMoney, AppSettings.SystemName)</li>
+                <li>@string.Format(Terms.TC_ShouldYouFailToBeEntitled, AppSettings.SystemName)</li>
+                <li>@string.Format(Terms.TC_CommissionableEarningsWillBeSubject, AppSettings.SystemName)</li>
+                <li>@Terms.TC_NegativeEarningAreCarried</li>
+                <li>@Terms.TC_CommissionableEarningsOfAffiliate</li>
+                <li>@string.Format(Terms.TC_AffiliatesWillNotEarn, AppSettings.SystemName)</li>
+            </ol>
+        </div>
+        <div class="block">
+             <div class="title-block">
+                @Terms.TC_PoliciesConfidentiality <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <ol class="content-block">
+                <li>@string.Format(Terms.TC_AssumeOwnershipOfCustomer, AppSettings.SystemName)</li>
+                <li>@Terms.TC_ByOpeningAccountWithCustomer</li>
+                <li>@Terms.TC_DuringTheTermsOfAgreement</li>
+            </ol>
+        </div>
+        <div class="block">
+             <div class="title-block">
+                @Terms.TC_LimitedLicense <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <ol class="content-block">
+                <li>@Terms.TC_WeHerebyGrantToYou</li>
+                <li>@Terms.TC_ByAgreementWeGrantYou</li>
+                <li>@Terms.TC_ThisLicenseCannotBeSubLicensed</li>
+                <li>@Terms.TC_WeReserveTheRightToRevokeLicense</li>
+            </ol>
+        </div>
+        <div class="block">
+             <div class="title-block">
+                @Terms.TC_LegalResponsibility <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <ol class="content-block">
+                <li>@Terms.TC_OwnershipAndContentOfOurSites</li>
+                <li>@Terms.TC_OwnershipContentAndLiability</li>
+                <li>@Terms.TC_YouWillIndemnify</li>
+                <li>@Terms.TC_AffiliateResponsibility</li>
+                <li>@Terms.TC_PresentationOfOurBanner</li>
+                <li>@Terms.TC_AffiliateMustEnsure</li>
+                <li>@Terms.TC_WeMayModifyAnyTerm</li>
+                <li>@Terms.TC_WeDontCondoneSpam
+                    <ol type="a">
+                        <li>@string.Format(Terms.TC_AnyFormOfSpam, AppSettings.SystemName)</li>
+                        <li>@Terms.TC_ShouldTheseExpenses</li>
+                        <li>@Terms.TC_WeAreIndependentContractors</li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+        <div class="block">
+             <div class="title-block">
+                @Terms.TC_Miscellaneous <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <ol class="content-block">
+                <li>
+                    @Terms.TC_AssignAbilityAndInurement <br />
+                    @Terms.TC_YouMayNotAssign
+                </li>
+                <li>
+                    @Terms.TC_NonWaiver <br />
+                    @Terms.TC_OurFailureToEnforce
+                </li>
+                <li>
+                    @Terms.TC_Remedies <br />
+                    @Terms.TC_OurRightsAndRemedies
+                </li>
+                <li>
+                    @Terms.TC_SeverabilityWaiver <br />
+                    @Terms.TC_WheneverPossible
+                </li>
+            </ol>
+        </div>
+        <div class="block">
+             <div class="title-block">
+                @Terms.TC_TermTermination <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <ol class="content-block">
+                <li>@Terms.TC_TermOfThisAgreement
+                    
+                </li>
+                <li>@Terms.TC_EventOfTermination: 
+                    <ol type="a">
+                        <li>@string.Format(Terms.TC_YouMustRemoveBanners, AppSettings.SystemName)</li>
+                        <li>@Terms.TC_AllRightsAndLicenses</li>
+                        <li>@Terms.TC_YouWillBeEntitled</li>
+                        <li>@Terms.TC_IfYouHaveFailedToFulfill</li>
+                        <li>@Terms.TC_WeMayWithhold</li>
+                        <li>@Terms.TC_IfWeContinueToPermitActivity</li>
+                        <li>@Terms.TC_YouWillReturnToUs</li>
+                        <li>@Terms.TC_YouAndWeWillReleased</li>
+                        <li>@Terms.TC_WeMayTerminateAgreement</li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                @Terms.TC_RelationshipOfParties <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <div class="content-block">
+                @Terms.TC_YouAndWeAreIndependentContractors 
+            </div>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                @Terms.TC_Indemnity <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <div class="content-block">
+                @string.Format(Terms.TC_YouAgreeToIndemnify, AppSettings.SystemName):
+                <ol>
+                    <li>@Terms.TC_AnyClaimThat</li>
+                    <li>@Terms.TC_AnyMisrepresentation</li>
+                    <li>@Terms.TC_DevelopmentOperation</li>
+                    <li>@Terms.TC_AnyClaimRelatedToYourSite</li>
+                </ol>
+            </div>                
+        </div>
+        <div class="block">
+            <div class="title-block">
+                @Terms.TC_Disclaimers <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <div class="content-block">
+                @Terms.TC_WeMakeNoExpress
+            </div>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                @Terms.TC_LimitationOfLiability <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <div class="content-block">
+                @Terms.TC_WeWillNotBeLiable
+            </div>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                @Terms.TC_IndependentInvestigation <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <div class="content-block">
+                @Terms.TC_YouAcknowledge
+            </div>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                @Terms.TC_GoverningLaw <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <div class="content-block">
+                @Terms.TC_ThisAgreementShallBeGoverned
+            </div>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                @Terms.TC_InWitnessWhereof <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <div class="content-block">
+                @string.Format(Terms.TC_ByHavingRead, AppSettings.SystemName)
+            </div>
+        </div>
+    </div>
+</div>

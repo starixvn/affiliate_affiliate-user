@@ -1,0 +1,19 @@
+﻿<div>
+@Model.AffiliateName Affiliates - Contact Us – @Model.Subject<br><br>
+Dear CSD, <br><br>
+
+This is an email from customer @Model.Name. <br><br>
+
+---------------------------------------------------------- <br>
+<b>Customer Name:</b> @Model.Name <br>
+<b>Affiliate ID:</b> @Model.AffID <br>
+<b>Customer’s Email:</b> @Model.Email <br>
+<b>Comments:</b> @Model.Comment <br>
+---------------------------------------------------------- <br><br>
+
+Have a great day! <br> <br>
+
+Best regards, <br><br>
+@Model.AffiliateName Affiliates. <br><br>
+<a href="mailto:@Model.MailContact">@Model.MailContact</a>
+</div>

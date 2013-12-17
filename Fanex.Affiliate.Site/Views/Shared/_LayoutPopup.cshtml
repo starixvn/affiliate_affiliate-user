@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    @Scripts.Render("~/bundles/headjs")
+    @Styles.Render("~/bundles/css")
+</head>
+<body class="popup">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12 contents">
+                <div class="row-fluid">
+                    <div class="span9 leftColumn">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/js")
+    @RenderSection("scripts", required: false)
+    <script type="text/ecmascript">
+        $.unblockUI();
+        AFFILIATE.getAbsoluteUrl = function (relativeUrl) {
+            return '@Url.Content("~/")' + relativeUrl;
+        };
+
+    </script>
+</body>
+</html>

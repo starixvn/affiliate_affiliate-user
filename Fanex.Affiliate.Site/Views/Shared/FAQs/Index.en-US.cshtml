@@ -1,0 +1,132 @@
+﻿@using Fanex.Affiliate.Web.Mvc
+@model SiteDomainInfo
+@{
+    ViewBag.Title = Lang.FAQs;
+    Layout = String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
+    var linkApplicationForm = new object();
+    if(SessionManager.CurrentSession == null)
+    {
+        linkApplicationForm = Html.ActionLink(Lang.ApplicationForm, "Index", "User");
+    }
+    else
+    {
+        linkApplicationForm = Lang.ApplicationForm; 
+    }
+}
+@{
+    var classThai = AppSession.Language.Equals("th-TH") ? AppSession.Language : string.Empty;
+    var classType = string.Format("class='span12 box-insite {0}'", classThai);
+}
+
+<div @Html.Raw(classType)>
+    <div class="top">
+        <div class="in-top">@Lang.FAQs</div>
+        <div class="in-right"></div>
+    </div>
+    <div class="content">
+        <div class="block">
+            <div class="title-block">
+                General <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block">
+            </div>
+            <div class="content-block">
+                <b id="f1">@string.Format("What is {0} Affiliate Program?", AppSettings.AffiliateName)</b>
+                <br />
+                @Html.Raw(string.Format("{0} Affiliate Program is a partnership program where you will earn commissions based on the wagering activity of players that you refer to {1} from your Website via online or offline via referrals.", AppSettings.AffiliateName, Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                <p></p>
+                <b id="f2">@string.Format("How do I sign up with {0} Affiliate Program?", AppSettings.AffiliateName) </b>
+                <br />
+                @Html.Raw(string.Format("The {0} Affiliate Program is free to join. Simply fill out our {1} and you will be contacted within 3 business days regarding your acceptance into the program. If your application is accepted, you will receive an email containing your unique affiliate ID, giving you access to banners, text links, and other content and marketing tools to add to your website", AppSettings.AffiliateName, linkApplicationForm))
+                <p></p>
+                <b id="f3">What if I don't have a Website, can I still join?</b>
+                <br />
+                Yes, now you can! The Company will provide you a page link (associated with your account), you can:
+                <ul>
+                    <li style="list-style-type: disc">Upload it on any public websites or forums to promote our affiliate program.</li>
+                    <li style="list-style-type: disc">Send the page link to any of your friends, contacts that are interested in sports or sports betting and when they click on the link, they become your referred member!</li>
+                </ul>
+                @Html.Raw(string.Format("For more details, please contact to us at {0}.", string.Format("<a href=mailto:{0}>{0}</a>", AppSettings.MailContact)))
+            </div>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                Marketing & Tracking<a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block">
+            </div>
+            <div class="content-block">
+                <b id="f4">Where do I get banners and content?</b>
+                <br />
+                By accessing our Media Gallery section you will be available to choose your preferred banners as well as text link for your Website.
+                <p></p>
+                <b id="f5">How does the system keep track of my players?</b>
+                <br />
+                @Html.Raw(string.Format("We employ state-of-the-art technology in our tracking system to ensure you receive credit for 100% of the traffic you send to {0}. Affiliates refer players by using their unique URL that is provided in the Media Gallery area. Through the use of cookies, visitors that click through an affiliate unique URL (banner, text link, email message etc.) are tracked and credit is automatically given to the affiliate for players referred.", Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                <p></p>
+                <b>@Html.Raw(string.Format("Will you track and give me credit for non-members that did not sign up on the first visit through my affiliate link but return to {0} later and become a member?", Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))</b>
+                <br />
+                @Html.Raw(string.Format("Yes. We are able to track visitors from our affiliate's website that don't sign up right away but, return to {0} at a later date & sign-up. We set our protection period for 90 days to cover the first referring affiliate. The technology used to manage this is based on cookies.", Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                <p>
+                </p>
+                <b>What is a cookie?</b>
+                <br />
+                @Html.Raw(string.Format("Cookies are a general mechanism which server-side connections can use to both store and retrieve information on the client side of the connection. More specifically, they are small data files placed on the computers of visitors to {0} from affiliated websites. These data files contain information {0} use to track and credit its affiliates accurately for the traffic they send. Tracking via cookies can include, but is not limited to, lists of pages visited as well as date and time when certain pages were looked at.", Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                <p>
+                </p>
+                <b>Do you reward the First Affiliate or Last Affiliate for referring a customer?</b>
+                <br />
+                The cookies are overwritten to benefit the Last Affiliate when a Customer is referred.
+                <p>
+                </p>
+                <b id="f6">How can I check how much I have earned?</b>
+                <br />
+                @string.Format("You can login to your {0} affiliate account to check your commission stats in real-time which is available to you 24 hours a day, 7 days a week and 365 days per year.", AppSettings.SystemName)
+                <p>
+                </p>
+                <b>What is your policy on spamming?</b>
+                <br />
+                @string.Format("We do not tolerate spamming of any kind by our affiliate partners. If spamming by an affiliate is brought to our attention we will give the affiliate one warning (if judged to be a minor case). If the spamming does not stop the affiliate partner will be permanently banned from our {0} Affiliate Program.", AppSettings.SystemName)
+            </div>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                Getting Paid<a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block">
+            </div>
+            <div class="content-block">
+                <b id="f7">What are the withdrawal methods available to me?</b>
+                <br />
+                @string.Format("You can request for a withdrawal directly into your {0} player account.", AppSettings.SystemName)
+                <p>
+                </p>
+                <b>What kinds of currencies are supported when withdrawing?</b>
+                <br />
+                @string.Format("You can withdraw money in {0}. Respective exchange rate on payout date will be applied.", string.Join(", ", AppSettings.PlayerCurrencies.OrderBy(c => c.CurrencyCode).Select(x => x.CurrencyCode).ToArray()))
+                <p>
+                </p>
+                <b id="f8">What is the minimum withdrawal request amount?</b>
+                <br />
+                @string.Format("The minimum amount of withdrawal request is {0}{1}.", AppSettings.DefaultCurrencySymbol, AppSettings.MinimumWithdrawalAmount)
+                <p>
+                </p>
+                <b>Does negative balance carry over?</b>
+                <br />
+                Yes, we rollover negative commission balances. In the event that you carry a negative commission balance at the end of a month, it will rollover until you have enough positive earnings to zero that balance out.
+                <p>
+                </p>
+                <b>How often can I request for withdrawal?</b>
+                <br />
+                A maximum of one withdrawal request can be made for each calendar month. Affiliates can request for a second settlement in a month subject to Affiliate Manager's approval. While we offer free withdrawal request however we will not be held responsible if the receiving financial institution or electronic wallets impose a fee of any kind at their end.
+            </div>
+            @if (SessionManager.CurrentSession == null)
+            {
+                <br />
+                <div class="joinUsButton">
+                    <a class="signup" href="~/User/Index"><span>@string.Format("JOIN THE {0} AFFILIATE PROGRAM", AppSettings.SystemName).ToUpper()</span></a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

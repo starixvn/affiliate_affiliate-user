@@ -1,0 +1,56 @@
+﻿// ----------------------------------------------------------------------
+// <copyright file="Global.asax.cs" company="Nexcel Solutions Vietnam">
+//     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
+// </copyright>
+// ------------------------------------------------------------------------
+// <history>
+//   <change who="Long.Luu" date="2013/08/09">Created</change>
+//   <change who="" date=""></change>
+// </history>
+
+namespace Fanex.Affiliate.Link
+{
+    using System;
+    using System.Web;
+    using System.Web.Http;
+    using System.Web.Mvc;
+    using System.Web.Optimization;
+    using System.Web.Routing;
+    using Data.Configuration;
+    using Logging;
+
+    /// <summary>
+    /// Global for Affiliate link.
+    /// </summary>
+    public class MvcApplication : HttpApplication
+    {
+        protected void Application_Start()
+        {
+            DbSettingProviderManager.Current.Start();
+
+            AreaRegistration.RegisterAllAreas();
+
+            WebApiConfig.Register(GlobalConfiguration.Configuration);
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
+        }
+
+        /// <summary>
+        /// Application Error.
+        /// </summary>
+        /// <param name="sender">Object sender.</param>
+        /// <param name="e">Error arguments.</param>
+        protected void Application_Error(object sender, EventArgs e)
+        {
+            var exception = Server.GetLastError();
+            if (exception is HttpException)
+            {
+                return;
+            }
+
+            var message = exception.Message + Environment.NewLine + exception.StackTrace;
+            LogService.Error("Affiliate Link Error!" + Environment.NewLine + message + Environment.NewLine + Request.Url);
+       }
+    }
+}

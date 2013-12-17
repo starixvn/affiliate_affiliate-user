@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FAQ_AffiliateProgramIsFreeToJoin" xml:space="preserve">
+    <value>{0}合作夥伴計劃是免費參加的。簡單來說只要填好{1}，我們將會在三個工作天內審核您的申請。若你的申請被接納的話，您會收到電郵通知包括您的獨有的合作夥伴號碼，令您可以在您的網站上加上廣告橫額、文字連接及其他內容與及市場推廣工具等。</value>
+  </data>
+  <data name="FAQ_AffiliateProgramIsPartershipProgram" xml:space="preserve">
+    <value>{0} 加盟計畫是一項合作夥伴計畫，您可以憑這份計畫賺取傭金，傭金的計算依據是您通過線上或離線介紹的方式從您的網站介紹到{1}的玩家的投注活動。</value>
+  </data>
+  <data name="FAQ_ByAccessingOurMediaGallery" xml:space="preserve">
+    <value>透過我們的媒體冊，您可以選取你偏愛的廣告橫額或者文字連接放到您的網站。</value>
+  </data>
+  <data name="FAQ_CookiesAreMechanism" xml:space="preserve">
+    <value>Cookies是伺服器連接的常用配置，可以用作從客戶端儲存及提取資料。更特別是，透過會員介紹連接到訪{0}的訪客，他們的電腦都會保存很多細小的資料檔案，這些檔案包括協助{0}追蹤及發放會員介紹獎勵時的所需資料，以確保有關往來資訊準確無誤。Cookies包含追蹤功能，但不會被限制，當某些網頁被瀏覽過，它可以查找出被瀏覽的頁面、瀏覽日期及時間。</value>
+  </data>
+  <data name="FAQ_CookiesAreOverwritten" xml:space="preserve">
+    <value>Cookies會不斷更新，所以我們會向最後介紹鏈接的提供者給予獎勵。</value>
+  </data>
+  <data name="FAQ_DoNegativeBalance" xml:space="preserve">
+    <value>負結餘會帶帳滾存嗎？</value>
+  </data>
+  <data name="FAQ_DoYouReward" xml:space="preserve">
+    <value>會員介紹獎勵會給予最初的介紹鏈接提供者，還是給予最後那位？</value>
+  </data>
+  <data name="FAQ_ForMoreDetails" xml:space="preserve">
+    <value>欲知更多詳情，請與我們聯繫，我們的電子郵箱位址是{0}.</value>
+  </data>
+  <data name="FAQ_General" xml:space="preserve">
+    <value>一般</value>
+  </data>
+  <data name="FAQ_HowCanCheck" xml:space="preserve">
+    <value>我如何得知自己賺取了多少獎額？</value>
+  </data>
+  <data name="FAQ_HowDoSignUp" xml:space="preserve">
+    <value>我如何登記{0}合作夥伴計劃？</value>
+  </data>
+  <data name="FAQ_HowOftenCanIRequest" xml:space="preserve">
+    <value>我可以每隔多久提出一次提款申請？</value>
+  </data>
+  <data name="FAQ_HowSystemKeepTrack" xml:space="preserve">
+    <value>系統怎樣去追蹤我的玩家？</value>
+  </data>
+  <data name="FAQ_MarketingTracking" xml:space="preserve">
+    <value>市場推廣及追蹤</value>
+  </data>
+  <data name="FAQ_MaximumOfWithdrawalRequest" xml:space="preserve">
+    <value>合夥人每月最多可以作出一次提款申請。如果得到會員介紹合作計劃的經理批准，你也可以在同一個月內做出第二次提款申請。目前我們給予大家的提款申請服務是免費的，但我們並不會負擔任何轉帳時的手續費或電子轉帳所需服務費用。</value>
+  </data>
+  <data name="FAQ_MinimumAmountOfWithdrawalRequest" xml:space="preserve">
+    <value>最低佣金提取要求是{1}{0}。</value>
+  </data>
+  <data name="FAQ_NowYouCan" xml:space="preserve">
+    <value>是的，您現在就可以加盟！ 本公司將為您提供一個網頁連結（與您的帳戶相關），您可以</value>
+  </data>
+  <data name="FAQ_SendPageLink" xml:space="preserve">
+    <value>向對體育或體育投注感興趣的朋友、熟人發送這個網頁連結，當他們點擊這個連結時，他們就會成為您所介紹的會員！</value>
+  </data>
+  <data name="FAQ_UploadItOnAnyPublicWebsites" xml:space="preserve">
+    <value>在任何公共網站或論壇上發佈這個連結，以便推廣我們的加盟計畫。</value>
+  </data>
+  <data name="FAQ_WeAreAbleToTrackVisitors" xml:space="preserve">
+    <value>是的。我們能夠從我們加盟會員的網站上追蹤那些未直接註冊，但在較晚時候回到{0}並註冊的訪問者。我們對第一名推薦會員設定了90天的保護期。管理該保護期的技術取決於資訊記錄程式cookies。</value>
+  </data>
+  <data name="FAQ_WeDontTolerateSpamming" xml:space="preserve">
+    <value>我們不容忍會員介紹合伙人作出任何形式的濫發廣告行為。如果有關合伙人的濫發行為被我們發現到，我們會向該合伙人發出一次警告(如果只是較小型問題的話)；如果合伙人仍然不停止有關濫發行為，{0}的會員介紹系統會立即封停該合伙人的會員介紹合伙關係。</value>
+  </data>
+  <data name="FAQ_WeEmployStartOfArtTechnology" xml:space="preserve">
+    <value>我們在追蹤系統上利用了最先進的科技確保了從您網站過來{0}的瀏覽量100%正確。玩家介紹會員將根據媒體中心提供的網路地址識別。通過使用cookies識別，訪客經由指定網路地址連結(廣告橫幅、文本連接、電子郵件等) 點擊成為會員，成功介紹會員的玩家將被自動追蹤及獎勵。</value>
+  </data>
+  <data name="FAQ_WeRolloverNegativeCommission" xml:space="preserve">
+    <value>會的，我們會累積計算負數佣金結存。假如到月底結算日你的戶口有負數佣金結存，有關帳目將被帶帳到下期帳單結算，直至你賺取的正數佣金金額把有關負數帳目結存變回零。</value>
+  </data>
+  <data name="FAQ_WhatAreWithdrawalMethods" xml:space="preserve">
+    <value>有哪些可行的提款方式？</value>
+  </data>
+  <data name="FAQ_WhatIfDontHaveWebsite" xml:space="preserve">
+    <value>我沒有自己的網站，還能加盟嗎？</value>
+  </data>
+  <data name="FAQ_WhatIsAffiliateProgram" xml:space="preserve">
+    <value>{0}合作夥伴計劃是甚麼？</value>
+  </data>
+  <data name="FAQ_WhatIsCookie" xml:space="preserve">
+    <value>甚麼是cookies？</value>
+  </data>
+  <data name="FAQ_WhatIsMinimumWithdrawalRequest" xml:space="preserve">
+    <value>最低的佣金提取額是多少？</value>
+  </data>
+  <data name="FAQ_WhatKindsOfCurrencies" xml:space="preserve">
+    <value>提款支持哪些貨幣？</value>
+  </data>
+  <data name="FAQ_WhatYourPolicy" xml:space="preserve">
+    <value>你們的濫發廣告政策定義是甚麼？</value>
+  </data>
+  <data name="FAQ_WhereGetBanners" xml:space="preserve">
+    <value>我怎樣得到廣告橫額與及內容？</value>
+  </data>
+  <data name="FAQ_WillYouTrack" xml:space="preserve">
+    <value>如果有會員首次瀏覽時未有登記成為會員，但後來登記了，而他們是透過我提供的會員介紹連結接觸到{0}的，你們也會追蹤到及向我發放獎勵嗎？</value>
+  </data>
+  <data name="FAQ_YouCanLogin" xml:space="preserve">
+    <value>你可以登入你在{0}的合作夥伴會員戶口，查核你所賺取所得的回佣金額。{0}為您提供全年7X24小時查核服務。</value>
+  </data>
+  <data name="FAQ_YouCanRequest" xml:space="preserve">
+    <value>您可以直接在{0}中您的玩家帳戶中要求提款。</value>
+  </data>
+  <data name="FAQ_YouCanWithdrawMoney" xml:space="preserve">
+    <value>您可以按照{0}提款。 提款適用支付日相應的匯率。</value>
+  </data>
+  <data name="PD_AffiliateEarnings" xml:space="preserve">
+    <value>合作夥伴收入</value>
+  </data>
+  <data name="PD_AffiliateSupport" xml:space="preserve">
+    <value>加盟基礎貨幣的支援資訊</value>
+  </data>
+  <data name="PD_AnyNegativeBalance" xml:space="preserve">
+    <value>在其中一個月的任何負餘額均會帶到下一個月。例如若您在1月合作夥件的戶口最終結餘為-{0}2,555，這個餘額將會帶到二月。若您在2月合作夥件的戶口最終結餘為{0}3,400，那麼您的戶口總結餘將為{0}845 ({0}3,400減{0}2,555)。不過若您的戶口在2月依然是負數，例如-{0}1,600，這將會繼續累積之前的負結餘帶落下一個月，那麼帶到3月的結餘將會是-{0}4,155。佣金收入將按相應的級別比例支付給合作夥伴。</value>
+  </data>
+  <data name="PD_AsAffiliate" xml:space="preserve">
+    <value>成為{0}合作夥件後，由您推薦到{0}的每位玩家只要使用賬戶就可以為您帶來即時的佣金。我們的線上匯報系統會7×24小時供您查閱。</value>
+  </data>
+  <data name="PD_CompanyNetWinFormula" xml:space="preserve">
+    <value>“本月公司淨收益” = |–返款（收益或損失）–任何支付的獎金–退款–任何其它收入返款–給玩家的貸款、賠償或退款|</value>
+  </data>
+  <data name="PD_DropSomeLastZeroDigits" xml:space="preserve">
+    <value>在我們的報告和傭金設置裡，我們會刪除下列貨幣的最後幾個零位：{0}例如：{1}1為 {1}1*{2} 實際價值。</value>
+  </data>
+  <data name="PD_GettingPaid" xml:space="preserve">
+    <value>提取佣金</value>
+  </data>
+  <data name="PD_HowMuchYouEarn" xml:space="preserve">
+    <value>您賺取的利潤多少取決於您的網站引導帶來的顧客瀏覽量，我們的任務是指導他們完成註冊和首存，用我們誘人的紅利和水位留住他們</value>
+  </data>
+  <data name="PD_NegativeBalance" xml:space="preserve">
+    <value>負餘額</value>
+  </data>
+  <data name="PD_NoteThatSample" xml:space="preserve">
+    <value>注意上述樣本用於貨幣</value>
+  </data>
+  <data name="PD_PurposeOfTable" xml:space="preserve">
+    <value>為實現上表的用途</value>
+  </data>
+  <data name="PD_RevenueShareModel" xml:space="preserve">
+    <value>佣金分成模式</value>
+  </data>
+  <data name="PD_RevenueShareModelSplitIntoComponents" xml:space="preserve">
+    <value>收入分成模式分為下列幾個部分</value>
+  </data>
+  <data name="PD_TotalRevenue" xml:space="preserve">
+    <value>應當支付的加盟總收入分成為收入分成模式所有組成部分的總和。 下列為來自於我們系統的一個收入分成模式樣本</value>
+  </data>
+  <data name="PD_WeOfferCurrency" xml:space="preserve">
+    <value>我們提供下列基礎貨幣</value>
+  </data>
+  <data name="PD_WeOfferWithdrawalMethod" xml:space="preserve">
+    <value>我們的提款方式僅通過您的{0}玩家帳戶提供給您。 提款請求的最低額度由每種加盟基礎貨幣決定。</value>
+  </data>
+  <data name="PD_YouRequestPayout" xml:space="preserve">
+    <value>您可以要求按{0}付款。付款適用支付日相應的匯率。</value>
+  </data>
+  <data name="TC_ActiveWageringMembers" xml:space="preserve">
+    <value>活躍投注會員標準為：每个會員在單月中累積投注在{1}{0}（或等值其他國家貨幣）以上。 我們為本系統提供了更多可用貨幣，請通過{2}與管理員聯繫。</value>
+  </data>
+  <data name="TC_AffiliateMustEnsure" xml:space="preserve">
+    <value>加盟商必須確保任何出現在他們網站的素材是合法的，並且不會侵犯版權或破壞其他權利。</value>
+  </data>
+  <data name="TC_AffiliateResponsibility" xml:space="preserve">
+    <value>加盟商有責任依照正確的連接和標籤處理確保新客戶的追蹤和付款。</value>
+  </data>
+  <data name="TC_AffiliatesAreProhibited" xml:space="preserve">
+    <value>加盟代理商被禁止通過自己的加盟代理連接或會分享全部或部分傭金的代理商或第三方的連接來玩任何形式的{0}體育博彩推廣活動。這包括任何加盟商收取任何形式的津貼或傭金的獨立的個體或群體。如果違反這部分規定，{0}和各自的有被投注過的網站有權取消所有相應的投注，並刪減任何通過這樣的活動而獲得的傭金，以及將此加盟代理商從我們的加盟代理計畫中刪除並終止此協議，並且令將來任何在{0}的投注失效。</value>
+  </data>
+  <data name="TC_AffiliatesWillNotEarn" xml:space="preserve">
+    <value>合作夥伴將不能從其下線會員在{0}賽馬和娛樂場產品中的投注及輸贏中獲得佣金。</value>
+  </data>
+  <data name="TC_AffiliateTagging" xml:space="preserve">
+    <value>3. 加盟代理標籤</value>
+  </data>
+  <data name="TC_AffiliationGuidelines" xml:space="preserve">
+    <value>2. 加盟代理指引</value>
+  </data>
+  <data name="TC_AllRightsAndLicenses" xml:space="preserve">
+    <value>在此協議中授予您的所有權利和授權應該即時終止。</value>
+  </data>
+  <data name="TC_AnyClaimRelatedToYourSite" xml:space="preserve">
+    <value> 任何與貴方網站相關的索賠，包括但不限於其中不能歸屬於我方的內容。 </value>
+  </data>
+  <data name="TC_AnyClaimThat" xml:space="preserve">
+    <value>任何因我們對加盟商標的使用而侵犯任何協力廠商的任何商標、商號、服務標記、版權、許可、智慧財產權或其它專有權所引起的索賠。</value>
+  </data>
+  <data name="TC_AnyFormOfSpam" xml:space="preserve">
+    <value>任何形式的垃圾郵件將會導致您的帳戶被處理為審核狀態，所有的資金被凍結，直到對您的帳戶調查處理完成。你需要知道我們的客戶可能會因為處理您的濫發所產生的郵件而導致費用產生，如果我們的客戶尋求追索權，所有這些相同的費用將會從您的帳戶上進行扣減。在此情形下，由於您同意註冊成為{0}的加盟商，由相關客戶決定的費用金額將會被誠實地認為是最終及可接受的，這些費用金額是根據法律上收取的，並公平地被您接受。</value>
+  </data>
+  <data name="TC_AnyMisrepresentation" xml:space="preserve">
+    <value> 在此由貴方所做的任何虛假陳述或保證或對約定和協議的違背</value>
+  </data>
+  <data name="TC_AsPolicy" xml:space="preserve">
+    <value>根據條例，{0}無法接受您成為合作夥伴的申請，如果您是由或通過英國管轄區的互聯網地址 (IP)來進行宣傳。</value>
+  </data>
+  <data name="TC_AssignAbilityAndInurement" xml:space="preserve">
+    <value>分派能力和適用性</value>
+  </data>
+  <data name="TC_AssumeOwnershipOfCustomer" xml:space="preserve">
+    <value>{0}以第一次接觸到客戶的那一刻作為取得客戶的標準。您，作為加盟代理，為{0}做推介代理。如果有需要適應我們不同時期的要求，我們保留拒絕客戶（或關閉客戶帳戶）的權利。</value>
+  </data>
+  <data name="TC_BannersAndLinksMayNotBePlaced" xml:space="preserve">
+    <value>橫幅廣告和連接不可以置放於募集電郵、非授權新聞組、聊天室或利用“機器人”發送。產生的非法流量將不會被計算，並會導致您與我們的加盟代理合作終止。</value>
+  </data>
+  <data name="TC_BecomeAffiliate" xml:space="preserve">
+    <value>要成為我們加盟計畫之一員，您必須完成這份線上表格，註冊成為一名加盟會員。通過{0}的加盟代理登記程式註冊成為加盟商，或下載橫幅廣告代碼並擺放在您的網站、電郵資訊或其他方式，您就被認為已經瞭解並接受此協議所有的條件和條款。</value>
+  </data>
+  <data name="TC_BonusesInclucdeComplimentaryMoney" xml:space="preserve">
+    <value>獎金包括贈送款項、免費專案、貸款、註冊獎金、促銷金額及其它貸記到客戶帳戶上的獎勵金額。因為客戶未實際購買這些金額，所以{0}支付的傭金中不會包含該金額。</value>
+  </data>
+  <data name="TC_ByAgreeingToParticipate" xml:space="preserve">
+    <value>同意加入{0}的《加盟計畫》，即表示您同意下載並在您的網站上展示橫幅、文本或宣傳材料，會在電子郵件中使用它們，並用您的加盟連結或列印材料開展直接行銷。這些是唯一獲得批准的，您可用於為我們的產品和服務做廣告宣傳的方式。</value>
+  </data>
+  <data name="TC_ByAgreementWeGrantYou" xml:space="preserve">
+    <value>通過此協定，我們授予您在符合此協議條款及條件下非獨家的權利指引客戶來使用我們的網站和服務。此協定並不授予您提供介紹客戶的服務的獨家或優先權，同時我們保留在任何時候收回或協助我們其他合作方提供與您相同或相似的服務的權利。您不能通過您以外的其他個人或組織索償與此業務有關的介紹費用或補償。</value>
+  </data>
+  <data name="TC_ByHavingRead" xml:space="preserve">
+    <value>閱讀過條款和條件，並知道這樣的簽名表格後，您同意所有此協議中包含的條款和條件。{0}保留權利暫時停止向違反此協議中任何條件和條款的任何加盟代理商付款的權利。</value>
+  </data>
+  <data name="TC_ByOpeningAccountWithCustomer" xml:space="preserve">
+    <value>通過開設帳戶,個人或組織就將成為我們的客戶，而相應地，客戶規則、政策和操作流程將會適用。</value>
+  </data>
+  <data name="TC_ChargebackCreditCard" xml:space="preserve">
+    <value>索回：未經信用卡持卡人授權就產生的他/她的信用卡/借記卡的非常規消費。信用卡持卡人要求發卡銀行退回這些收費。索回費用是由於第三方欺騙性地使用信用卡持卡人的信用卡或信用卡號而產生的。</value>
+  </data>
+  <data name="TC_ChargebacksAreAmounts" xml:space="preserve">
+    <value>退款是當一名本身為信用卡持有者的客戶發現其信用卡/借記卡上有非常規未經授權的退款，並且該信用卡持有人要求銀行撤銷這些退款時所扣除的金額。退款扣除可能與協力廠商冒用信用卡持有者的卡或卡號有關，但也不僅限於此種情況。</value>
+  </data>
+  <data name="TC_ChargebackWillStayDue" xml:space="preserve">
+    <value>直到您的其他玩家產生的收入彌補了應退的金額時，退款才可支付。您認同{0}只會按實際利潤，而非欺詐收入的百分比進行支付。</value>
+  </data>
+  <data name="TC_CommissionableEarnings" xml:space="preserve">
+    <value>由一個日曆月內至少預定數量的活躍投注會員所形成的傭金收入是作為{0} 的利潤計算的，其中除去了退款、贈送款項、免費專案及其它提供給客戶的獎金。</value>
+  </data>
+  <data name="TC_CommissionableEarningsOfAffiliate" xml:space="preserve">
+    <value>用於佣金結算的盈利是基於下線會員同商家的每筆交易中的貢獻的利潤按照一定的分成比例計算，只要加盟代理商一直保持作為此加盟代理協議的會員，那麼所有這個客戶發生的交易都會一直計算下去。</value>
+  </data>
+  <data name="TC_CommissionableEarningsWillBeSubject" xml:space="preserve">
+    <value>可計算傭金的贏利額將會使用{0}加盟代理程式傭金結構來不斷計算傭金。</value>
+  </data>
+  <data name="TC_DevelopmentOperation" xml:space="preserve">
+    <value>貴方網站的開發、運行、維護和內容以及貴方網站所提供的產品和服務</value>
+  </data>
+  <data name="TC_Disclaimers" xml:space="preserve">
+    <value>12. 免責聲明</value>
+  </data>
+  <data name="TC_DuringTheTermsOfAgreement" xml:space="preserve">
+    <value>在此協議有效期內，您要確保與此業務、操作或相關的加盟代理程式技術（包括，例如，根據你在此程式下取得的介紹費用）有關的資訊保密。您同意不會將此保密資訊披露或用於第三方個人或外部方面，除非您得到了我們事前書面的批准，您將只將此保密資訊用於此協定下必要的更多用途。您有責任尊重此保密資訊，否則此協定將會被終止。</value>
+  </data>
+  <data name="TC_EventOfTermination" xml:space="preserve">
+    <value>終止本協議的事件中</value>
+  </data>
+  <data name="TC_GoverningLaw" xml:space="preserve">
+    <value>15. 法律監督和仲裁</value>
+  </data>
+  <data name="TC_GrossWinIsTotalOfAllAmount" xml:space="preserve">
+    <value>“{0} 總收益”為您的加盟會員帳戶中一個日曆月內至少預定數量的活躍投注會員所投注的總金額，其中減去了由您的活躍投注會員所贏得或應當支付給他們的款項總金額。</value>
+  </data>
+  <data name="TC_IfWeContinueToPermitActivity" xml:space="preserve">
+    <value>如果我們允許客戶在終止協定之後繼續活動（產生營業收入），這並不構成我們續約或繼續執行此協定，或放棄終止協定。</value>
+  </data>
+  <data name="TC_IfYouDecide" xml:space="preserve">
+    <value>如果您決定不接受本協議所有的條件和條款，請不要下載廣告橫幅代碼、文字連接代碼、推廣內容或其他任何與{0}相關的資訊。</value>
+  </data>
+  <data name="TC_IfYouHaveFailedToFulfill" xml:space="preserve">
+    <value>如果您沒有完成您的義務和責任，我們將不會在您終止協議時支付介紹費。</value>
+  </data>
+  <data name="TC_Indemnity" xml:space="preserve">
+    <value>11. 保障賠償</value>
+  </data>
+  <data name="TC_IndependentInvestigation" xml:space="preserve">
+    <value>14. 獨立調查</value>
+  </data>
+  <data name="TC_InWitnessWhereof" xml:space="preserve">
+    <value>16. 以資證明</value>
+  </data>
+  <data name="TC_LegalResponsibility" xml:space="preserve">
+    <value>7. 法律責任</value>
+  </data>
+  <data name="TC_LimitationOfLiability" xml:space="preserve">
+    <value>13. 責任範圍</value>
+  </data>
+  <data name="TC_LimitedLicense" xml:space="preserve">
+    <value>6. 有限授權</value>
+  </data>
+  <data name="TC_Miscellaneous" xml:space="preserve">
+    <value>8. 其他約定</value>
+  </data>
+  <data name="TC_NegativeEarningAreCarried" xml:space="preserve">
+    <value>負贏利將會帶入下一個月。一個加盟商以正數結束一個月的結餘，如果最低的要求滿足的話，傭金將會按照正數的結餘額計算並支付。</value>
+  </data>
+  <data name="TC_NonWaiver" xml:space="preserve">
+    <value>不可撤銷</value>
+  </data>
+  <data name="TC_OnlyApprovedAndProperlyTagged" xml:space="preserve">
+    <value>只有由我們不斷提供的、經過審核並認為是適合的創作素材，才可以用於推廣{0}。廣告或個人代言是被允許的，但所有的非{0}創作的素材需要由{0}審核撰寫；這些審核不應被無理由地阻止。</value>
+  </data>
+  <data name="TC_OnlyTaggedCustermor" xml:space="preserve">
+    <value>只有正確被標識的客戶才能被分派為某個加盟代理下的客戶。如果加盟商的標籤沒有正確地插入到加盟商的網站，或沒有被{0}的網站伺服器正確地接收，那麼就會導致註冊和購買了產品服務的客戶不能被正確地分派成為某個加盟代理商的客戶。因此加盟代理商有責任確保所有連接被正確地標記。</value>
+  </data>
+  <data name="TC_OurFailureToEnforce" xml:space="preserve">
+    <value>我們沒有強制您嚴格履行此協議的任何條款，並不構成我們放棄以後強制執行此協議的其他條款。此協議被修改、增加、刪減或加插內容都不被我們允許，也不會被認可。我們的任何雇員、官員或代理都不能口頭替換、修改或撤銷此協議中任何條款。 </value>
+  </data>
+  <data name="TC_OurRightsAndRemedies" xml:space="preserve">
+    <value>我們在下文的權利和補救措施不會彼此矛盾，例如，我們在此協議中的一部分或更多的條款並不會妨礙其他條款的實行。您瞭解、確認並同意，對於違反或被迫違反此協議，賠償金並不會充分，同時，在違反或被迫違反此協定的情況下，各方各自的權利和義務由各自特定的履行情況、裁定執行或其他公平的補救方案強制執行。本協定中所包含的內容，不應因為違反或被迫違反本協議的任何條款而限制或影響我們的法律或其他權利。這表示此條款清楚的表明了我們各自的權利和義務應該在法律上或其他方面公正地執行。</value>
+  </data>
+  <data name="TC_OwnershipAndContentOfOurSites" xml:space="preserve">
+    <value>我們網站的所有權和內容仍為我們各自的資產，並不應認為會通過任何此加盟代理協定的行為或疏忽而被轉移到加盟商。</value>
+  </data>
+  <data name="TC_OwnershipContentAndLiability" xml:space="preserve">
+    <value>加盟商網站的所有權、內容和可靠性由加盟商獨立負責。您將獨立負責您的網站所有的發展、運營以及維護，所有出現在您網站的素材都將由您自行負擔成本。</value>
+  </data>
+  <data name="TC_PoliciesConfidentiality" xml:space="preserve">
+    <value>5. 政策與機密</value>
+  </data>
+  <data name="TC_PresentationOfOurBanner" xml:space="preserve">
+    <value>在加盟商的網站呈現我們的廣告橫幅和內容是加盟商的責任。加盟商必須確保我們的內容按照我們的規定被正確地呈現。</value>
+  </data>
+  <data name="TC_RelationshipOfParties" xml:space="preserve">
+    <value>10. 雙方關係</value>
+  </data>
+  <data name="TC_Remedies" xml:space="preserve">
+    <value>補救措施</value>
+  </data>
+  <data name="TC_ResponsibilitiesAffiliate" xml:space="preserve">
+    <value>1. 加盟代理的責任</value>
+  </data>
+  <data name="TC_RevenueSharingPayment" xml:space="preserve">
+    <value>4．營業收入分成和支付</value>
+  </data>
+  <data name="TC_SeverabilityWaiver" xml:space="preserve">
+    <value>可分割性 / 棄權</value>
+  </data>
+  <data name="TC_ShouldPlayerProcess" xml:space="preserve">
+    <value>如果玩家進行了退款，這筆有爭議的或被退款的收入將會被沒收，並從您當月總收入餘額中扣除。如果此項累積收入的扣除額超過了您當前應得的餘額，則您的餘額將為負數，在開始獲得收入之前，您必需賺取收入用以彌補退款損失。</value>
+  </data>
+  <data name="TC_ShouldTheseExpenses" xml:space="preserve">
+    <value>如果這些費用不能由您帳戶上的資金所彌補，我們保留調查其他替代方法來獲得賠付的權利，例如：如果您的代理帳戶下產生了消費帳戶，我們將會截留這些帳戶傭金的支付直到這個帳戶造成的損失完全消除。如果您的帳戶尚未啟動或通過傭金支付產生利潤，我們保留要求帳戶持有人賠付的權利。</value>
+  </data>
+  <data name="TC_ShouldYouFailToBeEntitled" xml:space="preserve">
+    <value>如果根據上述4.1、4.2和4.3條所述，您因為未能在一個日曆月內保持至少預定數量的活躍投注會員而無權獲得傭金收入，(由{0}自行決定，)您可獲得一個為期兩（2）個月的寬限期，以便在此期間遵守相應規定。 只要您遵守規定，在這一不超過連續三（3）個月的寬限期內您的傭金將會合並構成同一時期您的傭金收入。 (這由{0}自行決定)</value>
+  </data>
+  <data name="TC_TermOfThisAgreement" xml:space="preserve">
+    <value>本協議的條款自您從我們的網站下載連接代碼和連接時開始一直有效，除非直到其中一方書面通知另外一方終止本協定，在那樣的情況下本協定將會即時終止。終止協議是其中任何一方以任何理由任意地終止的。以電子郵件發送終止協定的通知被認可為書面及即時的通知形式。</value>
+  </data>
+  <data name="TC_TermTermination" xml:space="preserve">
+    <value>9. 期限和終止</value>
+  </data>
+  <data name="TC_ThisAgreementDetails" xml:space="preserve">
+    <value>本協議詳盡地列明所有的{0}加盟代理會員的條款和條件。“您”，“加盟代理”指的是您、獨立自然人、群體或公司組織，在本協定下註冊成為我們的加盟商，並應該同時被認為包括任何雇員、官員、行政管理人員、股東、企業所有者、實際控制方以及加盟代理的自然人和組織（“您的”則有相對應的含義）。</value>
+  </data>
+  <data name="TC_ThisAgreementShallBeGoverned" xml:space="preserve">
+    <value>此協議應受英國法律監督並可理解為符合英國法律。任何與此協議有關聯的訴訟、爭議或索償都應由包括仲裁中心指派的仲裁官在內的法官席裁決。仲裁席將在英國倫敦，地點由仲裁中心決定，仲裁語言為英語，仲裁中心建立的規章將監督此過程。仲裁法庭將有權簽署判決，它的決定將是強制性的、最終的並嚴格地強制協議方放棄任何其他可能適用司法管轄區域或審判地，並同意因此仲裁決定放棄其他任何形式的上訴。</value>
+  </data>
+  <data name="TC_ThisLicenseCannotBeSubLicensed" xml:space="preserve">
+    <value>此授權不能有其他分支、分配或被您轉讓。您使用此商標的權利是有限制的，並且只能通過使用橫幅廣告而使用此授權。您不應以任何行為或處理方式聲稱此廣告商標無效、無強制性或爭奪其所有權。同時您不應採取任何行動阻止我們或我們的授權人在此商標上的權利、表達相同的統稱、或其他可能減弱它們的有效性或降低他們附帶的信譽。</value>
+  </data>
+  <data name="TC_WeAreIndependentContractors" xml:space="preserve">
+    <value>您和我們都是獨立的契約方，此協定並不在各方之間造成任何合作、合資、代理、特許經銷、銷售代表或雇傭關係。您無權代表我們發出或接受任何要約。無論是在您的網站還是其他地方，您不能發表任何與本段文字有任何抵觸的聲明。</value>
+  </data>
+  <data name="TC_WeDontCondoneSpam" xml:space="preserve">
+    <value>垃圾郵件——我們不會接受垃圾郵件</value>
+  </data>
+  <data name="TC_WeHerebyGrantToYou" xml:space="preserve">
+    <value>我們在此授予您一份個人、非獨家、不可轉讓的有限授權，在此協議有效期內，使用我們的品牌（我們從它們的所有人處得到的授權）並唯一連接到在您的網站上展示的廣告橫幅。</value>
+  </data>
+  <data name="TC_WeMakeNoExpress" xml:space="preserve">
+    <value>我們不會明白或隱晦地發表涉及此客戶介紹計畫或介紹費支付安排的承諾或表述（包括並不只限於，它們功能，可用性、商業性、合法性、非侵權的保證，或其他由於履行、處理或交易過程引起的隱含的保證。）此外，我們不會聲明我們網站的運作不會中斷或無誤，我們將不會對任何中斷或錯誤的後果負責。</value>
+  </data>
+  <data name="TC_WeMayModifyAnyTerm" xml:space="preserve">
+    <value>我們可能在任何時候通過在我們的網站張貼通告或新的協定，來修改此協定中任何條款。修改內容可能包括，例如，有效介紹費範圍的更改，費用日程表，付款處理，以及介紹費程式規則。如果有任何修改是不可接受的，您唯一的追索權是終止此協議。您繼續遵照我們的更改通告或新的協議參與此計畫，將會構成一起接受這些變更。</value>
+  </data>
+  <data name="TC_WeMayTerminateAgreement" xml:space="preserve">
+    <value>如果我們認定您的網站為不適合網站，我們將保留獨家決定權終止此協議。不適合的網站包含以下內容：面向兒童；宣揚色情內容；宣揚暴力；宣揚種族歧視、性別歧視、宗教歧視、國別歧視、殘障歧視、性歧視或年齡歧視；宣揚非法活動或者侵犯知識產權。</value>
+  </data>
+  <data name="TC_WeMayWithhold" xml:space="preserve">
+    <value>我們可能會保留向您支付的最後一筆款項一段合理的時間，以確保正確的金額被支付。</value>
+  </data>
+  <data name="TC_WeReserveTheRight" xml:space="preserve">
+    <value>如果我們覺得您的網站並不適合成為我們的加盟代理，我們保留終止此協議的權利。不適合的網站包括：針對兒童或未成年人明確地宣傳色情的網站，宣傳暴力，宣傳種族、性別、宗教、國籍、殘疾人歧視、性取向等歧視的網站，宣傳非法活動或破壞知識產權的網站。</value>
+  </data>
+  <data name="TC_WeReserveTheRightToRevokeLicense" xml:space="preserve">
+    <value>我們保留在任何時候以任何理由撤銷此授權並同時撤銷此協議的權利。</value>
+  </data>
+  <data name="TC_WeWillNotBeLiable" xml:space="preserve">
+    <value>我們不會對於此協定或介紹計畫有關而導致的間接、特別的或後果性的損害（或任何收入、利潤、資料的損失）負有責任，即使我們曾被告知這些損害可能會出現。而且，我們在此協議和計畫所導致的的責任總計將不會超過在此協議下已經支付或可支付給您的的傭金總額。此協定中沒有任何部分可以理解為向非本協議方的任何個人或組織提供任何權利、義務或利益。我們在此協議下的義務並不會構成任何我們的行政人員、官員或股東個人的義務。任何由此協議產生的義務將只滿足於所產生的介紹費，並且只限於直接賠償。</value>
+  </data>
+  <data name="TC_WeWillTerminate" xml:space="preserve">
+    <value>如果你通過任何濫發資訊的行為或通過錯誤的廣告詞語令{0}聲譽受損,我們將會即時終止此協議。</value>
+  </data>
+  <data name="TC_WheneverPossible" xml:space="preserve">
+    <value>無論何時，此協議的每一個條款都應該被適用的法律有效地詮釋，但是，如果此協議中任何一個條款失效、非法或不在任何方面不可執行，這樣的條款僅僅本身無效或無法執行，並不會使本協議其他條款無效。在處理或無法行使任何權利的時候，不會包含任何隱含的放棄， 只有書面的棄權處理才生效。</value>
+  </data>
+  <data name="TC_WillPayoutRevenueShare" xml:space="preserve">
+    <value>只要您保持在您加盟會員的帳戶中，在任何既定日曆月內擁有至少預定數量的活躍投注會員，{0} 將根據每名客戶產生的傭金收入支付收入分成，該收入分成由{0}《加盟計畫》的傭金結構所決定。 注意，對於不同的傭金群體，預定的活躍投注會員的數量亦不相同。 有關更多詳情，請發郵件至{1}與管理員聯繫。</value>
+  </data>
+  <data name="TC_WithoutOrPriorWrittenApproval" xml:space="preserve">
+    <value>沒有我們事先書面同意，您將只能使用我們審核通過的廣告橫幅、連接，以及不但不應將他們的外觀進行替代，也不應讓其在任何推廣素材中不與我們相關聯。這些轉發連接的外觀和參數是由我們設計並命名的，並且只被授權允許代表{0}。</value>
+  </data>
+  <data name="TC_YouAcknowledge" xml:space="preserve">
+    <value>您知道您已經閱讀過此協議並同意所有條款和條件。您明白我們會在任何時候（直接或間接）按照有可能與您的協議有所不同的條款在與您的網站相似或有競爭的網站上徵集客戶介紹。您已經獨立地評估過參與此加盟計畫的有利因素，並且不會依賴此協議上文提到以外的任何表述、承諾或聲明。</value>
+  </data>
+  <data name="TC_YouAgreeToIndemnify" xml:space="preserve">
+    <value>在此您同意保障及令{0}、它代表的組織和加盟商、{0}的管理人員、官員、雇員、代理、股東、合作方、會員或其他所有人免於受損，免於任何和所有索償、行動、要求、義務、損失、賠償、法庭判決、清算、花費（包括合理的律師費），在這些範圍的損失（或涉及的行動）所導致的成本（前述部分或全部以下稱為“損失”）或基於以下而產生的成本：</value>
+  </data>
+  <data name="TC_YouAndWeAreIndependentContractors" xml:space="preserve">
+    <value>您和我們都是獨立的契約方，此協定並不在各方之間造成任何合作、合資、代理、特許經銷、銷售代表或雇傭關係。您無權代表我們發出或接受任何要約。無論是在您的網站還是其他地方，您不能發表任何與本段文字有任何抵觸的聲明。</value>
+  </data>
+  <data name="TC_YouAndWeWillReleased" xml:space="preserve">
+    <value>您和我們自此協議終止之日起，除了協議中列明的各自在協議終止中自然產生的責任外，將不再對彼此有任何責任和義務。終止協定並不會解除您要承擔在終止協議之前就產生的侵害的義務。如果我們判定（我們對此擁有唯一決定權）您的網站是不合適的，我們可能終止此協議。不合適的網站包括：針對兒童推廣色情素材，宣傳暴力，宣傳種族、性別、宗教、國籍、殘疾人、性取向或年齡等歧視，宣傳非法行為或破壞知識產權。</value>
+  </data>
+  <data name="TC_YouAreNotAllowed" xml:space="preserve">
+    <value>您不可與 {0}同時保持加盟和推薦關係。 若違反本規定，則{0}有權單方面終止這一加盟以及/或者推薦關係。推薦關係是指根據我們的《推薦朋友計畫》（可查詢本網站）與{0}建立的關係。</value>
+  </data>
+  <data name="TC_YouAreResponsible" xml:space="preserve">
+    <value>作為加盟代理，您有責任將廣告橫幅和相應的追蹤連接擺放在您的網站、電子郵件和其他通訊方式來推廣宣傳{0}。</value>
+  </data>
+  <data name="TC_YouAreResponsibleForDirecting" xml:space="preserve">
+    <value>您只負責引導客戶到{0}網站。</value>
+  </data>
+  <data name="TC_YouMayNotAssign" xml:space="preserve">
+    <value>在我們事先書面同意之前您不能通過法律行動或其他方式將此協定分派給他人。出於此規限，此協議將對您和我們以及我們各自的繼承人和受讓人約束、利益生效和可強制執行。</value>
+  </data>
+  <data name="TC_YouMayNotModifyOrUse" xml:space="preserve">
+    <value>您不能將我們提供的有任何知識產權的產品、廣告橫幅或其他創作素材，未經{0}的書面許可就進行修改或用於其他用途。所有在{0}提供或審核的素材上的版權或知識產權聲明都必須保留，且不能被修改或刪減。</value>
+  </data>
+  <data name="TC_YouMustRemoveBanners" xml:space="preserve">
+    <value>您必須從您的網站中移走{0}的廣告橫幅，並使任何到{0}的連接失效。</value>
+  </data>
+  <data name="TC_YouShallNotMakeAnyClaims" xml:space="preserve">
+    <value>您不應提出任何與{0}有關的索償、代表或承諾，並且您無權也不應將{0}與任何法律責任相關聯。</value>
+  </data>
+  <data name="TC_YouWillAgree" xml:space="preserve">
+    <value>您同意在{0}登記並保持正確、真實的聯絡資訊。</value>
+  </data>
+  <data name="TC_YouWillBeEntitled" xml:space="preserve">
+    <value>您將只能獲得那些到協議終止日或之前的有贏利而未付的介紹費，餘下的作為您終止此協議的結果進行處理，詳細請見下文9.2.d。我們會保留向您支付的最後一筆款項一段合理的時間，以確保正確的金額被支付。</value>
+  </data>
+  <data name="TC_YouWillBeResponsible" xml:space="preserve">
+    <value>您將要獨立負責您的網站的發展、運營和維護，以及所有素材的成本。例如，您將要獨立負責確保所有張貼在您的網站的素材不會含有誹謗文字或其他非法內容，或侵犯第三方的知識產權。因為我們並不會控制您的網站，我們不會承認這些素材的可靠性。而且，您將有義務保障我們免於受這些與您的網站發展、運營、維護和內容有關的索償、賠償、花費（包括但不限於律師費用等）所帶來的損害。這些保障條款對於我們在適用的法律條款下對您採取的獨立行動或索償不能有所衝突。</value>
+  </data>
+  <data name="TC_YouWillIndemnify" xml:space="preserve">
+    <value>您要保障並令我們免於所有與您的網站發展、運營、維護以及內容方面有關的索償、賠償以及花費（包括，並不只限於，律師費用）。此保障條款並不會對我們在適當的法律條款下對您採取的另外的行動或索償有所衝突。</value>
+  </data>
+  <data name="TC_YouWillNotKnowinglyBenefit" xml:space="preserve">
+    <value>您將不能從任何已知或被懷疑不是真實產生的流量中獲利，無論它是否令{0}受損害。如果通過您的連接直接來到網站的某人發生了欺騙行為，我們保留在任何時候收回已經支付給您的傭金的權利。我們在這方面的決定是最終的，並且不會進行任何這方面的討論。如果我們確信這樣的流量是在您知情的情況下發生的，我們保留收回您在此協定下所獲得的全部金額的傭金的權利。即使您對此產生的流量並不知情，如果我們有所懷疑，我們保留截留您的傭金的權利。</value>
+  </data>
+  <data name="TC_YouWillPresent" xml:space="preserve">
+    <value>您只需要提交事先經{0}書面批准的您網站的內容與主題即可。如有由我們自行認定的不當內容出現，則將立即終止加盟協議。</value>
+  </data>
+  <data name="TC_YouWillReturnToUs" xml:space="preserve">
+    <value>您將要歸還我們所有保密資訊和所有在您處理、保管和控制的副本，並停止使用所有商標名、商標、服務標誌、標識以及其他與此業務有關的稱號。</value>
+  </data>
+  <data name="PD_RevenueShareModel_Content" xml:space="preserve">
+    <value>佣金分成模式由2個部分組成：體育博彩和娛樂城，具體的佣金計算如下所述。合作夥伴的收入是由以下兩個部分的佣金總和組成。</value>
+  </data>
+  <data name="PD_AffilatesAreOnlyAllowed" xml:space="preserve">
+    <value>合夥人每月最多可以作出一次提款申請。如果得到合作夥伴部門經理的批准，你也可以在同一個月內做出第二次提款申請。目前我們給予大家的提款申請服務是免費的，但我們並不會負擔任何轉帳手續費或電子轉帳所需服務費用。</value>
+  </data>
+  <data name="PD_Moneybookers" xml:space="preserve">
+    <value>Moneybookers</value>
+  </data>
+  <data name="PD_WireTransfer" xml:space="preserve">
+    <value>Wire Transfer</value>
+  </data>
+  <data name="PD_AnyNegativeBalanceForGivenMonth" xml:space="preserve">
+    <value>在其中一個月的任何負餘額均會帶到下一個月。例如若您在1月合作夥件的戶口最終結餘為-$2,555，這個餘額將會帶到二月。若您在2月合作夥件的戶口最終結餘為$3,400，那麼您的戶口總結餘將為$845 ($3,400減$2,555)。不過若您的戶口在2月依然是負數，例如-$1,600，這將會繼續累積之前的負結餘帶落下一個月，那麼帶到3月的結餘將會是-$4,155。佣金收入將按相應的級別比例支付給合作夥伴。</value>
+  </data>
+  <data name="PD_Casino_Content2" xml:space="preserve">
+    <value>就上表中所述，“淨收入”是指在相關月份中下線會員的總投注額刪減: (i)盈利；(ii)已領取的紅利數額；(iii)扣款和(iv)其他任何相關費用如補償或退款給會員。</value>
+  </data>
+  <data name="PD_TheMinimumWithdrawal" xml:space="preserve">
+    <value>最低佣金提取要求是100美元。</value>
+  </data>
+  <data name="PD_ThroughYourPlayer" xml:space="preserve">
+    <value>通過您的{0}玩家帳戶</value>
+  </data>
+  <data name="PD_WeOfferSeveralMethods" xml:space="preserve">
+    <value>我們提供以下幾種提款方法:</value>
+  </data>
+  <data name="PD_YouCanRequestPayout" xml:space="preserve">
+    <value>您可以要求提取美金之外的其他貨幣，例如英鎊、歐元、人民幣、馬來西亞林吉特，泰銖或印尼盾。相關匯率將會以支出當日為準</value>
+  </data>
+  <data name="PD_Casino_Content1" xml:space="preserve">
+    <value>{0}提供娛樂城的佣金分成模式。這是一個累積的模式，每月根據合作夥伴所推薦的玩家，在娛樂城相關的投注活躍程度去賺取佣金。</value>
+  </data>
+  <data name="PD_Sportbook_Content" xml:space="preserve">
+    <value>{0}提供體育博彩的佣金分成模式。這是一個累積的模式，每月根據合作夥伴所推薦的玩家，在體育博彩相關的投注活躍程度去賺取佣金。</value>
+  </data>
+  <data name="PD_Neteller" xml:space="preserve">
+    <value>Neteller</value>
+  </data>
+  <data name="FAQ_CanIRequest" xml:space="preserve">
+    <value>除了美元以外，我可以要求以其他貨幣形式提取佣金嗎？</value>
+  </data>
+  <data name="FAQ_TheCurrenciesOfferedAre" xml:space="preserve">
+    <value>可以。我們提供英鎊，歐元，人民幣，馬幣，泰銖及印尼盾等貨幣提款服務。有關的匯率計算將根據付款操作當日的匯率而定。 </value>
+  </data>
+  <data name="FAQ_ToParticipateIn12BET" xml:space="preserve">
+    <value>是的，現在可以！如果您認為您有聯絡方式，您可以在我們合作夥伴特色專欄裡很容易的建立屬於您的個性化頁面並且上傳任何核准的營銷思路或體育信息。一旦做了，您可以立即發送頁面鏈接給對體育或體育博彩有興趣的任何朋友或聯絡人，當他們點擊鏈接，他們就成為您的下線會員。欲知更多詳情，請發郵件到{0}。</value>
+  </data>
+  <data name="FAQ_YouCanRequestForAWithdrawal" xml:space="preserve">
+    <value>你可以透過Moneybookers, Neteller, Wire Transfer提出佣金，也可以直接將佣金轉入您的{0}玩家帳號。 </value>
+  </data>
+  <data name="FAQ_TheMinimumWithdrawal" xml:space="preserve">
+    <value>最低佣金提取要求是100美元。</value>
+  </data>
+  <data name="FAQ_JoinOurAffProgram" xml:space="preserve">
+    <value>加入{0}會員介紹合作計劃</value>
+  </data>
+  <data name="PD_CompanyNegativeNetWin" xml:space="preserve">
+    <value>如果公司淨贏是負數，則子公司與該公司每月要承擔{0}％（適用於每個產品）</value>
+  </data>
+</root>

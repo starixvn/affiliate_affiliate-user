@@ -1,0 +1,73 @@
+﻿// ----------------------------------------------------------------------
+// <copyright file="TrackingSystemCriteria.cs" company="Nexcel Solutions Vietnam">
+//     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
+// </copyright>
+// ------------------------------------------------------------------------
+// <history>
+//   <change who="Long.Luu" date="2013/08/01">Created</change>
+//   <change who="" date=""></change>
+// </history>
+
+namespace Fanex.Affiliate.Criterias
+{
+    using NAP.Framework.Data;
+
+    /// <summary>
+    /// Criteria for getting the player's info.
+    /// </summary>
+    public class TrackingSystemCriteria : CriteriaBase
+    {
+        public int AffiliateID { get; set; }
+
+        public string AffDomain { get; set; }
+
+        public string PageCode { get; set; }
+
+        public string LanguageCode { get; set; }
+
+        public string IP { get; set; }
+
+        public string Browser { get; set; }
+
+        public string URLReferrer { get; set; }
+
+        public string DomainReferrer { get; set; }
+
+        public string OS { get; set; }
+
+        public string Device { get; set; }
+
+        public string BrowserVersion { get; set; }
+
+        public string BrowserResolution { get; set; }
+
+        public string BrowserLanguage { get; set; }
+
+        public string UserAgent { get; set; }
+
+        public string Country { get; set; }
+
+        [SpParam(Ignored = true)]
+        public string RedirectPage { get; set; }
+
+        [SpParam(Ignored = true)]
+        public long ClickID { get; set; }
+
+        public string Language { get; set; }
+
+        [SpParam(Ignored = true)]
+        public int ErrCode { get; set; }
+
+        [SpParam(Ignored = true)]
+        public string ErrMsg { get; set; }
+
+        /// <summary>
+        /// Get SP name.
+        /// </summary>
+        /// <returns>Setting key.</returns>
+        public override string GetSettingKey()
+        {
+            return "Aff_AffiliateInsClickStatistics";
+        }
+    }
+}

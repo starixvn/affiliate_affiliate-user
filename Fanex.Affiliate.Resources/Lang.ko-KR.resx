@@ -1,0 +1,1109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountInformation" xml:space="preserve">
+    <value>계정 정보</value>
+  </data>
+  <data name="AccountOverview" xml:space="preserve">
+    <value>계정 개요</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>주소</value>
+  </data>
+  <data name="AddressIsRequired" xml:space="preserve">
+    <value>주소가 필요합니다</value>
+  </data>
+  <data name="AddUrl" xml:space="preserve">
+    <value>URL 추가</value>
+  </data>
+  <data name="Adjustment" xml:space="preserve">
+    <value>조정</value>
+  </data>
+  <data name="Affiliate" xml:space="preserve">
+    <value>가맹자</value>
+  </data>
+  <data name="AffiliateLogin" xml:space="preserve">
+    <value>가맹자 로그인</value>
+  </data>
+  <data name="AffiliateTitle" xml:space="preserve">
+    <value>{0} 협력 프로그램</value>
+  </data>
+  <data name="AgreeTermNCondition" xml:space="preserve">
+    <value>{0} 가맹자에 대한 조건에 동의합니다.</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>모든</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>금액</value>
+  </data>
+  <data name="Answer" xml:space="preserve">
+    <value>응답</value>
+  </data>
+  <data name="AnswerIsRequired" xml:space="preserve">
+    <value>귀하의 응답이 필요합니다</value>
+  </data>
+  <data name="Approved" xml:space="preserve">
+    <value>승인되었습니다</value>
+  </data>
+  <data name="Apr" xml:space="preserve">
+    <value>4월</value>
+  </data>
+  <data name="Aug" xml:space="preserve">
+    <value>8월</value>
+  </data>
+  <data name="AvailableDomains" xml:space="preserve">
+    <value>사용가능한 도메인들</value>
+  </data>
+  <data name="BalanceBroughtForward" xml:space="preserve">
+    <value>잔액이 이월되었습니다</value>
+  </data>
+  <data name="BalanceIsZero" xml:space="preserve">
+    <value>잔액이 충분하지 않아 지불을 요청할 수 없습니다.</value>
+  </data>
+  <data name="BankTransfer" xml:space="preserve">
+    <value>은행으로 전송</value>
+  </data>
+  <data name="Banner" xml:space="preserve">
+    <value>현수막</value>
+  </data>
+  <data name="Bonus" xml:space="preserve">
+    <value>상여금</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>취소</value>
+  </data>
+  <data name="Cancelled" xml:space="preserve">
+    <value>취소되었습니다</value>
+  </data>
+  <data name="CancelRequest" xml:space="preserve">
+    <value>취소 요청</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>카테고리</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>변경</value>
+  </data>
+  <data name="ChangePassErr" xml:space="preserve">
+    <value>비밀번호 변경 오류</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>비밀번호 변경</value>
+  </data>
+  <data name="ChangePasswordEmailTitle" xml:space="preserve">
+    <value>{0} 가맹자 – 귀하의 신규 비밀번호</value>
+  </data>
+  <data name="ChangePasswordInstruction" xml:space="preserve">
+    <value>비밀번호 변경에 이서식을 사용하십시오. 일단 변경되면, 귀하의 신규 비빌번호는 다음번에 로그인하실 때 사용할 수 있습니다.</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>도시</value>
+  </data>
+  <data name="CityIsRequired" xml:space="preserve">
+    <value>도시명이 필요합니다.</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>코멘트</value>
+  </data>
+  <data name="CommentIsRequired" xml:space="preserve">
+    <value>코멘트를 사용할 수 없습니다.</value>
+  </data>
+  <data name="Commission" xml:space="preserve">
+    <value>수수료</value>
+  </data>
+  <data name="ComNetWin" xml:space="preserve">
+    <value>({0})월에 대한 회사의 순 승리</value>
+  </data>
+  <data name="CompletedDate" xml:space="preserve">
+    <value>완료일</value>
+  </data>
+  <data name="CompleteForm" xml:space="preserve">
+    <value>이 서식을 작성하여 귀하의 {0} 가맹 계정에 대한 등록을 하시기 바랍니다.</value>
+  </data>
+  <data name="ConfirmPasswordRequired" xml:space="preserve">
+    <value>비밀번호가 필요합니다</value>
+  </data>
+  <data name="ContactInfo" xml:space="preserve">
+    <value>연락처 정보</value>
+  </data>
+  <data name="ContactNumber" xml:space="preserve">
+    <value>연락처 번호</value>
+  </data>
+  <data name="ContactNumberIsRequired" xml:space="preserve">
+    <value>연락처 번호가 필요합니다.</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>연락처</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>국가명</value>
+  </data>
+  <data name="CountryIsRequired" xml:space="preserve">
+    <value>국가를 선택해주십시오</value>
+  </data>
+  <data name="CsdMailSubject" xml:space="preserve">
+    <value>{0} 가맹자 -신규계정 ({1})이 승인 대기중입니다</value>
+  </data>
+  <data name="Currency" xml:space="preserve">
+    <value>통화</value>
+  </data>
+  <data name="CurrencyIsRequired" xml:space="preserve">
+    <value>통화 유형을 선택해주십시오.</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>현재</value>
+  </data>
+  <data name="CurrentCommissionSetting" xml:space="preserve">
+    <value>현재의 수수료 설정</value>
+  </data>
+  <data name="DailyEarnings" xml:space="preserve">
+    <value>일간 수익</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>일자</value>
+  </data>
+  <data name="Dec" xml:space="preserve">
+    <value>12월</value>
+  </data>
+  <data name="Deposit" xml:space="preserve">
+    <value>예치</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>설명</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>이메일</value>
+  </data>
+  <data name="EmailFormat" xml:space="preserve">
+    <value>이메일 양식</value>
+  </data>
+  <data name="EmailIsRequire" xml:space="preserve">
+    <value>이메일 주소가 필요합니다.</value>
+  </data>
+  <data name="EmailMatch" xml:space="preserve">
+    <value>입력하신 이메일 주소가 올바르지 않습니다.</value>
+  </data>
+  <data name="EmptyEmail" xml:space="preserve">
+    <value>이메일을 입력해주십시오.</value>
+  </data>
+  <data name="ErrGender" xml:space="preserve">
+    <value>성별을 선택해주세요!</value>
+  </data>
+  <data name="FAQs" xml:space="preserve">
+    <value>자주하는 질문들</value>
+  </data>
+  <data name="FDM" xml:space="preserve">
+    <value>FDM</value>
+  </data>
+  <data name="Feb" xml:space="preserve">
+    <value>2월</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>여성</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>이름</value>
+  </data>
+  <data name="FirstNameIsRequired" xml:space="preserve">
+    <value>이름이 필요합니다</value>
+  </data>
+  <data name="ForgetPassword" xml:space="preserve">
+    <value>비밀번호를 잊으셨나요?</value>
+  </data>
+  <data name="ForgetPasswordEmailTitle" xml:space="preserve">
+    <value> {0} 가맹자 –귀하의 로그인 정보</value>
+  </data>
+  <data name="ForgetPasswordInstruction" xml:space="preserve">
+    <value>신규 비밀번호가 제공해주신 이메일 주소로  전달될 것입니다.&lt;br /&gt; 더 이상의 어려움이 있으면, {0}를 수행해 주십시오.</value>
+  </data>
+  <data name="ForgetPasswordSuccess" xml:space="preserve">
+    <value>귀하의 로그인 내역을 전송했습니다. &lt;br/&gt;이메일 주소를 확인하여 사용자명과 비밀 번호에 대해 보시기 바랍니다.&lt;br/&gt; 이메일을 받지못하신 경우는, {0}을 수행하시면 저희가 성심껏 보조해드리겠습니다.</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>부터</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>성별</value>
+  </data>
+  <data name="GenerateLink" xml:space="preserve">
+    <value>링크 생성</value>
+  </data>
+  <data name="Hobby" xml:space="preserve">
+    <value>가장 즐겨하는 취미는 무엇입니까?</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>홈</value>
+  </data>
+  <data name="HomeDetailed" xml:space="preserve">
+    <value>추적 시스템의 상세 통계</value>
+  </data>
+  <data name="HomeEarn" xml:space="preserve">
+    <value>평생동안 경기자의 순손실의 40%를 벌어들이시기 바랍니다</value>
+  </data>
+  <data name="HomeNegative" xml:space="preserve">
+    <value>네가티브 잔액</value>
+  </data>
+  <data name="HomeOnline" xml:space="preserve">
+    <value>귀하와 귀하의 경기자를 위한 주 7일의 온라인 지원</value>
+  </data>
+  <data name="HomePrompt" xml:space="preserve">
+    <value>월간 지불 프롬프트</value>
+  </data>
+  <data name="HomeWide" xml:space="preserve">
+    <value>다양한 범위의 지불방법들</value>
+  </data>
+  <data name="HtmlFormat" xml:space="preserve">
+    <value>Html 서식</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>아이디</value>
+  </data>
+  <data name="Important" xml:space="preserve">
+    <value>중요한</value>
+  </data>
+  <data name="InputRequestAmount" xml:space="preserve">
+    <value>입력한 요청 금액</value>
+  </data>
+  <data name="Jan" xml:space="preserve">
+    <value>1월</value>
+  </data>
+  <data name="Jul" xml:space="preserve">
+    <value>7월</value>
+  </data>
+  <data name="Jun" xml:space="preserve">
+    <value>6월</value>
+  </data>
+  <data name="LandingPages" xml:space="preserve">
+    <value>랜딩 페이지</value>
+  </data>
+  <data name="LandingPagesStatistics" xml:space="preserve">
+    <value>랜딩 페이지 통계</value>
+  </data>
+  <data name="LandingPagesStatisticsDetail" xml:space="preserve">
+    <value>랜딩 페이지 통계 내역</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>언어</value>
+  </data>
+  <data name="LanguageIsRequired" xml:space="preserve">
+    <value>선호하는 언어를 선택해주십시오.</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>성</value>
+  </data>
+  <data name="LastNameIsRequired" xml:space="preserve">
+    <value>성을 입력해주십시오</value>
+  </data>
+  <data name="LinkDefault" xml:space="preserve">
+    <value>기본설정</value>
+  </data>
+  <data name="LinkTo" xml:space="preserve">
+    <value>로 링크</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>로그인</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>로그아웃</value>
+  </data>
+  <data name="MailingInfor" xml:space="preserve">
+    <value>이메일 정보</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>남성</value>
+  </data>
+  <data name="Mar" xml:space="preserve">
+    <value>3월</value>
+  </data>
+  <data name="MarketingTools" xml:space="preserve">
+    <value>영업도구들</value>
+  </data>
+  <data name="May" xml:space="preserve">
+    <value>5월</value>
+  </data>
+  <data name="MediaGallery" xml:space="preserve">
+    <value>미디어 갤러리</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>메시지</value>
+  </data>
+  <data name="MessageHistory" xml:space="preserve">
+    <value>메시지 이력</value>
+  </data>
+  <data name="MinimumWithdrawalAmount" xml:space="preserve">
+    <value>최소 인출액</value>
+  </data>
+  <data name="Mobile" xml:space="preserve">
+    <value>휴대폰 번호</value>
+  </data>
+  <data name="MobileNumberIsRequired" xml:space="preserve">
+    <value>휴대폰 번호가 필요합니다.</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>월</value>
+  </data>
+  <data name="MonthlyWinlost" xml:space="preserve">
+    <value>월간 승리손실</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>자세히…</value>
+  </data>
+  <data name="MotherName" xml:space="preserve">
+    <value>어머니의 이름이 무엇입니까?</value>
+  </data>
+  <data name="Movie" xml:space="preserve">
+    <value>가장 좋아하는 영화는?</value>
+  </data>
+  <data name="Msg101" xml:space="preserve">
+    <value>잘못된 사용자명과 비밀번호입니다.</value>
+  </data>
+  <data name="Msg102" xml:space="preserve">
+    <value>귀하의 계정은 닫혔습니다. 관리자에게 연락을 취하시기 바랍니다!</value>
+  </data>
+  <data name="Msg103" xml:space="preserve">
+    <value>귀하의 계정은 5회의 연속된 로그인 시도로 한시적으로 사용할 수 없습니다. 10분 후 다시 시도하거나 관리자에게 문의하시기 바랍니다!</value>
+  </data>
+  <data name="Msg104" xml:space="preserve">
+    <value>저희가 인지하는 이메일 주소를 입력하지 않았습니다. 다시 시도하거나 {0}를 수행하시기 바랍니다.</value>
+  </data>
+  <data name="Msg105" xml:space="preserve">
+    <value>계정이 승인되지 않았습니다. 관리자에게 연락하시기 바랍니다!</value>
+  </data>
+  <data name="Msg106" xml:space="preserve">
+    <value>신규 비밀번호 요청에 사용한 주소가 유효하지 않습니다.</value>
+  </data>
+  <data name="Msg107" xml:space="preserve">
+    <value>앗, 귀하의 계정이 존재하지 않거나 닫혔습니다. 관리자에게 연락하시기 바랍니다.</value>
+  </data>
+  <data name="Msg119" xml:space="preserve">
+    <value>이메일 주소가 유효하지 않습니다.</value>
+  </data>
+  <data name="Msg120" xml:space="preserve">
+    <value>이메일 주소가 필요합니다.</value>
+  </data>
+  <data name="Msg121" xml:space="preserve">
+    <value>이메일 주소는 사용된 것입니다. 다른 것을 선택하십시오!</value>
+  </data>
+  <data name="Msg122" xml:space="preserve">
+    <value>유효하지 않은 가맹자 정보입니다.</value>
+  </data>
+  <data name="Msg123" xml:space="preserve">
+    <value>고객 생성에 실패했습니다. 다시 시도해 주십시오.</value>
+  </data>
+  <data name="Msg130" xml:space="preserve">
+    <value>처리되지 않은 요청이 있습니다. 신규 요청을 생성하려면, 처리되지 않은 요청을 취소하거나 처리가 완료될 때까지 기다리십시오.</value>
+  </data>
+  <data name="Msg131" xml:space="preserve">
+    <value>죄송합니다, 이 가맹자에게는 인출하기에 충분한 금액이 없습니다.</value>
+  </data>
+  <data name="Msg132" xml:space="preserve">
+    <value>무효한 역할 아이디입니다.</value>
+  </data>
+  <data name="Msg133" xml:space="preserve">
+    <value>무효한 잔액 계정이나 통화 혹은 지불방법이 지원되지 않습니다.</value>
+  </data>
+  <data name="Msg134" xml:space="preserve">
+    <value>거래 입력에 실패했습니다.</value>
+  </data>
+  <data name="Msg135" xml:space="preserve">
+    <value>죄송합니다. 금액이 유효하지 않습니다.</value>
+  </data>
+  <data name="Msg136" xml:space="preserve">
+    <value>요청 금액은 최소 인출액과 크거나 같아야합니다.</value>
+  </data>
+  <data name="Msg137" xml:space="preserve">
+    <value>죄송합니다! [Neteller, 은행간 이체,..-가맹자가 선택한 방법] 지불방법을 사용할 수 없습니다. 이 때는 "경기자 계정" 방법만이 지원됩니다. 이곳을 클릭하셔서 변경하십시오.</value>
+  </data>
+  <data name="Msg138" xml:space="preserve">
+    <value>이 통화는 지원되지 않습니다. 관리자에게 연락하십시오.</value>
+  </data>
+  <data name="Msg139" xml:space="preserve">
+    <value>앗, 이 거래를 업데이트하는 허가를 받지 않았습니다.</value>
+  </data>
+  <data name="Msg140" xml:space="preserve">
+    <value>이 거래는 인출이 아닙니다.</value>
+  </data>
+  <data name="Msg141" xml:space="preserve">
+    <value>이 기능을 사용할 권한이 없습니다</value>
+  </data>
+  <data name="Msg142" xml:space="preserve">
+    <value>사용자가 존재하지 않습니다.</value>
+  </data>
+  <data name="Msg143" xml:space="preserve">
+    <value>지불금액을 입력해주십시오.</value>
+  </data>
+  <data name="Msg150" xml:space="preserve">
+    <value>구 비밀번호가 정확하지 않습니다.</value>
+  </data>
+  <data name="MsgEmptyCaptcha" xml:space="preserve">
+    <value>인증 코드를 입력해야합니다.</value>
+  </data>
+  <data name="MsgEmptyUsernamePassword" xml:space="preserve">
+    <value>사용자명과 비밀번호를 입력하십시오.</value>
+  </data>
+  <data name="MsgIncorrectCaptchaMsg" xml:space="preserve">
+    <value>유효하지 않은 인증 코드를 입력했습니다!</value>
+  </data>
+  <data name="MsgKickout" xml:space="preserve">
+    <value>다른 세션이 로그인되었거나 귀하의 세션이 종료되었습니다. 강제 로그아웃하시기 바랍니다!</value>
+  </data>
+  <data name="NA" xml:space="preserve">
+    <value>해당무</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>성명</value>
+  </data>
+  <data name="NameIsRequired" xml:space="preserve">
+    <value>이름이 유효하지 않습니다.</value>
+  </data>
+  <data name="NameOfBook" xml:space="preserve">
+    <value>가장 좋아하는 책의 이름은 무엇입니까?</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>신규 비밀번호</value>
+  </data>
+  <data name="NewPasswordRequired" xml:space="preserve">
+    <value>신규 비밀번호가 필요합니다</value>
+  </data>
+  <data name="NewSignups" xml:space="preserve">
+    <value>신규 가입</value>
+  </data>
+  <data name="NoInformation" xml:space="preserve">
+    <value>정보가 없습니다</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>정상</value>
+  </data>
+  <data name="Nov" xml:space="preserve">
+    <value>11월</value>
+  </data>
+  <data name="Oct" xml:space="preserve">
+    <value>10월</value>
+  </data>
+  <data name="OldPassErr" xml:space="preserve">
+    <value>구 비밀번호가 정확하지 않습니다.</value>
+  </data>
+  <data name="OldPassword" xml:space="preserve">
+    <value>구 비밀번호</value>
+  </data>
+  <data name="OldPasswordRequired" xml:space="preserve">
+    <value>구 비밀번호가 필요합니다</value>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>페이지</value>
+  </data>
+  <data name="PageSize" xml:space="preserve">
+    <value>페이지 크기</value>
+  </data>
+  <data name="Paging" xml:space="preserve">
+    <value>페이지 {1} 의 {0}</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>비밀번호</value>
+  </data>
+  <data name="PasswordNotMatched" xml:space="preserve">
+    <value>비밀번호 확인이 신규 비밀번호와 일치하지 않습니다</value>
+  </data>
+  <data name="PaymentInfo" xml:space="preserve">
+    <value>지불 정보</value>
+  </data>
+  <data name="PaymentMethod" xml:space="preserve">
+    <value>지불 방법</value>
+  </data>
+  <data name="PaymentRequest" xml:space="preserve">
+    <value>지불 요청</value>
+  </data>
+  <data name="PaymentRequestCancel" xml:space="preserve">
+    <value>귀하의 지불요청이 취소되었습니다!</value>
+  </data>
+  <data name="PaymentRequestSuccess" xml:space="preserve">
+    <value>귀하의 지불요청이 성공적으로 제출되었습니다!</value>
+  </data>
+  <data name="PaymentTime" xml:space="preserve">
+    <value>월간 8일에서 15일 사이에만 지불을 요청할 수 있습니다.</value>
+  </data>
+  <data name="PendingRequest" xml:space="preserve">
+    <value>처리되지 않은 요청</value>
+  </data>
+  <data name="PetName" xml:space="preserve">
+    <value>가장 좋아하는 애완동물의 이름은?</value>
+  </data>
+  <data name="PlainText" xml:space="preserve">
+    <value>평이한 텍스트</value>
+  </data>
+  <data name="PlayerAcc" xml:space="preserve">
+    <value>경기자 계정</value>
+  </data>
+  <data name="PlayerUsername" xml:space="preserve">
+    <value>경기자 사용자명</value>
+  </data>
+  <data name="PlayerUsernameIsRequired" xml:space="preserve">
+    <value>경기자 사용자 명이 필요합니다</value>
+  </data>
+  <data name="Postal" xml:space="preserve">
+    <value>우편번호</value>
+  </data>
+  <data name="PostcodeZiIsRequired" xml:space="preserve">
+    <value>우편번호가 필요합니다.</value>
+  </data>
+  <data name="PostDate" xml:space="preserve">
+    <value>보낸 날짜</value>
+  </data>
+  <data name="Preference" xml:space="preserve">
+    <value>선호</value>
+  </data>
+  <data name="Proccessing" xml:space="preserve">
+    <value>처리</value>
+  </data>
+  <data name="Product" xml:space="preserve">
+    <value>상품</value>
+  </data>
+  <data name="ProgramDetails" xml:space="preserve">
+    <value>프로그램 상세</value>
+  </data>
+  <data name="PwdChanged" xml:space="preserve">
+    <value>비밀번호가 성공적으로 변경되었습니다</value>
+  </data>
+  <data name="QualifyingMembers" xml:space="preserve">
+    <value>자격있는 회원</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>보안질문</value>
+  </data>
+  <data name="QuestionIsRequired" xml:space="preserve">
+    <value>보안질문을 선택하십시오!</value>
+  </data>
+  <data name="RecentPayment" xml:space="preserve">
+    <value>최근 지불</value>
+  </data>
+  <data name="RecoverPasswordFail" xml:space="preserve">
+    <value>신규 비밀번호 요청에 사용한 주소가 유효하지 않습니다.</value>
+  </data>
+  <data name="ReenterNewPassword" xml:space="preserve">
+    <value>비밀번호 확인</value>
+  </data>
+  <data name="Referrals" xml:space="preserve">
+    <value>소개</value>
+  </data>
+  <data name="ReferralsDetail" xml:space="preserve">
+    <value>소개 상세 내역</value>
+  </data>
+  <data name="ReferrersStatistics" xml:space="preserve">
+    <value>소개 통계</value>
+  </data>
+  <data name="ReferrersStatisticsDetail" xml:space="preserve">
+    <value>소개 통계 내역</value>
+  </data>
+  <data name="RefNo" xml:space="preserve">
+    <value>소개 번호</value>
+  </data>
+  <data name="RegisForm" xml:space="preserve">
+    <value>신청서식</value>
+  </data>
+  <data name="Rejected" xml:space="preserve">
+    <value>거절되었습니다</value>
+  </data>
+  <data name="RequestAmount" xml:space="preserve">
+    <value>요청액</value>
+  </data>
+  <data name="RequestDate" xml:space="preserve">
+    <value>요청일</value>
+  </data>
+  <data name="RequestPaymentEmailTitle" xml:space="preserve">
+    <value>지불요청 통지</value>
+  </data>
+  <data name="RequestPayout" xml:space="preserve">
+    <value>지불 요청</value>
+  </data>
+  <data name="RequireInfo" xml:space="preserve">
+    <value>&lt;span class="txtRequire"&gt;*&lt;/span&gt;로 표시된 영역은 완성되어야합니다</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>재설정</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>검색</value>
+  </data>
+  <data name="SecretCode" xml:space="preserve">
+    <value>내 비밀코드는 무엇인가요?</value>
+  </data>
+  <data name="SelectOne" xml:space="preserve">
+    <value>한개를 선택하십시오</value>
+  </data>
+  <data name="Sep" xml:space="preserve">
+    <value>9월</value>
+  </data>
+  <data name="SignUp" xml:space="preserve">
+    <value>가입</value>
+  </data>
+  <data name="SignUpMailSubject" xml:space="preserve">
+    <value>{0}  가맹자 – 귀하의 신청</value>
+  </data>
+  <data name="SiteInfo" xml:space="preserve">
+    <value>웹사이트 정보</value>
+  </data>
+  <data name="SiteURL" xml:space="preserve">
+    <value>웹사이트 URL</value>
+  </data>
+  <data name="SiteURLIsRequired" xml:space="preserve">
+    <value>웹사이트 URL이 필요합니다</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>크기</value>
+  </data>
+  <data name="Sport" xml:space="preserve">
+    <value>스포츠</value>
+  </data>
+  <data name="SportTeam" xml:space="preserve">
+    <value>가장 좋아하는 스포츠팀은 무엇인가요?</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>주</value>
+  </data>
+  <data name="StateIsRequired" xml:space="preserve">
+    <value>주명이 필요합니다.</value>
+  </data>
+  <data name="StatementHistory" xml:space="preserve">
+    <value>계정이력</value>
+  </data>
+  <data name="StatisticsFor" xml:space="preserve">
+    <value>{0}-{1}에 대한 통계</value>
+  </data>
+  <data name="StatisticsUpToNow" xml:space="preserve">
+    <value>현재까지의 통계</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>상태</value>
+  </data>
+  <data name="SubCategory" xml:space="preserve">
+    <value>하부 카테고리</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>제목</value>
+  </data>
+  <data name="SubjectIsRequired" xml:space="preserve">
+    <value>제목명이 유효하지 않습니다.</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>제출</value>
+  </data>
+  <data name="TermsConditions" xml:space="preserve">
+    <value>이용약관</value>
+  </data>
+  <data name="TextBox" xml:space="preserve">
+    <value>텍스트박스</value>
+  </data>
+  <data name="TextLink" xml:space="preserve">
+    <value>텍스트링크</value>
+  </data>
+  <data name="Tier" xml:space="preserve">
+    <value>수준</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>까지</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>최고</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>총합</value>
+  </data>
+  <data name="TotalActivePlayers" xml:space="preserve">
+    <value>총 유효 경기자 수</value>
+  </data>
+  <data name="TotalClicks" xml:space="preserve">
+    <value>총 클릭수</value>
+  </data>
+  <data name="TotalDeposits" xml:space="preserve">
+    <value>총 예치액</value>
+  </data>
+  <data name="TotalPlayers" xml:space="preserve">
+    <value>총 경기자 수</value>
+  </data>
+  <data name="TotalQualifiedActive" xml:space="preserve">
+    <value>총 자격있는 유효 경기자 수 ({0})</value>
+  </data>
+  <data name="TrackingCode" xml:space="preserve">
+    <value>추적코드</value>
+  </data>
+  <data name="TrackingStatistics" xml:space="preserve">
+    <value>추적 통계</value>
+  </data>
+  <data name="TrafficStatistics" xml:space="preserve">
+    <value>트래픽 통계</value>
+  </data>
+  <data name="Transaction" xml:space="preserve">
+    <value>거래</value>
+  </data>
+  <data name="Turnover" xml:space="preserve">
+    <value>매상</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>유형</value>
+  </data>
+  <data name="UnauthorizedMsg" xml:space="preserve">
+    <value>귀하의 세션이 지났거나 귀하의 요청에 권한이 부여되지 않았습니다</value>
+  </data>
+  <data name="UniqueClicks" xml:space="preserve">
+    <value>단독의 클릭들</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>사용자명</value>
+  </data>
+  <data name="Validation" xml:space="preserve">
+    <value>검증</value>
+  </data>
+  <data name="VerifyEmail" xml:space="preserve">
+    <value>이메일 주소 검증</value>
+  </data>
+  <data name="Winlost" xml:space="preserve">
+    <value>승리손실</value>
+  </data>
+  <data name="YourEmail" xml:space="preserve">
+    <value>귀하의 이메일</value>
+  </data>
+  <data name="Headlines" xml:space="preserve">
+    <value>제목</value>
+  </data>
+  <data name="ViewMore" xml:space="preserve">
+    <value>더보기</value>
+  </data>
+  <data name="HotNews" xml:space="preserve">
+    <value>생생한 뉴스</value>
+  </data>
+  <data name="ContactUsSuccess" xml:space="preserve">
+    <value>&lt;p&gt; 저희에게 연락해주셔서 감사드립니다.&lt;/p&gt;
+&lt;p&gt; 귀하의 메시지가 전송되었습니다. 저희는 가능한 빨리 귀하의 요청에 응답해드릴것입니다. &lt;/p&gt;
+&lt;p&gt;즐거운 하루되세요!&lt;/p&gt;
+&lt;p&gt;감사합니다, &lt;/p&gt;
+&lt;br /&gt;
+{0} 가맹자 지원팀</value>
+  </data>
+  <data name="PasswordPattern" xml:space="preserve">
+    <value>비밀번호는 최소한 2개의 문자와 최소한 2개의 숫자를 포함한 최소한 6개의 특징으로 이루어져야합니다.</value>
+  </data>
+  <data name="ErrAuthorized" xml:space="preserve">
+    <value>이 기능을 사용할 권한이 없습니다</value>
+  </data>
+  <data name="FromDateIsRequired" xml:space="preserve">
+    <value>시작일이 필요합니다</value>
+  </data>
+  <data name="ToDateIsRequired" xml:space="preserve">
+    <value>마지막 날짜가 필요합니다</value>
+  </data>
+  <data name="UpdateAccSuccess" xml:space="preserve">
+    <value>귀하의 계정정보가 성공적으로 업데이트되었습니다.</value>
+  </data>
+  <data name="Msg160" xml:space="preserve">
+    <value>무효한 생성자입니다!</value>
+  </data>
+  <data name="Msg161" xml:space="preserve">
+    <value>무효한 이메일 컨텐츠입니다!</value>
+  </data>
+  <data name="Msg162" xml:space="preserve">
+    <value>무효한 발신인명입니다!</value>
+  </data>
+  <data name="Msg163" xml:space="preserve">
+    <value>무효한 이메일 주소입니다!</value>
+  </data>
+  <data name="Msg164" xml:space="preserve">
+    <value>무효한 메일 제목입니다!</value>
+  </data>
+  <data name="Msg165" xml:space="preserve">
+    <value>무효한 발신자 IP입니다!</value>
+  </data>
+  <data name="Msg166" xml:space="preserve">
+    <value>무효한 브라우저명입니다!</value>
+  </data>
+  <data name="Msg167" xml:space="preserve">
+    <value>무효한 ASP.NET 세션 아이디입니다!</value>
+  </data>
+  <data name="Msg168" xml:space="preserve">
+    <value>10분 동안에 최대 20 건의 이메일만 보내는 것이 허용됩니다!</value>
+  </data>
+  <data name="Msg169" xml:space="preserve">
+    <value>오류입니다! 이메일 입력이 성공적으로 완료되지 않았습니다!</value>
+  </data>
+  <data name="Msg170" xml:space="preserve">
+    <value>앗, 이 계정은 1개의 처리되지 않은 지불요청이 있습니다, 이 송금을 먼저 업데이트하십시오!</value>
+  </data>
+  <data name="Msg171" xml:space="preserve">
+    <value>무효한 사용자 정보입니다. 업데이트 과정이 성공적으로 완료되지 않았습니다!</value>
+  </data>
+  <data name="Msg172" xml:space="preserve">
+    <value>오류가 발생했습니다. 업데이트 과정이 성공적으로 완료되지 않았습니다!</value>
+  </data>
+  <data name="WebsiteUrl" xml:space="preserve">
+    <value>웹사이트 URL을 입력해주십시오</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+  <data name="MoreSiteUrl" xml:space="preserve">
+    <value>웹사이트 URL {0}이 필요합니다.</value>
+  </data>
+  <data name="DailyEarningsDetail" xml:space="preserve">
+    <value>일간 수익 상세 내역</value>
+  </data>
+  <data name="ApplicationForm" xml:space="preserve">
+    <value>신청 서식</value>
+  </data>
+  <data name="Copyright" xml:space="preserve">
+    <value>저작권</value>
+  </data>
+  <data name="PleaseDirectAnyComment" xml:space="preserve">
+    <value>{0}으로 의견이나 질문을 보내주시거나, 하기의 서식을 이용하십시오.</value>
+  </data>
+  <data name="BestViewIn" xml:space="preserve">
+    <value>내에서 최상의 보기</value>
+  </data>
+  <data name="CopyrightPacificSeaInvests" xml:space="preserve">
+    <value>저작권 {0}: Pacific Sea Invests</value>
+  </data>
+  <data name="CustomizedBanners" xml:space="preserve">
+    <value>개인화된 현수막</value>
+  </data>
+  <data name="PromotionalDescriptions" xml:space="preserve">
+    <value>판촉물 설명</value>
+  </data>
+  <data name="Sportsbook" xml:space="preserve">
+    <value>스포츠북</value>
+  </data>
+  <data name="EnglishSupport" xml:space="preserve">
+    <value>영어 지원</value>
+  </data>
+  <data name="ThaiSupport" xml:space="preserve">
+    <value>태국어 지원</value>
+  </data>
+  <data name="VietnameseSupport" xml:space="preserve">
+    <value>월남어 지원</value>
+  </data>
+  <data name="ApplicationUnde" xml:space="preserve">
+    <value>신청은 검토중입니다</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>뒤로</value>
+  </data>
+  <data name="RegisSuccess" xml:space="preserve">
+    <value>신청을 제출해주셔서 감사합니다.&lt;br/&gt;&lt;br/&gt;귀하의 웹사이트와 신청 내역은 {0} 저희의 상품을 판촉하는 데 컨텐츠가 적합하도록 가맹자팀에 의해 검토됩니다. &lt;br/&gt;&lt;br/&gt;귀하의 신청에 관련하여 5일 이내에 결정을 통보해드리겠습니다. 승인되면, 귀하는 저희의 협력 프로그램에 대한 완전한 접근이 가능합니다. &lt;br /&gt;&lt;br /&gt;감사합니다,&lt;br /&gt;&lt;br /&gt; {0} 가맹자에서 팀 배상</value>
+  </data>
+  <data name="April" xml:space="preserve">
+    <value>4월</value>
+  </data>
+  <data name="August" xml:space="preserve">
+    <value>8월</value>
+  </data>
+  <data name="December" xml:space="preserve">
+    <value>12월</value>
+  </data>
+  <data name="February" xml:space="preserve">
+    <value>2월</value>
+  </data>
+  <data name="January" xml:space="preserve">
+    <value>1월</value>
+  </data>
+  <data name="July" xml:space="preserve">
+    <value>7월</value>
+  </data>
+  <data name="June" xml:space="preserve">
+    <value>6월</value>
+  </data>
+  <data name="March" xml:space="preserve">
+    <value>3월</value>
+  </data>
+  <data name="November" xml:space="preserve">
+    <value>11월</value>
+  </data>
+  <data name="October" xml:space="preserve">
+    <value>10월</value>
+  </data>
+  <data name="September" xml:space="preserve">
+    <value>9월</value>
+  </data>
+  <data name="FieldMustBeNumeric" xml:space="preserve">
+    <value>이 영역에는 숫자를 입력해야합니다.</value>
+  </data>
+  <data name="LandingPagesDetail" xml:space="preserve">
+    <value>랜딩 페이지 내역</value>
+  </data>
+  <data name="CustomerInfo" xml:space="preserve">
+    <value>고객 정보</value>
+  </data>
+  <data name="Statistics" xml:space="preserve">
+    <value>통계</value>
+  </data>
+  <data name="AmountError" xml:space="preserve">
+    <value>유효하지 않은 요청된 금액입니다! 금액은 사이라야합니다</value>
+  </data>
+  <data name="And" xml:space="preserve">
+    <value>그리고</value>
+  </data>
+  <data name="FAQ_HowCanCheck" xml:space="preserve">
+    <value>얼마나 소득을 획득하였는지 어떻게 확인할 수 있습니까?</value>
+  </data>
+  <data name="FAQ_HowDoSignUp" xml:space="preserve">
+    <value>어떻게 {0} 협력프로그램에 가입할 수 있나요?</value>
+  </data>
+  <data name="FAQ_HowSystemKeepTrack" xml:space="preserve">
+    <value>저의 경기자들을 시스템이 어떻게 추적하나요?</value>
+  </data>
+  <data name="FAQ_WhatAreWithdrawalMethods" xml:space="preserve">
+    <value>저에게 주어진 금액을 인출하는 방법은 무엇입니까?</value>
+  </data>
+  <data name="FAQ_WhatIfDontHaveWebsite" xml:space="preserve">
+    <value>제가 웹사이트를 가지고 있지 않은 경우에도 가입할 수 있습니까?</value>
+  </data>
+  <data name="FAQ_WhatIsAffiliateProgram" xml:space="preserve">
+    <value>{0} 협력프로그램이란 무엇인가요?</value>
+  </data>
+  <data name="FAQ_WhatIsMinimumWithdrawalRequest" xml:space="preserve">
+    <value>최저의 인출 요청 액수는 얼마인가요?</value>
+  </data>
+  <data name="FAQ_WhereGetBanners" xml:space="preserve">
+    <value>현수막과 컨텐츠를 어디에서 얻을 수 있나요?</value>
+  </data>
+  <data name="CompanyNegativeNetWin" xml:space="preserve">
+    <value>회사의 순 승리율이 마이너스가 되면, 가맹자는 회사와 그달의(각 상품에 대해 적용) 수익의 {0}%를 부담해야합니다.</value>
+  </data>
+  <data name="LiveCasino" xml:space="preserve">
+    <value>Live Casino</value>
+  </data>
+  <data name="NumberGame" xml:space="preserve">
+    <value>숫자게임</value>
+  </data>
+  <data name="RNGCasino" xml:space="preserve">
+    <value>RNG Casino</value>
+  </data>
+  <data name="Casino" xml:space="preserve">
+    <value>Casino</value>
+  </data>
+  <data name="Racebook" xml:space="preserve">
+    <value>Racebook</value>
+  </data>
+  <data name="BetList" xml:space="preserve">
+    <value>Bet List</value>
+  </data>
+  <data name="DontShowRunningBetList" xml:space="preserve">
+    <value>We don't support running bet list at the moment.</value>
+  </data>
+  <data name="BetListResults" xml:space="preserve">
+    <value>Results</value>
+  </data>
+</root>

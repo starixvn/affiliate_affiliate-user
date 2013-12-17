@@ -1,0 +1,1291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountInformation" xml:space="preserve">
+    <value>Thông tin tài khoản</value>
+  </data>
+  <data name="AccountOverview" xml:space="preserve">
+    <value>Tổng quan về tài khoản</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Địa chỉ</value>
+  </data>
+  <data name="AddressIsRequired" xml:space="preserve">
+    <value>Địa chỉ là bắt buộc</value>
+  </data>
+  <data name="AddUrl" xml:space="preserve">
+    <value>Thêm trang web</value>
+  </data>
+  <data name="Adjustment" xml:space="preserve">
+    <value>Điều chỉnh số dư</value>
+  </data>
+  <data name="Affiliate" xml:space="preserve">
+    <value>Hội viên</value>
+  </data>
+  <data name="AffiliateLogin" xml:space="preserve">
+    <value>Đăng nhập hội viên</value>
+  </data>
+  <data name="AffiliateTitle" xml:space="preserve">
+    <value>Chương trình hội viên {0}</value>
+  </data>
+  <data name="AgreeTermNCondition" xml:space="preserve">
+    <value>Tôi đồng ý với các điều khoản &amp; điều kiện của chương trình hội viên{0}.</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Tất cả</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Số tiền</value>
+  </data>
+  <data name="Answer" xml:space="preserve">
+    <value>Câu trả lời của bạn</value>
+  </data>
+  <data name="AnswerIsRequired" xml:space="preserve">
+    <value>Câu trả lời của bạn trống. Vui lòng kiểm tra!</value>
+  </data>
+  <data name="Approved" xml:space="preserve">
+    <value>Đã chấp thuận</value>
+  </data>
+  <data name="Apr" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Aug" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="AvailableDomains" xml:space="preserve">
+    <value>Tên miền sẵn có</value>
+  </data>
+  <data name="BalanceBroughtForward" xml:space="preserve">
+    <value>Số dư được rút</value>
+  </data>
+  <data name="BalanceIsZero" xml:space="preserve">
+    <value>Bạn không thể yêu cầu thanh toán vì số dư không đủ.</value>
+  </data>
+  <data name="BankTransfer" xml:space="preserve">
+    <value>Chuyển khoản ngân hàng</value>
+  </data>
+  <data name="Banner" xml:space="preserve">
+    <value>Liên kết url bằng hình ảnh</value>
+  </data>
+  <data name="Bonus" xml:space="preserve">
+    <value>Tiền thưởng</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="Cancelled" xml:space="preserve">
+    <value>Đã hủy</value>
+  </data>
+  <data name="CancelRequest" xml:space="preserve">
+    <value>Yêu cầu hủy</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Loại hình ảnh</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Thay đổi</value>
+  </data>
+  <data name="ChangePassErr" xml:space="preserve">
+    <value>Lỗi đổi mật khẩu</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Đổi mật khẩu</value>
+  </data>
+  <data name="ChangePasswordEmailTitle" xml:space="preserve">
+    <value>Hội viên {0} - Mật khẩu mới của bạn</value>
+  </data>
+  <data name="ChangePasswordInstruction" xml:space="preserve">
+    <value>Sử dụng mẫu này để đổi mật khẩu của bạn. Sau khi đã thay đổi, mật khẩu mới sẽ có hiệu lực vào lần đăng nhập tiếp theo của bạn.</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Thành phố</value>
+  </data>
+  <data name="CityIsRequired" xml:space="preserve">
+    <value>Thành phố là bắt buộc</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>Nội dung</value>
+  </data>
+  <data name="CommentIsRequired" xml:space="preserve">
+    <value>Nhận xét không hợp lệ</value>
+  </data>
+  <data name="Commission" xml:space="preserve">
+    <value>Hoa hồng</value>
+  </data>
+  <data name="ComNetWin" xml:space="preserve">
+    <value>Tổng lợi nhuận thực trong tháng ({0})</value>
+  </data>
+  <data name="CompletedDate" xml:space="preserve">
+    <value>Ngày hoàn thành</value>
+  </data>
+  <data name="CompleteForm" xml:space="preserve">
+    <value>Vui lòng hoàn thành mẫu này để đăng ký tài khoản hội viên {0}.</value>
+  </data>
+<<<<<<< HEAD
+	<data name="ConfirmPasswordRequired" xml:space="preserve">
+    <value>Vui lòng xác nhận lại mật khẩu</value>
+=======
+  <data name="ConfirmPasswordRequired" xml:space="preserve">
+    <value>Confirm password is required</value>
+>>>>>>> 672fe726030f050648654a11fc2ee4d0fa3fda29
+  </data>
+  <data name="ContactInfo" xml:space="preserve">
+    <value>Thông tin liên hệ</value>
+  </data>
+  <data name="ContactNumber" xml:space="preserve">
+    <value>Số liên hệ</value>
+  </data>
+  <data name="ContactNumberIsRequired" xml:space="preserve">
+    <value>Số liên hệ trống. Vui lòng kiểm tra!</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Liên hệ</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Quốc gia</value>
+  </data>
+  <data name="CountryIsRequired" xml:space="preserve">
+    <value>Vui lòng chọn quốc gia</value>
+  </data>
+<<<<<<< HEAD
+	<data name="CsdMailSubject" xml:space="preserve">
+    <value>Chương trình hội viên {0} - Có 1 thành viên mới ({1}) đang chờ bạn xem xét</value>
+=======
+  <data name="CsdMailSubject" xml:space="preserve">
+    <value>{0} Affiliates - New account ({1}) awaiting approval</value>
+>>>>>>> 672fe726030f050648654a11fc2ee4d0fa3fda29
+  </data>
+  <data name="Currency" xml:space="preserve">
+    <value>Tiền tệ</value>
+  </data>
+  <data name="CurrencyIsRequired" xml:space="preserve">
+    <value>Vui lòng chọn loại tiền tệ</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>Hiện tại</value>
+  </data>
+  <data name="CurrentCommissionSetting" xml:space="preserve">
+    <value>Thiết lập hoa hồng hiện tại</value>
+  </data>
+  <data name="DailyEarnings" xml:space="preserve">
+    <value>Thu nhập hàng ngày</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Ngày</value>
+  </data>
+  <data name="Dec" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="Deposit" xml:space="preserve">
+    <value>Tiền nạp vào</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Mô tả</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Địa chỉ email</value>
+  </data>
+  <data name="EmailFormat" xml:space="preserve">
+    <value>Định dạng email</value>
+  </data>
+  <data name="EmailIsRequire" xml:space="preserve">
+    <value>Địa chỉ email là bắt buộc</value>
+  </data>
+  <data name="EmailMatch" xml:space="preserve">
+    <value>Địa chỉ email mà bạn nhập không khớp.</value>
+  </data>
+<<<<<<< HEAD
+	<data name="EmptyEmail" xml:space="preserve">
+    <value>Vui lòng nhập thư điện tử của bạn</value>
+=======
+  <data name="EmptyEmail" xml:space="preserve">
+    <value>Please input Email.</value>
+>>>>>>> 672fe726030f050648654a11fc2ee4d0fa3fda29
+  </data>
+  <data name="ErrGender" xml:space="preserve">
+    <value>Giới tính trống. Vui lòng kiểm tra!</value>
+  </data>
+  <data name="FAQs" xml:space="preserve">
+    <value>Câu hỏi thường gặp</value>
+  </data>
+  <data name="FDM" xml:space="preserve">
+    <value>FDM</value>
+  </data>
+  <data name="Feb" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Nữ</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Tên</value>
+  </data>
+  <data name="FirstNameIsRequired" xml:space="preserve">
+    <value>Tên là bắt buộc</value>
+  </data>
+  <data name="ForgetPassword" xml:space="preserve">
+    <value>Bạn quên mật khẩu?</value>
+  </data>
+  <data name="ForgetPasswordEmailTitle" xml:space="preserve">
+    <value>Hội viên {0} - Chi tiết đăng nhập của bạn</value>
+  </data>
+  <data name="ForgetPasswordInstruction" xml:space="preserve">
+    <value>Mật khẩu mới sẽ được gửi tới địa chỉ email mà bạn đã cung cấp. &lt;br /&gt;Nếu bạn gặp thêm bất kỳ khó khăn nào, hãy {0}.</value>
+  </data>
+  <data name="ForgetPasswordSuccess" xml:space="preserve">
+    <value>Thông tin đăng nhập của bạn đã được gửi.&lt;br/&gt;Vui lòng kiểm tra địa chỉ email của bạn để tìm tên người dùng và thông tin chi tiết về mật khẩu của bạn.&lt;br/&gt;Vì bất kỳ lý do gì mà bạn không nhận được email, vui lòng {0} và chúng tôi sẽ rất sẵn lòng được trợ giúp bạn.</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>Từ</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Giới tính</value>
+  </data>
+  <data name="GenerateLink" xml:space="preserve">
+    <value>Tạo liên kết</value>
+  </data>
+  <data name="Hobby" xml:space="preserve">
+    <value>Sở thích của tôi?</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Trang chủ</value>
+  </data>
+  <data name="HomeDetailed" xml:space="preserve">
+    <value>Hệ thống theo dõi số liệu thống kê chi tiết</value>
+  </data>
+  <data name="HomeEarn" xml:space="preserve">
+    <value>Kiếm 40% từ tiền cược thực thua của khách hàng</value>
+  </data>
+  <data name="HomeNegative" xml:space="preserve">
+    <value>Số dư âm</value>
+  </data>
+  <data name="HomeOnline" xml:space="preserve">
+    <value>Hỗ trợ trực tuyến 24/7 cho bạn và người chơi của bạn </value>
+  </data>
+  <data name="HomePrompt" xml:space="preserve">
+    <value>Thanh toán hàng tháng nhanh chóng</value>
+  </data>
+  <data name="HomeWide" xml:space="preserve">
+    <value>Phạm vi phương thức thanh toán rộng</value>
+  </data>
+  <data name="HtmlFormat" xml:space="preserve">
+    <value>Dạng HTML</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Important" xml:space="preserve">
+    <value>Quan trọng</value>
+  </data>
+  <data name="InputRequestAmount" xml:space="preserve">
+    <value>Nhập số tiền yêu cầu</value>
+  </data>
+  <data name="Jan" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Jul" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="Jun" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="LandingPages" xml:space="preserve">
+    <value>Trang thông tin</value>
+  </data>
+  <data name="LandingPagesStatistics" xml:space="preserve">
+    <value>Thống kê trang thông tin</value>
+  </data>
+  <data name="LandingPagesStatisticsDetail" xml:space="preserve">
+    <value>Chi tiết thống kê trang thông tin</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Ngôn ngữ</value>
+  </data>
+  <data name="LanguageIsRequired" xml:space="preserve">
+    <value>Vui lòng chọn ngôn ngữ bạn thích</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Họ </value>
+  </data>
+  <data name="LastNameIsRequired" xml:space="preserve">
+    <value>Họ là bắt buộc</value>
+  </data>
+  <data name="LinkDefault" xml:space="preserve">
+    <value>Mặc định</value>
+  </data>
+  <data name="LinkTo" xml:space="preserve">
+    <value>Liên kết đến</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Đăng nhập</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Đăng xuất</value>
+  </data>
+  <data name="MailingInfor" xml:space="preserve">
+    <value>Thông tin gửi thư</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Nam</value>
+  </data>
+  <data name="Mar" xml:space="preserve">
+    <value>3</value>
+  </data>
+<<<<<<< HEAD
+	<data name="MarketingTools" xml:space="preserve">
+    <value>Công cụ quảng bá</value>
+=======
+  <data name="MarketingTools" xml:space="preserve">
+    <value>Marketing Tools</value>
+>>>>>>> 672fe726030f050648654a11fc2ee4d0fa3fda29
+  </data>
+  <data name="May" xml:space="preserve">
+    <value>Tháng 5</value>
+  </data>
+  <data name="MediaGallery" xml:space="preserve">
+    <value>Thư viện media</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Tin nhắn</value>
+  </data>
+  <data name="MessageHistory" xml:space="preserve">
+    <value>Nhật ký tin nhắn</value>
+  </data>
+  <data name="MinimumWithdrawalAmount" xml:space="preserve">
+    <value>Số tiền rút tối thiểu</value>
+  </data>
+  <data name="Mobile" xml:space="preserve">
+    <value>Số di động</value>
+  </data>
+  <data name="MobileNumberIsRequired" xml:space="preserve">
+    <value>Số di động trống. Vui lòng kiểm tra!  </value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Tháng</value>
+  </data>
+  <data name="MonthlyWinlost" xml:space="preserve">
+    <value>Thắng/thua hàng tháng</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>Thông tin thêm</value>
+  </data>
+  <data name="MotherName" xml:space="preserve">
+    <value>Tên của mẹ?</value>
+  </data>
+  <data name="Movie" xml:space="preserve">
+    <value>Bộ phim tôi thích nhất?</value>
+  </data>
+  <data name="Msg101" xml:space="preserve">
+    <value>Sai tên truy cập hoặc mật khẩu.</value>
+  </data>
+  <data name="Msg102" xml:space="preserve">
+    <value>Tài khoản của bạn bị đóng. Vui lòng liên hệ với quản trị viên của bạn!</value>
+  </data>
+<<<<<<< HEAD
+	<data name="Msg103" xml:space="preserve">
+    <value>Tài khoản của bạn đã bị khóa tạm thời vì lý do đăng nhập thất bại 5 lần liên tiếp. Vui lòng thử lại sau 10 phút hoặc liên hệ quản trị viên của chúng tôi!</value>
+=======
+  <data name="Msg103" xml:space="preserve">
+    <value>Your account is locked temporarily due to 5 consecutive failed login attempts. Please try again after 10 minutes or contact your administrator!</value>
+>>>>>>> 672fe726030f050648654a11fc2ee4d0fa3fda29
+  </data>
+  <data name="Msg104" xml:space="preserve">
+    <value>Bạn đã không nhập địa chỉ email mà chúng tôi ghi nhận. Vui lòng thử lại hoặc {0}.</value>
+  </data>
+  <data name="Msg105" xml:space="preserve">
+    <value>Tài khoản không được chấp nhận. Vui lòng liên hệ với quản trị viên của bạn!</value>
+  </data>
+  <data name="Msg106" xml:space="preserve">
+    <value>Địa chỉ bạn đã sử dụng để yêu cầu mật khẩu mới không hợp lệ.</value>
+  </data>
+<<<<<<< HEAD
+	<data name="Msg107" xml:space="preserve">
+    <value>Tài khoản của bạn đã bị đóng hoặc không tồn tại. Vui lòng liên hệ quản trị viên của chúng tôi!</value>
+=======
+  <data name="Msg107" xml:space="preserve">
+    <value>Oops, Your account is not existed or closed. Please contact administrator.</value>
+>>>>>>> 672fe726030f050648654a11fc2ee4d0fa3fda29
+  </data>
+  <data name="Msg119" xml:space="preserve">
+    <value>Địa chỉ email không hợp lệ</value>
+  </data>
+  <data name="Msg120" xml:space="preserve">
+    <value>Địa chỉ email là bắt buộc</value>
+  </data>
+  <data name="Msg121" xml:space="preserve">
+    <value>Địa chỉ Email đã được sử dụng. Vui lòng chọn địa chỉ khác!</value>
+  </data>
+  <data name="Msg122" xml:space="preserve">
+    <value>Thông tin hội viên không hợp lệ</value>
+  </data>
+  <data name="Msg123" xml:space="preserve">
+    <value>Tạo khách hàng không thành công. Vui lòng thử lại</value>
+  </data>
+  <data name="Msg130" xml:space="preserve">
+    <value>Bạn có một yêu cầu đang chờ xử lý. Để tạo yêu cầu mới, vui lòng hủy yêu cầu đang chờ hoặc đợi cho đến khi việc xử lý được hoàn tất.</value>
+  </data>
+  <data name="Msg131" xml:space="preserve">
+    <value>Xin lỗi, hội viên này không có đủ tiền để rút.</value>
+  </data>
+  <data name="Msg132" xml:space="preserve">
+    <value>Mã roleID không hợp lệ.</value>
+  </data>
+  <data name="Msg133" xml:space="preserve">
+    <value>Tài khoản số dư không hợp lệ hoặc loại tiền tệ hay phương thức thanh toán không được hỗ trợ.</value>
+  </data>
+  <data name="Msg134" xml:space="preserve">
+    <value>Chèn giao dịch không thành công.</value>
+  </data>
+  <data name="Msg135" xml:space="preserve">
+    <value>Xin lỗi, số tiền không hợp lệ.</value>
+  </data>
+  <data name="Msg136" xml:space="preserve">
+    <value>Số tiền yêu cầu phải lớn hơn số tiền rút tối thiểu</value>
+  </data>
+  <data name="Msg137" xml:space="preserve">
+    <value>Rất tiếc! Phương pháp thanh toán [Neteller, Bank Transfer,.. - affiliate's chosen one] không khả dụng. Tại thời điểm này, chỉ có phương pháp "Tài khoản Người chơi " được hỗ trợ. Hãy nhấp vào đây để thực hiện   
+thay đổi.</value>
+  </data>
+<<<<<<< HEAD
+	<data name="Msg138" xml:space="preserve">
+    <value>Rất tiếc chúng tôi không hỗ trợ tiền tệ này. Vui lòng liên hệ quản trị viên của chúng tôi để biết thêm chi tiết.</value>
+  </data>
+	<data name="Msg139" xml:space="preserve">
+    <value>Rất tiếc! Tài khoản của bạn không đủ quyền để cập nhật giao dịch này!</value>
+=======
+  <data name="Msg138" xml:space="preserve">
+    <value>We do not support this currency. Please contact administrator.</value>
+  </data>
+  <data name="Msg139" xml:space="preserve">
+    <value>Oops, You do not have permission to update this transaction.</value>
+>>>>>>> 672fe726030f050648654a11fc2ee4d0fa3fda29
+  </data>
+  <data name="Msg140" xml:space="preserve">
+    <value>Giao dịch này không phải là giao dịch rút tiền.</value>
+  </data>
+  <data name="Msg141" xml:space="preserve">
+    <value>Bạn không được phép sử dụng chức năng này</value>
+  </data>
+<<<<<<< HEAD
+	<data name="Msg142" xml:space="preserve">
+    <value>Người dùng này không tồn tại.</value>
+  </data>
+	<data name="Msg143" xml:space="preserve">
+    <value>Vui lòng nhập vào số tiền cần chi trả!</value>
+=======
+  <data name="Msg142" xml:space="preserve">
+    <value>The user does not exist</value>
+  </data>
+  <data name="Msg143" xml:space="preserve">
+    <value>Payment Amount is required.</value>
+>>>>>>> 672fe726030f050648654a11fc2ee4d0fa3fda29
+  </data>
+  <data name="Msg150" xml:space="preserve">
+    <value>Mật khẩu cũ không đúng</value>
+  </data>
+<<<<<<< HEAD
+	<data name="MsgEmptyCaptcha" xml:space="preserve">
+    <value>Bạn phải nhập vào mã bảo vệ!</value>
+  </data>
+	<data name="MsgEmptyUsernamePassword" xml:space="preserve">
+    <value>Vui lòng nhập vào tên người dùng và mật khẩu!</value>
+=======
+  <data name="MsgEmptyCaptcha" xml:space="preserve">
+    <value>You must input validation code.</value>
+  </data>
+  <data name="MsgEmptyUsernamePassword" xml:space="preserve">
+    <value>Please input username and password.</value>
+>>>>>>> 672fe726030f050648654a11fc2ee4d0fa3fda29
+  </data>
+  <data name="MsgIncorrectCaptchaMsg" xml:space="preserve">
+    <value>Bạn đã nhập một mã xác thực không hợp lệ!</value>
+  </data>
+  <data name="MsgKickout" xml:space="preserve">
+    <value>Đã có phiên khác đăng nhập hoặc phiên của bạn đã hết hạn. Buộc phải đăng xuất!</value>
+  </data>
+<<<<<<< HEAD
+	<data name="NA" xml:space="preserve">
+    <value>Không thể áp dụng</value>
+=======
+  <data name="NA" xml:space="preserve">
+    <value>N/A</value>
+>>>>>>> 672fe726030f050648654a11fc2ee4d0fa3fda29
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Tên</value>
+  </data>
+  <data name="NameIsRequired" xml:space="preserve">
+    <value>Tên không hợp lệ</value>
+  </data>
+  <data name="NameOfBook" xml:space="preserve">
+    <value>Tên quyển sách tôi thích nhất?</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>Mật khẩu mới</value>
+  </data>
+  <data name="NewPasswordRequired" xml:space="preserve">
+    <value>Mật khẩu mới là bắt buộc</value>
+  </data>
+  <data name="NewSignups" xml:space="preserve">
+    <value>Đăng ký mới</value>
+  </data>
+  <data name="NoInformation" xml:space="preserve">
+    <value>Không có thông tin nào</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Bình thường</value>
+  </data>
+  <data name="Nov" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="Oct" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="OldPassErr" xml:space="preserve">
+    <value>Mật khẩu cũ không đúng</value>
+  </data>
+  <data name="OldPassword" xml:space="preserve">
+    <value>Mật khẩu cũ</value>
+  </data>
+  <data name="OldPasswordRequired" xml:space="preserve">
+    <value>Mật khẩu cũ là bắt buộc</value>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>Trang</value>
+  </data>
+  <data name="PageSize" xml:space="preserve">
+    <value>Kích thước trang</value>
+  </data>
+  <data name="Paging" xml:space="preserve">
+    <value>Trang {0} của {1}</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Mật khẩu</value>
+  </data>
+<<<<<<< HEAD
+	<data name="PasswordNotMatched" xml:space="preserve">
+    <value>Mậ khẩu xác nhận không khớp!</value>
+=======
+  <data name="PasswordNotMatched" xml:space="preserve">
+    <value>Confirm password does not match the new password</value>
+>>>>>>> 672fe726030f050648654a11fc2ee4d0fa3fda29
+  </data>
+  <data name="PaymentInfo" xml:space="preserve">
+    <value>Thông tin thanh toán</value>
+  </data>
+  <data name="PaymentMethod" xml:space="preserve">
+    <value>Phương thức thanh toán</value>
+  </data>
+  <data name="PaymentRequest" xml:space="preserve">
+    <value>Yêu cầu thanh toán</value>
+  </data>
+  <data name="PaymentRequestCancel" xml:space="preserve">
+    <value>Yêu cầu thanh toán của bạn đã bị hủy!</value>
+  </data>
+  <data name="PaymentRequestSuccess" xml:space="preserve">
+    <value>Yêu cầu thanh toán của bạn đã được gửi thành công!</value>
+  </data>
+  <data name="PaymentTime" xml:space="preserve">
+    <value>Bạn có thể yêu cầu rút tiền từ ngày 8 đến 15 vào mỗi tháng.</value>
+  </data>
+  <data name="PendingRequest" xml:space="preserve">
+    <value>Yêu cầu đang xử lý</value>
+  </data>
+  <data name="PetName" xml:space="preserve">
+    <value>Tên động vật tôi thích nhất?</value>
+  </data>
+  <data name="PlainText" xml:space="preserve">
+    <value>Dạng Text</value>
+  </data>
+  <data name="PlayerAcc" xml:space="preserve">
+    <value>Tài khoản người chơi</value>
+  </data>
+  <data name="PlayerUsername" xml:space="preserve">
+    <value>Tên truy cập</value>
+  </data>
+  <data name="PlayerUsernameIsRequired" xml:space="preserve">
+    <value>Tên người dùng là bắt buộc</value>
+  </data>
+  <data name="Postal" xml:space="preserve">
+    <value>Mã bưu điện/Mã zip</value>
+  </data>
+  <data name="PostcodeZiIsRequired" xml:space="preserve">
+    <value>Mã bưu điện/Mã zip là bắt buộc</value>
+  </data>
+  <data name="PostDate" xml:space="preserve">
+    <value>Ngày đăng</value>
+  </data>
+  <data name="Preference" xml:space="preserve">
+    <value>Tham chiếu</value>
+  </data>
+  <data name="Proccessing" xml:space="preserve">
+    <value>Đang xử lý</value>
+  </data>
+  <data name="Product" xml:space="preserve">
+    <value>Loại hình</value>
+  </data>
+  <data name="ProgramDetails" xml:space="preserve">
+    <value>Chi tiết chương trình</value>
+  </data>
+  <data name="PwdChanged" xml:space="preserve">
+    <value>Đã thay đổi mật khẩu thành công</value>
+  </data>
+  <data name="QualifyingMembers" xml:space="preserve">
+    <value>Thành viên hợp lệ</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>Câu hỏi bảo mật</value>
+  </data>
+  <data name="QuestionIsRequired" xml:space="preserve">
+    <value>Câu hỏi bảo mật trống. Vui lòng kiểm tra!</value>
+  </data>
+  <data name="RecentPayment" xml:space="preserve">
+    <value>Thanh toán gần đây</value>
+  </data>
+  <data name="RecoverPasswordFail" xml:space="preserve">
+    <value>Địa chỉ bạn đã sử dụng để yêu cầu mật khẩu mới không hợp lệ.</value>
+  </data>
+  <data name="ReenterNewPassword" xml:space="preserve">
+    <value>Xác nhận mật khẩu</value>
+  </data>
+<<<<<<< HEAD
+	<data name="Referrals" xml:space="preserve">
+    <value>Theo nguồn URL</value>
+  </data>
+	<data name="ReferralsDetail" xml:space="preserve">
+    <value>Chi tiết nguồn URL</value>
+  </data>
+	<data name="ReferrersStatistics" xml:space="preserve">
+    <value>Thống kê nguồn URL</value>
+  </data>
+	<data name="ReferrersStatisticsDetail" xml:space="preserve">
+    <value>Chi tiết nguồn URL</value>
+=======
+  <data name="Referrals" xml:space="preserve">
+    <value>Referrals</value>
+  </data>
+  <data name="ReferralsDetail" xml:space="preserve">
+    <value>Referrals Detail</value>
+  </data>
+  <data name="ReferrersStatistics" xml:space="preserve">
+    <value>Referrals Statistics</value>
+  </data>
+  <data name="ReferrersStatisticsDetail" xml:space="preserve">
+    <value>Referrers Statistics Detail</value>
+>>>>>>> 672fe726030f050648654a11fc2ee4d0fa3fda29
+  </data>
+  <data name="RefNo" xml:space="preserve">
+    <value>Số tham chiếu</value>
+  </data>
+  <data name="RegisForm" xml:space="preserve">
+    <value>Mẫu đơn</value>
+  </data>
+  <data name="Rejected" xml:space="preserve">
+    <value>Bị từ chối</value>
+  </data>
+  <data name="RequestAmount" xml:space="preserve">
+    <value>Số tiền yêu cầu</value>
+  </data>
+  <data name="RequestDate" xml:space="preserve">
+    <value>Ngày yêu cầu</value>
+  </data>
+  <data name="RequestPaymentEmailTitle" xml:space="preserve">
+    <value>Thông báo yêu cầu thanh toán  </value>
+  </data>
+  <data name="RequestPayout" xml:space="preserve">
+    <value>Yêu cầu thanh toán</value>
+  </data>
+  <data name="RequireInfo" xml:space="preserve">
+    <value>Các trường có dấu &lt;span class="txtRequire"&gt;*&lt;/span&gt; phải được hoàn tất</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Nhập lại</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Tìm kiếm</value>
+  </data>
+  <data name="SecretCode" xml:space="preserve">
+    <value>Mật mã bí mật của tôi?</value>
+  </data>
+  <data name="SelectOne" xml:space="preserve">
+    <value>Chọn một</value>
+  </data>
+  <data name="Sep" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="SignUp" xml:space="preserve">
+    <value>Đăng ký</value>
+  </data>
+  <data name="SignUpMailSubject" xml:space="preserve">
+    <value>{0} Affiliate - Đơn của bạn</value>
+  </data>
+  <data name="SiteInfo" xml:space="preserve">
+    <value>Thông tin trang web</value>
+  </data>
+  <data name="SiteURL" xml:space="preserve">
+    <value>Địa chỉ trang web</value>
+  </data>
+  <data name="SiteURLIsRequired" xml:space="preserve">
+    <value>Địa chỉ trang web là bắt buộc</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Kích thước</value>
+  </data>
+  <data name="Sport" xml:space="preserve">
+    <value>Loại hình</value>
+  </data>
+  <data name="SportTeam" xml:space="preserve">
+    <value>Đội thể thao tôi thích nhất?</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>Quận</value>
+  </data>
+  <data name="StateIsRequired" xml:space="preserve">
+    <value>Quận là bắt buộc</value>
+  </data>
+  <data name="StatementHistory" xml:space="preserve">
+    <value>Nhật ký lệnh giao dịch</value>
+  </data>
+<<<<<<< HEAD
+	<data name="StatisticsFor" xml:space="preserve">
+    <value>Thống kê cho {0}-{1}</value>
+  </data>
+	<data name="StatisticsUpToNow" xml:space="preserve">
+    <value>Thống kê tất cả</value>
+=======
+  <data name="StatisticsFor" xml:space="preserve">
+    <value>Statistics For {0}-{1}</value>
+  </data>
+  <data name="StatisticsUpToNow" xml:space="preserve">
+    <value>Statistics Up To Now</value>
+>>>>>>> 672fe726030f050648654a11fc2ee4d0fa3fda29
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+<<<<<<< HEAD
+	<data name="SubCategory" xml:space="preserve">
+    <value>Danh mục phụ</value>
+=======
+  <data name="SubCategory" xml:space="preserve">
+    <value>Sub Category</value>
+>>>>>>> 672fe726030f050648654a11fc2ee4d0fa3fda29
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="SubjectIsRequired" xml:space="preserve">
+    <value>Chủ thể không hợp lệ</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Thực hiện</value>
+  </data>
+  <data name="TermsConditions" xml:space="preserve">
+    <value>Điều khoản &amp; Điều kiện</value>
+  </data>
+  <data name="TextBox" xml:space="preserve">
+    <value>Hộp Văn Bản</value>
+  </data>
+  <data name="TextLink" xml:space="preserve">
+    <value>Liên kết url</value>
+  </data>
+  <data name="Tier" xml:space="preserve">
+    <value>Cấp</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>Tới</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>Đầu trang </value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Tổng cộng</value>
+  </data>
+  <data name="TotalActivePlayers" xml:space="preserve">
+    <value>Tổng số người chơi có giao dịch</value>
+  </data>
+<<<<<<< HEAD
+	<data name="TotalClicks" xml:space="preserve">
+    <value>Tổng số lần truy cập</value>
+=======
+  <data name="TotalClicks" xml:space="preserve">
+    <value>Tổng số lần nhấp chuột</value>
+>>>>>>> 672fe726030f050648654a11fc2ee4d0fa3fda29
+  </data>
+  <data name="TotalDeposits" xml:space="preserve">
+    <value>Tổng tiền nạp vào</value>
+  </data>
+  <data name="TotalPlayers" xml:space="preserve">
+    <value>Tổng số người chơi</value>
+  </data>
+  <data name="TotalQualifiedActive" xml:space="preserve">
+    <value>Tổng số người chơi đạt chuẩn ({0})</value>
+  </data>
+  <data name="TrackingCode" xml:space="preserve">
+    <value>Mã theo dõi</value>
+  </data>
+  <data name="TrackingStatistics" xml:space="preserve">
+    <value>Thống kê theo dõi</value>
+  </data>
+<<<<<<< HEAD
+	<data name="TrafficStatistics" xml:space="preserve">
+    <value>Thống kê lưu lượng truy cập</value>
+=======
+  <data name="TrafficStatistics" xml:space="preserve">
+    <value>Traffic Statistics</value>
+>>>>>>> 672fe726030f050648654a11fc2ee4d0fa3fda29
+  </data>
+  <data name="Transaction" xml:space="preserve">
+    <value>Thắng/Thua chưa xử lý</value>
+  </data>
+  <data name="Turnover" xml:space="preserve">
+    <value>Tổng tiền đặt cược</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Loại giao dịch</value>
+  </data>
+<<<<<<< HEAD
+	<data name="UnauthorizedMsg" xml:space="preserve">
+    <value>Phiên làm việc của bạn đã bị hết hạn hoặc yêu cầu của bạn không được xác thực!</value>
+  </data>
+	<data name="UniqueClicks" xml:space="preserve">
+    <value>Số lần truy cập duy nhất</value>
+=======
+  <data name="UnauthorizedMsg" xml:space="preserve">
+    <value>Your session has timed out or your request is not authorized</value>
+  </data>
+  <data name="UniqueClicks" xml:space="preserve">
+    <value>Số lần nhấp chuột duy nhất</value>
+>>>>>>> 672fe726030f050648654a11fc2ee4d0fa3fda29
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Tên truy cập</value>
+  </data>
+  <data name="Validation" xml:space="preserve">
+    <value>Xác thực</value>
+  </data>
+  <data name="VerifyEmail" xml:space="preserve">
+    <value>Nhập lại địa chỉ email</value>
+  </data>
+  <data name="Winlost" xml:space="preserve">
+    <value>Tiền thắng thua của thành viên</value>
+  </data>
+  <data name="YourEmail" xml:space="preserve">
+    <value>Email của bạn</value>
+  </data>
+  <data name="Headlines" xml:space="preserve">
+    <value>Tin nóng</value>
+  </data>
+  <data name="ViewMore" xml:space="preserve">
+    <value>Xem thêm</value>
+  </data>
+  <data name="ErrAuthorized" xml:space="preserve">
+    <value>Bạn không được phép sử dụng chức năng này</value>
+    <comment>Muller Add 2013-07-18</comment>
+  </data>
+  <data name="UpdateAccSuccess" xml:space="preserve">
+    <value>Thông tin tài khoản của bạn đã được cập nhật thành công.</value>
+  </data>
+  <data name="ContactUsSuccess" xml:space="preserve">
+    <value>&lt;p&gt;Cảm ơn bạn đã liên hệ với chúng tôi. &lt;/p&gt;
+&lt;p&gt;Tin nhắn của bạn đã được gửi. Chúng tôi sẽ trả lời yêu cầu của bạn trong thời gian sớm nhất có thể. &lt;/p&gt;
+&lt;p&gt;Chúc bạn một ngày tốt lành! &lt;/p&gt;
+&lt;p&gt;Trân trọng, &lt;/p&gt;
+&lt;br /&gt;
+Nhóm hỗ trợ hội viên {0}</value>
+  </data>
+  <data name="WebsiteUrl" xml:space="preserve">
+    <value>Xin hãy nhập vào tên các trang web liên kết</value>
+    <comment>Muller add 2013-07-19</comment>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Xóa</value>
+    <comment>Muller add 2013-07-19</comment>
+  </data>
+  <data name="MoreSiteUrl" xml:space="preserve">
+    <value>Địa chỉ trang web {0} là bắt buộc</value>
+    <comment>Muller add 2013-07-22</comment>
+  </data>
+<<<<<<< HEAD
+	<data name="Msg160" xml:space="preserve">
+    <value>Người tạo không tồn tại trong hệ thống!</value>
+    <comment>add 7/19/2013</comment>
+  </data>
+	<data name="Msg161" xml:space="preserve">
+    <value>Nội dung mail không hợp lệ!</value>
+    <comment>add 7/19/2013</comment>
+  </data>
+	<data name="Msg162" xml:space="preserve">
+    <value>Tên người gửi không hợp lệ!</value>
+    <comment>add 7/19/2013</comment>
+  </data>
+	<data name="Msg163" xml:space="preserve">
+    <value>Địa chỉ email không hợp lệ!</value>
+    <comment>add 7/19/2013</comment>
+  </data>
+	<data name="Msg164" xml:space="preserve">
+    <value>Chủ đề email không hợp lệ!</value>
+    <comment>add 7/19/2013</comment>
+  </data>
+	<data name="Msg165" xml:space="preserve">
+    <value>IP của người gửi không hợp lệ!</value>
+    <comment>add 7/19/2013</comment>
+  </data>
+	<data name="Msg166" xml:space="preserve">
+    <value>Tên trình duyệt không hợp lệ!</value>
+    <comment>add 7/19/2013</comment>
+  </data>
+	<data name="Msg167" xml:space="preserve">
+    <value>Mã xác nhận phiên làm việc của bạn không hợp lệ!</value>
+    <comment>add 7/19/2013</comment>
+  </data>
+	<data name="Msg168" xml:space="preserve">
+    <value>Bạn chỉ được phéo gửi tối đa 20 email trong vòng 10 phút!</value>
+    <comment>add 7/19/2013</comment>
+  </data>
+	<data name="Msg169" xml:space="preserve">
+    <value>Có lỗi trong quá trình gửi email!</value>
+    <comment>add 7/19/2013</comment>
+  </data>
+	<data name="Msg170" xml:space="preserve">
+    <value>Rất tiếc! Tài khoản này đang có 1 giao dịch yêu cầu rút tiền chưa được xử lý! Vui lòng cập nhật giao dịch này trước!</value>
+    <comment>add 7/19/2013</comment>
+  </data>
+	<data name="Msg171" xml:space="preserve">
+    <value>Thông tin người dùng không hợp lệ. Quá trình cập nhật bị thất bại!</value>
+    <comment>add 7/19/2013</comment>
+  </data>
+	<data name="Msg172" xml:space="preserve">
+    <value>Có lỗi xảy ra trong quá trình cập nhật dữ liệu!</value>
+=======
+  <data name="Msg160" xml:space="preserve">
+    <value>Invalid creator!</value>
+    <comment>add 7/19/2013</comment>
+  </data>
+  <data name="Msg161" xml:space="preserve">
+    <value>Invalid mail content!</value>
+    <comment>add 7/19/2013</comment>
+  </data>
+  <data name="Msg162" xml:space="preserve">
+    <value>Invalid sender name!</value>
+    <comment>add 7/19/2013</comment>
+  </data>
+  <data name="Msg163" xml:space="preserve">
+    <value>Invalid  email address!</value>
+    <comment>add 7/19/2013</comment>
+  </data>
+  <data name="Msg164" xml:space="preserve">
+    <value>Invalid  mail subject!</value>
+    <comment>add 7/19/2013</comment>
+  </data>
+  <data name="Msg165" xml:space="preserve">
+    <value>Invalid sender ip!</value>
+    <comment>add 7/19/2013</comment>
+  </data>
+  <data name="Msg166" xml:space="preserve">
+    <value>Invalid browser name!</value>
+    <comment>add 7/19/2013</comment>
+  </data>
+  <data name="Msg167" xml:space="preserve">
+    <value>Invalid ASP.NET session id!</value>
+    <comment>add 7/19/2013</comment>
+  </data>
+  <data name="Msg168" xml:space="preserve">
+    <value>You are just allowed to send maximum of  20 emails per 10 minutes!</value>
+    <comment>add 7/19/2013</comment>
+  </data>
+  <data name="Msg169" xml:space="preserve">
+    <value>Error! Insert email unsuccessfully!</value>
+    <comment>add 7/19/2013</comment>
+  </data>
+  <data name="Msg170" xml:space="preserve">
+    <value>Oops, this account is having 1 pending pay out request , please update this transaction first!</value>
+    <comment>add 7/19/2013</comment>
+  </data>
+  <data name="Msg171" xml:space="preserve">
+    <value>Invalid user infomation. Update process is unsuccessful!</value>
+    <comment>add 7/19/2013</comment>
+  </data>
+  <data name="Msg172" xml:space="preserve">
+    <value>Error occurs. Update process is unsuccessful!</value>
+>>>>>>> 672fe726030f050648654a11fc2ee4d0fa3fda29
+    <comment>add 7/19/2013</comment>
+  </data>
+  <data name="ApplicationForm" xml:space="preserve">
+    <value>mẫu đơn</value>
+    <comment>add 24/07/2013</comment>
+  </data>
+  <data name="PleaseDirectAnyComment" xml:space="preserve">
+    <value>Vui lòng chuyển mọi nhận xét hoặc câu hỏi tới {0} hoặc sử dụng mẫu dưới đây.</value>
+    <comment>add 24/7/2013</comment>
+  </data>
+  <data name="Copyright" xml:space="preserve">
+    <value>Bản quyền</value>
+    <comment>add 24/7/2013</comment>
+  </data>
+  <data name="PasswordPattern" xml:space="preserve">
+    <value>Mật khẩu phải có ít nhất 6 ký tự, bao gồm ít nhất 2 chữ cái và ít nhất 2 chữ số. (ví dụ: pass22)</value>
+  </data>
+<<<<<<< HEAD
+	<data name="FromDateIsRequired" xml:space="preserve">
+    <value>Vui lòng nhập ngày bắt đầu</value>
+  </data>
+	<data name="ToDateIsRequired" xml:space="preserve">
+    <value>Vui lòng nhập vào ngày kết thúc!</value>
+=======
+  <data name="FromDateIsRequired" xml:space="preserve">
+    <value>From date is required</value>
+  </data>
+  <data name="ToDateIsRequired" xml:space="preserve">
+    <value>To date is required</value>
+>>>>>>> 672fe726030f050648654a11fc2ee4d0fa3fda29
+  </data>
+  <data name="BestViewIn" xml:space="preserve">
+    <value>Xem tốt nhất tại</value>
+    <comment>add 25/7/2013</comment>
+  </data>
+<<<<<<< HEAD
+	<data name="DailyEarningsDetail" xml:space="preserve">
+    <value>Chi tiết doanh thu hằng ngày</value>
+=======
+  <data name="DailyEarningsDetail" xml:space="preserve">
+    <value>Daily Earnings Detail</value>
+>>>>>>> 672fe726030f050648654a11fc2ee4d0fa3fda29
+  </data>
+  <data name="HotNews" xml:space="preserve">
+    <value>Tin nóng</value>
+  </data>
+  <data name="CopyrightPacificSeaInvests" xml:space="preserve">
+    <value>Bản quyền {0} Pacific Sea Invests</value>
+  </data>
+  <data name="CustomizedBanners" xml:space="preserve">
+    <value>Tùy Chỉnh Biểu Ngữ</value>
+  </data>
+  <data name="PromotionalDescriptions" xml:space="preserve">
+    <value>Mô Tả Quảng Cáo</value>
+  </data>
+  <data name="Sportsbook" xml:space="preserve">
+    <value>Thể thao</value>
+  </data>
+  <data name="EnglishSupport" xml:space="preserve">
+    <value>Tiếng Anh</value>
+  </data>
+  <data name="ThaiSupport" xml:space="preserve">
+    <value>Tiếng Thái</value>
+  </data>
+  <data name="VietnameseSupport" xml:space="preserve">
+    <value>Tiếng Việt</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Quay lại</value>
+  </data>
+  <data name="RegisSuccess" xml:space="preserve">
+    <value>Cảm ơn bạn đã gửi đơn.&lt;br/&gt;&lt;br/&gt;Các trang web và thông tin về đơn của bạn sẽ được nhóm {0} Affiliate xem xét để đảm bảo rằng nội dung là phù hợp để quảng cáo sản phẩm của chúng tôi.&lt;br/&gt;&lt;br/&gt;Trong vòng 5 ngày, chúng tôi sẽ có thể cung cấp cho bạn quyết định liên quan đến đơn của bạn. Nếu bạn được chấp thuận, bạn sẽ có toàn quyền truy cập vào chương trình hội viên của chúng tôi.&lt;br /&gt;&lt;br /&gt;Trân trọng!&lt;br /&gt;&lt;br /&gt;Nhóm quản lý hội viên {0}.</value>
+  </data>
+  <data name="ApplicationUnde" xml:space="preserve">
+    <value>Đơn đăng ký đang được xem xét</value>
+  </data>
+<<<<<<< HEAD
+	<data name="January" xml:space="preserve">
+		<value>Tháng 1</value>
+	</data>
+	<data name="February" xml:space="preserve">
+		<value>Tháng 2</value>
+	</data>
+	<data name="March" xml:space="preserve">
+		<value>Tháng 3</value>
+	</data>
+	<data name="April" xml:space="preserve">
+		<value>Tháng 4</value>
+	</data>
+	<data name="June" xml:space="preserve">
+		<value>Tháng 6</value>
+	</data>
+	<data name="July" xml:space="preserve">
+		<value>Tháng 7</value>
+	</data>
+	<data name="August" xml:space="preserve">
+		<value>Tháng 8</value>
+	</data>
+	<data name="September" xml:space="preserve">
+		<value>Tháng 9</value>
+	</data>
+	<data name="October" xml:space="preserve">
+		<value>Tháng 10</value>
+	</data>
+	<data name="November" xml:space="preserve">
+		<value>Tháng 11</value>
+	</data>
+	<data name="December" xml:space="preserve">
+		<value>Tháng 12</value>
+	</data>
+	<data name="MustBeNumber" xml:space="preserve">
+		<value>Bạn phải nhập số vào ô này!</value>
+	</data>
+	<data name="LandingPagesDetail" xml:space="preserve">
+		<value>Chi tiết trang thông tin</value>
+	</data>
+=======
+  <data name="January" xml:space="preserve">
+    <value>Tháng 1</value>
+  </data>
+  <data name="February" xml:space="preserve">
+    <value>Tháng 2</value>
+  </data>
+  <data name="March" xml:space="preserve">
+    <value>Tháng 3</value>
+  </data>
+  <data name="April" xml:space="preserve">
+    <value>Tháng 4</value>
+  </data>
+  <data name="June" xml:space="preserve">
+    <value>Tháng 6</value>
+  </data>
+  <data name="July" xml:space="preserve">
+    <value>Tháng 7</value>
+  </data>
+  <data name="August" xml:space="preserve">
+    <value>Tháng 8</value>
+  </data>
+  <data name="September" xml:space="preserve">
+    <value>Tháng 9</value>
+  </data>
+  <data name="October" xml:space="preserve">
+    <value>Tháng 10</value>
+  </data>
+  <data name="November" xml:space="preserve">
+    <value>Tháng 11</value>
+  </data>
+  <data name="December" xml:space="preserve">
+    <value>Tháng 12</value>
+  </data>
+  <data name="MustBeNumber" xml:space="preserve">
+    <value>The field must be a number.</value>
+  </data>
+  <data name="LandingPagesDetail" xml:space="preserve">
+	<value>Chi tiết trang thông tin</value>
+  </data>
+  <data name="Statistics" xml:space="preserve">
+    <value>Thống kê</value>
+  </data>
+  <data name="CustomerInfo" xml:space="preserve">
+    <value>Customer Information</value>
+  </data>
+>>>>>>> 672fe726030f050648654a11fc2ee4d0fa3fda29
+</root>

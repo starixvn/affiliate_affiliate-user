@@ -1,0 +1,220 @@
+﻿@{
+    ViewBag.Title = Lang.MediaGallery;
+    Layout = @String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
+}
+@model MarketingViewModel
+@using (Html.BeginForm("MediaGallery", "Account"))
+{
+    <div class="span12 box-insite">
+        <div class="top">
+            <div class="in-top">
+                @Lang.MediaGallery
+            </div>
+            <div class="in-right">
+            </div>
+        </div>
+        <div class="content">
+            <div class="block">
+                <div class="title-block">
+                    @Lang.Search
+                </div>
+                <div class="line-block">
+                </div>
+                <div class="content-block">
+                    <table cellspacing="2" cellpadding="2" border="0" class="table-striped">
+                        <tr>
+                            <td width="100px">@Lang.Category
+                            </td>
+                            <td>
+                                @RazorHelper.DropDownListCategory(Model.CategoryList.ToList(), Model.CategorySelected, new Dictionary<string, object> { { "id", "slCategory" }, { "name", "BannerCategory" } })
+                            </td>
+                        </tr>
+                        <tr id="trSubCategory" style="height: 25px; display: none;">
+                            <td>@Lang.SubCategory
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>@Lang.Language
+                            </td>
+                            <td>
+                                @RazorHelper.DropDownListLanguage(Model.BaseLanguages.ToList(), Model.LanguageSelected, new Dictionary<string, object> { { "id", "slLanguage" }, { "name", "Language" } })
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>@Lang.Currency
+                            </td>
+                            <td>
+                                @RazorHelper.DropDownListCurrency(Model.CurrencyList.ToList(), Model.CurrencySelected, new Dictionary<string, object> { { "id", "slCurrency" }, { "name", "Currency" } })
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>@Lang.Type
+                            </td>
+                            <td>
+                                @RazorHelper.DropDownListMediaType(Model.TypeList.ToList(), Model.TypeSelected, new Dictionary<string, object> { { "id", "slImageType" }, { "name", "ImageType" } })
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>@Lang.Size
+                            </td>
+                            <td>
+                                @RazorHelper.DropDownListMediaSize(Model.SizeList.ToList(), Model.SizeSelected, new Dictionary<string, object> { { "id", "slSize" }, { "name", "Size" } })
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            </td>
+                            <td style="height: 35px;">
+                                <input type="button" class="button" value="@Lang.Search" id="btnSearch" name="btnSearch" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="title-block">
+                    @Lang.TextLink
+                </div>
+                <div class="line-block">
+                </div>
+                <div class="content-block">
+                    <table cellspacing="2" cellpadding="2" border="0" class="table-striped">
+                        <tr>
+                            <td width="100px" style="white-space: nowrap;">@Lang.AvailableDomains
+                            </td>
+                            <td>
+                                @RazorHelper.DropDownListDomain(Model.DomainList.ToList(), Model.DomainSelected, new Dictionary<string, object> { { "id", "slDomain" }, { "name", "Domain" } })
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>@Lang.LinkTo
+                            </td>
+                            <td>
+                                @RazorHelper.DropDownListLink(Model.LinkList.ToList(), Model.LinkSelected, new Dictionary<string, object> { { "id", "slLinkTo" }, { "name", "LinkTo" } })
+                                &nbsp;&nbsp;<input type="button" class="button" value="@Lang.GenerateLink" id="btnGenerateLink" name="btnGenerateLink" />
+                            </td>
+                        </tr>
+                        @foreach (var lang in Model.BaseLanguages.ToList())
+                        {
+                            <tr>
+                                <td>@lang.LanguageName
+                                </td>
+                                <td>@RazorHelper.GenerateLink(AppSettings.LinkFormat, Model.CustomerID, Model.DomainSelected, Model.LinkSelected, lang.LanguageId)
+                                </td>
+                            </tr>
+                        }
+                        <tr>
+                            <td>@Lang.LinkDefault
+                            </td>
+                            <td>@RazorHelper.GenerateLink(AppSettings.LinkFormat, Model.CustomerID, Model.DomainSelected, Model.LinkSelected, Model.PreferLanguage)
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="title-block">
+                    @Lang.Banner
+                </div>
+                <div class="line-block">
+                </div>
+                @if (Model.BannerList.Any())
+                {
+                    var bannerList = Model.BannerList.ToPagedList(Model.PageIndex, Model.PageSize, Model.TotalPages * Model.PageSize);
+                    <div class="content-block">
+                        <div class="pagesize pull-right">
+                            <span class="items-per-page">@Lang.PageSize
+                                @Html.DropDownList("items-per-page", new List<SelectListItem> {
+					                new SelectListItem { Value = "10", Text = "10", Selected = "10" == Model.PageSize.ToString() },
+					                new SelectListItem { Value = "20", Text = "20", Selected = "20" == Model.PageSize.ToString() },
+					                new SelectListItem { Value = "50", Text = "50", Selected = "50" == Model.PageSize.ToString() },
+                                    new SelectListItem { Value = "100", Text = "100", Selected = "100" == Model.PageSize.ToString()},
+                                    new SelectListItem { Value = "200", Text = "200", Selected = "200" == Model.PageSize.ToString()}
+				                }, new { id = string.Empty, @class = "items-per-page", @data_controller = "/Account/MediaGallery" })</span>
+                        </div>
+                        <div class="paging-info clear">
+                            @Html.Pager(bannerList.PageSize, bannerList.PageNumber, bannerList.TotalItemCount)
+                        </div>
+                        <div style="overflow-x: scroll;">
+                            <table class="aff-table" cellspacing="1" cellpadding="1" style="width: 100%">
+                                <tbody id="result">
+                                    @foreach (var banner in bannerList)
+                                    {
+                                        string signUpLink = RazorHelper.GenerateLink(AppSettings.LinkFormat, Model.CustomerID, Model.DomainSelected, Model.LinkSelected, banner.LanguageCode).ToHtmlString();
+                                        string domainPrefix = Model.DomainSelected.Split('.').First().Trim();
+                                        string bannerDomain = "http://" + Model.DomainSelected.Replace(domainPrefix, "banner");
+                                        string srcVal = AppSettings.IsTesting ?
+                                            AppSettings.BannerDomain + banner.Content :
+                                            bannerDomain + "/Content/Banners/" + banner.Content;
+
+                                        string scriptVal = AppSettings.IsTesting ?
+                                            AppSettings.BannerScriptUrl + banner.BannerId.ToString() :
+                                            bannerDomain + "/MarketingTools/GetScript/" + banner.BannerId.ToString();
+
+                                        string imgUrl = HttpContext.Current.Request.Url.AbsoluteUri.Replace(HttpContext.Current.Request.Url.AbsolutePath, string.Empty);
+                                        imgUrl = HttpContext.Current.Request.Url.Host;
+                                        imgUrl = "http://" + imgUrl.Replace(imgUrl.Split('.').First(), "banner") + "/Content/Banners/" + banner.Content;
+                                        
+                                        string[] size = banner.Size.Split('x');
+
+                                        if (string.IsNullOrEmpty(banner.ImageType) || banner.ImageType.Equals("Image", StringComparison.OrdinalIgnoreCase))
+                                        {
+                                        <tr>
+                                            <td>
+                                                <a class="banner-link" data-link="@signUpLink" href='javascript:;'>
+                                                    <img src='@imgUrl' border='0' alt="" style="max-width: 620px" />
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        }
+                                        else
+                                        {
+                                        <tr>
+                                            <td>
+                                                <a class="hand banner-link" data-link="@signUpLink" href="javascript:;">
+                                                    <object codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0'
+                                                            classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' width='@size[0]' height='@size[1]'>
+                                                        <param value='@imgUrl' name='movie' />
+                                                        <param value='high' name='quality' />
+                                                        <param name='wmode' value='transparent' />
+                                                        <param name='flashvars' value='@Model.CustomerID' />
+                                                        <embed type='application/x-shockwave-flash' pluginspage='http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash'
+                                                                wmode='transparent' quality='high' src='@imgUrl' width='@size[0]' height='@size[1]' />
+                                                    </object>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        }
+                                        <tr>
+                                            <td>
+                                                <input type='text' style='width: 610px' onclick='this.focus();this.select();'
+                                                    value = "&lt;a class='banner_@(AppSettings.SystemName + banner.BannerId.ToString())' onclick='window.open(&quot;@signUpLink?ref=&quot; + location.href,&quot;_blank&quot;); return false;' href='@signUpLink' target='_blank' id=&quot;bannerContainer&quot;&gt;&lt;/a&gt;&lt;script src=&quot;@scriptVal?signuplink=@signUpLink&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;" />
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="paging-info clear">
+                            @Html.Pager(bannerList.PageSize, bannerList.PageNumber, bannerList.TotalItemCount)
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <table class="aff-table" cellspacing="1" cellpadding="1" style="width: 100%">
+                        <tbody>
+                            <tr>
+                                <td class="text-center">@Lang.NoInformation
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                }
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="subCategory" value="@Model.SubCategorySelected" />
+}
+@section scriptspage
+{
+    <script src="~/Scripts/site/Marketing.js" type="text/javascript"></script>
+}

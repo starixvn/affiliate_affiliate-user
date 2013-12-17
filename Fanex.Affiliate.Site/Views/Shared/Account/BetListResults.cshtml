@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = Lang.BetListResults;
+    Layout = "~/Views/Shared/_LayoutPopup.cshtml";
+}
+<style type="text/css">
+    .popup .container-fluid
+    {
+        width : auto !important;
+    }
+    
+</style>
+
+@Html.Raw(ViewBag.Data)

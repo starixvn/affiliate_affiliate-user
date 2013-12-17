@@ -1,0 +1,62 @@
+﻿// ----------------------------------------------------------------------
+// <copyright file="ForgetPasswordCriteria.cs" company="Nexcel Solutions Vietnam">
+//     Copyright (coffee) Nexcel Solutions Vietnam. All rights reserved.
+// </copyright>
+// ------------------------------------------------------------------------
+// <history>
+//   <change who="Long.Luu" date="2013/06/24">Created</change>
+//   <change who="" date=""></change>
+// </history>
+
+namespace Fanex.Affiliate.Criterias
+{
+    using System.ComponentModel.DataAnnotations;
+    using System.Diagnostics.CodeAnalysis;
+    using Fanex.Affiliate.Resources;
+    using NAP.Framework.Data;
+
+    /// <summary>
+    /// Forget Password Criteria.
+    /// </summary>
+    public class ForgetPasswordCriteria : CriteriaBase
+    {
+        [Required(ErrorMessageResourceType = typeof(Lang), ErrorMessageResourceName = "Msg120")]
+        [Display(Name = "Email", ResourceType = typeof(Lang))]
+        [RegularExpression(
+            @"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$",
+            ErrorMessageResourceType = typeof(Lang),
+            ErrorMessageResourceName = "Msg119")]
+        [DataType(DataType.EmailAddress)]
+        public string Email { get; set; }
+
+        [Required(ErrorMessageResourceType = typeof(Lang), ErrorMessageResourceName = "MsgEmptyCaptcha")]
+        public string ValidCode { get; set; }
+
+        public string Language { get; set; }
+
+        public int AffID { get; set; }
+
+        public string Username { get; set; }
+
+        public string Firstname { get; set; }
+
+        public string Lastname { get; set; }
+
+        public string PreferredLanguage { get; set; }
+
+        public bool MailOption { get; set; }
+
+        public string IP { get; set; }
+
+        public int ErrCode { get; set; }
+
+        /// <summary>
+        /// Get the reference SP's Name which is specified in Config file.
+        /// </summary>
+        /// <returns>Store Procedure.</returns>
+        public override string GetSettingKey()
+        {
+            return "Aff_AffiliateForgotPwd";
+        }
+    }
+}

@@ -1,0 +1,166 @@
+﻿@{
+    ViewBag.Title = Lang.DailyEarnings;
+    Layout = string.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
+}
+@model DailyEarningsKioskViewModel
+@section css
+{
+    <link href="@Url.Content(string.Format("~/Content/themes/theme{0}/jquery.ui.datepicker.css", AppSettings.Layout))" rel="stylesheet" />
+    <link href="@Url.Content(string.Format("~/Content/themes/theme{0}/calendar.less", AppSettings.Layout))" rel="stylesheet" />
+}
+@using (Html.BeginForm())
+{
+    <div class="span12 box-insite">
+        <div class="top">
+            <div class="in-top">
+                @Lang.DailyEarnings
+            </div>
+            <div class="in-right">
+            </div>
+        </div>
+        <div class="content">
+            @Html.ValidationSummary()
+            <div class="block">
+                <div class="content-block">
+                    <div class="box-header">
+                        <div class="row">
+                            <div class="cell">
+                                <div class="label">@Lang.Product:</div>
+                                <div class="editor">@RazorHelper.DropDownListProduct(Model.ListProduct, Model.ProductId, new Dictionary<string, object> { { "id", "ProductId" }, { "style", "width:100px;" } })</div>
+                            </div>
+                            <div class="cell">
+                                <div class="label">@Lang.From:</div>
+                                <div class="editor">
+                                    @Html.TextBoxFor(m => m.FromDate, "{0:d}", new {@class = "datepicker"})
+                                    <div class="icon-calendar">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <div class="label">@Lang.To:</div>
+                                <div class="editor">
+                                    @Html.TextBoxFor(m => m.ToDate, "{0:d}", new {@class = "datepicker"})
+                                    <div class="icon-calendar">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <div class="editor">
+                                    <input id="submit" type="submit" value="@Lang.Submit" class="button"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="content-block no-padding">
+                    <table class="table odd-even list no-margin">
+                        <thead>
+                            <tr class="gradient-header">
+                                <th style="width: 15px;">
+                                    &nbsp;
+                                </th>
+                                <th style="width: 80px;">
+                                    @Lang.Date
+                                </th>
+                                <th style="width: 100px;">
+                                    @string.Format("{0} ({1})", Lang.Deposit, FormaterCurrency.GetCurrencySymbol())
+                                </th>
+                                <th style="width: 100px;">
+                                    @string.Format("{0} ({1})", Lang.Turnover, FormaterCurrency.GetCurrencySymbol())
+                                </th>
+                                <th style="width: 100px;">
+                                    @string.Format("{0} ({1})", Lang.Winlost, FormaterCurrency.GetCurrencySymbol())
+                                </th>
+                                <th style="width: 70px;">
+                                    @string.Format("{0} ({1})", Lang.Bonus, FormaterCurrency.GetCurrencySymbol())
+                                </th>
+                                <th>
+                                    @string.Format("{0} ({1})", Lang.Adjustment, FormaterCurrency.GetCurrencySymbol())
+                                </th>
+                            </tr>
+                        </thead>
+                        @if (Model.ListDailyEarning.Any())
+                        {
+                            <tbody>
+                                @{
+                                    int count = 1;
+                                    var i = 0;
+                                    decimal totalDeposit = 0;
+                                    decimal totalTurnover = 0;
+                                    decimal totalWinlost = 0;
+                                    decimal totalBonus = 0;
+                                    decimal totalAdjustment = 0;
+
+                                    foreach (var dailyEarning in Model.ListDailyEarning)
+                                    {
+                                        i++;
+                                        totalDeposit += dailyEarning.Deposit;
+                                        totalTurnover += dailyEarning.Turnover;
+                                        totalWinlost += dailyEarning.MemberWinlost;
+                                        totalBonus += dailyEarning.Bonus;
+                                        totalAdjustment += dailyEarning.Adjustment;
+
+                                        <tr class="@(i%2 == 0 ? "even" : "odd")">
+                                            <td class="text-center">@count.ToString()
+                                            </td>
+                                            @if (AppSettings.IsShowDetailDailyEarnings)
+                                            { 
+                                                <td class="text-center">
+                                                    @Html.Raw(string.Format("<a href='DailyEarningsDetail?product={0}&winlostdate={1}'>{2}</a>", Model.ProductId, dailyEarning.WinLostDate, @Common.ConvertDateTime(dailyEarning.WinLostDate, "-", true, false)))
+                                                </td>
+                                            }
+                                            else
+                                            {
+                                                <td class="text-center">
+                                                    @Common.ConvertDateTime(dailyEarning.WinLostDate, "-", true, false)
+                                                </td>
+                                            }
+                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarning.Deposit))
+                                            </td>
+                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarning.Turnover))
+                                            </td>
+                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarning.MemberWinlost))
+                                            </td>
+                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarning.Bonus))
+                                            </td>
+                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarning.Adjustment))
+                                            </td>
+                                        </tr>
+
+                                            count++;
+                                    }
+
+                                    <!-- Summary Row if (Model.ProductId != 2 -->
+                                        <tr class="gradient-summary">
+                                            <td colspan="2" class="text-right">@Lang.Total
+                                            </td>
+                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(totalDeposit))
+                                            </td>
+                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(totalTurnover))
+                                            </td>
+                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(totalWinlost))
+                                            </td>
+                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(totalBonus))
+                                            </td>
+                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(totalAdjustment))
+                                            </td>
+                                        </tr>
+                                }
+                            </tbody>
+                        }
+                        else
+                        {
+                            <tfoot>
+                                <tr>
+                                    <td colspan="7" style="text-align: center;">@Lang.NoInformation
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+}

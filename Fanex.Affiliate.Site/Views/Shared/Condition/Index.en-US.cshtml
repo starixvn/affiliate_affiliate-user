@@ -1,0 +1,257 @@
+﻿@{
+    ViewBag.Title = Lang.TermsConditions;
+    Layout = @String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
+}
+
+@{
+    var classThai = AppSession.Language.Equals("th-TH") ? AppSession.Language : string.Empty;
+    var classType = string.Format("class='span12 box-insite {0}'", classThai);
+}
+
+<div @Html.Raw(classType)>
+    <div class="top">
+        <div class="in-top">Terms & Conditions</div>
+        <div class="in-right">
+        </div>
+    </div>
+    <div class="content">
+        <div class="block">
+            <div class="content-block">
+                @string.Format("To become an affiliate of our Affiliate Program you must register as an affiliate by completing the online form. By registering as an affiliate of the {0} Affiliate Program or downloading banner code and placing it on your website or websites, email messages or other formats, you are deemed to have agreed to be bound by all the terms and conditions set out in this agreement.", AppSettings.SystemName)
+                <p></p>
+                @string.Format("IF YOU DECIDE NOT TO ACCEPT ALL OF THE TERMS AND CONDITIONS OF THIS AGREEMENT, PLEASE DO NOT DOWNLOAD BANNER CODE, TEXT LINK CODE, PROMOTIONAL COPY OR ANY INFORMATION PERTAINING TO {0}", AppSettings.SystemName)
+                <p></p>
+                We reserve the right to terminate this Agreement if we determine that your site is unsuitable. Unsuitable sites may include those that: promote sexually explicit materials, are targeted towards children or minors, promote violence, promote discrimination based on race, sex, religion, nationality, disability, sexual orientation, promote illegal activities, or violate intellectual property rights ("IP rights").
+                <p></p>
+                @string.Format("As a policy, {0} shall not accept an online application for registration as an affiliate if you advertise with Internet Protocol (IP) addresses located in or originating from within the geographical jurisdiction of the United Kingdom.", AppSettings.SystemName)
+                <p></p>
+                @string.Format("This Agreement details all the terms and conditions of membership to the {0} Affiliate Program. \"You\", the \"affiliate\" refers to you, the individual, group or corporate entity registering with us as an affiliate under this Agreement, and shall be deemed to include any employees, officers, directors, shareholders, owners, controlling parties and affiliated individuals and entities (and \"your\" has a corresponding meaning).", AppSettings.SystemName)
+            </div>
+        </div>
+        <div class="block">
+             <div class="title-block">
+                1. Responsibilities of the Affiliate <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <ol class="content-block">
+                <li>@string.Format("As an Affiliate you are responsible for promoting {0} by implementing the advertising, banners and tracking URL's on your websites, e-mails or other communications.", AppSettings.SystemName)</li> 
+                <li>@string.Format("You will agree to register and maintain correct and truthful contact information with {0}.", AppSettings.SystemName)</li>
+                <li>@string.Format("You will present only content and topics on your site which are pre-approved in writing by {0}. Content that is deemed unsuitable in our sole discretion will result in the affiliate Agreement being terminated immediately.", AppSettings.SystemName)</li>
+                <li>@string.Format("You will be solely responsible for the development, operation, and maintenance of your site and for all materials that appear on your site and at your own cost. For example, you will be solely responsible for ensuring that materials posted on your site are not libelous or otherwise illegal or shall infringe the IP rights of third parties. Since we do not have control over your own site, we disclaim all liability for these matters. Further, you will indemnify and hold us harmless from all claims, damages, and expenses (including, without limitation, attorney's fees) relating to the development, operation, maintenance, and contents of your site. This provision on indemnification is without prejudice to our separate action or claim against you under applicable laws.")</li>
+            </ol>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                2. Affiliation Guidelines <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <ol class="content-block">
+                <li>@string.Format("Only approved and properly tagged creative materials, supplied by us from time to time, may be used to promote {0}. Advertorials and personal endorsements are allowed but all materials not designed by {0} need to be approved in writing; such approval shall not be unreasonably withheld.", AppSettings.SystemName)</li>
+                <li>@string.Format("You may not modify or use for any other purpose any IP rights, banners or other creative material supplied by us without the written prior consent of {0}. All copyright or IP rights notices on any material supplied or approved by {0} must remain and not be modified or eliminated.", AppSettings.SystemName)</li>
+                <li>@string.Format("By agreeing to participate in the {0} Affiliate Program, you are agreeing to download banners, text or promotional material and place it on your site, utilize it within e-mail, direct marketing using your affiliate URL or print. These methods are the only approved methods by which you may advertise our products and services.", AppSettings.SystemName)</li>
+                <li>Banners and links may not be placed within unsolicited e-mail, unauthorized newsgroup postings, or chat rooms or through the use of "bots". Traffic generated illegally will not be counted and may result in the termination of your affiliate account with us.</li>
+                <li>@string.Format("We will terminate this Agreement immediately if there is any form of spamming on your behalf or if you discredit {0} through false advertising, written or uttered words.", AppSettings.SystemName)</li>
+                <li>@string.Format("You shall not make any claims, representations, or warranties in connection with {0} and you shall have no authority to and shall not bind {0} to any obligations.", AppSettings.SystemName)</li>
+                <li>@string.Format("Without our prior written approval, you will only use our approved banners and links and will not alter their appearance nor refer to us in any promotional materials. The appearance and syntax of the hypertext transfer links are designed and designated by us and constitute the only authorized and permitted representation of {0}.", AppSettings.SystemName)</li>
+                <li>@string.Format("You will not knowingly benefit from known or suspected traffic not generated in good faith whether or not it actually causes {0} damage. Should fraudulent activity arise through a person directed to a site via your link, we retain the right to retract the commissions paid to you at any time. Our decision in this regard will be final and no correspondence will be entered into. We reserve the right to retain all amounts due to you under this Agreement if we have reasonable cause to believe that such traffic has been caused with your knowledge. Even if you have not knowingly generated such traffic, we reserve the right to withhold affiliate commissions with respect to such.", AppSettings.SystemName)</li>
+                <li>@string.Format("Affiliates are prohibited from playing at any of the sportsbooks promoted by {0} through their own affiliate link or from the affiliate link of an associate who shares all or part of the commission with the affiliate or a third party. This shall include any individuals or playing groups from which an Affiliate receives compensation or remuneration from of any kind. In the event of violation of this section, {0} and the respective website that has been played with shall have the right to void all play and eliminate any earned commissions applicable from such play and eliminate the affiliate from our Affiliate Program terminating this Agreement and void any future play at {0}.", AppSettings.SystemName)</li>
+                <li>@string.Format("You are not allowed to concurrently maintain both affiliate and referral relationships with {0}. Violation of this provision grants {0} the right to unilaterally terminate either or both affiliate and/or referral relationships. A referral relationship refers to a relationship with {0} pursuant to our Refer-A-Friend Program (as setout and available in the Website).", AppSettings.SystemName)
+                    
+                </li>
+            </ol>
+        </div>
+        <div class="block">
+             <div class="title-block">
+                3. Affiliate Tagging <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <ol class="content-block">
+                <li>@string.Format("You are only responsible for directing customers to the {0} website.", AppSettings.SystemName)</li>
+                <li>@string.Format("Only properly tagged customers can be assigned to an affiliate. Should an affiliate tag be improperly inserted into the affiliate site or not properly received by the {0} web server the resulting customer registration and purchases will not be assigned to the affiliate. Therefore it is the responsibility of the affiliate to ensure that all links are properly tagged.", AppSettings.SystemName)</li>
+            </ol>
+        </div>
+        <div class="block">
+             <div class="title-block">
+                4. Revenue Sharing & Payment <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <ol class="content-block">
+                <li>@Html.Raw(string.Format("{0} will pay out a revenue share on the Commissionable Earnings generated by each customer, as defined by {0} Affiliate Program commission structure, provided that you maintain in your account as an affiliate, at least predefined number of Active Wagering Members in any given calendar month. Note that, different commission groups have different predefine numbers of Active Wagering Members. Please contact to administrator in {1} for more details.", AppSettings.SystemName, string.Format("<a href=mailto:{0}>{0}</a>", AppSettings.MailContact)))</li>
+                <li>@Html.Raw(string.Format("Active Wagering Members refers to customers that reach a minimum wagering turnover amount equivalent to {0}{1} each in any given calendar month. We may offer more currencies for the system, please contact to administrator in {2}.", AppSettings.DefaultCurrencySymbol, AppSettings.MinimumWithdrawalAmount,
+                    string.Format("<a href=mailto:{0}>{0}</a>", AppSettings.MailContact)))</li>
+                <li>@string.Format("Commissionable Earnings are calculated as {0} profit, less charge-back, complimentary money, free money offers and other incentives offered to the customer, derived from at least predefined number of Active Wagering Members in a calendar month.", AppSettings.SystemName)</li>
+                <li>Charge-back: A credit card holder discovers irregular transactions made on his/her Credit/Debit Card, which was not authorized by him/her. The credit card holder then requests his/her bank to reverse these charges. Charge backs relate to fraudulent use by a third party of the credit card holder's card or card number.</li>
+                <li>@string.Format("{0} Gross Win is the total of all amounts bet by at least predefined number of Active Wagering Members under your affiliate account in a calendar month, minus all amounts won by or paid to your Active Wagering Members.", AppSettings.SystemName)</li>
+                <li>Charge-backs are amounts deducted when a customer that is a credit card holder discovers irregular unauthorized charge-backs made on the customer’s Credit/Debit Card, and the credit card holder requests the bank to reverse these charges. Charge-backs may relate to, but are not limited to, fraudulent use by a third party of the credit card holder's card or card number.</li>
+                <li>Should the player process a charge back, the disputed or charged-back revenue will be forfeited and therefore deducted from the total balance due to you for the current month. Should this deduction of the accumulated revenue exceed your current amount due, your balance will then revert to a negative balance, and you will have to earn revenue to cover the charge-back before you can start earning revenue again.</li>
+                <li>@string.Format("A charge back will stay due until the revenue generated by your other players has covered the amount due. You acknowledge that {0} can only pay out a percentage of their actual profits, not fraudulent revenue.", AppSettings.SystemName)</li>
+                <li>@string.Format("Bonuses include complimentary money, free money offers, credits, sign-up bonuses, promotional amounts and other incentives credited to the account of customers. As customers have not actually purchased these amounts, {0} cannot pay commissions on the same.", AppSettings.SystemName)</li>
+                <li>@string.Format("Should you fail to be entitled to the Commissionable Earnings in accordance with Clauses 4.1, 4.2, and 4.3 above for failure to maintain at least predefined number of Active Wagering Members in a given month, you may be given (at {0}’s sole discretion) a grace period of two (2) months within which to comply. Upon compliance, your commission for the subject period not exceeding three (3) consecutive months will be consolidated to constitute your Commissionable Earnings for the same period. (at {0}’s sole discretion)", AppSettings.SystemName)</li>
+                <li>@string.Format("Commissionable earnings will be subject to commissions as calculated using the {0} Affiliate Program commission structure in force from time to time.", AppSettings.SystemName)</li>
+                <li>Negative earnings are carried forward to the next month. Should the affiliate close the month with a positive balance, payment will be issued if it meets the minimum requirements and commissions will be paid on the positive balance.</li>
+                <li>The Commissionable Earnings of the affiliate calculated based on commission structure will be earned on all transactions that the customer undertakes with the merchant, as long as the affiliate remains a member of this affiliate program.</li>
+                <li>@string.Format("Affiliates will not earn any commission from a member’s turnover or win/loss resulting from or connected with any horse racing and casino wagers using the {0} website.", AppSettings.SystemName)</li>
+            </ol>
+        </div>
+        <div class="block">
+             <div class="title-block">
+                5. Policies & Confidentiality <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <ol class="content-block">
+                <li>@string.Format("{0} assume ownership of the customer at point of first contact with the customer. You, as affiliate, act as a referring agent for {0}. We reserve the right to refuse customers (or to close their accounts) if necessary to comply with any requirements we may periodically establish.", AppSettings.SystemName)</li>
+                <li>By opening an account with a customer, that person or entity will become our Customers and, accordingly, all Client rules, policies, and operating procedures will apply to them.</li>
+                <li>During the term of this Agreement, you may be entrusted with confidential information relating to the business, operations, or underlying technology of our affiliate program (including, for example, referral fees earned by you under the program). You agree not to disclose or use the confidential information to third persons or outside parties unless you have our prior written consent and that you will use the confidential information only for purposes necessary to further the purposes of this Agreement. Your obligations with respect to confidential information shall survive the termination of this Agreement.</li>
+            </ol>
+        </div>
+        <div class="block">
+             <div class="title-block">
+                6. Limited License <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <ol class="content-block">
+                <li>We hereby grant to you a personal, non-exclusive, non-transferable limited license, during the term of this Agreement, to use our trademarks (licensed, in turn by us, from their owner) solely in connection with the display of the banners on your site.</li>
+                <li>By this Agreement, we grant you the non-exclusive right to direct customers to our sites and services, in accordance with the terms and conditions of this Agreement. This Agreement does not grant you an exclusive right or privilege to assist us in the provision of services arising from your referrals, and we reserve the right to contract with and obtain the assistance from other parties at any time to perform services of the same or similar nature as yours. You shall have no claims to referral fees or other compensation on business secured by or through persons or entities other than you.</li>
+                <li>This license cannot be sub-licensed, assigned or otherwise transferred by you. Your right to use the trademarks is limited to and arises only out of this license to use the banners. You shall not assert the invalidity, unenforceability, or contest the ownership of the trademarks in any action or proceeding of whatever kind or nature, and shall not take any action that may prejudice our or our licensor's rights in the trademarks, render the same generic, or otherwise weaken their validity or diminish their associated goodwill.</li>
+                <li>We reserve the right to revoke this license at any time and it shall have been deemed revoked at the termination of this Agreement, for any reason.</li>
+            </ol>
+        </div>
+        <div class="block">
+             <div class="title-block">
+                7. Legal Responsibility <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <ol class="content-block">
+                <li>Ownership and content of our sites remain our respective properties and shall not be deemed to have been transferred to the affiliate through any act or omission in respect of the affiliation Agreement.</li>
+                <li>Ownership, content and liability for affiliate sites are the sole responsibility of the affiliate. You will be solely responsible for the development, operation, and maintenance of your site and for all materials that appear on your site and at your own cost.</li>
+                <li>You will indemnify and hold us harmless from all claims, damages, and expenses (including, without limitation, attorneys' fees) relating to the development, operation, maintenance, and contents of your site. This provision on indemnification is without prejudice to our separate action or claim against you under applicable laws.</li>
+                <li>It is the affiliates's responsibility to follow the correct linking and tagging procedure to ensure new customer tracking and payment.</li>
+                <li>Presentation of our banners & content on affiliate's site is the responsibility of affiliate. The affiliate must ensure that our content is presented in accordance with our prescriptions.</li>
+                <li>Affiliate must ensure that any material posted on their site is legal and does not infringe copyright or violate any rights.</li>
+                <li>We may modify any of the terms and conditions contained in this Agreement, at any time and in our sole discretion, by posting a change notice or a new agreement on our site. Modifications may include, for example, changes in the scope of available referral fees, fee schedules, payment procedures, and referral program rules. IF ANY MODIFICATION IS UNACCEPTABLE TO YOU, YOUR ONLY RECOURSE IS TO TERMINATE THIS AGREEMENT. YOUR CONTINUED PARTICIPATION IN THE PROGRAM FOLLOWING OUR POSTING OF A CHANGE NOTICE OR NEW AGREEMENT ON OUR SITE WILL CONSTITUTE BINDING ACCEPTANCE OF THE CHANGE.</li>
+                <li>Spam - We do not condone Spam.
+                    <ol type="a">
+                        <li>@string.Format("Any form of Spam will result in your account being placed under review and all funds due being withheld pending an investigation into your account. You need to be aware that our clients are liable to incur expenses in dealing with Spam generated mail and these same expenses will be deducted from your account should our client seek recourse. In this instance the amount determined by the relative client will be fair and deemed final and acceptable based on good faith and such amount will be collectable by law and deemed to have been accepted by yourself as fair and reasonable and as agreed to by registration as an affiliate of {0}.", AppSettings.SystemName)</li>
+                        <li>Should these expenses not be covered by funds in your account we reserve the right to investigate other alternative means for obtaining payment for example: should your account have generated purchasing accounts we will hold payment of commission for these accounts until such a time as the account for damages has been cleared. Should your account not be active and be generating profit through commission payments we reserve the right to demand payment from the account holder.</li>
+                        <li>You and we are independent contractors, and nothing in this Agreement will create any partnership, joint venture, agency, franchise, sales representative, or employment relationship between the parties. You will have no authority to make or accept any offers or representations on our behalf. You will not make any statement, whether on your site or otherwise, that reasonably would contradict anything in this paragraph.</li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+        <div class="block">
+             <div class="title-block">
+                8. Miscellaneous <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <ol class="content-block">
+                <li>
+                    Assign-ability and Inurement <br />
+                    You may not assign this Agreement, by operation of law or otherwise, without our prior written consent. Subject to that restriction, this Agreement will be binding on, inure to the benefit of, and enforceable against you and us and our respective successors and assigns.
+                </li>
+                <li>
+                    Non-Waiver <br />
+                    Our failure to enforce your strict performance of any provision of this Agreement will not constitute a waiver of our right to subsequently enforce such provision or any other provision of this Agreement. NO MODIFICATIONS, ADDITIONS, DELETIONS OR INTERLINEATIONS OF THIS AGREEMENT ARE PERMITTED OR WILL BE RECOGNIZED BY US. None of our employees, officers or agents may verbally alter, modify or waive any provision of this Agreement.
+                </li>
+                <li>
+                    Remedies <br />
+                    Our rights and remedies hereunder shall not be mutually exclusive, i.e., the exercise of one or more of the provisions of this Agreement shall not preclude the exercise of any other provision. You acknowledge, confirm, and agree that damages may be inadequate for a breach or a threatened breach of this Agreement and, in the event of a breach or threatened breach of any provision of this Agreement, the respective rights and obligations of the parties may be enforceable by specific performance, injunction, or other equitable remedy. Nothing contained in this Agreement shall limit or affect any of our rights at law, or otherwise, for a breach or threatened breach of any provision of this Agreement, it being the intent of this provision to make clear that our respective rights and obligations shall be enforceable in equity as well as at law or otherwise.
+                </li>
+                <li>
+                    Severability / Waiver <br />
+                    Whenever possible, each provision of this Agreement shall be interpreted in such a manner as to be effective and valid under applicable law but, if any provision of this Agreement is held to be invalid, illegal or unenforceable in any respect, such provision will be ineffective only to the extent of such invalidity, or unenforceability, without invalidating the remainder of this Agreement or any provision hereof. No waiver will be implied from conduct or failure to enforce any rights and must be in writing to be effective.
+                </li>
+            </ol>
+        </div>
+        <div class="block">
+             <div class="title-block">
+                9. Term & Termination <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <ol class="content-block">
+                <li>The term of this Agreement will begin when you download linking code and link it to our site and will be continuous unless and until either party notifies the other in writing that it wishes to terminate the Agreement, in which case this Agreement may be terminated immediately. TERMINATION IS AT WILL, FOR ANY REASON, BY EITHER PARTY. For purposes of notification of termination, delivery via e-mail is considered a written and immediate form of notification.</li>
+                <li>In the event of termination of this Agreement: 
+                    <ol type="a">
+                        <li>@string.Format("You must remove {0}'s banner/s from your site and disable any links from your site to {0}.", AppSettings.SystemName)</li>
+                        <li>All rights and licenses given to you in this Agreement shall immediately terminate.</li>
+                        <li>You will be entitled only to those unpaid referral fees if any earned by you on or prior to the date of termination, save where termination is as a result of your breach of terms of this Agreement, as detailed at 9.2.4 below. We may withhold your final payment for a reasonable time to ensure that the correct amount is paid.</li>
+                        <li>If you have failed to fulfill your obligations and responsibilities, we will not pay you the referral fees otherwise owing to you on termination.</li>
+                        <li>We may withhold your final payment for a reasonable time to ensure that the correct amount is paid.</li>
+                        <li>If we continue to permit activity (generation of revenue) from customers after termination, this will not constitute a continuation or renewal of this Agreement or a waiver of termination.</li>
+                        <li>You will return to us any confidential information and all copies of it in your possession, custody and control and will cease all uses of any trade names, trademarks, service marks, logos and other designations of the merchants.</li>
+                        <li>You and we will be released from all obligations and liabilities to each other occurring or arising after the date of such termination, except with respect to those obligations that by their nature are designed to survive termination, as set out in this Agreement. Termination will not relieve you from any liability arising from any breach of this Agreement, which occurred prior to termination.</li>
+                        <li>WE MAY TERMINATE THIS AGREEMENT IF WE DETERMINE (IN OUR SOLE DISCRETION) THAT YOUR SITE IS UNSUITABLE. Unsuitable sites may include those that: are aimed at children, promote sexually explicit materials, promote violence, promote discrimination based on race, sex, religion, nationality, disability, sexual orientation, or age, promote illegal activities, or violate intellectual property rights.</li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                10. Relationship of Parties <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <div class="content-block">
+                You and we are independent contractors, and nothing in this agreement will create any partnership, joint venture, agency, franchise, sales representative, or employment relationship between the parties. You will have no authority to make or accept any offers or representations on our behalf. You will not make any statement, whether on your site or otherwise, to contradict anything in this paragraph or be reasonably deemed to contradict this paragraph.
+            </div>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                11. Indemnity <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <div class="content-block">
+                @string.Format("You hereby agree to indemnify and hold harmless {0} , the entities it represents and affiliates, and {0} directors, officers, employees, agents, shareholders, partners, members and other owners, against any and all claims, actions, demands, liabilities, losses, damages, judgments, settlements, expenses (including reasonable attorneys' fees), and costs (any or all of the foregoing hereinafter referred to as \"Losses\") insofar as such Losses (or actions in respect thereof) arise out of or are based on", AppSettings.SystemName):
+                <ol>
+                    <li>Any claim that our use of the Affiliate Trademarks infringes on any trademark, trade name, service mark, copyright, license, intellectual property, or other proprietary right of any third party</li>
+                    <li>Any misrepresentation of a representation or warranty or breach of a covenant and agreement made by you herein</li>
+                    <li>The development, operation, maintenance and content of Your Site and products and services offered from Your Site</li>
+                    <li>Any claim related to Your Site, including, without limitation, content therein not attributable to us.</li>
+                </ol>
+            </div>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                12. Disclaimers <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <div class="content-block">
+                We make no express or implied warranties or representations with respect to the referral program or referral fee payment arrangements (including, without limitation, their functionality, warranties of fitness, merchantability, legality, non-infringement, or any implied warranties arising out of a course of performance, dealing, or trade usage). In addition, we make no representation that the operation of our site will be uninterrupted or error-free and will not be liable for the consequences of any interruptions or errors.
+            </div>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                13. Limitation of Liability <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <div class="content-block">
+                We will not be liable for indirect, special, or consequential damages (or any loss of revenue, profits, or data) arising in connection with this Agreement or the referral program, even if we have been advised of the possibility of such damages. Further, our aggregate liability arising with respect to this Agreement and the Program will not exceed the total commissions paid or payable to you under this Agreement. Nothing in this Agreement shall be construed to provide any rights, remedies or benefits to any person or entity not a party to this Agreement. Our obligations under this Agreement do not constitute personal obligations of our directors, officers or shareholders. Any liability arising under this Agreement shall be satisfied solely from the referral fee generated and is limited to direct damages.
+            </div>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                14. Independent Investigation <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <div class="content-block">
+                YOU ACKNOWLEDGE THAT YOU HAVE READ THIS AGREEMENT AND AGREE TO ALL ITS TERMS AND CONDITIONS. YOU UNDERSTAND THAT WE MAY AT ANY TIME (DIRECTLY OR INDIRECTLY) SOLICIT CUSTOMER REFERRALS ON TERMS THAT MAY DIFFER FROM THOSE CONTAINED IN THIS AGREEMENT OR OPERATE WEB SITES THAT ARE SIMILAR TO OR COMPETE WITH YOUR WEB SITE. YOU HAVE INDEPENDENTLY EVALUATED THE DESIRABILITY OF PARTICIPATING IN THIS AFFILIATE PROGRAM AND ARE NOT RELYING ON ANY REPRESENTATION, GUARANTEE, OR STATEMENT OTHER THAN AS SET FORTH IN THIS AGREEMENT
+            </div>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                15. Governing Law and Arbitration <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <div class="content-block">
+                This Agreement shall be governed by and construed in accordance with English law. Any dispute, controversy or claim arising out of or in connection with this Agreement shall be referred to and determined by a tribunal comprised of one arbitrator to be appointed by the Arbitration Centre. The seat of arbitration will be London, United Kingdom, the location determined by the Arbitration Centre, the language of the arbitration will be English and the regulations established by the Arbitration Centre shall govern the process. The arbitration tribunal will have the right to issue injunctions and its decision will be compulsory, final and strictly mandatory to the Parties who in turn waive any other jurisdiction or venue that may apply and agree to be subject to the arbitral decision waiving any appeals of any type.
+            </div>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                16. IN WITNESS WHEREOF <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block"></div>
+            <div class="content-block">
+                @string.Format("By having read, the terms and conditions, and acknowledging such in the affiliate sign-up form you agree to all the terms and conditions contained herein. {0} reserves the right to withhold payment from any affiliate that violates any of the terms and conditions contained herein.", AppSettings.SystemName)
+            </div>
+        </div>
+    </div>
+</div>

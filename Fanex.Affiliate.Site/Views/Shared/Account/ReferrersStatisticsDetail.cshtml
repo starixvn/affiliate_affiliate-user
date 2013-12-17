@@ -1,0 +1,107 @@
+﻿@model IPagedList<ReferrersStatisticsDetail>
+@{
+    ViewBag.Title = Lang.ReferralsDetail;
+    Layout = "~/Views/Shared/_LayoutPopup.cshtml";
+    var i = 0;
+}
+<div class="span12 box-insite">
+    <div class="top">
+        <div class="in-top">
+            @Lang.Referrals
+        </div>
+        <div class="in-right">
+        </div>
+    </div>
+    <div class="content">
+        @if (Model.Any())
+        {
+            <div class="block">
+                <div class="content-block no-padding">
+                    <div class="pagesize pull-right">
+                        <span class="items-per-page">@Lang.PageSize
+                            @Html.DropDownList("items-per-page", new List<SelectListItem> {
+					            new SelectListItem { Value = "10", Text = "10", Selected = "10" == Model.PageSize.ToString() },
+					            new SelectListItem { Value = "20", Text = "20", Selected = "20" == Model.PageSize.ToString() },
+					            new SelectListItem { Value = "50", Text = "50", Selected = "50" == Model.PageSize.ToString() },
+                                new SelectListItem { Value = "100", Text = "100", Selected = "100" == Model.PageSize.ToString()},
+                                new SelectListItem { Value = "200", Text = "200", Selected = "200" == Model.PageSize.ToString()}
+				            }, new { id = string.Empty, @class = "items-per-page", @data_controller = "/Account/ReferrersStatisticsDetail" })</span>
+                    </div>
+                    <div class="paging-info clear">
+                        @Html.Pager(Model.PageSize, Model.PageNumber, Model.TotalItemCount)
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="block">
+            <div class="content-block no-padding">
+                <table class="table odd-even list no-margin" style="table-layout: fixed; width: 100%">
+                    <thead>
+                        <tr class="gradient-header">
+                            <th>
+                                @Lang.SiteURL
+                            </th>
+                            <th width="64px">
+                                @Lang.TotalClicks
+                            </th>
+                            <th width="80px">
+                                @Lang.UniqueClicks
+                            </th>
+                            <th width="64px">
+                                @Lang.SignUp
+                            </th>
+                            <th width="64px">
+                                @Lang.FDM
+                            </th>
+                        </tr>
+                    </thead>
+                    @if (Model.Any())
+                    {
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                i++;
+                                <tr class="@(i % 2 == 0 ? "even" : "odd")">
+                                    <td style="word-wrap: break-word">
+                                        @item.UrlReferrer
+                                    </td>
+                                    <td class="text-right">
+                                        @item.TotalClick
+                                    </td>
+                                    <td class="text-right">
+                                        @item.UniqueClick
+                                    </td>
+                                    <td class="text-right">
+                                        @item.Signups
+                                    </td>
+                                    <td class="text-right">
+                                        @item.FDM
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <tfoot>
+                            <tr>
+                                <td colspan="5" class="text-center">@Lang.NoInformation
+                                </td>
+                            </tr>
+                        </tfoot>
+                    }
+                </table>
+            </div>
+        </div>
+        @if (Model.Any())
+        {
+            <div class="block">
+                <div class="content-block no-padding">
+                    <div class="paging-info clear">
+                        @Html.Pager(Model.PageSize, Model.PageNumber, Model.TotalItemCount)
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

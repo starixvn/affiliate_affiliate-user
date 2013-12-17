@@ -1,0 +1,36 @@
+﻿@{
+    var currentContext = HttpContext.Current.Request.RequestContext;
+    string controllerName = currentContext.RouteData.Values["controller"].ToString().ToLower();
+    var isProgramDetail = string.Empty;
+    var isFAQS = string.Empty;
+    var isContactUs = string.Empty;
+    var isCondition = string.Empty;
+    if (controllerName == "home")
+    {
+        isProgramDetail = "current";
+    }
+    else if (controllerName == "faqs")
+    {
+        isFAQS = "current";
+    }
+    else if (controllerName == "condition")
+    {
+        isCondition = "current";
+    }
+    else if (controllerName == "contactus")
+    {
+        isContactUs = "current";
+    }
+}
+<div class="span12 top-menu">
+    <ul>
+        <li class="@isProgramDetail"><a href="@Url.Content("~/Home")"><span>@Lang.ProgramDetails</span></a></li>
+        @if (!AppSettings.IsKiosk)
+        {
+            <li class="@isCondition"><a href="@Url.Content("~/Condition")"><span>@Lang.TermsConditions</span></a></li>
+            <li class="@isFAQS"><a href="@Url.Content("~/FAQs")"><span>@Lang.FAQs</span></a></li>
+        }
+        <li class="@isContactUs"><a href="@Url.Content("~/ContactUs")"><span>@Lang.ContactUs</span></a></li>
+    </ul>
+    @Html.Action("Clock", "Header")
+</div>

@@ -1,0 +1,1110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountInformation" xml:space="preserve">
+    <value>Informasi Rekening</value>
+  </data>
+  <data name="AccountOverview" xml:space="preserve">
+    <value>Ikhtisar Rekening</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Alamat</value>
+  </data>
+  <data name="AddressIsRequired" xml:space="preserve">
+    <value>Alamat diperlukan</value>
+  </data>
+  <data name="AddUrl" xml:space="preserve">
+    <value>Tambah Url</value>
+  </data>
+  <data name="Adjustment" xml:space="preserve">
+    <value>Penyetelan</value>
+  </data>
+  <data name="Affiliate" xml:space="preserve">
+    <value>Afiliasi</value>
+  </data>
+  <data name="AffiliateLogin" xml:space="preserve">
+    <value>Login Afiliasi</value>
+  </data>
+  <data name="AffiliateTitle" xml:space="preserve">
+    <value>{0} Program Afliasi
+</value>
+  </data>
+  <data name="AgreeTermNCondition" xml:space="preserve">
+    <value>Saya menyetujui Persyaratan &amp; Ketentuan Afiliasi {0}.</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Semua</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Jumlah</value>
+  </data>
+  <data name="Answer" xml:space="preserve">
+    <value>Jawaban Anda</value>
+  </data>
+  <data name="AnswerIsRequired" xml:space="preserve">
+    <value>Jawaban Anda kosong. Silakan diperiksa!</value>
+  </data>
+  <data name="Approved" xml:space="preserve">
+    <value>Disetujui</value>
+  </data>
+  <data name="Apr" xml:space="preserve">
+    <value>Apr</value>
+  </data>
+  <data name="Aug" xml:space="preserve">
+    <value>Agust</value>
+  </data>
+  <data name="AvailableDomains" xml:space="preserve">
+    <value>Domain yang Tersedia</value>
+  </data>
+  <data name="BalanceBroughtForward" xml:space="preserve">
+    <value>Saldo Dicatat Di Halaman Baru</value>
+  </data>
+  <data name="BalanceIsZero" xml:space="preserve">
+    <value>Anda tidak dapat meminta pembayaran karena saldo tidak mencukupi.</value>
+  </data>
+  <data name="BankTransfer" xml:space="preserve">
+    <value>Transfer Bank</value>
+  </data>
+  <data name="Banner" xml:space="preserve">
+    <value>Banner</value>
+  </data>
+  <data name="Bonus" xml:space="preserve">
+    <value>Bonus</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Batal</value>
+  </data>
+  <data name="Cancelled" xml:space="preserve">
+    <value>Dibatalkan</value>
+  </data>
+  <data name="CancelRequest" xml:space="preserve">
+    <value>Batalkan Permintaan</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Kategori</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Ubah</value>
+  </data>
+  <data name="ChangePassErr" xml:space="preserve">
+    <value>Kesalahan Mengubah Kata Sandi.</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Ubah Kata Sandi</value>
+  </data>
+  <data name="ChangePasswordEmailTitle" xml:space="preserve">
+    <value>Afiliasi {0} - Kata sandi baru Anda</value>
+  </data>
+  <data name="ChangePasswordInstruction" xml:space="preserve">
+    <value>Gunakan formulir ini untuk mengubah kata sandi Anda. Setelah diubah, kata sandi baru Anda akan berlaku pada waktu berikutnya Anda login.</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Kota</value>
+  </data>
+  <data name="CityIsRequired" xml:space="preserve">
+    <value>Kota diperlukan</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>Komentar</value>
+  </data>
+  <data name="CommentIsRequired" xml:space="preserve">
+    <value>Komentar tidak valid</value>
+  </data>
+  <data name="Commission" xml:space="preserve">
+    <value>Komisi </value>
+  </data>
+  <data name="ComNetWin" xml:space="preserve">
+    <value>Kemenangan bersih perusahaan sebulan ({0})</value>
+  </data>
+  <data name="CompletedDate" xml:space="preserve">
+    <value>Tanggal Selesai</value>
+  </data>
+  <data name="CompleteForm" xml:space="preserve">
+    <value>Harap isi formulir ini untuk mendaftarkan rekening afiliasi {0} Anda.</value>
+  </data>
+  <data name="ConfirmPasswordRequired" xml:space="preserve">
+    <value>Konfirmasi kata kunci diperlukan</value>
+  </data>
+  <data name="ContactInfo" xml:space="preserve">
+    <value>Informasi Kontak</value>
+  </data>
+  <data name="ContactNumber" xml:space="preserve">
+    <value>Nomor Kontak</value>
+  </data>
+  <data name="ContactNumberIsRequired" xml:space="preserve">
+    <value>Nomor Kontak kosong. Silakan diperiksa!</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Hubungi Kami</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Negara</value>
+  </data>
+  <data name="CountryIsRequired" xml:space="preserve">
+    <value>Pilih negara</value>
+  </data>
+  <data name="CsdMailSubject" xml:space="preserve">
+    <value>{0} Afiliasi - Akun baru ({1}) menunggu persetujuan</value>
+  </data>
+  <data name="Currency" xml:space="preserve">
+    <value>Mata Uang</value>
+  </data>
+  <data name="CurrencyIsRequired" xml:space="preserve">
+    <value>Pilih Mata Uang</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>Saat Ini</value>
+  </data>
+  <data name="CurrentCommissionSetting" xml:space="preserve">
+    <value>Setelan Komisi Tesedia</value>
+  </data>
+  <data name="DailyEarnings" xml:space="preserve">
+    <value>Perolehan Harian</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Tanggal</value>
+  </data>
+  <data name="Dec" xml:space="preserve">
+    <value>Des</value>
+  </data>
+  <data name="Deposit" xml:space="preserve">
+    <value>Setoran</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Deskripsi</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Alamat Email</value>
+  </data>
+  <data name="EmailFormat" xml:space="preserve">
+    <value>Format email</value>
+  </data>
+  <data name="EmailIsRequire" xml:space="preserve">
+    <value>Alamat Email diperlukan</value>
+  </data>
+  <data name="EmailMatch" xml:space="preserve">
+    <value>Alamat Email yang Anda masukkan tidak cocok.</value>
+  </data>
+  <data name="EmptyEmail" xml:space="preserve">
+    <value>Masukkan Email</value>
+  </data>
+  <data name="ErrGender" xml:space="preserve">
+    <value>Jenis kelamin kosong. Silakan Diperiksa!</value>
+  </data>
+  <data name="FAQs" xml:space="preserve">
+    <value>TJ</value>
+  </data>
+  <data name="FDM" xml:space="preserve">
+    <value>FDM</value>
+  </data>
+  <data name="Feb" xml:space="preserve">
+    <value>Feb</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Wanita</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Nama Depan</value>
+  </data>
+  <data name="FirstNameIsRequired" xml:space="preserve">
+    <value>Nama Depan diperlukan</value>
+  </data>
+  <data name="ForgetPassword" xml:space="preserve">
+    <value>Lupa kata sandi Anda?</value>
+  </data>
+  <data name="ForgetPasswordEmailTitle" xml:space="preserve">
+    <value>Afiliasi {0} - Rincian login Anda</value>
+  </data>
+  <data name="ForgetPasswordInstruction" xml:space="preserve">
+    <value>Kata sandi baru akan dikirim ke alamat email yang sudah Anda berikan. &lt;br /&gt;Jika Anda mengalami kesulitan lebih jauh, silakan {0}.</value>
+  </data>
+  <data name="ForgetPasswordSuccess" xml:space="preserve">
+    <value>Rincian login Anda sudah dikirim.&lt;br/&gt; Harap periksa alamat email Anda untuk mengetahui nama pengguna dan rincian tentang kata sandi Anda.&lt;br/&gt; Bila Anda tidak menerima email untuk alasan apa pun, silakan {0} dan kami dengan senang hati akan membantu Anda.</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>Dari</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Jenis Kelamin</value>
+  </data>
+  <data name="GenerateLink" xml:space="preserve">
+    <value>Membuat Tautan</value>
+  </data>
+  <data name="Hobby" xml:space="preserve">
+    <value>Hobi favorit?</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Beranda</value>
+  </data>
+  <data name="HomeDetailed" xml:space="preserve">
+    <value>Sistem pelacakan stats terinci</value>
+  </data>
+  <data name="HomeEarn" xml:space="preserve">
+    <value>Selamanya dapatkan hingga 40% dari rugi bersih pemain</value>
+  </data>
+  <data name="HomeNegative" xml:space="preserve">
+    <value>Negatif Saldo</value>
+  </data>
+  <data name="HomeOnline" xml:space="preserve">
+    <value>Dukungan online 24/7 untuk Anda dan para pemain Anda </value>
+  </data>
+  <data name="HomePrompt" xml:space="preserve">
+    <value>Tampilkan pembayaran bulanan</value>
+  </data>
+  <data name="HomeWide" xml:space="preserve">
+    <value>Metode pembayaran yang beragam</value>
+  </data>
+  <data name="HtmlFormat" xml:space="preserve">
+    <value>Format Html</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Important" xml:space="preserve">
+    <value>Penting</value>
+  </data>
+  <data name="InputRequestAmount" xml:space="preserve">
+    <value>Masukkan Jumlah Permintaan</value>
+  </data>
+  <data name="Jan" xml:space="preserve">
+    <value>Jan</value>
+  </data>
+  <data name="Jul" xml:space="preserve">
+    <value>Jul</value>
+  </data>
+  <data name="Jun" xml:space="preserve">
+    <value>Jun</value>
+  </data>
+  <data name="LandingPages" xml:space="preserve">
+    <value>Halaman Arahan</value>
+  </data>
+  <data name="LandingPagesStatistics" xml:space="preserve">
+    <value>Pendaratan Halaman Statistik</value>
+  </data>
+  <data name="LandingPagesStatisticsDetail" xml:space="preserve">
+    <value>Pendaratan Halaman Statistik Rincian</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Bahasa</value>
+  </data>
+  <data name="LanguageIsRequired" xml:space="preserve">
+    <value>Pilih preferensi bahasa</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Nama Belakang </value>
+  </data>
+  <data name="LastNameIsRequired" xml:space="preserve">
+    <value>Nama Belakang diperlukan</value>
+  </data>
+  <data name="LinkDefault" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="LinkTo" xml:space="preserve">
+    <value>Link ke</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="MailingInfor" xml:space="preserve">
+    <value>Informasi Pengiriman Surat</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Pria</value>
+  </data>
+  <data name="Mar" xml:space="preserve">
+    <value>Mar</value>
+  </data>
+  <data name="MarketingTools" xml:space="preserve">
+    <value>Alat Pemasaran</value>
+  </data>
+  <data name="May" xml:space="preserve">
+    <value>Mei</value>
+  </data>
+  <data name="MediaGallery" xml:space="preserve">
+    <value>Galeri Media</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Pesan</value>
+  </data>
+  <data name="MessageHistory" xml:space="preserve">
+    <value>Riwayat Pesan</value>
+  </data>
+  <data name="MinimumWithdrawalAmount" xml:space="preserve">
+    <value>Jumlah Penarikan Minimum</value>
+  </data>
+  <data name="Mobile" xml:space="preserve">
+    <value>Nomor Ponsel</value>
+  </data>
+  <data name="MobileNumberIsRequired" xml:space="preserve">
+    <value>Nomor Ponsel kosong. Silakan diperiksa!  </value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Bulan</value>
+  </data>
+  <data name="MonthlyWinlost" xml:space="preserve">
+    <value>MenangKalah Bulanan</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>Lainnya</value>
+  </data>
+  <data name="MotherName" xml:space="preserve">
+    <value>Ibu nama pertama?</value>
+  </data>
+  <data name="Movie" xml:space="preserve">
+    <value>Film favorit?</value>
+  </data>
+  <data name="Msg101" xml:space="preserve">
+    <value>Nama pengguna dan kata sandi salah.</value>
+  </data>
+  <data name="Msg102" xml:space="preserve">
+    <value>Rekening Anda sudah ditutup. Harap menghubungi administrator Anda!</value>
+  </data>
+  <data name="Msg103" xml:space="preserve">
+    <value>Akun anda sementara terkunci karena usaha login gagal 5 kali berturut turut. Coba lagi setelah 10 menit atau hubungi administrator anda!</value>
+  </data>
+  <data name="Msg104" xml:space="preserve">
+    <value>Anda belum memasukkan alamat email yang kami akui. Silakan coba lagi atau {0}.</value>
+  </data>
+  <data name="Msg105" xml:space="preserve">
+    <value>Rekening tidak disetujui. Harap menghubungi administrator Anda!</value>
+  </data>
+  <data name="Msg106" xml:space="preserve">
+    <value>Alamat yang Anda gunakan untuk meminta kata sandi baru, tidak valid.</value>
+  </data>
+  <data name="Msg107" xml:space="preserve">
+    <value>Maaf. Akun anda tidak ada atau ditutup. Hubungi administrator</value>
+  </data>
+  <data name="Msg119" xml:space="preserve">
+    <value>Alamat Email tidak valid</value>
+  </data>
+  <data name="Msg120" xml:space="preserve">
+    <value>Alamat Email diperlukan</value>
+  </data>
+  <data name="Msg121" xml:space="preserve">
+    <value>Alamat Email sudah digunakan. Silakan pilih yang berbeda!</value>
+  </data>
+  <data name="Msg122" xml:space="preserve">
+    <value>Informasi afiliasi tidak valid</value>
+  </data>
+  <data name="Msg123" xml:space="preserve">
+    <value>Buat pelanggan gagal. Silakan coba lagi</value>
+  </data>
+  <data name="Msg130" xml:space="preserve">
+    <value>Ada permintaan Anda yang tertunda. Agar dapat membuat permintaan baru, harap batalkan permintaan yang tertunda, atau tunggu sampai pemrosesan selesai.</value>
+  </data>
+  <data name="Msg131" xml:space="preserve">
+    <value>Maaf, Afiliasi ini tidak mempunyai cukup uang untuk ditarik.</value>
+  </data>
+  <data name="Msg132" xml:space="preserve">
+    <value>ID Peran tidak valid.</value>
+  </data>
+  <data name="Msg133" xml:space="preserve">
+    <value>Rekening saldo tidak valid, atau mata uangnya, atau metode pembayaran tidak didukung.</value>
+  </data>
+  <data name="Msg134" xml:space="preserve">
+    <value>Gagal menyisipkan transaksi.</value>
+  </data>
+  <data name="Msg135" xml:space="preserve">
+    <value>Maaf, jumlah tidak valid.</value>
+  </data>
+  <data name="Msg136" xml:space="preserve">
+    <value>Jumlah permintaan harus lebih besar daripada jumlah penarikan minimum</value>
+  </data>
+  <data name="Msg137" xml:space="preserve">
+    <value>Maaf! Metode pembayaran [Neteller, Transfer Bank,.. - affiliate's chosen one] tidak tersedia. Pada saat ini, hanya metode "Rekening Pemain"  yang didukung. Silakan klik di sini untuk membuat perubahan.</value>
+  </data>
+  <data name="Msg138" xml:space="preserve">
+    <value>Kami tidak melayani mata uang ini. Hubungi administrator anda</value>
+  </data>
+  <data name="Msg139" xml:space="preserve">
+    <value>Maaf. Anda tidak memiliki ijin untuk merubah transaksi ini.</value>
+  </data>
+  <data name="Msg140" xml:space="preserve">
+    <value>Transaksi ini bukan penarikan dana.</value>
+  </data>
+  <data name="Msg141" xml:space="preserve">
+    <value>Anda tidak diotorisasi atas fungsi ini</value>
+  </data>
+  <data name="Msg142" xml:space="preserve">
+    <value>Pengguna tidak ada</value>
+  </data>
+  <data name="Msg143" xml:space="preserve">
+    <value>Jumlah Pembayaran diperlukan</value>
+  </data>
+  <data name="Msg150" xml:space="preserve">
+    <value>Kata sandi lama salah</value>
+  </data>
+  <data name="MsgEmptyCaptcha" xml:space="preserve">
+    <value>Masukkan sandi validasi</value>
+  </data>
+  <data name="MsgEmptyUsernamePassword" xml:space="preserve">
+    <value>Masukkan nama pengguna dan kata kunci</value>
+  </data>
+  <data name="MsgIncorrectCaptchaMsg" xml:space="preserve">
+    <value>Anda sudah memasukkan kode validasi yang tidak valid!</value>
+  </data>
+  <data name="MsgKickout" xml:space="preserve">
+    <value>Sesi yang lain sudah log in, atau waktu sesi Anda sudah habis. Dipaksa logout!</value>
+  </data>
+  <data name="NA" xml:space="preserve">
+    <value>Tidak beraku</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nama</value>
+  </data>
+  <data name="NameIsRequired" xml:space="preserve">
+    <value>Nama tidak valid</value>
+  </data>
+  <data name="NameOfBook" xml:space="preserve">
+    <value>Nama buku favorit?</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>Kata Sandi Baru</value>
+  </data>
+  <data name="NewPasswordRequired" xml:space="preserve">
+    <value>Kata Sandi Baru diperlukan</value>
+  </data>
+  <data name="NewSignups" xml:space="preserve">
+    <value>Daftar Baru</value>
+  </data>
+  <data name="NoInformation" xml:space="preserve">
+    <value>Tidak ada informasi yang tersedia</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="Nov" xml:space="preserve">
+    <value>Nop</value>
+  </data>
+  <data name="Oct" xml:space="preserve">
+    <value>Okt</value>
+  </data>
+  <data name="OldPassErr" xml:space="preserve">
+    <value>Kata sandi lama salah</value>
+  </data>
+  <data name="OldPassword" xml:space="preserve">
+    <value>Kata Sandi Lama</value>
+  </data>
+  <data name="OldPasswordRequired" xml:space="preserve">
+    <value>Kata Sandi Lama diperlukan</value>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>Halaman</value>
+  </data>
+  <data name="PageSize" xml:space="preserve">
+    <value>Ukuran Halaman</value>
+  </data>
+  <data name="Paging" xml:space="preserve">
+    <value>Halaman {0} dari {1}</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Kata Sandi</value>
+  </data>
+  <data name="PasswordNotMatched" xml:space="preserve">
+    <value>Kata kunci konfirmasi tidak cocok dengan kata kunci baru</value>
+  </data>
+  <data name="PaymentInfo" xml:space="preserve">
+    <value>Informasi Pembayaran</value>
+  </data>
+  <data name="PaymentMethod" xml:space="preserve">
+    <value>Metode Pembayaran</value>
+  </data>
+  <data name="PaymentRequest" xml:space="preserve">
+    <value>Permintaan Pembayaran</value>
+  </data>
+  <data name="PaymentRequestCancel" xml:space="preserve">
+    <value>Permintaan pembayaran Anda sudah dibatalkan!</value>
+  </data>
+  <data name="PaymentRequestSuccess" xml:space="preserve">
+    <value>Permintaan pembayaran Anda sudah berhasil diajukan!</value>
+  </data>
+  <data name="PaymentTime" xml:space="preserve">
+    <value>Anda hanya bisa meminta pembayaran dari tanggal 8 - 15 dalam bulan.</value>
+  </data>
+  <data name="PendingRequest" xml:space="preserve">
+    <value>Permintaan Tertunda</value>
+  </data>
+  <data name="PetName" xml:space="preserve">
+    <value>Nama hewan peliharaan favorit itu?</value>
+  </data>
+  <data name="PlainText" xml:space="preserve">
+    <value>Teks Biasa</value>
+  </data>
+  <data name="PlayerAcc" xml:space="preserve">
+    <value>Rekening Pemain</value>
+  </data>
+  <data name="PlayerUsername" xml:space="preserve">
+    <value>Nama Pengguna</value>
+  </data>
+  <data name="PlayerUsernameIsRequired" xml:space="preserve">
+    <value>Nama Pengguna diperlukan</value>
+  </data>
+  <data name="Postal" xml:space="preserve">
+    <value>Kode pos/Zip</value>
+  </data>
+  <data name="PostcodeZiIsRequired" xml:space="preserve">
+    <value>Kode pos/Zip diperlukan</value>
+  </data>
+  <data name="PostDate" xml:space="preserve">
+    <value>Tanggal Cap Pos</value>
+  </data>
+  <data name="Preference" xml:space="preserve">
+    <value>Preferensi</value>
+  </data>
+  <data name="Proccessing" xml:space="preserve">
+    <value>Memproses</value>
+  </data>
+  <data name="Product" xml:space="preserve">
+    <value>Produk</value>
+  </data>
+  <data name="ProgramDetails" xml:space="preserve">
+    <value>Rincian Program</value>
+  </data>
+  <data name="PwdChanged" xml:space="preserve">
+    <value>Kata sandi berhasil diubah</value>
+  </data>
+  <data name="QualifyingMembers" xml:space="preserve">
+    <value>Anggota yang Memenuhi syarat</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>Pertanyaan Keamanan</value>
+  </data>
+  <data name="QuestionIsRequired" xml:space="preserve">
+    <value>Pertanyaan Keamanan kosong. Silakan diperiksa!</value>
+  </data>
+  <data name="RecentPayment" xml:space="preserve">
+    <value>Pembayaran baru-baru ini</value>
+  </data>
+  <data name="RecoverPasswordFail" xml:space="preserve">
+    <value>Alamat yang Anda gunakan untuk meminta kata sandi baru, tidak valid.</value>
+  </data>
+  <data name="ReenterNewPassword" xml:space="preserve">
+    <value>Konfirmasi Kata Kunci</value>
+  </data>
+  <data name="Referrals" xml:space="preserve">
+    <value>Arahan</value>
+  </data>
+  <data name="ReferralsDetail" xml:space="preserve">
+    <value>Referensi Rincian</value>
+  </data>
+  <data name="ReferrersStatistics" xml:space="preserve">
+    <value>Referensi Statistik</value>
+  </data>
+  <data name="ReferrersStatisticsDetail" xml:space="preserve">
+    <value>Referensi Statistik Rincian</value>
+  </data>
+  <data name="RefNo" xml:space="preserve">
+    <value>No. Ref.</value>
+  </data>
+  <data name="RegisForm" xml:space="preserve">
+    <value>Formulir Permohonan</value>
+  </data>
+  <data name="Rejected" xml:space="preserve">
+    <value>Ditolak</value>
+  </data>
+  <data name="RequestAmount" xml:space="preserve">
+    <value>Jumlah Permintaan</value>
+  </data>
+  <data name="RequestDate" xml:space="preserve">
+    <value>Tanggal Permintaan</value>
+  </data>
+  <data name="RequestPaymentEmailTitle" xml:space="preserve">
+    <value>Pemberitahuan Permintaan Pembayaran  </value>
+  </data>
+  <data name="RequestPayout" xml:space="preserve">
+    <value>Permintaan Pembayaran</value>
+  </data>
+  <data name="RequireInfo" xml:space="preserve">
+    <value>Bidang bertanda &lt;span class="txtRequire"&gt;*&lt;/span&gt; harus diisi</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Setel Ulang</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Cari</value>
+  </data>
+  <data name="SecretCode" xml:space="preserve">
+    <value>Kode rahasia saya?</value>
+  </data>
+  <data name="SelectOne" xml:space="preserve">
+    <value>Pilih Satu</value>
+  </data>
+  <data name="Sep" xml:space="preserve">
+    <value>Sep</value>
+  </data>
+  <data name="SignUp" xml:space="preserve">
+    <value>Daftar</value>
+  </data>
+  <data name="SignUpMailSubject" xml:space="preserve">
+    <value>Afiliasi {0} - Permohonan Anda</value>
+  </data>
+  <data name="SiteInfo" xml:space="preserve">
+    <value>Informasi Situs Web</value>
+  </data>
+  <data name="SiteURL" xml:space="preserve">
+    <value>URL Situs Web</value>
+  </data>
+  <data name="SiteURLIsRequired" xml:space="preserve">
+    <value>URL Situs Web diperlukan</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Ukuran</value>
+  </data>
+  <data name="Sport" xml:space="preserve">
+    <value>Olahraga</value>
+  </data>
+  <data name="SportTeam" xml:space="preserve">
+    <value>Tim olahraga favorit?</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>Negara Bagian</value>
+  </data>
+  <data name="StateIsRequired" xml:space="preserve">
+    <value>Negara Bagian diperlukan</value>
+  </data>
+  <data name="StatementHistory" xml:space="preserve">
+    <value>Riwayat Laporan</value>
+  </data>
+  <data name="StatisticsFor" xml:space="preserve">
+    <value>Statistik Untuk {0}-{1}</value>
+  </data>
+  <data name="StatisticsUpToNow" xml:space="preserve">
+    <value>Statistik hingga Saat Ini</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="SubCategory" xml:space="preserve">
+    <value>Sub Kategori</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Subjek</value>
+  </data>
+  <data name="SubjectIsRequired" xml:space="preserve">
+    <value>Subjek tidak valid</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Ajukan</value>
+  </data>
+  <data name="TermsConditions" xml:space="preserve">
+    <value>Persyaratan &amp; Ketentuan</value>
+  </data>
+  <data name="TextBox" xml:space="preserve">
+    <value>Kotak Teks</value>
+  </data>
+  <data name="TextLink" xml:space="preserve">
+    <value>Tautan Teks</value>
+  </data>
+  <data name="Tier" xml:space="preserve">
+    <value>Tingkat</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>Ke</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>Atas </value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="TotalActivePlayers" xml:space="preserve">
+    <value>Total Pemain Aktif</value>
+  </data>
+  <data name="TotalClicks" xml:space="preserve">
+    <value>Total Klik</value>
+  </data>
+  <data name="TotalDeposits" xml:space="preserve">
+    <value>Total Setoran</value>
+  </data>
+  <data name="TotalPlayers" xml:space="preserve">
+    <value>Total Pemain</value>
+  </data>
+  <data name="TotalQualifiedActive" xml:space="preserve">
+    <value>Total Pemain Aktif Yang Layak ({0})</value>
+  </data>
+  <data name="TrackingCode" xml:space="preserve">
+    <value>Kode Pelacakan</value>
+  </data>
+  <data name="TrackingStatistics" xml:space="preserve">
+    <value>Statistik Pelacakan</value>
+  </data>
+  <data name="TrafficStatistics" xml:space="preserve">
+    <value>Statistik Pelacakan</value>
+  </data>
+  <data name="Transaction" xml:space="preserve">
+    <value>Transaksi</value>
+  </data>
+  <data name="Turnover" xml:space="preserve">
+    <value>Omzet</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Tipe</value>
+  </data>
+  <data name="UnauthorizedMsg" xml:space="preserve">
+    <value>Sesi anda telah berakhir atau permintaan anda tidak berlaku</value>
+  </data>
+  <data name="UniqueClicks" xml:space="preserve">
+    <value>Klik Unik</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Nama Pengguna</value>
+  </data>
+  <data name="Validation" xml:space="preserve">
+    <value>Validasi</value>
+  </data>
+  <data name="VerifyEmail" xml:space="preserve">
+    <value>Verifikasi Alamat Email</value>
+  </data>
+  <data name="Winlost" xml:space="preserve">
+    <value>Winlost</value>
+  </data>
+  <data name="YourEmail" xml:space="preserve">
+    <value>Email Anda</value>
+  </data>
+  <data name="Headlines" xml:space="preserve">
+    <value>Berita Hangat</value>
+  </data>
+  <data name="ViewMore" xml:space="preserve">
+    <value>Lihat Lainnya</value>
+  </data>
+  <data name="ErrAuthorized" xml:space="preserve">
+    <value>Apakah Program Afiliasi Aoncash itu?</value>
+  </data>
+  <data name="UpdateAccSuccess" xml:space="preserve">
+    <value>Informasi rekening Anda sudah berhasil diperbarui.</value>
+  </data>
+  <data name="ContactUsSuccess" xml:space="preserve">
+    <value>&lt;p&gt;Terima kasih telah menghubungi kami.&lt;/p&gt;
+&lt;p&gt;Pesan Anda sudah dikirim. Kami akan menanggapi permintaan Anda secepat mungkin. &lt;/p&gt;
+&lt;p&gt;Semoga hari Anda menyenangkan! &lt;/p&gt;
+&lt;p&gt;Salam hormat, &lt;/p&gt;
+&lt;br /&gt;
+Tim Dukungan Afiliasi {0}</value>
+  </data>
+  <data name="WebsiteUrl" xml:space="preserve">
+    <value>Mohon masukkan Jaringan URL</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Menghapus</value>
+  </data>
+  <data name="MoreSiteUrl" xml:space="preserve">
+    <value>URL Situs Web {0} diperlukan</value>
+  </data>
+  <data name="Msg160" xml:space="preserve">
+    <value>Pencipta tidak berlaku!</value>
+  </data>
+  <data name="Msg161" xml:space="preserve">
+    <value>Isi surat tidak sah!</value>
+  </data>
+  <data name="Msg162" xml:space="preserve">
+    <value>Nama pengirim tidak sah!</value>
+  </data>
+  <data name="Msg163" xml:space="preserve">
+    <value>Alamat email tidak sah!</value>
+  </data>
+  <data name="Msg164" xml:space="preserve">
+    <value>Judul surat tidak sah!</value>
+  </data>
+  <data name="Msg165" xml:space="preserve">
+    <value>IP pengirim tidak sah!</value>
+  </data>
+  <data name="Msg166" xml:space="preserve">
+    <value>Nama browser tidak sah!</value>
+  </data>
+  <data name="Msg167" xml:space="preserve">
+    <value>ID sesi ASP.NET tidak sah!</value>
+  </data>
+  <data name="Msg168" xml:space="preserve">
+    <value>Anda hanya diperbolehkan mengirim maksimal 20 surat setiap 10 menit!</value>
+  </data>
+  <data name="Msg169" xml:space="preserve">
+    <value>Salah! Masukkan email tidak berhasil!</value>
+  </data>
+  <data name="Msg170" xml:space="preserve">
+    <value>Maaf, akun ini memiliki 1 permintaan pembayaran yang pending, rubah transaksi ini dahulu!</value>
+  </data>
+  <data name="Msg171" xml:space="preserve">
+    <value>Informasi pengguna tidak sah. Proses perubahan tidak berhasil!</value>
+  </data>
+  <data name="Msg172" xml:space="preserve">
+    <value>Terjadi kesalahan. Proses perubahan tidak berhasil</value>
+  </data>
+  <data name="ApplicationForm" xml:space="preserve">
+    <value>formulir permohonan</value>
+  </data>
+  <data name="PleaseDirectAnyComment" xml:space="preserve">
+    <value>Harap tujukan komentar atau pertanyaan apa pun ke {0} atau menggunakan formulir di bawah.</value>
+  </data>
+  <data name="Copyright" xml:space="preserve">
+    <value>Hak Cipta</value>
+  </data>
+  <data name="PasswordPattern" xml:space="preserve">
+    <value>Kata kunci harus sedikitnya terdiri dari 6 huruf, termasuk sedikitnya 2 huruf dan sedikitnya 2 angka (mis.pass22)</value>
+  </data>
+  <data name="FromDateIsRequired" xml:space="preserve">
+    <value>From date is required</value>
+  </data>
+  <data name="ToDateIsRequired" xml:space="preserve">
+    <value>To date is required</value>
+  </data>
+  <data name="BestViewIn" xml:space="preserve">
+    <value>Paling baik ditayangkan di</value>
+  </data>
+  <data name="DailyEarningsDetail" xml:space="preserve">
+    <value>Rincian Penghasilan Harian</value>
+  </data>
+  <data name="HotNews" xml:space="preserve">
+    <value>Berita Hangat</value>
+  </data>
+  <data name="CopyrightPacificSeaInvests" xml:space="preserve">
+    <value>Hak Cipta {0} Pacific Sea Invests</value>
+  </data>
+  <data name="CustomizedBanners" xml:space="preserve">
+    <value>Spesialisasi Spanduk</value>
+  </data>
+  <data name="PromotionalDescriptions" xml:space="preserve">
+    <value>Deskripsi Promosi</value>
+  </data>
+  <data name="Sportsbook" xml:space="preserve">
+    <value>Olahraga</value>
+  </data>
+  <data name="EnglishSupport" xml:space="preserve">
+    <value>Inggris</value>
+  </data>
+  <data name="ThaiSupport" xml:space="preserve">
+    <value>Thai</value>
+  </data>
+  <data name="VietnameseSupport" xml:space="preserve">
+    <value>Bahasa Vietnam</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Kembali</value>
+  </data>
+  <data name="RegisSuccess" xml:space="preserve">
+    <value>Terima kasih telah mengajukan permohonan Anda.&lt;br/&gt;&lt;br/&gt;Rincian situs web dan permohonan Anda akan ditinjau ulang oleh tim Afiliasi {0} untuk memastikan bahwa konten dimaksud sesuai untuk mempromosikan produk kami.&lt;br/&gt;&lt;br/&gt;Dalam 5 hari kami akan memberitahu mengenai keputusan atas permohonan Anda. Jika disetujui, Anda dapat menikmati akses penuh ke program afiliasi kami.&lt;br /&gt;&lt;br /&gt;Salam Hormat,&lt;br /&gt;&lt;br /&gt;Tim Afiliasi {0}</value>
+  </data>
+  <data name="ApplicationUnde" xml:space="preserve">
+    <value>Permohonan Sedang Diperiksa</value>
+  </data>
+  <data name="January" xml:space="preserve">
+    <value>Januari</value>
+  </data>
+  <data name="February" xml:space="preserve">
+    <value>Februari</value>
+  </data>
+  <data name="March" xml:space="preserve">
+    <value>Maret</value>
+  </data>
+  <data name="April" xml:space="preserve">
+    <value>April</value>
+  </data>
+  <data name="June" xml:space="preserve">
+    <value>Juni</value>
+  </data>
+  <data name="July" xml:space="preserve">
+    <value>Juli</value>
+  </data>
+  <data name="August" xml:space="preserve">
+    <value>Agustus</value>
+  </data>
+  <data name="September" xml:space="preserve">
+    <value>September</value>
+  </data>
+  <data name="October" xml:space="preserve">
+    <value>Oktober</value>
+  </data>
+  <data name="November" xml:space="preserve">
+    <value>November</value>
+  </data>
+  <data name="December" xml:space="preserve">
+    <value>Desember</value>
+  </data>
+  <data name="MustBeNumber" xml:space="preserve">
+    <value>Bidang ini harus berupa angka.</value>
+  </data>
+  <data name="LandingPagesDetail" xml:space="preserve">
+    <value>Pendaratan Halaman Rincian</value>
+  </data>
+  <data name="Statistics" xml:space="preserve">
+    <value>Ikhtisar Rekening</value>
+  </data>
+  <data name="CustomerInfo" xml:space="preserve">
+    <value>Customer Information</value>
+  </data>
+  <data name="AmountError" xml:space="preserve">
+    <value>Jumlah permintaan tidak valid! Jumlah harus antara </value>
+  </data>
+  <data name="And" xml:space="preserve">
+    <value>dan</value>
+  </data>
+  <data name="FAQ_HowCanCheck" xml:space="preserve">
+    <value>Bagaimana memeriksa jumlah perolehan saya?</value>
+  </data>
+  <data name="FAQ_HowDoSignUp" xml:space="preserve">
+    <value>Bagaimana cara mendaftar ke Program Afiliasi {0}?</value>
+  </data>
+  <data name="FAQ_HowSystemKeepTrack" xml:space="preserve">
+    <value>Bagaimana cara sistem melacak para pemain saya?</value>
+  </data>
+  <data name="FAQ_WhatAreWithdrawalMethods" xml:space="preserve">
+    <value>Metode penarikan apa sajakah yang tersedia bagi saya?</value>
+  </data>
+  <data name="FAQ_WhatIfDontHaveWebsite" xml:space="preserve">
+    <value>Bagaimana bila saya tidak memiliki Situs Web, apakah saya masih tetap dapat bergabung?</value>
+  </data>
+  <data name="FAQ_WhatIsAffiliateProgram" xml:space="preserve">
+    <value>Bagaimana bila saya tidak memiliki Situs Web, apakah saya masih tetap dapat bergabung?</value>
+  </data>
+  <data name="FAQ_WhatIsMinimumWithdrawalRequest" xml:space="preserve">
+    <value>Apakah Program Afiliasi {0} itu?</value>
+  </data>
+  <data name="FAQ_WhereGetBanners" xml:space="preserve">
+    <value>Di manakah saya bisa mendapatkan banner dan konten?</value>
+  </data>
+  <data name="CompanyNegativeNetWin" xml:space="preserve">
+    <value>Jika Keuntungan Bersih Perusahaan adalah negatif, maka Affiliasi harus menanggung {0}% dari kekalahan perusahaan tersebut (diterapkan per produk, bukan total keseluruhan)</value>
+  </data>
+  <data name="LiveCasino" xml:space="preserve">
+    <value>Live Casino</value>
+  </data>
+  <data name="NumberGame" xml:space="preserve">
+    <value>Number Game</value>
+  </data>
+  <data name="RNGCasino" xml:space="preserve">
+    <value>RNG Casino</value>
+  </data>
+  <data name="Casino" xml:space="preserve">
+    <value>Casino</value>
+  </data>
+  <data name="Racebook" xml:space="preserve">
+    <value>Racebook</value>
+  </data>
+  <data name="BetList" xml:space="preserve">
+    <value>Bet List</value>
+  </data>
+  <data name="DontShowRunningBetList" xml:space="preserve">
+    <value>We don't support running bet list at the moment.</value>
+  </data>
+  <data name="BetListResults" xml:space="preserve">
+    <value>Results</value>
+  </data>
+</root>

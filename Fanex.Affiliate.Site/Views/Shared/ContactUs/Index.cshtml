@@ -1,0 +1,105 @@
+﻿@{
+    ViewBag.Title = Lang.ContactUs;
+    Layout = string.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
+}
+@model Fanex.Affiliate.Criterias.ContactUsCriteria
+@using (Html.BeginForm())
+{
+    var classThai = AppSession.Language.Equals("th-TH") ? AppSession.Language : string.Empty;
+    var classType = string.Format("class='span12 box-insite {0}'", classThai);
+    
+    <div @Html.Raw(classType) >
+        <div class="top">
+            <div class="in-top">
+                @Lang.ContactUs
+            </div>
+            <div class="in-right">
+            </div>
+        </div>
+        <div class="content">
+            @Html.ValidationSummary()
+            <div id="errorContactUs" class="forgetpassword-errors hidden">
+            </div>
+            <div class="content-block">
+                <table class="frmContact">
+                    <tbody>
+                        <tr>
+                            <td colspan="6">
+                                @Html.Raw(string.Format(Lang.PleaseDirectAnyComment, string.Format("<a href='mailto:{0}'>{0}</a>", ViewData["mailContact"])))
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="lbl">
+                                <span>@Lang.Name</span>
+                            </td>
+                            <td>
+                                <span class="txtCharacter">*</span>&nbsp;
+                                @Html.TextBoxFor(m => m.Sender)
+                            </td>
+                            <td class="lbl">
+                                <span>@Lang.Affiliate</span>
+                            </td>
+                            <td>
+                                <span class="txtCharacter" style="visibility: hidden;">_</span>&nbsp;
+                                @Html.TextBoxFor(m => m.Affiliate)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="lbl">
+                                <span>@Lang.Subject</span>
+                            </td>
+                            <td>
+                                <span class="txtCharacter">*</span>&nbsp;
+                                @Html.TextBoxFor(m => m.Subject)
+                            </td>
+                            <td class="lbl">
+                                <span>@Lang.Email</span>
+                            </td>
+                            <td>
+                                <span class="txtCharacter">*</span>&nbsp;
+                                @Html.TextBoxFor(m => m.Email)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>@Lang.Comment</span>
+                            </td>
+                            <td colspan="3">
+                                <span class="txtCharacter">*</span>&nbsp;
+                                @Html.TextAreaFor(m => m.Content, new { @class = "textComment" })
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="lbl">
+                                <span>@Lang.Validation</span>
+                            </td>
+                            <td colspan="3">
+                                <span class="txtCharacter">*</span>&nbsp;
+                                @Html.TextBoxFor(m => m.ValidCode, new { autocomplete = "off", @class = "inputValidate", @placeholder = Lang.Validation, @Style = "width:50px", })
+                                <img src="@Url.Action("CaptchaImage", "ContactUs")" id="imgCaptchaContactUs" class="mouse-pointer" alt="Captcha" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="6" align="center">
+                                <input type="submit" value="@Lang.Submit" class="button" id="btnSubmit" name="btnSubmit">
+                                <input type="Reset" value="@Lang.Reset" name="btnClear" id="btnClear" class="button">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+}
+@section scriptspage
+{
+    @Scripts.Render("~/Scripts/site/ContactUs.js")
+    @if (ViewBag.Error != null)
+    {
+        var msg = ((ResultViewModel)ViewBag.Error).Message;
+        <script type="text/javascript">
+            ContactUs.reloadCaptcha();
+            AFFILIATE.showErrorMsg("@msg");
+        </script>
+    }
+}

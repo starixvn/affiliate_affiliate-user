@@ -1,0 +1,95 @@
+﻿form {
+	padding: 0;
+	margin: 0;
+}
+
+.hidden {
+	display: none; 
+}
+
+.ui-dialog .ui-dialog-content
+{
+	padding:0;
+}
+.clear { clear: both }
+
+label, input, button, select, textarea {
+	font-size: @fontSize;
+}
+
+.mouse-pointer {
+	cursor: pointer;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+/* Validation summary valid */
+.input-validation-error {
+	border: 1px solid #f00 !important;
+	background-color: #fee !important;
+}
+.validation-summary-valid.success ul
+{
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    border: solid 1px #4F8A10;
+}
+.validation-summary-errors ul
+{
+	padding:5px 25px;
+	margin:0;
+    color: red;
+    background-color: #FFBABA;
+    border: solid 1px #a00;
+}
+.validation-summary-valid
+{
+    display: none;
+}
+.validation-summary-valid ul
+{
+    padding: 10px 30px;
+    line-height: 1.6em;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    -moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    margin: 0 0 10px;
+    list-style-type: circle;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+	background-color: #F9EED0;
+    border:  solid 1px #ECE388;
+}
+
+/* Datepicker */
+input.datepicker {	
+	width: 58px;
+}
+
+.ui-datepicker-trigger {
+	margin-left: 5px;
+}
+
+/* jQUERY UI TOOLTIP */
+ .ui-widget.ui-tooltip {
+	#gradient.vertical(#fff, #f5f5f5);
+	border: 1px solid #777;
+	border-radius: 3px;
+	.box-shadow(none);
+	padding: 1px 8px;
+}
+
+ .ui-widget.ui-tooltip.warning {
+	#gradient.vertical(#FFE691, lighten(#FFE691, 10%));
+	.box-shadow(~"0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.6) inset");
+	border-color: #F6DB7B;
+	color: #7D5912;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
+}

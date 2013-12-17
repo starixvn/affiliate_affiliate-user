@@ -1,0 +1,132 @@
+﻿@using Fanex.Affiliate.Web.Mvc
+@model SiteDomainInfo
+@{
+    ViewBag.Title = Lang.FAQs;
+    Layout = String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
+    var linkApplicationForm = new object();
+    if(SessionManager.CurrentSession == null)
+    {
+        linkApplicationForm = Html.ActionLink(Lang.ApplicationForm, "Index", "User");
+    }
+    else
+    {
+        linkApplicationForm = Lang.ApplicationForm; 
+    }
+}
+@{
+    var classThai = AppSession.Language.Equals("th-TH") ? AppSession.Language : string.Empty;
+    var classType = string.Format("class='span12 box-insite {0}'", classThai);
+}
+
+<div @Html.Raw(classType)>
+    <div class="top">
+        <div class="in-top">@Lang.FAQs</div>
+        <div class="in-right"></div>
+    </div>
+    <div class="content">
+        <div class="block">
+            <div class="title-block">
+                Umum <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block">
+            </div>
+            <div class="content-block">
+                <b id="f1">@string.Format("Apakah Program Afiliasi {0} itu?", AppSettings.AffiliateName)</b>
+                <br />
+                @Html.Raw(string.Format("Program Afiliasi {0}  merupakan program kemitraan dimana Anda akan mendapatkan komisi berdasarkan taruhan yang dilakukan oleh para pemain yang Anda rujuk kepada {1} dari Situs Web Anda melalui rujukan online atau offline", AppSettings.AffiliateName, Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                <p></p>
+                <b id="f2">@string.Format("Bagaimana cara mendaftar ke Program Afiliasi {0}?", AppSettings.AffiliateName) </b>
+                <br />
+                @Html.Raw(string.Format("Anda bebas bergabung dalam Program Afiliasi {0}. Isi saja {1} kami dan Anda akan dihubungi dalam waktu 3 hari kerja mengenai penerimaan dalam program. Jika permohonan Anda dikabulkan, Anda akan menerima email yang berisi ID afiliasi khusus bagi Anda yang dapat digunakan untuk mengakses banner, tautan teks, dan konten lainnya serta alat bantu pemasaran untuk ditambahkan ke situs web Anda.", AppSettings.AffiliateName, linkApplicationForm))
+                <p></p>
+                <b id="f3">Bagaimana bila saya tidak memiliki Situs Web, apakah saya masih tetap dapat bergabung?</b>
+                <br />
+                Ya, sekarang Anda bisa! Perusahaan akan memberi sebuah tautan laman (yang dihubungkan dengan akun Anda), Anda dapat:
+                <ul>
+                    <li style="list-style-type: disc">Mengunggahnya pada situs web atau forum publik untuk mempromosikan program afiliasi kami.</li>
+                    <li style="list-style-type: disc">Kirimkan tautan laman tersebut kepada setiap teman, kontak Anda yang tertarik pada olahraga atau taruhan olahraga dan bila mereka mengklik tautan tersebut, mereka menjadi anggota yang Anda rujuk!</li>
+                </ul>
+                @Html.Raw(string.Format("Untuk rincian lebih lanjut, silahkan hubungi kami melalui {0}.", string.Format("<a href=mailto:{0}>{0}</a>", AppSettings.MailContact)))
+            </div>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                Pemasaran & Pelacakan<a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block">
+            </div>
+            <div class="content-block">
+                <b id="f4">Di manakah saya bisa mendapatkan banner dan konten?</b>
+                <br />
+                Dengan mengakses bagian Galeri Media kami, Anda akan dapat memilih banner preferensi serta tautan teks untuk Situs Web Anda.
+                <p></p>
+                <b id="f5">Bagaimana cara sistem melacak para pemain saya?</b>
+                <br />
+                @Html.Raw(string.Format("Kami menggunakan teknologi termutakhir pada sistem pelacakan agar Anda dipastikan menerima kredit untuk 100% trafik yang Anda kirim ke {0}. Afiliasi merujukkan pemain dengan menggunakan URL unik mereka yang tersedia di area Galeri Media. Melalui penggunaan cookie, pengunjung yang mengklik melalui URL unik afiliasi (banner, tautan teks, pesan email, dsb.) akan terlacak dan kredit secara otomatis diberikan kepada afiliasi untuk pemain yang dirujukkan.", Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                <p></p>
+                <b>@Html.Raw(string.Format("Apakah Anda akan melacak dan memberikan kredit kepada saya untuk non-anggota yang tidak mendaftar pada kunjungan pertama melalui tautan afiliasi saya, tetapi kemudian kembali lagi ke {0} dan menjadi anggota?", Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))</b>
+                <br />
+                @Html.Raw(string.Format("Ya. Kami dapat melacak pengunjung dari situs web afiliasi kami yang tidak langsung mendaftar, tetapi akan kembali ke {0} di kemudian hari & mendaftar. Kami menetapkan jangka waktu perlindungan selama 90 hari untuk mencakup afiliasi perujukan pertama. Teknologi yang digunakan untuk mengelola ini berdasarkan cookie.", Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                <p>
+                </p>
+                <b>Apakah cookie itu?</b>
+                <br />
+                @Html.Raw(string.Format("Cookie adalah mekanisme umum yang dapat digunakan koneksi pada sisi server untuk menyimpan dan mengambil informasi dari koneksi pada sisi klien. Secara lebih spesifik, ini adalah file data kecil yang ditaruh pada komputer pengunjung ke {0} dari situs web yang terafiliasi. File data ini berisi informasi yang digunakan {0} untuk melacak dan mengkreditkan para afiliasinya secara akurat untuk trafik yang mereka kirim. Pelacakan melalui cookie dapat mencakup, tetapi tidak terbatas pada, daftar halaman yang dikunjungi serta tanggal dan waktu halaman tertentu dilihat.", Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                <p>
+                </p>
+                <b>Apakah Anda memberikan imbalan kepada Afiliasi Pertama atau Afiliasi Terakhir untuk merujukkan pelanggan?</b>
+                <br />
+                Cookie akan ditimpa untuk kepentingan Afiliasi Terakhir apabila ada Pelanggan yang dirujukkan.
+                <p>
+                </p>
+                <b id="f6">Bagaimana memeriksa jumlah perolehan saya?</b>
+                <br />
+                @string.Format("Anda dapat login ke rekening afiliasi {0} untuk memeriksa status komisi Anda dalam waktu nyata, yang tersedia bagi Anda selama 24 jam sehari, 7 hari seminggu, dan 365 hari per tahun.", AppSettings.SystemName)
+                <p>
+                </p>
+                <b>Bagaimanakah kebijakan Anda mengenai spamming?</b>
+                <br />
+                @string.Format("Kami tidak mentolerir spamming jenis apa pun oleh mitra afiliasi Anda. Jika spamming yang dilakukan afiliasi disampaikan kepada kami, kami akan memberikan peringatan kepada afiliasi itu (jika dinilai sebagai kasus ringan). Jika spamming tidak berhenti, mitra afiliasi itu akan selamanya dikeluarkan dari Program Afiliasi {0} kami. ", AppSettings.SystemName)
+            </div>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                Pemberian Bayaran<a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block">
+            </div>
+            <div class="content-block">
+                <b id="f7">Metode penarikan apa sajakah yang tersedia bagi saya?</b>
+                <br />
+                @string.Format("Anda dapat meminta penarikan langsung dari akun pemain {0} Anda.", AppSettings.SystemName)
+                <p>
+                </p>
+                <b>Mata uang apa saja yang dapat digunakan untuk penarikan?</b>
+                <br />
+                @string.Format("Anda dapat menarik uang dalam mata uang {0} Pada tanggal pembayaran akan digunakan masing-2 kurs jual beli yang berlaku.", string.Join(", ", AppSettings.PlayerCurrencies.OrderBy(c => c.CurrencyCode).Select(x => x.CurrencyCode).ToArray()))
+                <p>
+                </p>
+                <b id="f8">Berapakah jumlah minimum permohonan penarikan?</b>
+                <br />
+                @string.Format("Jumlah minimum permohonan penarikan adalah {0}{1}.", AppSettings.DefaultCurrencySymbol, AppSettings.MinimumWithdrawalAmount)
+                <p>
+                </p>
+                <b>Apakah negatif saldo akan dibawa? </b>
+                <br />
+                Ya, kami memutar saldo negatif komisi. Pada saat anda membawa saldo negatif komisi pada akhir bulan, jumlah tersebut akan berputar sampai anda memiliki pendapatan positif untuk menolkan saldo tersebut.
+                <p>
+                </p>
+                <b>Berapa sering saya dapat melakukan permohonan penarikan?</b>
+                <br />
+                Maksimum satu permohonan penarikan dapat dibuat pada tiap bulan. Permohonan kedua pada bulan yang sama harus mendapati persetujuan dari Manager Affiliate. Walaupun kami menawarkan permohonan penarikan gratis namun kami tidak bertanggungjawab akan adanya potongan dari institusi keuangan atau dompet elektronik pada account anda.
+            </div>
+            @if (SessionManager.CurrentSession == null)
+            {
+                <br />
+                <div class="joinUsButton">
+                    <a class="signup" href="~/User/Index"><span>@string.Format("Bergabung dalam Program Afiliasi {0}", AppSettings.SystemName).ToUpper()</span></a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

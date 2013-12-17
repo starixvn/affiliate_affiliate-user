@@ -1,0 +1,16 @@
+﻿<div> 
+尊敬的 @Model.FirstName,<br /><br />
+
+您好，<br /><br />
+
+您交易代碼@Model.PaymentID，日期@Model.PaymentRequestDate，金額為@Model.PaymentAmount的支付申請已被取消。<br /><br />
+                                         
+此郵件為系統郵件，請不要直接回复。<br /><br />
+
+如有任何疑問，歡迎致信<a href="mailto:@Model.MailContact">@Model.MailContact</a>聯繫我們<br /><br />
+                                         
+誠摯的<br />
+
+@Model.AffiliateName 合作夥伴團隊<br />
+<a href="mailto:@Model.MailContact">@Model.MailContact</a>
+</div>

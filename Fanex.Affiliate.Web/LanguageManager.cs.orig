@@ -1,0 +1,73 @@
+﻿// --------------------------------------------------------------------------
+// <copyright file="LanguageManager.cs" company="Nexcel Solutions Vietnam">
+// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
+// </copyright>
+// --------------------------------------------------------------------------
+// <history>
+//   <change who="Kaden.Trinh" date="2013.06.17">Created</change>
+// </history>
+
+namespace Fanex.Affiliate.Web
+{
+    using System.Globalization;
+    using System.Resources;
+    using System.Threading;
+    using Configurations;
+    using Resources;
+
+    /// <summary>
+    /// Language Mapper.
+    /// </summary>
+    public class LanguageManager
+    {
+        /// <summary>
+        /// Culture USA.
+        /// </summary>
+        private static readonly CultureInfo _DefaultCulture = CultureInfo.CreateSpecificCulture(AppSettings.DefaultLanguage);
+        
+        /// <summary>
+        /// Resource mapper language.
+        /// </summary>
+        private readonly ResourceManager _resourceManagerLang;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LanguageManager"/> class.
+        /// </summary>
+        public LanguageManager()
+        {
+            _resourceManagerLang = new ResourceManager(typeof(Lang)) { IgnoreCase = true };
+        }
+
+        /// <summary>
+        /// Set Culture by Language code.
+        /// </summary>
+        /// <param name="language">Language parameter.</param>
+        public void SetCulture(string language)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
+            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(language);
+
+<<<<<<< Updated upstream
+            Thread.CurrentThread.CurrentCulture.DateTimeFormat = System.Globalization.CultureInfo.CreateSpecificCulture("en-US").DateTimeFormat;
+=======
+            Thread.CurrentThread.CurrentCulture.DateTimeFormat = _DefaultCulture.DateTimeFormat;
+>>>>>>> Stashed changes
+            Thread.CurrentThread.CurrentCulture.NumberFormat = System.Globalization.CultureInfo.CreateSpecificCulture("en-US").NumberFormat;
+        }
+
+        /// <summary>
+        /// Get Text by Key.
+        /// </summary>
+        /// <param name="key">Key parameter.</param>
+        /// <returns>Resource data.</returns>
+        public string GetResourceData(string key)
+        {
+            if (!ReferenceEquals(_resourceManagerLang, null))
+            {
+                return _resourceManagerLang.GetString(key);
+            }
+
+            return string.Empty;
+        }
+    }
+}

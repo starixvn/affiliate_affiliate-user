@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = Lang.ContactUs;
+    Layout = @String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
+}
+<div class="span12 box-insite">
+    <div class="top">
+        <div class="in-top">
+            @Lang.ContactUs
+        </div>
+        <div class="in-right">
+        </div>
+    </div>
+    <div id="instructionContent" class="content">
+        <div class="in-top">
+            @Html.Raw(string.Format(Lang.ContactUsSuccess, AppSettings.AffiliateName))
+        </div>
+    </div>
+</div>

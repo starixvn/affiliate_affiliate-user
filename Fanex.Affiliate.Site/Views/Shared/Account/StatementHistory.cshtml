@@ -1,0 +1,127 @@
+﻿@model IPagedList<Statement>
+@{
+    ViewBag.Title = Lang.StatementHistory;
+    Layout = @String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
+}
+
+<div class="span12 box-insite">
+    <div class="top">
+        <div class="in-top">
+            @Lang.StatementHistory
+        </div>
+        <div class="in-right">
+        </div>
+    </div>
+    <div class="content">
+        @if (Model.Any())
+        {
+            <div class="block">
+                <div class="content-block no-padding">
+                    <div class="pagesize pull-right">
+                        <span class="items-per-page">@Lang.PageSize
+                            @Html.DropDownList("items-per-page", new List<SelectListItem> {
+					            new SelectListItem { Value = "10", Text = "10", Selected = "10" == Model.PageSize.ToString() },
+					            new SelectListItem { Value = "20", Text = "20", Selected = "20" == Model.PageSize.ToString() },
+					            new SelectListItem { Value = "50", Text = "50", Selected = "50" == Model.PageSize.ToString() },
+                                new SelectListItem { Value = "100", Text = "100", Selected = "100" == Model.PageSize.ToString()},
+                                new SelectListItem { Value = "200", Text = "200", Selected = "200" == Model.PageSize.ToString()}
+				            }, new { id = string.Empty, @class = "items-per-page", @data_controller = "/Account/Statement" })</span>
+                    </div>
+                    <div class="paging-info clear">
+                        @Html.Pager(Model.PageSize, Model.PageNumber, Model.TotalItemCount)
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="block">
+            <div class="content-block no-padding">
+                <table class="table odd-even list no-margin">
+                    <thead>
+                        <tr class="gradient-header">
+                            <th style="width: 15px;">
+                                &nbsp;
+                            </th>
+                            <th style="width: 100px;">
+                                @Lang.Date
+                            </th>
+                            <th style="width: 100px;">
+                                @Lang.Type
+                            </th>
+                            <th style="width: 100px;">
+                                @string.Format("{0} ({1})", Lang.Amount, FormaterCurrency.GetCurrencySymbol())
+                            </th>
+                            <th style="width: 60px;">
+                                @Lang.Status
+                            </th>
+                            <th>
+                                @Lang.Description
+                            </th>
+                        </tr>
+                    </thead>
+                    @if (Model.Any())
+                    {
+                        <tbody>
+                            @{
+                        var i = 0;
+                        foreach (var item in Model)
+                        {
+                            i++;
+                                <tr class="@(i % 2 == 0 ? "even" : "odd")">
+                                    <td class="text-center">
+                                        @i
+                                    </td>
+                                    <td class="text-center">
+                                        @item.MonthDateString
+                                    </td>
+                                    <td>
+                                        @item.TransTypeName
+                                    </td>
+                                    <td class="text-right">
+                                        @if (item.TransType == 202 || item.TransType == 203
+                                            || DateTime.Compare(item.MonthDate, AppSettings.SystemStartDate) < 0)
+                                        {
+                                            @Html.Raw(FormaterCurrency.Format(item.Amount))
+                                        }
+                                        else
+                                        {
+                                            var monthDate = Common.ConvertDateTime(item.MonthDate, "-", true, false);
+                                            //@Html.Raw(string.Format("<a href='javascript:;' class='act-view-amount' data-month-date='{0}'>{1}</a>", monthDate, FormaterCurrency.Format(item.Amount)))
+                                            @Html.Raw(string.Format("<a href='DailyEarnings?MonthDate={0}'>{1}</a>", monthDate, FormaterCurrency.Format(item.Amount)))
+                                        }
+                                    </td>
+                                    <td align="center">
+                                        @item.Status
+                                    </td>
+                                    <td>
+                                        @Html.Raw(item.Description)
+                                    </td>
+                                </tr>
+
+                        }
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <tfoot>
+                            <tr>
+                                <td colspan="6" align="center">@Lang.NoInformation
+                                </td>
+                            </tr>
+                        </tfoot>
+                    }
+                </table>
+            </div>
+        </div>
+        @if (Model.Any())
+        {
+            <div class="block">
+                <div class="content-block no-padding">
+                    <div class="paging-info clear">
+                        @Html.Pager(Model.PageSize, Model.PageNumber, Model.TotalItemCount)
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

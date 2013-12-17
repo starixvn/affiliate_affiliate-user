@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "AffiliateSetting";
+}
+@{
+    var allLanguages = ViewBag.AllLanguages;
+    var supportedLanguages = ViewBag.SupportedLanguages;
+}
+<script type="text/javascript">
+    //setInterval($("#divResults").html(""), 5 * 1000);
+    setInterval(function () { $("#divResults").html(""); }, 10*1000);
+
+    function UpdateSupportedLangs() {
+        // get all already customized supported languages
+        var langsList = "";
+
+        $('input[type=checkbox]:checked').each(function () {
+            langsList += $(this).attr("id") + ",";
+        });
+
+        // remove the last ','
+        langsList = langsList.substring(0, langsList.length - 1);
+
+        // send request
+        var url = "AffiliateSetting?langsList=" + langsList;
+        $.ajax({
+            type: "POST",
+            url: url,
+            dataType: "html",
+            cache: false,
+            success: function (result) {
+                if (result == "success") {
+                    $("#divResults").html("Update Affiliate Setting Successful.");
+                }
+                else {
+                    $("#divResults").html("Update Affiliate Setting Failed.");
+                }
+            },
+            error: function () {
+                $("#divResults").html("Update Affiliate Setting Failed.");
+            }
+        });
+    }
+</script>
+
+<div style="padding-left:30px; padding-right:30px;">
+    <h4>Affiliate's Setting Page (For Internal Login Only)</h4>
+    <hr />
+
+    <h5>Affiliate Supported Languages</h5>
+    @{
+        foreach (var lang in allLanguages)
+        {
+            if (supportedLanguages.IndexOf(lang.LanguageId) >= 0)
+            {
+                <input type="checkbox" id="@lang.LanguageId" checked="checked" name="test" />   <span>@lang.LanguageName</span>
+            }
+            else
+            {
+                <input type="checkbox" id="@lang.LanguageId" name="test"/>   <span>@lang.LanguageName</span>
+            }
+            <br />
+        }
+        <br />
+        <input type="button" value="Submit" onclick="UpdateSupportedLangs()" />
+        <div id="divResults"></div>
+    }
+    <hr />
+</div>

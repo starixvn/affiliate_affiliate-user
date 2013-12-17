@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = Lang.AccountOverview;
+    ViewBag.Theme = "theme" + AppSettings.Theme;
+    Layout = @String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
+    var LangList = AppSettings.BaseLanguages;
+}
+
+@using (Html.BeginForm("QCPreTest", "Account"))
+{
+    <div class="span12 box-insite">
+        <div class="top">
+            <div class="in-top">
+                QC Pre-Test
+            </div>
+            <div class="in-right">
+            </div>
+        </div>
+        <div class="content">
+            <b>ASSEMBLY VERSION:</b> @typeof(Fanex.Affiliate.Site.MvcApplication).Assembly.GetName().Version
+            <hr />
+            
+            <b>SEND MAILS:</b> <br />
+            <br />
+            Email: <input type="text" id="email" name ="email" value="luuhoangdragon@yahoo.com" style="width:200px; height:15px;" />
+            <br />
+            <div style="padding-right:55px !important; vertical-align:middle !important;">
+                Preferred Language: &nbsp;&nbsp;<input type="radio" name="preferLangs" value="All" title="All" checked="checked" /> All
+                @if (LangList.Any())
+                {
+                    var i = 0;
+                    foreach (var item in LangList)
+                    {
+                        <input type="radio" name="preferLangs" value="@item.LanguageId" title="@item.LanguageName" />@item.LanguageId
+                    }
+                }
+            </div>
+            <input type="submit" value="Send Emails"  style="width:100px; height:20px;" />
+            <br />
+            <font style="color:Red;">@ViewBag.Result</font>
+            <hr />
+
+            <b>EMAIL's THEME:</b> <br />
+            Email Banner: <img src="~/Content/themes/@ViewBag.Theme/images/emailBanner.jpg" />
+            <br />
+            Email header's color: <div style="width: 100px; height: 20px; background: @AppSettings.EmailHeaderBgColor"></div>
+            <br />
+            Email footer's color: <div style="width: 100px; height: 20px; background: @AppSettings.EmailFooterBgColor"></div>
+            <br />
+        </div>
+    </div>
+}

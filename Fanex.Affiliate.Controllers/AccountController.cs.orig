@@ -1,0 +1,898 @@
+﻿// --------------------------------------------------------------------------
+// <copyright file="AccountController.cs" company="Nexcel Solutions Vietnam">
+// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
+// </copyright>
+// --------------------------------------------------------------------------
+// <history>
+//   <change who="Kaden.Trinh" date="2013.05.29">Created</change>
+//   <change who="Kaden.Trinh" date="2013.05.30">Implement SignIn action</change>
+//   <change who="Kaden.Trinh" date="2013.06.11">Implement action: Overview account</change>
+//   <change who="Johny.Trinh" date="2013.07.01">Implement action: My Account</change>
+// </history>
+
+namespace Fanex.Affiliate.Controllers
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
+    using System.Linq;
+    using System.Net;
+    using System.Runtime.InteropServices;
+    using System.Web.Mvc;
+    using Configurations;
+    using Criterias;
+    using DTO;
+    using Enumerations;
+    using Resources;
+    using Services.Impl;
+    using Services.Interface;
+    using StackExchange.Profiling;
+    using Utilities;
+    using ViewModels;
+    using Web;
+    using Web.Filter;
+    using Web.Pager;
+
+    /// <summary>
+    /// All action after login.
+    /// </summary>
+    [SuppressMessage("Microsoft.StyleCop.CSharp.ReadabilityRules", "SA1115:ParameterMustFollowComma", Justification = "Use during session")]
+    [Authorization]
+    public partial class AccountController : BaseController
+    {
+        #region Const
+
+        #endregion Const
+
+        #region Services
+
+        /// <summary>
+        /// Define account service.
+        /// </summary>
+        private readonly IAccountService _accountService;
+
+        /// <summary>
+        /// Define System Setting service.
+        /// </summary>
+        private readonly ISystemSettingService _systemSettingService;
+
+        /// <summary>
+        /// Define Payment service.
+        /// </summary>
+        private readonly IPaymentService _paymentService;
+
+        /// <summary>
+        /// Define User service.
+        /// </summary>
+        private readonly IUserService _userService;
+
+        /// <summary>
+        /// Define Traffic Statistics service.
+        /// </summary>
+        private readonly ITrafficStatisticService _trafficStatisticService;
+
+        /// <summary>
+        /// Define Product service.
+        /// </summary>
+        private readonly IProductService _productService;
+
+        /// <summary>
+        /// Define Marketing service.
+        /// </summary>
+        private readonly IMarketingService _marketingService;
+
+        #endregion Services
+
+        #region Constructor
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AccountController" /> class.
+        /// </summary>
+        /// <param name="accountService">Account Service.</param>
+        /// <param name="systemSettingService">System Setting Service.</param>
+        /// <param name="paymentService">System payment Service.</param>
+        /// <param name="trafficService">Traffic Service.</param>
+        /// <param name="userService">User Service.</param>
+        /// <param name="productService">Product Service.</param>
+        /// <param name="marketingService">Marketing Service.</param>
+        public AccountController(
+            IAccountService accountService,
+            ISystemSettingService systemSettingService,
+            IPaymentService paymentService,
+            ITrafficStatisticService trafficService,
+            IUserService userService,
+            IProductService productService,
+            IMarketingService marketingService)
+        {
+            _accountService = accountService;
+            _systemSettingService = systemSettingService;
+            _paymentService = paymentService;
+            _trafficStatisticService = trafficService;
+            _userService = userService;
+            _productService = productService;
+            _marketingService = marketingService;
+        }
+
+        #endregion Constructor
+
+        #region Statement History
+
+        /// <summary>
+        /// Action get statement history.
+        /// </summary>
+        /// <param name="pageSize">Input page size.</param>
+        /// <param name="page">Input page index.</param>
+        /// <returns>Return view.</returns>
+        [HttpGet]
+        public ActionResult Statement([Optional, DefaultParameterValue(0)] int pageSize, [Optional, DefaultParameterValue(1)] int page)
+        {
+            var itemPerPage = pageSize > 0 ? pageSize : AppSettings.PageSize;
+            int currentPageIndex = page;
+            int totalPage = 0;
+            var criterias = new StatementCriteria
+            {
+                AffId = CurrentSession.AffId,
+                PageIndex = currentPageIndex,
+                PageSize = itemPerPage,
+                TotalPages = totalPage
+            };
+
+            if (criterias.IsValid)
+            {
+                var statement = _accountService.GetStatementHistory(criterias, ref totalPage);
+                return View(statement.ToPagedList(currentPageIndex, itemPerPage, totalPage * itemPerPage));
+            }
+
+            return View();
+        }
+
+        #endregion Statement History
+
+        #region Daily Earnings
+
+        /// <summary>
+        /// Action open popup Daily Earning.
+        /// </summary>
+        /// <param name="criteria">Daily earning criteria.</param>
+        /// <returns>Return view.</returns>
+        [HttpGet]
+        public ActionResult DailyEarning(DailyEarningCriteria criteria)
+        {
+            var productCriteria = new ProductCriteria
+                {
+                    Language = AppSession.Language,
+                    AffId = CurrentSession.AffId,
+                    MonthDate = criteria.MonthDate
+                };
+
+            var model = new DailyEarningViewModel();
+            string affCurrency;
+
+            criteria.AffId = CurrentSession.AffId;
+            model.ProductId = criteria.ProductId;
+            model.ListProduct = productCriteria.IsValid() ? _productService.GetProductList(productCriteria).ToList() : null;
+            model.ListDailyEarning = criteria.IsValid() ? _accountService.GetDailyEarnings(criteria, out affCurrency).ToList() : null;
+            FormaterCurrency.SetDefaultCurrency(affCurrency);
+
+            return View(model);
+        }
+
+        #endregion Daily Earnings
+
+        #region Daily Earnings KIOSK
+
+        /// <summary>
+        /// Daily Earning Kiosk.
+        /// </summary>
+        /// <returns>Return view.</returns>
+        [HttpGet]
+        public ActionResult DailyEarningsKiosk()
+        {
+            var targetDate = DateTime.Now.Date;
+            var startDate = targetDate.AddMonths(-1);
+            var criteria = new DailyEarningCriteria
+            {
+                AffId = CurrentSession.AffId,
+                ProductId = 0,
+                FromDate = startDate,
+                ToDate = targetDate,
+            };
+
+            return DailyEarningsKiosk(criteria);
+        }
+
+        /// <summary>
+        /// Daily Earning Kiosk.
+        /// </summary>
+        /// <param name="criteria">Daily earning criteria.</param>
+        /// <returns>Return view.</returns>
+        [HttpPost]
+        public ActionResult DailyEarningsKiosk(DailyEarningCriteria criteria)
+        {
+            var productCriteria = new ProductCriteria
+            {
+                Language = AppSession.Language,
+                AffId = CurrentSession.AffId,
+                MonthDate = criteria.MonthDate
+            };
+
+            var model = new DailyEarningsKioskViewModel();
+            string affCurrency;
+
+            criteria.AffId = CurrentSession.AffId;
+            if (criteria.FromDate != null)
+            {
+                model.FromDate = (DateTime)criteria.FromDate;
+            }
+
+            if (criteria.ToDate != null)
+            {
+                model.ToDate = (DateTime)criteria.ToDate;
+            }
+
+            model.ListProduct = _productService.GetProductList(productCriteria).ToList();
+            model.ProductId = criteria.ProductId;
+            model.ListDailyEarning = _accountService.GetDailyEarnings(criteria, out affCurrency).ToList();
+            FormaterCurrency.SetDefaultCurrency(affCurrency);
+
+            return View(model);
+        }
+
+        /// <summary>
+        /// Daily Earning Detail Kiosk.
+        /// </summary>
+        /// <param name="product">Initialize product ID.</param>
+        /// <param name="winlostdate">Initialize Win lost date.</param>
+        /// <returns>Return view.</returns>
+        [HttpGet]
+        public ActionResult DailyEarningsKioskDetail(string product, string winlostdate)
+        {
+            DateTime winlostDate = DateTime.Now;
+            DateTime.TryParse(winlostdate, out winlostDate);
+            int productId = 0;
+            int.TryParse(product, out productId);
+
+            var criteria = new DailyEarningsDetailCriteria()
+            {
+                AffId = CurrentSession.AffId,
+                ProductId = productId,
+                MonthDate = winlostDate,
+            };
+
+            return DailyEarningsKioskDetail(criteria);
+        }
+
+        /// <summary>
+        /// Daily Earning Detail Kiosk.
+        /// </summary>
+        /// <param name="criteria">Daily earning detail criteria.</param>
+        /// <returns>Return view.</returns>
+        [HttpPost]
+        public ActionResult DailyEarningsKioskDetail(DailyEarningsDetailCriteria criteria)
+        {
+            var productCriteria = new ProductCriteria
+            {
+                Language = AppSession.Language,
+                AffId = CurrentSession.AffId,
+                MonthDate = null
+            };
+
+            var model = new DailyEarningsKioskDetailViewModel();
+            string affCurrency;
+            model.ListProduct = _productService.GetProductList(productCriteria).ToList();
+            model.MonthDate = (DateTime)criteria.MonthDate;
+            model.ProductId = criteria.ProductId;
+            model.ListDailyEarningDetail = _accountService.GetDailyEarningsDetail(criteria, out affCurrency).ToList();
+            FormaterCurrency.SetDefaultCurrency(affCurrency);
+
+            return View(model);
+        }
+
+        #endregion Daily Earnings Kiosk
+
+        #region Customer Information Kiosk
+
+        /// <summary>
+        /// Action get customer information.
+        /// </summary>
+        /// <param name="pageSize">Input page size.</param>
+        /// <param name="page">Input page index.</param>
+        /// <returns>Return view.</returns>
+        [HttpGet]
+        public ActionResult CustomerInfoKiosk([Optional, DefaultParameterValue(0)] int pageSize, [Optional, DefaultParameterValue(1)] int page)
+        {
+            var itemPerPage = pageSize > 0 ? pageSize : AppSettings.PageSize;
+            int currentPageIndex = page;
+            int totalPage = 0;
+            var criterias = new CustomerInfoCriteria
+            {
+                AffUsername = CurrentSession.Username,
+                Username = null,
+                AffType = -1,
+                PageIndex = currentPageIndex,
+                PageSize = itemPerPage,
+                TotalPages = totalPage
+            };
+            var customerInfo = _accountService.GetCustomerInfo(criterias, ref totalPage);
+
+            return View(customerInfo.ToPagedList(currentPageIndex, itemPerPage, totalPage * itemPerPage));
+        }
+
+        #endregion Customer Information Kiosk
+
+        #region Account Overview
+
+        /// <summary>
+        /// Action get account overview.
+        /// </summary>
+        /// <returns>Return view.</returns>
+        [HttpGet]
+        public ActionResult Overview()
+        {
+            var criteria = new AccountOverviewCriteria
+            {
+                Month = DateTime.Now.Month,
+                Year = DateTime.Now.Year
+            };
+            return Overview(criteria);
+        }
+
+        /// <summary>
+        /// Action get account overview.
+        /// </summary>
+        /// <param name="criteria">Post criteria.</param>
+        /// <returns>Return view.</returns>
+        [HttpPost]
+        public ActionResult Overview(AccountOverviewCriteria criteria)
+        {
+            criteria.AffId = CurrentSession.AffId;
+
+            // Get statistics accout
+            var listProduct = new List<Product>();
+            var statistics = _accountService.GetStatisticsOverview(criteria, ref listProduct);
+
+            // Get Current Commission Setting
+            criteria.IsCommSetting = true;
+            var resultCommission = _accountService.GetCommissionSetting(criteria);
+
+            var model = new AccountOverviewViewModel
+            {
+                Month = criteria.Month,
+                Year = criteria.Year,
+                Statistics = statistics,
+                ListProduct = listProduct,
+                FirstListProduct = listProduct.Count > 0 ? listProduct[0].ProductName : Lang.NA,
+                TotalqualifedMembers = listProduct.Count > 0 ? listProduct[0].TotalQualifiedMembers.ToString() : Lang.NA,
+                ListProductOnCommissionSetting = resultCommission.ListProductOnCommissionSetting,
+                ListGroupSetting = resultCommission.ListGroupSetting,
+            };
+
+            return View(model);
+        }
+
+        #endregion Account Overview
+
+        #region Payment Request
+
+        /// <summary>
+        /// Payment Information.
+        /// </summary>
+        /// <param name="success">Check whether showing the cancel request success.</param>
+        /// <returns>Return view.</returns>
+        [HttpGet]
+        public ActionResult PaymentRequest(int success = 0)
+        {
+            var result = new ResultViewModel { Success = true };
+
+            var criteria = new PaymentCriteria
+            {
+                AffId = CurrentSession.AffId
+            };
+            PaymentViewModel payment;
+            var profiler = MiniProfiler.Current;
+            using (profiler.Step("DB Call"))
+            {
+                payment = _paymentService.GetPaymentRequest(criteria);
+            }
+            
+            if (success != 1)
+            {
+                // check pending request
+                if (payment.ListPayment.Where(p => p.Status.ToLower() == PaymentStatus.Pending.ToString().ToLower()).ToList().Any())
+                {
+                    result.Success = false;
+                    result.Message = Lang.Msg130;
+                }
+
+                // check whether balance is zero
+                if (payment.BalanceBroughtForward <= 0 || payment.BalanceBroughtForward < payment.MinimumWithdrawalAmount)
+                {
+                    result.Success = false;
+                    result.Message = Lang.BalanceIsZero;
+                }
+            }
+            else
+            {
+                result.Success = true;
+                result.Message = Lang.PaymentRequestCancel;
+            }
+
+            ViewBag.Result = result;
+
+            return View(payment);
+        }
+
+        /// <summary>
+        /// Handle payout request event.
+        /// </summary>
+        /// <param name="paymentModel">Input view model.</param>
+        /// <returns>Return view.</returns>
+        [InternalChecking]
+        [HttpPost]
+        public ActionResult PaymentRequest(PaymentViewModel paymentModel)
+        {
+            var result = new ResultViewModel { Success = true };
+            
+            if (SessionManager.CurrentSession.IsInternalSite)
+            {
+                ModelState.AddModelError("ErrAuthorized", Lang.ErrAuthorized);
+            }
+            else if (ModelState.IsValid)
+            {
+                if (paymentModel.Amount > paymentModel.BalanceBroughtForward)
+                {
+                    result.Success = false;
+                    result.Message = Lang.Msg131;
+                }
+
+                if (paymentModel.Amount < paymentModel.MinimumWithdrawalAmount)
+                {
+                    result.Success = false;
+                    result.Message = Lang.Msg136;
+                }
+
+                if (result.Success)
+                {
+                    var paymentInfo = _paymentService.GetPaymentRequestPlayerInfo(new PaymentPlayerInfoCriteria
+                    {
+                        AffId = CurrentSession.AffId
+                    });
+
+                    // Call API to check whether member is exists
+                    string ibcUsername = string.Empty, playerCurrency = string.Empty, strErrorMsg = string.Empty;
+                    if (!IsExistLicenseeCustInfo(paymentInfo.SystemName, paymentInfo.PlayerUsername, ref ibcUsername, ref playerCurrency, ref strErrorMsg))
+                    {
+                        result.Success = false;
+                        result.Message = Lang.Msg142;
+                    }
+                    else
+                    {
+                        result = InsertPaymentRequest(paymentInfo.PlayerUsername, playerCurrency, paymentModel.Amount, Request.ServerVariables["REMOTE_ADDR"]);
+                    }
+                }
+            }
+            
+            var payment = _paymentService.GetPaymentRequest(new PaymentCriteria
+            {
+                AffId = CurrentSession.AffId
+            });
+            ViewBag.Result = result;
+            
+            return View(payment);
+        }
+
+        /// <summary>
+        /// Insert payment request and send mail.
+        /// </summary>
+        /// <param name="playerUsername">Player user name.</param>
+        /// <param name="currency">Player currency.</param>
+        /// <param name="amount">Request amount.</param>
+        /// <param name="ip">IP parameter.</param>
+        /// <returns>Return result view model.</returns>
+        public ResultViewModel InsertPaymentRequest(string playerUsername, string currency, decimal amount, string ip)
+        {
+            var result = new ResultViewModel { Success = true };
+
+            var criteria = new PaymentRequestCriteria
+            {
+                AffId = CurrentSession.AffId,
+                Player_UserName = CurrentSession.Username,
+                Player_IBCUserName = playerUsername,
+                Player_Currency = currency,
+                Amount = amount,
+                IP = ip,
+                Language = AppSession.Language
+            };
+
+            // call insert payment request service
+            var paymentRequest = _paymentService.InsertPaymentRequest(criteria);
+
+            // successfully insert a new payment request
+            if (criteria.ErrCode == 0)
+            {
+                // send email
+                if (string.IsNullOrEmpty(paymentRequest.PreferredLanguage))
+                {
+                    paymentRequest.PreferredLanguage = AppSettings.DefaultLanguage;
+                }
+
+                SendPaymentRequestEmail(paymentRequest, amount);
+
+                // refresh payment page
+                result.Message = Lang.PaymentRequestSuccess;
+            }
+            else
+            {
+                result.Success = false;
+                result.Message = Common.GetErrorMsg(criteria.ErrCode);
+            }
+
+            return result;
+        }
+
+        /// <summary>
+        /// Send payment request email.
+        /// </summary>
+        /// <param name="paymentRequest">Payment view model.</param>
+        /// <param name="amount">Request amount.</param>
+        [SuppressMessage(
+               "StyleCop.CSharp.Nexcel.NexcelCustomRules",
+               "SP2100:CodeLineMustNotBeLongerThan",
+               Justification = "Reviewed. Suppression is OK here.")]
+        public void SendPaymentRequestEmail(PaymentViewModel paymentRequest, decimal amount)
+        {
+            string mapPath = string.Format("~/Views/Shared/Email/PaymentRequest/PaymentRequest.{0}{1}", paymentRequest.PreferredLanguage, paymentRequest.MailOption ? ".txt" : ".cshtml");
+            string templatePath = Server.MapPath(mapPath);
+            string currentLanguage = AppSession.Language;
+            AppSession.Language = CurrentSession.PreferredLanguage;
+            ChangeSystemLanguage();
+
+            string emailTitle = string.Format("{0} Affiliates - {1} - {2}", AppSettings.AffiliateName, paymentRequest.TransID.ToString(), Lang.RequestPaymentEmailTitle);
+            var siteDomainInfo = GetSiteDomainInfo();
+            string rootUrl = siteDomainInfo.AffiliateDomain.Substring(0, siteDomainInfo.AffiliateDomain.ToString().Length - 1);
+            var emailBody = (new EmailTemplateResolverService()).GetEmailBody(
+                                templatePath,
+                                new
+                                {
+                                    AffiliateName = AppSettings.AffiliateName,
+                                    CurrentMemberSiteDomain = siteDomainInfo.MemberSiteDomain,
+                                    MemberSiteDomainEmail = siteDomainInfo.MemberSiteDomainEmail,
+                                    FirstName = CurrentSession.FirstName,
+                                    PaymentRequestDate = paymentRequest.TransDate.ToString(),
+                                    PaymentAmount = FormaterCurrency.Format(amount, SessionManager.CurrentSession.Currency, true, true),
+                                    PaymentID = paymentRequest.TransID,
+                                    MailContact = AppSettings.MailContact,
+                                    ThemeID = "theme" + AppSettings.Theme,
+                                    RootUrl = rootUrl,
+                                    LanguageCode = paymentRequest.PreferredLanguage + ".jpg",
+                                    CopyrightYear = DateTime.Now.Year,
+                                    HeaderBgColor = AppSettings.EmailHeaderBgColor,
+                                    HeaderFontColor = AppSettings.EmailHeaderFontColor,
+                                    ContentBgColor = AppSettings.EmailContentBgColor,
+                                    ContentFontColor = AppSettings.EmailContentFontColor,
+                                    CopyrightBgColor = AppSettings.EmailCopyrightBgColor,
+                                    CopyrightFontColor = AppSettings.EmailCopyrightFontColor,
+                                    FooterBgColor = AppSettings.EmailFooterBgColor,
+                                    FooterFontColor = AppSettings.EmailFooterFontColor
+                                });
+            Common.SendEmail(emailBody, CurrentSession.Email, emailTitle, AppSettings.BccMail);
+
+            AppSession.Language = currentLanguage;
+            ChangeSystemLanguage();
+        }
+
+        /// <summary>
+        /// Handle payout request cancel event.
+        /// </summary>
+        /// <param name="paymentModel">Input view model.</param>
+        /// <returns>Return view.</returns>
+        [InternalChecking]
+        [HttpPost]
+        public ActionResult CancelPaymentRequest(PaymentViewModel paymentModel)
+        {
+            var result = new ResultViewModel { Success = true };
+
+            // check internal site login, if internal login not allow payment
+            if (SessionManager.CurrentSession.IsInternalSite)
+            {
+                ModelState.AddModelError("ErrAuthorized", Lang.ErrAuthorized);
+            }
+            else
+            {
+                var criteria = new PaymentCancelCriteria
+                                    {
+                                        UserID = CurrentSession.AffId,
+                                        TransID = Convert.ToInt64(paymentModel.TransID),
+                                        IP = Request.ServerVariables["REMOTE_ADDR"],
+                                        Language = AppSession.Language,
+                                        Status = PaymentStatus.Cancelled.ToString()
+                                    };
+                var paymentCancel = _paymentService.CancelPaymentRequest(criteria);
+
+                // success
+                if (criteria.ErrCode == 0)
+                {
+                    result.Message = Lang.PaymentRequestCancel;
+
+                    if (string.IsNullOrEmpty(paymentCancel.PreferredLanguage))
+                    {
+                        paymentCancel.PreferredLanguage = AppSettings.DefaultLanguage;
+                    }
+
+                    SendCancelPaymentEmail(paymentCancel, paymentModel.TransID);
+                    
+                    // redirect back to Payment Request page
+                    return RedirectToAction("PaymentRequest", new { success = 1 });
+                }
+                else
+                {
+                    result.Success = false;
+                    result.Message = Common.GetErrorMsg(criteria.ErrCode);
+                }
+            }
+
+            var payment = _paymentService.GetPaymentRequest(new PaymentCriteria
+            {
+                AffId = CurrentSession.AffId
+            });
+            ViewBag.Result = result;
+
+            return View("PaymentRequest", payment);
+        }
+
+        /// <summary>
+        /// Send cancel payment email.
+        /// </summary>
+        /// <param name="paymentCancel">Payment view model.</param>
+        /// <param name="transId">Transaction id.</param>
+        [SuppressMessage(
+               "StyleCop.CSharp.Nexcel.NexcelCustomRules",
+               "SP2100:CodeLineMustNotBeLongerThan",
+               Justification = "Reviewed. Suppression is OK here.")]
+        public void SendCancelPaymentEmail(PaymentViewModel paymentCancel, long transId)
+        {
+            string mapPath = string.Format("~/Views/Shared/Email/PaymentCancel/PaymentCancel.{0}{1}", paymentCancel.PreferredLanguage, paymentCancel.MailOption ? ".txt" : ".cshtml");
+            string templatePath = Server.MapPath(mapPath);
+            string currentLanguage = AppSession.Language;
+            AppSession.Language = CurrentSession.PreferredLanguage;
+            ChangeSystemLanguage();
+
+            string emailTitle = string.Format("{0} Affiliates - {1} - {2}", AppSettings.AffiliateName, transId, Lang.RequestPaymentEmailTitle);
+            var siteDomainInfo = GetSiteDomainInfo();
+            string rootUrl = siteDomainInfo.AffiliateDomain.Substring(0, siteDomainInfo.AffiliateDomain.ToString().Length - 1);
+            var emailBody = (new EmailTemplateResolverService()).GetEmailBody(
+                                templatePath,
+                                new
+                                {
+                                    AffiliateName = AppSettings.AffiliateName,
+                                    CurrentMemberSiteDomain = siteDomainInfo.MemberSiteDomain,
+                                    MemberSiteDomainEmail = siteDomainInfo.MemberSiteDomainEmail,
+                                    FirstName = CurrentSession.FirstName,
+                                    PaymentRequestDate = paymentCancel.TransDate.ToString(),
+                                    PaymentAmount = FormaterCurrency.Format(Math.Abs(paymentCancel.Amount), SessionManager.CurrentSession.Currency, true, true),
+                                    PaymentID = transId,
+                                    MailContact = AppSettings.MailContact,
+                                    ThemeID = "theme" + AppSettings.Theme,
+                                    RootUrl = rootUrl,
+                                    LanguageCode = paymentCancel.PreferredLanguage + ".jpg",
+                                    CopyrightYear = DateTime.Now.Year,
+                                    HeaderBgColor = AppSettings.EmailHeaderBgColor,
+                                    HeaderFontColor = AppSettings.EmailHeaderFontColor,
+                                    ContentBgColor = AppSettings.EmailContentBgColor,
+                                    ContentFontColor = AppSettings.EmailContentFontColor,
+                                    CopyrightBgColor = AppSettings.EmailCopyrightBgColor,
+                                    CopyrightFontColor = AppSettings.EmailCopyrightFontColor,
+                                    FooterBgColor = AppSettings.EmailFooterBgColor,
+                                    FooterFontColor = AppSettings.EmailFooterFontColor
+                                });
+            Common.SendEmail(emailBody, CurrentSession.Email, emailTitle, AppSettings.BccMail);
+
+            AppSession.Language = currentLanguage;
+            ChangeSystemLanguage();
+        }
+
+        /// <summary>
+        /// 0: username not existing.
+        /// 1: existing in Licensee DB.
+        /// 3: existing in both.
+        /// </summary>
+        /// <param name="siteName">Affiliate name.</param>
+        /// <param name="userName">Affiliate username.</param>
+        /// <param name="ibcUsername">Affiliate's IBC username.</param>
+        /// <param name="playerCurrency">Affiliate currency.</param>
+        /// <param name="errMsg">Return error message.</param>
+        /// <returns>Boolean: success or not.</returns>
+        public bool IsExistLicenseeCustInfo(string siteName, string userName, ref string ibcUsername, ref string playerCurrency, ref string errMsg)
+        {
+            try
+            {
+                var xml = ServiceWrapper.GetLicenseeCustInfo(siteName, userName);
+                if (xml == null || xml.IsEmpty)
+                {
+                    return false;
+                }
+
+                var xmlElement = xml.Element("ReturnCode");
+                if (xmlElement != null)
+                {
+                    int errCode = Convert.ToInt32(xmlElement.Value);
+                    var element = xml.Element("ReturnMessage");
+                    if (element != null)
+                    {
+                        errMsg = element.Value;
+                    }
+
+                    if (errCode == 0)
+                    {
+                        var xmlElement1 = xml.Element("IBCusername");
+                        if (xmlElement1 != null)
+                        {
+                            ibcUsername = xmlElement1.Value.ToString();
+                        }
+<<<<<<< Updated upstream
+
+                        var element1 = xml.Element("Currency");
+                        if (element1 != null)
+                        {
+                            playerCurrency = element1.Value.ToString();
+                        }
+
+=======
+
+                        var element1 = xml.Element("Currency");
+                        if (element1 != null)
+                        {
+                            playerCurrency = element1.Value.ToString();
+                        }
+
+>>>>>>> Stashed changes
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        #endregion Payment Request
+
+        #region My Account
+
+        /// <summary>
+        /// My Account page - Update affiliate information.
+        /// </summary>
+        /// <returns>Return view.</returns>
+        [HttpGet]
+        public ActionResult MyAccount()
+        {
+            var criteria = new UserCriteria
+            {
+                AffID = CurrentSession.AffId,
+                Function = UserEnum.AffiliateSelectByID
+            };
+
+            var user = _userService.AffiliateSelectByID(criteria);
+            return View(user);
+        }
+
+        /// <summary>
+        /// Update profile.
+        /// </summary>
+        /// <param name="user">Input User view model.</param>
+        /// <returns>Return view.</returns>
+        [InternalChecking]
+        [HttpPost]
+        public ActionResult MyAccount(UserViewModel user)
+        {
+            // check internal site login, if internal login not allow to edit account information
+            if (SessionManager.CurrentSession.IsInternalSite)
+            {
+                ModelState.AddModelError("ErrAuthorized", Lang.ErrAuthorized);
+            }
+            else
+            {
+                if (user.IsValid(ModelState))
+                {
+                    var criteria = new UserCriteria
+                    {
+                        UserID = CurrentSession.AffId,
+                        AffID = CurrentSession.AffId,
+                        Gender = user.Gender,
+                        Address = WebUtility.HtmlEncode(user.Address),
+                        PreferredLanguage = user.Language,
+                        PreferredPayment = user.PreferredPayment,
+                        EmailFormat = user.EmailFormat,
+                        MoreSiteURLs = WebUtility.HtmlEncode(user.MoreSiteURLs),
+                        Ip = Request.ServerVariables["REMOTE_ADDR"],
+                        Function = UserEnum.AffiliateUpdate
+                    };
+                    var result = _userService.AffiliateUpdate(criteria);
+
+                    if (result.Success)
+                    {
+                        result.Message = Lang.UpdateAccSuccess;
+                    }
+
+                    ViewBag.Result = result;
+                }
+            }
+
+            return View(user);
+        }
+
+        #endregion My Account
+
+        #region Change Password
+
+        /// <summary>
+        /// Changes the password.
+        /// </summary>
+        /// <returns>Return view.</returns>
+        [HttpGet]
+        public ActionResult ChangePassword()
+        {
+            return View(new ChangePasswordCriteria());
+        }
+
+        /// <summary>
+        /// Changes the password.
+        /// </summary>
+        /// <param name="criteria">The criteria.</param>
+        /// <returns>Return view.</returns>
+        [InternalChecking]
+        [HttpPost]
+        public ActionResult ChangePassword(ChangePasswordCriteria criteria)
+        {
+            // check internal site login, if internal login not allow change password
+            if (SessionManager.CurrentSession.IsInternalSite)
+            {
+                ModelState.AddModelError("ErrAuthorized", Lang.ErrAuthorized);
+            }
+            else
+            {
+                if (ModelState.IsValid)
+                {
+                    criteria.OldPassword = criteria.OldPassword.Trim();
+                    criteria.NewPassword = criteria.NewPassword.Trim();
+                    criteria.ConfirmPassword = criteria.ConfirmPassword.Trim();
+                    if (criteria.NewPassword != criteria.ConfirmPassword)
+                    {
+                        ModelState.AddModelError("ConfirmPassword", Lang.PasswordNotMatched);
+                    }
+
+                    var digitCount = criteria.NewPassword.Count(letter => letter >= '0' && letter <= '9');
+                    
+                    if (criteria.NewPassword.Length < 6 || digitCount < 2 || (criteria.NewPassword.Length - digitCount) < 2)
+                    {
+                        ModelState.AddModelError("NewPassword", Lang.PasswordPattern);
+                    }
+
+                    if (ModelState.IsValid)
+                    {
+                        criteria.AffId = CurrentSession.AffId;
+                        criteria.Ip = Request.ServerVariables["REMOTE_ADDR"];
+                        criteria.Language = CurrentSession.Language;
+                        _accountService.ChangePassword(criteria);
+                        if (criteria.ErrCode == 0)
+                        {
+                            var result = new ResultViewModel { Success = true, Message = Lang.PwdChanged };
+                            ViewBag.Result = result;
+                            return View();
+                        }
+
+                        var errMsg = Common.GetErrorMsg(criteria.ErrCode);
+                        ModelState.AddModelError(criteria.ErrCode == 150 ? "OldPassword" : "NewPassword", errMsg);
+                    }
+                }
+            }
+
+            return View();
+        }
+
+        #endregion Change Password
+    }
+}

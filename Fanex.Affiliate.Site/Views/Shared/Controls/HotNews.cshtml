@@ -1,0 +1,33 @@
+﻿@model HotNewsViewModel
+<div class="row-fluid">
+    <div class="span2 news">
+        <div class="hotNewHeader">
+            <div class="iconHeadline pull-left">
+            </div>
+            <div class="txtHotNew pull-left">@Lang.Headlines</div>
+        </div>
+        <div class="leftHN">
+        </div>
+    </div>
+    <div class="span8 contentHotNew" style="overflow: hidden; position: relative; width: 684px; line-height: 22px;"
+        id="text_news">
+        <div style="position: relative; white-space: nowrap;" id="scroller">
+            @if (SessionManager.CurrentSession != null)
+            {
+                <a class="text_hotnews @(Model.Important ? "important" : string.Empty)" id="topnews" href="~/Message">@Model.Message</a>
+            }
+            else
+            {
+                <span class="text_hotnews" id="topnews">@Model.Message</span>
+            }
+        </div>
+    </div>
+    <div class="span2 view-more">
+        <div class="rightHN pull-left">
+        </div>
+        <div class="hotNewHeader pull-left">
+            <div class="iconHotNew pull-right"></div>
+            <div class="txtHotNew pull-right">@Html.ActionLink(Lang.ViewMore, "Index", "Message")</div>
+        </div>
+    </div>
+</div>

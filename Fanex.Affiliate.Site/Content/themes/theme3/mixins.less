@@ -1,0 +1,30 @@
+﻿.center (@widthPage) {
+	width: @widthPage;
+	margin: auto;
+	float: none;
+}
+
+.current-link (@color: @primaryColor) {
+	color: @color;
+}
+
+.bg-title (@height: 24px, @padding-top: 5px) {
+	background: url(images/header-line.png) repeat-x left center;
+	display: block; 
+	height: @height;
+	padding-top: @padding-top;
+}
+
+.txt-title (@font: myBenchNine, @font-size: 18px, @padding-right: 10px){
+	background: url(images/bg-content.png);	
+	padding: 0 @padding-right 0 0;	
+	display: inline;
+	.font-title(@font, @font-size);
+}
+
+.font-title (@font: myBenchNine, @font-size: 18px ){
+	font-family: @font;
+	font-size: @font-size;
+	text-transform: uppercase;
+	font-weight: bold;	
+}

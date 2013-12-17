@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FAQ_AffiliateProgramIsFreeToJoin" xml:space="preserve">
+    <value>The {0} Affiliate Program is free to join. Simply fill out our {1} and you will be contacted within 3 business days regarding your acceptance into the program. If your application is accepted, you will receive an email containing your unique affiliate ID, giving you access to banners, text links, and other content and marketing tools to add to your website</value>
+  </data>
+  <data name="FAQ_AffiliateProgramIsPartershipProgram" xml:space="preserve">
+    <value>{0} Affiliate Program is a partnership program where you will earn commissions based on the wagering activity of players that you refer to {1} from your Website via online or offline via referrals.</value>
+  </data>
+  <data name="FAQ_ByAccessingOurMediaGallery" xml:space="preserve">
+    <value>By accessing our Media Gallery section you will be available to choose your preferred banners as well as text link for your Website.</value>
+  </data>
+  <data name="FAQ_CookiesAreMechanism" xml:space="preserve">
+    <value>Cookies are a general mechanism which server-side connections can use to both store and retrieve information on the client side of the connection. More specifically, they are small data files placed on the computers of visitors to {0} from affiliated websites. These data files contain information {0} use to track and credit its affiliates accurately for the traffic they send. Tracking via cookies can include, but is not limited to, lists of pages visited as well as date and time when certain pages were looked at.</value>
+  </data>
+  <data name="FAQ_CookiesAreOverwritten" xml:space="preserve">
+    <value>The cookies are overwritten to benefit the Last Affiliate when a Customer is referred.</value>
+  </data>
+  <data name="FAQ_DoNegativeBalance" xml:space="preserve">
+    <value>Does negative balance carry over?</value>
+  </data>
+  <data name="FAQ_DoYouReward" xml:space="preserve">
+    <value>Do you reward the First Affiliate or Last Affiliate for referring a customer?</value>
+  </data>
+  <data name="FAQ_ForMoreDetails" xml:space="preserve">
+    <value>For more details, please contact to us at {0}.</value>
+  </data>
+  <data name="FAQ_General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="FAQ_HowCanCheck" xml:space="preserve">
+    <value>How can I check how much I have earned?</value>
+  </data>
+  <data name="FAQ_HowDoSignUp" xml:space="preserve">
+    <value>How do I sign up with {0} Affiliate Program?</value>
+  </data>
+  <data name="FAQ_HowOftenCanIRequest" xml:space="preserve">
+    <value>How often can I request for withdrawal?</value>
+  </data>
+  <data name="FAQ_HowSystemKeepTrack" xml:space="preserve">
+    <value>How does the system keep track of my players?</value>
+  </data>
+  <data name="FAQ_MarketingTracking" xml:space="preserve">
+    <value>Marketing &amp; Tracking</value>
+  </data>
+  <data name="FAQ_MaximumOfWithdrawalRequest" xml:space="preserve">
+    <value>A maximum of one withdrawal request can be made for each calendar month. Affiliates can request for a second settlement in a month subject to Affiliate Manager's approval. While we offer free withdrawal request however we will not be held responsible if the receiving financial institution or electronic wallets impose a fee of any kind at their end.</value>
+  </data>
+  <data name="FAQ_MinimumAmountOfWithdrawalRequest" xml:space="preserve">
+    <value>The minimum amount of withdrawal request is {0}{1}.</value>
+  </data>
+  <data name="FAQ_NowYouCan" xml:space="preserve">
+    <value>Yes, now you can! The Company will provide you a page link (associated with your account), you can</value>
+  </data>
+  <data name="FAQ_SendPageLink" xml:space="preserve">
+    <value>Send the page link to any of your friends, contacts that are interested in sports or sports betting and when they click on the link, they become your referred member!</value>
+  </data>
+  <data name="FAQ_UploadItOnAnyPublicWebsites" xml:space="preserve">
+    <value>Upload it on any public websites or forums to promote our affiliate program.</value>
+  </data>
+  <data name="FAQ_WeAreAbleToTrackVisitors" xml:space="preserve">
+    <value>Yes. We are able to track visitors from our affiliate's website that don't sign up right away but, return to {0} at a later date &amp; sign-up. We set our protection period for 90 days to cover the first referring affiliate. The technology used to manage this is based on cookies.</value>
+  </data>
+  <data name="FAQ_WeDontTolerateSpamming" xml:space="preserve">
+    <value>We do not tolerate spamming of any kind by our affiliate partners. If spamming by an affiliate is brought to our attention we will give the affiliate one warning (if judged to be a minor case). If the spamming does not stop the affiliate partner will be permanently banned from our {0} Affiliate Program.</value>
+  </data>
+  <data name="FAQ_WeEmployStartOfArtTechnology" xml:space="preserve">
+    <value>We employ state-of-the-art technology in our tracking system to ensure you receive credit for 100% of the traffic you send to {0}. Affiliates refer players by using their unique URL that is provided in the Media Gallery area. Through the use of cookies, visitors that click through an affiliate unique URL (banner, text link, email message etc.) are tracked and credit is automatically given to the affiliate for players referred.</value>
+  </data>
+  <data name="FAQ_WeRolloverNegativeCommission" xml:space="preserve">
+    <value>Yes, we rollover negative commission balances. In the event that you carry a negative commission balance at the end of a month, it will rollover until you have enough positive earnings to zero that balance out.</value>
+  </data>
+  <data name="FAQ_WhatAreWithdrawalMethods" xml:space="preserve">
+    <value>What are the withdrawal methods available to me?</value>
+  </data>
+  <data name="FAQ_WhatIfDontHaveWebsite" xml:space="preserve">
+    <value>What if I don't have a Website, can I still join?</value>
+  </data>
+  <data name="FAQ_WhatIsAffiliateProgram" xml:space="preserve">
+    <value>What is {0} Affiliate Program?</value>
+  </data>
+  <data name="FAQ_WhatIsCookie" xml:space="preserve">
+    <value>What is a cookie?</value>
+  </data>
+  <data name="FAQ_WhatIsMinimumWithdrawalRequest" xml:space="preserve">
+    <value>What is the minimum withdrawal request amount?</value>
+  </data>
+  <data name="FAQ_WhatKindsOfCurrencies" xml:space="preserve">
+    <value>What kinds of currencies are supported when withdrawing?</value>
+  </data>
+  <data name="FAQ_WhatYourPolicy" xml:space="preserve">
+    <value>What is your policy on spamming?</value>
+  </data>
+  <data name="FAQ_WhereGetBanners" xml:space="preserve">
+    <value>Where do I get banners and content?</value>
+  </data>
+  <data name="FAQ_WillYouTrack" xml:space="preserve">
+    <value>Will you track and give me credit for non-members that did not sign up on the first visit through my affiliate link but return to {0} later and become a member?</value>
+  </data>
+  <data name="FAQ_YouCanLogin" xml:space="preserve">
+    <value>You can login to your {0} affiliate account to check your commission stats in real-time which is available to you 24 hours a day, 7 days a week and 365 days per year.</value>
+  </data>
+  <data name="FAQ_YouCanRequest" xml:space="preserve">
+    <value>You can request for a withdrawal directly into your {0} player account.</value>
+  </data>
+  <data name="FAQ_YouCanWithdrawMoney" xml:space="preserve">
+    <value>You can withdraw money in {0}. Respective exchange rate on payout date will be applied.</value>
+  </data>
+  <data name="PD_AffiliateEarnings" xml:space="preserve">
+    <value>Affiliate Earning</value>
+  </data>
+  <data name="PD_AffiliateSupport" xml:space="preserve">
+    <value>Affiliate Base Currencies Support</value>
+  </data>
+  <data name="PD_AnyNegativeBalance" xml:space="preserve">
+    <value>Any negative balance for a given month will be carried forward to the next. For example if for the month of January your affiliate account ends with -{0}2,555, this amount will be carried forward to February. If at the end of February your affiliate account earns {0}3,400, the total balance will be {0}845 ({0}3,400 deduct -{0}2,555). However if your account is still making a loss at the end of February, for example -{0}1,600, then it will be added to the previous negative balance and be carried forward to March resulting in your March balance brought forward to be -{0}4,155. The commission earned shall then be paid according to the tier scale.</value>
+  </data>
+  <data name="PD_AsAffiliate" xml:space="preserve">
+    <value>As an affiliate of {0}, you will be paid commission on every player you referred to {0} over the course of the player's account life. Our online reporting system will be available 24 hours a day 7 days a week for your usage.</value>
+  </data>
+  <data name="PD_CompanyNetWinFormula" xml:space="preserve">
+    <value>"COMPANY NET WIN FOR THE MONTH" = |–Returns(Win or Loss) – Any bonuses paid – Chargebacks – Any other revenue returns – Credits, compensations or refunds given to Players|</value>
+  </data>
+  <data name="PD_DropSomeLastZeroDigits" xml:space="preserve">
+    <value>In our reports and commission setting, we will drop some last zero digits for below currency/currencies: {0}. For example: {1}1 is {1}1*{2} in real value.</value>
+  </data>
+  <data name="PD_GettingPaid" xml:space="preserve">
+    <value>Getting Paid</value>
+  </data>
+  <data name="PD_HowMuchYouEarn" xml:space="preserve">
+    <value>How much you earn will depend on how much traffic you can send over from your website. It is our job to guide them through the registration process, having them make their first deposit, and retain their business with our attractive bonuses and offerings.</value>
+  </data>
+  <data name="PD_NegativeBalance" xml:space="preserve">
+    <value>Negative Balance</value>
+  </data>
+  <data name="PD_NoteThatSample" xml:space="preserve">
+    <value>Note that above sample is used for currency</value>
+  </data>
+  <data name="PD_PurposeOfTable" xml:space="preserve">
+    <value>For the purposes of the table above</value>
+  </data>
+  <data name="PD_RevenueShareModel" xml:space="preserve">
+    <value>Revenue share model</value>
+  </data>
+  <data name="PD_RevenueShareModelSplitIntoComponents" xml:space="preserve">
+    <value>The revenue share model is split into following components</value>
+  </data>
+  <data name="PD_TotalRevenue" xml:space="preserve">
+    <value>The total revenue share payable to the affiliate shall be the sum of all components of the revenue share model. Below is a sample revenue share model from our system</value>
+  </data>
+  <data name="PD_WeOfferCurrency" xml:space="preserve">
+    <value>We offer below base currency/currencies</value>
+  </data>
+  <data name="PD_WeOfferWithdrawalMethod" xml:space="preserve">
+    <value>We offer withdrawal method via your {0} player account only. The minimum amount of withdrawal request depends on each affiliate base currency.</value>
+  </data>
+  <data name="PD_YouRequestPayout" xml:space="preserve">
+    <value>You can request payout in {0}. Respective exchange rate on the payout date will be applied.</value>
+  </data>
+  <data name="TC_ActiveWageringMembers" xml:space="preserve">
+    <value>Active Wagering Members refers to customers that reach a minimum wagering turnover amount equivalent to {0}{1} each in any given calendar month. We may offer more currencies for the system, please contact to administrator in {2}.</value>
+  </data>
+  <data name="TC_AffiliateMustEnsure" xml:space="preserve">
+    <value>Affiliate must ensure that any material posted on their site is legal and does not infringe copyright or violate any rights.</value>
+  </data>
+  <data name="TC_AffiliateResponsibility" xml:space="preserve">
+    <value>It is the affiliates's responsibility to follow the correct linking and tagging procedure to ensure new customer tracking and payment.</value>
+  </data>
+  <data name="TC_AffiliatesAreProhibited" xml:space="preserve">
+    <value>Affiliates are prohibited from playing at any of the sportsbooks promoted by {0} through their own affiliate link or from the affiliate link of an associate who shares all or part of the commission with the affiliate or a third party. This shall include any individuals or playing groups from which an Affiliate receives compensation or remuneration from of any kind. In the event of violation of this section, {0} and the respective website that has been played with shall have the right to void all play and eliminate any earned commissions applicable from such play and eliminate the affiliate from our Affiliate Program terminating this Agreement and void any future play at {0}.</value>
+  </data>
+  <data name="TC_AffiliatesWillNotEarn" xml:space="preserve">
+    <value>Affiliates will not earn any commission from a member’s turnover or win/loss resulting from or connected with any horse racing and casino wagers using the {0} website.</value>
+  </data>
+  <data name="TC_AffiliateTagging" xml:space="preserve">
+    <value>3. Affiliate Tagging</value>
+  </data>
+  <data name="TC_AffiliationGuidelines" xml:space="preserve">
+    <value>2. Affiliation Guidelines</value>
+  </data>
+  <data name="TC_AllRightsAndLicenses" xml:space="preserve">
+    <value>All rights and licenses given to you in this Agreement shall immediately terminate.</value>
+  </data>
+  <data name="TC_AnyClaimRelatedToYourSite" xml:space="preserve">
+    <value>Any claim related to Your Site, including, without limitation, content therein not attributable to us.</value>
+  </data>
+  <data name="TC_AnyClaimThat" xml:space="preserve">
+    <value>Any claim that our use of the Affiliate Trademarks infringes on any trademark, trade name, service mark, copyright, license, intellectual property, or other proprietary right of any third party</value>
+  </data>
+  <data name="TC_AnyFormOfSpam" xml:space="preserve">
+    <value>Any form of Spam will result in your account being placed under review and all funds due being withheld pending an investigation into your account. You need to be aware that our clients are liable to incur expenses in dealing with Spam generated mail and these same expenses will be deducted from your account should our client seek recourse. In this instance the amount determined by the relative client will be fair and deemed final and acceptable based on good faith and such amount will be collectable by law and deemed to have been accepted by yourself as fair and reasonable and as agreed to by registration as an affiliate of {0}.</value>
+  </data>
+  <data name="TC_AnyMisrepresentation" xml:space="preserve">
+    <value>Any misrepresentation of a representation or warranty or breach of a covenant and agreement made by you herein</value>
+  </data>
+  <data name="TC_AsPolicy" xml:space="preserve">
+    <value>As a policy, {0} shall not accept an online application for registration as an affiliate if you advertise with Internet Protocol (IP) addresses located in or originating from within the geographical jurisdiction of the United Kingdom.</value>
+  </data>
+  <data name="TC_AssignAbilityAndInurement" xml:space="preserve">
+    <value>Assign-ability and Inurement</value>
+  </data>
+  <data name="TC_AssumeOwnershipOfCustomer" xml:space="preserve">
+    <value>{0} assume ownership of the customer at point of first contact with the customer. You, as affiliate, act as a referring agent for {0}. We reserve the right to refuse customers (or to close their accounts) if necessary to comply with any requirements we may periodically establish.</value>
+  </data>
+  <data name="TC_BannersAndLinksMayNotBePlaced" xml:space="preserve">
+    <value>Banners and links may not be placed within unsolicited e-mail, unauthorized newsgroup postings, or chat rooms or through the use of "bots". Traffic generated illegally will not be counted and may result in the termination of your affiliate account with us.</value>
+  </data>
+  <data name="TC_BecomeAffiliate" xml:space="preserve">
+    <value>To become an affiliate of our Affiliate Program you must register as an affiliate by completing the online form. By registering as an affiliate of the {0} Affiliate Program or downloading banner code and placing it on your website or websites, email messages or other formats, you are deemed to have agreed to be bound by all the terms and conditions set out in this agreement.</value>
+  </data>
+  <data name="TC_BonusesInclucdeComplimentaryMoney" xml:space="preserve">
+    <value>Bonuses include complimentary money, free money offers, credits, sign-up bonuses, promotional amounts and other incentives credited to the account of customers. As customers have not actually purchased these amounts, {0} cannot pay commissions on the same.</value>
+  </data>
+  <data name="TC_ByAgreeingToParticipate" xml:space="preserve">
+    <value>By agreeing to participate in the {0} Affiliate Program, you are agreeing to download banners, text or promotional material and place it on your site, utilize it within e-mail, direct marketing using your affiliate URL or print. These methods are the only approved methods by which you may advertise our products and services.</value>
+  </data>
+  <data name="TC_ByAgreementWeGrantYou" xml:space="preserve">
+    <value>By this Agreement, we grant you the non-exclusive right to direct customers to our sites and services, in accordance with the terms and conditions of this Agreement. This Agreement does not grant you an exclusive right or privilege to assist us in the provision of services arising from your referrals, and we reserve the right to contract with and obtain the assistance from other parties at any time to perform services of the same or similar nature as yours. You shall have no claims to referral fees or other compensation on business secured by or through persons or entities other than you.</value>
+  </data>
+  <data name="TC_ByHavingRead" xml:space="preserve">
+    <value>By having read, the terms and conditions, and acknowledging such in the affiliate sign-up form you agree to all the terms and conditions contained herein. {0} reserves the right to withhold payment from any affiliate that violates any of the terms and conditions contained herein.</value>
+  </data>
+  <data name="TC_ByOpeningAccountWithCustomer" xml:space="preserve">
+    <value>By opening an account with a customer, that person or entity will become our Customers and, accordingly, all Client rules, policies, and operating procedures will apply to them.</value>
+  </data>
+  <data name="TC_ChargebackCreditCard" xml:space="preserve">
+    <value>Charge-back: A credit card holder discovers irregular transactions made on his/her Credit/Debit Card, which was not authorized by him/her. The credit card holder then requests his/her bank to reverse these charges. Charge backs relate to fraudulent use by a third party of the credit card holder's card or card number.</value>
+  </data>
+  <data name="TC_ChargebacksAreAmounts" xml:space="preserve">
+    <value>Charge-backs are amounts deducted when a customer that is a credit card holder discovers irregular unauthorized charge-backs made on the customer’s Credit/Debit Card, and the credit card holder requests the bank to reverse these charges. Charge-backs may relate to, but are not limited to, fraudulent use by a third party of the credit card holder's card or card number.</value>
+  </data>
+  <data name="TC_ChargebackWillStayDue" xml:space="preserve">
+    <value>A charge back will stay due until the revenue generated by your other players has covered the amount due. You acknowledge that {0} can only pay out a percentage of their actual profits, not fraudulent revenue.</value>
+  </data>
+  <data name="TC_CommissionableEarnings" xml:space="preserve">
+    <value>Commissionable Earnings are calculated as {0} profit, less charge-back, complimentary money, free money offers and other incentives offered to the customer, derived from at least predefined number of Active Wagering Members in a calendar month.</value>
+  </data>
+  <data name="TC_CommissionableEarningsOfAffiliate" xml:space="preserve">
+    <value>The Commissionable Earnings of the affiliate calculated based on commission structure will be earned on all transactions that the customer undertakes with the merchant, as long as the affiliate remains a member of this affiliate program.</value>
+  </data>
+  <data name="TC_CommissionableEarningsWillBeSubject" xml:space="preserve">
+    <value>Commissionable earnings will be subject to commissions as calculated using the {0} Affiliate Program commission structure in force from time to time.</value>
+  </data>
+  <data name="TC_DevelopmentOperation" xml:space="preserve">
+    <value>The development, operation, maintenance and content of Your Site and products and services offered from Your Site</value>
+  </data>
+  <data name="TC_Disclaimers" xml:space="preserve">
+    <value>12. Disclaimers</value>
+  </data>
+  <data name="TC_DuringTheTermsOfAgreement" xml:space="preserve">
+    <value>During the term of this Agreement, you may be entrusted with confidential information relating to the business, operations, or underlying technology of our affiliate program (including, for example, referral fees earned by you under the program). You agree not to disclose or use the confidential information to third persons or outside parties unless you have our prior written consent and that you will use the confidential information only for purposes necessary to further the purposes of this Agreement. Your obligations with respect to confidential information shall survive the termination of this Agreement.</value>
+  </data>
+  <data name="TC_EventOfTermination" xml:space="preserve">
+    <value>In the event of termination of this Agreement</value>
+  </data>
+  <data name="TC_PoliciesConfidentiality" xml:space="preserve">
+    <value>5. Policies &amp; Confidentiality</value>
+  </data>
+  <data name="TC_PresentationOfOurBanner" xml:space="preserve">
+    <value>Presentation of our banners &amp; content on affiliate's site is the responsibility of affiliate. The affiliate must ensure that our content is presented in accordance with our prescriptions.</value>
+  </data>
+  <data name="TC_RelationshipOfParties" xml:space="preserve">
+    <value>10. Relationship of Parties</value>
+  </data>
+  <data name="TC_Remedies" xml:space="preserve">
+    <value>Remedies</value>
+  </data>
+  <data name="TC_ResponsibilitiesAffiliate" xml:space="preserve">
+    <value>1. Responsibilities of the Affiliate</value>
+  </data>
+  <data name="TC_RevenueSharingPayment" xml:space="preserve">
+    <value>4. Revenue Sharing &amp; Payment</value>
+  </data>
+  <data name="TC_SeverabilityWaiver" xml:space="preserve">
+    <value>Severability / Waiver</value>
+  </data>
+  <data name="TC_ShouldPlayerProcess" xml:space="preserve">
+    <value>Should the player process a charge back, the disputed or charged-back revenue will be forfeited and therefore deducted from the total balance due to you for the current month. Should this deduction of the accumulated revenue exceed your current amount due, your balance will then revert to a negative balance, and you will have to earn revenue to cover the charge-back before you can start earning revenue again.</value>
+  </data>
+  <data name="TC_ShouldTheseExpenses" xml:space="preserve">
+    <value>Should these expenses not be covered by funds in your account we reserve the right to investigate other alternative means for obtaining payment for example: should your account have generated purchasing accounts we will hold payment of commission for these accounts until such a time as the account for damages has been cleared. Should your account not be active and be generating profit through commission payments we reserve the right to demand payment from the account holder.</value>
+  </data>
+  <data name="TC_ShouldYouFailToBeEntitled" xml:space="preserve">
+    <value>Should you fail to be entitled to the Commissionable Earnings in accordance with Clauses 4.1, 4.2, and 4.3 above for failure to maintain at least predefined number of Active Wagering Members in a given month, you may be given (at {0}’s sole discretion) a grace period of two (2) months within which to comply. Upon compliance, your commission for the subject period not exceeding three (3) consecutive months will be consolidated to constitute your Commissionable Earnings for the same period. (at {0}’s sole discretion)</value>
+  </data>
+  <data name="TC_TermOfThisAgreement" xml:space="preserve">
+    <value>The term of this Agreement will begin when you download linking code and link it to our site and will be continuous unless and until either party notifies the other in writing that it wishes to terminate the Agreement, in which case this Agreement may be terminated immediately. TERMINATION IS AT WILL, FOR ANY REASON, BY EITHER PARTY. For purposes of notification of termination, delivery via e-mail is considered a written and immediate form of notification.</value>
+  </data>
+  <data name="TC_TermTermination" xml:space="preserve">
+    <value>9. Term &amp; Termination</value>
+  </data>
+  <data name="TC_ThisAgreementDetails" xml:space="preserve">
+    <value>This Agreement details all the terms and conditions of membership to the {0} Affiliate Program. "You", the "affiliate" refers to you, the individual, group or corporate entity registering with us as an affiliate under this Agreement, and shall be deemed to include any employees, officers, directors, shareholders, owners, controlling parties and affiliated individuals and entities (and "your" has a corresponding meaning).</value>
+  </data>
+  <data name="TC_ThisAgreementShallBeGoverned" xml:space="preserve">
+    <value>This Agreement shall be governed by and construed in accordance with English law. Any dispute, controversy or claim arising out of or in connection with this Agreement shall be referred to and determined by a tribunal comprised of one arbitrator to be appointed by the Arbitration Centre. The seat of arbitration will be London, United Kingdom, the location determined by the Arbitration Centre, the language of the arbitration will be English and the regulations established by the Arbitration Centre shall govern the process. The arbitration tribunal will have the right to issue injunctions and its decision will be compulsory, final and strictly mandatory to the Parties who in turn waive any other jurisdiction or venue that may apply and agree to be subject to the arbitral decision waiving any appeals of any type.</value>
+  </data>
+  <data name="TC_ThisLicenseCannotBeSubLicensed" xml:space="preserve">
+    <value>This license cannot be sub-licensed, assigned or otherwise transferred by you. Your right to use the trademarks is limited to and arises only out of this license to use the banners. You shall not assert the invalidity, unenforceability, or contest the ownership of the trademarks in any action or proceeding of whatever kind or nature, and shall not take any action that may prejudice our or our licensor's rights in the trademarks, render the same generic, or otherwise weaken their validity or diminish their associated goodwill.</value>
+  </data>
+  <data name="TC_WeAreIndependentContractors" xml:space="preserve">
+    <value>You and we are independent contractors, and nothing in this Agreement will create any partnership, joint venture, agency, franchise, sales representative, or employment relationship between the parties. You will have no authority to make or accept any offers or representations on our behalf. You will not make any statement, whether on your site or otherwise, that reasonably would contradict anything in this paragraph.</value>
+  </data>
+  <data name="TC_WeDontCondoneSpam" xml:space="preserve">
+    <value>Spam - We do not condone Spam.</value>
+  </data>
+  <data name="TC_WeHerebyGrantToYou" xml:space="preserve">
+    <value>We hereby grant to you a personal, non-exclusive, non-transferable limited license, during the term of this Agreement, to use our trademarks (licensed, in turn by us, from their owner) solely in connection with the display of the banners on your site.</value>
+  </data>
+  <data name="TC_WeMakeNoExpress" xml:space="preserve">
+    <value>We make no express or implied warranties or representations with respect to the referral program or referral fee payment arrangements (including, without limitation, their functionality, warranties of fitness, merchantability, legality, non-infringement, or any implied warranties arising out of a course of performance, dealing, or trade usage). In addition, we make no representation that the operation of our site will be uninterrupted or error-free and will not be liable for the consequences of any interruptions or errors.</value>
+  </data>
+  <data name="TC_WeMayModifyAnyTerm" xml:space="preserve">
+    <value>We may modify any of the terms and conditions contained in this Agreement, at any time and in our sole discretion, by posting a change notice or a new agreement on our site. Modifications may include, for example, changes in the scope of available referral fees, fee schedules, payment procedures, and referral program rules. IF ANY MODIFICATION IS UNACCEPTABLE TO YOU, YOUR ONLY RECOURSE IS TO TERMINATE THIS AGREEMENT. YOUR CONTINUED PARTICIPATION IN THE PROGRAM FOLLOWING OUR POSTING OF A CHANGE NOTICE OR NEW AGREEMENT ON OUR SITE WILL CONSTITUTE BINDING ACCEPTANCE OF THE CHANGE.</value>
+  </data>
+  <data name="TC_WeMayTerminateAgreement" xml:space="preserve">
+    <value>WE MAY TERMINATE THIS AGREEMENT IF WE DETERMINE (IN OUR SOLE DISCRETION) THAT YOUR SITE IS UNSUITABLE. Unsuitable sites may include those that: are aimed at children, promote sexually explicit materials, promote violence, promote discrimination based on race, sex, religion, nationality, disability, sexual orientation, or age, promote illegal activities, or violate intellectual property rights.</value>
+  </data>
+  <data name="TC_WeMayWithhold" xml:space="preserve">
+    <value>We may withhold your final payment for a reasonable time to ensure that the correct amount is paid.</value>
+  </data>
+  <data name="TC_WeReserveTheRight" xml:space="preserve">
+    <value>We reserve the right to terminate this Agreement if we determine that your site is unsuitable. Unsuitable sites may include those that: promote sexually explicit materials, are targeted towards children or minors, promote violence, promote discrimination based on race, sex, religion, nationality, disability, sexual orientation, promote illegal activities, or violate intellectual property rights ("IP rights").</value>
+  </data>
+  <data name="TC_WeReserveTheRightToRevokeLicense" xml:space="preserve">
+    <value>We reserve the right to revoke this license at any time and it shall have been deemed revoked at the termination of this Agreement, for any reason.</value>
+  </data>
+  <data name="TC_WeWillNotBeLiable" xml:space="preserve">
+    <value>We will not be liable for indirect, special, or consequential damages (or any loss of revenue, profits, or data) arising in connection with this Agreement or the referral program, even if we have been advised of the possibility of such damages. Further, our aggregate liability arising with respect to this Agreement and the Program will not exceed the total commissions paid or payable to you under this Agreement. Nothing in this Agreement shall be construed to provide any rights, remedies or benefits to any person or entity not a party to this Agreement. Our obligations under this Agreement do not constitute personal obligations of our directors, officers or shareholders. Any liability arising under this Agreement shall be satisfied solely from the referral fee generated and is limited to direct damages.</value>
+  </data>
+  <data name="TC_WeWillTerminate" xml:space="preserve">
+    <value>We will terminate this Agreement immediately if there is any form of spamming on your behalf or if you discredit {0} through false advertising, written or uttered words.</value>
+  </data>
+  <data name="TC_WheneverPossible" xml:space="preserve">
+    <value>Whenever possible, each provision of this Agreement shall be interpreted in such a manner as to be effective and valid under applicable law but, if any provision of this Agreement is held to be invalid, illegal or unenforceable in any respect, such provision will be ineffective only to the extent of such invalidity, or unenforceability, without invalidating the remainder of this Agreement or any provision hereof. No waiver will be implied from conduct or failure to enforce any rights and must be in writing to be effective.</value>
+  </data>
+  <data name="TC_WillPayoutRevenueShare" xml:space="preserve">
+    <value>{0} will pay out a revenue share on the Commissionable Earnings generated by each customer, as defined by {0} Affiliate Program commission structure, provided that you maintain in your account as an affiliate, at least predefined number of Active Wagering Members in any given calendar month. Note that, different commission groups have different predefine numbers of Active Wagering Members. Please contact to administrator in {1} for more details.</value>
+  </data>
+  <data name="TC_WithoutOrPriorWrittenApproval" xml:space="preserve">
+    <value>Without our prior written approval, you will only use our approved banners and links and will not alter their appearance nor refer to us in any promotional materials. The appearance and syntax of the hypertext transfer links are designed and designated by us and constitute the only authorized and permitted representation of {0}.</value>
+  </data>
+  <data name="TC_YouAcknowledge" xml:space="preserve">
+    <value>YOU ACKNOWLEDGE THAT YOU HAVE READ THIS AGREEMENT AND AGREE TO ALL ITS TERMS AND CONDITIONS. YOU UNDERSTAND THAT WE MAY AT ANY TIME (DIRECTLY OR INDIRECTLY) SOLICIT CUSTOMER REFERRALS ON TERMS THAT MAY DIFFER FROM THOSE CONTAINED IN THIS AGREEMENT OR OPERATE WEB SITES THAT ARE SIMILAR TO OR COMPETE WITH YOUR WEB SITE. YOU HAVE INDEPENDENTLY EVALUATED THE DESIRABILITY OF PARTICIPATING IN THIS AFFILIATE PROGRAM AND ARE NOT RELYING ON ANY REPRESENTATION, GUARANTEE, OR STATEMENT OTHER THAN AS SET FORTH IN THIS AGREEMENT</value>
+  </data>
+  <data name="TC_YouAgreeToIndemnify" xml:space="preserve">
+    <value>You hereby agree to indemnify and hold harmless {0} , the entities it represents and affiliates, and {0} directors, officers, employees, agents, shareholders, partners, members and other owners, against any and all claims, actions, demands, liabilities, losses, damages, judgments, settlements, expenses (including reasonable attorneys' fees), and costs (any or all of the foregoing hereinafter referred to as "Losses") insofar as such Losses (or actions in respect thereof) arise out of or are based on</value>
+  </data>
+  <data name="TC_YouAndWeAreIndependentContractors" xml:space="preserve">
+    <value>You and we are independent contractors, and nothing in this agreement will create any partnership, joint venture, agency, franchise, sales representative, or employment relationship between the parties. You will have no authority to make or accept any offers or representations on our behalf. You will not make any statement, whether on your site or otherwise, to contradict anything in this paragraph or be reasonably deemed to contradict this paragraph.</value>
+  </data>
+  <data name="TC_YouAndWeWillReleased" xml:space="preserve">
+    <value>You and we will be released from all obligations and liabilities to each other occurring or arising after the date of such termination, except with respect to those obligations that by their nature are designed to survive termination, as set out in this Agreement. Termination will not relieve you from any liability arising from any breach of this Agreement, which occurred prior to termination.</value>
+  </data>
+  <data name="TC_YouAreNotAllowed" xml:space="preserve">
+    <value>You are not allowed to concurrently maintain both affiliate and referral relationships with {0}. Violation of this provision grants {0} the right to unilaterally terminate either or both affiliate and/or referral relationships. A referral relationship refers to a relationship with {0} pursuant to our Refer-A-Friend Program (as setout and available in the Website).</value>
+  </data>
+  <data name="TC_YouAreResponsible" xml:space="preserve">
+    <value>As an Affiliate you are responsible for promoting {0} by implementing the advertising, banners and tracking URL's on your websites, e-mails or other communications.</value>
+  </data>
+  <data name="TC_YouAreResponsibleForDirecting" xml:space="preserve">
+    <value>You are only responsible for directing customers to the {0} website.</value>
+  </data>
+  <data name="TC_YouMayNotAssign" xml:space="preserve">
+    <value>You may not assign this Agreement, by operation of law or otherwise, without our prior written consent. Subject to that restriction, this Agreement will be binding on, inure to the benefit of, and enforceable against you and us and our respective successors and assigns.</value>
+  </data>
+  <data name="TC_YouMayNotModifyOrUse" xml:space="preserve">
+    <value>You may not modify or use for any other purpose any IP rights, banners or other creative material supplied by us without the written prior consent of {0}. All copyright or IP rights notices on any material supplied or approved by {0} must remain and not be modified or eliminated.</value>
+  </data>
+  <data name="TC_YouMustRemoveBanners" xml:space="preserve">
+    <value>You must remove {0}'s banner/s from your site and disable any links from your site to {0}.</value>
+  </data>
+  <data name="TC_YouShallNotMakeAnyClaims" xml:space="preserve">
+    <value>You shall not make any claims, representations, or warranties in connection with {0} and you shall have no authority to and shall not bind {0} to any obligations.</value>
+  </data>
+  <data name="TC_YouWillAgree" xml:space="preserve">
+    <value>You will agree to register and maintain correct and truthful contact information with {0}.</value>
+  </data>
+  <data name="TC_YouWillBeEntitled" xml:space="preserve">
+    <value>You will be entitled only to those unpaid referral fees if any earned by you on or prior to the date of termination, save where termination is as a result of your breach of terms of this Agreement, as detailed at 9.2.4 below. We may withhold your final payment for a reasonable time to ensure that the correct amount is paid.</value>
+  </data>
+  <data name="TC_YouWillBeResponsible" xml:space="preserve">
+    <value>You will be solely responsible for the development, operation, and maintenance of your site and for all materials that appear on your site and at your own cost. For example, you will be solely responsible for ensuring that materials posted on your site are not libelous or otherwise illegal or shall infringe the IP rights of third parties. Since we do not have control over your own site, we disclaim all liability for these matters. Further, you will indemnify and hold us harmless from all claims, damages, and expenses (including, without limitation, attorney's fees) relating to the development, operation, maintenance, and contents of your site. This provision on indemnification is without prejudice to our separate action or claim against you under applicable laws.</value>
+  </data>
+  <data name="TC_YouWillIndemnify" xml:space="preserve">
+    <value>You will indemnify and hold us harmless from all claims, damages, and expenses (including, without limitation, attorneys' fees) relating to the development, operation, maintenance, and contents of your site. This provision on indemnification is without prejudice to our separate action or claim against you under applicable laws.</value>
+  </data>
+  <data name="TC_YouWillNotKnowinglyBenefit" xml:space="preserve">
+    <value>You will not knowingly benefit from known or suspected traffic not generated in good faith whether or not it actually causes {0} damage. Should fraudulent activity arise through a person directed to a site via your link, we retain the right to retract the commissions paid to you at any time. Our decision in this regard will be final and no correspondence will be entered into. We reserve the right to retain all amounts due to you under this Agreement if we have reasonable cause to believe that such traffic has been caused with your knowledge. Even if you have not knowingly generated such traffic, we reserve the right to withhold affiliate commissions with respect to such.</value>
+  </data>
+  <data name="TC_YouWillPresent" xml:space="preserve">
+    <value>You will present only content and topics on your site which are pre-approved in writing by {0}. Content that is deemed unsuitable in our sole discretion will result in the affiliate Agreement being terminated immediately.</value>
+  </data>
+  <data name="TC_YouWillReturnToUs" xml:space="preserve">
+    <value>You will return to us any confidential information and all copies of it in your possession, custody and control and will cease all uses of any trade names, trademarks, service marks, logos and other designations of the merchants.</value>
+  </data>
+  <data name="TC_GoverningLaw" xml:space="preserve">
+    <value>15. Governing Law and Arbitration</value>
+  </data>
+  <data name="TC_GrossWinIsTotalOfAllAmount" xml:space="preserve">
+    <value>{0} Gross Win is the total of all amounts bet by at least predefined number of Active Wagering Members under your affiliate account in a calendar month, minus all amounts won by or paid to your Active Wagering Members.</value>
+  </data>
+  <data name="TC_IfWeContinueToPermitActivity" xml:space="preserve">
+    <value>If we continue to permit activity (generation of revenue) from customers after termination, this will not constitute a continuation or renewal of this Agreement or a waiver of termination.</value>
+  </data>
+  <data name="TC_IfYouDecide" xml:space="preserve">
+    <value>IF YOU DECIDE NOT TO ACCEPT ALL OF THE TERMS AND CONDITIONS OF THIS AGREEMENT, PLEASE DO NOT DOWNLOAD BANNER CODE, TEXT LINK CODE, PROMOTIONAL COPY OR ANY INFORMATION PERTAINING TO {0}</value>
+  </data>
+  <data name="TC_IfYouHaveFailedToFulfill" xml:space="preserve">
+    <value>If you have failed to fulfill your obligations and responsibilities, we will not pay you the referral fees otherwise owing to you on termination.</value>
+  </data>
+  <data name="TC_Indemnity" xml:space="preserve">
+    <value>11. Indemnity</value>
+  </data>
+  <data name="TC_IndependentInvestigation" xml:space="preserve">
+    <value>14. Independent Investigation</value>
+  </data>
+  <data name="TC_InWitnessWhereof" xml:space="preserve">
+    <value>16. IN WITNESS WHEREOF</value>
+  </data>
+  <data name="TC_LegalResponsibility" xml:space="preserve">
+    <value>7. Legal Responsibility</value>
+  </data>
+  <data name="TC_LimitationOfLiability" xml:space="preserve">
+    <value>13. Limitation of Liability</value>
+  </data>
+  <data name="TC_LimitedLicense" xml:space="preserve">
+    <value>6. Limited License</value>
+  </data>
+  <data name="TC_Miscellaneous" xml:space="preserve">
+    <value>8. Miscellaneous</value>
+  </data>
+  <data name="TC_NegativeEarningAreCarried" xml:space="preserve">
+    <value>Negative earnings are carried forward to the next month. Should the affiliate close the month with a positive balance, payment will be issued if it meets the minimum requirements and commissions will be paid on the positive balance.</value>
+  </data>
+  <data name="TC_NonWaiver" xml:space="preserve">
+    <value>Non-Waiver</value>
+  </data>
+  <data name="TC_OnlyApprovedAndProperlyTagged" xml:space="preserve">
+    <value>Only approved and properly tagged creative materials, supplied by us from time to time, may be used to promote {0}. Advertorials and personal endorsements are allowed but all materials not designed by {0} need to be approved in writing; such approval shall not be unreasonably withheld.</value>
+  </data>
+  <data name="TC_OnlyTaggedCustermor" xml:space="preserve">
+    <value>Only properly tagged customers can be assigned to an affiliate. Should an affiliate tag be improperly inserted into the affiliate site or not properly received by the {0} web server the resulting customer registration and purchases will not be assigned to the affiliate. Therefore it is the responsibility of the affiliate to ensure that all links are properly tagged.</value>
+  </data>
+  <data name="TC_OurFailureToEnforce" xml:space="preserve">
+    <value>Our failure to enforce your strict performance of any provision of this Agreement will not constitute a waiver of our right to subsequently enforce such provision or any other provision of this Agreement. NO MODIFICATIONS, ADDITIONS, DELETIONS OR INTERLINEATIONS OF THIS AGREEMENT ARE PERMITTED OR WILL BE RECOGNIZED BY US. None of our employees, officers or agents may verbally alter, modify or waive any provision of this Agreement.</value>
+  </data>
+  <data name="TC_OurRightsAndRemedies" xml:space="preserve">
+    <value>Our rights and remedies hereunder shall not be mutually exclusive, i.e., the exercise of one or more of the provisions of this Agreement shall not preclude the exercise of any other provision. You acknowledge, confirm, and agree that damages may be inadequate for a breach or a threatened breach of this Agreement and, in the event of a breach or threatened breach of any provision of this Agreement, the respective rights and obligations of the parties may be enforceable by specific performance, injunction, or other equitable remedy. Nothing contained in this Agreement shall limit or affect any of our rights at law, or otherwise, for a breach or threatened breach of any provision of this Agreement, it being the intent of this provision to make clear that our respective rights and obligations shall be enforceable in equity as well as at law or otherwise.</value>
+  </data>
+  <data name="TC_OwnershipAndContentOfOurSites" xml:space="preserve">
+    <value>Ownership and content of our sites remain our respective properties and shall not be deemed to have been transferred to the affiliate through any act or omission in respect of the affiliation Agreement.</value>
+  </data>
+  <data name="TC_OwnershipContentAndLiability" xml:space="preserve">
+    <value>Ownership, content and liability for affiliate sites are the sole responsibility of the affiliate. You will be solely responsible for the development, operation, and maintenance of your site and for all materials that appear on your site and at your own cost.</value>
+  </data>
+  <data name="PD_RevenueShareModel_Content" xml:space="preserve">
+    <value>The revenue share model is split into 2 components: A revenue share from the Casino and a revenue share from the Sportsbook, the calculation of each of which is described below.
+The total revenue share payable to the affiliate shall be the sum of both components of the revenue share model.</value>
+  </data>
+  <data name="PD_AffilatesAreOnlyAllowed" xml:space="preserve">
+    <value>Affiliates are only allowed to have one withdrawal request for each calendar month. Should the Affiliates intend to request for a second withdrawal in any  month, such request shall be subject to Affiliate Manager's approval.  While we offer free withdrawal request however we will not be held responsible if the receiving financial institution or electronic wallets impose a fee of any kind at their end.</value>
+  </data>
+  <data name="PD_AnyNegativeBalanceForGivenMonth" xml:space="preserve">
+    <value>Any negative balance for a given month will be carried forward to the next. For example if for the month of January your affiliate account ends with -$2,555, this amount will be carried forward to February. If at the end of February your affiliate account earns $3,400, the total balance will be $845 ($3,400 deduct -$2,555). However if your account is still making a loss at the end of February, for example -$1,600, then it will be added to the previous negative balance and be carried forward to March resulting in your March balance brought forward to be -$4,155. The commission earned shall then be paid according to the tier scale.</value>
+  </data>
+  <data name="PD_Casino_Content1" xml:space="preserve">
+    <value>{0} offers revenue share model for the casino. This is a cumulative model based on the number of new active players referred per calendar month in relation to the casino.</value>
+  </data>
+  <data name="PD_Casino_Content2" xml:space="preserve">
+    <value>For the purposes of the table above, "Net Revenue" shall mean the amount of stakes placed by Players in the relevant calendar month less: (i) returns (winnings); (ii) any bonuses paid; (iii) Chargebacks; and (iv) any other revenue returns, credits, compensations or refunds given to Players.</value>
+  </data>
+  <data name="PD_Moneybookers" xml:space="preserve">
+    <value>Moneybookers</value>
+  </data>
+  <data name="PD_Neteller" xml:space="preserve">
+    <value>Neteller</value>
+  </data>
+  <data name="PD_Sportbook_Content" xml:space="preserve">
+    <value>{0} offers a revenue share model for the Sportsbook. This is a cumulative model based on the number of active players referred per calendar month in relation to the Sportsbook.</value>
+  </data>
+  <data name="PD_TheMinimumWithdrawal" xml:space="preserve">
+    <value>The minimum amount of withdrawal request is USD$100.</value>
+  </data>
+  <data name="PD_ThroughYourPlayer" xml:space="preserve">
+    <value>Through your {0} player account</value>
+  </data>
+  <data name="PD_WeOfferSeveralMethods" xml:space="preserve">
+    <value>We offer several methods of withdrawal:</value>
+  </data>
+  <data name="PD_WireTransfer" xml:space="preserve">
+    <value>Wire Transfer</value>
+  </data>
+  <data name="PD_YouCanRequestPayout" xml:space="preserve">
+    <value>You can request payout in other currencies other than USD. The currencies offered are GBP, EUR, RMB and MYR, THB, IDR. Respective exchange rate on the payout date will be applied.</value>
+  </data>
+  <data name="FAQ_CanIRequest" xml:space="preserve">
+    <value>Can I request for currency other than USD when withdrawing?</value>
+  </data>
+  <data name="FAQ_TheCurrenciesOfferedAre" xml:space="preserve">
+    <value>Yes, the currencies offered are GBP, EUR, RMB, MYR, THB, IDR and VND. Respective exchange rate on payout date will be applied.</value>
+  </data>
+  <data name="FAQ_TheMinimumWithdrawal" xml:space="preserve">
+    <value>The minimum amount of withdrawal request is USD$100.</value>
+  </data>
+  <data name="FAQ_ToParticipateIn12BET" xml:space="preserve">
+    <value>Yes, now you can! If you think you have the contacts, you can easily create your own personalized page on our special Affiliate section and upload on it any of the approved marketing ideas or sports messages.  Once done, you can immediately send the page link to any of your friends or contacts that are interested in sports or sports betting and when they click on the link, they become your referred members! For more details, please write to us at {0}.</value>
+  </data>
+  <data name="FAQ_YouCanRequestForAWithdrawal" xml:space="preserve">
+    <value>You can request for a withdrawal through Moneybookers, Neteller, Wire Transfer or directly into your {0} player account.</value>
+  </data>
+  <data name="FAQ_JoinOurAffProgram" xml:space="preserve">
+    <value>JOIN THE {0} AFFILIATE PROGRAM</value>
+  </data>
+  <data name="PD_CompanyNegativeNetWin" xml:space="preserve">
+    <value>If the Company Net Win is negative, then affiliate has to bear {0}% with the company that month (apply for each product).</value>
+  </data>
+</root>

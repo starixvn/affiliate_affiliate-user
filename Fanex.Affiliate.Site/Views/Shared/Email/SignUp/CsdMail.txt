@@ -1,0 +1,22 @@
+﻿<div>
+Dear CSD, <br /><br />
+
+There is a new affiliate account awaiting approval. The details are as below: <br /><br />
+
+----------------------------------------------------------<br />
+Full name: @Model.FirstName @Model.LastName <br />
+Username: @Model.UserName <br />
+Site URL: @Model.SiteUrl<br />
+@if(!string.IsNullOrEmpty(Model.MoreUrls))
+{
+	@("More site URLs: " + Model.MoreUrls)
+}
+<br />----------------------------------------------------------<br /><br />
+
+Please arrange to proceed. <br /><br />
+
+Sincerely, <br /><br />
+
+@Model.AffiliateName Affiliates Team<br />
+<a href="mailto:@Model.MailContact">@Model.MailContact</a>
+</div>

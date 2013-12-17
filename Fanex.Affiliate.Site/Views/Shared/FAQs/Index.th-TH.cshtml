@@ -1,0 +1,132 @@
+﻿@using Fanex.Affiliate.Web.Mvc
+@model SiteDomainInfo
+@{
+    ViewBag.Title = Lang.FAQs;
+    Layout = String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
+    var linkApplicationForm = new object();
+    if(SessionManager.CurrentSession == null)
+    {
+        linkApplicationForm = Html.ActionLink(Lang.ApplicationForm, "Index", "User");
+    }
+    else
+    {
+        linkApplicationForm = Lang.ApplicationForm; 
+    }
+}
+@{
+    var classThai = AppSession.Language.Equals("th-TH") ? AppSession.Language : string.Empty;
+    var classType = string.Format("class='span12 box-insite {0}'", classThai);
+}
+
+<div @Html.Raw(classType)>
+    <div class="top">
+        <div class="in-top">@Lang.FAQs</div>
+        <div class="in-right"></div>
+    </div>
+    <div class="content">
+        <div class="block">
+            <div class="title-block">
+                ทั่วไป <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block">
+            </div>
+            <div class="content-block">
+                <b id="f1">@string.Format("โปรแกรม{0} พันธมิตรคืออะไร ?", AppSettings.AffiliateName)</b>
+                <br />
+                @Html.Raw(string.Format("{0} โปรแกรมที่เกี่ยวข้อง คือโปรแกรมหุ้นส่วนซึ่งคุณจะได้รับค่านายหน้าจากการวางเดิมพันของผู้เล่นที่คุณแนะนำให้แก่ {1} จากเว็บไซต์ของคุณผ่านทางผู้แนะนำออนไลน์หรือออฟไลน์", AppSettings.AffiliateName, Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                <p></p>
+                <b id="f2">@string.Format("ฉันจะสมัครเข้ามาในโปรแกรม {0} พันธมิตรได้อย่างไร ?", AppSettings.AffiliateName) </b>
+                <br />
+                @Html.Raw(string.Format("การเป็นพันธมิตรกับ {0} สมัครฟรีไม่เสียค่าใช้จ่าย เพียงแค่คุณกรอก{1} คุณจะได้รับการติดต่อกลับภายในเวลา 3 วันทำการเกี่ยวกับการเป็นสมาชิก ถ้าใบสมัครของคุณได้รับการอนุมัติ คุณจะได้รับอีเมลล์แจ้งระบุ ไอดีในการเป็นพันธมิตร และรหัสในการใช้แบนเนอร์  ลิ้งค์ที่เป็นข้อความและรายละเอียดอื่นในการทำการตลาด เพื่อที่จะนำไปวางในตัวเวบไซค์ของคุณ", AppSettings.AffiliateName, linkApplicationForm))
+                <p></p>
+                <b id="f3">แล้วถ้าฉันไม่มีเว็บไซต์ล่ะ ยังสามารถเข้าร่วมได้หรือไม่?</b>
+                <br />
+                ได้! ทางบริษัทจะจัดเตรียมหน้าลิงค์ให้คุณ (ซึ่งผูกกับบัญชีใช้งานของคุณ) คุณสามารถที่จะ:
+                <ul>
+                    <li style="list-style-type: disc">อัพโหลดไว้บนเว็บไซต์หรือฟอรัมใดก็ได้เพื่อโฆษณาโปรแกรมหุ้นส่วนของเรา</li>
+                    <li style="list-style-type: disc">ส่งหน้าลิงค์ไปให้เพื่อน คนในรายชื่อติดต่อที่สนใจกีฬาหรือวางเดิมพันกีฬา และเมื่อพวกเขากดลิงค์ก็จะกลายเป็นสมาชิกที่แนะนำโดยคุณ!</li>
+                </ul>
+                @Html.Raw(string.Format("กรุณาติดต่อเราเพื่อรับข้อมูลเพิ่มเติมที่ {0}", string.Format("<a href=mailto:{0}>{0}</a>", AppSettings.MailContact)))
+            </div>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                การตลาดและการตรวจสอบ<a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block">
+            </div>
+            <div class="content-block">
+                <b id="f4">ฉันจะได้รับแบนเนอร์และข้อความจากที่ไหน ?</b>
+                <br />
+                เพียงแค่คุณเข้าไปในแผนกโฆษณาที่เราเก็บแบนเนอร์ไว้คุณก็จะสามารถเลือกแบนเนอร์ที่คุณชอบเช่นเดียวกับลิ้งค์ข้อความเพื่อใช้กับตัวเวบไซค์ของคุณ
+                <p></p>
+                <b id="f5">ระบบจะสามารถตรวจสอบลูกค้าที่ฉันแนะนำได้อย่างไร ?</b>
+                <br />
+                @Html.Raw(string.Format("เราได้ว่าจ้างให้  ระบบ state-of-the-art technology เพื่อใช้ตรวจเช็คข้อมูลและมั่นใจได้ 100%ในการที่คุณแนะนำลูกค้าให้เป็นสมาชิกกับ {0} การที่พันธมิตรได้แนะนำลูกค้าให้เราโดยใช้ URL ซึ่งเราได้จัดเตรียมไว้ในแผนกโฆษณา ผ่านทางการใช้ระบบ คุ๊กกี้  ผู้ที่เข้าชมเวปไซค์ที่คลิ๊กผ่าน URL พันธมิตร (แบนเนอร์ ลิ้งค์ข้อความ อีเมลล์ อื่นอื่น) จะได้รับการบันทึกและเครดิตเข้าสู่บัญชีพันธมิตรของท่านโดยอัตโนมัติในทุกคนที่คุณแนะนำ", Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                <p></p>
+                <b>@Html.Raw(string.Format("คุณจะสามารถตรวจสอบและให้เครดิตในบัญชีพันธมิตรของฉันได้หรือไม่ถ้าลูกค้าที่คลิ๊กลิ้งค์แล้วไม่สมัครในครั้งแรกแต่ได้กลับมาสมัครสมาชิกหลังจากนั้นกับทาง {0} ?", Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))</b>
+                <br />
+                @Html.Raw(string.Format("ใช่ เราสามารถที่จะตรวจสอบผู้คลิ๊กลิ้งค์พันธมิตรจากเวบไซค์ของท่านและไม่ได้สมัครสมาชิกในทันทีแต่ได้กลับมาสมัครกับทาง {0} หลังจากนั้นระบบเราจะนับให้ภายใน 90 วันหลังจากที่ผู้ที่คลิ๊กลิ้งค์พันธมิตรผ่านทางเวบไซค์ของท่าน เทคโนโลยีที่ใช้บริหารนี้อ้างอิงจากตัวคุ๊กกี้โปรแกรม", Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                <p>
+                </p>
+                <b>คุ๊กกี้คืออะไร ?</b>
+                <br />
+                @Html.Raw(string.Format("คุ๊กกี้คือระบบทั่วไปที่ใช้ตรวจสอบการเชื่อมต่อในเรื่องของเซิฟเวอร์ สามารถใช้ในการเก็บข้อมูลและตรวจสอบข้อมูลในเกี่ยวกับการเชื่อมต่อในส่วนของลูกค้า ยิ่งไปกว่านั้นยังมีข้อมูลเล็กเล็กที่ถูกวางไว้ในระบบตัวเก็บข้อมูลจากผู้ที่คลื๊กหรือเยี่ยมชม {0} ผ่านทางเวปไซค์ของท่าน ข้อมูลตัวนี้จะรวบเก็บข้อมูลเกี่ยวกับ {0} ที่จะใช้ตรวจสอบและเครดิตในบัญชีพันธมิตรได้อย่างถูกต้องในทุกผู้เข้าชมเวบไซค์ การตรวจสอบสามารถทำได้โดยคุ๊กกี้ทั้งนี้จะไม่ได้ถูกกำหนดขอบเขต เกี่ยวกับ จำนวนหน้าของผู้เข้าชมเช่นเดียวกับวันที่และเวลาในขณะที่เปิดหน้านั้นนั้น", Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                <p>
+                </p>
+                <b>คุณต้องการได้รับประโยชน์จากการที่ลูกค้าเข้าคลิ๊กพันธมิตรครั้งแรก หรือ ครั้งสุดท้ายที่คุณได้แนะนำ ?</b>
+                <br />
+                คุ๊กกี้ถูกเขียนขึ้นเพื่อให้ผู้แนะนำได้รับประโยชน์จากผู้ที่เข้าชมและคลิ๊กพันธมิตรครั้งสุดท้ายที่ลูกค้าได้ถูกแนะนำผ่านทางเวปไซค์ของคุณ
+                <p>
+                </p>
+                <b id="f6">ฉันจะสามารถตรวจสอบได้หรือไม่ว่าฉันได้รับรายได้เท่าไหร่ ?</b>
+                <br />
+                @string.Format("คุณสามารถล๊อคอินเข้าในบัญชี {0} เพื่อตรวจสอบยอดรายได้คอมมิชชั่นของคุณออนไลน์ได้ทันทีซึ่งสามารถทำได้ตลอด 24 ชั่วโมงทุกวัน 7 วันต่อหนึ่งสัปดาห์ และ 365 วันต่อปี", AppSettings.SystemName)
+                <p>
+                </p>
+                <b>คุณมีนโยบายในการกำจัดขณะทางอีเมลล์ได้อย่างไร ?</b>
+                <br />
+                @string.Format("ไม่อนุญาติให้มีการส่งจดหมายในลักษณะ spam mail โดยจะมีการเตือนในครั้งแรก หากยังคงมีการจัดส่ง จะระงับรหัสผู้ใช้งานอย่างถาวรจาก {0} โปรแกรมที่เกี่ยวข้อง", AppSettings.SystemName)
+            </div>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                การได้รับเงิน<a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block">
+            </div>
+            <div class="content-block">
+                <b id="f7">มีวิธีให้ฉันถอนเงินได้อย่างไรบ้าง?</b>
+                <br />
+                @string.Format("คุณสามารถขอถอนเงินได้โดยตรงในบัญชีผู้ใช้งาน {0} ของคุณ", AppSettings.SystemName)
+                <p>
+                </p>
+                <b>เวลาถอนเงินใช้สกุลเงินใดได้บ้าง?</b>
+                <br />
+                @string.Format("คุณสามารถถอนเงินในสกุล {0} จะใช้อัตราแลกเปลี่ยนในวันจ่ายเงิน", string.Join(", ", AppSettings.PlayerCurrencies.OrderBy(c => c.CurrencyCode).Select(x => x.CurrencyCode).ToArray()))
+                <p>
+                </p>
+                <b id="f8">จำนวนเงินต่ำสุดที่ฉันสามารถขอถอนได้คือเท่าไหร่ ?</b>
+                <br />
+                @string.Format("ขั้นต่ำในการแจ้งถอนเงิน คือ {0}{1}.", AppSettings.DefaultCurrencySymbol, AppSettings.MinimumWithdrawalAmount)
+                <p>
+                </p>
+                <b>ยอดติดลบ สามารถยกยอดไปได้ไหม? </b>
+                <br />
+                ได้ค่ะ เรายกยอดติดลบไปยังเดือนถัดไปในทุกสิ้นเดือน จนว่าจะมียอดหักลบให้ยอดนั้นๆ กลายเป็นยอดบวกให้คุณ 
+                <p>
+                </p>
+                <b>ฉันจะขอถอนเงินได้บ่อยแค่ไหน ?</b>
+                <br />
+                แจ้งถอนเงินได้มากสุด 1 ครั้งต่อเดือน หากสมาชิกมีความต้องการถอนครั้งที่สอง คำร้องนั้นจะขึ้นอยู่กับความเห็นชอบของ ผู้จัดการฝ่ายพันธมิตร  ขณะเดียวกันการแจ้งถอนกับเราไม่มีค่าบริการใดๆ เว้นเสียแต่ หน่วยงานกลางส่งเงินที่เกี่ยวข้อง หรือตัวแทนบริการด้านส่งเงินออนไลน์จะทำการเรียกเก็บค่าบริการจากคุณเป็นกรณีไป 
+            </div>
+            @if (SessionManager.CurrentSession == null)
+            {
+                <br />
+                <div class="joinUsButton">
+                    <a class="signup" href="~/User/Index"><span>@string.Format("ร่วมเป็นส่วนหนึ่งในโปรแกรมพันธมิตร {0}", AppSettings.SystemName).ToUpper()</span></a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

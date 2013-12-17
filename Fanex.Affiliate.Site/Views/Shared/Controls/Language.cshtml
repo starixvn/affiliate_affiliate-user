@@ -1,0 +1,27 @@
+﻿@model Tuple<IEnumerable<Language>, String>
+@{
+    var languageList = Model.Item1;
+    var selectedLang = Model.Item2;
+}
+<div id="language">
+    <div id="box">
+        <span id="arrow" class="arrUp"></span><span id="selectedLang" class="@AppSession.Language">@selectedLang</span>
+        <div id="langList" class="lang-list">
+            <div class="lang-top">
+            </div>
+            <div class="lang-content">
+                @if (languageList.Any())
+                {
+                    <ul id="act-change-language">
+                        @foreach (var item in languageList)
+                        {
+                            <li><a href="#" class="@item.LanguageId">@item.LanguageName</a></li>
+                        }
+                    </ul>
+                }
+            </div>
+            <div class="lang-bottom">
+            </div>
+        </div>
+    </div>
+</div>

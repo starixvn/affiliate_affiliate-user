@@ -1,0 +1,270 @@
+﻿@using System.Globalization
+@using Fanex.Affiliate.DTO
+@using Fanex.Affiliate.Resources
+@helper DropDownListGetMonth(int selectedValue, IDictionary<string, object> htmlAttributies = null)
+    {
+        var name = "class=\"sel-filter\" ";
+        if (htmlAttributies != null)
+        {
+            name += htmlAttributies.ContainsKey("id") ? "id=\"" + htmlAttributies["id"] + "\" name=\"" + htmlAttributies["id"] + "\"" : string.Empty;
+        }
+    <select @( new HtmlString(name))>
+        <option value="1"  @(1 == selectedValue ? "selected=\"selected\"" : string.Empty)>@Lang.January</option>
+        <option value="2"  @(2 == selectedValue ? "selected=\"selected\"" : string.Empty)>@Lang.February</option>
+        <option value="3"  @(3 == selectedValue ? "selected=\"selected\"" : string.Empty)>@Lang.March</option>
+        <option value="4"  @(4 == selectedValue ? "selected=\"selected\"" : string.Empty)>@Lang.April</option>
+        <option value="5"  @(5 == selectedValue ? "selected=\"selected\"" : string.Empty)>@Lang.May</option>
+        <option value="6"  @(6 == selectedValue ? "selected=\"selected\"" : string.Empty)>@Lang.June</option>
+        <option value="7"  @(7 == selectedValue ? "selected=\"selected\"" : string.Empty)>@Lang.July</option>
+        <option value="8"  @(8 == selectedValue ? "selected=\"selected\"" : string.Empty)>@Lang.August</option>
+        <option value="9"  @(9 == selectedValue ? "selected=\"selected\"" : string.Empty)>@Lang.September</option>
+        <option value="10"  @(10 == selectedValue ? "selected=\"selected\"" : string.Empty)>@Lang.October</option>
+        <option value="11"  @(11 == selectedValue ? "selected=\"selected\"" : string.Empty)>@Lang.November</option>
+        <option value="12"  @(12 == selectedValue ? "selected=\"selected\"" : string.Empty)>@Lang.December</option>
+    </select>
+}
+
+@helper GetMonthName(int month)
+    {
+    switch (month)
+    {
+        case 1:
+            <span>@Lang.January</span>
+             break;
+        case 2:
+            <span>@Lang.February</span>
+             break;
+        case 3:
+            <span>@Lang.March</span>
+             break;
+        case 4:
+            <span>@Lang.April</span>
+             break;
+        case 5:
+            <span>@Lang.May</span>
+             break;
+        case 6:
+            <span>@Lang.June</span>
+             break;
+        case 7:
+            <span>@Lang.July</span>
+             break;
+        case 8:
+            <span>@Lang.August</span>
+             break;
+        case 9:
+            <span>@Lang.September</span>
+             break;
+        case 10:
+            <span>@Lang.October</span>
+             break;
+        case 11:
+            <span>@Lang.November</span>
+             break;
+        case 12:
+            <span>@Lang.December</span>
+             break;
+    }
+}
+
+
+@helper DropDownListGetYear(int start, int selectedValue, IDictionary<string, object> htmlAttributies = null)
+    {
+        var name = "class=\"sel-filter\" ";
+        if (htmlAttributies != null)
+        {
+            name += htmlAttributies.ContainsKey("id") ? "id=\"" + htmlAttributies["id"] + "\" name=\"" + htmlAttributies["id"] + "\"" : string.Empty;
+        }
+    <select @( new HtmlString(name))>
+        @for (var i = start; i <= DateTime.Now.Year; i++)
+        {
+            <option value="@i"  @(i == selectedValue ? "selected=\"selected\"" : string.Empty)>@i</option>
+        }
+    </select>
+}
+
+@helper DropDownListProduct(List<Product> list, string selectedValue, IDictionary<string, object> htmlAttributies = null)
+    {
+        var name = string.Empty;
+        var style = string.Empty;
+        if (htmlAttributies != null)
+        {
+            name = htmlAttributies.ContainsKey("id") ? "id=\"" + htmlAttributies["id"] + "\" name=\"" + htmlAttributies["id"] + "\"" : string.Empty;
+            style = htmlAttributies.ContainsKey("style") ? "style=\"" + htmlAttributies["style"] + "\"" : string.Empty;
+        }
+    <select @( new HtmlString(name)) @(new HtmlString(style))>
+        @foreach (var item in list)
+        {
+
+            <option value="@item.ProductName" data-total-members="@item.TotalQualifiedMembers"  @(item.ProductName == selectedValue ? "selected=\"selected\"" : string.Empty)>@item.ProductName</option>
+        }
+    </select>
+}
+
+@helper DropDownListProduct(List<Product> list, int selectedValue, IDictionary<string, object> htmlAttributies = null)
+    {
+        var name = string.Empty;
+        var style = string.Empty;
+        if (htmlAttributies != null)
+        {
+            name = htmlAttributies.ContainsKey("id") ? "id=\"" + htmlAttributies["id"] + "\" name=\"" + htmlAttributies["id"] + "\"" : string.Empty;
+            style = htmlAttributies.ContainsKey("style") ? "style=\"" + htmlAttributies["style"] + "\"" : string.Empty;
+        }
+    <select @( new HtmlString(name)) @(new HtmlString(style))>
+        @if (list.Count > 1)
+        {
+            <option value="0" @(selectedValue == 0 ? "selected=\"selected\"" : string.Empty)>@Lang.All</option>
+        }
+        @foreach (var item in list)
+        {
+            <option value="@item.ProductId" @(item.ProductId == selectedValue ? "selected=\"selected\"" : string.Empty)>@item.ProductName</option>
+        }
+    </select>
+}
+
+@helper DropDownListCategory(List<BannerType> list, short selectedValue, IDictionary<string, object> htmlAttributies = null)
+    {
+        var name = string.Empty;
+        var style = string.Empty;
+        if (htmlAttributies != null)
+        {
+            name = htmlAttributies.ContainsKey("id") ? "id=\"" + htmlAttributies["id"] + "\" name=\"" + htmlAttributies["name"] + "\"" : string.Empty;
+            style = htmlAttributies.ContainsKey("style") ? "style=\"" + htmlAttributies["style"] + "\"" : string.Empty;
+        }
+        <select @( new HtmlString(name)) @(new HtmlString(style))>
+            <option value="" @(selectedValue == 0 ? "selected=\"selected\"" : string.Empty)>@Lang.All</option>
+            @foreach (var item in list)
+            {
+                <option value="@item.TypeId" @(item.TypeId == selectedValue ? "selected=\"selected\"" : string.Empty) data-haschildren="@item.HasSubCategory" >@item.Value</option>
+            }
+        </select>
+}
+@helper DropDownListLanguage(List<Language> list, string selectedValue, IDictionary<string, object> htmlAttributies = null)
+    {
+        var name = string.Empty;
+        var style = string.Empty;
+        if (htmlAttributies != null)
+        {
+            name = htmlAttributies.ContainsKey("id") ? "id=\"" + htmlAttributies["id"] + "\" name=\"" + htmlAttributies["name"] + "\"" : string.Empty;
+            style = htmlAttributies.ContainsKey("style") ? "style=\"" + htmlAttributies["style"] + "\"" : string.Empty;
+        }
+        <select @( new HtmlString(name)) @(new HtmlString(style))>
+            <option value="" @(string.IsNullOrEmpty(selectedValue) ? "selected=\"selected\"" : string.Empty)>@Lang.All</option>
+            @foreach (var item in list)
+            {
+                <option value="@item.LanguageId" @(item.LanguageId == selectedValue ? "selected=\"selected\"" : string.Empty)>@item.LanguageName</option>
+            }
+        </select>
+}
+@helper DropDownListCurrency(List<Currency> list, short selectedValue, IDictionary<string, object> htmlAttributies = null)
+    {
+        var name = string.Empty;
+        var style = string.Empty;
+        if (htmlAttributies != null)
+        {
+            name = htmlAttributies.ContainsKey("id") ? "id=\"" + htmlAttributies["id"] + "\" name=\"" + htmlAttributies["name"] + "\"" : string.Empty;
+            style = htmlAttributies.ContainsKey("style") ? "style=\"" + htmlAttributies["style"] + "\"" : string.Empty;
+        }
+        <select @( new HtmlString(name)) @(new HtmlString(style))>
+            <option value="" @(selectedValue == 0 ? "selected=\"selected\"" : string.Empty)>@Lang.All</option>
+            @foreach (var item in list)
+            {
+                <option value="@item.CurrencyId" @(item.CurrencyId == selectedValue ? "selected=\"selected\"" : string.Empty)>@item.CurrencyCode</option>
+            }
+        </select>
+}
+@helper DropDownListMediaType(List<BannerType> list, int selectedValue, IDictionary<string, object> htmlAttributies = null)
+    {
+        var name = string.Empty;
+        var style = string.Empty;
+        if (htmlAttributies != null)
+        {
+            name = htmlAttributies.ContainsKey("id") ? "id=\"" + htmlAttributies["id"] + "\" name=\"" + htmlAttributies["name"] + "\"" : string.Empty;
+            style = htmlAttributies.ContainsKey("style") ? "style=\"" + htmlAttributies["style"] + "\"" : string.Empty;
+        }
+        <select @( new HtmlString(name)) @(new HtmlString(style))>
+            <option value="" @(selectedValue == 0 ? "selected=\"selected\"" : string.Empty)>@Lang.All</option>
+            @foreach (var item in list)
+            {
+                <option value="@item.TypeId" @(item.TypeId == selectedValue ? "selected=\"selected\"" : string.Empty)>@item.Value</option>
+            }
+        </select>
+}
+@helper DropDownListMediaSize(List<BannerType> list, short selectedValue, IDictionary<string, object> htmlAttributies = null)
+    {
+        var name = string.Empty;
+        var style = string.Empty;
+        if (htmlAttributies != null)
+        {
+            name = htmlAttributies.ContainsKey("id") ? "id=\"" + htmlAttributies["id"] + "\" name=\"" + htmlAttributies["name"] + "\"" : string.Empty;
+            style = htmlAttributies.ContainsKey("style") ? "style=\"" + htmlAttributies["style"] + "\"" : string.Empty;
+        }
+        <select @( new HtmlString(name)) @(new HtmlString(style))>
+            <option value="" @(selectedValue == 0 ? "selected=\"selected\"" : string.Empty)>@Lang.All</option>
+            @foreach (var item in list)
+            {
+                <option value="@item.TypeId" @(item.TypeId == selectedValue ? "selected=\"selected\"" : string.Empty)>@item.Value</option>
+            }
+        </select>
+}
+@helper DropDownListDomain(List<Domain> list, string selectedValue, IDictionary<string, object> htmlAttributies = null)
+    {
+        var name = string.Empty;
+        var style = string.Empty;
+        if (htmlAttributies != null)
+        {
+            name = htmlAttributies.ContainsKey("id") ? "id=\"" + htmlAttributies["id"] + "\" name=\"" + htmlAttributies["name"] + "\"" : string.Empty;
+            style = htmlAttributies.ContainsKey("style") ? "style=\"" + htmlAttributies["style"] + "\"" : string.Empty;
+        }
+        <select @( new HtmlString(name)) @(new HtmlString(style))>
+            @foreach (var item in list)
+            {
+                <option value="@item.DomainId" @(item.DomainId == selectedValue ? "selected=\"selected\"" : string.Empty)>@item.DomainName</option>
+            }
+        </select>
+}
+@helper DropDownListLink(List<SystemSetting> list, string selectedValue, IDictionary<string, object> htmlAttributies = null)
+    {
+        var name = string.Empty;
+        var style = string.Empty;
+        if (htmlAttributies != null)
+        {
+            name = htmlAttributies.ContainsKey("id") ? "id=\"" + htmlAttributies["id"] + "\" name=\"" + htmlAttributies["name"] + "\"" : string.Empty;
+            style = htmlAttributies.ContainsKey("style") ? "style=\"" + htmlAttributies["style"] + "\"" : string.Empty;
+        }
+        <select @( new HtmlString(name)) @(new HtmlString(style))>
+            @foreach (var item in list)
+            {
+                <option value="@item.SValue" @(item.SValue.Equals(selectedValue, StringComparison.OrdinalIgnoreCase) ? "selected='selected'" : string.Empty) > @item.SValue</option>
+            }
+        </select>
+}
+@helper GenerateLink(string linkFormat, int customerID, string domain, string link, string languageId)
+    {
+        string gnLink = linkFormat.Replace("{custid}", customerID.ToString());
+        gnLink = gnLink.Replace("{domain}", domain);
+        gnLink = gnLink.Replace("{target}", link);
+        gnLink = string.IsNullOrEmpty(languageId) ? gnLink.Replace("/{lang}", string.Empty) : gnLink.Replace("{lang}", languageId);
+        @gnLink;
+    }
+@helper GetMoreUrls(string moreSiteUrls)
+    {
+        if (!string.IsNullOrEmpty(moreSiteUrls))
+        {
+            var lastIndex = moreSiteUrls.Length - 1;
+
+            moreSiteUrls = (moreSiteUrls.LastIndexOf(';') == lastIndex) ? moreSiteUrls.Remove(lastIndex) : moreSiteUrls;
+
+            var sites = moreSiteUrls.Split(';');
+
+            for (int index = 0; index < sites.Count(); index++)
+            {
+                <tr id="site_@(index + 2)">
+                    <td>@(Lang.SiteURL + " " + (index + 2).ToString())</td>
+                    <td></td>
+                    <td><input type="text" class="sites more-site" id="more_@(index + 2)" value="@sites[index]" /></td>
+                    <td><input type="button" value="@Lang.Delete" class="button" onclick="SIGNUP.delUrl(this);"/></td>
+                </tr>
+            }
+        }        
+}

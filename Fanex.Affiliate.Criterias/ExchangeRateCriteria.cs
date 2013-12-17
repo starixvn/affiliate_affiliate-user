@@ -1,0 +1,38 @@
+﻿// ----------------------------------------------------------------------
+// <copyright file="ExchangeRateCriteria.cs" company="Nexcel Solutions Vietnam">
+//     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
+// </copyright>
+// ------------------------------------------------------------------------
+// <history>
+//   <change who="Long.Luu" date="2013/11/25">Created</change>
+//   <change who="" date=""></change>
+// </history>
+
+namespace Fanex.Affiliate.Criterias
+{
+    using System;
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+    using NAP.Framework.Data;
+
+    /// <summary>
+    /// Bet List Criteria.
+    /// </summary>
+    public class ExchangeRateCriteria : CriteriaBase
+    {
+        public int FromCurrency { get; set; }
+
+        public int ToCurrency { get; set; }
+
+        public DateTime Date { get; set; }
+
+        /// <summary>
+        /// Get SP name.
+        /// </summary>
+        /// <returns>Setting key.</returns>
+        public override string GetSettingKey()
+        {
+            return "Aff_GetExchangeRate";
+        }
+    }
+}

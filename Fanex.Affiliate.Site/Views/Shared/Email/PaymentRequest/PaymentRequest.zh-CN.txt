@@ -1,0 +1,18 @@
+﻿<div>
+尊敬的 @Model.FirstName,<br /><br />
+
+您好，<br /><br />
+
+我们已经收到了您日期为 @Model.PaymentRequestDate, 金额 @Model.PaymentAmount, 交易单号为 @Model.PaymentID 的支付申请。<br /><br />
+                                         
+我们会按照收到顺序依次审核所有支付申请，您的申请会在七个工作日内被审核完毕。<br /><br />
+                                         
+此邮件为系统邮件，请不要直接回复。<br /><br />
+
+如有任何疑问，欢迎致信 <a href="mailto:@Model.MailContact">@Model.MailContact</a>联系我们<br /><br />
+                                         
+诚挚的<br /> 
+                                    
+@Model.AffiliateName 合作伙伴团队<br />
+<a href="mailto:@Model.MailContact">@Model.MailContact</a>
+</div>

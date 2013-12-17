@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+@using StackExchange.Profiling;
+<head>
+    <link type="image/x-icon" href="@Url.Content(string.Format("~/Content/themes/theme{0}/images/favicon.jpg", AppSettings.Theme))" rel="shortcut icon" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    @Scripts.Render("~/bundles/headjs")
+    @Styles.Render("~/bundles/css")
+    @RenderSection("css", required: false)
+</head>
+<body>
+    @RenderBody()
+    @Scripts.Render("~/bundles/js")
+    @RenderSection("scripts", required: false)
+    <script type="text/ecmascript">
+        $.unblockUI();
+        AFFILIATE.getAbsoluteUrl = function (relativeUrl) {
+            return '@Url.Content("~/")' + relativeUrl;
+        };
+    </script>
+    @Html.Partial("_AffResources")
+    @MiniProfiler.RenderIncludes()
+</body>
+</html>

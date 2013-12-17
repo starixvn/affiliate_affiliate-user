@@ -1,0 +1,186 @@
+﻿@{
+    ViewBag.Title = Lang.ProgramDetails;
+    Layout = @String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
+}
+@model DefaultProductCommissionViewModel
+@{
+    string productList = string.Empty;
+
+    if (Model.ProductList.Count > 0)
+    {
+        foreach (var product in Model.ProductList)
+        {
+            productList += ProductsFormatter.Format(product.ProductName) + ", ";
+        }
+
+        productList = productList.Substring(0, productList.Length - 2);
+    }
+}
+
+@{
+    var classThai = AppSession.Language.Equals("th-TH") ? AppSession.Language : string.Empty;
+    var classType = string.Format("class='span12 box-insite {0}'", classThai);
+}
+
+<div @Html.Raw(classType)>
+    <div class="top">
+        <div class="in-top">@Lang.ProgramDetails</div>
+        <div class="in-right">
+        </div>
+    </div>
+    <div class="content">
+        <div class="block">
+            <div class="content-block">
+                <p>@Html.Raw(string.Format("As an affiliate of {0}, you will be paid commission on every player you referred to {0} over the course of the player's account life. Our online reporting system will be available 24 hours a day 7 days a week for your usage.", AppSettings.AffiliateName))</p>
+                <p>How much you earn will depend on how much traffic you can send over from your website. It is our job to guide them through the registration process, having them make their first deposit, and retain their business with our attractive bonuses and offerings.</p>
+            </div>
+        </div>
+        @if (!AppSettings.IsKiosk)
+        {
+            <div class="block">
+                <div class="title-block">
+                    Affiliate Base Currencies Support <a href="#" class="link-top"><span></span>@Lang.Top</a>
+                </div>
+                <div class="line-block">
+                </div>
+                <div class="content-block">
+                    <p>We offer below base currency/currencies: @AppSettings.AffiliateBaseCurrencyList.</p>
+                    @{
+            var baseCurrencyList = AppSettings.AffiliateBaseCurrencyList.Split(',');
+            var multiplyByCurrencyList = AppSettings.AffiliateCurrencyListMultipliedBy.Split(',');
+            var commonCurrencyList = baseCurrencyList.Intersect(multiplyByCurrencyList);
+
+            if (commonCurrencyList.Any())
+            {
+                            <p>@string.Format("In our reports and commission setting, we will drop some last zero digits for below currency/currencies: {0}. For example: {1}1 is {1}1*{2} in real value.", AppSettings.AffiliateCurrencyListMultipliedBy, FormaterCurrency.GetCurrencySymbol(commonCurrencyList.First()), AppSettings.MulitpliedBy)</p>
+            }
+                    }
+                </div>
+            </div>
+            <div class="block">
+                <div class="title-block">
+                    Affiliate Earning <a href="#" class="link-top"><span></span>@Lang.Top</a>
+                </div>
+                <div class="line-block">
+                </div>
+                <div class="content-block">
+                    <p>
+                        <b>Revenue share model</b>
+                        <br />
+                        The revenue share model is split into following components: @productList.
+                    </p>
+                    <p>The total revenue share payable to the affiliate shall be the sum of all components of the revenue share model. Below is a sample revenue share model from our system:</p>
+                    <table class="table odd-even list">
+                        <thead>
+                            <tr>
+                                <th style="width: 85px; text-align: center;">
+                                    @Lang.Product
+                                </th>
+                                <th style="width: 10px; text-align: center;">
+                                    @Lang.Tier
+                                </th>
+                                <th style="text-align: center;">
+                                    @string.Format(Lang.ComNetWin, AppSettings.DefaultCurrencySymbol)
+                                </th>
+                                <th style="width: 150px; text-align: center;">
+                                    @Lang.QualifyingMembers
+                                </th>
+                                <th style="width: 50px; text-align: center;">
+                                    @Lang.Commission
+                                </th>
+                            </tr>
+                        </thead>
+                        @if (Model.ProductList.Any())
+                        {
+                            <tbody>
+                                @{
+                            const int MAXQM = 1000000000;
+                            const long MAXAMOUNT = 100000000000000;
+                            var oldProductId = 0;
+                            var index = 0;
+                            foreach (var product in Model.ProductList)
+                            {
+                                var listGroupSetting = Model.GroupSetting.Where(p => (AppSettings.IsShowZeroCommission == "1") ? p.ProductId == product.ProductId : p.ProductId == product.ProductId && p.Commission != 0).ToList();
+                                int totalShownTier = listGroupSetting.Count;
+                                var noTier = 0;
+                                if (totalShownTier > 0)
+                                {
+                                    index++;
+                                    foreach (var groupSetting in listGroupSetting)
+                                    {
+
+                                            <tr class="@(index % 2 == 0 ? "even" : "odd")">
+                                                @if (oldProductId != groupSetting.ProductId)
+                                                {
+                                                    <td rowspan="@totalShownTier" class="bold text-center">
+                                                        @ProductsFormatter.Format(product.ProductName)
+                                                    </td>
+                                                }
+                                                <td class="text-center">
+                                                    @(++noTier)
+                                                </td>
+                                                <td class="text-right">
+                                                    @string.Format("{0}{1}", FormaterCurrency.Format(groupSetting.MinAmount),
+                                                    groupSetting.MaxAmount == MAXAMOUNT ? "+" : " - " + FormaterCurrency.Format(Convert.ToInt64(groupSetting.MaxAmount) + 0.99))
+                                                </td>
+                                                <td class="text-right">
+                                                    @string.Format("{0}{1}", groupSetting.MinQM,
+                                                    groupSetting.MaxQM == MAXQM ? "+" : " - " + groupSetting.MaxQM.ToString())
+                                                </td>
+                                                <td class="text-right">
+                                                    @string.Format("{0}%", Convert.ToDouble(groupSetting.Commission) * 100)
+                                                </td>
+                                            </tr>
+                                                oldProductId = product.ProductId;
+                                    }
+                                }
+                            }
+                                }
+                            </tbody>
+                        }
+                        else
+                        {
+                            <tfoot>
+                                <tr>
+                                    <td colspan="5" align="center">@Lang.NoInformation
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        }
+                    </table>
+                    <p>
+                        For the purposes of the table above:
+                        <br />
+                        "COMPANY NET WIN FOR THE MONTH" = |–Returns(Win or Loss) – Any bonuses paid – Chargebacks – Any other revenue returns – Credits, compensations or refunds given to Players|
+                        @if (AppSettings.CompanyNegativeNetWin > 0)
+                        {
+                            <p>@string.Format("If the Company Net Win is negative, then affiliate has to bear {0}% with the company that month (apply for each product).", AppSettings.CompanyNegativeNetWin)</p>
+                        }
+                    </p>
+                    <span></span>
+                </div>
+            </div>
+            <div class="block">
+                <div class="title-block">Negative Balance<a href="#" class="link-top"><span></span>@Lang.Top</a>
+                </div>
+                <div class="line-block">
+                </div>
+                <div class="content-block">
+                    <p>@Html.Raw(string.Format("Any negative balance for a given month will be carried forward to the next. For example if for the month of January your affiliate account ends with -{0}2,555, this amount will be carried forward to February. If at the end of February your affiliate account earns {0}3,400, the total balance will be {0}845 ({0}3,400 deduct -{0}2,555). However if your account is still making a loss at the end of February, for example -{0}1,600, then it will be added to the previous negative balance and be carried forward to March resulting in your March balance brought forward to be -{0}4,155. The commission earned shall then be paid according to the tier scale.", AppSettings.DefaultCurrencySymbol))</p>
+                    <p>Note that above sample is used for currency @AppSettings.DefaultCurrency</p>
+                </div>
+            </div>
+            <div class="block">
+                <div class="title-block">
+                    Getting Paid <a href="#" class="link-top"><span></span>@Lang.Top</a>
+                </div>
+                <div class="line-block">
+                </div>
+                <div class="content-block">
+                    <p>@string.Format("You can request payout in {0}. Respective exchange rate on the payout date will be applied.", string.Join(", ", AppSettings.PlayerCurrencies.OrderBy(c => c.CurrencyCode).Select(x => x.CurrencyCode).ToArray()))</p>
+                    <p>@string.Format("We offer withdrawal method via your {0} player account only. The minimum amount of withdrawal request depends on each affiliate base currency.", AppSettings.AffiliateName)</p>
+                </div>
+            </div>
+        }
+    </div>
+</div>

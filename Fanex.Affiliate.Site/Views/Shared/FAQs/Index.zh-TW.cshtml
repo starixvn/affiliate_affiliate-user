@@ -1,0 +1,132 @@
+﻿@using Fanex.Affiliate.Web.Mvc
+@model SiteDomainInfo
+@{
+    ViewBag.Title = Lang.FAQs;
+    Layout = String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
+    var linkApplicationForm = new object();
+    if(SessionManager.CurrentSession == null)
+    {
+        linkApplicationForm = Html.ActionLink(Lang.ApplicationForm, "Index", "User");
+    }
+    else
+    {
+        linkApplicationForm = Lang.ApplicationForm; 
+    }
+}
+@{
+    var classThai = AppSession.Language.Equals("th-TH") ? AppSession.Language : string.Empty;
+    var classType = string.Format("class='span12 box-insite {0}'", classThai);
+}
+
+<div @Html.Raw(classType)>
+    <div class="top">
+        <div class="in-top">@Lang.FAQs</div>
+        <div class="in-right"></div>
+    </div>
+    <div class="content">
+        <div class="block">
+            <div class="title-block">
+                一般 <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block">
+            </div>
+            <div class="content-block">
+                <b id="f1">@string.Format("{0}合作夥伴計劃是甚麼？", AppSettings.AffiliateName)</b>
+                <br />
+                @Html.Raw(string.Format("{0} 加盟計畫是一項合作夥伴計畫，您可以憑這份計畫賺取傭金，傭金的計算依據是您通過線上或離線介紹的方式從您的網站介紹到{1}的玩家的投注活動。", AppSettings.AffiliateName, Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                <p></p>
+                <b id="f2">@string.Format("我如何登記{0}合作夥伴計劃？", AppSettings.AffiliateName) </b>
+                <br />
+                @Html.Raw(string.Format("{0}合作夥伴計劃是免費參加的。簡單來說只要填好{1}，我們將會在三個工作天內審核您的申請。若你的申請被接納的話，您會收到電郵通知包括您的獨有的合作夥伴號碼，令您可以在您的網站上加上廣告橫額、文字連接及其他內容與及市場推廣工具等。", AppSettings.AffiliateName, linkApplicationForm))
+                <p></p>
+                <b id="f3">我沒有自己的網站，還能加盟嗎？</b>
+                <br />
+                是的，您現在就可以加盟！ 本公司將為您提供一個網頁連結（與您的帳戶相關），您可以:
+                <ul>
+                    <li style="list-style-type: disc">在任何公共網站或論壇上發佈這個連結，以便推廣我們的加盟計畫。</li>
+                    <li style="list-style-type: disc">向對體育或體育投注感興趣的朋友、熟人發送這個網頁連結，當他們點擊這個連結時，他們就會成為您所介紹的會員！</li>
+                </ul>
+                @Html.Raw(string.Format("欲知更多詳情，請與我們聯繫，我們的電子郵箱位址是{0}.", string.Format("<a href=mailto:{0}>{0}</a>", AppSettings.MailContact)))
+            </div>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                市場推廣及追蹤<a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block">
+            </div>
+            <div class="content-block">
+                <b id="f4">我怎樣得到廣告橫額與及內容？</b>
+                <br />
+                透過我們的媒體冊，您可以選取你偏愛的廣告橫額或者文字連接放到您的網站。
+                <p></p>
+                <b id="f5">系統怎樣去追蹤我的玩家？</b>
+                <br />
+                @Html.Raw(string.Format("我們在追蹤系統上利用了最先進的科技確保了從您網站過來{0}的瀏覽量100%正確。玩家介紹會員將根據媒體中心提供的網路地址識別。通過使用cookies識別，訪客經由指定網路地址連結(廣告橫幅、文本連接、電子郵件等) 點擊成為會員，成功介紹會員的玩家將被自動追蹤及獎勵。", Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                <p></p>
+                <b>@Html.Raw(string.Format("如果有會員首次瀏覽時未有登記成為會員，但後來登記了，而他們是透過我提供的會員介紹連結接觸到{0}的，你們也會追蹤到及向我發放獎勵嗎？", Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))</b>
+                <br />
+                @Html.Raw(string.Format("是的。我們能夠從我們加盟會員的網站上追蹤那些未直接註冊，但在較晚時候回到{0}並註冊的訪問者。我們對第一名推薦會員設定了90天的保護期。管理該保護期的技術取決於資訊記錄程式cookies。", Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                <p>
+                </p>
+                <b>甚麼是cookies？</b>
+                <br />
+                @Html.Raw(string.Format("Cookies是伺服器連接的常用配置，可以用作從客戶端儲存及提取資料。更特別是，透過會員介紹連接到訪{0}的訪客，他們的電腦都會保存很多細小的資料檔案，這些檔案包括協助{0}追蹤及發放會員介紹獎勵時的所需資料，以確保有關往來資訊準確無誤。Cookies包含追蹤功能，但不會被限制，當某些網頁被瀏覽過，它可以查找出被瀏覽的頁面、瀏覽日期及時間。", Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                <p>
+                </p>
+                <b>會員介紹獎勵會給予最初的介紹鏈接提供者，還是給予最後那位？</b>
+                <br />
+                Cookies會不斷更新，所以我們會向最後介紹鏈接的提供者給予獎勵。
+                <p>
+                </p>
+                <b id="f6">我如何得知自己賺取了多少獎額？</b>
+                <br />
+                @string.Format("你可以登入你在{0}的合作夥伴會員戶口，查核你所賺取所得的回佣金額。{0}為您提供全年7X24小時查核服務。", AppSettings.SystemName)
+                <p>
+                </p>
+                <b>你們的濫發廣告政策定義是甚麼？</b>
+                <br />
+                @string.Format("我們不容忍會員介紹合伙人作出任何形式的濫發廣告行為。如果有關合伙人的濫發行為被我們發現到，我們會向該合伙人發出一次警告(如果只是較小型問題的話)；如果合伙人仍然不停止有關濫發行為，{0}的會員介紹系統會立即封停該合伙人的會員介紹合伙關係。", AppSettings.SystemName)
+            </div>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                提取佣金<a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block">
+            </div>
+            <div class="content-block">
+                <b id="f7">有哪些可行的提款方式？</b>
+                <br />
+                @string.Format("您可以直接在{0}中您的玩家帳戶中要求提款。", AppSettings.SystemName)
+                <p>
+                </p>
+                <b>提款支持哪些貨幣？</b>
+                <br />
+                @string.Format("您可以按照{0}提款。 提款適用支付日相應的匯率。", string.Join(", ", AppSettings.PlayerCurrencies.OrderBy(c => c.CurrencyCode).Select(x => x.CurrencyCode).ToArray()))
+                <p>
+                </p>
+                <b id="f8">最低的佣金提取額是多少？</b>
+                <br />
+                @string.Format("最低佣金提取要求是{1}{0}。", AppSettings.DefaultCurrencySymbol, AppSettings.MinimumWithdrawalAmount)
+                <p>
+                </p>
+                <b>負結餘會帶帳滾存嗎？</b>
+                <br />
+                會的，我們會累積計算負數佣金結存。假如到月底結算日你的戶口有負數佣金結存，有關帳目將被帶帳到下期帳單結算，直至你賺取的正數佣金金額把有關負數帳目結存變回零。
+                <p>
+                </p>
+                <b>我可以每隔多久提出一次提款申請？</b>
+                <br />
+                合夥人每月最多可以作出一次提款申請。如果得到會員介紹合作計劃的經理批准，你也可以在同一個月內做出第二次提款申請。目前我們給予大家的提款申請服務是免費的，但我們並不會負擔任何轉帳時的手續費或電子轉帳所需服務費用。
+            </div>
+            @if (SessionManager.CurrentSession == null)
+            {
+                <br />
+                <div class="joinUsButton">
+                    <a class="signup" href="~/User/Index"><span>@string.Format("加入{0}會員介紹合作計劃", AppSettings.SystemName).ToUpper()</span></a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

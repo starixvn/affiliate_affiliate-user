@@ -1,0 +1,16 @@
+﻿@{
+    Layout = null;
+}
+@using Fanex.Affiliate.ViewModels
+
+@model SystemParlayDetailViewModel
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>@string.Format("Affiliate - System Parlay")</title>
+    <link href="@Url.Content(string.Format("/Content/themes/theme{0}/global.content.css", AppSettings.Theme))" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content(string.Format("/Content/themes/theme{0}/systemparlaydetail.css", AppSettings.Theme))" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    @Html.Raw(Model.DetailText)
+</body>
+</html>

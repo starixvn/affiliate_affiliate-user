@@ -1,0 +1,55 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    var currentSession = SessionManager.CurrentSession;
+}
+@section css
+{
+    @RenderSection("css", required: false)
+}
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12 header">
+            <div class="row-fluid">
+                @Html.Partial("Header")
+                @Html.Partial("Menu")
+            </div>
+        </div>
+        <div class="span12 red-line">
+        </div>
+        <div class="span12 hotNews">
+            @Html.Action("HotNews", "Header")
+        </div>
+        <div class="span12 contents">
+            <div class="row-fluid">
+                <div class="span9 leftColumn">
+                    @RenderBody()
+                </div>
+                <div class="span3 rightColumn">
+                    @(currentSession == null ? Html.Partial("SignIn") : Html.Partial("AfterSignIn"))
+                    @Html.Partial("Box")
+                </div>
+            </div>
+        </div>
+        <div class="span12 footer">
+            @Html.Partial("Footer")
+        </div>
+        <div class="span12 red-line">
+        </div>
+    </div>
+</div>
+@section scripts
+{
+    @if (currentSession == null)
+    {
+        <script src="~/Scripts/site/SignIn.js" type="text/javascript"></script>
+    }
+    else
+    {
+        <script src="~/Scripts/site/Account.js" type="text/javascript"></script>
+        
+    }
+    @RenderSection("scriptspage", required: false)
+}
+

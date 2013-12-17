@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "SignIn";
+}
+<div class="title-block">
+    @Lang.AffiliateLogin
+</div>
+<div class="login-block">
+    <div class="icuser clear">
+        <label for="Username">@Lang.Username</label>
+    </div>
+    <input id="Username" type="text" value="" name="Username" autocomplete="off" />
+    <div class="icpass">
+        <label for="Username">@Lang.Password</label>
+    </div>
+    <input type="password" name="Password" id="Password" autocomplete="off" />
+<div class="action">
+    <input type="text" value="" placeholder="@Lang.Validation" name="CaptchaLogin" id="CaptchaLogin"
+           class="inputValidate" autocomplete="off">
+    <img src="@Url.Action("CaptchaImage", "User")" id="img-captcha" class="mouse-pointer" alt="Captcha" />
+    <input type="button" value="@Lang.Login" class="button" id="btnlogin" name="btnlogin" />
+</div>
+@if (!AppSettings.IsKiosk)
+{
+    <div class="txtLink">
+        
+        @Html.ActionLink(Lang.SignUp, "Index", "User") | @Html.ActionLink(Lang.ForgetPassword, "ForgetPassword", "User")
+    </div>
+}
+</div>
+@if (!AppSettings.IsKiosk)
+{
+    <div class="title-block">
+        @Lang.FAQs
+    </div>
+    <div class="faqs-block">
+        <ol>
+            <li class="fa"><a id="Right1_A3" href="@Url.Content("~/FAQs#f1")">@string.Format(Lang.FAQ_WhatIsAffiliateProgram, AppSettings.AffiliateName)</a></li>
+            <li><a id="Right1_A4" href="@Url.Content("~/FAQs#f2")">@string.Format(Lang.FAQ_HowDoSignUp, AppSettings.AffiliateName)</a></li>
+            <li><a id="Right1_A5" href="@Url.Content("~/FAQs#f3")">@Lang.FAQ_WhatIfDontHaveWebsite</a></li>
+            <li><a id="Right1_A6" href="@Url.Content("~/FAQs#f4")">@Lang.FAQ_WhereGetBanners</a></li>
+            <li><a id="Right1_A7" href="@Url.Content("~/FAQs#f5")">@Lang.FAQ_HowSystemKeepTrack</a></li>
+            <li><a id="Right1_A8" href="@Url.Content("~/FAQs#f6")">@Lang.FAQ_HowCanCheck</a></li>
+            <li><a id="Right1_A9" href="@Url.Content("~/FAQs#f7")">@Lang.FAQ_WhatAreWithdrawalMethods</a></li>
+            <li><a id="Right1_A10" href="@Url.Content("~/FAQs#f8")">@string.Format(Lang.FAQ_WhatIsMinimumWithdrawalRequest, AppSettings.AffiliateName)</a></li>
+        </ol>
+    </div>
+}
+<div class="adv-block">
+    <a href="~/User">
+        <img width="269" height="144" src="@Url.Content(string.Format("~/Content/themes/theme{0}/images/banner.{1}.jpg", AppSettings.Theme, AppSession.Language))" />
+    </a>
+</div>

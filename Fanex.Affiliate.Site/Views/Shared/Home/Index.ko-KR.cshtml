@@ -1,0 +1,186 @@
+﻿@{
+    ViewBag.Title = Lang.ProgramDetails;
+    Layout = @String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
+}
+@model DefaultProductCommissionViewModel
+@{
+    string productList = string.Empty;
+
+    if (Model.ProductList.Count > 0)
+    {
+        foreach (var product in Model.ProductList)
+        {
+            productList += ProductsFormatter.Format(product.ProductName) + ", ";
+        }
+
+        productList = productList.Substring(0, productList.Length - 2);
+    }
+}
+
+@{
+    var classThai = AppSession.Language.Equals("th-TH") ? AppSession.Language : string.Empty;
+    var classType = string.Format("class='span12 box-insite {0}'", classThai);
+}
+
+<div @Html.Raw(classType)>
+    <div class="top">
+        <div class="in-top">@Lang.ProgramDetails</div>
+        <div class="in-right">
+        </div>
+    </div>
+    <div class="content">
+        <div class="block">
+            <div class="content-block">
+                <p>@(AppSettings.AffiliateName)의 가맹자로서, 경기자의 계정 수명동안 @(AppSettings.AffiliateName)에 소개한 매 경기자에 대한 수수료를 받게됩니다. 저희의 온라인 보고 시스템은 일일 24시간, 주간 7일 동안 귀하가 사용할 수 있습니다. </p>
+                <p>얼마나 소득을 올리는지는 귀하의 웹사이트에서 보낸 트래픽 양에 달려있습니다.  경기자를 등록 과정을 통해 안내하고, 첫번째 금액 지급을 하도록하며, 저희의 매력적인 상여금과 제공물로 비즈니스를 영위하도록 하는 것은 저희의 일입니다.</p>
+            </div>
+        </div>
+        @if (!AppSettings.IsKiosk)
+        {
+            <div class="block">
+                <div class="title-block">
+                    기본 통화 지원 <a href="#" class="link-top"><span></span>@Lang.Top</a>
+                </div>
+                <div class="line-block">
+                </div>
+                <div class="content-block">
+                    <p>저희는 @AppSettings.AffiliateBaseCurrencyList 에 나타난 기본 통화를 제공해드립니다.</p>
+                    @{
+            var baseCurrencyList = AppSettings.AffiliateBaseCurrencyList.Split(',');
+            var multiplyByCurrencyList = AppSettings.AffiliateCurrencyListMultipliedBy.Split(',');
+            var commonCurrencyList = baseCurrencyList.Intersect(multiplyByCurrencyList);
+
+            if (commonCurrencyList.Any())
+            {
+                            <p>@string.Format("저희의 보고서 및 수수료 설정에서, 저희는 하기의 통화에 대해 마지막 자리수를 제외시킵니다: {0}. 예를 들어: {1}1은 실제 가치로 {1}1*{2}가 됩니다. ", AppSettings.AffiliateCurrencyListMultipliedBy, FormaterCurrency.GetCurrencySymbol(commonCurrencyList.First()), AppSettings.MulitpliedBy)</p>
+            }
+                    }
+                </div>
+            </div>
+            <div class="block">
+                <div class="title-block">
+                    가맹자의 소득 <a href="#" class="link-top"><span></span>@Lang.Top</a>
+                </div>
+                <div class="line-block">
+                </div>
+                <div class="content-block">
+                    <p>
+                        <b>수입 공유 모델</b>
+                        <br />
+                        수입 공유모델은 다음과 같은 요소로 나뉘어집니다: @productList.
+                    </p>
+                    <p>가맹자에 지급되는 총 수입액은 수입 공유 모델의 모든 요소의 합이 됩니다. 아래는 저희의 시스템의 예시용 수입 공유 모델을 나타냅니다:</p>
+                    <table class="table odd-even list">
+                        <thead>
+                            <tr>
+                                <th style="width: 85px; text-align: center;">
+                                    @Lang.Product
+                                </th>
+                                <th style="width: 10px; text-align: center;">
+                                    @Lang.Tier
+                                </th>
+                                <th style="text-align: center;">
+                                    @string.Format(Lang.ComNetWin, AppSettings.DefaultCurrencySymbol)
+                                </th>
+                                <th style="width: 150px; text-align: center;">
+                                    @Lang.QualifyingMembers
+                                </th>
+                                <th style="width: 50px; text-align: center;">
+                                    @Lang.Commission
+                                </th>
+                            </tr>
+                        </thead>
+                        @if (Model.ProductList.Any())
+                        {
+                            <tbody>
+                                @{
+                            const int MAXQM = 1000000000;
+                            const long MAXAMOUNT = 100000000000000;
+                            var oldProductId = 0;
+                            var index = 0;
+                            foreach (var product in Model.ProductList)
+                            {
+                                var listGroupSetting = Model.GroupSetting.Where(p => (AppSettings.IsShowZeroCommission == "1") ? p.ProductId == product.ProductId : p.ProductId == product.ProductId && p.Commission != 0).ToList();
+                                int totalShownTier = listGroupSetting.Count;
+                                var noTier = 0;
+                                if (totalShownTier > 0)
+                                {
+                                    index++;
+                                    foreach (var groupSetting in listGroupSetting)
+                                    {
+
+                                            <tr class="@(index % 2 == 0 ? "even" : "odd")">
+                                                @if (oldProductId != groupSetting.ProductId)
+                                                {
+                                                    <td rowspan="@totalShownTier" class="bold text-center">
+                                                        @ProductsFormatter.Format(product.ProductName)
+                                                    </td>
+                                                }
+                                                <td class="text-center">
+                                                    @(++noTier)
+                                                </td>
+                                                <td class="text-right">
+                                                    @string.Format("{0}{1}", FormaterCurrency.Format(groupSetting.MinAmount),
+                                                    groupSetting.MaxAmount == MAXAMOUNT ? "+" : " - " + FormaterCurrency.Format(Convert.ToInt64(groupSetting.MaxAmount) + 0.99))
+                                                </td>
+                                                <td class="text-right">
+                                                    @string.Format("{0}{1}", groupSetting.MinQM,
+                                                    groupSetting.MaxQM == MAXQM ? "+" : " - " + groupSetting.MaxQM.ToString())
+                                                </td>
+                                                <td class="text-right">
+                                                    @string.Format("{0}%", Convert.ToDouble(groupSetting.Commission) * 100)
+                                                </td>
+                                            </tr>
+                                                oldProductId = product.ProductId;
+                                    }
+                                }
+                            }
+                                }
+                            </tbody>
+                        }
+                        else
+                        {
+                            <tfoot>
+                                <tr>
+                                    <td colspan="5" align="center">@Lang.NoInformation
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        }
+                    </table>
+                    <p>
+                        상기 표에 대한 설명은 다음과 같습니다:
+                        <br />
+                        “월간 회사의 순수 승리” =월간 총 매출 - 배당금(승리) -지급된 상여금 – 지불 거절액 – 기타의 수입 환불 – 경기자에게 주어진 크레딧, 보상 혹은 환불
+                        @if (AppSettings.CompanyNegativeNetWin > 0)
+                        {
+                            <p>@string.Format("회사의 순 승리율이 마이너스가 되면, 가맹자는 회사와 그달의(각 상품에 대해 적용) 수익의 {0}%를 부담해야합니다. ", AppSettings.CompanyNegativeNetWin)</p>
+                        }
+                    </p>
+                    <span></span>
+                </div>
+            </div>
+            <div class="block">
+                <div class="title-block">네가티브 잔액<a href="#" class="link-top"><span></span>@Lang.Top</a>
+                </div>
+                <div class="line-block">
+                </div>
+                <div class="content-block">
+                    <p>@Html.Raw(string.Format("주어진 월간의 네가티브 잔액은 익월로 이월됩니다.  예를 들어, 1월 중 귀하의 가맹자의 계좌가 -{0}2,555로 마감되면, 이 액수는 2월로 이월됩니다.  2월 말에 귀하의 가맹자의 계좌가 {0}3,400을 벌었으면, 총 잔액은 {0}845 ({0}3,400 빼기 -{0}2,555인)가 됩니다. 그러나, 계좌가 2월 말에도 손실일 경우, 예를 들어 -{0}1,600인 경우, 이 액수는 이전의 네가티브 잔액에 가산되어 3월로 이월되어 -{0}4,155가 됩니다. 벌어진 수수료는 단계 척도에 따라 지불됩니다.", AppSettings.DefaultCurrencySymbol))</p>
+                    <p>상기 예시는 @AppSettings.DefaultCurrency 통화에 대해 사용된 것입니다.</p>
+                </div>
+            </div>
+            <div class="block">
+                <div class="title-block">
+                    지불 받기 <a href="#" class="link-top"><span></span>@Lang.Top</a>
+                </div>
+                <div class="line-block">
+                </div>
+                <div class="content-block">
+                    <p>@string.Format("{0}에서 지불을 요청할 수 있습니다. 지불일의 해당 환율이 적용됩니다.", string.Join(", ", AppSettings.PlayerCurrencies.OrderBy(c => c.CurrencyCode).Select(x => x.CurrencyCode).ToArray()))</p>
+                    <p>저희는 귀하의 @AppSettings.AffiliateName 경기자 계좌를 통해서만 인출 방법을 제공합니다. 인출 요청의 최저액수는 각 가맹자의 기본 통화에 따라 달라집니다.</p>
+                </div>
+            </div>
+        }
+    </div>
+</div>

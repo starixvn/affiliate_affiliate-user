@@ -1,0 +1,132 @@
+﻿@using Fanex.Affiliate.Web.Mvc
+@model SiteDomainInfo
+@{
+    ViewBag.Title = Lang.FAQs;
+    Layout = String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
+    var linkApplicationForm = new object();
+    if(SessionManager.CurrentSession == null)
+    {
+        linkApplicationForm = Html.ActionLink(Lang.ApplicationForm, "Index", "User");
+    }
+    else
+    {
+        linkApplicationForm = Lang.ApplicationForm; 
+    }
+}
+@{
+    var classThai = AppSession.Language.Equals("th-TH") ? AppSession.Language : string.Empty;
+    var classType = string.Format("class='span12 box-insite {0}'", classThai);
+}
+
+<div @Html.Raw(classType)>
+    <div class="top">
+        <div class="in-top">@Lang.FAQs</div>
+        <div class="in-right"></div>
+    </div>
+    <div class="content">
+        <div class="block">
+            <div class="title-block">
+                일반 <a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block">
+            </div>
+            <div class="content-block">
+                <b id="f1">@AppSettings.AffiliateName 협력프로그램이란 무엇인가요?</b>
+                <br />
+                @Html.Raw(string.Format("{0} 협력프로그램은 귀하의 온라인이나 오프라인 웹사이트에서 {1}을 소개하여 경기자의 내기 행위에 근거하여 수수료를 벌게되는 파트너쉽 프로그램입니다.", AppSettings.AffiliateName, Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                <p></p>
+                <b id="f2">어떻게 @AppSettings.AffiliateName 협력프로그램에 가입할 수 있나요? </b>
+                <br />
+                @Html.Raw(string.Format("{0} 협력프로그램의 가입은 무료입니다. 저희의 {1}를 작성하기만 하면 프로그램에 대한 귀하의 수락에 관련하여 평일 3일 이내에 연락을 취해드립니다. 귀하의 신청이 수락되면, 현수막, 텍스트 링크, 그리고 기타의 컨텐츠와 영업도구들을 귀하의 웹사이트에 추가하도록 접근할 수 있는 귀하의 고유의 협력 아이디가 포함된 메일을 받게됩니다.", AppSettings.AffiliateName, linkApplicationForm))
+                <p></p>
+                <b id="f3">제가 웹사이트를 가지고 있지 않은 경우에도 가입할 수 있습니까?</b>
+                <br />
+                예, 이제 가능합니다! 회사는 페이지 링크(귀하의 계정과 연관된)를 제공해드리며, 하기의 동작 수행으로 가능해집니다:
+                <ul>
+                    <li style="list-style-type: disc">저희의 협력 프로그램의 판촉을 위해 링크를 아무 공공 웹사이트나 포럼에 업로드하십시오.</li>
+                    <li style="list-style-type: disc">페이지 링크를 친구들의 아무에게나, 스포츠나 스포츠 내기에 관심이 있는 연락처에 보내어 그분들이 링크를 클릭하면, 그분들은 귀하가 소개한 회원이 됩니다!</li>
+                </ul>
+                @Html.Raw(string.Format("상세한 내용은 {0}로 저희에게 연락을 주시기 바랍니다.", string.Format("<a href=mailto:{0}>{0}</a>", AppSettings.MailContact)))
+            </div>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                영업 및 추적<a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block">
+            </div>
+            <div class="content-block">
+                <b id="f4">현수막과 컨텐츠를 어디에서 얻을 수 있나요?</b>
+                <br />
+                저희의 미디어 갤러리 난에 접근하여 귀하의 웹사이트를 위한 선호하는 배너들 뿐만 아니라 텍스트 링크를 선택할 수 있습니다.
+                <p></p>
+                <b id="f5">저의 경기자들을 시스템이 어떻게 추적하나요?</b>
+                <br />
+                @Html.Raw(string.Format("저희는 귀하가 {0}로 보낸 트래픽의 100%에 대한 크레딧을 받을 수 있도록 저희의 추적 시스템에 최첨단의 기술을 적용하고 있습니다.  가맹자는 미디어 갤러리 영역에 제공된 고유 URL을 사용하여 경기자에게 소개합니다.  쿠키를 사용하여, 가맹자의 고유 URL(현수막, 텍스트 링크, 이메일 메시지 등)을 클릭한 방문객들이 추적되며 소개한 경기자에 대한 크레딧이 가맹자에게 자동적으로 주어집니다.", Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                <p></p>
+                <b>@Html.Raw(string.Format("저의 가맹 링크를 통해 처음 방문 시 가입하지 않았으나 나중에 {0} 에 돌아와 회원이 된 비회원에 대해 추적하고 저에게 크레딧을 부여하나요?", Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))</b>
+                <br />
+                @Html.Raw(string.Format("예 그렇습니다. 저희는 즉시 가입하지 않았으나 나중에 {0}로 돌아와 가입한 방문객을 추적할 수 있습니다. 저희는 첫번째로 소개한 가맹원을 섭외하는 데 90일의 보호 기간을 설정하고 있습니다. 이 과정을 관리하는 데 사용되는 기술은 쿠키에 근거하고 있습니다.", Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                <p>
+                </p>
+                <b>쿠키란 무엇입니까?</b>
+                <br />
+                @Html.Raw(string.Format("쿠키는 서버측 연결이 양측 스토어를 사용할 수 있어 연결의 클라이언트 측의 정보를 검색하는 일반적인 기작입니다. 보다 상세하게는, 쿠키들은 가맹자의 웹사이트에서 방문객의 컴퓨터에 위치한 {0}에 옮겨진 작은 데이터파일입니다. 이러한 데이터 파일은 가맹자가 보낸 트래픽에 대해 추적하는 데 쓰이곤 하는 {0} 정보를 함유합니다. 가맹자에게 정확하게 크레딧을 부여합니다.  쿠키를 통한 추적은 특정한 페이지를 검색할 때 방문한 페이지 뿐만 아니라 날짜와 시간의 목록에만 한정되지 않는 않는 정보를 포함할 수 있습니다.", Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                <p>
+                </p>
+                <b>고객에 소개하는 데 있어 처음 소개한 가맹자나 나중에 소개한 가맹자 누구에게 보상을 제공하나요?</b>
+                <br />
+                고객을 소개받을 때 쿠키는 최종 가맹자에게 혜택을 주기위해 겹쳐씌여집니다.
+                <p>
+                </p>
+                <b id="f6">얼마나 소득을 획득하였는지 어떻게 확인할 수 있습니까?</b>
+                <br />
+                @string.Format("{0} 협력 계정에 로그인하여 1일 24시간, 주중 7일 및 연간 365일 동안 귀하의 수수료 내역을 확인할 수 있습니다.", AppSettings.SystemName)
+                <p>
+                </p>
+                <b>스팸에 대한 귀사의 정책은 어떠합니까?</b>
+                <br />
+                @string.Format("저희는 가맹 파트너에 의한 어떤 종류의 스팸도 인내하지 않습니다. 가맹자에 의한 스팸이 발견되면 가맹자에게 경고(심각하지 않은 경우라고 판정되면)를 보냅니다. 스팸이 중지되지 않으면 가맹파트너는 저희의 {0} 협력 프로그램에서 영구히 금지될 것입니다.", AppSettings.SystemName)
+            </div>
+        </div>
+        <div class="block">
+            <div class="title-block">
+                지불 방법<a href="#" class="link-top"><span></span>@Lang.Top</a>
+            </div>
+            <div class="line-block">
+            </div>
+            <div class="content-block">
+                <b id="f7">저에게 주어진 금액을 인출하는 방법은 무엇입니까?</b>
+                <br />
+                @string.Format("{0} 경기자 계좌로 직접 인출을 요청할 수 있습니다.", AppSettings.SystemName)
+                <p>
+                </p>
+                <b>인출 시 지원되는 통화의 종류는 무엇인가요?</b>
+                <br />
+                @string.Format("{0}로 금액을 인출할 수 있습니다. 지불일의 해당되는 환율이 적용됩니다.", string.Join(", ", AppSettings.PlayerCurrencies.OrderBy(c => c.CurrencyCode).Select(x => x.CurrencyCode).ToArray()))
+                <p>
+                </p>
+                <b id="f8">최저의 인출 요청 액수는 얼마인가요?</b>
+                <br />
+                @string.Format("인출 요청의 최저 액수는 {0}{1}를 보시기 바랍니다.", AppSettings.DefaultCurrencySymbol, AppSettings.MinimumWithdrawalAmount)
+                <p>
+                </p>
+                <b>마이너스 잔액은 이월됩니까?</b>
+                <br />
+                그렇습니다. 저희는 마이너스 수수료 잔액을 상환연장시킵니다. 월말에 마이너스 수수료 잔액이 생기는 경우는, 저희는 그 잔액이 상쇄되는 충분한 수익이 적립될 때까지 이를 연장시킵니다.
+                <p>
+                </p>
+                <b>인출 요청은 어떻게 이루어지나요?</b>
+                <br />
+                월 최고 1회의 인출 요청을 할 수 있습니다. 가맹자 관리자의 승인 하에 월 2회 요청을 청구할 수도 있습니다. 자유로운 인출 요청을 제공하나 금융기관이나 전자 지갑이 부과하는 어떤 종류의 수수료에 대해서도 책임을 지지 않습니다.
+            </div>
+            @if (SessionManager.CurrentSession == null)
+            {
+                <br />
+                <div class="joinUsButton">
+                    <a class="signup" href="~/User/Index"><span>@string.Format("{0} 협력프로그램에 가입하세요", AppSettings.SystemName).ToUpper()</span></a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FAQ_AffiliateProgramIsFreeToJoin" xml:space="preserve">
+    <value>การเป็นพันธมิตรกับ {0} สมัครฟรีไม่เสียค่าใช้จ่าย เพียงแค่คุณกรอก{1} คุณจะได้รับการติดต่อกลับภายในเวลา 3 วันทำการเกี่ยวกับการเป็นสมาชิก ถ้าใบสมัครของคุณได้รับการอนุมัติ คุณจะได้รับอีเมลล์แจ้งระบุ ไอดีในการเป็นพันธมิตร และรหัสในการใช้แบนเนอร์  ลิ้งค์ที่เป็นข้อความและรายละเอียดอื่นในการทำการตลาด เพื่อที่จะนำไปวางในตัวเวบไซค์ของคุณ</value>
+  </data>
+  <data name="FAQ_AffiliateProgramIsPartershipProgram" xml:space="preserve">
+    <value>{0} โปรแกรมที่เกี่ยวข้อง คือโปรแกรมหุ้นส่วนซึ่งคุณจะได้รับค่านายหน้าจากการวางเดิมพันของผู้เล่นที่คุณแนะนำให้แก่ {1} จากเว็บไซต์ของคุณผ่านทางผู้แนะนำออนไลน์หรือออฟไลน์</value>
+  </data>
+  <data name="FAQ_ByAccessingOurMediaGallery" xml:space="preserve">
+    <value>เพียงแค่คุณเข้าไปในแผนกโฆษณาที่เราเก็บแบนเนอร์ไว้คุณก็จะสามารถเลือกแบนเนอร์ที่คุณชอบเช่นเดียวกับลิ้งค์ข้อความเพื่อใช้กับตัวเวบไซค์ของคุณ</value>
+  </data>
+  <data name="FAQ_CookiesAreMechanism" xml:space="preserve">
+    <value>คุ๊กกี้คือระบบทั่วไปที่ใช้ตรวจสอบการเชื่อมต่อในเรื่องของเซิฟเวอร์ สามารถใช้ในการเก็บข้อมูลและตรวจสอบข้อมูลในเกี่ยวกับการเชื่อมต่อในส่วนของลูกค้า ยิ่งไปกว่านั้นยังมีข้อมูลเล็กเล็กที่ถูกวางไว้ในระบบตัวเก็บข้อมูลจากผู้ที่คลื๊กหรือเยี่ยมชม {0} ผ่านทางเวปไซค์ของท่าน ข้อมูลตัวนี้จะรวบเก็บข้อมูลเกี่ยวกับ {0} ที่จะใช้ตรวจสอบและเครดิตในบัญชีพันธมิตรได้อย่างถูกต้องในทุกผู้เข้าชมเวบไซค์ การตรวจสอบสามารถทำได้โดยคุ๊กกี้ทั้งนี้จะไม่ได้ถูกกำหนดขอบเขต เกี่ยวกับ จำนวนหน้าของผู้เข้าชมเช่นเดียวกับวันที่และเวลาในขณะที่เปิดหน้านั้นนั้น</value>
+  </data>
+  <data name="FAQ_CookiesAreOverwritten" xml:space="preserve">
+    <value>คุ๊กกี้ถูกเขียนขึ้นเพื่อให้ผู้แนะนำได้รับประโยชน์จากผู้ที่เข้าชมและคลิ๊กพันธมิตรครั้งสุดท้ายที่ลูกค้าได้ถูกแนะนำผ่านทางเวปไซค์ของคุณ</value>
+  </data>
+  <data name="FAQ_DoNegativeBalance" xml:space="preserve">
+    <value>ยอดติดลบ สามารถยกยอดไปได้ไหม? </value>
+  </data>
+  <data name="FAQ_DoYouReward" xml:space="preserve">
+    <value>คุณต้องการได้รับประโยชน์จากการที่ลูกค้าเข้าคลิ๊กพันธมิตรครั้งแรก หรือ ครั้งสุดท้ายที่คุณได้แนะนำ ?</value>
+  </data>
+  <data name="FAQ_ForMoreDetails" xml:space="preserve">
+    <value>กรุณาติดต่อเราเพื่อรับข้อมูลเพิ่มเติมที่ {0}</value>
+  </data>
+  <data name="FAQ_General" xml:space="preserve">
+    <value>ทั่วไป</value>
+  </data>
+  <data name="FAQ_HowCanCheck" xml:space="preserve">
+    <value>ฉันจะสามารถตรวจสอบได้หรือไม่ว่าฉันได้รับรายได้เท่าไหร่ ?</value>
+  </data>
+  <data name="FAQ_HowDoSignUp" xml:space="preserve">
+    <value>ฉันจะสมัครเข้ามาในโปรแกรม {0} พันธมิตรได้อย่างไร ?</value>
+  </data>
+  <data name="FAQ_HowOftenCanIRequest" xml:space="preserve">
+    <value>ฉันจะขอถอนเงินได้บ่อยแค่ไหน ?</value>
+  </data>
+  <data name="FAQ_HowSystemKeepTrack" xml:space="preserve">
+    <value>ระบบจะสามารถตรวจสอบลูกค้าที่ฉันแนะนำได้อย่างไร ?</value>
+  </data>
+  <data name="FAQ_MarketingTracking" xml:space="preserve">
+    <value>การตลาดและการตรวจสอบ</value>
+  </data>
+  <data name="FAQ_MaximumOfWithdrawalRequest" xml:space="preserve">
+    <value>แจ้งถอนเงินได้มากสุด 1 ครั้งต่อเดือน หากสมาชิกมีความต้องการถอนครั้งที่สอง คำร้องนั้นจะขึ้นอยู่กับความเห็นชอบของ ผู้จัดการฝ่ายพันธมิตร  ขณะเดียวกันการแจ้งถอนกับเราไม่มีค่าบริการใดๆ เว้นเสียแต่ หน่วยงานกลางส่งเงินที่เกี่ยวข้อง หรือตัวแทนบริการด้านส่งเงินออนไลน์จะทำการเรียกเก็บค่าบริการจากคุณเป็นกรณีไป </value>
+  </data>
+  <data name="FAQ_MinimumAmountOfWithdrawalRequest" xml:space="preserve">
+    <value>ขั้นต่ำในการแจ้งถอนเงิน คือ {0}{1}.</value>
+  </data>
+  <data name="FAQ_NowYouCan" xml:space="preserve">
+    <value>ได้! ทางบริษัทจะจัดเตรียมหน้าลิงค์ให้คุณ (ซึ่งผูกกับบัญชีใช้งานของคุณ) คุณสามารถที่จะ</value>
+  </data>
+  <data name="FAQ_SendPageLink" xml:space="preserve">
+    <value>ส่งหน้าลิงค์ไปให้เพื่อน คนในรายชื่อติดต่อที่สนใจกีฬาหรือวางเดิมพันกีฬา และเมื่อพวกเขากดลิงค์ก็จะกลายเป็นสมาชิกที่แนะนำโดยคุณ!</value>
+  </data>
+  <data name="FAQ_UploadItOnAnyPublicWebsites" xml:space="preserve">
+    <value>อัพโหลดไว้บนเว็บไซต์หรือฟอรัมใดก็ได้เพื่อโฆษณาโปรแกรมหุ้นส่วนของเรา</value>
+  </data>
+  <data name="FAQ_WeAreAbleToTrackVisitors" xml:space="preserve">
+    <value>ใช่ เราสามารถที่จะตรวจสอบผู้คลิ๊กลิ้งค์พันธมิตรจากเวบไซค์ของท่านและไม่ได้สมัครสมาชิกในทันทีแต่ได้กลับมาสมัครกับทาง {0} หลังจากนั้นระบบเราจะนับให้ภายใน 90 วันหลังจากที่ผู้ที่คลิ๊กลิ้งค์พันธมิตรผ่านทางเวบไซค์ของท่าน เทคโนโลยีที่ใช้บริหารนี้อ้างอิงจากตัวคุ๊กกี้โปรแกรม</value>
+  </data>
+  <data name="FAQ_WeDontTolerateSpamming" xml:space="preserve">
+    <value>ไม่อนุญาติให้มีการส่งจดหมายในลักษณะ spam mail โดยจะมีการเตือนในครั้งแรก หากยังคงมีการจัดส่ง จะระงับรหัสผู้ใช้งานอย่างถาวรจาก {0} โปรแกรมที่เกี่ยวข้อง</value>
+  </data>
+  <data name="FAQ_WeEmployStartOfArtTechnology" xml:space="preserve">
+    <value>เราได้ว่าจ้างให้  ระบบ state-of-the-art technology เพื่อใช้ตรวจเช็คข้อมูลและมั่นใจได้ 100%ในการที่คุณแนะนำลูกค้าให้เป็นสมาชิกกับ {0} การที่พันธมิตรได้แนะนำลูกค้าให้เราโดยใช้ URL ซึ่งเราได้จัดเตรียมไว้ในแผนกโฆษณา ผ่านทางการใช้ระบบ คุ๊กกี้  ผู้ที่เข้าชมเวปไซค์ที่คลิ๊กผ่าน URL พันธมิตร (แบนเนอร์ ลิ้งค์ข้อความ อีเมลล์ อื่นอื่น) จะได้รับการบันทึกและเครดิตเข้าสู่บัญชีพันธมิตรของท่านโดยอัตโนมัติในทุกคนที่คุณแนะนำ</value>
+  </data>
+  <data name="FAQ_WeRolloverNegativeCommission" xml:space="preserve">
+    <value>ได้ค่ะ เรายกยอดติดลบไปยังเดือนถัดไปในทุกสิ้นเดือน จนว่าจะมียอดหักลบให้ยอดนั้นๆ กลายเป็นยอดบวกให้คุณ </value>
+  </data>
+  <data name="FAQ_WhatAreWithdrawalMethods" xml:space="preserve">
+    <value>มีวิธีให้ฉันถอนเงินได้อย่างไรบ้าง?</value>
+  </data>
+  <data name="FAQ_WhatIfDontHaveWebsite" xml:space="preserve">
+    <value>แล้วถ้าฉันไม่มีเว็บไซต์ล่ะ ยังสามารถเข้าร่วมได้หรือไม่?</value>
+  </data>
+  <data name="FAQ_WhatIsAffiliateProgram" xml:space="preserve">
+    <value>โปรแกรม{0} พันธมิตรคืออะไร ?</value>
+  </data>
+  <data name="FAQ_WhatIsCookie" xml:space="preserve">
+    <value>คุ๊กกี้คืออะไร ?</value>
+  </data>
+  <data name="FAQ_WhatIsMinimumWithdrawalRequest" xml:space="preserve">
+    <value>จำนวนเงินต่ำสุดที่ฉันสามารถขอถอนได้คือเท่าไหร่ ?</value>
+  </data>
+  <data name="FAQ_WhatKindsOfCurrencies" xml:space="preserve">
+    <value>เวลาถอนเงินใช้สกุลเงินใดได้บ้าง?</value>
+  </data>
+  <data name="FAQ_WhatYourPolicy" xml:space="preserve">
+    <value>คุณมีนโยบายในการกำจัดขณะทางอีเมลล์ได้อย่างไร ?</value>
+  </data>
+  <data name="FAQ_WhereGetBanners" xml:space="preserve">
+    <value>ฉันจะได้รับแบนเนอร์และข้อความจากที่ไหน ?</value>
+  </data>
+  <data name="FAQ_WillYouTrack" xml:space="preserve">
+    <value>คุณจะสามารถตรวจสอบและให้เครดิตในบัญชีพันธมิตรของฉันได้หรือไม่ถ้าลูกค้าที่คลิ๊กลิ้งค์แล้วไม่สมัครในครั้งแรกแต่ได้กลับมาสมัครสมาชิกหลังจากนั้นกับทาง {0} ?</value>
+  </data>
+  <data name="FAQ_YouCanLogin" xml:space="preserve">
+    <value>คุณสามารถล๊อคอินเข้าในบัญชี {0} เพื่อตรวจสอบยอดรายได้คอมมิชชั่นของคุณออนไลน์ได้ทันทีซึ่งสามารถทำได้ตลอด 24 ชั่วโมงทุกวัน 7 วันต่อหนึ่งสัปดาห์ และ 365 วันต่อปี</value>
+  </data>
+  <data name="FAQ_YouCanRequest" xml:space="preserve">
+    <value>คุณสามารถขอถอนเงินได้โดยตรงในบัญชีผู้ใช้งาน {0} ของคุณ</value>
+  </data>
+  <data name="FAQ_YouCanWithdrawMoney" xml:space="preserve">
+    <value>คุณสามารถถอนเงินในสกุล {0} จะใช้อัตราแลกเปลี่ยนในวันจ่ายเงิน</value>
+  </data>
+  <data name="PD_AffiliateEarnings" xml:space="preserve">
+    <value>ค่าตอบแทนจากโปรแกรมพันธมิตร</value>
+  </data>
+  <data name="PD_AffiliateSupport" xml:space="preserve">
+    <value>สกุลเงินหุ้นส่วนที่สนับสนุน</value>
+  </data>
+  <data name="PD_AnyNegativeBalance" xml:space="preserve">
+    <value>ยอดติดลบของเดือนที่ให้จะถูกยกยอดไป ตัวอย่างเช่น บัญชีพันธมิตรของเดือนมกราคมของคุณ มียอดติดลบที่ -{0}2,555 โดยจำนวนนี้จะถูกยกยอดไปไว้ในเดือนกุมภาพันธ์ และตอนสิ้นเดือนกุมภาพันธ์บัญชีคุณมียอดรายรับเข้ามาที่ {0}3,400 โดยบัญชีคุณจะมียอดคงเหลือที่ {0}845 (มาจาก {0}3,400 ลบด้วย -{0}2,555). อย่างไรก็ตาม หากเดือนกุมภาพันธ์คุณยังมียอดติดลบอีก เช่น -{0}1,600 ทางเราจะนำยอดนี้ไปบวกเพิ่ม ในยอดติดลบก่อนหน้านี้ เพื่อยกยอดไปยังเดือนถัดไปคือ เดือนมีนาคม รวมเป็นยอดติดลบทั้งหมด -{0}4,155.</value>
+  </data>
+  <data name="PD_AsAffiliate" xml:space="preserve">
+    <value>ในฐานะที่เป็น {0}, คุณจะได้รับค่าตอบแทนในทุกผู้ใช้งานที่อ้างอิงถึง {0} ตลอดช่วงเวลาในการใช้งาน โดยระบบรายงานผลออนไลน์ของเราจะเปิดให้บริการทุกวันตลอด 24 ชั่วโมง</value>
+  </data>
+  <data name="PD_CompanyNetWinFormula" xml:space="preserve">
+    <value>"COMPANY NET WIN FOR THE MONTH" คำนวณจาก |–ผลประกอบการณ์(กำไรหรือขาดทุน) – การจ่ายเงินโบนัสพิเศษ – การเรียกเก็บเงิน – จำนวนเงินคืนภาษี – เครดิต หรือผลตอบแทนแก่ผู้ใช้งาน|</value>
+  </data>
+  <data name="PD_DropSomeLastZeroDigits" xml:space="preserve">
+    <value>ในรายงานและการตั้งค่าค่านายหน้าของเรา เราจะตัดศูนย์ตัวหลังๆ สำหรับสกุลเงินดังนี้: {0} ตัวอย่างเช่น: {1}1 คือ {1}1*{2} ในมูลค่าจริง</value>
+  </data>
+  <data name="PD_GettingPaid" xml:space="preserve">
+    <value>การได้รับเงิน</value>
+  </data>
+  <data name="PD_HowMuchYouEarn" xml:space="preserve">
+    <value>รายได้จะมากน้อยขึ้นอยู่กับจำนวนลูกค้าที่สมัครกับเราผ่านทางเวบไซค์คุณ สำหรับหน้าที่อื่นในการแนะนำเกี่ยวกับการสมัคร การแนะนำการฝากเงิน และการให้โบนัสโปรโมชั่นกับลูกค้า จะเป็นหน้าที่ของเราทั้งหมด</value>
+  </data>
+  <data name="PD_NegativeBalance" xml:space="preserve">
+    <value>ยอดบัญชีติดลบ</value>
+  </data>
+  <data name="PD_NoteThatSample" xml:space="preserve">
+    <value>โปรดทราบว่าตัวอย่างข้างต้นใช้สกุลเงิน</value>
+  </data>
+  <data name="PD_PurposeOfTable" xml:space="preserve">
+    <value>เพื่อจุดประสงค์ของตารางด้านบน</value>
+  </data>
+  <data name="PD_RevenueShareModel" xml:space="preserve">
+    <value>หลักเกณฑ์รายได้ของพันธมิตร</value>
+  </data>
+  <data name="PD_RevenueShareModelSplitIntoComponents" xml:space="preserve">
+    <value>โมเดลส่วนแบ่งรายได้แบ่งออกเป็นองค์ประกอบดังต่อไปนี้</value>
+  </data>
+  <data name="PD_TotalRevenue" xml:space="preserve">
+    <value>ส่วนแบ่งรายได้ทั้งหมดที่จ่ายให้แก่หุ้นส่วนจะเป็นผลรวมขององค์ประกอบทั้งหมดของโมเดลส่วนแบ่งรายได้ ด้านล่างนี้เป็นตัวอย่างโมเดลส่วนแบ่งรายได้จากระบบของเรา</value>
+  </data>
+  <data name="PD_WeOfferCurrency" xml:space="preserve">
+    <value>เรามีสกุลเงินดังนี้</value>
+  </data>
+  <data name="PD_WeOfferWithdrawalMethod" xml:space="preserve">
+    <value>เราแนะนำให้คุณถอนเงินผ่านทางบัญชีผู้ใช้งาน {0} ของคุณเท่านั้น ปริมาณขั้นต่ำที่ถอนขึ้นอยู่กับแต่ละสกุลเงิน</value>
+  </data>
+  <data name="PD_YouRequestPayout" xml:space="preserve">
+    <value>คุณขอให้จ่ายเงินในสกุล {0} ได้ จะใช้อัตราแลกเปลี่ยนในวันจ่ายเงิน</value>
+  </data>
+  <data name="TC_ActiveWageringMembers" xml:space="preserve">
+    <value>จำนวนเงินของบัญชีลูกค้าที่แอคทีคือ การที่ลูกค้าได้มียอดเทริ์นโอเวอร์ถึงขั้นต่ำของที่กำหนดไว้คือ {1}{0} ห์สหรัฐในแต่ละเดือนนั้นนั้น ทางเราอาจเสนอให้เพิ่มสกุลเงินในระบบ กรุณาติดต่อผู้แล {2}</value>
+  </data>
+  <data name="TC_AffiliateMustEnsure" xml:space="preserve">
+    <value>พันธมิตรต้องแน่ใจว่าข้อความที่โพสต์ในเวบไซค์ของท่านถูกกฏหมาย ที่ไม่ได้ละเมิดลิขสิทธิ์ หรือละเมิดสิทธิ์ผู้อื่น</value>
+  </data>
+  <data name="TC_AffiliateResponsibility" xml:space="preserve">
+    <value>มันเป็นหน้าที่รับผิดชอบของทีมงานพันธมิตรที่จะติดตามและตรวจสอบขั้นตอนต่างต่างเพื่อให้แน่ใจว่าลูกค้าใหม่ได้รับการจ่ายเงินแล้ว</value>
+  </data>
+  <data name="TC_AffiliatesAreProhibited" xml:space="preserve">
+    <value>พันธมิตรไม่ได้รับอนุญาติให้เล่นในรายการกีฬาที่อยู่ในเวบไซค์ของ {0} ผ่านช่องทางการแนะนำของตัวพันธมิตรเองหรือใช้ชื่อบุคคลอื่นในการมีส่วนร่วมรับคอมมิชชั่นในโปรแกรมพันธมิตรนี้ ทั้งนี้รวมถึงบุคคลใดบุคคลหนึ่งหรือคณะบุคคลจากซึ่งได้รับคอมมิชชั่นจากโปรแกรมนี้ ถ้าหากมีการตรวจพบว่ากลุ่มบุคคลดังกล่าวได้ทำการตามที่กล่าวมาข้างต้น ทางเวบไซค์ {0} ขอสงวนสิทธิ์ในการยกเลิกที่จะจ่ายค่าคอมมิชชั่นหรือทุกรายการที่เล่นเข้ามา และสิทธิ์ในการเป็นพันธมิตรกับทางเวบไซค์ {0} ถือว่าสิ้นสุดลง และกลุ่มบุคคลดังกล่าวจะไม่ได้รับอนุญาติให้ทำการเล่นกับ {0} ในอนาคต</value>
+  </data>
+  <data name="TC_AffiliatesWillNotEarn" xml:space="preserve">
+    <value>สมาชิกพันธมิตรจะไม่ได้ รับค่าคอมจากการเล่นเสียของผู้เล่นในเกมส์ ม้าแข่ง และคาสิโนในเวบ {0}</value>
+  </data>
+  <data name="TC_AffiliateTagging" xml:space="preserve">
+    <value>3. หัวข้อต่างต่างเกี่ยวกับพันธมิตร</value>
+  </data>
+  <data name="TC_AffiliationGuidelines" xml:space="preserve">
+    <value>2. การแนะนำเกี่ยวกับพันธมิตร</value>
+  </data>
+  <data name="TC_AllRightsAndLicenses" xml:space="preserve">
+    <value>ทุกลิขสิทธิ์และใบอนุญาติที่ให้ไว้ในสัญญาฉบับนี้ได้ถูกทำให้สิ้นสุดลงโดยทันที</value>
+  </data>
+  <data name="TC_AnyClaimRelatedToYourSite" xml:space="preserve">
+    <value>การอ้างสิทธิใดๆ เกี่ยวกับไซต์ของคุณ รวมถึง แต่มิได้จำกัดเฉพาะเนื้อหาที่อยู่ภายใน ไม่สามารถใช้กล่าวหาเราได้</value>
+  </data>
+  <data name="TC_AnyClaimThat" xml:space="preserve">
+    <value>การอ้างสิทธิใดๆ เพื่อใช้งานเครื่องหมายการค้าหุ้นส่วนของเราถือเป็นการล่วงละเมิดในเครื่องหมายการค้า ชื่อการค้า เครื่องหมายบริการ ลิขสิทธิ์ สิทธิบัตร ทรัพย์สินทางปัญญา หรือกรรมสิทธิ์อื่นของบุคคลที่สามใดๆ</value>
+  </data>
+  <data name="TC_AnyFormOfSpam" xml:space="preserve">
+    <value>ในรูปแบบของอีเมลล์ที่เป็นสแปมอีเมลล์ที่ถูกใช้กับบัญชีของคุณ ทุกจำนวนเงินที่ถูกจ่ายออกไปในการสืบสวนเกี่ยวกับบัญชี ค่าใช้จ่ายเหล่านี้ที่ลูกค้าได้จ่ายไปในมูลค่าเท่ากันอาจจะถูกนำมาหักจากบัญชีของคุณ เพื่อความยุติธรรมกับลูกค้าและตัวสมาชิกพันธมิตรเอง ค่าใช้จ่ายเหล่านี้ท่านสมาชิกและลูกค้าได้เห็นด้วยที่จะยอมรับเมื่อท่านเป็นสมาชิกพันธมิตรกับ {0}</value>
+  </data>
+  <data name="TC_AnyMisrepresentation" xml:space="preserve">
+    <value>การนำเสนอที่ผิดของตัวแทนนำเสนอหรือการรับประกันหรือการฝ่าฝืนสัญญาและข้อตกลงที่คุณได้กระทำไว้แล้ว</value>
+  </data>
+  <data name="TC_AsPolicy" xml:space="preserve">
+    <value>นโยบายของ {0} เราจะไม่ยอมรับการสมัครออนไลน์ในการเป็นพันธมิตรถ้าคุณได้ทำการโฆษณาผ่านทางคอมพิวเตอร์ที่มีเครื่องไอพีตั้งอยู่หรือดำรงอยู่ในขอบเขตตามกฏหมายของประเทศอังกฤษโดยเด็ดขาด</value>
+  </data>
+  <data name="TC_AssignAbilityAndInurement" xml:space="preserve">
+    <value>มอบหมาย-ความสามารถ</value>
+  </data>
+  <data name="TC_AssumeOwnershipOfCustomer" xml:space="preserve">
+    <value>{0} ได้ให้สิทธิ์กับสมาชิกพันธมิตรในสัญญาฉบับนี้ คุณในนามของพันธมิตร สามารถทำการประชาสัมพันธ์เวบไซค์ {0}  อย่างไรก็ตาม เราขอสงวนสิทธิ์ที่จะปฎิเสธลูกค้าหรือปิดบัญชีของลูกค้า ถ้ามีความจำเป็นเมื่อไรก็ได้</value>
+  </data>
+  <data name="TC_BannersAndLinksMayNotBePlaced" xml:space="preserve">
+    <value>แบนเนอร์และ ลิ๊งค์ข้อความไม่สามารถที่จะนำไปวางและส่งในอีเมลล์แบบแสปม หรือ นำไปโพสต์ลงบนเวบไซค์ที่ไม่ได้รับการอนุญาติ หรือ ห้องสนทนาสดโดยใช้ ระบบคอมพิวเตอร์อัตโนมัติในการแสดงข้อมูล สิ่งเหล่านี้ถ้าถูกทำโดยสมาชิก จะไม่สามารถนำมานับรวม และ จะเป็นเหตุให้บัญชีพันธมิตรของท่านถูกยกเลิก</value>
+  </data>
+  <data name="TC_BecomeAffiliate" xml:space="preserve">
+    <value>เพื่อที่จะเข้าร่วมโปรแกรมพันธมิตรกับ {0} คุณจะต้องสมัครโปรแกรมพันธมิตรโดยการกรอกใบสมัครผ่านแบบฟอร์มทางอินเตอร์เนต จากนั้นเมื่อการสมัครของคุณได้รับการอนุมัติคุณจะต้องดาวโหลดแบนเนอร์ของเราเพื่อที่จะนำไปวางไว้บนเวบไซค์ของคุณ อีเมลล์ของคุณ หรือในรูปแบบอื่น คุณได้เห็นด้วยทุกประการในกติกาและเงื่อนไขที่ระบุไว้ในเวบไซค์</value>
+  </data>
+  <data name="TC_BonusesInclucdeComplimentaryMoney" xml:space="preserve">
+    <value>โบนัส รวมถึง เงินสมนาคุณ ข้อเสนอเงินฟรี เครดิต โบนัส โบนัสแรกเข้า เงินโปรโมชั่น และสิ่งจูงใจอื่นๆ ที่เข้าบัญชีของลูกค้า เนื่องจากลูกค้าไม่ได้ซื้อจำนวนเงินเหล่านี้จริงๆ {0} ไม่สามารถจ่ายค่าคอมมิชชั่นในจำนวนที่เท่ากันได้</value>
+  </data>
+  <data name="TC_ByAgreeingToParticipate" xml:space="preserve">
+    <value>การอนุญาติให้เข้าใช้งาน{0} โปรแกรมที่เกี่ยวข้อง ผู้ใช้สามารถดาวน์โหลดแถบโฆษณา, ข้อความ หรือโปรโมชั่นต่างๆไปใช้งานในหน้าของท่านได้ และสามารถใช้งานระหว่างอีเมลล์และการตลาดทางตรงโดยใช้ URL ของท่าน ซึ่งท่านจะได้รับสิทธิ์ในการโฆษณาผลิตภัณฑ์และบริการของเราเท่านั้น</value>
+  </data>
+  <data name="TC_ByAgreementWeGrantYou" xml:space="preserve">
+    <value>โดยข้อตกลงเหล่านี้ เราให้สิทธิ์ท่านในการที่จะแนะนำลูกค้าให้มาใช้สินค้าและบริการในเวบไซค์ของเรา สอดคล้องกับกติกาและเงื่อนไขในการเป็นพันธมิตรในสัญญาฉบับนี้ อย่างไรก็ตามสัญญาฉบับนี้ไม่ได้ให้สิทธิ์กับคุณในการให้ความช่วยเหลือกับผู้ที่คุณแนะนำในกรณีอื่นอื่น และทางบริษัทขอสงวนสิทธิ์ในการที่จะรับข้อมูลจากคณะบุคคลอื่นเช่นเดียวกับคุณและบุคคลอื่นไม่สามารถได้รับค่าคอมมิชชั่นหรือเงินชดเชยในการทำธุรกิจในสัญญาฉบับนี้นอกจากตัวคุณเท่านั้น</value>
+  </data>
+  <data name="TC_ByHavingRead" xml:space="preserve">
+    <value>โดยการอ่านกติกาและเงื่อนไขในสัญญาฉบับนี้ คุณยอมรับว่าลูกค้าที่คุณได้แนะนำผ่านทางเวบไซค์ของคุณได้ยอมรับกติกาและเงื่อนไขที่กำหนดไว้ในเวบไซค์เรียบร้อยแล้ว เวบไซค์ {0} ขอสงวนสิทธิ์ที่จะเพิกถอนการจ่ายเงินให้กับบัญชีของคุณ ถ้าหากมีเหตุให้เราทราบว่าคุณได้ทำผิดกติกาและเงื่อนไขที่ระบุไว้ในเวบไซค์นี้</value>
+  </data>
+  <data name="TC_ByOpeningAccountWithCustomer" xml:space="preserve">
+    <value>โดยการเปิดบัญชีในการเป็นสมาชิก บุคคลท่านนั้นจะได้รับสิทธิ์ในการเป็นลูกค้า สอดคล้องกับ กฏกติกาของการเป็นสมาชิก นโยบาย และ ขั้นตอนและกระบวนการต่างต่างจะถูกนำมาใช้กับบุคคลเหล่านี้</value>
+  </data>
+  <data name="TC_ChargebackCreditCard" xml:space="preserve">
+    <value>ค่าใช้จ่ายที่ถูกเรียกเก็บภายหลัง  ผู้ที่ถือบัตรเครดิต ที่ได้ค้นพบว่ามีการทำรายการที่ไม่ปกติ ที่เกิดจากบัตรเครดิตของท่าน ซึ่งไม่ได้รับการอนูญาติจากเจ้าของบัตร ผู้ที่ถือบัตรเครดิตท่านดังกล่าวได้ทำการร้องขอกับทางธนาคารที่จะขอคืนสิทธิ์ค่าใช้จ่ายที่ถูกจ่ายไปเหล่านี้ ค่าใช้จ่ายที่ถูกเรียกเก็บภายหลังนี้ เชื่อมโยงถึงกรณีที่มีการโกงเกิดขึ้นโดยใช้บัตรเครดิตของผู้ที่มีบัตรโดยไม่ได้รับอนุญาติ</value>
+  </data>
+  <data name="TC_ChargebacksAreAmounts" xml:space="preserve">
+    <value>เงินที่ถูกปฏิเสธการชำระ คือ จำนวนเงินที่ถูกหักออกเมื่อลูกค้าผู้ถือบัตรเครดิตพบว่า มีการปฏิเสธการชำระเงินที่ผิดปกติและไม่ได้รับอนุญาตในบัตรเครดิต/เดบิตของลูกค้า และผู้ถือบัตรเครดิตร้องขอให้ธนาคารยกเลิกการการชำระเงินเหล่านี้ เงินที่ถูกปฏิเสธการชำระอาจเกี่่ยวกับแต่ไ่ม่จำกัดเฉพาะการที่บุคคลภายนอกใช้บัตรหรือหมายเลขบัตรของผู้ถือบัตรเครดิตเพื่อการฉ้อฉล</value>
+  </data>
+  <data name="TC_ChargebackWillStayDue" xml:space="preserve">
+    <value>จำนวนเงินที่ถูกปฏิเสธการชำระจะค้างชำระจนกว่ารายได้ที่ผู้เล่นอื่นๆ ของคุณได้รับสามารถชดเชยจำนวนที่ค้างชำระดังกล่าวได้ คุณรับทราบว่า {0} สามารถจ่ายคืนเงินเป็นสัดส่วนหนึ่งจากผลกำไรจริงเท่านั้น ซึ่งไม่ใช่รายได้จากการฉ้อฉล</value>
+  </data>
+  <data name="TC_CommissionableEarnings" xml:space="preserve">
+    <value>รายได้ที่สามารถเป็นค่านายหน้าได้คำนวณมาจากกำไรของ {0} ลบด้วยเงินที่ปฏิเสธการชำระ เงินแถม เงินที่เสนอให้ฟรี และข้อเสนออื่นๆ ต่อลูกค้า แตกย่อยมาจากตัวเลขที่กำหนดไว้อย่างน้อยในเดือนปฏิทินของสมาชิกที่มีการเคลื่อนไหวในการวางเดิมพัน</value>
+  </data>
+  <data name="TC_CommissionableEarningsOfAffiliate" xml:space="preserve">
+    <value>ค่าคอมมิชชั่นคำนวนอ้างอิงจาก ตารางโครงสร้างการรับคอมมิชชั่น ได้จากทุกรายการกำหนดของผู้เล่นที่ยังคงสถานะเล่นอย่างต่อเนื่องในนามผู้เล่นของสมาชิกพันธมิตร  </value>
+  </data>
+  <data name="TC_CommissionableEarningsWillBeSubject" xml:space="preserve">
+    <value>รายได้จากค่าคอมมิชชั่นจะอยู่ในเงื่อนไขของการคำนวณในโปรแกรมพันธมิตร {0} กรุณาตรวจสอบวิธีการคำนวณที่ระบุไว้ในโปรแกรมพันธมิตรอย่างสม่ำเสมอ</value>
+  </data>
+  <data name="TC_DevelopmentOperation" xml:space="preserve">
+    <value>การพัฒนา การปฏิบัติการ การบำรุงรักษา และเนื้อหาของไซต์ของคุณ และผลิตภัณฑ์และบริการที่ไซต์ของคุณนำเสนอ</value>
+  </data>
+  <data name="TC_Disclaimers" xml:space="preserve">
+    <value>12. การปฏิเสธความรับผิดชอบ</value>
+  </data>
+  <data name="TC_DuringTheTermsOfAgreement" xml:space="preserve">
+    <value>ในสัญญาฉบับนี้ คุณสามารถไว้วางใจได้ว่าข้อมูลที่เกี่ยวกับธุรกิจจะถูกเก็บไว้เป็นความลับ การใช้เทคโนโลยีในการโปรโมตโปรแกรมพันธมิตรของท่าน (รวมถึงตัวอย่างเช่น ค่าแนะนำที่คุณได้รับจากการแนะนำลูกค้าเข้ามาเป็นสมาชิกภายใต้เครือข่ายของคุณ). คุณเห็นด้วยที่จะไม่เปิดเผยข้อมูลที่เป็นความลับดังกล่าวให้กับบุคคลที่ 3 หรือบุคคลภายนอก นอกเสียจากว่าคุณได้รับความยินยอมเป็นลายลักษณ์อักษรว่าคุณสามารถใช้ข้อมูลที่เป็นความลับเหล่านี้เพื่อวัตถุประสงค์ที่จำเป็นในสัญญาฉบับนี้ คุณมีหน้าที่ที่จะเก็บข้อมูลเหล่านี้ไว้เป็นพันธมิตร เพื่อทำให้สัญญาฉบับนี้ไม่สิ้นสุดลง</value>
+  </data>
+  <data name="TC_EventOfTermination" xml:space="preserve">
+    <value>ในกรณ๊ที่ทำให้สัญญาฉบับนี้สิ้นสุดลง</value>
+  </data>
+  <data name="TC_GoverningLaw" xml:space="preserve">
+    <value>15. ข้อกฏหมายที่ออกโดยรัฐบาล</value>
+  </data>
+  <data name="TC_GrossWinIsTotalOfAllAmount" xml:space="preserve">
+    <value>“ผลชนะสุทธิของ {0}” คือปริมาณการวางเดิมพันทั้งหมดหารด้วยตัวเลขที่กำหนดเป็นอย่างน้อยในเดือนปฏิทินของสมาชิกที่มีการเคลื่อนไหวในการวางเดิมพันภายใต้บัญชีหุ้นส่วนของคุณ ลบด้วยปริมาณที่ชนะทั้งหมดหรือที่จ่ายให้แก่สมาชิกที่มีการเคลื่อนไหวในการวางเดิมพันของคุณ</value>
+  </data>
+  <data name="TC_IfWeContinueToPermitActivity" xml:space="preserve">
+    <value>ถ้าเรายังอนูยาติให้เกิดกิจกรรม ซึ่งก่อให้เกิดรายได้ จากลูกค้าหลังจากสัญญาพันธมิตรได้ถูกทำให้สิ้นสุดแล้ว เรื่องดังกล่าวนี้จะไม่นับรวมถึงการสละสิทิ์หรือการต่อสัญญาฉบับใหม่ หรือ ความเห็นพ้องต้องกันในการเปลี่ยนแปลงขอสัญญาที่สิ้นสุดลง</value>
+  </data>
+  <data name="TC_IfYouDecide" xml:space="preserve">
+    <value>ถ้าคุณตัดสินใจว่าจะไม่ยอมรับในกติกาและเงื่อนไขที่ทางเวบไซค์กำหนด กรุณาอย่าได้ดาวโหลดแบนเนอร์ หรือ ลิ้งค์ข้อความแล้วนำไปวางเพื่อทำการตลาดในเวบไซค์ของคุณ ในทุกข้อมูลที่เกี่ยวข้องกับ {0}</value>
+  </data>
+  <data name="TC_IfYouHaveFailedToFulfill" xml:space="preserve">
+    <value>ถ้าคุณได้ล้มเหลวในการทำหน้าที่ของคุณในการแนะนำสมาชิกให้กับเรา เราจะไม่จ่ายค่าแนะนำให้คุณหรือสัญญาการเป็นพันธมิตรของคุณจะถูกทำให้สิ้นสุดลง</value>
+  </data>
+  <data name="TC_Indemnity" xml:space="preserve">
+    <value>11. ค่าปรับ</value>
+  </data>
+  <data name="TC_IndependentInvestigation" xml:space="preserve">
+    <value>14. การสืบสวนสอบสวนโดยอิสระ</value>
+  </data>
+  <data name="TC_InWitnessWhereof" xml:space="preserve">
+    <value>16. ในการเป็นพยานที่ซึ่ง</value>
+  </data>
+  <data name="TC_LegalResponsibility" xml:space="preserve">
+    <value>7 ความรับผิดชอบเกี่ยวกับกฏหมาย</value>
+  </data>
+  <data name="TC_LimitationOfLiability" xml:space="preserve">
+    <value>13. ข้อกำหนด ของหนี้สิน</value>
+  </data>
+  <data name="TC_LimitedLicense" xml:space="preserve">
+    <value>6.ใบอนุญาติขับขี่</value>
+  </data>
+  <data name="TC_Miscellaneous" xml:space="preserve">
+    <value>8. ที่ผสมกลมกลืนกัน</value>
+  </data>
+  <data name="TC_NegativeEarningAreCarried" xml:space="preserve">
+    <value>รายได้ติดลบจะถูกยกไปในเดือนถัดไป ถ้ารายได้ของท่านเป็นบวกในเดือนนั้นนั้น ท่านจะได้รับการจ่ายเงินถ้าค่าคอมมิชชั่นของท่านได้ตามขีดขั้นต่ำที่เรากำหนดขึ้น</value>
+  </data>
+  <data name="TC_NonWaiver" xml:space="preserve">
+    <value>ไม่มีเอกสารการสละสิทธิ์</value>
+  </data>
+  <data name="TC_OnlyApprovedAndProperlyTagged" xml:space="preserve">
+    <value>สื่อที่ใช้ในการโปรโมตเวบไซค์ที่ทางเวบไซค์ของเราได้จัดเตรียมให้กับลูกค้าพันธมิตรที่ได้รับสิทธิ์การเป็นพันธมิตรแล้ว จะถูกจัดเตรียมไว้ให้ท่านเรียบร้อยแล้ว อย่างไรก็ตามสื่ออื่นอื่นที่ไม่ได้รับการอนุญาติเป็นลายลักษณ์อักษรจากเวบไซค์ {0} ท่านจะไม่สามารถทำได้</value>
+  </data>
+  <data name="TC_OnlyTaggedCustermor" xml:space="preserve">
+    <value>ทรัพย์สินในการใช้โปรโมตเวบไซค์ ที่พันธมิตรได้รับจากเวบไซค์ {0} เท่านั้นที่ได้รับอนุญาติ ซึ่งสืออื่นที่ไม่ได้รับจาก เวบไซค์ {0} จะไม่ได้รับอนุญาติให้ใช้ เป็นหน้าที่ของสมาชิกพันธมิตรที่จะตรวจสอบว่าลิ๊งค์ที่ใช้โปรโมตเวบไซค์สามารถใช้งานได้อย่างมีประสิทธิภาพ</value>
+  </data>
+  <data name="TC_OurFailureToEnforce" xml:space="preserve">
+    <value>การล้มเหลวของเราที่จะบังคับให้ท่านใช้สิ่งที่เราจัดหามาให้ ในสัญญาฉบับนี้ จะไม่ได้ประกอบไปด้วย การใช้สิ่งที่เราจัดเตรียมให้ท่านนั้น ท่านจะไม่สามารถปรับเปลี่ยน เพิ่มเติม ลบ หรือเปลี่ยนแปลงสิ่งที่มีอยู่ในสัญญาฉบับนี้  สิ่งเหล่านี้ได้ถูกยอมรับและบันทึกโดยทางเราเรียบร้อยแล้ว ลูกจ้าง พนักงานบริษัท หรือตัวแทน ไม่สามารถปรับเปลี่ยนแก้ไขสัญญาฉบับนี้ได้</value>
+  </data>
+  <data name="TC_OurRightsAndRemedies" xml:space="preserve">
+    <value>เป็นสิทธิ์ของเราที่จะบังคับใช้ข้อกำหนดในสัญญาฉบับนี้  ท่านสมาชิกได้รับรู้ และ ยืนยันที่จะยอมรับข้อกำหนดที่ได้ระบุไว้ในสัญญาฉบับนี้ สมาชิกมีหน้าที่ที่จะต้องปฏิบัติตามเงื่อนไข ของสัญญาฉบับนี้ ถ้าหากมีข้อโต้แย้งในเรื่องของสิทธิเกิดขึ้น ไม่ว่าจะด้วยเหตุใดก็ตาม ทางบริษัทขอใช้สัญญาฉบับนี้ บังคับใช้ได้อย่างถูกต้องตามกฏหมาย สมาชิกทุกท่านยินยอม เข้าใจ และยืนยันที่จะปฏิบัติตามข้อตกลงในสัญญาฉบับนี้ทุกประการ และ กฏหมายสามารถบังคับใช้กับท่านได้ ถ้ามีเหตุเกิดขึ้นซึ่งต้องหาผู้รับผิดชอบ ข้อกำหนดของสัญญาฉบับนี้ได้กำหนดบทบาทหน้าที่ที่สมาชิกต้องปฏิบัติตามไว้อย่างชัดเจนแล้ว</value>
+  </data>
+  <data name="TC_OwnershipAndContentOfOurSites" xml:space="preserve">
+    <value>ความเป็นเจ้าของข้อความของเวบไซค์นี้ ยังคงเป็นทรัพย์สินของเราและจะไม่สามารถถูกถ่ายโอนไปยังผู้อื่นได้ ทั้งนี้ได้ถูกกำหนดไว้ในสัญญาพันธมิตรฉบับนี้เรียบร้อยแล้ว</value>
+  </data>
+  <data name="TC_OwnershipContentAndLiability" xml:space="preserve">
+    <value>ความเป็นเจ้าของ ข้อความ และ หนี้สินของเวบไซค์ จะถูกกำหนดให้เป็นความรับผิดชอบของโปรแกรมพันธมิตร คุณมีหน้าที่เพียงแค่ ทำการส่งเสริมการตลาดและดูแลเวบไซค์ของคุณให้สามารถใช้งานได้อย่างมีประสิทธิ์ภาพ และค่าใช้จ่ายเหล่านี้คุณเป็นผู้รับผิดชอบเองทั้งหมด</value>
+  </data>
+  <data name="TC_PoliciesConfidentiality" xml:space="preserve">
+    <value>5. นโยบาย และ สิ่งที่เป็นความลับ</value>
+  </data>
+  <data name="TC_PresentationOfOurBanner" xml:space="preserve">
+    <value>การนำแบนเนอร์ไปวาง หรือ ลิ๊งค์ข้อความการโปรโมตเวบไซค์ เป็นหน้าที่รับผิดชอบของทีมงานพันธมิตร สมาชิกพันธมิตรต้องตรวจสอบให้แน่ใจว่า ข้อความที่นำไปวางเพื่อใช้โปรโมตนั้นถูกต้องและสามารถใช้งานได้อย่างมีประสิทธิภาพ</value>
+  </data>
+  <data name="TC_RelationshipOfParties" xml:space="preserve">
+    <value>10. ความสัมพันธ์</value>
+  </data>
+  <data name="TC_Remedies" xml:space="preserve">
+    <value>การแก้ไข</value>
+  </data>
+  <data name="TC_ResponsibilitiesAffiliate" xml:space="preserve">
+    <value>1. ความรับผิดชอบที่มีต่อโปรแกรมพันธมิตร</value>
+  </data>
+  <data name="TC_RevenueSharingPayment" xml:space="preserve">
+    <value>4. รายได้ ส่วนแบ่ง และ การจ่าย</value>
+  </data>
+  <data name="TC_SeverabilityWaiver" xml:space="preserve">
+    <value>การดำรงอยู่ / การสละสิทธิ์</value>
+  </data>
+  <data name="TC_ShouldPlayerProcess" xml:space="preserve">
+    <value>ิหากผู้เล่นปฎิเสธการชำระเงิน รายได้ที่มีข้อโต้แย้งหรือเป็นจำนวนที่ถูกปฏิเสธการชำระจะถูกริบ และถูกหักออกจากยอดเงินคงเหลือทั้งหมดที่ต้องชำระให้คุณในเดือนปัจจุบัน หากจำนวนที่หักออกจากรายได้สะสมเกินจำนวนที่ต้องชำระในปัจจุบันของคุณ ยอดเงินคงเหลือของคุณจะกลายเป็นยอดเงินติดลบและคุณจะต้องหารายได้เพื่อชดเชยจำนวนที่ถูกหักก่อนที่คุณจะเริ่มหารายได้ใหม่อีกครั้ง</value>
+  </data>
+  <data name="TC_ShouldTheseExpenses" xml:space="preserve">
+    <value>ค่าใช้จ่ายเหล่านี้จะไม่ได้รวมจำนวนเงินที่อยู่ในบัญชีของท่าน เราขอสงวนสิทธิ์ที่จะสืบสวนสอบสวน บัญชีพันธมิตรของท่าน ถ้าหากมีข้อสงสัยหรือมีเหตุบางประการ เราของสงวนสิทธิ์ในการพิจารณาการจ่ายค่าคอมมิชชั่นของท่าน จนกว่าทางเราจะสามารถหาข้อยุติได้ หรือในกรณีที่บัญชีพันธมิตรของท่านไม่สามารถแนะนำลูกค้าเพื่อสร้างรายได้ ทางเราจะขอปฏิเสธที่จะจ่ายเงินค่าคอมมิชชั่นดังกล่าวให้กับสมาชิกพันธมิตร</value>
+  </data>
+  <data name="TC_ShouldYouFailToBeEntitled" xml:space="preserve">
+    <value>หากคุณไม่ได้รับรายได้ที่สามารถเป็นค่านายหน้าเนื่องจากทำตามเป้าตัวเลขอย่างน้อยของสมาชิกที่มีการเคลื่อนไหวในการวางเดิมพันที่กำหนดในเดือนหนึ่งๆ ดังข้อ 4.1 4.2 และ 4.3 ข้างต้นไม่ได้ คุณอาจได้รับ (อยู่ในดุลพินิจของ {0}) การต่อเวลาให้อีก 2 เดือนที่จะทำตามเป้า เมื่อทำได้ตามเป้าแล้วค่านายหน้าของคุณที่ไม่เกิน 3 เดือนติดต่อกันจะถูกรวบรวมเป็นรายได้ที่สามารถเป็นค่านายหน้าได้สำหรับระยะเวลาเดียวกันนั้น (อยู่ในดุลพินิจของ {0})</value>
+  </data>
+  <data name="TC_TermOfThisAgreement" xml:space="preserve">
+    <value>กติกาของสัญญาฉบับนี้เริ่มต้นจากคุณได้ดาวโหลดลิ๊งค์แบนเนอร์และลิ้งค์ข้อความของเราแล้วนำไปวางบนเวปไซค์ของคุณ และดำเนินการเป็นพันธมิตรตามสัญญาฉบับนี้ไปจนกว่าจะมีข้อความแจ้งเป็นลายลักษณ์อักษรว่าสัญญาได้สิ้นสุดลงแจ้งไป ซึ่งจะทำให้สัญญาสิ้นสุดลงในทันที ถ้ามีการทำให้สัญญาสิ้นสุดลง คุณจะได้รับอีเมลล์เป็นลายลักษณ์อักษรจากทางเรา</value>
+  </data>
+  <data name="TC_TermTermination" xml:space="preserve">
+    <value>9.  กติกา และ การทำให้สิ้นสุด</value>
+  </data>
+  <data name="TC_ThisAgreementDetails" xml:space="preserve">
+    <value>รายละเอียดเกี่ยวกับสัญญาฉบับนี้เกี่ยวกับกติกาและเงื่อนไขการเป็นสมาชิกพันธมิตร {0} คุณ หมายถึง พันธมิตร อ้างอิงถึง บุคคลใดบุคคลหนึ่ง หรือ กลุ่มบุคคลที่ได้สมัครสมาชิกเข้ามาเป็นพันธมิตรกับเรา ภายใต้สัญญาฉบับนี้ ทั้งนี้จะรวมถึงลูกจ้าง พนักงานบริษัท ผู้อำนวยการ ผู้ถือหุ้น เจ้าของ ทั้งนี้ คำว่า ของท่านได้รวมถึงกลุ่มบุคคลเหล่านี้ด้วย</value>
+  </data>
+  <data name="TC_ThisAgreementShallBeGoverned" xml:space="preserve">
+    <value>ข้อกำหนดในสัญญาฉบับนี้ได้ถูกยอมรับและสร้างขึ้นสอดคล้องกับกฎหมายของประเทศอังกฤษ ถ้ามีข้อโต้แย้งเกิดขึ้น การอ้างสิทธิ์จะได้รับการพิจารณาจากทีมงานกฏหมายของหน่วยงานที่รับผิดชอบ ที่สำหรับการพิจารณาจะอยุ๋ที่ประเทศอังกฤษ และ สถานที่ที่จะใช้ใน การพิจารณาจะอยู่ที่  Arbitration Centre  ภาษาที่ใช้ในการพิจารณาคือภาษาอังกฤษ และใช้กฏข้อบังคับของ  Arbitration Centre  การพิจารณาจะถูกทำอย่างบริสุทธิ์ยุติธรรมและ มีมารยาท การตัดสินการพิจารณาสุดท้ายที่นี่ จะถือว่าสิ้นสุด และสามารถใช้บังคับได้อย่างถูกต้องตามกฏหมาย (15)</value>
+  </data>
+  <data name="TC_ThisLicenseCannotBeSubLicensed" xml:space="preserve">
+    <value>ใบอนุญาตินี้ ไม่สามารถทำให้เป็นใบอนุญาติเสริมให้กับคุณ อย่างไรก็ตามเป็นสิทธิ์ของท่านที่จะใช้เครื่องหมายการค้าซึ่งกำหนดให้สิทธิ์ท่านที่จะใช้แบนเนอร์ของเราในการโปรโมตเวบไซค์ คุณจะไม่สามารถนำสิ่งที่เราจัดเตรียมให้คุณไปใช้เพือวัตถุประสงค์อื่น เครื่องหมายการค้านี้เป็นลิขสิทธิ์ของเวบไซค์ เท่านั้น</value>
+  </data>
+  <data name="TC_WeAreIndependentContractors" xml:space="preserve">
+    <value>คุณและเรามีอิสระในการติดต่อกัน และในสัญญาฉบับนี้จะไม่ได้กล่าวถึงการเป็นหุ้นส่วน การเป็นตัวแทน หรือร่วมหุ้น การขาย หรือสิทธิ์ในการเป็นตัวแทน หรือ ความสัมพันธ์เกี่ยวกับการจ้างงาน คุณไม่มีสิทธิ์ในการแสดงการเป็นตัวแทน คุณไม่สามารถที่จะนำข้อความที่แสดงถึงการเป็นตัวแทนไปวางไว้บนเวบไซค์ของคุณ</value>
+  </data>
+  <data name="TC_WeDontCondoneSpam" xml:space="preserve">
+    <value>แสปม เราไม่ยอมรับอีเมลล์ขยะ</value>
+  </data>
+  <data name="TC_WeHerebyGrantToYou" xml:space="preserve">
+    <value>เราขอสงวนสิทธิ์ในการอนุญาติให้คุณใช้ แบนเนอร์ของเราในการประชาสัมพันธ์ ภายใต้เงื่อนไขข้อกำหนดในสัญญาฉบับนี้เท่านั้น ที่คุณจะสามารถนำแบนเนอร์ของเราไปวางบนเวปไซค์คุณเพื่อทำการประชาสัมพันธ์</value>
+  </data>
+  <data name="TC_WeMakeNoExpress" xml:space="preserve">
+    <value>เราไม่ได้รับประกันในส่วนของการเป้นตัวแทนในโปรแกรมพันธมิตร ที่อ้างอิงถึงลูกค้าที่เข้ามาใช้เวบไซค์ ในส่วนของการจ่ายค่าธรรมเนียม การรับประกันในเรื่องของสัญญาณ หรือการใช้งานของลูกค้าแต่ละคน และ เราไม่ได้รับประกันว่าเวบไซค์ของเราจะไม่มีการขัดข้องหรือถูกรบกวนในเรื่องของการทำงานและผลที่ตามมาอันเกิดจากเวบไซค์ไม่สามารถทำงานได้อย่างมีประสิทธิภาพ  (12)</value>
+  </data>
+  <data name="TC_WeMayModifyAnyTerm" xml:space="preserve">
+    <value>เราอาจจะปรับเปลี่ยนในเรื่องของกติกาและเงื่อนไขซึ่งระบุไว้ในสัญญาฉบับนี้  ได้ทุกเมื่อและเรามีอิสระในการพิจารณา กติกาเงื่อนไขที่ปรับเปลี่ยนนี้จะถูกระบุอยู่ในเวบไซค์ของเรา  การปรับเปลี่ยนกติกานี้ จะรวมถึง ตัวอย่างเช่น  การเปลี่ยนกติกาในเรื่องขอค่าธรรมเนียมในการแนะนำ ค่าธรรมเนียมอื่นอื่น กำหนดการ  การจ่ายเงิน ขั้นตอนการดำเนินการ และกติกาที่ใช้เกี่ยวกับการแนะนำสมาชิก  ถ้ามีการปรับเปลี่ยนกติกาข้อใดที่ลูกค้าไม่สามารถยอมรับได้ เป็นหน้าที่ของลูกค้าที่จะต้องติดตามตรวจสอบเพื่อขอยุติสัญญา หากไม่มีการติดตาม ถือว่า ลูกค้ายอมรับในเงื่อนไขที่ได้ปรับเปลี่ยนและยอมรับในกติกาที่เปลี่ยนแปลงนี้ทุกประการ</value>
+  </data>
+  <data name="TC_WeMayTerminateAgreement" xml:space="preserve">
+    <value>เราอาจจะสิ้นสุดสัญญาฉบับนี้ถ้าเราได้พิจารณณาแล้ว (ขึ้นอยู่กับการพิจารณาอย่างอิสระของเรา) ว่าเวบไซค์ของคุณไม่เหมาะสม เวบไซค์ที่ไม่เหมาะสมอาจรวมไปถึงเวบไซค์ที่ไม่เหมาะสมสำหรับเยาวชน เวบไซค์ที่โปรโมตสื่อเกี่ยวกับเรื่องเซกซ์ ส่งเสริมเกี่ยวกับเรื่องความรุนแรง ส่งเสริมเกี่ยวกับเรื่องการแบ่งแยกเชื้อชาติ เพศ ศาสนา สัญชาติ ความพิการ อายุ หรือส่งเสริมกิจกรรมที่ผิดกฏหมาย หรือละเมิดลิขสิทธิ์เกี่ยวกับทรัพย์สินทางปัญญา</value>
+  </data>
+  <data name="TC_WeMayWithhold" xml:space="preserve">
+    <value>เราอาจจะเพิกถอนการจ่ายค่าคอมมิชชั่นล่าสุดเพื่อตรวจสอบจำนวนเงินที่จะทำการจ่ายว่าถูกต้องหรือไม่</value>
+  </data>
+  <data name="TC_WeReserveTheRight" xml:space="preserve">
+    <value>เราขอสงวนสิทธิ์ที่จะสิ้นสุดสัญญาฉบับนี้ ถ้าเราไตร่ตรองแล้วว่าเวบไซค์ของคุณไม่เหมาะสม  เวบไซค์ที่ไม่เหมาะสม อาจรวมถึงเวบไซค์ที่แสดงเกี่ยวกับเรื่องเพศ ที่มีลูกค้ากลุ่มเป้าหมายคือเด็กและเยาวชน  เวบไซค์ที่แสดงถึงความรุนแรง เวบไซค์ที่แบ่งแยกเชื้อชาติ เกี่ยวกับ เพศ ศาสนา หรือ สัญชาติ หรือคนพิการ หรือเวบไซค์ที่ส่งเสริมในเรื่องของกิจกรรมที่ผิดกฏหมาย หรือการละเมิดลิขสิทธิ์ เกี่ยวกับ ไอพี</value>
+  </data>
+  <data name="TC_WeReserveTheRightToRevokeLicense" xml:space="preserve">
+    <value>เราขอสงวนสิทธิ์ที่จะยึดใบอนุญาตินี้เมื่อไรก็ตามและมันจะทำให้สัญญาฉบับนี้สิ้นสุดลงไม่ว่าด้วยเหตุผลใดก็ตาม</value>
+  </data>
+  <data name="TC_WeWillNotBeLiable" xml:space="preserve">
+    <value>เราจะไม่รับผิดชอบในผลของความเสียหายที่อาจจะเกิดขึ้น ที่จะตามมา ในเรื่องของข้อมูลที่เกิดจากความผิดพลาดของการเชื่อมต่อของระบบที่จะเกิดกับลูกค้าที่ได้รับการแนะนำในสัญญาฉบับนี้ ถ้ามีความเสียหายที่เกิดขึ้น ทำให้เป็นที่มาของหนี้สินจะต้องไม่เกินกว่าจำนวนค่าคอมมิชชั่นที่ได้ถูกจ่ายให้ตามสัญญาฉบับนี้ อย่างไรก็ตามสัญญาฉบับนี้ไม่ได้มอบอำนาจ หรือ สิทธิ์ประโยชน์ให้กับบุคคลเป็นการส่วนตัวไม่ว่าจะเป็นผู้อำนวนการหรือ ผู้ถือหุ้น ทุกหนี้สินหรือความเสียหายที่เกิดจากสัญญาฉบับนี้ไม่ว่าจะเป็นค่าธรรมเนียมในการแนะนำได้ถูกกำหนดความเสียหายไว้ในจำนวนที่กำหนดไว้เรียบร้อยแล้ว (13)</value>
+  </data>
+  <data name="TC_WeWillTerminate" xml:space="preserve">
+    <value>เราจะยกเลิกสัญญานี้ทันที ถ้ามีการส่งขยะทางอีเมลล์ในนามของคุณเพื่อเป็นการทำลายชื่อเสียงของ เวบไซค์ {0} ซึ่งเป็นการทำการตลาดที่ผิดวิธี โดยใช้ข้อความหรือคำพูด</value>
+  </data>
+  <data name="TC_WheneverPossible" xml:space="preserve">
+    <value>เงื่อนไขในแต่ละข้อของสัญญาฉบับนี้ ได้ถูกแปลไว้เป็นภาษาต่างต่างเพื่อที่จะใช้บังคับตามกฏหมาย แต่ถ้ามีเงื่อนไขใดที่ไม่สอดคล้องกับสถานการณ์ปัจจุบันหรือผิดกฏหมาย เงื่อนไขนั้นนั้นจะถือว่ายกเลิกไปโดยปริยายไม่สามารถบังคับใช้ได้ การพิจารณาเงื่อนไขข้อบังคับในสัญญาฉบับนี้มีไว้เพื่อคุ้มครองและปกป้องสิทธิ์ของเวบไซค์เราเท่านั้น ทุกเงื่อนไขได้ถูกกำหนดไว้เป็นลายลักษณ์อักษรและผู้ใช้เวบไซค์ได้ยอมรับและเห็นด้วยในการใช้งานเรียบร้อยแล้ว</value>
+  </data>
+  <data name="TC_WillPayoutRevenueShare" xml:space="preserve">
+    <value>{0} จะจ่ายส่วนแบ่งรายได้จากรายได้ที่สามารถเป็นค่านายหน้าได้ของลูกค้าแต่ละรายตามที่กำหนดโดยโครงสร้างค่านายหน้าของ {0} โดยที่คุณได้รักษาบัญชีที่เป็นหุ้นส่วนไว้อยู่ อย่างน้อยตามตัวเลขที่ได้กำหนดไว้ในเดือนปฏิทินใดๆ ของสมาชิกที่มีการเคลื่อนไหวในการวางเดิมพัน โปรดทราบว่าค่านายหน้ากลุ่มอื่นมีตัวเลขที่กำหนดของสมาชิกที่มีการเคลื่อนไหวในการวางเดิมพันที่ต่างกันไป กรุณาติดต่อผู้ดูแลระบบที่ {1} สำหรับรายละเอียดเพิ่มเติม</value>
+  </data>
+  <data name="TC_WithoutOrPriorWrittenApproval" xml:space="preserve">
+    <value>ถ้าปราศจากการยินยอมเป็นลายลักษณ์อักษรคุณสามารถใช้แบนเนอร์ของเวบไซค์ {0} และลิ๊งค์ข้อความเพื่อใช้เครื่องมือในการโปรโมตเวบไซค์ {0} เท่านั้น ห้ามใช้เพื่อวัตถุประสงค์อื่น สัญลักษณ์ หรือ ลิ้งค์ข้อความเป็นลิขสิทธิ์ของเวบไซค์เราซึ่งมีไว้ให้สำหรับบุคคลที่ได้รับการอนุญาติจากเวบไซค์เราจึงจะสามารถใช้งานได้</value>
+  </data>
+  <data name="TC_YouAcknowledge" xml:space="preserve">
+    <value>คุณได้ยอมรับและรับรู้เกี่ยวกับข้อกำหนดต่างต่างในสัญญาฉบับนี้เรียบร้อยแล้ว และคุณเห็นด้วยในกติกาและเงื่อนไขที่ระบุ คุณได้เข้าใจและรับรู้แล้ว ไม่ว่าจะ ทางตรงหรือทางอ้อม กติกาและข้อกำหนดอาจจะแตกต่างจากข้อกำหนดในตัวเวบไซค์ของคุณ คุณได้มีความอิสระที่จะตัดสินใจที่จะเข้าร่วมหรือไม่เข้าร่วมในสัญญาฉบับนี้ ทั้งนี้สัญญาฉบับนี้คุณได้สมัครใจในการเข้าร่วมโปรแกรมพันธมิตรโดยใช้ข้อบังคับตามที่เรากำหนดไว้  (14)</value>
+  </data>
+  <data name="TC_YouAgreeToIndemnify" xml:space="preserve">
+    <value>คุณได้เห็นด้วยที่จะชดเชยหรือรับผิดชอบในส่วนของความเสียหายที่อาจเกิดขึ้นจากการโปรโมตเวบไซค์ {0} ซึ่งคุณได้รับสิทธิ์ที่จะโปรโมตเวบไซค์ {0} ในโปรแกรมพันธมิตร ทั้งนี้รวมถึง ผู้อำนวยการ พนักงานออฟฟิต ลูกจ้าง ตัวแทน ผู้ถือหุ้น หุ้นส่วน หรือ เจ้าของอื่น ในการอ้างสิทธิ์ความรับผิดชอบ ในส่วนของการกระทำ หนี้สิน การสูญเสีย ความเสียหาย และค่าใช้จ่ายอื่นอื่น (รวมถึงค่าธรรมเนียมที่ต้องจ้างนักกฏหมาย) และต้นทุน (ในที่นี้รวมถึงทุกเรื่องที่จะทำให้เกิดความสูญเสีย) ถ้ามีความสูญเสียเกิดขึ้นดังกล่าวตามที่กล่าวข้างต้นเพื่อขอค่าชดเชยที่เกิดจากความเสียหาย เกี่ยวกับการละเมิดลิขสิทธิ์ ทั้งนี้จะอ้างอิง จาก</value>
+  </data>
+  <data name="TC_YouAndWeAreIndependentContractors" xml:space="preserve">
+    <value>คุณและเรามีอิสระในการติดต่อกัน และในสัญญาฉบับนี้จะไม่ได้กล่าวถึงการเป็นหุ้นส่วน การเป็นตัวแทน หรือร่วมหุ้น การขาย หรือสิทธิ์ในการเป็นตัวแทน หรือ ความสัมพันธ์เกี่ยวกับการจ้างงาน คุณไม่มีสิทธิ์ในการแสดงการเป็นตัวแทน คุณไม่สามารถที่จะนำข้อความที่แสดงถึงการเป็นตัวแทนไปวางไว้บนเวบไซค์ของคุณ</value>
+  </data>
+  <data name="TC_YouAndWeWillReleased" xml:space="preserve">
+    <value>คุณและเรา จะถูกทำให้เป็นอิสระในภาระหนี้ความรับผิดชอบเกี่ยวกับหนี้สินหลังจากสิ้นสุดวันเวลาที่กำหนดในสัญญา ยกเว้นภาระหน้าที่เกิดขึ้นตามปกติโดยส่วนตัวซึ่งยังคงต้องรับผิดชอบ ตามที่ได้ระบุไว้ในสัญญาฉบับนี้ การสิ้นสุดของสัญญาฉบับนี้ จะไม่ทำให้คุณหมดความรับผิดชอบในเรื่องของหนี้สินหากคุณมีการทำผิดข้อตกลงในก่อนที่สัญญาจะสิ้นสุดลง</value>
+  </data>
+  <data name="TC_YouAreNotAllowed" xml:space="preserve">
+    <value>คุณไม่ได้รับอนุญาตให้เป็นทั้งหุ้นส่วนและผู้แนะนำกับ {0} การละเมิดกฎนี้จะทำให้ {0} มีสิทธิเพียงฝ่ายเดียวที่จะระงับหุ้นส่วนและ/หรือผู้แนะนำอย่างใดอย่างหนึ่งหรือทั้งคู่ ผู้แนะนำหมายถึงผู้ที่มีความสัมพันธ์กับ {0} เป็นผู้ถูกเชิญชวนมาในโปรแกรม Refer-A-Friend ของเรา (ดังที่ได้กำหนดและมีในเว็บไซต์)</value>
+  </data>
+  <data name="TC_YouAreResponsible" xml:space="preserve">
+    <value>เมื่อคุณได้เป็นพันธมิตรกับทางเราแล้วสิ่งที่คุณต้องทำคือการโปรโมตเวบไซค์ {0} โดยการนำแบนเนอร์ และ ลิงค์ข้อความของเราไปวางไว้บนเวบไซค์ของคุณ หรือ อีเมลล์ของคุณ หรือวิธีการประชาสัมพันธ์อื่นอื่น</value>
+  </data>
+  <data name="TC_YouAreResponsibleForDirecting" xml:space="preserve">
+    <value>คุณจะต้องรับผิดชอบสำหรับลูกค้าที่สมัครกับเวบไซค์ {0} เท่านั้น</value>
+  </data>
+  <data name="TC_YouMayNotAssign" xml:space="preserve">
+    <value>คุณอาจจะไม่ต้องปฏิบัติตามข้อกำหนดในสัญญาฉบับนี้ หากไม่มีการแจ้งการตอบรับการเป็นสมาชิกอย่างเป็นลายลักษณ์อักษรจากทางเรา ข้อกำหนดในสัญญาฉบับนี้จะไม่สามารถบังคับใช้กับคุณและทางเราได้</value>
+  </data>
+  <data name="TC_YouMayNotModifyOrUse" xml:space="preserve">
+    <value>คุณไม่สามารถที่จะแก้ไขหรือสิทธิ์ที่ใช้ไอพี แบนเนอร์ หรือการใช้สิ่งเหล่านี้เพื่อวัตถุประสงค์อื่นโดยปราศจากความยินยอมเป็นลายลักษณ์อักษรจาก {0} ทุกข้อมูลที่เป็นลิขสิทธิ์ต่างต่างที่ได้รับการอนุมัติโดยเวปไซค์ {0} ไม่สามารถที่จะแก้ไขเปลี่ยนแปลงหรือลบออกส่วนหนึ่งส่วนใดได้</value>
+  </data>
+  <data name="TC_YouMustRemoveBanners" xml:space="preserve">
+    <value>คุณต้องนำแบนเนอร์ของ {0} ออกจากเวบไซค์ของคุณและนำลิ๊งค์ข้อความที่จะเชื่อมโยงมาที่ {0} ออก</value>
+  </data>
+  <data name="TC_YouShallNotMakeAnyClaims" xml:space="preserve">
+    <value>คุณจะไม่สามารถอ้างสิทธิ์ การขอเป็นตัวแทน หรือขอการรับประกัน ในการติดต่อกับเวบไซค์ {0} หรือ ไม่มีอำนาจที่จะบังคับ {0} ให้รับผิดชอบในเรื่องใดก็ตาม</value>
+  </data>
+  <data name="TC_YouWillAgree" xml:space="preserve">
+    <value>คุณเห็นด้วยที่จะสมัครและให้ข้อมูลที่ถูกต้องและเชื่อถือได้ที่จะใช้ในการติดต่อกับเวบไซค์ {0}</value>
+  </data>
+  <data name="TC_YouWillBeEntitled" xml:space="preserve">
+    <value>คุณจะได้รับสิทธิ์ที่จะรับเงินค่าแนะนำสมาชิกให้กับเราในเดือนนั้นนั้น หากคุณยังเป็นสมาชิกพันธมิตรกับเราตามปกติและสามารถปฏิบัติตามข้อกำหนดของเราในสัญญาฉบับนี้ตามรายละเอียดข้อ 9.2 ด้านล่าง เราอาจจะระงับการถอนเงินของคุณชั่วคราวของคุณ</value>
+  </data>
+  <data name="TC_YouWillBeResponsible" xml:space="preserve">
+    <value>คุณจะต้องรับผิดชอบทั้งหมด ในเรื่องของการพัฒนาระบบ ของเวบไซค์ การบำรุงรักษาเวบไซค์และสื่งอื่นอื่นที่ปรากฏอยู่บนเวปไซค์ของคุณโดยค่าใช้จ่ายส่วนนี้คุณต้องเป็นคนออกเอง ตัวอย่างเช่น คุณจะต้องรับผิดชอบทั้งหมดเกี่ยวกับเรื่องอุปกรณ์ที่ใช้โพสต์ลงบนเวบไซค์ของคุณ และข้อกำหนดต่างต่างที่เกี่ยวกับการทำผิดกฏหมายหรือการละเมิดลิขสิทธิ์ที่อาจจะเกิดกับบุคคลอื่น เพราะว่าทางเราไม่สามารถเข้าไปควบคุมดูแลเวบไซค์ของคุณได้ เราจึงไม่สามารถรับผิดชอบในส่วนนี้ได้ มากไปกว่านั้นคุณจะต้องรับผิดชอบในส่วนของความเสียหายและค่าใช้จ่ายในเรื่องของค่าธรรมเนียมเกี่ยวกับกฏหมายที่เกี่ยวเนื่องถึงการพัฒนา การปฏิบัติงาน การบำรุงรักษา และ ข้อมูลบนเวบไซค์ของคุณ ข้อกำหนดเกี่ยวกับการชดเชยเหล่านี้ได้แบ่งแยกความรับผิดชอบไว้อย่างชัดเจนที่บังคับใช้ภายใต้กฏหมาย</value>
+  </data>
+  <data name="TC_YouWillIndemnify" xml:space="preserve">
+    <value>คุณจะต้องชดเชยและรับผิดชอบในความเสียหายถ้าหากมีผู้ร้องขอความรับผิดชอบ ค่าใช้จ่ายในส่วนนี้รวมถึงค่าธรรมเนียมในการจ้างนักกฏหมาย ที่เกี่ยวข้องกับการพัฒนา การปฏิบัติงาน การบำรุงรักษา และ เนื้อหาที่ลงบนเวบไซค์ของคุณ  ข้อกำหนดเกี่ยวกับการชดเชยเหล่านี้ได้แบ่งแยกความรับผิดชอบไว้อย่างชัดเจนที่บังคับใช้ภายใต้กฏหมาย</value>
+  </data>
+  <data name="TC_YouWillNotKnowinglyBenefit" xml:space="preserve">
+    <value>ถ้าเกิดมีกรณีที่การประชาสัมพันธ์ของคุณไม่ได้ถูกดำเนินการในรูปแบบที่เหมาะสมถูกต้องซึ่งอาจทำให้เกิดความเสียหายกับเวบไซค์ {0} ไม่ว่าจะเป็นกิจกรรมใดใดก็ตามที่ล่วงละเมิดผ่านทางเวบไซค์ของคุณ ทางบริษัทขอสงวนสิทธิ์ที่จะเรียกเก็บค่าคอมมิชชั่นที่ได้จ่ายให้แล้วคืนมา  การพิจารณาของทางเวบไซค์ถือว่าสามารถบังคับใช้ได้สูงสุด เราขอสงวนสิทธิ์ที่เรียกเก็บจำนวนค่าคอมมิชชั่นทั้งหมดที่ได้จ่ายไปในสัญญาฉบับนี้ ถ้ามีเหตุให้เราสามารถเชื่อได้ว่า กิจกรรมที่เกิดขึ้นเกิดจากความตั้งใจของท่านที่จะละเมิดกติกาพันธมิตรที่ทางเวบไซค์กำหนด แม้ว่าบางครั้งคุณอาจจะไม่ได้ตั้งใจ เราขอสงวนสิทธิ์ที่จะระงับการถอนเงินของคุณถ้ามีเหตุให้เชื่อว่ากิจกรรมที่ทำให้เกิดรายได้นั้นนั้นเกิดจากการกระทำของคุณเองหรือกลุ่มคณะบุคคลที่คุณรู้จักโดยตั้งใจ ทางเราขอสงวนสิทธิ์ที่จะระงับการจ่ายค่าคอมมิชชั่นชั่วคราว</value>
+  </data>
+  <data name="TC_YouWillPresent" xml:space="preserve">
+    <value>คุณจะเสนอเพียงเนื้อหาและหัวข้อที่ได้รับการอนุมัติเป็นลายลักษณ์อักษรจาก {0} ก่อนแล้วเท่านั้นบนไซต์ของคุณ เนื้อหาที่ทางเราไตร่ตรองแล้วเห็นว่าไม่เหมาะสมจะมีผลให้สัญญาหุ้นส่วนนี้สิ้นสุดลงทันที</value>
+  </data>
+  <data name="TC_YouWillReturnToUs" xml:space="preserve">
+    <value>คุณจะต้องส่งมอบคืนข้อมูลที่เป็นความลับ ทุกประเภทที่คุณได้รับไปจากทางเรา เพื่อหยุดผู้เล่นทุกท่านในเครือข่ายของคุณไม่ว่าจะเป็นชื่อ ลิขสิทธิ์ เครื่องหมายการให้บริการ เครื่องหมายอื่นที่เกี่ยวข้อกับการทำธุรกิจของเรา</value>
+  </data>
+  <data name="PD_RevenueShareModel_Content" xml:space="preserve">
+    <value>รายได้ของพันธมิตรนั้นแบ่งออกเป็น 2 ส่วนคือ: รายได้จากคาสิโน และรายได้จากหน้ากีฬา โดยเกณฑ์การคำนวณค่าคอมมิชชั่นในแต่ละส่วนสามารถอ้างอิงได้ตามตารางด้านล่างนี้ โดยยอดค่าคอมมิชชั่นสุทธิที่พันธมิตรจะได้รับนั้น จะคำนวนจาก”รายได้สุทธิ”รวมทั้งหน้ากีฬาและคาสิโน</value>
+  </data>
+  <data name="PD_AffilatesAreOnlyAllowed" xml:space="preserve">
+    <value>สมาชิกพันธมิตรอนุญาติให้แจ้งถอนเงินได้ 1 ครั้งต่อเดือน หากสมาชิกมีความต้องการถอนครั้งที่สอง คำร้องนั้นจะขึ้นอยู่กับความเห็นชอบของ ผู้จัดการฝ่ายพันธมิตร  ขณะเดียวกันการแจ้งถอนกับเราไม่มีค่าบริการใดๆ เว้นเสียแต่ หน่วยงานกลางส่งเงินที่เกี่ยวข้อง หรือตัวแทนบริการด้านส่งเงินออนไลน์จะทำการเรียกเก็บค่าบริการจากคุณเป็นกรณีไป  </value>
+  </data>
+  <data name="PD_Moneybookers" xml:space="preserve">
+    <value>โอนทาง Moneybookers</value>
+  </data>
+  <data name="PD_WireTransfer" xml:space="preserve">
+    <value>โอนทาง Wire transfer</value>
+  </data>
+  <data name="PD_ThroughYourPlayer" xml:space="preserve">
+    <value>โอนรายได้ของพันธมิตรไปยังบัญชีเล่นของคุณในเวบ {0}</value>
+  </data>
+  <data name="PD_AnyNegativeBalanceForGivenMonth" xml:space="preserve">
+    <value>ยอดติดลบของเดือนที่ให้จะถูกยกยอดไป ตัวอย่างเช่น บัญชีพันธมิตรของเดือนมกราคมของคุณ มียอดติดลบที่ -$2,555 โดยจำนวนนี้จะถูกยกยอดไปไว้ในเดือนกุมภาพันธ์ และตอนสิ้นเดือนกุมภาพันธ์บัญชีคุณมียอดรายรับเข้ามาที่ $3,400 โดยบัญชีคุณจะมียอดคงเหลือที่ $845 (มาจาก $3,400 ลบด้วย -$2,555).  อย่างไรก็ตาม หากเดือนกุมภาพันธ์คุณยังมียอดติดลบอีก เช่น -$1,600 ทางเราจะนำยอดนี้ไปบวกเพิ่ม ในยอดติดลบก่อนหน้านี้ เพื่อยกยอดไปยังเดือนถัดไปคือ เดือนมีนาคม รวมเป็นยอดติดลบทั้งหมด  -$4,155.</value>
+  </data>
+  <data name="PD_Casino_Content1" xml:space="preserve">
+    <value>{0} เสนอค่าตอบแทนกับสมาชิกพันธมิตรในหน้าคาสิโนโดยนับจากการสะสมจำนวนผู้เล่นใหม่ที่เดิมพันในแต่ละเดือนในหน้าคาสิโน</value>
+  </data>
+  <data name="PD_Casino_Content2" xml:space="preserve">
+    <value>จากตารางในเบื้องต้น “รายได้สุทธิ” หมายถึงจำนวนทุนเดิมพันของผู้เล่นในแต่ละเดือนหักลบด้วย (1).ยอดที่ลูกค้าเล่นได้  (2) ยอดโบนัสที่ลูกค้าได้รับ  (3) ค่าดำเนินการ และ (4)ค่าตอบแทนรายได้, เครดิตฟรี, ค่าชดเชยหรือการคืนเงินให้กับลูกค้า  หลังจากการหักลบค่าต่างๆ ดังกล่าวแล้วจึงจะสามารถคำนวณค่าคอมมิชชั่นได้</value>
+  </data>
+  <data name="PD_TheMinimumWithdrawal" xml:space="preserve">
+    <value>ขั้นต่ำในการแจ้งถอนเงิน คือ USD$100.</value>
+  </data>
+  <data name="PD_WeOfferSeveralMethods" xml:space="preserve">
+    <value>เราเสนอวิธีการถอนเงินที่หลากหลายให้แก่คุณ:</value>
+  </data>
+  <data name="PD_YouCanRequestPayout" xml:space="preserve">
+    <value>คุณสามารถแจ้งถอนรายได้คุณโดยใช้สกุลเงินน USD อ้างอิงจากอัตราค่าแลกเปลี่ยนเงินตรา ของ GBP, EUR, RMB, MYR, THB, IDR และ  VND  จะขึ้นอยู่กับฝ่ายการจ่ายเงิน</value>
+  </data>
+  <data name="PD_Sportbook_Content" xml:space="preserve">
+    <value>{0} เสนอค่าตอบแทนพันธมิตรในหน้ากีฬาโดยนับจากการสะสมจำนวนผู้เล่นที่เดิมพันในแต่ละเดือนในหน้ากีฬา</value>
+  </data>
+  <data name="PD_Neteller" xml:space="preserve">
+    <value>โอนทาง Neteller</value>
+  </data>
+  <data name="FAQ_CanIRequest" xml:space="preserve">
+    <value>ฉันสามารถแจ้งถอนสกุลเงินอื่นที่ไม่ใช่ USD ได้หรือไม่</value>
+  </data>
+  <data name="FAQ_TheCurrenciesOfferedAre" xml:space="preserve">
+    <value>ได้ค่ะ โดยคุณสามารถแจ้งถอนรายได้คุณโดยจากสกุลเงินน USD อ้างอิงอัตราค่าแลกเปลี่ยนเงินตรา ของ GBP, EUR, RMB, MYR, THB, IDR และ VND จะขึ้นอยู่กับแผนกการจ่ายเงิน</value>
+  </data>
+  <data name="FAQ_ToParticipateIn12BET" xml:space="preserve">
+    <value>ได้ค่ะ เพียงคุณมั่นใจว่า คุณมีเครือข่ายเพื่อน/คนรู้จักมากมาย เรามีฟังก์ชั่นการสร้างเวบส่วนตัวบริการคุณ คุณเพียงออกไอเดีย เขียนข้อความแนะนำกีฬาและประชาสัมพันธ์เราเท่านั้น แล้วส่งเวบลิ้งค์พันธมิตรนี้ไปให้เพื่อน/เครือข่ายของคุณ เมื่อเค้าเหล่านั้นสมัครผ่านลิ้งพันธมิตรในเวบส่วนตัวคุณและเดิมพันกับเรา คุณก้อจะได้รับค่าคอมงามๆจากเรา ! ติดต่อเราที่ {0} เพื่อรับข้อมูลเพิ่มเติมวันนี้สิคะ</value>
+  </data>
+  <data name="FAQ_YouCanRequestForAWithdrawal" xml:space="preserve">
+    <value>คุณสามารถแจ้งถอนโดย วิธี Moneybookers, Neteller, Wire Transfer หรือ ถอนเงินไปยังบัญชีเล่นของคุณในเวบ {0}</value>
+  </data>
+  <data name="FAQ_TheMinimumWithdrawal" xml:space="preserve">
+    <value>ขั้นต่ำในการแจ้งถอนเงิน คือ USD$100.</value>
+  </data>
+  <data name="FAQ_JoinOurAffProgram" xml:space="preserve">
+    <value>ร่วมเป็นส่วนหนึ่งในโปรแกรมพันธมิตร {0}</value>
+  </data>
+  <data name="PD_CompanyNegativeNetWin" xml:space="preserve">
+    <value>ถ้าชนะสุทธิของ บริษัท เป็นลบแล้วมี บริษัท ในเครือที่จะทน {0}% กับ บริษัท ในเดือนนั้น (ใช้สำหรับแต่ละผลิตภัณฑ์)</value>
+  </data>
+</root>

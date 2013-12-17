@@ -1,0 +1,14 @@
+﻿<div>
+  Kính gửi @Model.FirstName,<br /><br />
+
+  Chúng tôi đã nhận được đơn đăng ký tham gia chương trình hội viên @Model.AffiliateName của bạn.!<br /><br />
+
+  Xin lưu ý rằng trong vòng 3 ngày thì bộ phận phụ trách sẽ gửi thư thông báo đến cho bạn.<br /><br />
+
+  Mọi thắc mắc và ý kiến đóng góp xin vui lòng liên hệ ngay với chúng tôi ở <a href="mailto:@Model.MailContact">@Model.MailContact</a>.<br /><br />
+
+  Xin chân thành cám ơn.<br /><br />
+
+  Bộ phận liên kết @Model.AffiliateName<br />
+  <a href="mailto:@Model.MailContact">@Model.MailContact</a>
+</div>
