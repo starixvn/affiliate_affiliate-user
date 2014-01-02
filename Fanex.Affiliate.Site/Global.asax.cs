@@ -65,10 +65,10 @@ namespace Fanex.Affiliate.Site
                 ViewEngines.Engines.Add(new ProfilingViewEngine(item));
             }
 
-            log4net.Config.XmlConfigurator.Configure();
-            log4net.LogManager.GetLogger("GeneralLog").Info("Start");
+            // log4net.Config.XmlConfigurator.Configure();
+            // log4net.LogManager.GetLogger("GeneralLog").Info("Start");
 
-            SettingMgr.GetInstance().Initialize(SiteEnum.AgentSite);
+            // SettingMgr.GetInstance().Initialize(SiteEnum.AgentSite);
         }
 
         /// <summary>
