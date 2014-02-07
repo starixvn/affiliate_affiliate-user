@@ -333,6 +333,66 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
     <Content Include="App_Code\RazorHelper.cshtml" />
+    <Content Include="Content\themes\theme16\betlist.core.css" />
+    <Content Include="Content\themes\theme16\betList.css" />
+    <Content Include="Content\themes\theme16\fanex.result.css" />
+    <Content Include="Content\themes\theme16\global.content.css" />
+    <Content Include="Content\themes\theme16\images\banner.en-US.jpg" />
+    <Content Include="Content\themes\theme16\images\banner.id-ID.jpg" />
+    <Content Include="Content\themes\theme16\images\banner.th-TH.jpg" />
+    <Content Include="Content\themes\theme16\images\banner.vi-VN.jpg" />
+    <Content Include="Content\themes\theme16\images\banner.zh-CN.jpg" />
+    <Content Include="Content\themes\theme16\images\banner.zh-TW.jpg" />
+    <Content Include="Content\themes\theme16\images\bar-loader.gif" />
+    <Content Include="Content\themes\theme16\images\bg-bottomLanguage.png" />
+    <Content Include="Content\themes\theme16\images\bg-contentLanguage.png" />
+    <Content Include="Content\themes\theme16\images\bg-topLanguage.png" />
+    <Content Include="Content\themes\theme16\images\bgHeader.jpg" />
+    <Content Include="Content\themes\theme16\images\bgheader.png" />
+    <Content Include="Content\themes\theme16\images\bghotNewsContent.png" />
+    <Content Include="Content\themes\theme16\images\bgMainMenu_01.png" />
+    <Content Include="Content\themes\theme16\images\bgMainMenu_02.png" />
+    <Content Include="Content\themes\theme16\images\bgTableHeader.png" />
+    <Content Include="Content\themes\theme16\images\bg_buttonsite.png" />
+    <Content Include="Content\themes\theme16\images\bg_center.jpg" />
+    <Content Include="Content\themes\theme16\images\bg_center2.jpg" />
+    <Content Include="Content\themes\theme16\images\bg_footer.png" />
+    <Content Include="Content\themes\theme16\images\bg_header03.jpg" />
+    <Content Include="Content\themes\theme16\images\blank.gif" />
+    <Content Include="Content\themes\theme16\images\deco.png" />
+    <Content Include="Content\themes\theme16\images\emailBanner.jpg" />
+    <Content Include="Content\themes\theme16\images\emailBg.jpg" />
+    <Content Include="Content\themes\theme16\images\error_icons.png" />
+    <Content Include="Content\themes\theme16\images\favicon.jpg" />
+    <Content Include="Content\themes\theme16\images\favicon.png" />
+    <Content Include="Content\themes\theme16\images\first-goal.gif" />
+    <Content Include="Content\themes\theme16\images\firstGoal.gif" />
+    <Content Include="Content\themes\theme16\images\glyphicons-halflings-gray-lighter.png" />
+    <Content Include="Content\themes\theme16\images\glyphicons-halflings-gray.png" />
+    <Content Include="Content\themes\theme16\images\glyphicons-halflings.png" />
+    <Content Include="Content\themes\theme16\images\header_gradient.png" />
+    <Content Include="Content\themes\theme16\images\help.txt" />
+    <Content Include="Content\themes\theme16\images\in_top.png" />
+    <Content Include="Content\themes\theme16\images\last-goal.gif" />
+    <Content Include="Content\themes\theme16\images\lastGoal.gif" />
+    <Content Include="Content\themes\theme16\images\link_14x14.png" />
+    <Content Include="Content\themes\theme16\images\link_16x16.png" />
+    <Content Include="Content\themes\theme16\images\loader.gif" />
+    <Content Include="Content\themes\theme16\images\logo-afterlogin.png" />
+    <Content Include="Content\themes\theme16\images\logout.png" />
+    <Content Include="Content\themes\theme16\images\note.png" />
+    <Content Include="Content\themes\theme16\images\plus.png" />
+    <Content Include="Content\themes\theme16\images\signup-btn.png" />
+    <Content Include="Content\themes\theme16\images\spliter.png" />
+    <Content Include="Content\themes\theme16\images\sprite.png" />
+    <Content Include="Content\themes\theme16\images\tab_topbg.gif" />
+    <Content Include="Content\themes\theme16\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\theme16\images\undo.png" />
+    <Content Include="Content\themes\theme16\images\up.png" />
+    <Content Include="Content\themes\theme16\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\theme16\jquery.ui.tooltip.css" />
+    <Content Include="Content\themes\theme16\rng-casino-hand-history.css" />
+    <Content Include="Content\themes\theme16\systemparlaydetail.css" />
     <Content Include="Content\themes\theme13\betlist.core.css" />
     <Content Include="Content\themes\theme13\betList.css" />
     <Content Include="Content\themes\theme13\fanex.result.css" />
@@ -1128,6 +1188,10 @@
     <Content Include="Content\themes\theme5\index.less" />
     <Content Include="Content\themes\theme13\calendar.less" />
     <Content Include="Content\themes\theme13\index.less" />
+    <None Include="Content\themes\theme16\calendar.less" />
+    <None Include="Content\themes\theme16\index.less" />
+    <None Include="Content\themes\theme16\mixins.less" />
+    <None Include="Content\themes\theme16\variables.less" />
     <None Include="Content\themes\theme13\mixins.less" />
     <None Include="Content\themes\theme13\variables.less" />
     <None Include="Content\themes\theme12\calendar.less" />
@@ -1364,7 +1428,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>False</AutoAssignPort>
-          <DevelopmentServerPort>61135</DevelopmentServerPort>
+          <DevelopmentServerPort>7980</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
@@ -1375,7 +1439,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2013/9/16" />
+      <UserProperties BuildVersion_StartDate="2013/9/16" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

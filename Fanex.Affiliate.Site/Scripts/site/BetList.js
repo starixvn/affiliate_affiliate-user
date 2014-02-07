@@ -172,7 +172,7 @@ var BetList = (function ($) {
                     : BetList.getSportBookResultUrl(matchid, bettype, raceNo, sporttype, league, isOutright);
 
             var title = "Results";
-            AFFILIATE.openDialogFrame(url, title, { width: 950, height: 500 });
+            AFFILIATE.openDialogFrame(url, title, { width: 720, height: 500 });
         },
 
         showMixParlayDetail: function (transId, divEvent) {

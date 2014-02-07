@@ -15,6 +15,7 @@ namespace Fanex.Affiliate.Configurations
     using System.Collections.Generic;
     using System.Configuration;
     using System.Data;
+    using System.Globalization;
     using System.Linq;
     using Caching;
     using Criterias;
@@ -194,14 +195,6 @@ namespace Fanex.Affiliate.Configurations
             get
             {
                 return GetValue("DefaultCurrency");
-            }
-        }
-
-        public static string DefaultCurrencySymbol
-        {
-            get
-            {
-                return GetValue("DefaultCurrencySymbol");
             }
         }
 
@@ -446,6 +439,29 @@ namespace Fanex.Affiliate.Configurations
             get
             {
                 return (int)(float.Parse(AffiliateSettings.CompanyNegativeNetWin) * (float)100);
+            }
+        }
+
+        public static string DefaultCurrencySymbol
+        {
+            get
+            {
+                return CultureInfo.GetCultures(CultureTypes.AllCultures)
+                    .Where(c => !c.IsNeutralCulture)
+                    .Select(culture =>
+                    {
+                        try
+                        {
+                            return new RegionInfo(culture.LCID);
+                        }
+                        catch
+                        {
+                            return null;
+                        }
+                    })
+                    .Where(ri => ri != null && ri.ISOCurrencySymbol == AppSettings.DefaultCurrency)
+                    .Select(ri => ri.CurrencySymbol)
+                    .FirstOrDefault();
             }
         }
 

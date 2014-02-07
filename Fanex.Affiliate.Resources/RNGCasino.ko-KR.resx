@@ -177,6 +177,9 @@
   <data name="Name" xml:space="preserve">
     <value>Name</value>
   </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
   <data name="Number" xml:space="preserve">
     <value>Number</value>
   </data>

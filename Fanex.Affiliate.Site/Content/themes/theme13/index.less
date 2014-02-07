@@ -1240,6 +1240,12 @@ select {
 					color: @footerLinkColor;
 					padding-left: 5px;
 					text-decoration: none;
+
+					&:hover 
+					{
+						color: @footerLinkHoverColor;
+						text-decoration: none;
+					}
 				}
 			}
 			
@@ -1247,6 +1253,17 @@ select {
 				float: right;
 				text-align: right;
 				width: 245px;
+			}
+
+			.copyright a
+			{
+				color: @footerLinkColor;
+				
+				&:hover 
+				{
+					color: @footerLinkHoverColor;
+					text-decoration: none;
+				}
 			}
 		}
 	}

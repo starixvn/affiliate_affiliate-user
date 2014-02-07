@@ -179,7 +179,7 @@ namespace Fanex.Affiliate.Controllers
             var data = criteria.Isvalid()
                 ? BetListService.GetRNGCasinoResult(criteria)
                 : new List<RNGCasinoResult>();
-
+            
             ExchangeRNGCasinoValues(data);
             var total = new List<RNGCasinoResult>();
 
@@ -383,13 +383,16 @@ namespace Fanex.Affiliate.Controllers
             criteria.CurrencyName = criteria.CurrencyName.ToUpper();
             const string ViewPathTemplate = "~/Views/Shared/Account/RNGCasinoDetail/Group{0}.cshtml";
             var group = this.GetGroupByGameTypeId(criteria.GameTypeId);
+            LogService.Error("TEST RNG CASINO DATA - Before get data");
             var model = criteria.IsValid()
                 ? BetListService.GetRNGCasinoResultDetail(criteria)
                 : new BetListResultsRNGCasinoDetailViewModel();
+            LogService.Error("TEST RNG CASINO DATA - After get data");
 
             model.Param = criteria;
             ExchangeRNGCasinoDetailValues(model);
-            
+
+            LogService.Error("TEST RNG CASINO DATA - After exchange data");
             if (string.IsNullOrEmpty(group))
             {
                 return this.View("~/Views/Shared/Account/RNGCasinoDetail/NoGameErr.cshtml");
@@ -397,6 +400,7 @@ namespace Fanex.Affiliate.Controllers
 
             if (model.CasinoDetailHeaderList != null && model.CasinoDetailHeaderList.Count > 0)
             {
+                LogService.Error("TEST RNG CASINO DATA - Before return view");
                 return this.View(string.Format(ViewPathTemplate, group), model);
             }
 
@@ -409,12 +413,36 @@ namespace Fanex.Affiliate.Controllers
         /// <param name="originalData">Original data.</param>
         public void ExchangeRNGCasinoDetailValues(BetListResultsRNGCasinoDetailViewModel originalData)
         {
+            var logString = "TEST AFF - RNG CASINO DATA - Exchange rate: " + CurrentSession.ExchangeRate;
             foreach (var detailItem in originalData.CasinoDetailList)
             {
+                logString += Environment.NewLine + "BET o: " + detailItem.Bet + "#ex: " + detailItem.Bet*CurrentSession.ExchangeRate;
+                logString += Environment.NewLine + "WIN o: " + detailItem.Win + "#ex: " + detailItem.Win * CurrentSession.ExchangeRate;
+                logString += Environment.NewLine + "WINLOSS o: " + detailItem.WinLoss + "#ex: " + detailItem.WinLoss * CurrentSession.ExchangeRate;
                 detailItem.Bet *= CurrentSession.ExchangeRate;
                 detailItem.Win *= CurrentSession.ExchangeRate;
                 detailItem.WinLoss *= CurrentSession.ExchangeRate;
             }
+
+            foreach (var detailHeaderItem in originalData.CasinoDetailHeaderList)
+            {
+                logString += Environment.NewLine + "BetValue o: " + detailHeaderItem.BetValue + "#ex: " + detailHeaderItem.BetValue * CurrentSession.ExchangeRate;
+                logString += Environment.NewLine + "BetBaseCurrencyValue o: " + detailHeaderItem.BetBaseCurrencyValue + "#ex: " + detailHeaderItem.BetBaseCurrencyValue * CurrentSession.ExchangeRate;
+                logString += Environment.NewLine + "CoinSizeBaseCurrencyValue o: " + detailHeaderItem.CoinSizeBaseCurrencyValue + "#ex: " + detailHeaderItem.CoinSizeBaseCurrencyValue * CurrentSession.ExchangeRate;
+                logString += Environment.NewLine + "CoinSizeValue o: " + detailHeaderItem.CoinSizeValue + "#ex: " + detailHeaderItem.CoinSizeValue * CurrentSession.ExchangeRate;
+                logString += Environment.NewLine + "WinBaseCurrencyValue o: " + detailHeaderItem.WinBaseCurrencyValue + "#ex: " + detailHeaderItem.WinBaseCurrencyValue * CurrentSession.ExchangeRate;
+                logString += Environment.NewLine + "WinLossResultBaseCurrecyValue o: " + detailHeaderItem.WinLossResultBaseCurrecyValue + "#ex: " + detailHeaderItem.WinLossResultBaseCurrecyValue * CurrentSession.ExchangeRate;
+                logString += Environment.NewLine + "WinResultBaseCurrencyValue o: " + detailHeaderItem.WinResultBaseCurrencyValue + "#ex: " + detailHeaderItem.WinResultBaseCurrencyValue * CurrentSession.ExchangeRate;
+                detailHeaderItem.BetValue *= CurrentSession.ExchangeRate;
+                detailHeaderItem.BetBaseCurrencyValue *= CurrentSession.ExchangeRate;
+                detailHeaderItem.CoinSizeBaseCurrencyValue *= CurrentSession.ExchangeRate;
+                detailHeaderItem.CoinSizeValue *= CurrentSession.ExchangeRate;
+                detailHeaderItem.WinBaseCurrencyValue *= CurrentSession.ExchangeRate;
+                detailHeaderItem.WinLossResultBaseCurrecyValue *= CurrentSession.ExchangeRate;
+                detailHeaderItem.WinResultBaseCurrencyValue *= CurrentSession.ExchangeRate;
+            }
+
+            LogService.Error(logString);
         }
 
         /// <summary>
