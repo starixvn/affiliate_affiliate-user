@@ -140,23 +140,25 @@ var BetList = (function ($) {
             }
         },
 
-        getMixParlayResultUrl: function (refno, winlostdate, bettype) {
+        getMixParlayResultUrl: function (refno, winlostdate, bettype, username) {
             var url = AFFILIATE.getAbsoluteUrl('Account/BetListResults');
             url = QueryString.setParam(url, "refno", refno);
             url = QueryString.setParam(url, "winlossdate", winlostdate);
             url = QueryString.setParam(url, "bettype", bettype);
             url = QueryString.setParam(url, "matchid", 1);
+            url = QueryString.setParam(url, "username", username);
 
             return url;
         },
 
-        getSportBookResultUrl: function (matchid, bettype, raceNo, sporttype, league, isOutright) {
+        getSportBookResultUrl: function (matchid, bettype, raceNo, sporttype, league, isOutright, username) {
             var url = AFFILIATE.getAbsoluteUrl('Account/BetListResults');
             url = QueryString.setParam(url, "matchid", matchid);
             url = QueryString.setParam(url, "bettype", bettype);
             url = QueryString.setParam(url, "raceno", raceNo);
             url = QueryString.setParam(url, "sporttype", sporttype);
             url = QueryString.setParam(url, "isoutright", isOutright);
+            url = QueryString.setParam(url, "username", username);
 
             return url;
         },
@@ -168,8 +170,8 @@ var BetList = (function ($) {
 
         showResult: function (matchid, raceNo, bettype, sporttype, refno, username, winlostdate, refnoMixParlay, league, isOutright) {
             var url = bettype == 9 || bettype == 29
-                    ? BetList.getMixParlayResultUrl(refnoMixParlay, winlostdate, bettype)
-                    : BetList.getSportBookResultUrl(matchid, bettype, raceNo, sporttype, league, isOutright);
+                    ? BetList.getMixParlayResultUrl(refnoMixParlay, winlostdate, bettype, username)
+                    : BetList.getSportBookResultUrl(matchid, bettype, raceNo, sporttype, league, isOutright, username);
 
             var title = "Results";
             AFFILIATE.openDialogFrame(url, title, { width: 720, height: 500 });

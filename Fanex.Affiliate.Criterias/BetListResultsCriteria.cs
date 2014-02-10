@@ -36,6 +36,8 @@ namespace Fanex.Affiliate.Criterias
 
         public DateTime? WinLossDate { get; set; }
 
+        public string UserName { get; set; }
+
         /// <summary>
         /// Get SP name.
         /// </summary>

@@ -67,6 +67,7 @@ namespace Fanex.Affiliate.Controllers
         {
             var sportType = (SportType)criteria.SportType;
             var licenseeId = AppSettings.LicenseeID;
+            customerInfoBetList = BetListService.GetPlayerIbcInfo(AppSettings.AffiliateName + "$" + criteria.UserName);
             var userId = customerInfoBetList.CustId;
             var setting = new ResultSetting
             {
@@ -170,6 +171,7 @@ namespace Fanex.Affiliate.Controllers
         [HttpGet]
         public ActionResult RNGCasinoData(BetListResultsRNGCasinoCriteria criteria)
         {
+            customerInfoBetList = BetListService.GetPlayerIbcInfo(AppSettings.AffiliateName + "$" + criteria.UserName);
             criteria.BaseCurrency = criteria.BaseCurrency ?? string.Empty;
             criteria.ExternalId = customerInfoBetList.Username;
             criteria.SystemId = customerInfoBetList.IBCUsername;
@@ -227,6 +229,7 @@ namespace Fanex.Affiliate.Controllers
         /// <returns>Html string.</returns>
         public string GenerateRNGCasinoHtmlHeader(BetListResultsRNGCasinoCriteria criteria)
         {
+            customerInfoBetList = BetListService.GetPlayerIbcInfo(AppSettings.AffiliateName + "$" + criteria.UserName);
             var resultsLabel = "Username: " + customerInfoBetList.Username + " - Ref No: ";
             resultsLabel += criteria.RefNo + "- View in " + CurrentSession.Currency + " - ";
             var checkboxStatusString = criteria.IsShowPic ? "checked='checked'" : string.Empty;
