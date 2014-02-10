@@ -50,7 +50,7 @@ namespace Fanex.Affiliate.Controllers
             DateTime.TryParse(winlostdate, out winlostDate);
             var balanceUpMoveBetCriteria = new BalanceUpMoveBetCriteria();
             BetListService.GetBalanceUpMoveBetDate(balanceUpMoveBetCriteria);
-            customerInfoBetList = BetListService.GetPlayerIbcInfo(AppSettings.AffiliateName + "$" + username);
+            var customerInfoBetList = BetListService.GetPlayerIbcInfo(AppSettings.AffiliateName + "$" + username);
             var criteria = new BetListCriteria
             {
                 LicenseeId = AppSettings.LicenseeID,
@@ -62,8 +62,6 @@ namespace Fanex.Affiliate.Controllers
                 BaseCurrency = CurrentSession.Currency,
                 CustId = customerInfoBetList.CustId
             };
-
-            customerInfoBetList.Username = username;
 
             ViewBetListByProduct(criteria, product);
 
@@ -80,7 +78,7 @@ namespace Fanex.Affiliate.Controllers
 
             var model = new BetListViewModel()
             {
-                TicketTextList = Ticket(ticketResults, criteria, exchangeRate),
+                TicketTextList = Ticket(ticketResults, criteria, username, exchangeRate),
                 IsShowSystemIdAndExternalId = false,
                 IsShowWinLoss = true,
                 TicketResult = ticketResults,
@@ -101,7 +99,7 @@ namespace Fanex.Affiliate.Controllers
             var ticketResult = BetListService.GetBetListParlay(transId);
 
             var exchangeRate = CurrentSession.ExchangeRate == -1 ? 1 : CurrentSession.ExchangeRate;
-            var ticket = Ticket(ticketResult, new BetListCriteria(), exchangeRate, 1, true);
+            var ticket = Ticket(ticketResult, new BetListCriteria(), string.Empty, exchangeRate, 1, true);
 
             var jsonSerialiser = new JavaScriptSerializer();
             return jsonSerialiser.Serialize(ticket);
@@ -168,6 +166,7 @@ namespace Fanex.Affiliate.Controllers
         public List<TicketText> Ticket(
             TicketResult ticketResult,
             BetListCriteria criteria,
+            string username,
             decimal exchangeRate = 1,
             int startIndex = 1,
             bool showOdds = false)
@@ -205,7 +204,7 @@ namespace Fanex.Affiliate.Controllers
                     SystemId = ticket.UserName,
                     TransTime = builder.BuildTrans(ticket),
                     Status = builder.BuildAffBetListResultStatus(
-                        ticket, ticketHelper, ticketResult.TicketDataList, criteria, CurrentSession.CurrencyID, CurrentSession.Currency),
+                        ticket, ticketHelper, ticketResult.TicketDataList, criteria, CurrentSession.CurrencyID, CurrentSession.Currency, username),
                     Choice = builder.BuildChoice(ticket, ticketHelper, ticketResult.TicketDataList, false),
                     Odds = builder.BuildOdds(ticket, ticketResult.TicketDataList, CacheRef.GetOddsTypeName),
                     Stake = builder.BuildStake(ticket),

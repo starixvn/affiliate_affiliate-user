@@ -88,8 +88,6 @@ namespace Fanex.Affiliate.Controllers
 
         #region Const
 
-        private CustomerInfoBetList customerInfoBetList;
-
         #endregion Const
 
         #region Constructor

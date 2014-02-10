@@ -264,9 +264,7 @@ namespace Fanex.Affiliate.Services.Impl
         {
             List<RNGCasinoResult> casinoList;
             DataTable dataTable;
-            LogService.Error("TEST RNG CASINO DATA - Before getResultFromAPI: " + criteria == null ? "null" : "not null");
             GetResultFromAPI(criteria, out casinoList, out dataTable);
-            LogService.Error("TEST RNG CASINO DATA - After getResultFromAPI: casinoList#" + casinoList == null ? "null" : "not null" + "--- Data table#" + dataTable == null ? "null" : "not null");
             if (dataTable != null && dataTable.Rows.Count > 0)
             {
                 var currency = GetDataRowExtension(dataTable.Rows[0], "Currency");
@@ -508,9 +506,7 @@ namespace Fanex.Affiliate.Services.Impl
         {
             casinoList = new List<RNGCasinoResult>();
             var casinoLib = new CasinoLibrary.SBAgent.Report();
-            LogService.Error("TEST RNG CASINO DATA - CasinoLib: " + casinoLib == null ? "null" : "not null");
             dataTable = casinoLib.WinLossHandHistory(criteria.RefNo, criteria.BetType, RNGCasinoResult._CASINO_GROUP1, criteria.IsShowPic);
-            LogService.Error("TEST RNG CASINO DATA - Records from API WinLossHandHistory: " + dataTable.Rows.Count);
             if (dataTable == null)
             {
                 dataTable = casinoLib.RealTimeWinLossHandHistory(
