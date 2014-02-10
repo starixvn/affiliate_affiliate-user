@@ -50,7 +50,7 @@ namespace Fanex.Affiliate.Controllers
             DateTime.TryParse(winlostdate, out winlostDate);
             var balanceUpMoveBetCriteria = new BalanceUpMoveBetCriteria();
             BetListService.GetBalanceUpMoveBetDate(balanceUpMoveBetCriteria);
-            var customerInfoBetlist = BetListService.GetPlayerIbcInfo(AppSettings.AffiliateName + "$" + username);
+            customerInfoBetList = BetListService.GetPlayerIbcInfo(AppSettings.AffiliateName + "$" + username);
             var criteria = new BetListCriteria
             {
                 LicenseeId = AppSettings.LicenseeID,
@@ -60,11 +60,10 @@ namespace Fanex.Affiliate.Controllers
                 MoveBetsDay = balanceUpMoveBetCriteria.MoveBetsDay,
                 BalanceUpDay = balanceUpMoveBetCriteria.BalanceUpDay,
                 BaseCurrency = CurrentSession.Currency,
-                CustId = customerInfoBetlist.CustId
+                CustId = customerInfoBetList.CustId
             };
 
-            customerInfoBetlist.Username = username;
-            _cacheInstance.Set(CustomerInfoBetList, customerInfoBetlist, CacheDuration);
+            customerInfoBetList.Username = username;
 
             ViewBetListByProduct(criteria, product);
 

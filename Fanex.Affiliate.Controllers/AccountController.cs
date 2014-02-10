@@ -88,11 +88,7 @@ namespace Fanex.Affiliate.Controllers
 
         #region Const
 
-        private const string CustomerInfoBetList = "CustomerInfoBetList";
-
-        private const int CacheDuration = 43200;
-
-        private ICache _cacheInstance;
+        private CustomerInfoBetList customerInfoBetList;
 
         #endregion Const
 
@@ -124,8 +120,6 @@ namespace Fanex.Affiliate.Controllers
             ProductService = productService;
             MarketingService = marketingService;
             BetListService = betlistService;
-
-            _cacheInstance = CacheService.CreateInstance(CacheType.MemoryCache);
         }
 
         #endregion Constructor

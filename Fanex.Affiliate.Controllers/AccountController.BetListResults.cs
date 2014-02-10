@@ -67,8 +67,7 @@ namespace Fanex.Affiliate.Controllers
         {
             var sportType = (SportType)criteria.SportType;
             var licenseeId = AppSettings.LicenseeID;
-            var customerInfoBetlist = _cacheInstance.Get<CustomerInfoBetList>(CustomerInfoBetList);
-            var userId = customerInfoBetlist.CustId;
+            var userId = customerInfoBetList.CustId;
             var setting = new ResultSetting
             {
                 SportType = sportType,
@@ -171,11 +170,10 @@ namespace Fanex.Affiliate.Controllers
         [HttpGet]
         public ActionResult RNGCasinoData(BetListResultsRNGCasinoCriteria criteria)
         {
-            var customerInfoBetlist = _cacheInstance.Get<CustomerInfoBetList>(CustomerInfoBetList);
             criteria.BaseCurrency = criteria.BaseCurrency ?? string.Empty;
-            criteria.ExternalId = customerInfoBetlist.Username;
-            criteria.SystemId = customerInfoBetlist.IBCUsername;
-            criteria.CurrencyId = customerInfoBetlist.CurrencyId;
+            criteria.ExternalId = customerInfoBetList.Username;
+            criteria.SystemId = customerInfoBetList.IBCUsername;
+            criteria.CurrencyId = customerInfoBetList.CurrencyId;
             var data = criteria.Isvalid()
                 ? BetListService.GetRNGCasinoResult(criteria)
                 : new List<RNGCasinoResult>();
@@ -229,8 +227,7 @@ namespace Fanex.Affiliate.Controllers
         /// <returns>Html string.</returns>
         public string GenerateRNGCasinoHtmlHeader(BetListResultsRNGCasinoCriteria criteria)
         {
-            var customerInfoBetlist = _cacheInstance.Get<CustomerInfoBetList>(CustomerInfoBetList);
-            var resultsLabel = "Username: " + customerInfoBetlist.Username + " - Ref No: ";
+            var resultsLabel = "Username: " + customerInfoBetList.Username + " - Ref No: ";
             resultsLabel += criteria.RefNo + "- View in " + CurrentSession.Currency + " - ";
             var checkboxStatusString = criteria.IsShowPic ? "checked='checked'" : string.Empty;
             var casinoHtmlHeader = "<div class=\"rngcasino_headerlabel\">" + resultsLabel;
