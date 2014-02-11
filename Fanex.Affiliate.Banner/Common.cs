@@ -19,7 +19,7 @@ namespace Fanex.Affiliate.Banner
     /// <summary>
     /// Common class for affiliate banner.
     /// </summary>
-    public class Common
+    public static class Common
     {
         public static string FullDomainName
         {

@@ -27,6 +27,9 @@ namespace Fanex.Affiliate.ViewModels
             Data = data;
             SubTotal = subTotal;
             Param = criteria;
+            RefNo = criteria.RefNo.ToString();
+            IsShowPic = criteria.IsShowPic;
+            Username = criteria.ExternalId;
         }
 
         public IList<RNGCasinoResult> Data { get; set; }
@@ -35,6 +38,12 @@ namespace Fanex.Affiliate.ViewModels
 
         public BetListResultsRNGCasinoCriteria Param { get; set; }
 
-        public string ResultsHeaderString { get; set; }
+        public string Username { get; set; }
+
+        public string RefNo { get; set; }
+
+        public string Currency { get; set; }
+
+        public bool IsShowPic { get; set; }
     }
 }

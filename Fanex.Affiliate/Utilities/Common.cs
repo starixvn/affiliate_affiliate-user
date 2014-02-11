@@ -25,7 +25,7 @@ namespace Fanex.Affiliate.Utilities
     /// <summary>
     /// Common class.
     /// </summary>
-    public class Common
+    public static class Common
     {
         /// <summary>
         /// The lang resource manager.

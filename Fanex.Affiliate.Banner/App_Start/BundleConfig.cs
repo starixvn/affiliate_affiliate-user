@@ -16,7 +16,7 @@ namespace Fanex.Affiliate.Banner
     /// <summary>
     /// Bundle config class.
     /// </summary>
-    public class BundleConfig
+    public static class BundleConfig
     {
         /// <summary>
         /// Register bundles.

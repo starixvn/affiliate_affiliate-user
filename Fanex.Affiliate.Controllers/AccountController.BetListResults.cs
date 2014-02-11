@@ -161,30 +161,10 @@ namespace Fanex.Affiliate.Controllers
             }
 
             var model = new BetListResultsRNGCasinoViewModel(data, total, criteria);
-            model.ResultsHeaderString = GenerateRNGCasinoHtmlHeader(criteria);
+            model.Currency = CurrentSession.Currency;
 
             return View("~/Views/Shared/Account/BetListResults_RNGCasino.cshtml", model);
         }
-
-        #region BetList.Results.RNGCasino.GenerateHtmlString
-        
-        /// <summary>
-        /// Generate RNG Casino Html Header.
-        /// </summary>
-        /// <param name="criteria">BetList Results RNG Casino Criteria.</param>
-        /// <returns>Html string.</returns>
-        public string GenerateRNGCasinoHtmlHeader(BetListResultsRNGCasinoCriteria criteria)
-        {
-            var customerInfoBetList = BetListService.GetPlayerIbcInfo(AppSettings.AffiliateName + "$" + criteria.UserName);
-            var casinoHtmlHeader = "Username: " + customerInfoBetList.Username + " - Ref No: ";
-            casinoHtmlHeader += criteria.RefNo + "- View in " + CurrentSession.Currency + " - ";
-            var checkboxStatusString = criteria.IsShowPic ? "checked='checked'" : string.Empty;
-            casinoHtmlHeader += "<input type='checkbox' id='chkIsShowPic' name='chkIsShowPic'" + checkboxStatusString + "> ";
-
-            return casinoHtmlHeader + RNGCasino.ResultsWithPictures;
-        }
-
-        #endregion
 
         /// <summary>
         /// Exchange RNG Casino Values.

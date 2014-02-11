@@ -216,6 +216,9 @@
   <data name="PlayerHistoryNo" xml:space="preserve">
     <value>Player History No</value>
   </data>
+  <data name="RefNo" xml:space="preserve">
+    <value>Ref No</value>
+  </data>
   <data name="Result" xml:space="preserve">
     <value>Results</value>
   </data>

@@ -16,7 +16,7 @@ namespace Fanex.Affiliate.Utilities
     /// <summary>
     /// Format products.
     /// </summary>
-    public class ProductsFormatter
+    public static class ProductsFormatter
     {
         /// <summary>
         /// Globalization for Product's Names.

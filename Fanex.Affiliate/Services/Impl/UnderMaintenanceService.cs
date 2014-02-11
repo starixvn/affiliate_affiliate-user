@@ -18,7 +18,7 @@ namespace Fanex.Affiliate.Services.Impl
     /// <summary>
     /// Under Maintenance Service.
     /// </summary>
-    public class UnderMaintenanceService
+    public static class UnderMaintenanceService
     {
         private const int TimeCacheUm = 30;
 

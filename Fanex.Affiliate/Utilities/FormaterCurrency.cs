@@ -15,7 +15,7 @@ namespace Fanex.Affiliate.Utilities
     /// <summary>
     /// Format currency.
     /// </summary>
-    public class FormaterCurrency
+    public static class FormaterCurrency
     {
         public const string Decimalformat20 = "{0:#,##0.00}";
 

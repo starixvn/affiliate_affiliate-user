@@ -358,6 +358,15 @@ namespace Fanex.Affiliate.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ref No.
+        /// </summary>
+        public static string RefNo {
+            get {
+                return ResourceManager.GetString("RefNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Results.
         /// </summary>
         public static string Result {

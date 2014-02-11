@@ -53,7 +53,10 @@ namespace Fanex.Affiliate.Controllers
         public PartialViewResult Language()
         {
             var languageList = AppSettings.BaseLanguages;
-            var selectedLang = languageList.FirstOrDefault(lang => lang.LanguageId.Contains(AppSession.Language)).LanguageName;
+            var queryLang = languageList.FirstOrDefault(lang => lang.LanguageId.Contains(AppSession.Language));
+            var defaultLang = languageList.FirstOrDefault(lang => lang.LanguageId.Contains(AppSettings.DefaultLanguage));
+
+            var selectedLang = queryLang != null ? queryLang.LanguageName : defaultLang.LanguageName;
             return PartialView(Tuple.Create(languageList, selectedLang));
         }
 

@@ -16,7 +16,7 @@ namespace Fanex.Affiliate.Banner
     /// <summary>
     /// Route Config.
     /// </summary>
-    public class RouteConfig
+    public static class RouteConfig
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
