@@ -54,7 +54,7 @@ namespace Fanex.Affiliate.Criterias
 
         public string BaseCurrency { get; set; }
 
-        public bool IsValid()
+        public override bool IsValid()
         {
             return RefNo > 0
                 && FromDate <= ToDate && CustId > 0

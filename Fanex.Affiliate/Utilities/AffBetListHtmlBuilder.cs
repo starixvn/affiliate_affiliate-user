@@ -36,6 +36,7 @@ namespace Fanex.Affiliate.Utilities
         /// <param name="criteria">Meta model.</param>
         /// <param name="currencyID">Currency ID.</param>
         /// <param name="currencyName">Currency Name.</param>
+        /// <param name="username">User Name.</param>
         /// <returns>Ticket status text.</returns>
         public static string BuildAffBetListResultStatus(
             this BetListHTMLBuilder builder,
@@ -77,8 +78,14 @@ namespace Fanex.Affiliate.Utilities
         /// <param name="criteria">Meta model object.</param>
         /// <param name="currencyID">Currency ID.</param>
         /// <param name="currencyName">Currency Name.</param>
+        /// <param name="username">User's Name.</param>
         /// <returns>Parameter for Casino Hand History.</returns>
-        private static string GetCasinoHandHistoryParam(AffTicket ticket, BetListCriteria criteria, int currencyID, string currencyName, string username)
+        private static string GetCasinoHandHistoryParam(
+            AffTicket ticket,
+            BetListCriteria criteria,
+            int currencyID,
+            string currencyName,
+            string username)
         {
             var param = string.Empty;
             param += "?RefNo=" + ticket.RefNo;

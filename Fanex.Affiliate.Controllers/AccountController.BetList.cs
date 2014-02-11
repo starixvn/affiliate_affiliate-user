@@ -158,6 +158,7 @@ namespace Fanex.Affiliate.Controllers
         /// </summary>
         /// <param name="ticketResult">Ticket result Parameter value.</param>
         /// <param name="criteria"> Parameter value.</param>
+        /// <param name="username">User's Name.</param>
         /// <param name="exchangeRate">Exchange rate value.</param>
         /// <param name="startIndex">Start index Parameter value.</param>
         /// <param name="showOdds">Show Odds or not.</param>

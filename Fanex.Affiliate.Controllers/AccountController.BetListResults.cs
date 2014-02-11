@@ -179,9 +179,6 @@ namespace Fanex.Affiliate.Controllers
             var data = criteria.IsValid()
                 ? BetListService.GetRNGCasinoResult(criteria)
                 : new List<RNGCasinoResult>();
-
-            var json = new JavaScriptSerializer().Serialize(data);
-            Response.Write("RNG CASINO DATA:" + json + "<br/> Count:" + data.Count);
             
             ExchangeRNGCasinoValues(data);
             var total = new List<RNGCasinoResult>();
@@ -389,10 +386,6 @@ namespace Fanex.Affiliate.Controllers
             var model = criteria.IsValid()
                 ? BetListService.GetRNGCasinoResultDetail(criteria)
                 : new BetListResultsRNGCasinoDetailViewModel();
-            
-            Response.Write("Data is valid:" + criteria.IsValid() + "<br/>");
-            var json = new JavaScriptSerializer().Serialize(criteria);
-            Response.Write("Criteria:" + json + "<br/>");
 
             model.Param = criteria;
             ExchangeRNGCasinoDetailValues(model);

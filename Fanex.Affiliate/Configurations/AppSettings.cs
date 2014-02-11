@@ -33,9 +33,9 @@ namespace Fanex.Affiliate.Configurations
 
         private const int CacheDuration = 60;
 
-        private static readonly ISystemSettingService SystemSetting;
+        private static readonly ISystemSettingService SystemSetting = new SystemSettingService();
 
-        private static readonly ICache CacheInstance;
+        private static readonly ICache CacheInstance = CacheService.CreateInstance(CacheType.MemoryCache);
 
         private static AffiliateSettings _defaultAffSettings;
 
@@ -46,8 +46,6 @@ namespace Fanex.Affiliate.Configurations
         /// </summary>
         static AppSettings()
         {
-            SystemSetting = new SystemSettingService();
-            CacheInstance = CacheService.CreateInstance(CacheType.MemoryCache);
         }
 
         #endregion
