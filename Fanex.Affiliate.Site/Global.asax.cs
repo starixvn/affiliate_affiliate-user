@@ -68,7 +68,10 @@ namespace Fanex.Affiliate.Site
             log4net.Config.XmlConfigurator.Configure();
             log4net.LogManager.GetLogger("GeneralLog").Info("Start");
 
-            // SettingMgr.GetInstance().Initialize(SiteEnum.AgentSite);
+            if (AppSettings.Environment.IndexOf("Local", StringComparison.OrdinalIgnoreCase) < 0)
+            {
+                SettingMgr.GetInstance().Initialize(SiteEnum.AgentSite);
+            }
         }
 
         /// <summary>
