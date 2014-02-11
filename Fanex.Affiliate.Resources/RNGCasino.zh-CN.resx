@@ -138,6 +138,15 @@
   <data name="Combination" xml:space="preserve">
     <value>Combination</value>
   </data>
+  <data name="Detail" xml:space="preserve">
+    <value>Detail</value>
+  </data>
+  <data name="EndBalance" xml:space="preserve">
+    <value>End Balance</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>End Date</value>
+  </data>
   <data name="FinalHand" xml:space="preserve">
     <value>Final Hand</value>
   </data>
@@ -146,6 +155,15 @@
   </data>
   <data name="Game" xml:space="preserve">
     <value>Game</value>
+  </data>
+  <data name="GameGroup" xml:space="preserve">
+    <value>Game Group</value>
+  </data>
+  <data name="GameID" xml:space="preserve">
+    <value>Game ID</value>
+  </data>
+  <data name="GameType" xml:space="preserve">
+    <value>Game Type</value>
   </data>
   <data name="HandNo" xml:space="preserve">
     <value>Hand No</value>
@@ -201,8 +219,23 @@
   <data name="Result" xml:space="preserve">
     <value>Results</value>
   </data>
+  <data name="ResultsWithPictures" xml:space="preserve">
+    <value>Results with pictures</value>
+  </data>
   <data name="RoundType" xml:space="preserve">
     <value>Round Type</value>
+  </data>
+  <data name="SessionID" xml:space="preserve">
+    <value>Session ID</value>
+  </data>
+  <data name="Stake" xml:space="preserve">
+    <value>Stake</value>
+  </data>
+  <data name="StartBalance" xml:space="preserve">
+    <value>Start Balance</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Start Date</value>
   </data>
   <data name="Symbol" xml:space="preserve">
     <value>Symbol</value>
@@ -221,5 +254,8 @@
   </data>
   <data name="Win" xml:space="preserve">
     <value>Win</value>
+  </data>
+  <data name="WinLoss" xml:space="preserve">
+    <value>Win/Loss</value>
   </data>
 </root>

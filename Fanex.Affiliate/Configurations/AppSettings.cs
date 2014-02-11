@@ -41,13 +41,6 @@ namespace Fanex.Affiliate.Configurations
 
         #region Constructor
 
-        /// <summary>
-        /// Initializes static members of the <see cref="AppSettings" /> class.
-        /// </summary>
-        static AppSettings()
-        {
-        }
-
         #endregion
 
         #region AppSettings

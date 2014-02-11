@@ -64,9 +64,7 @@ namespace Fanex.Affiliate.Controllers
             };
 
             ViewBetListByProduct(criteria, product);
-
             var ticketResults = BetListService.GetBetList(criteria);
-
             var exchangeCriteria = new ExchangeRateCriteria
             {
                 FromCurrency = int.Parse(currency.Trim()),
@@ -97,11 +95,10 @@ namespace Fanex.Affiliate.Controllers
         public dynamic BetListParlay(long transId)
         {
             var ticketResult = BetListService.GetBetListParlay(transId);
-
             var exchangeRate = CurrentSession.ExchangeRate == -1 ? 1 : CurrentSession.ExchangeRate;
             var ticket = Ticket(ticketResult, new BetListCriteria(), string.Empty, exchangeRate, 1, true);
-
             var jsonSerialiser = new JavaScriptSerializer();
+
             return jsonSerialiser.Serialize(ticket);
         }
 
@@ -115,7 +112,6 @@ namespace Fanex.Affiliate.Controllers
         {
             var balanceUpMoveBetCriteria = new BalanceUpMoveBetCriteria();
             BetListService.GetBalanceUpMoveBetDate(balanceUpMoveBetCriteria);
-
             criteria.BalanceUpDay = balanceUpMoveBetCriteria.BalanceUpDay;
             criteria.MoveBetsDay = balanceUpMoveBetCriteria.MoveBetsDay;
             criteria.LicenseeId = AppSettings.LicenseeID;

@@ -1381,6 +1381,7 @@
     <Content Include="Views\Shared\Account\RNGCasinoDetail\Group9.cshtml" />
     <Content Include="Views\Shared\Account\RNGCasinoDetail\NoGameErr.cshtml" />
     <Content Include="Views\Shared\Account\RNGCasinoDetail\Noinfo.cshtml" />
+    <Content Include="Views\Shared\Account\BetListResults_RNGCasino.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Fanex.Affiliate.Controllers\Fanex.Affiliate.Controllers.csproj">
@@ -1439,7 +1440,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_StartDate="2013/9/16" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
+      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2013/9/16" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

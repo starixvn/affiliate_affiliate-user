@@ -19,15 +19,22 @@ namespace Fanex.Affiliate.ViewModels
     /// </summary>
     public class BetListResultsRNGCasinoViewModel
     {
-        public BetListResultsRNGCasinoViewModel()
+        public BetListResultsRNGCasinoViewModel(
+            IList<RNGCasinoResult> data,
+            IList<RNGCasinoResult> subTotal,
+            BetListResultsRNGCasinoCriteria criteria)
         {
-            Data = new List<RNGCasinoResult>();
+            Data = data;
+            SubTotal = subTotal;
+            Param = criteria;
         }
 
         public IList<RNGCasinoResult> Data { get; set; }
 
+        public IList<RNGCasinoResult> SubTotal { get; set; }
+
         public BetListResultsRNGCasinoCriteria Param { get; set; }
 
-        public string ColumnName { get; set; }
+        public string ResultsHeaderString { get; set; }
     }
 }

@@ -56,7 +56,7 @@ namespace Fanex.Affiliate.Utilities
             {
                 case 71:
                     string casinoHandTemplate = "<div id='casino-hand-history-{0}'";
-                    casinoHandTemplate += "'result casino-hand-history-link' url-param='{1}' onclick='BetList.ViewCasinoHandHistory({0});'>{2}</div>";
+                    casinoHandTemplate += "class='result casino-hand-history-link' url-param='{1}' onclick='BetList.ViewCasinoHandHistory({0});'>{2}</div>";
                     return statusNormalText + string.Format(
                         casinoHandTemplate,
                         ticket.RefNo,
