@@ -14,6 +14,7 @@ namespace Fanex.Affiliate.Controllers
     using System.Collections.Generic;
     using System.Diagnostics.CodeAnalysis;
     using System.Linq;
+    using System.Text.RegularExpressions;
     using System.Web.Mvc;
     using System.Web.Script.Serialization;
     using Configurations;
@@ -227,8 +228,12 @@ namespace Fanex.Affiliate.Controllers
                 detailItem.WinLoss *= CurrentSession.ExchangeRate;
             }
 
+            var regexRemoveLetters = new Regex(@"[a-zA-Z\s]");
             foreach (var detailHeaderItem in originalData.CasinoDetailHeaderList)
             {
+                detailHeaderItem.Win = string.IsNullOrEmpty(detailHeaderItem.Win.Trim())
+                    ? "0.00"
+                    : (decimal.Parse(regexRemoveLetters.Replace(detailHeaderItem.Win, string.Empty)) * CurrentSession.ExchangeRate).ToString();
                 detailHeaderItem.BetValue *= CurrentSession.ExchangeRate;
                 detailHeaderItem.BetBaseCurrencyValue *= CurrentSession.ExchangeRate;
                 detailHeaderItem.CoinSizeBaseCurrencyValue *= CurrentSession.ExchangeRate;

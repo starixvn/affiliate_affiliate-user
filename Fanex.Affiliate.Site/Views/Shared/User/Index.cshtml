@@ -59,8 +59,8 @@
                                 <span class="txtRequire">*</span>
                             </td>
                             <td class="middle">
-                                @Html.RadioButtonFor(model => model.Gender, "false") @Lang.Female
-                                @Html.RadioButtonFor(model => model.Gender, "true") @Lang.Male
+                                <label style="display:inline-block;">@Html.RadioButtonFor(model => model.Gender, "false") @Lang.Female</label>
+                                <label style="display:inline-block;">@Html.RadioButtonFor(model => model.Gender, "true") @Lang.Male</label>
                             </td>
                         </tr>
                         <tr>
@@ -240,8 +240,8 @@
                                 <span class="txtRequire">*</span>
                             </td>
                             <td class="middle">
-                                @Html.RadioButtonFor(model => model.EmailFormat, "true") @Lang.PlainText
-                                @Html.RadioButtonFor(model => model.EmailFormat, "false") @Lang.HtmlFormat
+                                <label style="display:inline-block;">@Html.RadioButtonFor(model => model.EmailFormat, "true") @Lang.PlainText </label>
+                                <label style="display:inline-block;">@Html.RadioButtonFor(model => model.EmailFormat, "false") @Lang.HtmlFormat </label>
                             </td>
                         </tr>
                         <tr>
@@ -297,7 +297,7 @@
                         <tr>
                             <td class="tdwidth middle">
                                 <label>
-                                    @Html.RadioButtonFor(m => m.PreferredPayment, "Player", new { @checked = "checked"})
+                                    @Html.RadioButtonFor(m => m.PreferredPayment, "Player", new { @checked = "checked" })
                                     @Lang.PlayerAcc
                                 </label>
                             </td>
@@ -309,7 +309,7 @@
                             <td width="50px">
                             </td>
                             <td width="16px">
-                                @if(!AppSettings.IsKiosk)
+                                @if (!AppSettings.IsKiosk)
                                 {
                                     <span class="txtRequire">*</span>
                                 }
