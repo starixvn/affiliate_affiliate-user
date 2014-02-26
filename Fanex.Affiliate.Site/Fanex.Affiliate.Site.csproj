@@ -203,18 +203,6 @@
     <Compile Include="ReloadAppSettings.aspx.designer.cs">
       <DependentUpon>ReloadAppSettings.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Service References\AffiliateServicesConsumer\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="TestAffServices.aspx.cs">
-      <DependentUpon>TestAffServices.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TestAffServices.aspx.designer.cs">
-      <DependentUpon>TestAffServices.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -684,6 +672,59 @@
     <Content Include="Content\themes\theme15\jquery.ui.tooltip.css" />
     <Content Include="Content\themes\theme15\rng-casino-hand-history.css" />
     <Content Include="Content\themes\theme15\systemparlaydetail.css" />
+    <Content Include="Content\themes\theme17\betlist.core.css" />
+    <Content Include="Content\themes\theme17\betList.css" />
+    <Content Include="Content\themes\theme17\fanex.result.css" />
+    <Content Include="Content\themes\theme17\global.content.css" />
+    <Content Include="Content\themes\theme17\images\banner.en-US.jpg" />
+    <Content Include="Content\themes\theme17\images\banner.id-ID.jpg" />
+    <Content Include="Content\themes\theme17\images\banner.ko-KR.jpg" />
+    <Content Include="Content\themes\theme17\images\banner.th-TH.jpg" />
+    <Content Include="Content\themes\theme17\images\banner.vi-VN.jpg" />
+    <Content Include="Content\themes\theme17\images\banner.zh-CN.jpg" />
+    <Content Include="Content\themes\theme17\images\banner.zh-TW.jpg" />
+    <Content Include="Content\themes\theme17\images\bar-loader.gif" />
+    <Content Include="Content\themes\theme17\images\bg-bottomLanguage.png" />
+    <Content Include="Content\themes\theme17\images\bg-contentLanguage.png" />
+    <Content Include="Content\themes\theme17\images\bg-topLanguage.png" />
+    <Content Include="Content\themes\theme17\images\bgheader.png" />
+    <Content Include="Content\themes\theme17\images\bghotNewsContent.png" />
+    <Content Include="Content\themes\theme17\images\bgMainMenu_01.png" />
+    <Content Include="Content\themes\theme17\images\bgMainMenu_02.png" />
+    <Content Include="Content\themes\theme17\images\bg_buttonsite.png" />
+    <Content Include="Content\themes\theme17\images\bg_center.jpg" />
+    <Content Include="Content\themes\theme17\images\bg_center2.jpg" />
+    <Content Include="Content\themes\theme17\images\bg_footer.jpg" />
+    <Content Include="Content\themes\theme17\images\bg_header03.jpg" />
+    <Content Include="Content\themes\theme17\images\deco.jpg" />
+    <Content Include="Content\themes\theme17\images\emailBanner.jpg" />
+    <Content Include="Content\themes\theme17\images\emailBg.jpg" />
+    <Content Include="Content\themes\theme17\images\error_icons.png" />
+    <Content Include="Content\themes\theme17\images\favicon.jpg" />
+    <Content Include="Content\themes\theme17\images\firstGoal.gif" />
+    <Content Include="Content\themes\theme17\images\glyphicons-halflings-gray-lighter.png" />
+    <Content Include="Content\themes\theme17\images\glyphicons-halflings-gray.png" />
+    <Content Include="Content\themes\theme17\images\glyphicons-halflings.png" />
+    <Content Include="Content\themes\theme17\images\header_gradient.png" />
+    <Content Include="Content\themes\theme17\images\help.txt" />
+    <Content Include="Content\themes\theme17\images\in_top.png" />
+    <Content Include="Content\themes\theme17\images\lastGoal.gif" />
+    <Content Include="Content\themes\theme17\images\link_14x14.png" />
+    <Content Include="Content\themes\theme17\images\loader.gif" />
+    <Content Include="Content\themes\theme17\images\logout.png" />
+    <Content Include="Content\themes\theme17\images\note.png" />
+    <Content Include="Content\themes\theme17\images\plus.png" />
+    <Content Include="Content\themes\theme17\images\signup.png" />
+    <Content Include="Content\themes\theme17\images\spliter.png" />
+    <Content Include="Content\themes\theme17\images\sprite.png" />
+    <Content Include="Content\themes\theme17\images\tab_topbg.gif" />
+    <Content Include="Content\themes\theme17\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\theme17\images\undo.png" />
+    <Content Include="Content\themes\theme17\images\up.png" />
+    <Content Include="Content\themes\theme17\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\theme17\jquery.ui.tooltip.css" />
+    <Content Include="Content\themes\theme17\rng-casino-hand-history.css" />
+    <Content Include="Content\themes\theme17\systemparlaydetail.css" />
     <Content Include="Content\themes\theme4\images\banner.ko-KR.jpg" />
     <Content Include="Content\themes\theme4\images\banner.vi-VN.jpg" />
     <Content Include="Content\themes\theme4\images\banner.zh-CN.jpg" />
@@ -1090,16 +1131,10 @@
     <Content Include="Scripts\site\Paging.js" />
     <Content Include="Scripts\site\Query.string.js" />
     <Content Include="Scripts\site\SignIn.js" />
-    <None Include="Service References\AffiliateServicesConsumer\configuration91.svcinfo" />
-    <None Include="Service References\AffiliateServicesConsumer\configuration.svcinfo" />
-    <None Include="Service References\AffiliateServicesConsumer\Fanex.Affiliate.Site.AffiliateServicesConsumer.AffiliateEmailInfo.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\AffiliateServicesConsumer\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <Content Include="TestAffServices.aspx" />
+    <None Include="Content\themes\theme17\calendar.less" />
+    <None Include="Content\themes\theme17\index.less" />
+    <None Include="Content\themes\theme17\mixins.less" />
+    <None Include="Content\themes\theme17\variables.less" />
     <Content Include="Views\Shared\Email\ContactUs\ContactUs.txt" />
     <Content Include="Views\Shared\Email\ForgetPassword\ForgetPassword.ko-KR.txt" />
     <Content Include="Views\Shared\Email\ForgetPassword\ForgetPassword.vi-VN.txt" />
@@ -1406,16 +1441,6 @@
     <Content Include="Views\Shared\Account\RNGCasinoDetail\NoGameErr.cshtml" />
     <Content Include="Views\Shared\Account\RNGCasinoDetail\Noinfo.cshtml" />
     <Content Include="Views\Shared\Account\BetListResults_RNGCasino.cshtml" />
-    <None Include="Service References\AffiliateServicesConsumer\AffiliateAPI.wsdl" />
-    <None Include="Service References\AffiliateServicesConsumer\AffiliateAPI.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\AffiliateServicesConsumer\AffiliateAPI1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\AffiliateServicesConsumer\AffiliateAPI2.xsd">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Fanex.Affiliate.Controllers\Fanex.Affiliate.Controllers.csproj">
@@ -1447,12 +1472,6 @@
       <Name>Fanex.Affiliate</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Service References\AffiliateServicesConsumer\" />
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -1480,7 +1499,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_StartDate="2013/9/16" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
+      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2013/9/16" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
