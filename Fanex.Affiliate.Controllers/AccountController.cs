@@ -454,11 +454,11 @@ namespace Fanex.Affiliate.Controllers
                 }
             }
 
-            // refresh view
             var freshPayment = PaymentService.GetPaymentRequest(new PaymentCriteria
             {
                 AffId = CurrentSession.AffId
             });
+
             ViewBag.Result = result;
 
             return View(freshPayment);
@@ -487,21 +487,16 @@ namespace Fanex.Affiliate.Controllers
                 Language = AppSession.Language
             };
 
-            // call insert payment request service
             var paymentRequest = PaymentService.InsertPaymentRequest(criteria);
 
-            // successfully insert a new payment request
             if (criteria.ErrCode == 0)
             {
-                // send email
                 if (string.IsNullOrEmpty(paymentRequest.PreferredLanguage))
                 {
                     paymentRequest.PreferredLanguage = AppSettings.DefaultLanguage;
                 }
 
                 SendPaymentRequestEmail(paymentRequest, amount);
-
-                // refresh payment page
                 result.Message = Lang.PaymentRequestSuccess;
             }
             else
@@ -526,7 +521,7 @@ namespace Fanex.Affiliate.Controllers
                 paymentRequest.MailOption ? ".txt" : ".cshtml");
             var templatePath = Server.MapPath(mapPath);
             var currentLanguage = AppSession.Language;
-            AppSession.Language = CurrentSession.PreferredLanguage;
+            AppSession.Language = paymentRequest.PreferredLanguage;
             ChangeSystemLanguage();
 
             var emailTitle = string.Format(
@@ -633,7 +628,7 @@ namespace Fanex.Affiliate.Controllers
                 paymentCancel.MailOption ? ".txt" : ".cshtml");
             var templatePath = Server.MapPath(mapPath);
             var currentLanguage = AppSession.Language;
-            AppSession.Language = CurrentSession.PreferredLanguage;
+            AppSession.Language = paymentCancel.PreferredLanguage;
             ChangeSystemLanguage();
 
             var emailTitle = string.Format("{0} Affiliates - {1} - {2}", AppSettings.AffiliateName, transId, Lang.RequestPaymentEmailTitle);

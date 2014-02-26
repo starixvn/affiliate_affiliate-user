@@ -105,6 +105,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -200,6 +202,18 @@
     </Compile>
     <Compile Include="ReloadAppSettings.aspx.designer.cs">
       <DependentUpon>ReloadAppSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AffiliateServicesConsumer\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="TestAffServices.aspx.cs">
+      <DependentUpon>TestAffServices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestAffServices.aspx.designer.cs">
+      <DependentUpon>TestAffServices.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -1076,6 +1090,16 @@
     <Content Include="Scripts\site\Paging.js" />
     <Content Include="Scripts\site\Query.string.js" />
     <Content Include="Scripts\site\SignIn.js" />
+    <None Include="Service References\AffiliateServicesConsumer\configuration91.svcinfo" />
+    <None Include="Service References\AffiliateServicesConsumer\configuration.svcinfo" />
+    <None Include="Service References\AffiliateServicesConsumer\Fanex.Affiliate.Site.AffiliateServicesConsumer.AffiliateEmailInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AffiliateServicesConsumer\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="TestAffServices.aspx" />
     <Content Include="Views\Shared\Email\ContactUs\ContactUs.txt" />
     <Content Include="Views\Shared\Email\ForgetPassword\ForgetPassword.ko-KR.txt" />
     <Content Include="Views\Shared\Email\ForgetPassword\ForgetPassword.vi-VN.txt" />
@@ -1382,6 +1406,16 @@
     <Content Include="Views\Shared\Account\RNGCasinoDetail\NoGameErr.cshtml" />
     <Content Include="Views\Shared\Account\RNGCasinoDetail\Noinfo.cshtml" />
     <Content Include="Views\Shared\Account\BetListResults_RNGCasino.cshtml" />
+    <None Include="Service References\AffiliateServicesConsumer\AffiliateAPI.wsdl" />
+    <None Include="Service References\AffiliateServicesConsumer\AffiliateAPI.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AffiliateServicesConsumer\AffiliateAPI1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AffiliateServicesConsumer\AffiliateAPI2.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Fanex.Affiliate.Controllers\Fanex.Affiliate.Controllers.csproj">
@@ -1413,6 +1447,12 @@
       <Name>Fanex.Affiliate</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AffiliateServicesConsumer\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -1440,7 +1480,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2013/9/16" />
+      <UserProperties BuildVersion_StartDate="2013/9/16" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
