@@ -1,4 +1,14 @@
-﻿using System.Reflection;
+﻿// ----------------------------------------------------------------------
+// <copyright file="AssemblyInfo.cs" company="Nexcel Solutions Vietnam">
+//     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
+// </copyright>
+// ------------------------------------------------------------------------
+// <history>
+//   <change who="Long.Luu" date="2014/03/03">Created</change>
+//   <change who="" date=""></change>
+// </history>
+
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 

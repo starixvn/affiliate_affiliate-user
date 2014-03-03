@@ -104,11 +104,11 @@
                     @Html.Raw(hitBetLineItem.Symbol.Replace("/img", Url.Content("~/") + "img"))
                 }
             </td>
-            <td>@FormaterCurrency(hitBetLineItem.CoinSizeBaseCurrencyValue)
+            <td>@hitBetLineItem.CoinSize
             </td>
             <td>@hitBetLineItem.Odds
             </td>
-            <td>@FormaterCurrency(hitBetLineItem.Win)
+            <td>@Html.Raw(FormaterCurrency.Format(decimal.Parse(hitBetLineItem.Win)))
             </td>
         </tr>         
     }
@@ -136,11 +136,11 @@
                     @Html.Raw(hitScatterItem.Symbol.Replace("/img", Url.Content("~/") + "img"))
                 }
             </td>
-            <td>@FormaterCurrency(hitScatterItem.CoinSizeBaseCurrencyValue)
+            <td>@FormaterCurrency.Format(hitScatterItem.CoinSize)
             </td>
             <td>@hitScatterItem.Odds
             </td>
-            <td>@FormaterCurrency(hitScatterItem.Win)
+            <td>@Html.Raw(FormaterCurrency.Format(decimal.Parse(hitScatterItem.Win)))
             </td>
         </tr>        
     }
@@ -149,14 +149,14 @@
         <tr>
             <td>@RNGCasino.Win/@RNGCasino.Loss
             </td>
-            <td colspan="4" class="align-right">@FormaterCurrency(totalItem.WinLossResultBaseCurrecyValue)
+            <td colspan="4" class="align-right">@Html.Raw(FormaterCurrency.Format(decimal.Parse(totalItem.WinLoss)))
             </td>
         </tr>
     }
     <tr class="player-total-row">
         <td class="align-left">@RNGCasino.Total @RNGCasino.Bet
         </td>
-        <td colspan="4" class="align-right">@FormaterCurrency(Model.CasinoDetailList.Sum(p => p.Bet))
+        <td colspan="4" class="align-right">@FormaterCurrency.Format(Model.CasinoDetailList.Sum(p => p.Bet))
         </td>
     </tr>
     <tr class="player-total-row">

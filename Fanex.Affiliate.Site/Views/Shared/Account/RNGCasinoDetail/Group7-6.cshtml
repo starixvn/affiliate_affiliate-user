@@ -50,7 +50,7 @@
         </td>
         <td class="align-right">@FormaterCurrency.Format(casino.Odds)
         </td>
-        <td class="align-right">@casino.WinLoss
+        <td class="align-right">@Html.Raw(FormaterCurrency.Format(casino.WinLoss))
         </td>
     </tr>
     }

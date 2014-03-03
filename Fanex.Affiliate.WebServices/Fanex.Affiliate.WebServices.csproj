@@ -70,6 +70,8 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AffiliateEmailInfo.cs" />
+    <Compile Include="AffiliateInfo.cs" />
     <Compile Include="Criteria\AffiliateInfoCriteria.cs" />
     <Compile Include="DataAccess\AffiliateDataAccess.cs" />
     <Compile Include="DataAccess\IAffiliateDataAccess.cs" />

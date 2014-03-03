@@ -86,7 +86,7 @@
             </td>
             <td>@item.Odds
             </td>
-            <td>@FormaterCurrency.Format(item.Win)
+            <td>@Html.Raw(FormaterCurrency.Format(decimal.Parse(item.Win)))
             </td>
         </tr>  
         }        

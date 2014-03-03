@@ -22,14 +22,15 @@ namespace Fanex.Affiliate.WebServices
     using Fanex.Data.Configuration;
     using Services;
 
+    // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
+    // [System.Web.Script.Services.ScriptService]
+
     /// <summary>
-    /// Summary description for Service1
+    /// Affiliate's services.
     /// </summary>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
-    // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
-    // [System.Web.Script.Services.ScriptService]
     public class AffiliateAPI : System.Web.Services.WebService
     {
         protected readonly IAffiliateService AffiliateService;
@@ -50,7 +51,7 @@ namespace Fanex.Affiliate.WebServices
             {
                 var affID = int.Parse(btag.Trim().Split('_')[1]);
                 var criteria = new AffiliateInfoCriteria { AffID = affID };
-                return ToXML(AffiliateService.GetAffiliateInfo(criteria, siteName.Trim()));
+                return ToXML(AffiliateService.GetAffiliateInfo(criteria, siteName.Trim().ToLower()));
             }
             catch
             {
@@ -68,42 +69,5 @@ namespace Fanex.Affiliate.WebServices
                 return textWriter.ToString();
             }
         }
-    }
-
-    [XmlRoot("AffiliateInformation")]
-    public class AffiliateInfo
-    {
-        public AffiliateInfo()
-        {
-            ReturnCode = 0;
-            ReturnMessage = "Successfully";
-        }
-
-        public AffiliateInfo(int errorCode, string errorMessage)
-        {
-            ReturnCode = errorCode;
-            ReturnMessage = errorMessage;
-        }
-
-        [XmlElement("ReturnCode")]
-        public int ReturnCode { get; set; }
-
-        [XmlElement("ReturnMessage")]
-        public string ReturnMessage { get; set; }
-    }
-
-    [XmlRoot("AffiliateInformation")]
-    public class AffiliateEmailInfo : AffiliateInfo
-    {
-        public AffiliateEmailInfo() : base() { }
-
-        [XmlElement("FullName")]
-        public string Fullname { get; set; }
-
-        [XmlElement("UserName")]
-        public string Username { get; set; }
-
-        [XmlElement("Email")]
-        public string Email { get; set; }
     }
 }

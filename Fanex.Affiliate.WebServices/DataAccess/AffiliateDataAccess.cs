@@ -10,6 +10,7 @@
 
 namespace Fanex.Affiliate.WebServices.DataAccess
 {
+    using System;
     using Criteria;
     using Fanex.Data;
 
@@ -21,7 +22,9 @@ namespace Fanex.Affiliate.WebServices.DataAccess
         /// <summary>
         /// Initializes a new instance of the <see cref="AffiliateDataAccess" /> class.
         /// </summary>
-        public AffiliateDataAccess() { }
+        public AffiliateDataAccess()
+        {
+        }
 
         /// <summary>
         /// Get Affiliate Information.
@@ -38,17 +41,17 @@ namespace Fanex.Affiliate.WebServices.DataAccess
 
                 return int.Parse(param["errorcode"].ToString()) == 0
                     ? new AffiliateEmailInfo
-                        {
-                            ReturnCode = int.Parse(param["errorcode"].ToString()),
-                            Username = dataSet.Tables[0].Rows[0]["username"].ToString(),
-                            Fullname = dataSet.Tables[0].Rows[0]["fullname"].ToString(),
-                            Email = dataSet.Tables[0].Rows[0]["email"].ToString()
-                        }
+                    {
+                        ReturnCode = int.Parse(param["errorcode"].ToString()),
+                        Username = dataSet.Tables[0].Rows[0]["username"].ToString(),
+                        Fullname = dataSet.Tables[0].Rows[0]["fullname"].ToString(),
+                        Email = dataSet.Tables[0].Rows[0]["email"].ToString()
+                    }
                     : new AffiliateInfo
-                        {
-                            ReturnCode = int.Parse(param["errorcode"].ToString()),
-                            ReturnMessage = param["errormsg"].ToString()
-                        };
+                    {
+                        ReturnCode = int.Parse(param["errorcode"].ToString()),
+                        ReturnMessage = param["errormsg"].ToString()
+                    };
             }
         }
     }

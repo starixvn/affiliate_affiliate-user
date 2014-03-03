@@ -112,7 +112,7 @@
             </td>
             <td>@hitBetLineItem.Odds
             </td>
-            <td>@FormaterCurrency.Format(hitBetLineItem.Win)
+            <td>@Html.Raw(FormaterCurrency.Format(decimal.Parse(hitBetLineItem.Win)))
             </td>
         </tr>         
     }
@@ -148,9 +148,9 @@
             </td>
             <td>@hitScatterItem.Odds
             </td>
-            <td>@FormaterCurrency.Format(hitScatterItem.Win)
+            <td>@Html.Raw(FormaterCurrency.Format(decimal.Parse(hitScatterItem.Win)))
             </td>
-        </tr>        
+        </tr>
     }
     @if (totalItem != null)
     {

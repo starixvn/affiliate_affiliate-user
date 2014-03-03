@@ -236,6 +236,9 @@ namespace Fanex.Affiliate.Controllers
                     : (decimal.Parse(regexRemoveLetters.Replace(detailHeaderItem.Win, string.Empty)) * CurrentSession.ExchangeRate).ToString();
                 detailHeaderItem.BetValue *= CurrentSession.ExchangeRate;
                 detailHeaderItem.BetBaseCurrencyValue *= CurrentSession.ExchangeRate;
+                detailHeaderItem.CoinSize = string.IsNullOrEmpty(detailHeaderItem.CoinSize.Trim())
+                    ? "0.00"
+                    : (decimal.Parse(regexRemoveLetters.Replace(detailHeaderItem.CoinSize, string.Empty)) * CurrentSession.ExchangeRate).ToString();
                 detailHeaderItem.CoinSizeBaseCurrencyValue *= CurrentSession.ExchangeRate;
                 detailHeaderItem.CoinSizeValue *= CurrentSession.ExchangeRate;
                 detailHeaderItem.WinBaseCurrencyValue *= CurrentSession.ExchangeRate;

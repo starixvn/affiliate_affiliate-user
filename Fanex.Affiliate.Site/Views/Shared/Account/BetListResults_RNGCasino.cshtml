@@ -19,7 +19,7 @@
 
 <div class="rngcasino_headerlabel">
     @Lang.Username: @Model.Username - @RNGCasino.RefNo: @Model.RefNo - @RNGCasino.Viewin @Model.Currency - 
-    <input type="checkbox" id="chkIsShowPic" name="chkIsShowPic" @(Model.IsShowPic ? "checked='checked'" : "")"> @RNGCasino.ResultsWithPictures
+    <input type="checkbox" id="chkIsShowPic" name="chkIsShowPic" @(Model.IsShowPic ? "checked='checked'" : "") /> @RNGCasino.ResultsWithPictures
 </div>
 
 <table cellspacing="0" cellpadding="0" class="tblBetList">
@@ -93,15 +93,7 @@
                     <td class="">@FormaterCurrency.Format(item.Stake)</td>
                     <td class="">@FormaterCurrency.Format(item.Bet)</td>
                     <td class="">@Html.Raw(FormaterCurrency.Format(item.WinLoss))</td>
-                    @if (Model.Param.IsShowPic)
-                    {
-                        <td class="rngcasino_alignleft"><a href='javascript:;' class='hand-history-detail-link' data-url='@rngCasinoDetailUrl'>@RNGCasino.Detail:</a><br />@Html.Raw(item.Result)</td>
-                    }
-                    else
-                    {
-                        <td class="rngcasino_alignleft"><a href='javascript:;' class='hand-history-detail-link' data-url='@rngCasinoDetailUrl'>@Html.Raw(item.Result)</a></td>
-                    }
-                    
+                    <td class="rngcasino_alignleft"><a href='javascript:;' class='hand-history-detail-link' data-url='@rngCasinoDetailUrl'>@Html.Raw(item.Result)</a></td>
                 </tr>
             }
             <tr class="rngcasino_subtotal">

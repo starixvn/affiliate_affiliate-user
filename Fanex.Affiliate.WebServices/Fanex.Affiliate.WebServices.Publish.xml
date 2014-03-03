@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <publishData>
   <publishProfile publishUrl="C:\Users\long.luu\Desktop\Fanex.Affiliate.WebServices" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
-    <file relUrl="Web.config" publishTime="02/26/2014 10:22:05" />
+    <file relUrl="Web.config" publishTime="02/27/2014 11:14:23" />
     <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Common.dll" publishTime="06/27/2013 11:12:44" />
-    <file relUrl="bin/Fanex.Affiliate.WebServices.dll" publishTime="02/26/2014 10:12:20" />
+    <file relUrl="bin/Fanex.Affiliate.WebServices.dll" publishTime="02/27/2014 11:14:07" />
     <file relUrl="bin/Microsoft.Practices.ServiceLocation.dll" publishTime="06/27/2013 11:12:44" />
-    <file relUrl="bin/Microsoft.Practices.Unity.dll" publishTime="06/27/2013 11:12:44" />
-    <file relUrl="bin/Fanex.Affiliate.WebServices.pdb" publishTime="02/26/2014 10:12:19" />
+    <file relUrl="bin/Fanex.NAP.Framework.dll" publishTime="06/27/2013 11:12:44" />
+    <file relUrl="bin/Fanex.Affiliate.WebServices.pdb" publishTime="02/27/2014 11:14:07" />
     <file relUrl="bin/Fanex.Data.dll" publishTime="06/27/2013 11:12:44" />
     <file relUrl="Web.ConnectionString.config" publishTime="02/25/2014 17:21:09" />
-    <file relUrl="bin/Fanex.NAP.Framework.dll" publishTime="06/27/2013 11:12:44" />
+    <file relUrl="bin/Microsoft.Practices.Unity.dll" publishTime="06/27/2013 11:12:44" />
     <file relUrl="bin/Microsoft.Practices.Unity.Interception.dll" publishTime="06/27/2013 11:12:44" />
     <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Data.dll" publishTime="06/27/2013 11:12:44" />
     <file relUrl="App_Data/SpNames.xml" publishTime="02/25/2014 17:20:53" />

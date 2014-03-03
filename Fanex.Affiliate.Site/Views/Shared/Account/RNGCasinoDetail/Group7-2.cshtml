@@ -71,7 +71,7 @@
                                 @item.RankResult 
                             </td>
                             <td>
-                                @FormaterCurrency.Format(item.WinResultBaseCurrencyValue)
+                                @Html.Raw(FormaterCurrency.Format(item.WinResultBaseCurrencyValue))
                             </td>
                         </tr>
                     }

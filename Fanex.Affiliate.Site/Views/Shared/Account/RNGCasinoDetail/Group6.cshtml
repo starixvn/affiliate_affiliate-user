@@ -79,7 +79,7 @@
             </td>
             <td class="align-right">@item.Odds
             </td>
-            <td class="align-right">@FormaterCurrency.Format(item.Win)
+            <td class="align-right">@Html.Raw(FormaterCurrency.Format(decimal.Parse(item.Win)))
             </td>
         </tr>             
         }
@@ -119,7 +119,7 @@
             </td>
             <td class="align-right">@item.Multiplier
             </td>
-            <td class="align-right" colspan="3">@FormaterCurrency.Format(item.Win)
+            <td class="align-right" colspan="3">@Html.Raw(FormaterCurrency.Format(decimal.Parse(item.Win)))
             </td>
         </tr>     
         }
