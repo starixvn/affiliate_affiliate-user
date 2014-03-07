@@ -10,7 +10,6 @@
 
 namespace Fanex.Affiliate.Configurations
 {
-    using System;
     using System.Collections.Generic;
     using Fanex.Affiliate.DTO;
     

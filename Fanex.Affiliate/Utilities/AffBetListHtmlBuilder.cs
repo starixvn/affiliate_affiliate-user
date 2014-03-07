@@ -10,16 +10,12 @@
 
 namespace Fanex.Affiliate.Utilities
 {
-    using System;
     using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
     using Fanex.Affiliate.Criterias;
     using Fanex.Affiliate.DTO.BetList;
     using Fanex.BetList.Core.App_GlobalResources;
     using Fanex.BetList.Core.Builder;
     using Fanex.BetList.Core.Entities;
-    using Fanex.Logging;
 
     /// <summary>
     /// TODO: Update summary.
