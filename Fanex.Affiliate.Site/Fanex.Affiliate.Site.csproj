@@ -52,14 +52,15 @@
     <Reference Include="dotless.Core">
       <HintPath>..\packages\dotless.1.3.1.0\lib\dotless.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Fanex.Data, Version=0.5.404.60, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Fanex.Data, Version=0.5.404.62, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Dependencies\Fanex.Data.dll</HintPath>
     </Reference>
     <Reference Include="Fanex.Logging">
       <HintPath>..\Dependencies\Fanex.Logging.dll</HintPath>
     </Reference>
-    <Reference Include="Fanex.NAP.Framework, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Fanex.NAP.Framework, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Dependencies\Fanex.NAP.Framework.dll</HintPath>
     </Reference>
     <Reference Include="Glimpse.Mvc4, Version=1.3.2.0, Culture=neutral, processorArchitecture=MSIL">
@@ -335,12 +336,40 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
     <Content Include="App_Code\RazorHelper.cshtml" />
+    <Content Include="Content\themes\theme10\betlist.core.css" />
+    <Content Include="Content\themes\theme10\betList.css" />
+    <Content Include="Content\themes\theme10\fanex.result.css" />
+    <Content Include="Content\themes\theme10\global.content.css" />
+    <Content Include="Content\themes\theme10\rng-casino-hand-history.css" />
+    <Content Include="Content\themes\theme10\systemparlaydetail.css" />
+    <Content Include="Content\themes\theme11\betlist.core.css" />
+    <Content Include="Content\themes\theme11\betList.css" />
+    <Content Include="Content\themes\theme11\fanex.result.css" />
+    <Content Include="Content\themes\theme11\global.content.css" />
+    <Content Include="Content\themes\theme11\rng-casino-hand-history.css" />
+    <Content Include="Content\themes\theme11\systemparlaydetail.css" />
+    <Content Include="Content\themes\theme12\betlist.core.css" />
+    <Content Include="Content\themes\theme12\betList.css" />
+    <Content Include="Content\themes\theme12\fanex.result.css" />
+    <Content Include="Content\themes\theme12\global.content.css" />
+    <Content Include="Content\themes\theme12\rng-casino-hand-history.css" />
+    <Content Include="Content\themes\theme12\systemparlaydetail.css" />
+    <Content Include="Content\themes\theme13\images\banner.id-ID.jpg" />
+    <Content Include="Content\themes\theme13\images\banner.th-TH.jpg" />
+    <Content Include="Content\themes\theme13\images\banner_top.png" />
+    <Content Include="Content\themes\theme13\images\bgTableHeader.png" />
+    <Content Include="Content\themes\theme13\images\bg_footer.png" />
+    <Content Include="Content\themes\theme13\images\favicon.png" />
+    <Content Include="Content\themes\theme13\images\logo-afterlogin.png" />
+    <Content Include="Content\themes\theme14\images\signup-btn.png" />
+    <Content Include="Content\themes\theme15\images\Favicon-a.ico" />
     <Content Include="Content\themes\theme16\betlist.core.css" />
     <Content Include="Content\themes\theme16\betList.css" />
     <Content Include="Content\themes\theme16\fanex.result.css" />
     <Content Include="Content\themes\theme16\global.content.css" />
     <Content Include="Content\themes\theme16\images\banner.en-US.jpg" />
     <Content Include="Content\themes\theme16\images\banner.id-ID.jpg" />
+    <Content Include="Content\themes\theme16\images\banner.ko-KR.jpg" />
     <Content Include="Content\themes\theme16\images\banner.th-TH.jpg" />
     <Content Include="Content\themes\theme16\images\banner.vi-VN.jpg" />
     <Content Include="Content\themes\theme16\images\banner.zh-CN.jpg" />
@@ -349,25 +378,20 @@
     <Content Include="Content\themes\theme16\images\bg-bottomLanguage.png" />
     <Content Include="Content\themes\theme16\images\bg-contentLanguage.png" />
     <Content Include="Content\themes\theme16\images\bg-topLanguage.png" />
-    <Content Include="Content\themes\theme16\images\bgHeader.jpg" />
     <Content Include="Content\themes\theme16\images\bgheader.png" />
     <Content Include="Content\themes\theme16\images\bghotNewsContent.png" />
     <Content Include="Content\themes\theme16\images\bgMainMenu_01.png" />
     <Content Include="Content\themes\theme16\images\bgMainMenu_02.png" />
-    <Content Include="Content\themes\theme16\images\bgTableHeader.png" />
     <Content Include="Content\themes\theme16\images\bg_buttonsite.png" />
     <Content Include="Content\themes\theme16\images\bg_center.jpg" />
     <Content Include="Content\themes\theme16\images\bg_center2.jpg" />
-    <Content Include="Content\themes\theme16\images\bg_footer.png" />
+    <Content Include="Content\themes\theme16\images\bg_footer.jpg" />
     <Content Include="Content\themes\theme16\images\bg_header03.jpg" />
-    <Content Include="Content\themes\theme16\images\blank.gif" />
-    <Content Include="Content\themes\theme16\images\deco.png" />
+    <Content Include="Content\themes\theme16\images\deco.jpg" />
     <Content Include="Content\themes\theme16\images\emailBanner.jpg" />
     <Content Include="Content\themes\theme16\images\emailBg.jpg" />
     <Content Include="Content\themes\theme16\images\error_icons.png" />
     <Content Include="Content\themes\theme16\images\favicon.jpg" />
-    <Content Include="Content\themes\theme16\images\favicon.png" />
-    <Content Include="Content\themes\theme16\images\first-goal.gif" />
     <Content Include="Content\themes\theme16\images\firstGoal.gif" />
     <Content Include="Content\themes\theme16\images\glyphicons-halflings-gray-lighter.png" />
     <Content Include="Content\themes\theme16\images\glyphicons-halflings-gray.png" />
@@ -375,16 +399,13 @@
     <Content Include="Content\themes\theme16\images\header_gradient.png" />
     <Content Include="Content\themes\theme16\images\help.txt" />
     <Content Include="Content\themes\theme16\images\in_top.png" />
-    <Content Include="Content\themes\theme16\images\last-goal.gif" />
     <Content Include="Content\themes\theme16\images\lastGoal.gif" />
     <Content Include="Content\themes\theme16\images\link_14x14.png" />
-    <Content Include="Content\themes\theme16\images\link_16x16.png" />
     <Content Include="Content\themes\theme16\images\loader.gif" />
-    <Content Include="Content\themes\theme16\images\logo-afterlogin.png" />
     <Content Include="Content\themes\theme16\images\logout.png" />
     <Content Include="Content\themes\theme16\images\note.png" />
     <Content Include="Content\themes\theme16\images\plus.png" />
-    <Content Include="Content\themes\theme16\images\signup-btn.png" />
+    <Content Include="Content\themes\theme16\images\signup.png" />
     <Content Include="Content\themes\theme16\images\spliter.png" />
     <Content Include="Content\themes\theme16\images\sprite.png" />
     <Content Include="Content\themes\theme16\images\tab_topbg.gif" />
@@ -464,7 +485,6 @@
     <Content Include="Content\themes\theme12\images\bg_center.jpg" />
     <Content Include="Content\themes\theme12\images\bg_center2.jpg" />
     <Content Include="Content\themes\theme12\images\deco.jpg" />
-    <Content Include="Content\themes\theme12\images\emailBanner.id-ID.jpg" />
     <Content Include="Content\themes\theme12\images\emailBanner.jpg" />
     <Content Include="Content\themes\theme12\images\emailBg.jpg" />
     <Content Include="Content\themes\theme12\images\error_icons.png" />
@@ -559,12 +579,10 @@
     <Content Include="Content\themes\theme14\images\banner.vi-VN.jpg" />
     <Content Include="Content\themes\theme14\images\banner.zh-CN.jpg" />
     <Content Include="Content\themes\theme14\images\banner.zh-TW.jpg" />
-    <Content Include="Content\themes\theme14\images\banner_top.png" />
     <Content Include="Content\themes\theme14\images\bar-loader.gif" />
     <Content Include="Content\themes\theme14\images\bg-bottomLanguage.png" />
     <Content Include="Content\themes\theme14\images\bg-contentLanguage.png" />
     <Content Include="Content\themes\theme14\images\bg-topLanguage.png" />
-    <Content Include="Content\themes\theme14\images\bgHeader.jpg" />
     <Content Include="Content\themes\theme14\images\bgheader.png" />
     <Content Include="Content\themes\theme14\images\bghotNewsContent.png" />
     <Content Include="Content\themes\theme14\images\bgMainMenu_01.png" />
@@ -577,11 +595,9 @@
     <Content Include="Content\themes\theme14\images\bg_header03.jpg" />
     <Content Include="Content\themes\theme14\images\blank.gif" />
     <Content Include="Content\themes\theme14\images\deco.jpg" />
-    <Content Include="Content\themes\theme14\images\deco.png" />
     <Content Include="Content\themes\theme14\images\emailBanner.jpg" />
     <Content Include="Content\themes\theme14\images\emailBg.jpg" />
     <Content Include="Content\themes\theme14\images\error_icons.png" />
-    <Content Include="Content\themes\theme14\images\favicon.ico" />
     <Content Include="Content\themes\theme14\images\favicon.jpg" />
     <Content Include="Content\themes\theme14\images\favicon.png" />
     <Content Include="Content\themes\theme14\images\first-goal.gif" />
@@ -601,7 +617,6 @@
     <Content Include="Content\themes\theme14\images\logout.png" />
     <Content Include="Content\themes\theme14\images\note.png" />
     <Content Include="Content\themes\theme14\images\plus.png" />
-    <Content Include="Content\themes\theme14\images\signup.png" />
     <Content Include="Content\themes\theme14\images\spliter.png" />
     <Content Include="Content\themes\theme14\images\sprite.png" />
     <Content Include="Content\themes\theme14\images\tab_topbg.gif" />
@@ -691,10 +706,12 @@
     <Content Include="Content\themes\theme17\images\bghotNewsContent.png" />
     <Content Include="Content\themes\theme17\images\bgMainMenu_01.png" />
     <Content Include="Content\themes\theme17\images\bgMainMenu_02.png" />
+    <Content Include="Content\themes\theme17\images\bgTableHeader.png" />
     <Content Include="Content\themes\theme17\images\bg_buttonsite.png" />
     <Content Include="Content\themes\theme17\images\bg_center.jpg" />
     <Content Include="Content\themes\theme17\images\bg_center2.jpg" />
     <Content Include="Content\themes\theme17\images\bg_footer.jpg" />
+    <Content Include="Content\themes\theme17\images\bg_footer.png" />
     <Content Include="Content\themes\theme17\images\bg_header03.jpg" />
     <Content Include="Content\themes\theme17\images\deco.jpg" />
     <Content Include="Content\themes\theme17\images\emailBanner.jpg" />
@@ -725,6 +742,22 @@
     <Content Include="Content\themes\theme17\jquery.ui.tooltip.css" />
     <Content Include="Content\themes\theme17\rng-casino-hand-history.css" />
     <Content Include="Content\themes\theme17\systemparlaydetail.css" />
+    <Content Include="Content\themes\theme2\betlist.core.css" />
+    <Content Include="Content\themes\theme2\betList.css" />
+    <Content Include="Content\themes\theme2\fanex.result.css" />
+    <Content Include="Content\themes\theme2\global.content.css" />
+    <Content Include="Content\themes\theme2\rng-casino-hand-history.css" />
+    <Content Include="Content\themes\theme2\systemparlaydetail.css" />
+    <Content Include="Content\themes\theme3\betlist.core.css" />
+    <Content Include="Content\themes\theme3\betList.css" />
+    <Content Include="Content\themes\theme3\fanex.result.css" />
+    <Content Include="Content\themes\theme3\global.content.css" />
+    <Content Include="Content\themes\theme3\rng-casino-hand-history.css" />
+    <Content Include="Content\themes\theme3\systemparlaydetail.css" />
+    <Content Include="Content\themes\theme4\betlist.core.css" />
+    <Content Include="Content\themes\theme4\betList.css" />
+    <Content Include="Content\themes\theme4\fanex.result.css" />
+    <Content Include="Content\themes\theme4\global.content.css" />
     <Content Include="Content\themes\theme4\images\banner.ko-KR.jpg" />
     <Content Include="Content\themes\theme4\images\banner.vi-VN.jpg" />
     <Content Include="Content\themes\theme4\images\banner.zh-CN.jpg" />
@@ -732,6 +765,8 @@
     <Content Include="Content\themes\theme4\images\emailBanner.jpg" />
     <Content Include="Content\themes\theme4\images\logout.png" />
     <Content Include="Content\themes\theme4\images\signup.png" />
+    <Content Include="Content\themes\theme4\rng-casino-hand-history.css" />
+    <Content Include="Content\themes\theme4\systemparlaydetail.css" />
     <Content Include="Content\themes\theme5\betlist.core.css" />
     <Content Include="Content\themes\theme5\betList.css" />
     <Content Include="Content\themes\theme5\fanex.result.css" />
@@ -961,6 +996,10 @@
     <Content Include="Content\themes\theme4\jquery.ui.tooltip.css" />
     <Content Include="Content\themes\theme5\rng-casino-hand-history.css" />
     <Content Include="Content\themes\theme5\systemparlaydetail.css" />
+    <Content Include="Content\themes\theme6\betlist.core.css" />
+    <Content Include="Content\themes\theme6\betList.css" />
+    <Content Include="Content\themes\theme6\fanex.result.css" />
+    <Content Include="Content\themes\theme6\global.content.css" />
     <Content Include="Content\themes\theme6\images\banner.en-US.jpg" />
     <Content Include="Content\themes\theme6\images\banner.id-ID.jpg" />
     <Content Include="Content\themes\theme6\images\banner.zh-CN.jpg" />
@@ -995,6 +1034,12 @@
     <Content Include="Content\themes\theme6\images\ui-icons_454545_256x240.png" />
     <Content Include="Content\themes\theme6\jquery.ui.datepicker.css" />
     <Content Include="Content\themes\theme6\jquery.ui.tooltip.css" />
+    <Content Include="Content\themes\theme6\rng-casino-hand-history.css" />
+    <Content Include="Content\themes\theme6\systemparlaydetail.css" />
+    <Content Include="Content\themes\theme7\betlist.core.css" />
+    <Content Include="Content\themes\theme7\betList.css" />
+    <Content Include="Content\themes\theme7\fanex.result.css" />
+    <Content Include="Content\themes\theme7\global.content.css" />
     <Content Include="Content\themes\theme7\images\banner.en-US.jpg" />
     <Content Include="Content\themes\theme7\images\banner.id-ID.jpg" />
     <Content Include="Content\themes\theme7\images\banner.zh-CN.jpg" />
@@ -1028,6 +1073,12 @@
     <Content Include="Content\themes\theme7\images\ui-icons_454545_256x240.png" />
     <Content Include="Content\themes\theme7\jquery.ui.datepicker.css" />
     <Content Include="Content\themes\theme7\jquery.ui.tooltip.css" />
+    <Content Include="Content\themes\theme7\rng-casino-hand-history.css" />
+    <Content Include="Content\themes\theme7\systemparlaydetail.css" />
+    <Content Include="Content\themes\theme8\betlist.core.css" />
+    <Content Include="Content\themes\theme8\betList.css" />
+    <Content Include="Content\themes\theme8\fanex.result.css" />
+    <Content Include="Content\themes\theme8\global.content.css" />
     <Content Include="Content\themes\theme8\images\banner.en-US.jpg" />
     <Content Include="Content\themes\theme8\images\banner.zh-CN.jpg" />
     <Content Include="Content\themes\theme8\images\banner.zh-TW.jpg" />
@@ -1058,6 +1109,12 @@
     <Content Include="Content\themes\theme8\images\ui-icons_454545_256x240.png" />
     <Content Include="Content\themes\theme8\jquery.ui.datepicker.css" />
     <Content Include="Content\themes\theme8\jquery.ui.tooltip.css" />
+    <Content Include="Content\themes\theme8\rng-casino-hand-history.css" />
+    <Content Include="Content\themes\theme8\systemparlaydetail.css" />
+    <Content Include="Content\themes\theme9\betlist.core.css" />
+    <Content Include="Content\themes\theme9\betList.css" />
+    <Content Include="Content\themes\theme9\fanex.result.css" />
+    <Content Include="Content\themes\theme9\global.content.css" />
     <Content Include="Content\themes\theme9\images\banner.en-US.jpg" />
     <Content Include="Content\themes\theme9\images\banner.id-ID.jpg" />
     <Content Include="Content\themes\theme9\images\banner.th-TH.jpg" />
@@ -1091,6 +1148,8 @@
     <Content Include="Content\themes\theme9\images\ui-icons_454545_256x240.png" />
     <Content Include="Content\themes\theme9\jquery.ui.datepicker.css" />
     <Content Include="Content\themes\theme9\jquery.ui.tooltip.css" />
+    <Content Include="Content\themes\theme9\rng-casino-hand-history.css" />
+    <Content Include="Content\themes\theme9\systemparlaydetail.css" />
     <Content Include="Global.asax" />
     <Content Include="Index.aspx" />
     <Content Include="obj\Debug\Fanex.Affiliate.Site.csproj.FileListAbsolute.txt" />
@@ -1499,7 +1558,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2013/9/16" />
+      <UserProperties BuildVersion_StartDate="2013/9/16" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

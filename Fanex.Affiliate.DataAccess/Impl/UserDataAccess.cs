@@ -18,6 +18,7 @@ namespace Fanex.Affiliate.DataAccess.Impl
     using Data;
     using DTO;
     using Interface;
+    using NAP.Framework.Command;
     using NAP.Framework.Data;
     using ViewModels;
 
