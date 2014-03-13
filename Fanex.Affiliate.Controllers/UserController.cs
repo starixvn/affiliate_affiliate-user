@@ -138,28 +138,28 @@ namespace Fanex.Affiliate.Controllers
         /// <returns>Return result view model.</returns>
         public ResultViewModel UpdateAffiliateInfo(UserViewModel user, string ip, ref UserCriteria criteria)
         {
-            criteria.FirstName = WebUtility.HtmlEncode(user.FirstName);
-            criteria.LastName = WebUtility.HtmlEncode(user.LastName);
+            criteria.FirstName = WebUtility.HtmlEncode(user.FirstName.TrimEnd().TrimStart());
+            criteria.LastName = WebUtility.HtmlEncode(user.LastName.TrimEnd().TrimStart());
             criteria.Gender = user.Gender;
-            criteria.Email = user.Email;
-            criteria.Phone = WebUtility.HtmlEncode(user.Phone);
-            criteria.MobilePhone = WebUtility.HtmlEncode(user.MobilePhone);
-            criteria.Address = WebUtility.HtmlEncode(user.Address);
-            criteria.City = WebUtility.HtmlEncode(user.City);
-            criteria.State = WebUtility.HtmlEncode(user.State);
-            criteria.Postal = WebUtility.HtmlEncode(user.Postal);
-            criteria.Country = WebUtility.HtmlEncode(user.Country);
-            criteria.SiteURL = WebUtility.HtmlEncode(user.SiteURL);
+            criteria.Email = user.Email.TrimEnd().TrimStart();
+            criteria.Phone = WebUtility.HtmlEncode(user.Phone.TrimEnd().TrimStart());
+            criteria.MobilePhone = WebUtility.HtmlEncode(user.MobilePhone.TrimEnd().TrimStart());
+            criteria.Address = WebUtility.HtmlEncode(user.Address.TrimEnd().TrimStart());
+            criteria.City = WebUtility.HtmlEncode(user.City.TrimEnd().TrimStart());
+            criteria.State = WebUtility.HtmlEncode(user.State.TrimEnd().TrimStart());
+            criteria.Postal = WebUtility.HtmlEncode(user.Postal.TrimEnd().TrimStart());
+            criteria.Country = WebUtility.HtmlEncode(user.Country.TrimEnd().TrimStart());
+            criteria.SiteURL = WebUtility.HtmlEncode(user.SiteURL.TrimEnd().TrimStart());
             criteria.MoreSiteURLs = WebUtility.HtmlEncode(user.MoreSiteURLs);
             criteria.PreferredLanguage = user.Language;
             criteria.Currency = user.Currency;
             criteria.EmailFormat = user.EmailFormat;
             criteria.Question = user.Question;
-            criteria.Answer = WebUtility.HtmlEncode(user.Answer);
+            criteria.Answer = WebUtility.HtmlEncode(user.Answer.TrimEnd().TrimStart());
             criteria.PreferredPayment = user.PreferredPayment;
             criteria.Player_Username = string.IsNullOrEmpty(user.Player_Username)
                 ? string.Empty
-                : WebUtility.HtmlEncode(user.Player_Username);
+                : WebUtility.HtmlEncode(user.Player_Username.TrimEnd().TrimStart());
             criteria.Ip = ip;
             criteria.Function = UserEnum.AffiliateRegister;
             criteria.AffType = AppSettings.InputAffType;

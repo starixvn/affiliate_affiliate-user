@@ -106,7 +106,7 @@
                     @Html.Raw(hitBetLineItem.Symbol.Replace("/img", Url.Content("~/") + "img"))
                 }
             </td>
-            <td>@FormaterCurrency.Format(hitBetLineItem.CoinSizeBaseCurrencyValue)
+            <td>@Html.Raw(FormaterCurrency.Format(decimal.Parse(hitBetLineItem.CoinSize)))
             </td>
             <td>@hitBetLineItem.BetPerLine
             </td>
@@ -142,7 +142,7 @@
                     @Html.Raw(hitScatterItem.Symbol.Replace("/img", Url.Content("~/") + "img"))
                 }
             </td>
-            <td>@FormaterCurrency.Format(hitScatterItem.CoinSizeBaseCurrencyValue)
+            <td>@Html.Raw(FormaterCurrency.Format(decimal.Parse(hitScatterItem.CoinSize)))
             </td>
             <td>@hitScatterItem.BetPerLine
             </td>

@@ -104,7 +104,7 @@
                     @Html.Raw(hitBetLineItem.Symbol.Replace("/img", Url.Content("~/") + "img"))
                 }
             </td>
-            <td>@hitBetLineItem.CoinSize
+            <td>@Html.Raw(FormaterCurrency.Format(decimal.Parse(hitBetLineItem.CoinSize)))
             </td>
             <td>@hitBetLineItem.Odds
             </td>
@@ -136,7 +136,7 @@
                     @Html.Raw(hitScatterItem.Symbol.Replace("/img", Url.Content("~/") + "img"))
                 }
             </td>
-            <td>@FormaterCurrency.Format(hitScatterItem.CoinSize)
+            <td>@Html.Raw(FormaterCurrency.Format(decimal.Parse(hitScatterItem.CoinSize)))
             </td>
             <td>@hitScatterItem.Odds
             </td>
@@ -149,7 +149,7 @@
         <tr>
             <td>@RNGCasino.Win/@RNGCasino.Loss
             </td>
-            <td colspan="4" class="align-right">@Html.Raw(FormaterCurrency.Format(decimal.Parse(totalItem.WinLoss)))
+            <td colspan="4" class="align-right">@Html.Raw(FormaterCurrency.Format(decimal.Parse(totalItem.WinLossResult)))
             </td>
         </tr>
     }

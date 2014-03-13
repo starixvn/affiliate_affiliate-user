@@ -20,8 +20,9 @@
         <td colspan="2">@headerItem.ResultName
         </td>
     </tr>
-    <tr>
-        <td colspan="2"> 
+    <tr align="center">
+        <td colspan="2" align="center"> 
+            <div align="center">
             @if (!string.IsNullOrEmpty(headerItem.Result) && headerItem.Result.Contains("/Form"))
             {
                 @Html.Raw(headerItem.Result.Replace("/Form", Url.Content("~/") + "Form"))
@@ -31,7 +32,7 @@
                 var resultList = headerItem.Result.Split(',');
                 if (resultList.Count() == 9)
                 {
-                <table style="width: 40%; margin-left: 30%;" class="casino-detail-table" cellpading="0" cellspacing="0">
+                <table style="width: 40%;" class="casino-detail-table" cellpadding="0" cellspacing="0">
                     @for (int i = 0; i < 3; i++)
                     {
                         <tr>
@@ -46,7 +47,7 @@
                 </table>
                 }
             } 
-             
+            </div>
         </td>
     </tr>
     <tr>
@@ -64,13 +65,13 @@
     <tr class="player-total-row">
         <td class="align-left">@RNGCasino.Bet
         </td>
-        <td class="align-right">@FormaterCurrency.Format.Format(Model.CasinoDetailList.Sum(p => p.Bet))
+        <td class="align-right">@FormaterCurrency.Format(Model.CasinoDetailList.Sum(p => p.Bet))
         </td>
     </tr>
     <tr class="player-total-row">
         <td class="align-left">@RNGCasino.Odds
         </td>
-        <td class="align-right"> @FormaterCurrency.Format.Format(Model.CasinoDetailList.Sum(p => p.Odds))
+        <td class="align-right"> @FormaterCurrency.Format(Model.CasinoDetailList.Sum(p => p.Odds))
         </td>
     </tr>
     <tr class="player-total-row">

@@ -81,7 +81,7 @@
             <td>
                 @Html.Raw(item.Symbol.Replace("/img", Url.Content("~/") + "img"))
             </td>
-            <td class="align-right">@item.CoinSize
+            <td class="align-right">@Html.Raw(FormaterCurrency.Format(decimal.Parse(item.CoinSize)))
             </td>
             <td class="align-right">@item.Bet
             </td>
@@ -125,7 +125,7 @@
         <tr>
             <td>@RNGCasino.Win
             </td>
-            <td colspan="5" class="align-right">@FormaterCurrency.Format(totalItem.WinResultBaseCurrencyValue)
+            <td colspan="5" class="align-right">@Html.Raw(FormaterCurrency.Format(decimal.Parse(totalItem.Win)))
             </td>
         </tr>
     }

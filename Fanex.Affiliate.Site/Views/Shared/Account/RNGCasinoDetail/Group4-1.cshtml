@@ -80,7 +80,7 @@
             <td>
                 @Html.Raw(item.Symbol.Replace("/img", Url.Content("~/") + "img"))
             </td>
-            <td>@item.CoinSize
+            <td>@Html.Raw(FormaterCurrency.Format(decimal.Parse(item.CoinSize)))
             </td>
             <td>@item.BetPerLine
             </td>

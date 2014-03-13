@@ -241,8 +241,23 @@ namespace Fanex.Affiliate.Controllers
                     : (decimal.Parse(regexRemoveLetters.Replace(detailHeaderItem.CoinSize, string.Empty)) * CurrentSession.ExchangeRate).ToString();
                 detailHeaderItem.CoinSizeBaseCurrencyValue *= CurrentSession.ExchangeRate;
                 detailHeaderItem.CoinSizeValue *= CurrentSession.ExchangeRate;
+                if (detailHeaderItem.CoinSizeAmount.Contains("X"))
+                {
+                    var coinSizeAmountParts = detailHeaderItem.CoinSizeAmount.Split('X');
+                    detailHeaderItem.CoinSizeAmount = string.IsNullOrEmpty(coinSizeAmountParts[0])
+                    ? "0.00"
+                    : (decimal.Parse(regexRemoveLetters.Replace(coinSizeAmountParts[0].Trim(), string.Empty)) * CurrentSession.ExchangeRate).ToString();
+                    detailHeaderItem.CoinSizeAmount = FormaterCurrency.Format(decimal.Parse(detailHeaderItem.CoinSizeAmount));
+                    detailHeaderItem.CoinSizeAmount += " X" + coinSizeAmountParts[1];
+                }
                 detailHeaderItem.WinBaseCurrencyValue *= CurrentSession.ExchangeRate;
+                detailHeaderItem.WinLossResult = string.IsNullOrEmpty(detailHeaderItem.WinLossResult.Trim())
+                    ? "0.00"
+                    : (decimal.Parse(regexRemoveLetters.Replace(detailHeaderItem.WinLossResult, string.Empty)) * CurrentSession.ExchangeRate).ToString();
                 detailHeaderItem.WinLossResultBaseCurrecyValue *= CurrentSession.ExchangeRate;
+                detailHeaderItem.WinResult = string.IsNullOrEmpty(detailHeaderItem.WinResult.Trim())
+                    ? "0.00"
+                    : (decimal.Parse(regexRemoveLetters.Replace(detailHeaderItem.WinResult, string.Empty)) * CurrentSession.ExchangeRate).ToString();
                 detailHeaderItem.WinResultBaseCurrencyValue *= CurrentSession.ExchangeRate;
             }
         }

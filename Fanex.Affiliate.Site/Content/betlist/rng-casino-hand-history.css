@@ -15,6 +15,10 @@
     background-color: #A3D1E1;
     text-align: center;
 }
+.detail-content-row
+{
+    text-align: center;
+}
 .player-total-row
 {
     background-color: #F4E8D4;

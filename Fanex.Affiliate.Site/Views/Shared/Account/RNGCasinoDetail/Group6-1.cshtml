@@ -111,7 +111,7 @@
         <tr>
             <td>@subItem.ActionName
             </td>
-            <td colspan="5" class="align-right">@FormaterCurrency.Format(subItem.Win)
+            <td colspan="5" class="align-right">@Html.Raw(FormaterCurrency.Format(decimal.Parse(subItem.Win)))
             </td>
         </tr>
         }
