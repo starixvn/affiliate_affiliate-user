@@ -212,8 +212,6 @@
     <Content Include="App_Data\SpNames.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="bin\Fanex.Affiliate.Site.dll" />
-    <Content Include="bin\Fanex.Affiliate.Site.pdb" />
     <Content Include="Content\betlist\betList.css" />
     <Content Include="Content\betlist\betlist.core.css" />
     <Content Include="Content\betlist\images\note.png" />
@@ -1152,9 +1150,6 @@
     <Content Include="Content\themes\theme9\systemparlaydetail.css" />
     <Content Include="Global.asax" />
     <Content Include="Index.aspx" />
-    <Content Include="obj\Debug\Fanex.Affiliate.Site.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\Fanex.Affiliate.Site.dll" />
-    <Content Include="obj\Debug\Fanex.Affiliate.Site.pdb" />
     <Content Include="ReloadAppSettings.aspx" />
     <Content Include="Scripts\libraries\jquery-1.10.1.js" />
     <Content Include="Scripts\libraries\jquery-1.10.1.min.js" />
@@ -1236,9 +1231,7 @@
     </Content>
     <Content Include="Views\Shared\_AffResources.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="obj\Debug\TempPE\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
@@ -1374,8 +1367,6 @@
     <None Include="Content\themes\theme9\index.less" />
     <None Include="Content\themes\theme9\mixins.less" />
     <None Include="Content\themes\theme9\variables.less" />
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="obj\Debug\ResolveAssemblyReference.cache" />
     <Content Include="Views\Shared\Email\SignUp\SignUp.id-ID.cshtml" />
     <Content Include="Views\Shared\Email\SignUp\SignUp.th-TH.cshtml" />
     <Content Include="Views\Shared\Email\SignUp\SignUp.zh-TW.cshtml" />
@@ -1558,7 +1549,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_StartDate="2013/9/16" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
+      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2013/9/16" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
