@@ -10,7 +10,7 @@
 
 namespace Fanex.Affiliate.Services.Interface
 {
-    using Criterias;
+    using Criteria;
     using DTO;
     using ViewModels;
 
@@ -25,7 +25,7 @@ namespace Fanex.Affiliate.Services.Interface
         /// <param name="criteria">Input criteria.</param>
         /// <param name="errCode">Error code.</param>
         /// <returns>Return object user.</returns>
-        User AuthenticateUser(AuthenticateUserCriteria criteria, ref int errCode);
+        User AuthenticateUser(AffiliateLoginCriteria criteria, ref int errCode);
 
         /// <summary>
         /// Validates a username and password.

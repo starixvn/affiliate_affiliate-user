@@ -11,7 +11,7 @@ namespace Fanex.Affiliate.Services.Interface
 {
     using System.Collections.Generic;
     using System.Data;
-    using Criterias;
+    using Criteria;
     using DTO;
 
     public interface ISystemSettingService

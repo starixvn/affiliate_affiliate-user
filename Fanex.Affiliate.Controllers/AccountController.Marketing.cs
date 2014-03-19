@@ -11,10 +11,9 @@
 namespace Fanex.Affiliate.Controllers
 {
     using System.Collections.Generic;
-    using System.Diagnostics.CodeAnalysis;
     using System.Web.Mvc;
     using Configurations;
-    using Criterias;
+    using Criteria;
     using DTO;
     using Utilities;
     using ViewModels;

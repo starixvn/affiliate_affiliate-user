@@ -13,7 +13,7 @@ namespace Fanex.Affiliate.Services.Impl
     using System.Data;
     using System.Linq;
     using Common.Helper;
-    using Criterias;
+    using Criteria;
     using Data;
     using DTO;
     using Interface;

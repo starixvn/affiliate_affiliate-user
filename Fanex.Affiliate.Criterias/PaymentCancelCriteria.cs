@@ -8,7 +8,7 @@
 //   <change who="" date=""></change>
 // </history>
 
-namespace Fanex.Affiliate.Criterias
+namespace Fanex.Affiliate.Criteria
 {
     using System;
     using NAP.Framework.Data;
@@ -48,6 +48,9 @@ namespace Fanex.Affiliate.Criterias
 
         [SpParam(Ignored = true)]
         public DateTime TransDate { get; set; }
+
+        [SpParam(Ignored = true)]
+        public decimal Amount { get; set; }
 
         [SpParam(Ignored = true)]
         public int ErrCode { get; set; }

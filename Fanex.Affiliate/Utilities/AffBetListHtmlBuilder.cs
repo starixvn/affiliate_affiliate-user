@@ -11,7 +11,7 @@
 namespace Fanex.Affiliate.Utilities
 {
     using System.Collections.Generic;
-    using Fanex.Affiliate.Criterias;
+    using Fanex.Affiliate.Criteria;
     using Fanex.Affiliate.DTO.BetList;
     using Fanex.BetList.Core.App_GlobalResources;
     using Fanex.BetList.Core.Builder;

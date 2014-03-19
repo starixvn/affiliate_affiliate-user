@@ -9,7 +9,7 @@
 
 namespace Fanex.Affiliate.Services.Interface
 {
-    using Criterias;
+    using Criteria;
     using DTO;
 
     /// <summary>
@@ -22,13 +22,13 @@ namespace Fanex.Affiliate.Services.Interface
         /// </summary>
         /// <param name="criteria">Banner criteria.</param>
         /// <returns>Banner data object.</returns>
-        Banner BannerSelectInfo(BannerCriteria criteria);
+        Banner BannerSelectInfo(BannerInfoCriteria criteria);
 
         /// <summary>
         /// Update Banner statistic.
         /// </summary>
         /// <param name="criteria">Banner criteria.</param>
-        void BannerUpdateStatistic(BannerCriteria criteria);
+        void BannerUpdateStatistic(BannerUpdateStatisticCriteria criteria);
 
         /// <summary>
         /// Get System Name.

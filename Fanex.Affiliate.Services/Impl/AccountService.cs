@@ -12,12 +12,10 @@ namespace Fanex.Affiliate.Services.Impl
     using System.Collections.Generic;
     using Common;
     using Common.Helper;
-    using Criterias;
+    using Criteria;
     using DataAccess.Impl;
     using DataAccess.Interface;
     using DTO;
-    using DTO.BetList;
-    using Fanex.BetList.Core.Entities;
     using Interface;
     using ViewModels;
 
@@ -56,13 +54,14 @@ namespace Fanex.Affiliate.Services.Impl
 
         #endregion Constructor
 
+        #region Account Overview
         /// <summary>
         /// Get statistics for Affiliate.
         /// </summary>
         /// <param name="criteria">Input criteria.</param>
         /// <param name="listProduct">Output list product.</param>
         /// <returns>Return object.</returns>
-        public StatisticsOverview GetStatisticsOverview(AccountOverviewCriteria criteria, ref List<Product> listProduct)
+        public StatisticsOverview GetStatisticsOverview(AccountStatisticInfoCriteria criteria, ref List<Product> listProduct)
         {
             Check.Argument.IsNotNull(criteria, "criteria");
             return _accountDataAccess.GetStatisticsOverview(criteria, ref listProduct);
@@ -73,11 +72,13 @@ namespace Fanex.Affiliate.Services.Impl
         /// </summary>
         /// <param name="criteria">Input criteria.</param>
         /// <returns>Return object.</returns>
-        public AccountOverviewViewModel GetCommissionSetting(AccountOverviewCriteria criteria)
+        public AccountOverviewViewModel GetCommissionSetting(AccountCommGroupCriteria criteria)
         {
             Check.Argument.IsNotNull(criteria, "criteria");
             return _accountDataAccess.GetCommissionSetting(criteria);
         }
+
+        #endregion
 
         /// <summary>
         /// Get statement history.
@@ -95,12 +96,11 @@ namespace Fanex.Affiliate.Services.Impl
         /// Get customer information.
         /// </summary>
         /// <param name="criteria">Input criteria.</param>
-        /// <param name="totalPage">Total page for paging.</param>
         /// <returns>Return object list.</returns>
-        public IEnumerable<CustomerInfo> GetCustomerInfo(CustomerInfoCriteria criteria, out int totalPage)
+        public IEnumerable<CustomerInfo> GetCustomerInfo(CustomerInfoCriteria criteria)
         {
             Check.Argument.IsNotNull(criteria, "criteria");
-            return _accountDataAccess.GetCustomerInfo(criteria, out totalPage);
+            return _accountDataAccess.GetCustomerInfo(criteria);
         }
 
         /// <summary>
@@ -108,7 +108,7 @@ namespace Fanex.Affiliate.Services.Impl
         /// </summary>
         /// <param name="criteria">Landing page criteria.</param>
         /// <returns>Return list.</returns>
-        public IEnumerable<TrafficStatistic> GetLandingPagesStatistics(ClicksLandingPagesCriteria criteria)
+        public IEnumerable<TrafficStatistic> GetLandingPagesStatistics(LandingPagesByPageCriteria criteria)
         {
             Check.Argument.IsNotNull(criteria, "criteria");
             return GetData<TrafficStatistic>(criteria);
@@ -120,7 +120,7 @@ namespace Fanex.Affiliate.Services.Impl
         /// <param name="criteria">Landing page criteria.</param>
         /// <param name="totalPage">Total page for paging.</param>
         /// <returns>Return list.</returns>
-        public IEnumerable<ClicksLandingPagesDetail> GetLandingPagesStatisticsDetail(ClicksLandingPagesCriteria criteria, ref int totalPage)
+        public IEnumerable<ClicksLandingPagesDetail> GetLandingPagesStatisticsDetail(LandingPagesBySiteCriteria criteria, ref int totalPage)
         {
             Check.Argument.IsNotNull(criteria, "criteria");
             return GetData<ClicksLandingPagesDetail>(criteria, ref totalPage);
@@ -153,24 +153,22 @@ namespace Fanex.Affiliate.Services.Impl
         /// Get Daily Earnings.
         /// </summary>
         /// <param name="criteria">Input criteria.</param>
-        /// <param name="affCurrency">Affiliate currency.</param>
         /// <returns>List of daily earning.</returns>
-        public IEnumerable<DailyEarning> GetDailyEarnings(DailyEarningCriteria criteria, out string affCurrency)
+        public IEnumerable<DailyEarning> GetDailyEarnings(DailyEarningCriteria criteria)
         {
             Check.Argument.IsNotNull(criteria, "criteria");
-            return _accountDataAccess.GetDailyEarnings(criteria, out affCurrency);
+            return _accountDataAccess.GetDailyEarnings(criteria);
         }
 
         /// <summary>
         /// Get Daily Earnings Detail.
         /// </summary>
         /// <param name="criteria">Input criteria.</param>
-        /// <param name="affCurrency">Affiliate currency.</param>
         /// <returns>List of daily earning.</returns>
-        public IEnumerable<DailyEarningsDetail> GetDailyEarningsDetail(DailyEarningsDetailCriteria criteria, out string affCurrency)
+        public IEnumerable<DailyEarningsDetail> GetDailyEarningsDetail(DailyEarningsDetailCriteria criteria)
         {
             Check.Argument.IsNotNull(criteria, "criteria");
-            return _accountDataAccess.GetDailyEarningsDetail(criteria, out affCurrency);
+            return _accountDataAccess.GetDailyEarningsDetail(criteria);
         }
 
         #region Change Password

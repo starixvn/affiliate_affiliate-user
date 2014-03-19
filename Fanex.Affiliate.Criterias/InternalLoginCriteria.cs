@@ -7,7 +7,7 @@
 //   <change who="Leo.Vo" date="2013.07.03">Created</change>
 // </history>
 
-namespace Fanex.Affiliate.Criterias
+namespace Fanex.Affiliate.Criteria
 {
     using NAP.Framework.Data;
 
@@ -31,6 +31,8 @@ namespace Fanex.Affiliate.Criterias
         public int CurrencyId { get; set; }
 
         public int InputAffType { get; set; }
+
+        public int ErrorCode { get; set; }
 
         /// <summary>
         /// Get SP name.

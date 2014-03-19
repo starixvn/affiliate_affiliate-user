@@ -73,17 +73,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountOverviewCriteria.cs" />
-    <Compile Include="AdminLoginCriteria.cs" />
-    <Compile Include="AuthenticateUserCriteria.cs" />
-    <Compile Include="BannerTypeCriteria.cs" />
-    <Compile Include="ChangePasswordCriteria.cs" />
-    <Compile Include="BannerCriteria.cs" />
-    <Compile Include="BetListCriteria.cs" />
-    <Compile Include="BalanceUpMoveBetCriteria.cs" />
-    <Compile Include="BetListResultsCriteria.cs" />
-    <Compile Include="BetListResultsRNGCasinoDetailCriteria.cs" />
-    <Compile Include="BetListResultsRNGCasinoCriteria.cs" />
+    <Compile Include="AccountOverview\AccountCommGroupCriteria.cs" />
+    <Compile Include="AccountOverview\AccountStatisticInfoCriteria.cs" />
+    <Compile Include="AffBanner\BannerInfoCriteria.cs" />
+    <Compile Include="LogIn\AdminLoginCriteria.cs" />
+    <Compile Include="LogIn\AffiliateLoginCriteria.cs" />
+    <Compile Include="MarketingTools\BannerTypeCriteria.cs" />
+    <Compile Include="AccountActions\ChangePasswordCriteria.cs" />
+    <Compile Include="AffBanner\BannerUpdateStatisticCriteria.cs" />
+    <Compile Include="BetList\BetListCriteria.cs" />
+    <Compile Include="BetList\BalanceUpMoveBetCriteria.cs" />
+    <Compile Include="BetList\BetListResultsCriteria.cs" />
+    <Compile Include="BetList\BetListResultsRNGCasinoDetailCriteria.cs" />
+    <Compile Include="BetList\BetListResultsRNGCasinoCriteria.cs" />
     <Compile Include="ExchangeRateCriteria.cs" />
     <Compile Include="CustomerInfoCriteria.cs" />
     <Compile Include="DailyEarningsDetailCriteria.cs" />
@@ -102,9 +104,10 @@
     <Compile Include="InternalLoginCriteria.cs" />
     <Compile Include="PaymentPlayerInfoCriteria.cs" />
     <Compile Include="PaymentRequestCriteria.cs" />
-    <Compile Include="ClicksLandingPagesCriteria.cs" />
+    <Compile Include="TrafficStatistics\LandingPagesBySiteCriteria.cs" />
     <Compile Include="ProductCriteria.cs" />
     <Compile Include="SystemDateTimeCriteria.cs" />
+    <Compile Include="TrafficStatistics\LandingPagesByPageCriteria.cs" />
     <Compile Include="UserCriteria.cs" />
     <Compile Include="ForgetPasswordCriteria.cs" />
     <Compile Include="LogOutUserCriteria.cs" />
@@ -151,6 +154,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -11,7 +11,7 @@ namespace Fanex.Affiliate.Services.Impl
 {
     using System.Collections.Generic;
     using Common.Helper;
-    using Criterias;
+    using Criteria;
     using DTO;
     using Interface;
 

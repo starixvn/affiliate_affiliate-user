@@ -11,7 +11,7 @@
 namespace Fanex.Affiliate.Services.Interface
 {
     using System.Collections.Generic;
-    using Criterias;
+    using Criteria;
     using DTO;
     using DTO.BetList;
     using Fanex.BetList.Core.Entities;

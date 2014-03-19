@@ -7,7 +7,7 @@
 //   <change who="Kaden.Trinh" date="2013.06.10">Created and add Properties</change>
 //   <change who="Kaden.Trinh" date="2013.07.01">One model for 3 Sps: select, insert, update</change>
 // </history>
-namespace Fanex.Affiliate.Criterias
+namespace Fanex.Affiliate.Criteria
 {
     using System.Web.Mvc;
     using NAP.Framework.Data;

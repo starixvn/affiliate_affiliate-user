@@ -2,7 +2,7 @@
     ViewBag.Title = Lang.ContactUs;
     Layout = string.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
 }
-@model Fanex.Affiliate.Criterias.ContactUsCriteria
+@model Fanex.Affiliate.Criteria.ContactUsCriteria
 @using (Html.BeginForm())
 {
     var classThai = AppSession.Language.Equals("th-TH") ? AppSession.Language : string.Empty;

@@ -12,7 +12,7 @@ namespace Fanex.Affiliate.Services.Impl
 {
     using Common;
     using Common.Helper;
-    using Criterias;
+    using Criteria;
     using DataAccess.Impl;
     using DataAccess.Interface;
     using DTO;
@@ -60,7 +60,7 @@ namespace Fanex.Affiliate.Services.Impl
         /// <param name="criteria">Input criteria.</param>
         /// <param name="errCode">Error code.</param>
         /// <returns>Return object user.</returns>
-        public User AuthenticateUser(AuthenticateUserCriteria criteria, ref int errCode)
+        public User AuthenticateUser(AffiliateLoginCriteria criteria, ref int errCode)
         {
             Check.Argument.IsNotNull(criteria, "criteria");
             criteria.Password = Cryptography.CfsEnCode(criteria.Password);

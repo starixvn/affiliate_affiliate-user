@@ -1497,9 +1497,9 @@
       <Project>{4F075C0D-F1A9-4603-A62D-D30AC4454C96}</Project>
       <Name>Fanex.Affiliate.Controllers</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Fanex.Affiliate.Criterias\Fanex.Affiliate.Criterias.csproj">
+    <ProjectReference Include="..\Fanex.Affiliate.Criterias\Fanex.Affiliate.Criteria.csproj">
       <Project>{F514AD89-3B07-486D-A0AF-1CF5569BCF0E}</Project>
-      <Name>Fanex.Affiliate.Criterias</Name>
+      <Name>Fanex.Affiliate.Criteria</Name>
     </ProjectReference>
     <ProjectReference Include="..\Fanex.Affiliate.DTO\Fanex.Affiliate.DTO.csproj">
       <Project>{9E0AFD07-A5ED-430B-AB87-8045B051436A}</Project>
@@ -1549,7 +1549,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2013/9/16" />
+      <UserProperties BuildVersion_StartDate="2013/9/16" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

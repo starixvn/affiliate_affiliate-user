@@ -12,7 +12,7 @@ namespace Fanex.Affiliate.Services.Impl
 {
     using Caching;
     using Configurations;
-    using Criterias;
+    using Criteria;
     using DataAccess.Impl;
     using DataAccess.Interface;
     using DTO;

@@ -120,7 +120,7 @@
     <Compile Include="Country.cs" />
     <Compile Include="GroupSetting.cs" />
     <Compile Include="Language.cs" />
-    <Compile Include="StatisticsOverview.cs" />
+    <Compile Include="AccountOverview\StatisticsOverview.cs" />
     <Compile Include="Marketing.cs" />
     <Compile Include="Payment.cs" />
     <Compile Include="Product.cs" />

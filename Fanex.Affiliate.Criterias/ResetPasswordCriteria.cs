@@ -8,10 +8,9 @@
 //   <change who="" date=""></change>
 // </history>
 
-namespace Fanex.Affiliate.Criterias
+namespace Fanex.Affiliate.Criteria
 {
     using System.ComponentModel.DataAnnotations;
-    using System.Diagnostics.CodeAnalysis;
     using Fanex.Affiliate.Resources;
     using NAP.Framework.Data;
 

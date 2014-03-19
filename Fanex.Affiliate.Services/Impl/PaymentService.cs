@@ -11,7 +11,7 @@
 namespace Fanex.Affiliate.Services.Impl
 {
     using Common.Helper;
-    using Criterias;
+    using Criteria;
     using DataAccess.Impl;
     using DataAccess.Interface;
     using Interface;

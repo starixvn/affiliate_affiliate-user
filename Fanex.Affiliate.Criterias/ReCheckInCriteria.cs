@@ -6,7 +6,7 @@
 // <history>
 //   <change who="Kaden.Trinh" date="2013.06.07">Created</change>
 // </history>
-namespace Fanex.Affiliate.Criterias
+namespace Fanex.Affiliate.Criteria
 {
     using NAP.Framework.Data;
 
@@ -16,6 +16,8 @@ namespace Fanex.Affiliate.Criterias
     public class ReCheckInCriteria : CriteriaBase
     {
         public int OnUserID { get; set; }
+
+        public bool IsKickedOut { get; set; }
 
         /// <summary>
         /// Get SP name.

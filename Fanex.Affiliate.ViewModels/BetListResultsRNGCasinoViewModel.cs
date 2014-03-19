@@ -11,7 +11,7 @@
 namespace Fanex.Affiliate.ViewModels
 {
     using System.Collections.Generic;
-    using Criterias;
+    using Criteria;
     using DTO.BetList;
 
     /// <summary>

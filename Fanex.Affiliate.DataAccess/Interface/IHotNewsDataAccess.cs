@@ -9,7 +9,7 @@
 // </history>
 namespace Fanex.Affiliate.DataAccess.Interface
 {
-    using Criterias;
+    using Criteria;
     using DTO;
 
     /// <summary>

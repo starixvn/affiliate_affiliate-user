@@ -15,7 +15,7 @@ namespace Fanex.Affiliate.Banner.Controllers
     using System.Text;
     using System.Text.RegularExpressions;
     using System.Web.Mvc;
-    using Criterias;
+    using Criteria;
     using DTO;
     using Fanex.Affiliate.Services.Impl;
     using Fanex.Affiliate.Services.Interface;
@@ -97,7 +97,7 @@ namespace Fanex.Affiliate.Banner.Controllers
         {
             try
             {
-                _systemName = _bannerService.BannerGetSystemName("Aff_BannerGetSystemName");
+                _systemName = _bannerService.BannerGetSystemName("Aff_Banner_GetSystemName");
 
                 var scriptContent = ReadFile(Server.MapPath("~/Scripts/" + AFFMEDIAJS));
                 scriptContent = scriptContent.Replace("{requesttime}", ConfigurationManager.AppSettings["RequestTime"]);
@@ -126,7 +126,7 @@ namespace Fanex.Affiliate.Banner.Controllers
         /// <returns>Content result.</returns>
         public ContentResult Refresh(int id, string signuplink)
         {
-            _systemName = _bannerService.BannerGetSystemName("Aff_BannerGetSystemName");
+            _systemName = _bannerService.BannerGetSystemName("Aff_Banner_GetSystemName");
             var bannerInfo = GetFirstBannerRowInfo(id);
             if (bannerInfo != null)
             {
@@ -235,10 +235,9 @@ namespace Fanex.Affiliate.Banner.Controllers
         /// <param name="bannerID">Input Banner ID.</param>
         public void BannerUpdateSatistic(int bannerID)
         {
-            var criteria = new BannerCriteria
+            var criteria = new BannerUpdateStatisticCriteria
             {
-                BannerID = bannerID,
-                IsUpdateBanner = true
+                BannerID = bannerID
             };
 
             _bannerService.BannerUpdateStatistic(criteria);
@@ -251,10 +250,9 @@ namespace Fanex.Affiliate.Banner.Controllers
         /// <returns>Banner data object.</returns>
         public Banner GetFirstBannerRowInfo(int bannerID)
         {
-            var criteria = new BannerCriteria
+            var criteria = new BannerInfoCriteria
             {
-                BannerID = bannerID,
-                IsUpdateBanner = false
+                BannerID = bannerID
             };
 
             return _bannerService.BannerSelectInfo(criteria);

@@ -8,7 +8,7 @@
 //   <change who="" date=""></change>
 // </history>
 
-namespace Fanex.Affiliate.Criterias
+namespace Fanex.Affiliate.Criteria
 {
     using System;
     using System.ComponentModel;
@@ -25,6 +25,9 @@ namespace Fanex.Affiliate.Criterias
         public int ToCurrency { get; set; }
 
         public DateTime Date { get; set; }
+
+        [SpParam(Ignored = true)]
+        public float Rate { get; set; }
 
         /// <summary>
         /// Get SP name.

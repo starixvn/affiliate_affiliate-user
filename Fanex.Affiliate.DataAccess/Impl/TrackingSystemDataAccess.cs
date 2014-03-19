@@ -11,7 +11,7 @@
 namespace Fanex.Affiliate.DataAccess.Impl
 {
     using System;
-    using Criterias;
+    using Criteria;
     using Data;
     using Interface;
 

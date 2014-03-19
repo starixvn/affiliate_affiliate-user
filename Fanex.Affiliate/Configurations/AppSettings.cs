@@ -18,7 +18,7 @@ namespace Fanex.Affiliate.Configurations
     using System.Globalization;
     using System.Linq;
     using Caching;
-    using Criterias;
+    using Criteria;
     using DTO;
     using Logging;
     using Services.Impl;

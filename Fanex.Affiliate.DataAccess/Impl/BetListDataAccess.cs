@@ -17,7 +17,7 @@ namespace Fanex.Affiliate.DataAccess.Impl
     using System.Diagnostics.CodeAnalysis;
     using System.Globalization;
     using Common.Extensions;
-    using Criterias;
+    using Criteria;
     using Data;
     using DTO;
     using DTO.BetList;
@@ -59,11 +59,6 @@ namespace Fanex.Affiliate.DataAccess.Impl
 
                 // Sum value
                 result.TotalRows = Converter.ToInt(param["totalrows"]);
-                result.SumWinLoss = Converter.ToDecimal(param["sumwinlost"]);
-                result.SumLicenseeWl = Converter.ToDecimal(param["sumlicenseewl" + baseCurrency]);
-                result.SumComm = Converter.ToDecimal(param["sumcomm" + baseCurrency]);
-                result.SumPlayerComm = Converter.ToDecimal(param["sumplayercomm" + baseCurrency]);
-                result.SumStake = Converter.ToDecimal(param["sumstake" + baseCurrency]);
             }
 
             return result;
@@ -363,9 +358,9 @@ namespace Fanex.Affiliate.DataAccess.Impl
             using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
             {
                 var param = criteria.GetSpParams();
-                var ds = objectDb.ExecuteDataSet(param);
-                criteria.BalanceUpDay = DateTime.Parse(ds.Tables[0].Rows[0]["BalanceUpDay"].ToString());
-                criteria.MoveBetsDay = DateTime.Parse(ds.Tables[0].Rows[0]["MoveBetsDay"].ToString());
+                var dataSet = objectDb.ExecuteDataSet(param);
+                criteria.BalanceUpDay = DateTime.Parse(dataSet.Tables[0].Rows[0]["BalanceUpDay"].ToString());
+                criteria.MoveBetsDay = DateTime.Parse(dataSet.Tables[0].Rows[0]["MoveBetsDay"].ToString());
             }
         }
 

@@ -13,7 +13,7 @@
 using Glimpse.AspNet.Extensions;
 using Glimpse.Core.Extensibility;
 
-namespace Fanex.Affiliate.Criterias
+namespace Fanex.Affiliate.Criteria
 {
     public class GlimpseSecurityPolicy:IRuntimePolicy
     {

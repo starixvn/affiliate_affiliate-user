@@ -10,7 +10,7 @@
 
 namespace Fanex.Affiliate.ViewModels
 {
-    using Fanex.Affiliate.Criterias;
+    using Criteria;
 
     /// <summary>
     /// System Parlay Detail View Model class.

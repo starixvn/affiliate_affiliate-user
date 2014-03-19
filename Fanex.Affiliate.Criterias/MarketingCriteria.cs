@@ -8,7 +8,7 @@
 //   <change who="Muller.Nguyen" date="2013.06.28">Add method GetSettingKey</change>
 // </history>
 
-namespace Fanex.Affiliate.Criterias
+namespace Fanex.Affiliate.Criteria
 {
     using NAP.Framework.Data;
 

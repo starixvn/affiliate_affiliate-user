@@ -9,7 +9,7 @@
 namespace Fanex.Affiliate.Services.Impl
 {
     using Common.Helper;
-    using Criterias;
+    using Criteria;
     using DataAccess.Impl;
     using DataAccess.Interface;
     using DTO;
@@ -55,7 +55,7 @@ namespace Fanex.Affiliate.Services.Impl
         /// </summary>
         /// <param name="criteria">Banner criteria.</param>
         /// <returns>Banner data object.</returns>
-        public Banner BannerSelectInfo(BannerCriteria criteria)
+        public Banner BannerSelectInfo(BannerInfoCriteria criteria)
         {
             Check.Argument.IsNotNull(criteria, "criteria");
             return _bannerDataAccess.BannerSelectInfo(criteria);
@@ -65,7 +65,7 @@ namespace Fanex.Affiliate.Services.Impl
         /// Update Banner statistic.
         /// </summary>
         /// <param name="criteria">Banner criteria.</param>
-        public void BannerUpdateStatistic(BannerCriteria criteria)
+        public void BannerUpdateStatistic(BannerUpdateStatisticCriteria criteria)
         {
             Check.Argument.IsNotNull(criteria, "criteria");
             _bannerDataAccess.BannerUpdateStatistic(criteria);

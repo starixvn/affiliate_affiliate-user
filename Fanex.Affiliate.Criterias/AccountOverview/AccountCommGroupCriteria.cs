@@ -1,26 +1,24 @@
 ﻿// ----------------------------------------------------------------------
-// <copyright file="BalanceUpMoveBetCriteria.cs" company="Nexcel Solutions Vietnam">
+// <copyright file="AccountCommGroupCriteria.cs" company="Nexcel Solutions Vietnam">
 //     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
 // </copyright>
 // ------------------------------------------------------------------------
 // <history>
-//   <change who="Long.Luu" date="2013/11/20">Created</change>
+//   <change who="Long.Luu" date="2014/03/19">Created</change>
 //   <change who="" date=""></change>
 // </history>
 
-namespace Fanex.Affiliate.Criterias
+namespace Fanex.Affiliate.Criteria
 {
     using System;
-    using Fanex.NAP.Framework.Data;
+    using NAP.Framework.Data;
 
     /// <summary>
-    /// Bet List Criteria.
+    /// Overview Criteria.
     /// </summary>
-    public class BalanceUpMoveBetCriteria : CriteriaBase
+    public class AccountCommGroupCriteria : CriteriaBase
     {
-        public DateTime MoveBetsDay { get; set; }
-
-        public DateTime BalanceUpDay { get; set; }
+        public int AffId { get; set; }
 
         /// <summary>
         /// Get SP name.
@@ -28,7 +26,12 @@ namespace Fanex.Affiliate.Criterias
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_SelBalanceUpDay";
+            return "Aff_User_CommGroupSelDetail";
+        }
+
+        public override bool IsValid()
+        {
+            return AffId > 0;
         }
     }
 }

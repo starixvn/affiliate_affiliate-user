@@ -20,7 +20,7 @@ namespace Fanex.Affiliate.Controllers
     using System.Web.Routing;
     using System.Web.Security;
     using Configurations;
-    using Criterias;
+    using Criteria;
     using DTO;
     using Enumerations;
     using Resources;
@@ -281,7 +281,7 @@ namespace Fanex.Affiliate.Controllers
                     var errCode = 0;
                     var language = AppSession.Language;
                     var user = _userService.AuthenticateUser(
-                        new AuthenticateUserCriteria
+                        new AffiliateLoginCriteria
                         {
                             Username = username.Trim(),
                             Password = password.Trim(),

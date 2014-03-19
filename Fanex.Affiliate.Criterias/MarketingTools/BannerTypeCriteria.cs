@@ -7,7 +7,7 @@
 //   <change who="Muller.Nguyen" date="2013.06.28">Create</change>
 // </history>
 
-namespace Fanex.Affiliate.Criterias
+namespace Fanex.Affiliate.Criteria
 {
     using NAP.Framework.Data;
 
@@ -39,7 +39,7 @@ namespace Fanex.Affiliate.Criterias
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_BannerSelType";
+            return "Aff_User_BannerSelType";
         }
     }
 }

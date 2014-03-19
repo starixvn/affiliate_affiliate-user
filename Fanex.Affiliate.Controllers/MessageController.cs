@@ -11,7 +11,7 @@ namespace Fanex.Affiliate.Controllers
 {
     using System.Web.Mvc;
     using Configurations;
-    using Criterias;
+    using Criteria;
     using Services.Interface;
     using ViewModels;
     using Web;

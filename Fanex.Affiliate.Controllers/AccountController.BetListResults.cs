@@ -18,7 +18,7 @@ namespace Fanex.Affiliate.Controllers
     using System.Web.Mvc;
     using System.Web.Script.Serialization;
     using Configurations;
-    using Criterias;
+    using Criteria;
     using DTO;
     using DTO.BetList;
     using Enumerations;
@@ -250,6 +250,7 @@ namespace Fanex.Affiliate.Controllers
                     detailHeaderItem.CoinSizeAmount = FormaterCurrency.Format(decimal.Parse(detailHeaderItem.CoinSizeAmount));
                     detailHeaderItem.CoinSizeAmount += " X" + coinSizeAmountParts[1];
                 }
+
                 detailHeaderItem.WinBaseCurrencyValue *= CurrentSession.ExchangeRate;
                 detailHeaderItem.WinLossResult = string.IsNullOrEmpty(detailHeaderItem.WinLossResult.Trim())
                     ? "0.00"

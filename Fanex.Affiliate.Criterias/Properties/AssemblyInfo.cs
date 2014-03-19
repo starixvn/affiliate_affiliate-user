@@ -13,11 +13,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Fanex.Affiliate.Criterias")]
+[assembly: AssemblyTitle("Fanex.Affiliate.Criteria")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("Fanex.Affiliate.Criterias")]
+[assembly: AssemblyProduct("Fanex.Affiliate.Criteria")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

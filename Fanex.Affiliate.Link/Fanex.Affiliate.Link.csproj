@@ -251,9 +251,9 @@
     <Content Include="Views\Home\Link.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Fanex.Affiliate.Criterias\Fanex.Affiliate.Criterias.csproj">
+    <ProjectReference Include="..\Fanex.Affiliate.Criterias\Fanex.Affiliate.Criteria.csproj">
       <Project>{F514AD89-3B07-486D-A0AF-1CF5569BCF0E}</Project>
-      <Name>Fanex.Affiliate.Criterias</Name>
+      <Name>Fanex.Affiliate.Criteria</Name>
     </ProjectReference>
     <ProjectReference Include="..\Fanex.Affiliate.DataAccess\Fanex.Affiliate.DataAccess.csproj">
       <Project>{E9A307C0-57A3-4689-86AE-DFF6CFA1E5B7}</Project>

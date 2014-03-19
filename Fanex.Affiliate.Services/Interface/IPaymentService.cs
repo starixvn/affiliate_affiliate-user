@@ -10,7 +10,7 @@
 // </history>
 namespace Fanex.Affiliate.Services.Interface
 {
-    using Criterias;
+    using Criteria;
     using ViewModels;
 
     /// <summary>

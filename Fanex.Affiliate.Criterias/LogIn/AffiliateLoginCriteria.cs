@@ -1,12 +1,13 @@
 ﻿// --------------------------------------------------------------------------
-// <copyright file="AuthenticateUserCriteria.cs" company="Nexcel Solutions Vietnam">
+// <copyright file="AffiliateLoginCriteria.cs" company="Nexcel Solutions Vietnam">
 // Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------
 // <history>
 //   <change who="Kaden.Trinh" date="2013.05.30">Created</change>
 // </history>
-namespace Fanex.Affiliate.Criterias
+
+namespace Fanex.Affiliate.Criteria
 {
     using System.Web.Mvc;
     using NAP.Framework.Data;
@@ -14,7 +15,7 @@ namespace Fanex.Affiliate.Criterias
     /// <summary>
     /// Authenticate User Criteria.
     /// </summary>
-    public class AuthenticateUserCriteria : CriteriaBase
+    public class AffiliateLoginCriteria : CriteriaBase
     {
         [AllowHtml]
         public string Username { get; set; }
@@ -26,14 +27,43 @@ namespace Fanex.Affiliate.Criterias
 
         public string Language { get; set; }
 
-        public int ServerId { get; set; }
-
         public int InputAffType { get; set; }
+
+        public int ServerId { get; set; }
 
         public string NetSessionID { get; set; }
 
         [SpParam(Ignored = true)]
         public string Captcha { get; set; }
+
+        // Output parameters
+        public int OnUserID { get; set; }
+
+        public int AffId { get; set; }
+
+        public string FirstName { get; set; }
+
+        public string LastName { get; set; }
+
+        public string Email { get; set; }
+
+        public bool MailOption { get; set; }
+
+        public string PreferLang { get; set; }
+
+        public bool HasSecurityQuestion { get; set; }
+
+        public bool IsAllowedPersonalizedPage { get; set; }
+
+        public int AffLevel { get; set; }
+
+        public int AffType { get; set; }
+
+        public string Currency { get; set; }
+
+        public int CurrencyID { get; set; }
+
+        public int ErrCode { get; set; }
 
         /// <summary>
         /// Get SP name.
@@ -41,7 +71,7 @@ namespace Fanex.Affiliate.Criterias
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_AffiliateLogin";
+            return "Aff_User_AffiliateLogin";
         }
 
         public override bool IsValid()

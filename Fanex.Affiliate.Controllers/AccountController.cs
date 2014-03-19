@@ -14,22 +14,14 @@ namespace Fanex.Affiliate.Controllers
 {
     using System;
     using System.Collections.Generic;
-    using System.Diagnostics.CodeAnalysis;
     using System.Linq;
     using System.Net;
-    using System.Runtime.InteropServices;
     using System.Text.RegularExpressions;
     using System.Web.Mvc;
-    using System.Web.Script.Serialization;
-    using Caching;
     using Configurations;
-    using Criterias;
+    using Criteria;
     using DTO;
-    using DTO.BetList;
     using Enumerations;
-    using Fanex.BetList.Core.Builder;
-    using Fanex.BetList.Core.Entities;
-    using Fanex.BetList.Core.TicketHelper;
     using Resources;
     using Services.Impl;
     using Services.Interface;
@@ -190,7 +182,6 @@ namespace Fanex.Affiliate.Controllers
             };
 
             var model = new DailyEarningsKioskViewModel();
-            string affCurrency;
 
             criteria.AffId = CurrentSession.AffId;
             if (criteria.FromDate != null)
@@ -206,8 +197,8 @@ namespace Fanex.Affiliate.Controllers
             model.ListProduct = ProductService.GetProductList(productCriteria).ToList();
             model.ListProduct.ForEach(i => i.ProductName = ProductsFormatter.Format(i.ProductName));
             model.ProductId = criteria.ProductId;
-            model.ListDailyEarning = AccountService.GetDailyEarnings(criteria, out affCurrency).ToList();
-            FormaterCurrency.SetDefaultCurrency(affCurrency);
+            model.ListDailyEarning = AccountService.GetDailyEarnings(criteria).ToList();
+            FormaterCurrency.SetDefaultCurrency(criteria.AffCurrency);
 
             return View(model);
         }
@@ -252,7 +243,6 @@ namespace Fanex.Affiliate.Controllers
             };
 
             var model = new DailyEarningsKioskDetailViewModel();
-            string affCurrency;
             model.ListProduct = ProductService.GetProductList(productCriteria).ToList();
             model.ListProduct.ForEach(i => i.ProductName = ProductsFormatter.Format(i.ProductName));
             if (criteria.MonthDate != null)
@@ -262,8 +252,8 @@ namespace Fanex.Affiliate.Controllers
             
             criteria.AffId = CurrentSession.AffId;
             model.ProductId = criteria.ProductId;
-            model.ListDailyEarningDetail = AccountService.GetDailyEarningsDetail(criteria, out affCurrency).ToList();
-            FormaterCurrency.SetDefaultCurrency(affCurrency);
+            model.ListDailyEarningDetail = AccountService.GetDailyEarningsDetail(criteria).ToList();
+            FormaterCurrency.SetDefaultCurrency(criteria.AffCurrency);
             ViewBag.AffiliateCurrency = CurrentSession.Currency;
 
             return View(model);
@@ -284,22 +274,21 @@ namespace Fanex.Affiliate.Controllers
         {
             var itemPerPage = pageSize > 0 ? pageSize : AppSettings.PageSize;
             var currentPageIndex = page;
-            var totalPage = 0;
             var username = CurrentSession.Username.Contains(": [")
                 ? CurrentSession.Username.Substring(0, CurrentSession.Username.IndexOf(":") - 1)
                 : CurrentSession.Username;
-            var criterias = new CustomerInfoCriteria
+            var criteria = new CustomerInfoCriteria
             {
                 AffUsername = username,
                 Username = null,
                 AffType = 0,
                 PageIndex = currentPageIndex,
                 PageSize = itemPerPage,
-                TotalPages = totalPage
+                TotalPages = 0
             };
 
-            var customerInfo = AccountService.GetCustomerInfo(criterias, out totalPage);
-            return View(customerInfo.ToPagedList(currentPageIndex, itemPerPage, totalPage * itemPerPage));
+            var customerInfo = AccountService.GetCustomerInfo(criteria);
+            return View(customerInfo.ToPagedList(currentPageIndex, itemPerPage, criteria.TotalPages * itemPerPage));
         }
 
         #endregion Customer Information Kiosk
@@ -313,7 +302,7 @@ namespace Fanex.Affiliate.Controllers
         [HttpGet]
         public ActionResult Overview()
         {
-            var criteria = new AccountOverviewCriteria
+            var criteria = new AccountStatisticInfoCriteria
             {
                 Month = DateTime.Now.Month,
                 Year = DateTime.Now.Year
@@ -327,31 +316,24 @@ namespace Fanex.Affiliate.Controllers
         /// <param name="criteria">Post criteria.</param>
         /// <returns>Return view.</returns>
         [HttpPost]
-        public ActionResult Overview(AccountOverviewCriteria criteria)
+        public ActionResult Overview(AccountStatisticInfoCriteria criteria)
         {
+            // Get statistics account
             criteria.AffId = CurrentSession.AffId;
-
-            // Get statistics accout
             var listProduct = new List<Product>();
             var statistics = AccountService.GetStatisticsOverview(criteria, ref listProduct);
-
             listProduct.ForEach(i => i.ProductName = ProductsFormatter.Format(i.ProductName));
 
             // Get Current Commission Setting
-            criteria.IsCommSetting = true;
-            var resultCommission = criteria.IsValid() ? AccountService.GetCommissionSetting(criteria) : new AccountOverviewViewModel();
-
-            var model = new AccountOverviewViewModel
-            {
-                Month = criteria.Month,
-                Year = criteria.Year,
-                Statistics = statistics,
-                ListProduct = listProduct,
-                FirstListProduct = listProduct.Count > 0 ? listProduct[0].ProductName : Lang.NA,
-                TotalqualifedMembers = listProduct.Count > 0 ? listProduct[0].TotalQualifiedMembers.ToString() : Lang.NA,
-                ListProductOnCommissionSetting = resultCommission.ListProductOnCommissionSetting,
-                ListGroupSetting = resultCommission.ListGroupSetting,
-            };
+            var commSettingCriteria = new AccountCommGroupCriteria { AffId = CurrentSession.AffId };
+            var model = commSettingCriteria.IsValid() ? AccountService.GetCommissionSetting(commSettingCriteria) : new AccountOverviewViewModel();
+            
+            model.Month = criteria.Month;
+            model.Year = criteria.Year;
+            model.Statistics = statistics;
+            model.ListProduct = listProduct;
+            model.FirstListProduct = listProduct.Count > 0 ? listProduct[0].ProductName : Lang.NA;
+            model.TotalqualifedMembers = listProduct.Count > 0 ? listProduct[0].TotalQualifiedMembers.ToString() : Lang.NA;
 
             return View(model);
         }

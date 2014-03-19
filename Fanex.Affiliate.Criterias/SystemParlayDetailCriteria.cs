@@ -8,7 +8,7 @@
 //   <change who="" date=""></change>
 // </history>
 
-namespace Fanex.Affiliate.Criterias
+namespace Fanex.Affiliate.Criteria
 {
     using System;
     using NAP.Framework.Data;
@@ -33,6 +33,9 @@ namespace Fanex.Affiliate.Criterias
         public DateTime MoveBetsDay { get; set; }
 
         public DateTime BalanceUpDay { get; set; }
+
+        [SpParam(Ignored = true)]
+        public decimal Outstanding { get; set; }
 
         /// <summary>
         /// Get SP name.

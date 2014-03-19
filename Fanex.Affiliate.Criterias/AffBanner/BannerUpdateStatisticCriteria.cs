@@ -1,5 +1,5 @@
 ﻿// ----------------------------------------------------------------------
-// <copyright file="BannerCriteria.cs" company="Nexcel Solutions Vietnam">
+// <copyright file="BannerUpdateStatisticCriteria.cs" company="Nexcel Solutions Vietnam">
 //     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
 // </copyright>
 // ------------------------------------------------------------------------
@@ -8,27 +8,16 @@
 //   <change who="" date=""></change>
 // </history>
 
-namespace Fanex.Affiliate.Criterias
+namespace Fanex.Affiliate.Criteria
 {
     using NAP.Framework.Data;
 
     /// <summary>
-    /// TODO: Update summary.
+    /// Banner Update Statistic Criteria.
     /// </summary>
-    public class BannerCriteria : CriteriaBase
+    public class BannerUpdateStatisticCriteria : CriteriaBase
     {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BannerCriteria"/> class.
-        /// </summary>
-        public BannerCriteria()
-        {
-            IsUpdateBanner = true;
-        }
-
         public int BannerID { get; set; }
-
-        [SpParam(Ignored = true)]
-        public bool IsUpdateBanner { get; set; }
 
         /// <summary>
         /// Get SP name.
@@ -36,7 +25,7 @@ namespace Fanex.Affiliate.Criterias
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return IsUpdateBanner ? "Aff_BannerUpdateStatistic" : "Aff_BannerSelInfo";
+            return "Aff_Banner_UpdateStatistic";
         }
     }
 }

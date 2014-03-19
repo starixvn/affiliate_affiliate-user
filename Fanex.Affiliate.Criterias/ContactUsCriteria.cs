@@ -8,11 +8,10 @@
 //   <change who="" date=""></change>
 // </history>
 
-namespace Fanex.Affiliate.Criterias
+namespace Fanex.Affiliate.Criteria
 {
     using System.ComponentModel.DataAnnotations;
-    using System.Diagnostics.CodeAnalysis;
-    using System.Web.Mvc;   
+    using System.Web.Mvc;
     using Fanex.Affiliate.Resources;
     using NAP.Framework.Data;
 
@@ -34,7 +33,7 @@ namespace Fanex.Affiliate.Criterias
         public string Sender { get; set; }
 
         [AllowHtml]
-        public string Affiliate { get; set; }      
+        public string Affiliate { get; set; }
 
         [Required(ErrorMessageResourceName = "Msg120", ErrorMessageResourceType = typeof(Lang))]
         [RegularExpression(
@@ -64,7 +63,7 @@ namespace Fanex.Affiliate.Criterias
         /// <returns>Store Procedure.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_EmailHistoryIns";
+            return "Aff_User_EmailHistoryIns";
         }
     }
 }

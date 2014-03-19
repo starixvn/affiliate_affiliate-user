@@ -10,7 +10,7 @@
 
 namespace Fanex.Affiliate.DataAccess.Interface
 {
-    using Criterias;
+    using Criteria;
     using DTO;
     using NAP.Framework.Data;
     using ViewModels;
@@ -26,7 +26,7 @@ namespace Fanex.Affiliate.DataAccess.Interface
         /// <param name="criteria">User Authenticate criteria.</param>
         /// <param name="errCode">Reference error code.</param>
         /// <returns>User model.</returns>
-        User AuthenticateUser(AuthenticateUserCriteria criteria, ref int errCode);
+        User AuthenticateUser(AffiliateLoginCriteria criteria, ref int errCode);
 
         /// <summary>
         /// Check Is kicked out.

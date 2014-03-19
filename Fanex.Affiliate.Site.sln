@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanex.Affiliate.Resources",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanex.Affiliate.Site", "Fanex.Affiliate.Site\Fanex.Affiliate.Site.csproj", "{FA9EC601-E548-4477-B01B-186637ED2A34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanex.Affiliate.Criterias", "Fanex.Affiliate.Criterias\Fanex.Affiliate.Criterias.csproj", "{F514AD89-3B07-486D-A0AF-1CF5569BCF0E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanex.Affiliate.Criteria", "Fanex.Affiliate.Criterias\Fanex.Affiliate.Criteria.csproj", "{F514AD89-3B07-486D-A0AF-1CF5569BCF0E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanex.Affiliate.DTO", "Fanex.Affiliate.DTO\Fanex.Affiliate.DTO.csproj", "{9E0AFD07-A5ED-430B-AB87-8045B051436A}"
 EndProject

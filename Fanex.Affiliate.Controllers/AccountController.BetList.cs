@@ -16,7 +16,7 @@ namespace Fanex.Affiliate.Controllers
     using System.Web.Mvc;
     using System.Web.Script.Serialization;
     using Configurations;
-    using Criterias;
+    using Criteria;
     using DTO.BetList;
     using Enumerations;
     using Fanex.BetList.Core.Builder;

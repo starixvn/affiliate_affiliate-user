@@ -11,7 +11,7 @@
 namespace Fanex.Affiliate.DataAccess.Interface
 {
     using System.Collections.Generic;
-    using Criterias;
+    using Criteria;
     using DTO;
     using DTO.BetList;
     using Fanex.BetList.Core.Entities;
@@ -22,36 +22,37 @@ namespace Fanex.Affiliate.DataAccess.Interface
     /// </summary>
     public interface IAccountDataAccess
     {
+        #region Account Overview
         /// <summary>
         /// Get statistics for Affiliate.
         /// </summary>
         /// <param name="criteria">Input criteria.</param>
         /// <param name="listProduct">Output list product.</param>
         /// <returns>Return object.</returns>
-        StatisticsOverview GetStatisticsOverview(AccountOverviewCriteria criteria, ref List<Product> listProduct);
+        StatisticsOverview GetStatisticsOverview(AccountStatisticInfoCriteria criteria, ref List<Product> listProduct);
 
         /// <summary>
         /// Get Current Commission Setting.
         /// </summary>
         /// <param name="criteria">Input criteria.</param>
         /// <returns>Return object.</returns>
-        AccountOverviewViewModel GetCommissionSetting(AccountOverviewCriteria criteria);
+        AccountOverviewViewModel GetCommissionSetting(AccountCommGroupCriteria criteria);
+
+        #endregion
 
         /// <summary>
         /// Get Daily Earnings.
         /// </summary>
         /// <param name="criteria">Input criteria.</param>
-        /// <param name="affCurrency">Out affiliate currency.</param>
         /// <returns>List of daily earning.</returns>
-        IEnumerable<DailyEarning> GetDailyEarnings(DailyEarningCriteria criteria, out string affCurrency);
+        IEnumerable<DailyEarning> GetDailyEarnings(DailyEarningCriteria criteria);
 
         /// <summary>
         /// Get Daily Earnings Detail.
         /// </summary>
         /// <param name="criteria">Input criteria.</param>
-        /// <param name="affCurrency">Out affiliate currency.</param>
         /// <returns>List of daily earning detail.</returns>
-        IEnumerable<DailyEarningsDetail> GetDailyEarningsDetail(DailyEarningsDetailCriteria criteria, out string affCurrency);
+        IEnumerable<DailyEarningsDetail> GetDailyEarningsDetail(DailyEarningsDetailCriteria criteria);
 
         /// <summary>
         /// Changes the password.
@@ -70,8 +71,7 @@ namespace Fanex.Affiliate.DataAccess.Interface
         /// Get Customer Info.
         /// </summary>
         /// <param name="criteria">Input criteria.</param>
-        /// <param name="totalPage">Total page for paging.</param>
         /// <returns>Customer Info Model.</returns>
-        IEnumerable<CustomerInfo> GetCustomerInfo(CustomerInfoCriteria criteria, out int totalPage);
+        IEnumerable<CustomerInfo> GetCustomerInfo(CustomerInfoCriteria criteria);
     }
 }

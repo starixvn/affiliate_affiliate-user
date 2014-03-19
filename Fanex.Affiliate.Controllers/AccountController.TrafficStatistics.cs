@@ -18,7 +18,7 @@ namespace Fanex.Affiliate.Controllers
     using System.Linq;
     using System.Web.Mvc;
     using Configurations;
-    using Criterias;
+    using Criteria;
     using DTO;
     using ViewModels;
     using Web.Pager;
@@ -28,7 +28,7 @@ namespace Fanex.Affiliate.Controllers
     /// </summary>
     public partial class AccountController
     {
-        #region Statistics Clicks Landing Pages
+        #region Traffic Statistics - Clicks Landing Pages
 
         /// <summary>
         ///     Traffic statistics landing pages.
@@ -39,7 +39,7 @@ namespace Fanex.Affiliate.Controllers
         {
             var destinateDate = DateTime.Now.Date;
             var startDate = destinateDate.AddMonths(-1);
-            var criteria = new ClicksLandingPagesCriteria
+            var criteria = new LandingPagesByPageCriteria
             {
                 AffId = CurrentSession.AffId,
                 FromDate = startDate,
@@ -56,7 +56,7 @@ namespace Fanex.Affiliate.Controllers
         /// <returns>Return view.</returns>
         [HttpPost]
         [ValidateInput(true)]
-        public ActionResult LandingPages(ClicksLandingPagesCriteria criteria)
+        public ActionResult LandingPages(LandingPagesByPageCriteria criteria)
         {
             var pageList = SystemSettingService.ListSystemSetting(new SystemSettingCriteria
             {
@@ -70,7 +70,7 @@ namespace Fanex.Affiliate.Controllers
             {
                 var destinateDate = DateTime.Now.Date;
                 var startDate = destinateDate.AddMonths(-1);
-                criteria = new ClicksLandingPagesCriteria
+                criteria = new LandingPagesByPageCriteria
                 {
                     AffId = CurrentSession.AffId,
                     FromDate = startDate,
@@ -98,7 +98,7 @@ namespace Fanex.Affiliate.Controllers
         /// <param name="criteria">The criteria.</param>
         /// <returns>Return view.</returns>
         [HttpGet]
-        public ActionResult LandingPagesDetail(ClicksLandingPagesCriteria criteria)
+        public ActionResult LandingPagesDetail(LandingPagesBySiteCriteria criteria)
         {
             var itemPerPage = criteria.PageSize > 0 ? criteria.PageSize : AppSettings.PageSize;
             var currentPageIndex = criteria.Page > 0 ? criteria.Page : 1;
@@ -107,7 +107,6 @@ namespace Fanex.Affiliate.Controllers
             criteria.AffId = CurrentSession.AffId;
             criteria.PageSize = itemPerPage;
             criteria.Page = currentPageIndex;
-            criteria.IsDetail = true;
             var data = AccountService.GetLandingPagesStatisticsDetail(criteria, ref totalPage);
 
             return View(data.ToPagedList(currentPageIndex, itemPerPage, totalPage * itemPerPage));
@@ -115,7 +114,7 @@ namespace Fanex.Affiliate.Controllers
 
         #endregion Statistics Clicks Landing Pages
 
-        #region Statistics Referrers Pages
+        #region Traffic Statistics - Referrers Pages
 
         /// <summary>
         ///     Statistics Referrers Pages.

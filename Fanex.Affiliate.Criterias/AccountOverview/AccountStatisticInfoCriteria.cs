@@ -1,12 +1,14 @@
-﻿// --------------------------------------------------------------------------
-// <copyright file="AccountOverviewCriteria.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
+﻿// ----------------------------------------------------------------------
+// <copyright file="AccountStatisticInfoCriteria.cs" company="Nexcel Solutions Vietnam">
+//     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
 // </copyright>
-// --------------------------------------------------------------------------
+// ------------------------------------------------------------------------
 // <history>
-//   <change who="Kaden.Trinh" date="2013.06.10">Created and add Properties</change>
+//   <change who="Long.Luu" date="2014/03/19">Created</change>
+//   <change who="" date=""></change>
 // </history>
-namespace Fanex.Affiliate.Criterias
+
+namespace Fanex.Affiliate.Criteria
 {
     using System;
     using NAP.Framework.Data;
@@ -14,7 +16,7 @@ namespace Fanex.Affiliate.Criterias
     /// <summary>
     /// Overview Criteria.
     /// </summary>
-    public class AccountOverviewCriteria : CriteriaBase
+    public class AccountStatisticInfoCriteria : CriteriaBase
     {
         public int AffId { get; set; }
 
@@ -33,22 +35,16 @@ namespace Fanex.Affiliate.Criterias
         [SpParam(Ignored = true)]
         public int Year { get; set; }
 
-        [SpParam(Ignored = true)]
-        public bool IsCommSetting { get; set; }
-
+        // Output parameters
         public int TotalActivePlayer { get; set; }
 
         public int TotalPlayerDepUp { get; set; }
 
-        public int TotalPlayer { get; set; }
+        public int NewSignUpDep { get; set; }
 
         public int NewSignUp { get; set; }
 
-        public int NewSignUpDep { get; set; }
-
-        public int TotalUniqueClicks { get; set; }
-
-        public int TotalClicks { get; set; }
+        public int TotalPlayer { get; set; }
 
         public decimal BalBroughtforward { get; set; }
 
@@ -64,13 +60,17 @@ namespace Fanex.Affiliate.Criterias
 
         public decimal TotalWinlost { get; set; }
 
+        public int TotalUniqueClicks { get; set; }
+
+        public int TotalClicks { get; set; }
+
         /// <summary>
         /// Get SP name.
         /// </summary>
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return IsCommSetting ? "Aff_CommGroupSelDetail" : "Aff_StatisticsSel";
+            return "Aff_User_StatisticsSel";
         }
 
         public override bool IsValid()

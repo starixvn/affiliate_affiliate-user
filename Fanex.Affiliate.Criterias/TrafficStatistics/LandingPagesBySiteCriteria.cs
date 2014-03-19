@@ -1,13 +1,14 @@
-﻿// --------------------------------------------------------------------------
-// <copyright file="ClicksLandingPagesCriteria.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
+﻿// ----------------------------------------------------------------------
+// <copyright file="LandingPagesBySiteCriteria.cs" company="Nexcel Solutions Vietnam">
+//     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
 // </copyright>
-// --------------------------------------------------------------------------
+// ------------------------------------------------------------------------
 // <history>
-//   <change who="Leo.Vo" date="2013.06.29">Created</change>
+//   <change who="Long.Luu" date="2014/03/19">Created</change>
+//   <change who="" date=""></change>
 // </history>
 
-namespace Fanex.Affiliate.Criterias
+namespace Fanex.Affiliate.Criteria
 {
     using System;
     using System.ComponentModel.DataAnnotations;
@@ -15,35 +16,33 @@ namespace Fanex.Affiliate.Criterias
     using Resources;
 
     /// <summary>
-    /// TODO: Update summary.
+    /// Landing Pages By Site Criteria.
     /// </summary>
-    public class ClicksLandingPagesCriteria : CriteriaBase
+    public class LandingPagesBySiteCriteria : CriteriaBase
     {
         public int AffId { get; set; }
+
+        public string Domain { get; set; }
 
         [SpParam(SqlParamName = "SportCode")]
         public string PageSelected { get; set; }
 
         [SpParam(SqlParamName = "LanguageCode")]
         public string LanguageSelected { get; set; }
-
-        public string Domain { get; set; }
-
-        [SpParam(Ignored = true)]
-        public bool IsDetail { get; set; }
-
+        
         [Required(ErrorMessageResourceName = "FromDateIsRequired", ErrorMessageResourceType = typeof(Lang))]
         public DateTime FromDate { get; set; }
 
         [Required(ErrorMessageResourceName = "ToDateIsRequired", ErrorMessageResourceType = typeof(Lang))]
         public DateTime ToDate { get; set; }
 
+        public int PageSize { get; set; }
+
         [SpParam(SqlParamName = "PageIndex")]
         public int Page { get; set; }
 
+        // Output parameters
         public int TotalPages { get; set; }
-
-        public int PageSize { get; set; }
 
         /// <summary>
         /// Get SP name.
@@ -51,12 +50,12 @@ namespace Fanex.Affiliate.Criterias
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return IsDetail ? "Aff_ClickStatisticsDetailBySite" : "Aff_ClickStatisticsSelByPage";
+            return "Aff_User_ClickStatisticsDetailBySite";
         }
 
         public override bool IsValid()
         {
-            return FromDate <= ToDate;
+            return AffId > 0 && FromDate <= ToDate;
         }
     }
 }

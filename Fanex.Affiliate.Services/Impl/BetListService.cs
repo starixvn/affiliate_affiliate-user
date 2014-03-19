@@ -19,13 +19,12 @@ namespace Fanex.Affiliate.Services.Impl
     using BetList.Core.Entities;
     using Common;
     using Common.Helper;
-    using Criterias;
+    using Criteria;
     using DataAccess.Impl;
     using DataAccess.Interface;
     using DTO;
     using DTO.BetList;
     using Interface;
-    using Logging;
     using Result.Core.DTO;
     using ViewModels;
 

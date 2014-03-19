@@ -12,7 +12,7 @@ namespace Fanex.Affiliate.DataAccess.Interface
 {
     using System.Data;
     using BetList.Core.Entities;
-    using Criterias;
+    using Criteria;
     using DTO;
     using DTO.BetList;
 

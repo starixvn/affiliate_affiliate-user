@@ -14,7 +14,7 @@ namespace Fanex.Affiliate.DataAccess.Impl
     using System.Linq;
     using Common;
     using Common.Helper;
-    using Criterias;
+    using Criteria;
     using Data;
     using DTO;
     using Interface;
@@ -33,7 +33,7 @@ namespace Fanex.Affiliate.DataAccess.Impl
         /// <param name="criteria">User Authenticate criteria.</param>
         /// <param name="errCode">Reference error code.</param>
         /// <returns>User model.</returns>
-        public User AuthenticateUser(AuthenticateUserCriteria criteria, ref int errCode)
+        public User AuthenticateUser(AffiliateLoginCriteria criteria, ref int errCode)
         {
             var user = new User();
             using (var objectDb = new ObjectDb(criteria.GetSettingKey()))

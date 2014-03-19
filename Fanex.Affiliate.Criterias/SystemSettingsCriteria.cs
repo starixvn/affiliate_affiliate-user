@@ -7,7 +7,7 @@
 //   <change who="Long.Luu" date="2013.07.23">Created and add Properties</change>
 // </history>
 
-namespace Fanex.Affiliate.Criterias
+namespace Fanex.Affiliate.Criteria
 {
     using NAP.Framework.Data;
 

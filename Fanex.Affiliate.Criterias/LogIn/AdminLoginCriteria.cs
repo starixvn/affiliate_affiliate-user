@@ -7,7 +7,7 @@
 //   <change who="Leo.Vo" date="2013.07.03">Created</change>
 // </history>
 
-namespace Fanex.Affiliate.Criterias
+namespace Fanex.Affiliate.Criteria
 {
     using System.ComponentModel.DataAnnotations;
     using NAP.Framework.Data;
@@ -51,7 +51,7 @@ namespace Fanex.Affiliate.Criterias
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_OnUserSelNetSessionID";
+            return "Aff_User_OnUserSelNetSessionID";
         }
 
         public override bool IsValid()

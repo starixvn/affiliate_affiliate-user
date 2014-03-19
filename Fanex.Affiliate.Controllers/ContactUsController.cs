@@ -11,15 +11,10 @@
 namespace Fanex.Affiliate.Controllers
 {
     using System;
-    using System.Drawing;
-    using System.Drawing.Drawing2D;
-    using System.Drawing.Imaging;
-    using System.Drawing.Text;
-    using System.IO;
     using System.Web;
     using System.Web.Mvc;
     using Configurations;
-    using Criterias;
+    using Criteria;
     using Resources;
     using Services.Impl;
     using Services.Interface;

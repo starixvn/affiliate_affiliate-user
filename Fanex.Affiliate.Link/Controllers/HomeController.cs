@@ -14,7 +14,7 @@ namespace Fanex.Affiliate.Link.Controllers
     using System.Diagnostics.CodeAnalysis;
     using System.Globalization;
     using System.Web.Mvc;
-    using Criterias;
+    using Criteria;
     using Services.Impl;
     using Services.Interface;
     using Utilities;

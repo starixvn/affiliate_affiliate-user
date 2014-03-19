@@ -10,7 +10,7 @@
 namespace Fanex.Affiliate.DataAccess.Impl
 {
     using Common.Extensions;
-    using Criterias;
+    using Criteria;
     using Data;
     using DTO;
     using Interface;
@@ -25,7 +25,7 @@ namespace Fanex.Affiliate.DataAccess.Impl
         /// </summary>
         /// <param name="criteria">Banner criteria.</param>
         /// <returns>Banner data object.</returns>
-        public Banner BannerSelectInfo(BannerCriteria criteria)
+        public Banner BannerSelectInfo(BannerInfoCriteria criteria)
         {
             var bannerInfo = new Banner();
             using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
@@ -51,7 +51,7 @@ namespace Fanex.Affiliate.DataAccess.Impl
         /// Update Banner statistic.
         /// </summary>
         /// <param name="criteria">Banner criteria.</param>
-        public void BannerUpdateStatistic(BannerCriteria criteria)
+        public void BannerUpdateStatistic(BannerUpdateStatisticCriteria criteria)
         {
             using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
             {

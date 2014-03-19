@@ -11,7 +11,7 @@
 namespace Fanex.Affiliate.Services.Interface
 {
     using System.Collections.Generic;
-    using Criterias;
+    using Criteria;
     using DTO;
     using ViewModels;
 
@@ -20,20 +20,23 @@ namespace Fanex.Affiliate.Services.Interface
     /// </summary>
     public interface IAccountService
     {
+        #region Account Overview
         /// <summary>
         /// Get statistics for Affiliate.
         /// </summary>
         /// <param name="criteria">Input criteria.</param>
         /// <param name="listProduct">Output list product.</param>
         /// <returns>Return object.</returns>
-        StatisticsOverview GetStatisticsOverview(AccountOverviewCriteria criteria, ref List<Product> listProduct);
+        StatisticsOverview GetStatisticsOverview(AccountStatisticInfoCriteria criteria, ref List<Product> listProduct);
 
         /// <summary>
         /// Get Current Commission Setting.
         /// </summary>
         /// <param name="criteria">Input criteria.</param>
         /// <returns>Return object.</returns>
-        AccountOverviewViewModel GetCommissionSetting(AccountOverviewCriteria criteria);
+        AccountOverviewViewModel GetCommissionSetting(AccountCommGroupCriteria criteria);
+
+        #endregion
 
         /// <summary>
         /// Get statement history.
@@ -47,16 +50,15 @@ namespace Fanex.Affiliate.Services.Interface
         /// Get customer information.
         /// </summary>
         /// <param name="criteria">Input criteria.</param>
-        /// <param name="totalPage">Total page for paging.</param>
         /// <returns>Return object list.</returns>
-        IEnumerable<CustomerInfo> GetCustomerInfo(CustomerInfoCriteria criteria, out int totalPage);
+        IEnumerable<CustomerInfo> GetCustomerInfo(CustomerInfoCriteria criteria);
 
         /// <summary>
         /// Landing page click statistics.
         /// </summary>
         /// <param name="criteria">Landing page criteria.</param>
         /// <returns>Return list.</returns>
-        IEnumerable<TrafficStatistic> GetLandingPagesStatistics(ClicksLandingPagesCriteria criteria);
+        IEnumerable<TrafficStatistic> GetLandingPagesStatistics(LandingPagesByPageCriteria criteria);
 
         /// <summary>
         /// Landing page click statistics detail.
@@ -64,7 +66,7 @@ namespace Fanex.Affiliate.Services.Interface
         /// <param name="criteria">Landing page criteria.</param>
         /// <param name="totalPage">Total page for paging.</param>
         /// <returns>Return list.</returns>
-        IEnumerable<ClicksLandingPagesDetail> GetLandingPagesStatisticsDetail(ClicksLandingPagesCriteria criteria, ref int totalPage);
+        IEnumerable<ClicksLandingPagesDetail> GetLandingPagesStatisticsDetail(LandingPagesBySiteCriteria criteria, ref int totalPage);
 
         /// <summary>
         /// Get Referrers Statistics.
@@ -85,17 +87,15 @@ namespace Fanex.Affiliate.Services.Interface
         /// Get Daily Earnings.
         /// </summary>
         /// <param name="criteria">Input criteria.</param>
-        /// <param name="affCurrency">Affiliate currency.</param>
         /// <returns>List of daily earning.</returns>
-        IEnumerable<DailyEarning> GetDailyEarnings(DailyEarningCriteria criteria, out string affCurrency);
+        IEnumerable<DailyEarning> GetDailyEarnings(DailyEarningCriteria criteria);
 
         /// <summary>
         /// Get Daily Earnings Detail.
         /// </summary>
         /// <param name="criteria">Input criteria.</param>
-        /// <param name="affCurrency">Affiliate currency.</param>
         /// <returns>List of daily earning.</returns>
-        IEnumerable<DailyEarningsDetail> GetDailyEarningsDetail(DailyEarningsDetailCriteria criteria, out string affCurrency);
+        IEnumerable<DailyEarningsDetail> GetDailyEarningsDetail(DailyEarningsDetailCriteria criteria);
 
         /// <summary>
         /// Changes the password.

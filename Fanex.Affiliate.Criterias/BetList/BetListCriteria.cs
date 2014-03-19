@@ -8,7 +8,7 @@
 //   <change who="" date=""></change>
 // </history>
 
-namespace Fanex.Affiliate.Criterias
+namespace Fanex.Affiliate.Criteria
 {
     using System;
     using System.ComponentModel;
@@ -116,6 +116,8 @@ namespace Fanex.Affiliate.Criterias
         public bool ShowCS { get; set; }
 
         public bool ShowBG { get; set; }
+        
+        public decimal TotalRows { get; set; }
 
         /// <summary>
         /// Get SP name.

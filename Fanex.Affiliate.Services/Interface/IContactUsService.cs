@@ -10,7 +10,7 @@
 
 namespace Fanex.Affiliate.Services.Interface
 {
-    using Criterias;
+    using Criteria;
 
     /// <summary>
     /// TODO: Update summary.

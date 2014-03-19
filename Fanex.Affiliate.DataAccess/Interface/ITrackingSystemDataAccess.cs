@@ -10,7 +10,7 @@
 
 namespace Fanex.Affiliate.DataAccess.Interface
 {
-    using Criterias;
+    using Criteria;
 
     public interface ITrackingSystemDataAccess
     {
