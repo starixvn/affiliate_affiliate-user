@@ -152,10 +152,10 @@ namespace Fanex.Affiliate.Services.Impl
         /// <param name="criteria">Internal login criteria.</param>
         /// <param name="errCode">Error code.</param>
         /// <returns>User model.</returns>
-        public User InternalAuthenticateUser(InternalLoginCriteria criteria, ref int errCode)
+        public User InternalAuthenticateUser(InternalLoginCriteria criteria)
         {
             Check.Argument.IsNotNull(criteria, "criteria");
-            return _userDataAccess.InternalAuthenticateUser(criteria, ref errCode);
+            return _userDataAccess.InternalAuthenticateUser(criteria);
         }
 
         #endregion Admin Process Login

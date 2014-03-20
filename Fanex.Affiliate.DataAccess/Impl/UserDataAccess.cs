@@ -247,13 +247,13 @@ namespace Fanex.Affiliate.DataAccess.Impl
         /// <param name="criteria">Admin log in criteria.</param>
         /// <param name="errCode">Reference error code.</param>
         /// <returns>User model.</returns>
-        public User InternalAuthenticateUser(InternalLoginCriteria criteria, ref int errCode)
+        public User InternalAuthenticateUser(InternalLoginCriteria criteria)
         {
             using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
             {
                 var param = criteria.GetSpParams();
                 var internalLoginInfo = objectDb.Query<InternalLoginInfo>(param).FirstOrDefault();
-                errCode = Converter.ToInt(param["errcode"]);
+                criteria.ErrorCode = Converter.ToInt(param["errcode"]);
                 if (internalLoginInfo == null)
                 {
                     return null;

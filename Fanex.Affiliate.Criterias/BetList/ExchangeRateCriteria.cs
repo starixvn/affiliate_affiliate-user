@@ -11,8 +11,6 @@
 namespace Fanex.Affiliate.Criteria
 {
     using System;
-    using System.ComponentModel;
-    using System.ComponentModel.DataAnnotations;
     using NAP.Framework.Data;
 
     /// <summary>
@@ -26,6 +24,7 @@ namespace Fanex.Affiliate.Criteria
 
         public DateTime Date { get; set; }
 
+        // Output paramaters
         [SpParam(Ignored = true)]
         public float Rate { get; set; }
 
@@ -35,7 +34,7 @@ namespace Fanex.Affiliate.Criteria
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_GetExchangeRate";
+            return "Aff_User_GetExchangeRate";
         }
     }
 }

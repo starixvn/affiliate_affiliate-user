@@ -4,10 +4,10 @@
     <Setting Key="Aff_User_AffiliateLogin" SpName="Aff_User_AffiliateLogin" DbName="affiliate" Plain="0" />
     <Setting Key="Aff_Recheckin" SpName="Aff_User_Recheckin" DbName="affiliate" Plain="0" />
     <Setting Key="Aff_Logout" SpName="Aff_User_Logout" DbName="affiliate" Plain="0" />
-    <Setting Key="Aff_AffiliateForgotPwd" SpName="Aff_User_AffiliateForgotPwd" DbName="affiliate" Plain="0" />
+    <Setting Key="Aff_User_AffiliateForgotPwd" SpName="Aff_User_AffiliateForgotPwd" DbName="affiliate" Plain="0" />
     <Setting Key="Aff_AffiliateRecoverPwd" SpName="Aff_User_AffiliateRecoverPwd" DbName="affiliate" Plain="0" />
     <Setting Key="Aff_User_OnUserSelNetSessionID" SpName="Aff_User_OnUserSelNetSessionID" DbName="affiliate" Plain="0" />
-    <Setting Key="Aff_AffiliateInternalLogin" SpName="Aff_User_AffiliateInternalLogin" DbName="affiliate" Plain="0" />
+    <Setting Key="Aff_User_AffiliateInternalLogin" SpName="Aff_User_AffiliateInternalLogin" DbName="affiliate" Plain="0" />
     <Setting Key="Aff_User_AffiliateUpdPwd" SpName="Aff_User_AffiliateUpdPwd" DbName="affiliate" Plain="0" />
   </Function>
 
@@ -18,9 +18,9 @@
 
   <Function Name="Aff-Statement">
     <Setting Key="Aff_StatementHistorySel" SpName="Aff_User_AffiliateStatementHistorySel" DbName="affiliate" Plain="0" />
-    <Setting Key="Aff_EarningSelDaily" SpName="Aff_User_EarningSelDaily" DbName="affiliate" Plain="0" />
-    <Setting Key="Aff_EarningSelDetail" SpName="Aff_User_EarningSelDetail" DbName="affiliate" Plain="0" />
-    <Setting Key="Aff_GetExchangeRate" SpName="Aff_User_GetExchangeRate" DbName="affiliate" Plain="0" />
+    <Setting Key="Aff_User_EarningSelDaily" SpName="Aff_User_EarningSelDaily" DbName="affiliate" Plain="0" />
+    <Setting Key="Aff_User_EarningSelDetail" SpName="Aff_User_EarningSelDetail" DbName="affiliate" Plain="0" />
+    <Setting Key="Aff_User_GetExchangeRate" SpName="Aff_User_GetExchangeRate" DbName="affiliate" Plain="0" />
     <Setting Key="Aff_BetList" SpName="Aff_User_BetList" DbName="bodb02" Plain="0" />
     <Setting Key="Aff_BetListParlay" SpName="Aff_User_BetListParlay_xTest" DbName="bodb02" Plain="0" />
     <Setting Key="Aff_BetListSystemParlayDetail" SpName="Aff_User_BetListSystemParlayDetail" DbName="bodb02" Plain="0" />
@@ -33,7 +33,7 @@
 </Function>
 
   <Function Name="Aff-CustomerInfo">
-    <Setting Key="Aff_MemberListSel" SpName="Aff_User_MemberListSel" DbName="affiliate" Plain="0" />
+    <Setting Key="Aff_User_MemberListSel" SpName="Aff_User_MemberListSel" DbName="affiliate" Plain="0" />
   </Function>
 
   <Function Name="Aff-Payment">
@@ -68,14 +68,14 @@
 
   <Function Name="Aff-Marketing">
     <Setting Key="Aff_User_BannerSelType" SpName="Aff_User_BannerSelType" DbName="affiliate" Plain="0" />
-    <Setting Key="Aff_DomainAffClientSel" SpName="Aff_User_DomainAffClientSel" DbName="affiliate" Plain="0" />
+    <Setting Key="Aff_User_DomainAffClientSel" SpName="Aff_User_DomainAffClientSel" DbName="affiliate" Plain="0" />
     <Setting Key="Aff_BannerSel" SpName="Aff_User_BannerSel" DbName="affiliate" Plain="0" />
     <Setting Key="Aff_TextSel" SpName="Aff_User_TextSel" DbName="affiliate" Plain="0" />
   </Function>
 
   <Function Name="Aff-Message">
     <Setting Key="Aff_HotNewsSel_New" SpName="Aff_User_HotNewsSel_New" DbName="affiliate" Plain="0" />
-    <Setting Key="Aff_HotNewsDetail_New" SpName="Aff_User_HotNewsDetail_New" DbName="affiliate" Plain="0"/>
+    <Setting Key="Aff_User_HotNewsDetail_New" SpName="Aff_User_HotNewsDetail_New" DbName="affiliate" Plain="0"/>
   </Function>
 
   <Function Name="Aff-Contact-Us">
@@ -83,7 +83,7 @@
   </Function>
 
   <Function Name="Aff-Group-Settings">
-    <Setting Key="Aff_GetDefaultProductCommission" SpName="Aff_User_GetDefaultProductCommission" DbName="affiliate" Plain="0" />
+    <Setting Key="Aff_User_GetDefaultProductCommission" SpName="Aff_User_GetDefaultProductCommission" DbName="affiliate" Plain="0" />
   </Function>
 
   <!--SPs for Affiliate Link-->

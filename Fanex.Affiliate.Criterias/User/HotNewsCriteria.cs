@@ -6,6 +6,7 @@
 // <history>
 //   <change who="Kaden.Trinh" date="2013.06.10">Created and add Properties</change>
 // </history>
+
 namespace Fanex.Affiliate.Criteria
 {
     using NAP.Framework.Data;
@@ -26,7 +27,7 @@ namespace Fanex.Affiliate.Criteria
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_HotNewsDetail_New";
+            return "Aff_User_HotNewsDetail_New";
         }
     }
 }

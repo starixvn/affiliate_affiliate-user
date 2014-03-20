@@ -35,6 +35,7 @@ namespace Fanex.Affiliate.Criteria
 
         public DateTime? ToDate { get; set; }
 
+        // Output parameters
         public string AffCurrency { get; set; }
 
         /// <summary>
@@ -43,7 +44,7 @@ namespace Fanex.Affiliate.Criteria
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_EarningSelDaily";
+            return "Aff_User_EarningSelDaily";
         }
     }
 }

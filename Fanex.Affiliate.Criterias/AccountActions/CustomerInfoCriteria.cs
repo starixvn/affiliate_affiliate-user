@@ -1,5 +1,5 @@
 ﻿// ----------------------------------------------------------------------
-// <copyright file="DailyEarningsDetailCriteria.cs" company="Nexcel Solutions Vietnam">
+// <copyright file="CustomerInfoCriteria.cs" company="Nexcel Solutions Vietnam">
 //     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
 // </copyright>
 // ------------------------------------------------------------------------
@@ -10,28 +10,25 @@
 
 namespace Fanex.Affiliate.Criteria
 {
-    using System;
     using NAP.Framework.Data;
 
     /// <summary>
-    /// Daily Earnings Detail Criteria.
+    /// Customer Information Criteria.
     /// </summary>
-    public class DailyEarningsDetailCriteria : CriteriaBase
+    public class CustomerInfoCriteria : CriteriaBase
     {
-        public DailyEarningsDetailCriteria()
-        {
-            AffId = 0;
-            ProductId = 0;
-            MonthDate = null;
-        }
+        public string AffUsername { get; set; }
 
-        public int AffId { get; set; }
+        public string Username { get; set; }
 
-        public int ProductId { get; set; }
+        public int AffType { get; set; }
 
-        public DateTime? MonthDate { get; set; }
+        public int PageSize { get; set; }
 
-        public string AffCurrency { get; set; }
+        // Output parameters
+        public int PageIndex { get; set; }
+
+        public int TotalPages { get; set; }
 
         /// <summary>
         /// Get SP name.
@@ -39,7 +36,7 @@ namespace Fanex.Affiliate.Criteria
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_EarningSelDetail";
+            return "Aff_User_MemberListSel";
         }
     }
 }

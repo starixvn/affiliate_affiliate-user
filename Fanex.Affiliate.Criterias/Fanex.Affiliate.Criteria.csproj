@@ -86,21 +86,21 @@
     <Compile Include="BetList\BetListResultsCriteria.cs" />
     <Compile Include="BetList\BetListResultsRNGCasinoDetailCriteria.cs" />
     <Compile Include="BetList\BetListResultsRNGCasinoCriteria.cs" />
-    <Compile Include="ExchangeRateCriteria.cs" />
-    <Compile Include="CustomerInfoCriteria.cs" />
-    <Compile Include="DailyEarningsDetailCriteria.cs" />
+    <Compile Include="BetList\ExchangeRateCriteria.cs" />
+    <Compile Include="AccountActions\CustomerInfoCriteria.cs" />
+    <Compile Include="DailyEarnings\DailyEarningsDetailCriteria.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="SystemParlayDetailCriteria.cs" />
     <Compile Include="TrackingSystemCriteria.cs" />
     <Compile Include="SystemSettingsCriteria.cs" />
-    <Compile Include="HotNewsCriteria.cs" />
-    <Compile Include="DefaultCommissionCriteria.cs" />
+    <Compile Include="Common\HotNewsCriteria.cs" />
+    <Compile Include="Common\DefaultCommissionCriteria.cs" />
     <Compile Include="ResetPasswordCriteria.cs" />
-    <Compile Include="ContactUsCriteria.cs" />
+    <Compile Include="Common\ContactUsCriteria.cs" />
     <Compile Include="PaymentCancelCriteria.cs" />
     <Compile Include="ReCheckInCriteria.cs" />
     <Compile Include="MessageCriteria.cs" />
-    <Compile Include="DailyEarningCriteria.cs" />
+    <Compile Include="DailyEarnings\DailyEarningCriteria.cs" />
     <Compile Include="InternalLoginCriteria.cs" />
     <Compile Include="PaymentPlayerInfoCriteria.cs" />
     <Compile Include="PaymentRequestCriteria.cs" />
@@ -109,7 +109,7 @@
     <Compile Include="SystemDateTimeCriteria.cs" />
     <Compile Include="TrafficStatistics\LandingPagesByPageCriteria.cs" />
     <Compile Include="UserCriteria.cs" />
-    <Compile Include="ForgetPasswordCriteria.cs" />
+    <Compile Include="Common\ForgetPasswordCriteria.cs" />
     <Compile Include="LogOutUserCriteria.cs" />
     <Compile Include="MarketingCriteria.cs" />
     <Compile Include="PaymentCriteria.cs" />
@@ -117,7 +117,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SystemSettingCriteria.cs" />
     <Compile Include="TrafficStatisticCriteria.cs" />
-    <Compile Include="DomainCriteria.cs" />
+    <Compile Include="MarketingTools\DomainCriteria.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Fanex.Affiliate.DTO\Fanex.Affiliate.DTO.csproj">

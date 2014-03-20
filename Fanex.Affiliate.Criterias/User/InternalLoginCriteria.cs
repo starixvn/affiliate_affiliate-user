@@ -12,26 +12,27 @@ namespace Fanex.Affiliate.Criteria
     using NAP.Framework.Data;
 
     /// <summary>
-    /// TODO: Update summary.
+    /// Internal Login Criteria.
     /// </summary>
     public class InternalLoginCriteria : CriteriaBase
     {
-        public int AccId { get; set; }
-
-        public int ServerId { get; set; }
-
         public int AdminId { get; set; }
 
         public string UserName { get; set; }
 
         public string LoginIp { get; set; }
 
-        public string Language { get; set; }
+        public int ServerId { get; set; }
 
-        public int CurrencyId { get; set; }
+        public string Language { get; set; }
 
         public int InputAffType { get; set; }
 
+        public int AccId { get; set; }
+
+        public int CurrencyId { get; set; }
+
+        // Output parameters
         public int ErrorCode { get; set; }
 
         /// <summary>
@@ -40,7 +41,7 @@ namespace Fanex.Affiliate.Criteria
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_AffiliateInternalLogin";
+            return "Aff_User_AffiliateInternalLogin";
         }
     }
 }

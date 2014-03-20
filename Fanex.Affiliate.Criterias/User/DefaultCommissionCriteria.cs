@@ -20,7 +20,6 @@ namespace Fanex.Affiliate.Criteria
 
         public DefaultCommissionCriteria()
         {
-            // Default commission group id
             GroupId = DEFAULTCOMMISSIONGROUPID;
         }
 
@@ -32,7 +31,7 @@ namespace Fanex.Affiliate.Criteria
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_GetDefaultProductCommission";
+            return "Aff_User_GetDefaultProductCommission";
         }
     }
 }

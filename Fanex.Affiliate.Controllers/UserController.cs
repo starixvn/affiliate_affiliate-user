@@ -730,11 +730,10 @@ namespace Fanex.Affiliate.Controllers
                     InputAffType = 1
                 };
 
-                var errCode = 0;
-                var user = _userService.InternalAuthenticateUser(internalLoginCriteria, ref errCode);
-                if (errCode != 0)
+                var user = _userService.InternalAuthenticateUser(internalLoginCriteria);
+                if (internalLoginCriteria.ErrorCode != 0)
                 {
-                    throw new Exception(Common.GetErrorMsg(errCode));
+                    throw new Exception(Common.GetErrorMsg(internalLoginCriteria.ErrorCode));
                 }
 
                 if (AppSession.Language == null)

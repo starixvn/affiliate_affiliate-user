@@ -82,6 +82,6 @@ namespace Fanex.Affiliate.DataAccess.Interface
         /// <param name="criteria">Admin log in criteria.</param>
         /// <param name="errCode">Reference error code.</param>
         /// <returns>User model.</returns>
-        User InternalAuthenticateUser(InternalLoginCriteria criteria, ref int errCode);
+        User InternalAuthenticateUser(InternalLoginCriteria criteria);
     }
 }

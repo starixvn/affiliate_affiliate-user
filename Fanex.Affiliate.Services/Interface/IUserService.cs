@@ -81,6 +81,6 @@ namespace Fanex.Affiliate.Services.Interface
         /// <param name="criteria">Internal login criteria.</param>
         /// <param name="errCode">Error code.</param>
         /// <returns>User model.</returns>
-        User InternalAuthenticateUser(InternalLoginCriteria criteria, ref int errCode);
+        User InternalAuthenticateUser(InternalLoginCriteria criteria);
     }
 }

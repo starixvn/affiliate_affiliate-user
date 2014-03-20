@@ -11,9 +11,8 @@
 namespace Fanex.Affiliate.Criteria
 {
     using System.ComponentModel.DataAnnotations;
-    using System.Diagnostics.CodeAnalysis;
-    using Fanex.Affiliate.Resources;
     using NAP.Framework.Data;
+    using Resources;
 
     /// <summary>
     /// Forget Password Criteria.
@@ -36,6 +35,9 @@ namespace Fanex.Affiliate.Criteria
 
         public int AffID { get; set; }
 
+        public string IP { get; set; }
+
+        // Output parameters
         public string Username { get; set; }
 
         public string Firstname { get; set; }
@@ -46,8 +48,6 @@ namespace Fanex.Affiliate.Criteria
 
         public bool MailOption { get; set; }
 
-        public string IP { get; set; }
-
         public int ErrCode { get; set; }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Fanex.Affiliate.Criteria
         /// <returns>Store Procedure.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_AffiliateForgotPwd";
+            return "Aff_User_AffiliateForgotPwd";
         }
     }
 }
