@@ -41,18 +41,25 @@ namespace Fanex.Affiliate.Services.Interface
         void UserLogOut(LogOutUserCriteria criteria);
 
         /// <summary>
+        /// Insert affiliate.
+        /// </summary>
+        /// <param name="criteria">User criteria.</param>
+        /// <returns>Return view.</returns>
+        ResultViewModel AffiliateInsert(UserInsertCriteria criteria);
+
+        /// <summary>
         /// Update affiliate.
         /// </summary>
         /// <param name="criteria">User criteria.</param>
         /// <returns>Return view.</returns>
-        ResultViewModel AffiliateUpdate(UserCriteria criteria);
+        ResultViewModel AffiliateUpdate(UserUpdateInfoCriteria criteria);
 
         /// <summary>
         /// Select Affiliate by Affiliate ID.
         /// </summary>
         /// <param name="criteria">User criteria.</param>
         /// <returns>User view model.</returns>
-        UserViewModel AffiliateSelectByID(UserCriteria criteria);
+        UserViewModel AffiliateSelectByID(UserSelectInfoCriteria criteria);
 
         /// <summary>
         /// Forget password.
@@ -79,7 +86,6 @@ namespace Fanex.Affiliate.Services.Interface
         /// Get user info when login from admin site.
         /// </summary>
         /// <param name="criteria">Internal login criteria.</param>
-        /// <param name="errCode">Error code.</param>
         /// <returns>User model.</returns>
         User InternalAuthenticateUser(InternalLoginCriteria criteria);
     }

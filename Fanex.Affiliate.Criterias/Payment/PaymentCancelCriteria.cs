@@ -1,0 +1,68 @@
+﻿// ----------------------------------------------------------------------
+// <copyright file="PaymentCancelCriteria.cs" company="Nexcel Solutions Vietnam">
+//     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
+// </copyright>
+// ------------------------------------------------------------------------
+// <history>
+//   <change who="Long.Luu" date="2013/07/03">Created</change>
+//   <change who="" date=""></change>
+// </history>
+
+namespace Fanex.Affiliate.Criteria
+{
+    using System;
+    using NAP.Framework.Data;
+
+    /// <summary>
+    /// Criteria for cancelling the payment request.
+    /// </summary>
+    public class PaymentCancelCriteria : CriteriaBase
+    {
+        public long TransID { get; set; }
+
+        public string Status { get; set; }
+
+        public string AdminDesc { get; set; }
+
+        public string AffDesc { get; set; }
+
+        public int UserID { get; set; }
+
+        public string IP { get; set; }
+
+        public long RefNo { get; set; }
+
+        public string Language { get; set; }
+
+        public long IbcRefNo { get; set; }
+
+        public long IbcTransId { get; set; }
+
+        public string IBCUsername { get; set; }
+
+        // Output parameters
+        [SpParam(Ignored = true)]
+        public string PreferredLanguage { get; set; }
+
+        [SpParam(Ignored = true)]
+        public bool MailOption { get; set; }
+
+        [SpParam(Ignored = true)]
+        public DateTime TransDate { get; set; }
+
+        [SpParam(Ignored = true)]
+        public decimal Amount { get; set; }
+
+        [SpParam(Ignored = true)]
+        public int ErrCode { get; set; }
+
+        /// <summary>
+        /// Get the reference SP's Name which is specified in Config file.
+        /// </summary>
+        /// <returns>Affiliate Payment Request Insert.</returns>
+        public override string GetSettingKey()
+        {
+            return "Aff_User_PaymentRequestUpd";
+        }
+    }
+}

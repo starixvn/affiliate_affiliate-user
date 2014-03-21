@@ -37,9 +37,8 @@ namespace Fanex.Affiliate.Site
             string defaultLang;
             try
             {
-                var systemSettings = _systemSettingService.ListSystemSetting(new SystemSettingCriteria
+                var systemSettings = _systemSettingService.ListSystemSetting(new SystemSettingsByTypeCriteria
                                                     {
-                                                        IsType = true,
                                                         Type = "LangMapping"
                                                     });
                 defaultLang = systemSettings.FirstOrDefault(x => x.SValue == lang.Trim().ToLower()).SName;

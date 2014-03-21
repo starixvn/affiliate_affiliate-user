@@ -695,10 +695,9 @@ namespace Fanex.Affiliate.Controllers
         [HttpGet]
         public ActionResult MyAccount()
         {
-            var criteria = new UserCriteria
+            var criteria = new UserSelectInfoCriteria
             {
-                AffID = CurrentSession.AffId,
-                Function = UserEnum.AffiliateSelectByID
+                AffID = CurrentSession.AffId
             };
 
             var user = UserService.AffiliateSelectByID(criteria);
@@ -716,7 +715,7 @@ namespace Fanex.Affiliate.Controllers
         {
             if (ModelState.IsValid && user.IsValid(ModelState))
             {
-                var criteria = new UserCriteria
+                var criteria = new UserUpdateInfoCriteria
                 {
                     UserID = CurrentSession.AffId,
                     AffID = CurrentSession.AffId,
@@ -726,8 +725,7 @@ namespace Fanex.Affiliate.Controllers
                     PreferredPayment = user.PreferredPayment,
                     EmailFormat = user.EmailFormat,
                     MoreSiteURLs = WebUtility.HtmlEncode(user.MoreSiteURLs),
-                    Ip = Common.GetIPAddressOfClient(),
-                    Function = UserEnum.AffiliateUpdate
+                    Ip = Common.GetIPAddressOfClient()
                 };
                 var result = UserService.AffiliateUpdate(criteria);
 

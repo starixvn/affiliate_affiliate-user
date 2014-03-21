@@ -125,11 +125,33 @@ namespace Fanex.Affiliate.DataAccess.Impl
         }
 
         /// <summary>
+        /// Insert affiliate information.
+        /// </summary>
+        /// <param name="criteria">User criteria.</param>
+        /// <returns>Return view.</returns>
+        public ResultViewModel AffiliateInsert(UserInsertCriteria criteria)
+        {
+            ResultViewModel result = null;
+            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            {
+                var currentParams = criteria.GetSpParams();
+                objectDb.ExecuteNonQuery(currentParams);
+                result = new ResultViewModel
+                {
+                    ErrorCode = Converter.ToInt(currentParams["errcode"]),
+                    Success = Converter.ToInt(currentParams["errcode"]) == 0
+                };
+            }
+
+            return result;
+        }
+
+        /// <summary>
         /// Update affiliate information.
         /// </summary>
         /// <param name="criteria">User criteria.</param>
         /// <returns>Return view.</returns>
-        public ResultViewModel AffiliateUpdate(UserCriteria criteria)
+        public ResultViewModel AffiliateUpdate(UserUpdateInfoCriteria criteria)
         {
             ResultViewModel result = null;
             using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
@@ -151,7 +173,7 @@ namespace Fanex.Affiliate.DataAccess.Impl
         /// </summary>
         /// <param name="criteria">User criteria.</param>
         /// <returns>User View Model.</returns>
-        public UserViewModel AffiliateSelectById(UserCriteria criteria)
+        public UserViewModel AffiliateSelectById(UserSelectInfoCriteria criteria)
         {
             UserViewModel result = null;
             using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
@@ -245,7 +267,6 @@ namespace Fanex.Affiliate.DataAccess.Impl
         /// Login from admin site.
         /// </summary>
         /// <param name="criteria">Admin log in criteria.</param>
-        /// <param name="errCode">Reference error code.</param>
         /// <returns>User model.</returns>
         public User InternalAuthenticateUser(InternalLoginCriteria criteria)
         {

@@ -43,7 +43,7 @@ namespace Fanex.Affiliate.Criteria
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_BetListSystemParlayDetail";
+            return "Aff_User_BetListSystemParlayDetail";
         }
     }
 }

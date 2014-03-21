@@ -6,6 +6,7 @@
 // <history>
 //   <change who="Kaden.Trinh" date="2013.06.03">Created and add Properties</change>
 // </history>
+
 namespace Fanex.Affiliate.Criteria
 {
     using System;
@@ -41,16 +42,16 @@ namespace Fanex.Affiliate.Criteria
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            string settingKey = "Aff_StatementHistorySel";
+            string settingKey = "Aff_User_AffiliateStatementHistorySel";
 
             if (IsReferrersStatistics)
             {
-                settingKey = "Aff_ClickStatisticsSelBySite";
+                settingKey = "Aff_User_ClickStatisticsSelBySite";
             }
 
             if (IsReferrersStatisticsDetail)
             {
-                settingKey = "Aff_ClickStatisticsDetailBySite";
+                settingKey = "Aff_User_ClickStatisticsDetailBySite";
             }
 
             return settingKey;

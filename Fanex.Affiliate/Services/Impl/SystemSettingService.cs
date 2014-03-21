@@ -36,7 +36,7 @@ namespace Fanex.Affiliate.Services.Impl
         /// </summary>
         /// <param name="criteria">Input criteria.</param>
         /// <returns>Return list system setting.</returns>
-        public IEnumerable<SystemSetting> ListSystemSetting(SystemSettingCriteria criteria)
+        public IEnumerable<SystemSetting> ListSystemSetting(SystemSettingsByTypeCriteria criteria)
         {
             Check.Argument.IsNotNull(criteria, "criteria");
             return GetData<SystemSetting>(criteria);

@@ -1,0 +1,36 @@
+﻿// ----------------------------------------------------------------------
+// <copyright file="SystemSettingsByTypeCriteria.cs" company="Nexcel Solutions Vietnam">
+//     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
+// </copyright>
+// ------------------------------------------------------------------------
+// <history>
+//   <change who="Long.Luu" date="2014/03/20">Created</change>
+//   <change who="" date=""></change>
+// </history>
+
+namespace Fanex.Affiliate.Criteria
+{
+    using NAP.Framework.Data;
+
+    /// <summary>
+    /// System Setting Criteria.
+    /// </summary>
+    public class SystemSettingsByTypeCriteria : CriteriaBase
+    {
+        public string Type { get; set; }
+
+        /// <summary>
+        /// Get SP name.
+        /// </summary>
+        /// <returns>Setting key.</returns>
+        public override string GetSettingKey()
+        {
+            return "Aff_User_SystemSettingsSelByType";
+        }
+
+        public override bool IsValid()
+        {
+            return !string.IsNullOrEmpty(Type);
+        }
+    }
+}

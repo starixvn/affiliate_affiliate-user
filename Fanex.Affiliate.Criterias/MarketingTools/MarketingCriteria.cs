@@ -32,13 +32,9 @@ namespace Fanex.Affiliate.Criteria
             }
         }
 
-        [SpParam(Ignored = true)]
-        public short? BannerCategory { get; set; }
-
-        [SpParam(Ignored = true)]
-        public short? BannerSubCategory { get; set; }
-
         public string Language { get; set; }
+
+        public short? ImageType { get; set; }
 
         public short? Size { get; set; }
 
@@ -46,21 +42,26 @@ namespace Fanex.Affiliate.Criteria
 
         public short Type { get; set; }
 
-        public short? ImageType { get; set; }
-
-        public string Domain { get; set; }
-
-        public string LinkTo { get; set; }
-
         public int PageSize { get; set; }
 
         [SpParam(SqlParamName = "PageIndex")]
         public int Page { get; set; }
 
-        public int TotalPages { get; set; }
+        [SpParam(Ignored = true)]
+        public short? BannerCategory { get; set; }
+
+        [SpParam(Ignored = true)]
+        public short? BannerSubCategory { get; set; }
+
+        public string Domain { get; set; }
+
+        public string LinkTo { get; set; }
 
         [SpParam(Ignored = true)]
         public string Function { get; set; }
+
+        // Output parameters
+        public int TotalPages { get; set; }
 
         /// <summary>
         /// Get SP name.
@@ -68,7 +69,7 @@ namespace Fanex.Affiliate.Criteria
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_BannerSel";
+            return "Aff_User_BannerSel";
         }
     }
 }

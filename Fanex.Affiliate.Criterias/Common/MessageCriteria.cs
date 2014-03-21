@@ -13,7 +13,7 @@ namespace Fanex.Affiliate.Criteria
     using NAP.Framework.Data;
 
     /// <summary>
-    /// TODO: Update summary.
+    /// Message Criteria.
     /// </summary>
     public class MessageCriteria : CriteriaBase
     {
@@ -24,14 +24,16 @@ namespace Fanex.Affiliate.Criteria
             ToDate = null;
         }
 
-        [SpParam(SqlParamName = "Important")]
-        public byte? SearchOption { get; set; } 
-
         public DateTime? FromDate { get; set; }
 
         public DateTime? ToDate { get; set; }
 
+        [SpParam(SqlParamName = "Important")]
+        public byte? SearchOption { get; set; }
+
         public string Language { get; set; }
+
+        public int PageSize { get; set; }
         
         [SpParam(SqlParamName = "PageIndex")]
         public int Page 
@@ -47,14 +49,13 @@ namespace Fanex.Affiliate.Criteria
             }
         }
 
-        public int PageSize { get; set; }
-
-        public int TotalPages { get; set; }
-
         public int NRows { get; set; }
         
         [SpParam(Ignored = true)]
-        private int _page { get; set; }
+        public int _page { get; set; }
+
+        // Output parameters
+        public int TotalPages { get; set; }
 
         /// <summary>
         /// Get SP name.
@@ -62,7 +63,7 @@ namespace Fanex.Affiliate.Criteria
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_HotNewsSel_New";
+            return "Aff_User_HotNewsSel_New";
         }
 
         public override bool IsValid()

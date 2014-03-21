@@ -6,6 +6,7 @@
 // <history>
 //   <change who="Kaden.Trinh" date="2013.06.14">Created</change>
 // </history>
+
 namespace Fanex.Affiliate.Criteria
 {
     using System;
@@ -34,7 +35,7 @@ namespace Fanex.Affiliate.Criteria
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_ProductSelByAffID";
+            return "Aff_User_ProductSelByAffID";
         }
     }
 }

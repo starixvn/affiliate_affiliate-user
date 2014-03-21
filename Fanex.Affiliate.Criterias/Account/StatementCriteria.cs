@@ -1,23 +1,28 @@
 ﻿// --------------------------------------------------------------------------
-// <copyright file="ReCheckInCriteria.cs" company="Nexcel Solutions Vietnam">
+// <copyright file="StatementCriteria.cs" company="Nexcel Solutions Vietnam">
 // Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------
 // <history>
-//   <change who="Kaden.Trinh" date="2013.06.07">Created</change>
+//   <change who="Kaden.Trinh" date="2013.06.03">Created and add Properties</change>
 // </history>
+
 namespace Fanex.Affiliate.Criteria
 {
     using NAP.Framework.Data;
 
     /// <summary>
-    /// Re-Check In Criteria.
+    /// Statement Criteria.
     /// </summary>
-    public class ReCheckInCriteria : CriteriaBase
+    public class StatementCriteria : CriteriaBase
     {
-        public int OnUserID { get; set; }
+        public int AffId { get; set; }
 
-        public bool IsKickedOut { get; set; }
+        public int PageSize { get; set; }
+
+        public int PageIndex { get; set; }
+
+        public int TotalPages { get; set; }
 
         /// <summary>
         /// Get SP name.
@@ -25,7 +30,7 @@ namespace Fanex.Affiliate.Criteria
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_Recheckin";
+            return "Aff_User_AffiliateStatementHistorySel";
         }
     }
 }

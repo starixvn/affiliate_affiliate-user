@@ -1,27 +1,22 @@
 ﻿// --------------------------------------------------------------------------
-// <copyright file="StatementCriteria.cs" company="Nexcel Solutions Vietnam">
+// <copyright file="SystemSettingsCriteria.cs" company="Nexcel Solutions Vietnam">
 // Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------
 // <history>
-//   <change who="Kaden.Trinh" date="2013.06.03">Created and add Properties</change>
+//   <change who="Long.Luu" date="2013.07.23">Created and add Properties</change>
 // </history>
+
 namespace Fanex.Affiliate.Criteria
 {
     using NAP.Framework.Data;
 
     /// <summary>
-    /// Statement Criteria.
+    /// System Settings Criteria.
     /// </summary>
-    public class StatementCriteria : CriteriaBase
+    public class SystemSettingsCriteria : CriteriaBase
     {
-        public int AffId { get; set; }
-
-        public int PageIndex { get; set; }
-
-        public int TotalPages { get; set; }
-
-        public int PageSize { get; set; }
+        public string Environment { get; set; }
 
         /// <summary>
         /// Get SP name.
@@ -29,7 +24,7 @@ namespace Fanex.Affiliate.Criteria
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_StatementHistorySel";
+            return "Aff_User_GetAllAffSystemSettings";
         }
     }
 }

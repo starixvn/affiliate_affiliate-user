@@ -7,6 +7,7 @@
 //   <change who="Kaden.Trinh" date="2013.06.10">Created and add Properties</change>
 //   <change who="Kaden.Trinh" date="2013.07.01">One model for 3 Sps: select, insert, update</change>
 // </history>
+
 namespace Fanex.Affiliate.Criteria
 {
     using System.Web.Mvc;
@@ -118,24 +119,15 @@ namespace Fanex.Affiliate.Criteria
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            string settingKey = string.Empty;
             switch (Function)
             {
                 case UserEnum.AffiliateSelectByID:
-                    settingKey = "Aff_AffiliateSelEditInfo";
-                    break;
-                case UserEnum.AffiliateRegister:
-                    settingKey = "Aff_AffiliateIns";
-                    break;
+                    return "Aff_User_AffiliateSelEditInfo";
                 case UserEnum.AffiliateUpdate:
-                    settingKey = "Aff_AffiliateUpdInfo";
-                    break;
+                    return "Aff_User_AffiliateUpdInfo";
                 default:
-                    settingKey = "Aff_AffiliateIns";
-                    break;
+                    return "Aff_User_AffiliateIns";
             }
-
-            return settingKey;
         }
     }
 }

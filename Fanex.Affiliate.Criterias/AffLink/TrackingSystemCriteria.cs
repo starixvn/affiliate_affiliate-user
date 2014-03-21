@@ -67,7 +67,7 @@ namespace Fanex.Affiliate.Criteria
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_AffiliateInsClickStatistics";
+            return "Aff_Link_AffiliateInsClickStatistics";
         }
     }
 }

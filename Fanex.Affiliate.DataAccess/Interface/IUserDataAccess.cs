@@ -36,18 +36,25 @@ namespace Fanex.Affiliate.DataAccess.Interface
         bool ReCheckIn(ReCheckInCriteria criteria);
 
         /// <summary>
+        /// Insert affiliate information.
+        /// </summary>
+        /// <param name="criteria">User criteria.</param>
+        /// <returns>Return view.</returns>
+        ResultViewModel AffiliateInsert(UserInsertCriteria criteria);
+
+        /// <summary>
         /// Update affiliate information.
         /// </summary>
         /// <param name="criteria">User criteria.</param>
         /// <returns>Return view.</returns>
-        ResultViewModel AffiliateUpdate(UserCriteria criteria);
+        ResultViewModel AffiliateUpdate(UserUpdateInfoCriteria criteria);
 
         /// <summary>
         /// Select Affiliate by affiliate ID.
         /// </summary>
         /// <param name="criteria">User criteria.</param>
         /// <returns>User View Model.</returns>
-        UserViewModel AffiliateSelectById(UserCriteria criteria);
+        UserViewModel AffiliateSelectById(UserSelectInfoCriteria criteria);
 
         /// <summary>
         /// User Logout.
@@ -80,7 +87,6 @@ namespace Fanex.Affiliate.DataAccess.Interface
         /// Login from admin site.
         /// </summary>
         /// <param name="criteria">Admin log in criteria.</param>
-        /// <param name="errCode">Reference error code.</param>
         /// <returns>User model.</returns>
         User InternalAuthenticateUser(InternalLoginCriteria criteria);
     }

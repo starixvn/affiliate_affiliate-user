@@ -89,8 +89,7 @@ namespace Fanex.Affiliate.Controllers
                 }
                 else
                 {
-                    var criteria = new UserCriteria();
-
+                    var criteria = new UserInsertCriteria();
                     model = UpdateAffiliateInfo(user, Common.GetIPAddressOfClient(), ref criteria);
 
                     // Update Success
@@ -136,7 +135,7 @@ namespace Fanex.Affiliate.Controllers
         /// <param name="ip">IP parameter.</param>
         /// <param name="criteria">User criteria.</param>
         /// <returns>Return result view model.</returns>
-        public ResultViewModel UpdateAffiliateInfo(UserViewModel user, string ip, ref UserCriteria criteria)
+        public ResultViewModel UpdateAffiliateInfo(UserViewModel user, string ip, ref UserInsertCriteria criteria)
         {
             criteria.FirstName = WebUtility.HtmlEncode(user.FirstName.TrimEnd().TrimStart());
             criteria.LastName = WebUtility.HtmlEncode(user.LastName.TrimEnd().TrimStart());
@@ -161,17 +160,16 @@ namespace Fanex.Affiliate.Controllers
                 ? string.Empty
                 : WebUtility.HtmlEncode(user.Player_Username.TrimEnd().TrimStart());
             criteria.Ip = ip;
-            criteria.Function = UserEnum.AffiliateRegister;
             criteria.AffType = AppSettings.InputAffType;
 
-            return _userService.AffiliateUpdate(criteria);
+            return _userService.AffiliateInsert(criteria);
         }
 
         /// <summary>
         /// Sign Up Send Mail.
         /// </summary>
         /// <param name="criteria">User criteria.</param>
-        public void SignUpSendMail(UserCriteria criteria)
+        public void SignUpSendMail(UserInsertCriteria criteria)
         {
             var currentLanguage = AppSession.Language;
             AppSession.Language = criteria.PreferredLanguage;
@@ -215,7 +213,7 @@ namespace Fanex.Affiliate.Controllers
         /// </summary>
         /// <param name="criteria">User criteria.</param>
         /// <param name="currentLanguage">Current language.</param>
-        public void SendSignUpEmailToCsd(UserCriteria criteria, string currentLanguage)
+        public void SendSignUpEmailToCsd(UserInsertCriteria criteria, string currentLanguage)
         {
             // Send mail to CSD
             var csdPath = Server.MapPath("~/Views/Shared/Email/SignUp/CsdMail.txt");

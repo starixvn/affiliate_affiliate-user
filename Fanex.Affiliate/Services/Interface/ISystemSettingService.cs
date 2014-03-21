@@ -21,7 +21,7 @@ namespace Fanex.Affiliate.Services.Interface
         /// </summary>
         /// <param name="criteria">Input criteria.</param>
         /// <returns>Return list system setting.</returns>
-        IEnumerable<SystemSetting> ListSystemSetting(SystemSettingCriteria criteria);
+        IEnumerable<SystemSetting> ListSystemSetting(SystemSettingsByTypeCriteria criteria);
         
         /// <summary>
         /// Get Affiliate System Date Time.

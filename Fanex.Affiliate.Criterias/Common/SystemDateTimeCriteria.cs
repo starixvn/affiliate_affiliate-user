@@ -1,10 +1,10 @@
 ﻿// --------------------------------------------------------------------------
-// <copyright file="SystemSettingsCriteria.cs" company="Nexcel Solutions Vietnam">
+// <copyright file="SystemDateTimeCriteria.cs" company="Nexcel Solutions Vietnam">
 // Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------
 // <history>
-//   <change who="Long.Luu" date="2013.07.23">Created and add Properties</change>
+//   <change who="Muller.Nguyen" date="2013.07.10">Created</change>
 // </history>
 
 namespace Fanex.Affiliate.Criteria
@@ -12,19 +12,17 @@ namespace Fanex.Affiliate.Criteria
     using NAP.Framework.Data;
 
     /// <summary>
-    /// System Settings Criteria.
+    /// TODO: Update summary.
     /// </summary>
-    public class SystemSettingsCriteria : CriteriaBase
+    public class SystemDateTimeCriteria : CriteriaBase
     {
-        public string Environment { get; set; }
-
         /// <summary>
         /// Get SP name.
         /// </summary>
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_GetAllAffSystemSettings";
+            return "Aff_User_AffiliateSelDBTime";
         }
     }
 }

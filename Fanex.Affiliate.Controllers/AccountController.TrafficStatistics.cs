@@ -58,9 +58,8 @@ namespace Fanex.Affiliate.Controllers
         [ValidateInput(true)]
         public ActionResult LandingPages(LandingPagesByPageCriteria criteria)
         {
-            var pageList = SystemSettingService.ListSystemSetting(new SystemSettingCriteria
+            var pageList = SystemSettingService.ListSystemSetting(new SystemSettingsByTypeCriteria
             {
-                IsType = true,
                 Type = "CustomerPage"
             });
 

@@ -38,7 +38,7 @@ namespace Fanex.Affiliate.Controllers
             var typeList = MarketingService.GetBannerTypeList(new BannerTypeCriteria { TypeName = "ImageType", Language = AppSession.Language });
             var sizeList = MarketingService.GetBannerTypeList(new BannerTypeCriteria { TypeName = "Size", Language = AppSession.Language });
             var domainList = MarketingService.GetDomainList(new DomainCriteria { AffID = CurrentSession.AffId });
-            var linkList = SystemSettingService.ListSystemSetting(new SystemSettingCriteria { Type = "CustomerPage", IsType = true });
+            var linkList = SystemSettingService.ListSystemSetting(new SystemSettingsByTypeCriteria { Type = "CustomerPage" });
             criteria.PageSize = criteria.PageSize == 0 ? AppSettings.PageSize : criteria.PageSize;
             criteria.Type = (short)AppSettings.InputAffType;
 
@@ -116,7 +116,7 @@ namespace Fanex.Affiliate.Controllers
             }
 
             var domainList = MarketingService.GetDomainList(new DomainCriteria { AffID = CurrentSession.AffId });
-            var linkList = SystemSettingService.ListSystemSetting(new SystemSettingCriteria { Type = "CustomerPage", IsType = true });
+            var linkList = SystemSettingService.ListSystemSetting(new SystemSettingsByTypeCriteria { Type = "CustomerPage" });
 
             criteria.PageSize = criteria.PageSize == 0 ? AppSettings.PageSize : criteria.PageSize;
 

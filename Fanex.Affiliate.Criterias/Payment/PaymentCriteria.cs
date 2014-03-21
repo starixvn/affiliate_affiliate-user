@@ -1,11 +1,13 @@
-﻿// --------------------------------------------------------------------------
+﻿// ----------------------------------------------------------------------
 // <copyright file="PaymentCriteria.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
+//     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
 // </copyright>
-// --------------------------------------------------------------------------
+// ------------------------------------------------------------------------
 // <history>
-//   <change who="Kaden.Trinh" date="2013.06.03">Created and add Properties</change>
+//   <change who="Long.Luu" date="2014/03/20">Created</change>
+//   <change who="" date=""></change>
 // </history>
+
 namespace Fanex.Affiliate.Criteria
 {
     using NAP.Framework.Data;
@@ -31,7 +33,7 @@ namespace Fanex.Affiliate.Criteria
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_PaymentRequestSelInfoByAff";
+            return "Aff_User_PaymentRequestSelInfoByAff";
         }
     }
 }

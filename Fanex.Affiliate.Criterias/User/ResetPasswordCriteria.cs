@@ -19,14 +19,15 @@ namespace Fanex.Affiliate.Criteria
     /// </summary>
     public class ResetPasswordCriteria : CriteriaBase
     {
-        public string NewPwd { get; set; }
+        public int AffID { get; set; }
 
         public string ValidCode { get; set; }
 
+        public string NewPwd { get; set; }
+
         public string Language { get; set; }
 
-        public int AffID { get; set; }
-
+        // Output parameters
         [Required(ErrorMessageResourceName = "Msg120", ErrorMessageResourceType = typeof(Lang))]
         [RegularExpression(
             @"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$",
@@ -52,7 +53,7 @@ namespace Fanex.Affiliate.Criteria
         /// <returns>Store name.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_AffiliateRecoverPwd";
+            return "Aff_User_AffiliateRecoverPwd";
         }
     }
 }

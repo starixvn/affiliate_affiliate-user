@@ -1,5 +1,5 @@
 ﻿// ----------------------------------------------------------------------
-// <copyright file="PaymentCancelCriteria.cs" company="Nexcel Solutions Vietnam">
+// <copyright file="PaymentRequestCriteria.cs" company="Nexcel Solutions Vietnam">
 //     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
 // </copyright>
 // ------------------------------------------------------------------------
@@ -14,32 +14,25 @@ namespace Fanex.Affiliate.Criteria
     using NAP.Framework.Data;
 
     /// <summary>
-    /// Criteria for cancelling the payment request.
+    /// Criteria for inserting the new payment request.
     /// </summary>
-    public class PaymentCancelCriteria : CriteriaBase
+    public class PaymentRequestCriteria : CriteriaBase
     {
-        public int UserID { get; set; }
+        public int AffId { get; set; }
 
-        public long TransID { get; set; }
+        public string Player_UserName { get; set; }
 
-        public string Status { get; set; }
+        public string Player_IBCUserName { get; set; }
 
-        public string AdminDesc { get; set; }
+        public string Player_Currency { get; set; }
 
-        public string AffDesc { get; set; }
+        public decimal Amount { get; set; }
 
-        public long RefNo { get; set; }
-
-        public long IbcRefNo { get; set; }
-
-        public long IbcTransId { get; set; }
+        public string IP { get; set; }
 
         public string Language { get; set; }
 
-        public string IBCUsername { get; set; }
-
-        public string IP { get; set; }        
-
+        // Output parameters
         [SpParam(Ignored = true)]
         public string PreferredLanguage { get; set; }
 
@@ -50,7 +43,7 @@ namespace Fanex.Affiliate.Criteria
         public DateTime TransDate { get; set; }
 
         [SpParam(Ignored = true)]
-        public decimal Amount { get; set; }
+        public long TransID { get; set; }
 
         [SpParam(Ignored = true)]
         public int ErrCode { get; set; }
@@ -58,10 +51,10 @@ namespace Fanex.Affiliate.Criteria
         /// <summary>
         /// Get the reference SP's Name which is specified in Config file.
         /// </summary>
-        /// <returns>Affiliate Payment Request Insert.</returns>
+        /// <returns>Store procedure payment request insert.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_PaymentRequestUpd";
+            return "Aff_User_PaymentRequestIns";
         }
     }
 }

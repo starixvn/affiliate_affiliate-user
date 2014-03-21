@@ -89,11 +89,22 @@ namespace Fanex.Affiliate.Services.Impl
         }
 
         /// <summary>
+        /// Insert affiliate.
+        /// </summary>
+        /// <param name="criteria">User criteria.</param>
+        /// <returns>Return view.</returns>
+        public ResultViewModel AffiliateInsert(UserInsertCriteria criteria)
+        {
+            Check.Argument.IsNotNull(criteria, "criteria");
+            return _userDataAccess.AffiliateInsert(criteria);
+        }
+
+        /// <summary>
         /// Update affiliate.
         /// </summary>
         /// <param name="criteria">User criteria.</param>
         /// <returns>Return view.</returns>
-        public ResultViewModel AffiliateUpdate(UserCriteria criteria)
+        public ResultViewModel AffiliateUpdate(UserUpdateInfoCriteria criteria)
         {
             Check.Argument.IsNotNull(criteria, "criteria");
             return _userDataAccess.AffiliateUpdate(criteria);
@@ -104,7 +115,7 @@ namespace Fanex.Affiliate.Services.Impl
         /// </summary>
         /// <param name="criteria">User criteria.</param>
         /// <returns>User view model.</returns>
-        public UserViewModel AffiliateSelectByID(UserCriteria criteria)
+        public UserViewModel AffiliateSelectByID(UserSelectInfoCriteria criteria)
         {
             Check.Argument.IsNotNull(criteria, "criteria");
             return _userDataAccess.AffiliateSelectById(criteria);
@@ -150,7 +161,6 @@ namespace Fanex.Affiliate.Services.Impl
         /// Get user info when login from admin site.
         /// </summary>
         /// <param name="criteria">Internal login criteria.</param>
-        /// <param name="errCode">Error code.</param>
         /// <returns>User model.</returns>
         public User InternalAuthenticateUser(InternalLoginCriteria criteria)
         {
