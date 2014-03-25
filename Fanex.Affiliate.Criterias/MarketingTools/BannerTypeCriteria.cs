@@ -12,7 +12,7 @@ namespace Fanex.Affiliate.Criteria
     using NAP.Framework.Data;
 
     /// <summary>
-    /// TODO: Update summary.
+    /// Banner Type Criteria.
     /// </summary>
     public class BannerTypeCriteria : CriteriaBase
     {

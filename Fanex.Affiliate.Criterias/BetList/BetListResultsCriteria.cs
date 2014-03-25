@@ -44,7 +44,7 @@ namespace Fanex.Affiliate.Criteria
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_BetList";
+            return "Aff_User_BetList";
         }
     }
 }

@@ -75,7 +75,7 @@ namespace Fanex.Affiliate.Criteria
 
         public override bool IsValid()
         {
-            return Month > 0 && Year > 0;
+            return AffId > 0 && Month > 0 && Year > 0;
         }
     }
 }

@@ -139,7 +139,6 @@
     <Compile Include="Impl\ProductService.cs" />
     <Compile Include="Impl\ServiceWrapper.cs" />
     <Compile Include="Impl\TrackingSystemService.cs" />
-    <Compile Include="Impl\TrafficStatisticService.cs" />
     <Compile Include="Impl\MarketingService.cs" />
     <Compile Include="Impl\UserService.cs" />
     <Compile Include="Interface\IBetListService.cs" />
@@ -154,7 +153,6 @@
     <Compile Include="Interface\IPaymentService.cs" />
     <Compile Include="Interface\IProductService.cs" />
     <Compile Include="Interface\ITrackingSystemService.cs" />
-    <Compile Include="Interface\ITrafficStatisticService.cs" />
     <Compile Include="Interface\IUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\MemberSiteService\Reference.cs">

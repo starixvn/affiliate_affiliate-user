@@ -80,17 +80,6 @@ namespace Fanex.Affiliate.Criteria
         // Output parameters
         public int ErrCode { get; set; }
 
-        /*
-        public int AffType { get; set; }
-
-        public string Question { get; set; }
-
-        [AllowHtml]
-        public string Answer { get; set; }
-
-        public string Browser { get; set; }
-        */
-
         /// <summary>
         /// Get SP name.
         /// </summary>

@@ -81,7 +81,7 @@ namespace Fanex.Affiliate.Services.Interface
         /// <param name="criteria">Input criteria.</param>
         /// <param name="totalPage">Total page for paging.</param>
         /// <returns>Return object list.</returns>
-        IEnumerable<ReferrersStatisticsDetail> GetReferrersStatisticsDetail(TrafficStatisticCriteria criteria, ref int totalPage);
+        IEnumerable<ReferrersStatisticsDetail> GetReferrersStatisticsDetail(TrafficStatisticDetailCriteria criteria, ref int totalPage);
 
         /// <summary>
         /// Get Daily Earnings.

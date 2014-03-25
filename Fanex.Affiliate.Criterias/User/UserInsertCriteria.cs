@@ -86,17 +86,6 @@ namespace Fanex.Affiliate.Criteria
         
         public string ErrMsg { get; set; }
 
-        /*
-        public int UserID { get; set; }
-
-
-
-        [AllowHtml]
-        public string Password { get; set; }
-        
-        public string PlayerCurrency { get; set; }
-         */
-
         /// <summary>
         /// Get SP name.
         /// </summary>

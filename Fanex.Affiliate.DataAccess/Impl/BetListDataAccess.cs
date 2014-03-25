@@ -378,7 +378,7 @@ namespace Fanex.Affiliate.DataAccess.Impl
                 { "ibcusername", string.Empty },
                 { "currencyid", 0 }
             };
-            var objectDb = new ObjectDb("Aff_DummyAccID");
+            var objectDb = new ObjectDb("Aff_User_DummyAccID");
             objectDb.ExecuteNonQuery(hashParam);
 
             return new CustomerInfoBetList
@@ -404,7 +404,7 @@ namespace Fanex.Affiliate.DataAccess.Impl
         /// <returns>The result value.</returns>
         public DataTable GetPopUpMatch(int matchId, int raceNo, int licenseeId, int userId)
         {
-            const string ProcedureName = "Aff_BetListResult_SelMatch";
+            const string ProcedureName = "Aff_User_BetListResult_SelMatch";
             var param = new
             {
                 matchid = matchId,
@@ -427,7 +427,7 @@ namespace Fanex.Affiliate.DataAccess.Impl
         /// <returns>The result value.</returns>
         public DataTable GetPopUpParalayMatch(long refNo)
         {
-            const string ProcedureName = "Aff_BetListResult_SelMatchParlay";
+            const string ProcedureName = "Aff_User_BetListResult_SelMatchParlay";
             var param = new
             {
                 refno = refNo
@@ -447,7 +447,7 @@ namespace Fanex.Affiliate.DataAccess.Impl
         /// <returns>The result value.</returns>
         public DataTable GetPopUpNumberGameMatch(int matchId)
         {
-            const string ProcedureName = "Aff_BetListResult_SelMatchNumberGame";
+            const string ProcedureName = "Aff_User_BetListResult_SelMatchNumberGame";
             var param = new
             {
                 matchid = matchId

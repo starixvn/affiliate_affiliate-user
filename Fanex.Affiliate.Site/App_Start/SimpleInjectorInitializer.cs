@@ -50,7 +50,6 @@ namespace Fanex.Affiliate.Site.App_Start
         private static void InitializeContainer(Container container)
         {
             container.Register<IAccountService, AccountService>();
-            container.Register<ITrafficStatisticService, TrafficStatisticService>();
             container.Register<IPaymentService, PaymentService>();
             container.Register<IMarketingService, MarketingService>();
             container.Register<IUserService, UserService>();

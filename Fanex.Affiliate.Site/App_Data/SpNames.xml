@@ -21,15 +21,15 @@
     <Setting Key="Aff_User_EarningSelDaily" SpName="Aff_User_EarningSelDaily" DbName="affiliate" Plain="0" />
     <Setting Key="Aff_User_EarningSelDetail" SpName="Aff_User_EarningSelDetail" DbName="affiliate" Plain="0" />
     <Setting Key="Aff_User_GetExchangeRate" SpName="Aff_User_GetExchangeRate" DbName="affiliate" Plain="0" />
-    <Setting Key="Aff_BetList" SpName="Aff_User_BetList" DbName="bodb02" Plain="0" />
+    <Setting Key="Aff_User_BetList" SpName="Aff_User_BetList" DbName="bodb02" Plain="0" />
     <Setting Key="Aff_BetListParlay" SpName="Aff_User_BetListParlay_xTest" DbName="bodb02" Plain="0" />
     <Setting Key="Aff_User_BetListSystemParlayDetail" SpName="Aff_User_BetListSystemParlayDetail" DbName="bodb02" Plain="0" />
     <Setting Key="Aff_User_SelBalanceUpDay" SpName="Aff_User_SelBalanceUpDay" DbName="bodb02" Plain="0" />
-    <Setting Key="Aff_DummyAccID" SpName="Aff_User_DummyAccID" DbName="bodb02" Plain="0" />
+    <Setting Key="Aff_User_DummyAccID" SpName="Aff_User_DummyAccID" DbName="bodb02" Plain="0" />
 
-    <Setting Key="Aff_BetListResult_SelMatch" SpName="Aff_User_BetListResult_SelMatch" DbName="bodb02" Plain="0" />
+    <Setting Key="Aff_User_BetListResult_SelMatch" SpName="Aff_User_BetListResult_SelMatch" DbName="bodb02" Plain="0" />
     <Setting Key="Aff_BetListResult_SelMatchParlay" SpName="Aff_User_BetListResult_SelMatchParlay" DbName="bodb02" Plain="0" />
-    <Setting Key="Aff_BetListResult_SelMatchNumberGame" SpName="Aff_User_BetListResult_SelMatchNumberGame" DbName="bodb02" Plain="0" />
+    <Setting Key="Aff_User_BetListResult_SelMatchNumberGame" SpName="Aff_User_BetListResult_SelMatchNumberGame" DbName="bodb02" Plain="0" />
 </Function>
 
   <Function Name="Aff-CustomerInfo">
@@ -69,7 +69,6 @@
     <Setting Key="Aff_User_BannerSelType" SpName="Aff_User_BannerSelType" DbName="affiliate" Plain="0" />
     <Setting Key="Aff_User_DomainAffClientSel" SpName="Aff_User_DomainAffClientSel" DbName="affiliate" Plain="0" />
     <Setting Key="Aff_User_BannerSel" SpName="Aff_User_BannerSel" DbName="affiliate" Plain="0" />
-    <Setting Key="Aff_TextSel" SpName="Aff_User_TextSel" DbName="affiliate" Plain="0" />
   </Function>
 
   <Function Name="Aff-Message">

@@ -16,7 +16,7 @@ namespace Fanex.Affiliate.Criteria
     using NAP.Framework.Data;
 
     /// <summary>
-    /// TODO: Update summary.
+    /// Contact Us Criteria.
     /// </summary>
     public class ContactUsCriteria : CriteriaBase
     {

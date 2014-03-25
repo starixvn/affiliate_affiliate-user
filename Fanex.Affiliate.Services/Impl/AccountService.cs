@@ -143,7 +143,7 @@ namespace Fanex.Affiliate.Services.Impl
         /// <param name="criteria">Input criteria.</param>
         /// <param name="totalPage">Total page for paging.</param>
         /// <returns>Return object list.</returns>
-        public IEnumerable<ReferrersStatisticsDetail> GetReferrersStatisticsDetail(TrafficStatisticCriteria criteria, ref int totalPage)
+        public IEnumerable<ReferrersStatisticsDetail> GetReferrersStatisticsDetail(TrafficStatisticDetailCriteria criteria, ref int totalPage)
         {
             Check.Argument.IsNotNull(criteria, "criteria");
             return GetData<ReferrersStatisticsDetail>(criteria, ref totalPage);

@@ -12,7 +12,7 @@ namespace Fanex.Affiliate.Criteria
     using NAP.Framework.Data;
 
     /// <summary>
-    /// TODO: Update summary.
+    /// Domain Criteria.
     /// </summary>
     public class DomainCriteria : CriteriaBase
     {

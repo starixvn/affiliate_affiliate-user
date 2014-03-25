@@ -151,7 +151,6 @@ namespace Fanex.Affiliate.Controllers
                 };
             }
 
-            criteria.IsReferrersStatistics = true;
             criteria.AffId = CurrentSession.AffId;
             var model = new TrafficStatisticsViewModel
             {
@@ -169,7 +168,7 @@ namespace Fanex.Affiliate.Controllers
         /// <param name="criteria">The criteria.</param>
         /// <returns>Return view.</returns>
         [HttpGet]
-        public ActionResult ReferrersStatisticsDetail(TrafficStatisticCriteria criteria)
+        public ActionResult ReferrersStatisticsDetail(TrafficStatisticDetailCriteria criteria)
         {
             var itemPerPage = criteria.PageSize > 0 ? criteria.PageSize : AppSettings.PageSize;
             var currentPageIndex = criteria.Page > 0 ? criteria.Page : 1;
@@ -178,7 +177,6 @@ namespace Fanex.Affiliate.Controllers
             criteria.AffId = CurrentSession.AffId;
             criteria.PageSize = itemPerPage;
             criteria.Page = currentPageIndex;
-            criteria.IsReferrersStatisticsDetail = true;
             var data = AccountService.GetReferrersStatisticsDetail(criteria, ref totalPage);
 
             return View(data.ToPagedList(currentPageIndex, itemPerPage, totalPage * itemPerPage));
