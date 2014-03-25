@@ -40,7 +40,7 @@ namespace Fanex.Affiliate.Criteria
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_User_ClickStatisticsDetailBySite";;
+            return "Aff_User_ClickStatisticsDetailBySite";
         }
 
         /// <summary>
