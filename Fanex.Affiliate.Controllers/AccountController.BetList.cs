@@ -282,18 +282,15 @@ namespace Fanex.Affiliate.Controllers
                 {
                     criteria.ShowSB = true;
                 }
-
-                if (item.ProductName == "Number Game")
+                else if (item.ProductName == "Number Game")
                 {
                     criteria.ShowNG = true;
                 }
-
-                if (item.ProductName == "RNG Casino")
+                else if (item.ProductName == "RNG Casino")
                 {
                     criteria.ShowCS = true;
                 }
-
-                if (item.ProductName == "Live Casino")
+                else if (item.ProductName == "Live Casino")
                 {
                     criteria.ShowLC = true;
                 }
