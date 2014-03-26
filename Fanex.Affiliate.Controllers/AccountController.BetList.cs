@@ -118,7 +118,7 @@ namespace Fanex.Affiliate.Controllers
             criteria.UserId = AppSettings.LicenseeID;
 
             var systemParlayData = BetListService.GetSystemParlayDetail(criteria);
-            systemParlayData = ExchangeSystemParlayTickets(systemParlayData);
+            ExchangeSystemParlayTickets(systemParlayData);
             var builder = new BetListHTMLBuilder();
             var systemParlayText = builder.BuildSystemParlayDetail(new TicketHelper(), systemParlayData);
             var viewModel = new SystemParlayDetailViewModel
@@ -134,8 +134,7 @@ namespace Fanex.Affiliate.Controllers
         /// Exchange system parlay ticket from user's currency to affiliate's currency.
         /// </summary>
         /// <param name="systemParlayData">Original system parlay data object.</param>
-        /// <returns>Exchanged system parlay data object.</returns>
-        public SystemParlayData ExchangeSystemParlayTickets(SystemParlayData systemParlayData)
+        public void ExchangeSystemParlayTickets(SystemParlayData systemParlayData)
         {
             systemParlayData.Outstanding *= CurrentSession.ExchangeRate;
             foreach (var ticket in systemParlayData.TicketList)
@@ -145,8 +144,6 @@ namespace Fanex.Affiliate.Controllers
                 ticket.Stake *= CurrentSession.ExchangeRate;
                 ticket.WinLost *= CurrentSession.ExchangeRate;
             }
-
-            return systemParlayData;
         }
 
         /// <summary>
@@ -278,21 +275,20 @@ namespace Fanex.Affiliate.Controllers
 
             foreach (var item in listProduct)
             {
-                if (item.ProductName == "Sportsbook")
+                switch (item.ProductName)
                 {
-                    criteria.ShowSB = true;
-                }
-                else if (item.ProductName == "Number Game")
-                {
-                    criteria.ShowNG = true;
-                }
-                else if (item.ProductName == "RNG Casino")
-                {
-                    criteria.ShowCS = true;
-                }
-                else if (item.ProductName == "Live Casino")
-                {
-                    criteria.ShowLC = true;
+                    case "Sportsbook":
+                        criteria.ShowSB = true;
+                        break;
+                    case "Number Game":
+                        criteria.ShowNG = true;
+                        break;
+                    case "RNG Casino":
+                        criteria.ShowCS = true;
+                        break;
+                    case "Live Casino":
+                        criteria.ShowLC = true;
+                        break;
                 }
             }
         }

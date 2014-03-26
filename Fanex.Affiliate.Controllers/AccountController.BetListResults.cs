@@ -10,22 +10,17 @@
 
 namespace Fanex.Affiliate.Controllers
 {
-    using System;
     using System.Collections.Generic;
     using System.Diagnostics.CodeAnalysis;
     using System.Linq;
     using System.Text.RegularExpressions;
     using System.Web.Mvc;
-    using System.Web.Script.Serialization;
     using Configurations;
     using Criteria;
-    using DTO;
     using DTO.BetList;
     using Enumerations;
     using Fanex.Common;
     using Fanex.Result.Core;
-    using Logging;
-    using Resources;
     using Utilities;
     using ViewModels;
     using Web.Filter;
@@ -61,9 +56,8 @@ namespace Fanex.Affiliate.Controllers
         public string GetPopUpData(BetListResultsCriteria criteria)
         {
             var sportType = (SportType)criteria.SportType;
-            var licenseeId = AppSettings.LicenseeID;
             var customerInfoBetList = BetListService.GetPlayerIbcInfo(AppSettings.AffiliateName + "$" + criteria.UserName);
-            var setting = new ResultSetting
+            var displaySettings = new ResultSetting
             {
                 SportType = sportType,
                 IsOutRight = criteria.IsOutRight.HasValue && criteria.IsOutRight.Value > 0,
@@ -72,13 +66,13 @@ namespace Fanex.Affiliate.Controllers
                 LanguageCode = CurrentSession.Language
             };
 
-            if (setting.IsParlayPopUp && criteria.RefNo != null)
+            if (displaySettings.IsParlayPopUp && criteria.RefNo != null)
             {
                 var parlayData = BetListService.GetPopUpParlayMatch(criteria.RefNo.Value);
-                return ResultEngine.HtmlParser(parlayData, setting);
+                return ResultEngine.HtmlParser(parlayData, displaySettings);
             }
 
-            return GetNormalPopUpData(criteria, sportType, licenseeId, customerInfoBetList.CustId, setting);
+            return GetNormalPopUpData(criteria, sportType, customerInfoBetList.CustId, displaySettings);
         }
 
         /// <summary>
@@ -86,11 +80,10 @@ namespace Fanex.Affiliate.Controllers
         /// </summary>
         /// <param name="criteria">The metal model.</param>
         /// <param name="sportType">The sport type.</param>
-        /// <param name="licenseeId">The licensee id.</param>
         /// <param name="userId">The user id.</param>
         /// <param name="setting">The setting result.</param>
         /// <returns>HTML formatted of data.</returns>
-        public string GetNormalPopUpData(BetListResultsCriteria criteria, SportType sportType, int licenseeId, int userId, ResultSetting setting)
+        public string GetNormalPopUpData(BetListResultsCriteria criteria, SportType sportType, int userId, ResultSetting setting)
         {
             switch (sportType)
             {
@@ -106,14 +99,14 @@ namespace Fanex.Affiliate.Controllers
                     var dataRc = BetListService.GetPopUpRacingMatch(
                         criteria.MatchId,
                         criteria.RaceNo.Value,
-                        licenseeId,
+                        AppSettings.LicenseeID,
                         userId);
                     return dataRc != null ? ResultEngine.HtmlParser(dataRc, setting) : string.Empty;
 
                 case SportType.LiveCasino:
                     var dataLc = BetListService.GetPopUpLiveCasinoMatch(
                         criteria.MatchId,
-                        licenseeId,
+                        AppSettings.LicenseeID,
                         userId);
                     return dataLc != null ? ResultEngine.HtmlParser(dataLc, setting) : string.Empty;
 
@@ -122,7 +115,7 @@ namespace Fanex.Affiliate.Controllers
                     return dataNg != null ? ResultEngine.HtmlParser(dataNg, setting) : string.Empty;
 
                 default:
-                    var data = BetListService.GetPopUpMatch(criteria.MatchId, licenseeId, userId);
+                    var data = BetListService.GetPopUpMatch(criteria.MatchId, AppSettings.LicenseeID, userId);
                     return data != null ? ResultEngine.HtmlParser(data, setting) : string.Empty;
             }
         }

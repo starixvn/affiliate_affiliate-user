@@ -31,10 +31,10 @@ namespace Fanex.Affiliate.Site
                 Transforms = { new CssTransformer(), new CssMinify() },
                 Orderer = new NullOrderer()
             }.Include("~/Content/themes/base/jquery-ui.css")
-            .Include(string.Format("~/Content/betlist/betList.css", AppSettings.Theme))
+            .Include(string.Format("~/Content/betlist/betlist.css", AppSettings.Theme))
             .Include(string.Format("~/Content/betlist/betlist.core.css", AppSettings.Theme))
-            .Include(string.Format("~/Content/betlist/systemparlaydetail.css", AppSettings.Theme))
-            .Include(string.Format("~/Content/betlist/rng-casino-hand-history.css", AppSettings.Theme))
+            .Include(string.Format("~/Content/betlist/systemparlay.detail.css", AppSettings.Theme))
+            .Include(string.Format("~/Content/betlist/rngcasino.handhistory.css", AppSettings.Theme))
             .Include(string.Format("~/Content/betlist/fanex.result.css", AppSettings.Theme))
             .Include(string.Format("~/Content/themes/theme{0}/index.less", AppSettings.Theme)));
 
