@@ -1,8 +1,10 @@
 ﻿@model Tuple<IEnumerable<Language>, String>
+
 @{
     var languageList = Model.Item1;
     var selectedLang = Model.Item2;
 }
+
 <div id="language">
     <div id="box">
         <span id="arrow" class="arrUp"></span><span id="selectedLang" class="@AppSession.Language">@selectedLang</span>

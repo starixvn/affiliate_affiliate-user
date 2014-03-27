@@ -11,8 +11,7 @@
 
 @section css
 {
-    <link href="@Url.Content(string.Format("~/Content/themes/theme{0}/jquery.ui.datepicker.css", AppSettings.Layout))" rel="stylesheet" />
-    <link href="@Url.Content(string.Format("~/Content/themes/theme{0}/calendar.less", AppSettings.Layout))" rel="stylesheet" />
+    @Styles.Render("~/css/datetimepicker")
 }
 
 @using (Html.BeginForm())
@@ -156,5 +155,5 @@
 }    
 @section scriptspage
 {
-    <script type="text/javascript" src="@Url.Content("~/Scripts/site/Message.js")"></script>
+    @Scripts.Render("~/js/message")
 }

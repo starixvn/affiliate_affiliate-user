@@ -4,11 +4,11 @@
 @using Fanex.Affiliate.ViewModels
 
 @model SystemParlayDetailViewModel
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>@string.Format("Affiliate - System Parlay")</title>
-    <link href="@Url.Content("/Content/betlist/global.content.css")" rel="stylesheet" type="text/css" />
-    <link href="@Url.Content("/Content/betlist/systemparlaydetail.css")" rel="stylesheet" type="text/css" />
+    @Styles.Render("~/css/systemparlaydetails")
 </head>
 <body>
     @Html.Raw(Model.DetailText)

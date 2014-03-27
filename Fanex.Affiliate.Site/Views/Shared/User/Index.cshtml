@@ -332,9 +332,11 @@
     <div id="messageWebsite" site-info="@Lang.SiteURL" more-url="@Lang.WebsiteUrl" del="@Lang.Delete">
     </div>
 }
+
 @section scriptspage
 {
-    <script src="~/Scripts/site/SignUp.js" type="text/javascript"></script>
+    @Scripts.Render("~/js/signup")
+    
     @if (ViewBag.Error != null)
     {
         var msg = ((ResultViewModel)ViewBag.Error).Message;

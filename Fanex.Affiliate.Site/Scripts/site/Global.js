@@ -141,7 +141,7 @@
 
         // Dialog
         hidePopupBlockLoading: function () {
-            $("iframe").siblings('.block-loading').hide();           
+            $("iframe").siblings('.block-loading').hide();
         },
         dialogOpt: {
             position: { my: "top+30%", at: "center top", of: window },

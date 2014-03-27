@@ -2,7 +2,9 @@
     ViewBag.Title = Lang.AccountOverview;
     Layout = @String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
 }
+
 @model Fanex.Affiliate.ViewModels.AccountOverviewViewModel
+
 @using (Html.BeginForm("Overview", "Account"))
 {
     var statistics = Model.Statistics;

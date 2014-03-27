@@ -40,4 +40,13 @@
 </div>
 @section scripts
 {
+    @if (currentSession == null)
+    {
+        @Scripts.Render("~/js/signin")
+    }
+    else
+    {
+        @Scripts.Render("~/js/loggedinaccount")
+    }
+    @RenderSection("scriptspage", required: false)
 }

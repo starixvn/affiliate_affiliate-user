@@ -2,6 +2,9 @@
     ViewBag.Title = Lang.BetListResults;
     Layout = "~/Views/Shared/_LayoutPopup.cshtml";
 }
+
+@Styles.Render("~/css/betlist")
+
 <style type="text/css">
     .popup .container-fluid
     {
@@ -16,3 +19,6 @@
 </style>
 
 @Html.Raw(ViewBag.Data)
+
+
+@Scripts.Render("~/js/betlist")

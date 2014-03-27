@@ -2,7 +2,9 @@
     ViewBag.Title = Lang.MediaGallery;
     Layout = @String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
 }
+
 @model MarketingViewModel
+
 @using (Html.BeginForm("MediaGallery", "Account"))
 {
     <div class="span12 box-insite">
@@ -214,7 +216,8 @@
     </div>
     <input type="hidden" id="subCategory" value="@Model.SubCategorySelected" />
 }
+
 @section scriptspage
 {
-    <script src="~/Scripts/site/Marketing.js" type="text/javascript"></script>
+    @Scripts.Render("~/js/mediagallery")
 }

@@ -2,7 +2,9 @@
     ViewBag.Title = Lang.AccountInformation;
     Layout = @String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
 }
+
 @model UserViewModel
+
 @using (Html.BeginForm())
 {
     <div class="span12 box-insite">
@@ -285,9 +287,11 @@
     @Html.HiddenFor(m => m.Country)
     @Html.HiddenFor(m => m.Currency)
 }
+
 @section scriptspage
 {
-    <script src="~/Scripts/site/AccountInfo.js" type="text/javascript"></script>
+    @Scripts.Render("~/js/myaccount")
+
     @if (ViewBag.Error != null)
     {
         var msg = ((ResultViewModel)ViewBag.Error).Message;

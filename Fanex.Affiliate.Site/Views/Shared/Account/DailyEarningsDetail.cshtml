@@ -5,8 +5,8 @@
 @model DailyEarningsKioskDetailViewModel
 @section css
 {
-    <link href="@Url.Content(string.Format("~/Content/themes/theme{0}/jquery.ui.datepicker.css", AppSettings.Layout))" rel="stylesheet" />
-    <link href="@Url.Content(string.Format("~/Content/themes/theme{0}/calendar.less", AppSettings.Layout))" rel="stylesheet" />
+    @Styles.Render("~/css/datetimepicker")
+
     <style type="text/css">
         .ui-tooltip {
             max-width: 400px;
@@ -14,10 +14,7 @@
         }
     </style>
 }
-@section scriptspage
-{
-    <script type="text/javascript" src="~/Scripts/site/DailyEarningsDetail.js"></script>
-}
+
 @using (Html.BeginForm())
 {
     <div class="span12 box-insite">
@@ -174,4 +171,9 @@
             </div>
         </div>
     </div>
+}
+
+@section scriptspage
+{
+    @Scripts.Render("~/js/dailyearnings")
 }

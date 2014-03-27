@@ -2,7 +2,9 @@
     ViewBag.Title = Lang.TextBox;
     Layout = @String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
 }
+
 @model MarketingViewModel
+
 @using (Html.BeginForm("TextBox", "Account"))
 {
     <div class="span12 box-insite">
@@ -156,7 +158,8 @@
         </div>
     </div>
 }
+
 @section scriptspage
 {
-    <script src="~/Scripts/site/Marketing.js" type="text/javascript"></script>
+    @Scripts.Render("~/js/mediagallery")
 }

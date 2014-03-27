@@ -3,11 +3,12 @@
     Layout = string.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
 }
 @model DailyEarningsKioskViewModel
+
 @section css
 {
-    <link href="@Url.Content(string.Format("~/Content/themes/theme{0}/jquery.ui.datepicker.css", AppSettings.Layout))" rel="stylesheet" />
-    <link href="@Url.Content(string.Format("~/Content/themes/theme{0}/calendar.less", AppSettings.Layout))" rel="stylesheet" />
+    @Styles.Render("~/css/datetimepicker")
 }
+
 @using (Html.BeginForm())
 {
     <div class="span12 box-insite">

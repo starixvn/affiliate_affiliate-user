@@ -3,40 +3,13 @@
     HtmlHelper.ClientValidationEnabled = false;
     Layout = @String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
 }
+
 @model PaymentViewModel
+
 @{
     var listPayment = Model.ListPayment;
     var pendingList = listPayment.Where(p => p.Status.ToLower() == "pending").ToList();
     var recentList = listPayment.Where(p => p.Status.ToLower() != "pending").ToList();
-}
-@section scriptspage
-{
-    <script type="text/javascript" src="~/Scripts/site/PaymentRequest.js"></script>
-    @if (ViewBag.Result != null)
-    {
-        var msg = ((ResultViewModel)ViewBag.Result).Message;
-        if (!string.IsNullOrEmpty(msg))
-        {
-            if (((ResultViewModel) ViewBag.Result).Success == false)
-            {
-                <script type="text/javascript">
-                    AFFILIATE.showErrorMsg("@msg");
-                </script>
-            }
-            else
-            {
-                <script type="text/javascript">
-                    AFFILIATE.showSuccessMsg("@msg");
-                </script>
-            }
-        }
-        else
-        {
-            <script type="text/javascript">
-                AFFILIATE.hideMessageRegion();
-            </script>
-        }
-    }
 }
 
 <div class="span12 box-insite">
@@ -234,3 +207,34 @@
         </div>
     </div>
 </div>
+
+@section scriptspage
+{
+    @Scripts.Render("~/js/paymentrequest")
+
+    @if (ViewBag.Result != null)
+    {
+        var msg = ((ResultViewModel)ViewBag.Result).Message;
+        if (!string.IsNullOrEmpty(msg))
+        {
+            if (((ResultViewModel) ViewBag.Result).Success == false)
+            {
+                <script type="text/javascript">
+                    AFFILIATE.showErrorMsg("@msg");
+                </script>
+            }
+            else
+            {
+                <script type="text/javascript">
+                    AFFILIATE.showSuccessMsg("@msg");
+                </script>
+            }
+        }
+        else
+        {
+            <script type="text/javascript">
+                AFFILIATE.hideMessageRegion();
+            </script>
+        }
+    }
+}
