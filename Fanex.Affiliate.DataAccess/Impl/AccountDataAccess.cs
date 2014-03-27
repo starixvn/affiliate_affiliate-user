@@ -12,17 +12,12 @@
 namespace Fanex.Affiliate.DataAccess.Impl
 {
     using System;
-    using System.Collections;
     using System.Collections.Generic;
-    using System.Data;
-    using System.Diagnostics.CodeAnalysis;
-    using BetList.Core.Entities;
     using Common;
     using Common.Extensions;
     using Criteria;
     using Data;
     using DTO;
-    using DTO.BetList;
     using Interface;
     using ViewModels;
 
@@ -77,33 +72,33 @@ namespace Fanex.Affiliate.DataAccess.Impl
             var commResult = new AccountOverviewViewModel();
             using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
             {
-                var reader = objectDb.ExecuteReader(criteria.GetSpParams());
+                var data = objectDb.ExecuteReader(criteria.GetSpParams());
                 
                 // Get data to GroupSetting
-                while (reader.Read())
+                while (data.Read())
                 {
                     commResult.ListGroupSetting.Add(new GroupSetting
                     {
-                        GroupId = reader.ToInt("groupid"),
-                        ProductId = reader.ToByte("productid"),
-                        TierId = reader.ToByte("tierid"),
-                        MinAmount = reader.ToDecimal("minamount"),
-                        MaxAmount = reader.ToDecimal("maxamount"),
-                        MinQM = reader.ToInt("minqm"),
-                        MaxQM = reader.ToInt("maxqm"),
-                        Commission = reader.ToDecimal("commission")
+                        GroupId = data.ToInt("groupid"),
+                        ProductId = data.ToByte("productid"),
+                        TierId = data.ToByte("tierid"),
+                        MinAmount = data.ToDecimal("minamount"),
+                        MaxAmount = data.ToDecimal("maxamount"),
+                        MinQM = data.ToInt("minqm"),
+                        MaxQM = data.ToInt("maxqm"),
+                        Commission = data.ToDecimal("commission")
                     });
                 }
 
                 // Get data to Product
-                if (reader.NextResult())
+                if (data.NextResult())
                 {
-                    while (reader.Read())
+                    while (data.Read())
                     {
                         commResult.ListProductOnCommissionSetting.Add(new Product
                         {
-                            ProductId = reader.ToByte("productid"),
-                            ProductName = reader["productname"].ToString()
+                            ProductId = data.ToByte("productid"),
+                            ProductName = data["productname"].ToString()
                         });
                     }
                 }
@@ -123,15 +118,15 @@ namespace Fanex.Affiliate.DataAccess.Impl
         /// <returns>List of daily earning.</returns>
         public IEnumerable<DailyEarning> GetDailyEarnings(DailyEarningCriteria criteria)
         {
-            List<DailyEarning> list;
+            List<DailyEarning> data;
             using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
             {
                 var param = criteria.GetSpParams();
-                list = objectDb.Query<DailyEarning>(param) as List<DailyEarning>;
+                data = objectDb.Query<DailyEarning>(param) as List<DailyEarning>;
                 criteria.AffCurrency = Convert.ToString(param["affcurrency"]);
             }
 
-            return list;
+            return data;
         }
 
         /// <summary>
@@ -141,15 +136,15 @@ namespace Fanex.Affiliate.DataAccess.Impl
         /// <returns>List of daily earning detail.</returns>
         public IEnumerable<DailyEarningsDetail> GetDailyEarningsDetail(DailyEarningsDetailCriteria criteria)
         {
-            List<DailyEarningsDetail> list;
+            List<DailyEarningsDetail> data;
             using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
             {
                 var param = criteria.GetSpParams();
-                list = objectDb.Query<DailyEarningsDetail>(param) as List<DailyEarningsDetail>;
+                data = objectDb.Query<DailyEarningsDetail>(param) as List<DailyEarningsDetail>;
                 criteria.AffCurrency = Convert.ToString(param["affcurrency"]);
             }
 
-            return list;
+            return data;
         }
 
         #endregion
@@ -231,15 +226,15 @@ namespace Fanex.Affiliate.DataAccess.Impl
         /// <returns>Customer Info Model.</returns>
         public IEnumerable<CustomerInfo> GetCustomerInfo(CustomerInfoCriteria criteria)
         {
-            List<CustomerInfo> list;
+            List<CustomerInfo> data;
             using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
             {
                 var param = criteria.GetSpParams();
-                list = objectDb.Query<CustomerInfo>(param) as List<CustomerInfo>;
+                data = objectDb.Query<CustomerInfo>(param) as List<CustomerInfo>;
                 criteria.TotalPages = Converter.ToInt(param["totalpages"]);
             }
 
-            return list;
+            return data;
         }
 
         #endregion

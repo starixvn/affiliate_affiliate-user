@@ -17,7 +17,7 @@ namespace Fanex.Affiliate.Services.Impl
     using Interface;
 
     /// <summary>
-    /// TODO: Update summary.
+    /// Contact Us Service.
     /// </summary>
     public class ContactUsService : IContactUsService
     {

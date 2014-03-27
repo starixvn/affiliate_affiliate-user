@@ -142,10 +142,10 @@ namespace Fanex.Affiliate.Controllers
                 : new List<RNGCasinoResult>();
             
             ExchangeRNGCasinoValues(data);
-            var total = new List<RNGCasinoResult>();
+            var totalAmount = new List<RNGCasinoResult>();
             if (data != null)
             {
-                total.Add(new RNGCasinoResult
+                totalAmount.Add(new RNGCasinoResult
                 {
                     Stake = data.Sum(x => x.Stake),
                     Bet = data.Sum(x => x.Bet),
@@ -154,7 +154,7 @@ namespace Fanex.Affiliate.Controllers
                 });
             }
 
-            var model = new BetListResultsRNGCasinoViewModel(data, total, criteria);
+            var model = new BetListResultsRNGCasinoViewModel(data, totalAmount, criteria);
             model.Currency = CurrentSession.Currency;
 
             return View("~/Views/Shared/Account/BetListResults_RNGCasino.cshtml", model);
@@ -187,25 +187,22 @@ namespace Fanex.Affiliate.Controllers
         {
             criteria.CurrencyName = criteria.CurrencyName.ToUpper();
             const string ViewPathTemplate = "~/Views/Shared/Account/RNGCasinoDetail/Group{0}.cshtml";
-            var group = this.GetGroupByGameTypeId(criteria.GameTypeId);
-            var model = criteria.IsValid()
+            var group = GetGroupByGameTypeId(criteria.GameTypeId);
+            if (string.IsNullOrEmpty(group))
+            {
+                return View("~/Views/Shared/Account/RNGCasinoDetail/NoGameErr.cshtml");
+            }
+            
+            var viewModel = criteria.IsValid()
                 ? BetListService.GetRNGCasinoResultDetail(criteria)
                 : new BetListResultsRNGCasinoDetailViewModel();
 
-            model.Param = criteria;
-            ExchangeRNGCasinoDetailValues(model);
+            viewModel.Param = criteria;
+            ExchangeRNGCasinoDetailValues(viewModel);
 
-            if (string.IsNullOrEmpty(group))
-            {
-                return this.View("~/Views/Shared/Account/RNGCasinoDetail/NoGameErr.cshtml");
-            }
-
-            if (model.CasinoDetailHeaderList != null && model.CasinoDetailHeaderList.Count > 0)
-            {
-                return this.View(string.Format(ViewPathTemplate, group), model);
-            }
-
-            return this.View("~/Views/Shared/Account/RNGCasinoDetail/Noinfo.cshtml");
+            return (viewModel.CasinoDetailHeaderList != null && viewModel.CasinoDetailHeaderList.Count > 0)
+                ? View(string.Format(ViewPathTemplate, group), viewModel)
+                : View("~/Views/Shared/Account/RNGCasinoDetail/Noinfo.cshtml");
         }
 
         /// <summary>
@@ -220,40 +217,43 @@ namespace Fanex.Affiliate.Controllers
                 detailItem.Win *= CurrentSession.ExchangeRate;
                 detailItem.WinLoss *= CurrentSession.ExchangeRate;
             }
-
-            var regexRemoveLetters = new Regex(@"[a-zA-Z\s]");
+            
             foreach (var detailHeaderItem in originalData.CasinoDetailHeaderList)
             {
-                detailHeaderItem.Win = string.IsNullOrEmpty(detailHeaderItem.Win.Trim())
-                    ? "0.00"
-                    : (decimal.Parse(regexRemoveLetters.Replace(detailHeaderItem.Win, string.Empty)) * CurrentSession.ExchangeRate).ToString();
+                detailHeaderItem.Win = ExchangeValueIncludingCurrency(detailHeaderItem.Win);
                 detailHeaderItem.BetValue *= CurrentSession.ExchangeRate;
                 detailHeaderItem.BetBaseCurrencyValue *= CurrentSession.ExchangeRate;
-                detailHeaderItem.CoinSize = string.IsNullOrEmpty(detailHeaderItem.CoinSize.Trim())
-                    ? "0.00"
-                    : (decimal.Parse(regexRemoveLetters.Replace(detailHeaderItem.CoinSize, string.Empty)) * CurrentSession.ExchangeRate).ToString();
+                detailHeaderItem.CoinSize = ExchangeValueIncludingCurrency(detailHeaderItem.CoinSize);
                 detailHeaderItem.CoinSizeBaseCurrencyValue *= CurrentSession.ExchangeRate;
                 detailHeaderItem.CoinSizeValue *= CurrentSession.ExchangeRate;
                 if (detailHeaderItem.CoinSizeAmount.Contains("X"))
                 {
                     var coinSizeAmountParts = detailHeaderItem.CoinSizeAmount.Split('X');
-                    detailHeaderItem.CoinSizeAmount = string.IsNullOrEmpty(coinSizeAmountParts[0])
-                    ? "0.00"
-                    : (decimal.Parse(regexRemoveLetters.Replace(coinSizeAmountParts[0].Trim(), string.Empty)) * CurrentSession.ExchangeRate).ToString();
+                    detailHeaderItem.CoinSizeAmount = ExchangeValueIncludingCurrency(coinSizeAmountParts[0]);
                     detailHeaderItem.CoinSizeAmount = FormaterCurrency.Format(decimal.Parse(detailHeaderItem.CoinSizeAmount));
                     detailHeaderItem.CoinSizeAmount += " X" + coinSizeAmountParts[1];
                 }
 
                 detailHeaderItem.WinBaseCurrencyValue *= CurrentSession.ExchangeRate;
-                detailHeaderItem.WinLossResult = string.IsNullOrEmpty(detailHeaderItem.WinLossResult.Trim())
-                    ? "0.00"
-                    : (decimal.Parse(regexRemoveLetters.Replace(detailHeaderItem.WinLossResult, string.Empty)) * CurrentSession.ExchangeRate).ToString();
+                detailHeaderItem.WinLossResult = ExchangeValueIncludingCurrency(detailHeaderItem.WinLossResult);
                 detailHeaderItem.WinLossResultBaseCurrecyValue *= CurrentSession.ExchangeRate;
-                detailHeaderItem.WinResult = string.IsNullOrEmpty(detailHeaderItem.WinResult.Trim())
-                    ? "0.00"
-                    : (decimal.Parse(regexRemoveLetters.Replace(detailHeaderItem.WinResult, string.Empty)) * CurrentSession.ExchangeRate).ToString();
+                detailHeaderItem.WinResult = ExchangeValueIncludingCurrency(detailHeaderItem.WinResult);
                 detailHeaderItem.WinResultBaseCurrencyValue *= CurrentSession.ExchangeRate;
             }
+        }
+
+        /// <summary>
+        /// Exchange Value Including Currency code.
+        /// </summary>
+        /// <param name="originalValue">Value including currency code.</param>
+        /// <returns>Exchanged value.</returns>
+        public string ExchangeValueIncludingCurrency(string originalValue)
+        {
+            var regexRemoveLetters = new Regex(@"[a-zA-Z\s]");
+
+            return string.IsNullOrEmpty(originalValue.Trim())
+                ? "0.00"
+                : (decimal.Parse(regexRemoveLetters.Replace(originalValue, string.Empty)) * CurrentSession.ExchangeRate).ToString();
         }
 
         /// <summary>

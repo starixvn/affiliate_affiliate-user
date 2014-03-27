@@ -12,7 +12,7 @@ namespace Fanex.Affiliate.DTO
     using System;
 
     /// <summary>
-    /// TODO: Update summary.
+    /// Domain DTO.
     /// </summary>
     public class Domain
     {

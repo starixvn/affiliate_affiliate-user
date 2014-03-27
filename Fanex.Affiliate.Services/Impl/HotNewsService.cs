@@ -21,7 +21,7 @@ namespace Fanex.Affiliate.Services.Impl
     using ViewModels;
 
     /// <summary>
-    /// TODO: Update summary.
+    /// Hot News Service.
     /// </summary>
     public class HotNewsService : IHotNewsService
     {

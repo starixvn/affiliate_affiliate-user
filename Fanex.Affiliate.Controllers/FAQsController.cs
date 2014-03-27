@@ -22,8 +22,8 @@ namespace Fanex.Affiliate.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            var model = GetSiteDomainInfo();
-            return View(model);
+            var viewModel = GetSiteDomainInfo();
+            return View(viewModel);
         }
     }
 }

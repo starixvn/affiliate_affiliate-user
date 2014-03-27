@@ -58,16 +58,15 @@ namespace Fanex.Affiliate.Controllers
             criteria.Page = currentPageIndex;
             criteria.PageSize = itemPerPage;
 
-            var model = new MessageViewModel();
+            var viewModel = new MessageViewModel();
             var totalPage = 0;
             var data = _messageService.GetMessageList(criteria, ref totalPage);
-            model.MessageList = data.ToPagedList(currentPageIndex, itemPerPage, totalPage * itemPerPage);
+            viewModel.MessageList = data.ToPagedList(currentPageIndex, itemPerPage, totalPage * itemPerPage);
+            viewModel.SearchOption = criteria.SearchOption;
+            viewModel.FromDate = criteria.FromDate;
+            viewModel.ToDate = criteria.ToDate;
 
-            model.SearchOption = criteria.SearchOption;
-            model.FromDate = criteria.FromDate;
-            model.ToDate = criteria.ToDate;
-
-            return View(model);
+            return View(viewModel);
         }
 
         #endregion Message History

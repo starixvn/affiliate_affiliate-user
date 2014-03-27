@@ -61,7 +61,6 @@ namespace Fanex.Affiliate.Controllers
             };
 
             ViewData.Add("mailContact", AppSettings.MailContact);
-
             return View(criteria);
         }
 
@@ -78,7 +77,7 @@ namespace Fanex.Affiliate.Controllers
 
             if (ModelState.IsValid)
             {
-                // if captcha is null or incorrect then return View with captcha error message
+                // If captcha is null or incorrect then return View with captcha error message
                 var captchaSession = AppSession.CaptchaContactUs;
                 if (criteria.ValidCode.Trim() != "1508" && (captchaSession == null || captchaSession != criteria.ValidCode.Trim()))
                 {
@@ -119,7 +118,6 @@ namespace Fanex.Affiliate.Controllers
         public ActionResult ContactUsResult(int result = 0)
         {
             ViewBag.Result = result == 1;
-
             return View();
         }
 
@@ -163,7 +161,6 @@ namespace Fanex.Affiliate.Controllers
                                         MailContact = AppSettings.MailContact
                                     };
             var emailBody = (new EmailTemplateResolverService()).GetEmailBody(templatePath, emailContent);
-
             Common.SendEmail(emailBody, AppSettings.MailContact, emailTitle, AppSettings.BccMail);
         }
 

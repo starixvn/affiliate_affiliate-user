@@ -11,7 +11,7 @@
 namespace Fanex.Affiliate.Utilities
 {
     /// <summary>
-    /// TODO: Update summary.
+    /// Affiliate Bet List Results RNG Casino Settings.
     /// </summary>
     public static class AffBetListResultsRNGCasinoSettings
     {

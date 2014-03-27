@@ -13,7 +13,7 @@ namespace Fanex.Affiliate.DTO
     using System;
 
     /// <summary>
-    /// TODO: Update summary.
+    /// System Date Time.
     /// </summary>
     public class SystemDateTime
     {

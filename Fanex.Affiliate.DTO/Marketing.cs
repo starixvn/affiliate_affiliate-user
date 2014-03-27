@@ -6,6 +6,7 @@
 // <history>
 //   <change who="Muller.Nguyen" date="2013.06.28">Created</change>
 // </history>
+
 namespace Fanex.Affiliate.DTO
 {
     /// <summary>

@@ -23,9 +23,8 @@ namespace Fanex.Affiliate.Services.Interface
         /// Validates a username and password.
         /// </summary>
         /// <param name="criteria">Input criteria.</param>
-        /// <param name="errCode">Error code.</param>
         /// <returns>Return object user.</returns>
-        User AuthenticateUser(AffiliateLoginCriteria criteria, ref int errCode);
+        User AuthenticateUser(AffiliateLoginCriteria criteria);
 
         /// <summary>
         /// Validates a username and password.

@@ -58,13 +58,12 @@ namespace Fanex.Affiliate.Services.Impl
         /// Validates a username and password.
         /// </summary>
         /// <param name="criteria">Input criteria.</param>
-        /// <param name="errCode">Error code.</param>
         /// <returns>Return object user.</returns>
-        public User AuthenticateUser(AffiliateLoginCriteria criteria, ref int errCode)
+        public User AuthenticateUser(AffiliateLoginCriteria criteria)
         {
             Check.Argument.IsNotNull(criteria, "criteria");
             criteria.Password = Cryptography.CfsEnCode(criteria.Password);
-            return _userDataAccess.AuthenticateUser(criteria, ref errCode);
+            return _userDataAccess.AuthenticateUser(criteria);
         }
 
         /// <summary>

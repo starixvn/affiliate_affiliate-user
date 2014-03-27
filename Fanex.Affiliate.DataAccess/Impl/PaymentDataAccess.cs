@@ -10,7 +10,6 @@
 namespace Fanex.Affiliate.DataAccess.Impl
 {
     using System;
-    using System.Collections;
     using Criteria;
     using Data;
     using DTO;
@@ -35,7 +34,6 @@ namespace Fanex.Affiliate.DataAccess.Impl
                 var param = criteria.GetSpParams();
                 payment.ListPayment = objectDb.Query<Payment>(param);
 
-                // get output parameter
                 payment.PreferredPayment = param["preferredpayment"].ToString();
                 payment.BalanceBroughtForward = Convert.ToDecimal(param["balbroughtforward"]);
                 payment.MinimumWithdrawalAmount = Convert.ToDecimal(param["minamount"]);
@@ -60,7 +58,6 @@ namespace Fanex.Affiliate.DataAccess.Impl
                 criteria.ErrCode = Convert.ToInt16(param["errcode"]);
                 if (criteria.ErrCode == 0)
                 {
-                    // get output parameter
                     payment.PreferredLanguage = param["preferredlanguage"].ToString();
                     payment.TransDate = Convert.ToDateTime(param["transdate"]);
                     payment.TransID = Convert.ToInt64(param["transid"]);
@@ -87,7 +84,6 @@ namespace Fanex.Affiliate.DataAccess.Impl
                 criteria.ErrCode = Convert.ToInt16(param["errcode"]);
                 if (criteria.ErrCode == 0)
                 {
-                    // get output parameter
                     payment.PreferredLanguage = param["preferredlanguage"].ToString();
                     payment.MailOption = Convert.ToBoolean(param["mailoption"]);
                     payment.TransDate = Convert.ToDateTime(param["transdate"]);
@@ -111,7 +107,6 @@ namespace Fanex.Affiliate.DataAccess.Impl
                 var param = criteria.GetSpParams();
                 objectDb.ExecuteNonQuery(param);
 
-                // get output parameter
                 payment.PlayerUsername = param["playerusername"].ToString();
                 payment.SystemName = param["systemname"].ToString();
                 payment.DummyBalAcc = param["dummybalacc"].ToString();

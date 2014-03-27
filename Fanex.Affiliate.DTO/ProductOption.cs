@@ -11,7 +11,7 @@
 namespace Fanex.Affiliate.DTO
 {
     /// <summary>
-    /// ProductOption class.
+    /// Product Option.
     /// </summary>
     public class ProductOption
     {

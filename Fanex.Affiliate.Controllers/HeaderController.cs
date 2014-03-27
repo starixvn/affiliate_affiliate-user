@@ -35,7 +35,7 @@ namespace Fanex.Affiliate.Controllers
 
         #endregion
 
-        #region Ctors
+        #region Constructors
 
         public HeaderController(IHotNewsService hotNewsService, ISystemSettingService systemSettingService)
         {
@@ -95,7 +95,6 @@ namespace Fanex.Affiliate.Controllers
             };
 
             var model = _hotNewsService.GetHotNews(criteria);
-
             return PartialView("HotNews", model);
         }
     }

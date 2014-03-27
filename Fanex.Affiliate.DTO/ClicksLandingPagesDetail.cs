@@ -10,7 +10,7 @@
 namespace Fanex.Affiliate.DTO
 {
     /// <summary>
-    /// TODO: Update summary.
+    /// Clicks Landing Pages Detail.
     /// </summary>
     public class ClicksLandingPagesDetail
     {

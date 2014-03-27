@@ -43,7 +43,7 @@ namespace Fanex.Affiliate.Controllers
             criteria.Type = (short)AppSettings.InputAffType;
 
             var bannerList = MarketingService.GetBannerMediaList(criteria, ref totalPage);
-            var model = new MarketingViewModel
+            var viewModel = new MarketingViewModel
             {
                 CategoryList = categoryList,
                 CurrencyList = AppSettings.PlayerCurrencies,
@@ -68,17 +68,17 @@ namespace Fanex.Affiliate.Controllers
                 BannerList = bannerList
             };
 
-            if (string.IsNullOrEmpty(model.DomainSelected) && domainList.GetEnumerator().MoveNext())
+            if (string.IsNullOrEmpty(viewModel.DomainSelected) && domainList.GetEnumerator().MoveNext())
             {
-                model.DomainSelected = ((List<Domain>)domainList)[0].DomainId;
+                viewModel.DomainSelected = ((List<Domain>)domainList)[0].DomainId;
             }
 
-            if (string.IsNullOrEmpty(model.LinkSelected))
+            if (string.IsNullOrEmpty(viewModel.LinkSelected))
             {
-                model.LinkSelected = AppSettings.DefaultTarget;
+                viewModel.LinkSelected = AppSettings.DefaultTarget;
             }
 
-            return View(model);
+            return View(viewModel);
         }
 
         /// <summary>
@@ -117,11 +117,10 @@ namespace Fanex.Affiliate.Controllers
 
             var domainList = MarketingService.GetDomainList(new DomainCriteria { AffID = CurrentSession.AffId });
             var linkList = SystemSettingService.ListSystemSetting(new SystemSettingsByTypeCriteria { Type = "CustomerPage" });
-
             criteria.PageSize = criteria.PageSize == 0 ? AppSettings.PageSize : criteria.PageSize;
 
             var bannerList = MarketingService.GetBannerMediaList(criteria, ref totalPage);
-            var model = new MarketingViewModel
+            var viewModel = new MarketingViewModel
             {
                 CategoryList = categoryList,
                 CurrencyList = AppSettings.PlayerCurrencies,
@@ -144,17 +143,17 @@ namespace Fanex.Affiliate.Controllers
                 BannerList = bannerList
             };
 
-            if (string.IsNullOrEmpty(model.DomainSelected) && domainList.GetEnumerator().MoveNext())
+            if (string.IsNullOrEmpty(viewModel.DomainSelected) && domainList.GetEnumerator().MoveNext())
             {
-                model.DomainSelected = ((List<Domain>)domainList)[0].DomainId;
+                viewModel.DomainSelected = ((List<Domain>)domainList)[0].DomainId;
             }
 
-            if (string.IsNullOrEmpty(model.LinkSelected))
+            if (string.IsNullOrEmpty(viewModel.LinkSelected))
             {
-                model.LinkSelected = AppSettings.DefaultTarget;
+                viewModel.LinkSelected = AppSettings.DefaultTarget;
             }
 
-            return View(model);
+            return View(viewModel);
         }
 
         /// <summary>

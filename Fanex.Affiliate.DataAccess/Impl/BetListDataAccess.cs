@@ -16,16 +16,13 @@ namespace Fanex.Affiliate.DataAccess.Impl
     using System.Data;
     using System.Diagnostics.CodeAnalysis;
     using System.Globalization;
-    using Common.Extensions;
     using Criteria;
     using Data;
     using DTO;
     using DTO.BetList;
     using Fanex.BetList.Core.Entities;
     using Fanex.Common;
-    using Fanex.Logging;
     using Interface;
-    using ViewModels;
 
     /// <summary>
     /// Account data access.
@@ -49,15 +46,12 @@ namespace Fanex.Affiliate.DataAccess.Impl
                 var ds = objectDb.ExecuteDataSet(param);
                 var baseCurrency = criteria.BaseCurrency.ToLower();
 
-                // Main ticket
                 var mainTable = ds.Tables.Count > 0 ? ds.Tables[0] : new DataTable();
                 result.MainTicketList = this.ReadMainTicketData(mainTable, string.Empty);
 
-                // Reference ticket
                 var referenceTable = ds.Tables.Count > 1 ? ds.Tables[1] : new DataTable();
                 result.TicketDataList = this.ReadReferneceTicket(referenceTable, string.Empty);
 
-                // Sum value
                 result.TotalRows = Converter.ToInt(param["totalrows"]);
             }
 
@@ -81,7 +75,6 @@ namespace Fanex.Affiliate.DataAccess.Impl
                 var mainTable = ds.Tables.Count > 0 ? ds.Tables[0] : new DataTable();
                 result.MainTicketList = this.ReadMainTicketData(mainTable, string.Empty);
 
-                // Reference ticket
                 var referenceTable = ds.Tables.Count > 1 ? ds.Tables[1] : new DataTable();
                 result.TicketDataList = this.ReadReferneceTicket(referenceTable, string.Empty);
             }
@@ -94,8 +87,6 @@ namespace Fanex.Affiliate.DataAccess.Impl
         /// </summary>
         /// <param name="criteria">The metal model.</param>
         /// <returns>The system parlay.</returns>
-        [SuppressMessage("StyleCop.CSharp.Nexcel.NexcelCustomRules", "SP2101:MethodMustNotContainMoreLinesThan",
-            Justification = "Reviewed. Suppression is OK here.")]
         public SystemParlayData GetSystemParlayDetail(SystemParlayDetailCriteria criteria)
         {
             using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
@@ -104,13 +95,12 @@ namespace Fanex.Affiliate.DataAccess.Impl
                 var dataSet = objectDb.ExecuteDataSet(param);
                 var ticketData = dataSet.Tables.Count > 0 ? dataSet.Tables[0] : new DataTable();
                 var serialData = dataSet.Tables.Count > 1 ? dataSet.Tables[1] : new DataTable();
-
                 var systemParlayData = new SystemParlayData();
 
                 systemParlayData.TicketList = new List<ISystemParlayTicket>();
                 foreach (DataRow row in ticketData.Rows)
                 {
-                    ISystemParlayTicket ticket = new SystemParlayTicket();
+                    var ticket = new SystemParlayTicket();
                     ticket.Comm = Converter.ToDecimal(row["comm"]);
                     ticket.MOdds = Converter.ToDecimal(row["modds"]);
                     ticket.PlayerComm = Converter.ToDecimal(row["playercomm"]);
@@ -128,7 +118,7 @@ namespace Fanex.Affiliate.DataAccess.Impl
                 systemParlayData.SerialList = new List<ISystemParlaySerial>();
                 foreach (DataRow row in serialData.Rows)
                 {
-                    ISystemParlaySerial serial = new SystemParlaySerial();
+                    var serial = new SystemParlaySerial();
                     serial.Serial = Convert.ToInt64(row["serial"]);
                     serial.HomeId = Converter.ToInt(row["homeid"]);
                     serial.AwayId = Converter.ToInt(row["awayid"]);
@@ -137,7 +127,6 @@ namespace Fanex.Affiliate.DataAccess.Impl
                 }
 
                 systemParlayData.Outstanding = Converter.ToDecimal(param["outstanding"]);
-
                 return systemParlayData;
             }
         }
@@ -286,18 +275,11 @@ namespace Fanex.Affiliate.DataAccess.Impl
             {
                 var ticket = new TicketData();
 
-                // string
                 ticket.BetTeam = containsBetTeam ? dataRow["betteam"].ToString() : string.Empty;
                 ticket.RefNo = dataRow["refno"].ToString();
                 ticket.Status = dataRow["status"].ToString();
-
-                // Int
                 ticket.BetTypeId = Convert.ToInt32(dataRow["bettype"]);
-
-                // Money
                 ticket.Stake = containsStake ? Convert.ToDecimal(dataRow["stake" + baseCurrency]) : 0;
-
-                // Decimal
                 ticket.Odds = Convert.ToDecimal(dataRow["odds"]);
 
                 result.Add(ticket);
@@ -404,7 +386,6 @@ namespace Fanex.Affiliate.DataAccess.Impl
         /// <returns>The result value.</returns>
         public DataTable GetPopUpMatch(int matchId, int raceNo, int licenseeId, int userId)
         {
-            const string ProcedureName = "Aff_User_BetListResult_SelMatch";
             var param = new
             {
                 matchid = matchId,
@@ -413,7 +394,7 @@ namespace Fanex.Affiliate.DataAccess.Impl
                 userid = userId
             };
 
-            using (var objectDb = new ObjectDb(ProcedureName))
+            using (var objectDb = new ObjectDb("Aff_User_BetListResult_SelMatch"))
             {
                 var dataset = objectDb.ExecuteDataSet(param);
                 return dataset.Tables[0];
@@ -427,15 +408,9 @@ namespace Fanex.Affiliate.DataAccess.Impl
         /// <returns>The result value.</returns>
         public DataTable GetPopUpParalayMatch(long refNo)
         {
-            const string ProcedureName = "Aff_User_BetListResult_SelMatchParlay";
-            var param = new
+            using (var objectDb = new ObjectDb("Aff_User_BetListResult_SelMatchParlay"))
             {
-                refno = refNo
-            };
-
-            using (var objectDb = new ObjectDb(ProcedureName))
-            {
-                var dataset = objectDb.ExecuteDataSet(param);
+                var dataset = objectDb.ExecuteDataSet(new { refno = refNo });
                 return dataset.Tables[0];
             }
         }
@@ -447,15 +422,9 @@ namespace Fanex.Affiliate.DataAccess.Impl
         /// <returns>The result value.</returns>
         public DataTable GetPopUpNumberGameMatch(int matchId)
         {
-            const string ProcedureName = "Aff_User_BetListResult_SelMatchNumberGame";
-            var param = new
+            using (var objectDb = new ObjectDb("Aff_User_BetListResult_SelMatchNumberGame"))
             {
-                matchid = matchId
-            };
-
-            using (var objectDb = new ObjectDb(ProcedureName))
-            {
-                var dataset = objectDb.ExecuteDataSet(param);
+                var dataset = objectDb.ExecuteDataSet(new { matchid = matchId });
                 return dataset.Tables[0];
             }
         }

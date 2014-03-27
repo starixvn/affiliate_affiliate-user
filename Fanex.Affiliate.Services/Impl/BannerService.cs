@@ -6,6 +6,7 @@
 // <history>
 //   <change who="Long.Luu" date="2013.09.24">Created</change>
 // </history>
+
 namespace Fanex.Affiliate.Services.Impl
 {
     using Common.Helper;

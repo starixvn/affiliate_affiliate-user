@@ -40,7 +40,7 @@ namespace Fanex.Affiliate.Services.Impl
         /// </summary>
         private readonly IBetListDataAccess _betlistDataAccess;
 
-        private readonly string _subDomainPath = "/Athena006User";
+        private readonly string _subDomainPath = string.Empty;
 
         #endregion Fields
 
@@ -233,7 +233,7 @@ namespace Fanex.Affiliate.Services.Impl
         public IList<LiveCasino> GetPopUpLiveCasinoMatch(int matchId, int licenseeId, int userId)
         {
             var dataLc = _betlistDataAccess.GetPopUpMatch(matchId, -1, licenseeId, userId);
-            return BidingLiveCasinos(dataLc);
+            return BindingLiveCasino(dataLc);
         }
 
         /// <summary>
@@ -247,7 +247,7 @@ namespace Fanex.Affiliate.Services.Impl
         public IList<Racing> GetPopUpRacingMatch(int matchId, int raceNo, int licenseeId, int userId)
         {
             var dataRc = _betlistDataAccess.GetPopUpMatch(matchId, raceNo, licenseeId, userId);
-            return BidingRacing(dataRc);
+            return BindingRacing(dataRc);
         }
 
         #endregion
@@ -261,9 +261,9 @@ namespace Fanex.Affiliate.Services.Impl
         /// <returns>The RNG Casino result list.</returns>
         public List<RNGCasinoResult> GetRNGCasinoResult(BetListResultsRNGCasinoCriteria criteria)
         {
-            List<RNGCasinoResult> casinoList;
+            var casinoList = new List<RNGCasinoResult>();
             DataTable dataTable;
-            GetResultFromAPI(criteria, out casinoList, out dataTable);
+            GetResultFromAPI(criteria, out dataTable);
             if (dataTable != null && dataTable.Rows.Count > 0)
             {
                 var currency = GetDataRowExtension(dataTable.Rows[0], "Currency");
@@ -421,7 +421,7 @@ namespace Fanex.Affiliate.Services.Impl
         /// </summary>
         /// <param name="dataLc">The data table.</param>
         /// <returns>The live casino data list.</returns>
-        private static IList<LiveCasino> BidingLiveCasinos(DataTable dataLc)
+        private static IList<LiveCasino> BindingLiveCasino(DataTable dataLc)
         {
             if (dataLc != null && dataLc.Rows.Count > 0)
             {
@@ -457,7 +457,7 @@ namespace Fanex.Affiliate.Services.Impl
         /// </summary>
         /// <param name="dataRc">The data table.</param>
         /// <returns>The racing data list.</returns>
-        private static IList<Racing> BidingRacing(DataTable dataRc)
+        private static IList<Racing> BindingRacing(DataTable dataRc)
         {
             if (dataRc != null && dataRc.Rows.Count > 0)
             {
@@ -496,14 +496,11 @@ namespace Fanex.Affiliate.Services.Impl
         /// Get result from API.
         /// </summary>
         /// <param name="criteria">The metal model.</param>
-        /// <param name="casinoList">The casino result.</param>
         /// <param name="dataTable">The data table.</param>
         private static void GetResultFromAPI(
             BetListResultsRNGCasinoCriteria criteria,
-            out List<RNGCasinoResult> casinoList,
             out DataTable dataTable)
         {
-            casinoList = new List<RNGCasinoResult>();
             var casinoLib = new CasinoLibrary.SBAgent.Report();
             dataTable = casinoLib.WinLossHandHistory(criteria.RefNo, criteria.BetType, RNGCasinoResult._CASINO_GROUP1, criteria.IsShowPic);
             if (dataTable == null)
@@ -579,7 +576,7 @@ namespace Fanex.Affiliate.Services.Impl
             var gameTypeName = GetDataRowExtension(dr, GetColumnMultiLang("GameTypeName"));
             gameTypeName = gameTypeName.Replace("<BR>", " ");
 
-            var casino = new RNGCasinoResult
+            return new RNGCasinoResult
             {
                 SessionLogId = GetDataRowExtension(dr, "SessionLogId"),
                 PlayerHistoryNo = GetDataRowExtension(dr, "PlayerHistoryNo"),
@@ -609,8 +606,6 @@ namespace Fanex.Affiliate.Services.Impl
                 Currency = GetDataRowExtension(dr, "Currency"),
                 TableName = GetDataRowExtension(dr, "TableName"),
             };
-
-            return casino;
         }
 
         /// <summary>
@@ -620,7 +615,7 @@ namespace Fanex.Affiliate.Services.Impl
         /// <returns>The detail data.</returns>
         private RNGCasinoResultWinlossDetail MapDataToDetailItem(DataRow dr)
         {
-            var detailItem = new RNGCasinoResultWinlossDetail
+            return new RNGCasinoResultWinlossDetail
             {
                 BetTypeId = Converter.ToInt(GetDataRowExtension(dr, "BetTypeId")),
                 BetTypeName = GetDataRowExtension(dr, GetColumnMultiLang("BetTypeName")),
@@ -632,7 +627,6 @@ namespace Fanex.Affiliate.Services.Impl
                 Currency = GetDataRowExtension(dr, "Currency"),
                 BetContent = GetDataRowExtension(dr, "BetContent"),
             };
-            return detailItem;
         }
 
         /// <summary>
@@ -642,7 +636,7 @@ namespace Fanex.Affiliate.Services.Impl
         /// <returns>The detail header data.</returns>
         private RNGCasinoResultWinlossDetailHeader MapDataToHeaderItem(DataRow dr)
         {
-            var headItem = new RNGCasinoResultWinlossDetailHeader
+            return new RNGCasinoResultWinlossDetailHeader
             {
                 ShowType = GetDataRowExtension(dr, "ShowType"),
                 TableName = GetDataRowExtension(dr, GetColumnMultiLang("TableName")),
@@ -679,8 +673,6 @@ namespace Fanex.Affiliate.Services.Impl
                 PickCount = Converter.ToInt(GetDataRowExtension(dr, "Pick_Count")),
                 HitCount = Converter.ToInt(GetDataRowExtension(dr, "Hit_Count")),
             };
-
-            return headItem;
         }
 
         #endregion

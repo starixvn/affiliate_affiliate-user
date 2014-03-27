@@ -7,6 +7,7 @@
 //   <change who="Kaden.Trinh" date="2013.05.30">Created</change>
 //   <change who="Kaden.Trinh" date="2013.06.11">Implement funcion get Current Commission Setting</change>
 // </history>
+
 namespace Fanex.Affiliate.Services.Impl
 {
     using System.Collections.Generic;
@@ -182,6 +183,7 @@ namespace Fanex.Affiliate.Services.Impl
             Check.Argument.IsNotNull(criteria, "criteria");
             criteria.OldPassword = Cryptography.CfsEnCode(criteria.OldPassword.Trim());
             criteria.NewPassword = Cryptography.CfsEnCode(criteria.NewPassword.Trim());
+
             _accountDataAccess.ChangePassword(criteria);
         }
 

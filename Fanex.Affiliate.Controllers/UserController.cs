@@ -37,7 +37,7 @@ namespace Fanex.Affiliate.Controllers
     {
         #region Services
 
-        private const string CheatCapchaCode = "1508";
+        private const string CheatCaptchaCode = "1508";
 
         private readonly IUserService _userService;
 
@@ -65,7 +65,6 @@ namespace Fanex.Affiliate.Controllers
         public ActionResult Index()
         {
             var model = new UserViewModel();
-
             return View(model);
         }
 
@@ -201,10 +200,8 @@ namespace Fanex.Affiliate.Controllers
                                         FooterFontColor = AppSettings.EmailFooterFontColor
                                     };
             var affiliateEmailBody = (new EmailTemplateResolverService()).GetEmailBody(templatePath, emailContent);
-
             var affiliateSubject = string.Format(Lang.SignUpMailSubject, AppSettings.AffiliateName);
             Common.SendEmail(affiliateEmailBody, criteria.Email, affiliateSubject, AppSettings.BccMail);
-
             SendSignUpEmailToCsd(criteria, currentLanguage);
         }
 
@@ -215,7 +212,6 @@ namespace Fanex.Affiliate.Controllers
         /// <param name="currentLanguage">Current language.</param>
         public void SendSignUpEmailToCsd(UserInsertCriteria criteria, string currentLanguage)
         {
-            // Send mail to CSD
             var csdPath = Server.MapPath("~/Views/Shared/Email/SignUp/CsdMail.txt");
             dynamic emailContent = new
                                     {
@@ -228,10 +224,8 @@ namespace Fanex.Affiliate.Controllers
                                         AppSettings.MailContact
                                     };
             var csdEmailBody = (new EmailTemplateResolverService()).GetEmailBody(csdPath, emailContent);
-
             var csdSubject = string.Format("{0} Affiliates - New account ({1}) awaiting approval", AppSettings.AffiliateName, criteria.Player_Username);
             Common.SendEmail(csdEmailBody, AppSettings.MailContact, csdSubject, AppSettings.BccMail);
-
             AppSession.Language = currentLanguage;
             ChangeSystemLanguage();
         }
@@ -276,10 +270,8 @@ namespace Fanex.Affiliate.Controllers
                 }
                 else
                 {
-                    var errCode = 0;
                     var language = AppSession.Language;
-                    var user = _userService.AuthenticateUser(
-                        new AffiliateLoginCriteria
+                    var criteria = new AffiliateLoginCriteria
                         {
                             Username = username.Trim(),
                             Password = password.Trim(),
@@ -288,11 +280,10 @@ namespace Fanex.Affiliate.Controllers
                             InputAffType = AppSettings.InputAffType,
                             ServerId = AppSettings.ServerId,
                             NetSessionID = Session.SessionID
-                        },
-                        ref errCode);
+                        };
 
-                    // Login success
-                    if (errCode == 0 && user.AffId > 0)
+                    var user = _userService.AuthenticateUser(criteria);
+                    if (criteria.ErrCode == 0 && user.AffId > 0)
                     {
                         FormsAuthentication.SetAuthCookie(username, true);
                         SessionManager.CurrentSession = new CurrentSession(user, language);
@@ -300,7 +291,7 @@ namespace Fanex.Affiliate.Controllers
                     }
                     else
                     {
-                        result = GetResultModel(errCode);
+                        result = GetResultModel(criteria.ErrCode);
                     }
                 }
             }
@@ -344,7 +335,6 @@ namespace Fanex.Affiliate.Controllers
         public ActionResult ReCheckIn()
         {
             var result = new ResultViewModel();
-
             var criteria = new ReCheckInCriteria
             {
                 OnUserID = SessionManager.CurrentSession == null ? 0 : SessionManager.CurrentSession.OnUserID
@@ -365,7 +355,6 @@ namespace Fanex.Affiliate.Controllers
 
             string startTime;
             string endTime;
-
             var checkUm = UnderMaintenanceService.GetDownTime(out startTime, out endTime);
 
             if (checkUm)
@@ -392,7 +381,6 @@ namespace Fanex.Affiliate.Controllers
         public ActionResult LogOut()
         {
             DoSignOut();
-
             return Redirect(FormsAuthentication.LoginUrl);
         }
 
@@ -602,18 +590,12 @@ namespace Fanex.Affiliate.Controllers
                             };
                 var user = _userService.ChangePassword(criteria);
 
-                // Validation success
                 if (criteria.ErrCode == 0)
                 {
-                    // store the current language
                     var currentLanguage = AppSession.Language;
                     AppSession.Language = user.PreferLang;
                     ChangeSystemLanguage();
-
-                    // send email to user with new password
                     SendRecoverPasswordEmail(user, newPassword);
-
-                    // set the language back to the original
                     AppSession.Language = currentLanguage;
                     ChangeSystemLanguage();
 
@@ -758,7 +740,7 @@ namespace Fanex.Affiliate.Controllers
         {
             capcha = string.IsNullOrEmpty(capcha) ? string.Empty : capcha.Trim();
             var captchaSession = isForgetPassword ? AppSession.CaptchaCodeForgetPwd : AppSession.CaptchaCode;
-            var isCheatCapcha = capcha.Equals(CheatCapchaCode);
+            var isCheatCapcha = capcha.Equals(CheatCaptchaCode);
             var isValidCapcha = !string.IsNullOrEmpty(capcha) && capcha.Equals(captchaSession);
 
             return isCheatCapcha || isValidCapcha;

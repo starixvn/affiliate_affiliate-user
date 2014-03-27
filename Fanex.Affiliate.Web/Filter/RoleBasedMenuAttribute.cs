@@ -18,7 +18,7 @@ namespace Fanex.Affiliate.Web.Filter
     using Logging;
 
     /// <summary>
-    /// TODO: Update summary.
+    /// Role Based Menu Attribute.
     /// </summary>
     public class RoleBasedMenuAttribute : ActionFilterAttribute
     {

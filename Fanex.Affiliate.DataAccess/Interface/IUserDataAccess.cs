@@ -24,9 +24,8 @@ namespace Fanex.Affiliate.DataAccess.Interface
         /// Authenticate User.
         /// </summary>
         /// <param name="criteria">User Authenticate criteria.</param>
-        /// <param name="errCode">Reference error code.</param>
         /// <returns>User model.</returns>
-        User AuthenticateUser(AffiliateLoginCriteria criteria, ref int errCode);
+        User AuthenticateUser(AffiliateLoginCriteria criteria);
 
         /// <summary>
         /// Check Is kicked out.

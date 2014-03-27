@@ -50,7 +50,6 @@ namespace Fanex.Affiliate.Controllers
         public ActionResult Index()
         {
             var model = _accountService.GetDefaultProductCommission(new DefaultCommissionCriteria());
-
             return View(model);
         }
 
@@ -63,7 +62,6 @@ namespace Fanex.Affiliate.Controllers
         {
             ViewBag.SupportedLanguages = AppSettings.AffiliateSupportedLanguages;
             ViewBag.AllLanguages = AppSettings.AllLanguages;
-
             return View();
         }
 

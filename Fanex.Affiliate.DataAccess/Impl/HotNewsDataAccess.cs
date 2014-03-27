@@ -32,29 +32,28 @@ namespace Fanex.Affiliate.DataAccess.Impl
         {
             using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
             {
-                var dataset = objectDb.ExecuteDataSet(criteria.GetSpParams());
+                var dataSet = objectDb.ExecuteDataSet(criteria.GetSpParams());
 
-                if (dataset.Tables.Count > 0)
+                if (dataSet.Tables.Count <= 0)
                 {
-                    var hotnews = new HotNews();
-
-                    foreach (var column in dataset.Tables[0].Columns.Cast<DataColumn>().Where(column => column.ColumnName.Contains("-")))
-                    {
-                        hotnews.Message.Add(
-                            column.ColumnName,
-                            dataset.Tables[0].Rows.Count > 0 ? dataset.Tables[0].Rows[0][column].ToString() : string.Empty);
-                    }
-
-                    if (dataset.Tables[0].Rows.Count > 0)
-                    {
-                        hotnews.Important = Convert.ToBoolean(dataset.Tables[0].Rows[0]["important"]);
-                    }
-
-                    return hotnews;
+                    return new HotNews();
                 }
-            }
 
-            return new HotNews();
+                var hotnews = new HotNews();
+                foreach (var column in dataSet.Tables[0].Columns.Cast<DataColumn>().Where(column => column.ColumnName.Contains("-")))
+                {
+                    hotnews.Message.Add(
+                        column.ColumnName,
+                        dataSet.Tables[0].Rows.Count > 0 ? dataSet.Tables[0].Rows[0][column].ToString() : string.Empty);
+                }
+
+                if (dataSet.Tables[0].Rows.Count > 0)
+                {
+                    hotnews.Important = Convert.ToBoolean(dataSet.Tables[0].Rows[0]["important"]);
+                }
+
+                return hotnews;
+            }
         }
     }
 }

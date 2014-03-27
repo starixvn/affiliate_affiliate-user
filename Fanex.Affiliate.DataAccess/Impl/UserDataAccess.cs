@@ -8,12 +8,12 @@
 //   <change who="Kaden.Trinh" date="2013.07.01">Register aff, get affiliate info, update aff</change>
 //   <change who="Leo.Vo" date="2013.07.03">Login from admin site</change>
 // </history>
+
 namespace Fanex.Affiliate.DataAccess.Impl
 {
     using System;
     using System.Linq;
     using Common;
-    using Common.Helper;
     using Criteria;
     using Data;
     using DTO;
@@ -31,17 +31,17 @@ namespace Fanex.Affiliate.DataAccess.Impl
         /// Authenticate User.
         /// </summary>
         /// <param name="criteria">User Authenticate criteria.</param>
-        /// <param name="errCode">Reference error code.</param>
         /// <returns>User model.</returns>
-        public User AuthenticateUser(AffiliateLoginCriteria criteria, ref int errCode)
+        public User AuthenticateUser(AffiliateLoginCriteria criteria)
         {
             var user = new User();
             using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
             {
                 var currentParams = criteria.GetSpParams();
                 objectDb.ExecuteNonQuery(currentParams);
-                var id = Converter.ToInt(currentParams["affid"]);
-                if (id > 0)
+                criteria.ErrCode = Converter.ToInt(currentParams["errcode"]);
+                var affId = Converter.ToInt(currentParams["affid"]);
+                if (affId > 0)
                 {
                     user.AffId = Converter.ToInt(currentParams["affid"]);
                     user.Username = Converter.ToString2(currentParams["username"]);
@@ -57,10 +57,6 @@ namespace Fanex.Affiliate.DataAccess.Impl
                     user.AffLevel = Converter.ToInt(currentParams["afflevel"]);
                     user.AffType = Converter.ToInt(currentParams["afftype"]);
                     user.OnUserID = Converter.ToInt(currentParams["onuserid"]);
-                }
-                else
-                {
-                    errCode = Converter.ToInt(currentParams["errcode"]);
                 }
             }
 
@@ -107,8 +103,8 @@ namespace Fanex.Affiliate.DataAccess.Impl
             {
                 var currentParams = criteria.GetSpParams();
                 objectDb.ExecuteNonQuery(currentParams);
-                var id = Converter.ToInt(currentParams["affid"]);
-                if (id > 0)
+                var affId = Converter.ToInt(currentParams["affid"]);
+                if (affId > 0)
                 {
                     user.AffId = Converter.ToInt(currentParams["affid"]);
                     user.Username = Converter.ToString2(currentParams["username"]);
@@ -275,28 +271,24 @@ namespace Fanex.Affiliate.DataAccess.Impl
                 var param = criteria.GetSpParams();
                 var internalLoginInfo = objectDb.Query<InternalLoginInfo>(param).FirstOrDefault();
                 criteria.ErrorCode = Converter.ToInt(param["errcode"]);
-                if (internalLoginInfo == null)
-                {
-                    return null;
-                }
 
-                var user = new User
-                {
-                    OnUserID = criteria.AccId,
-                    AffId = internalLoginInfo.AffID,
-                    Username = criteria.UserName.ToUpper() + " : [" + internalLoginInfo.AdminUserName + "]",
-                    FirstName = internalLoginInfo.FirstName,
-                    LastName = internalLoginInfo.LastName,
-                    Email = internalLoginInfo.Email,
-                    PreferLang = internalLoginInfo.PreferLang,
-                    Currency = internalLoginInfo.Currency,
-                    CurrencyID = Converter.ToInt(param["currencyid"]),
-                    AffType = internalLoginInfo.AffType,
-                    AffLevel = internalLoginInfo.AffLevel,
-                    HasSecurityQuestion = true
-                };
-
-                return user;
+                return internalLoginInfo == null
+                    ? null
+                    : new User
+                            {
+                                OnUserID = criteria.AccId,
+                                AffId = internalLoginInfo.AffID,
+                                Username = criteria.UserName.ToUpper() + " : [" + internalLoginInfo.AdminUserName + "]",
+                                FirstName = internalLoginInfo.FirstName,
+                                LastName = internalLoginInfo.LastName,
+                                Email = internalLoginInfo.Email,
+                                PreferLang = internalLoginInfo.PreferLang,
+                                Currency = internalLoginInfo.Currency,
+                                CurrencyID = Converter.ToInt(param["currencyid"]),
+                                AffType = internalLoginInfo.AffType,
+                                AffLevel = internalLoginInfo.AffLevel,
+                                HasSecurityQuestion = true
+                            };
             }
         }
 

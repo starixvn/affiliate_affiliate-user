@@ -1,8 +1,12 @@
-﻿// -----------------------------------------------------------------------
-// <copyright file="AffiliateSettings.cs" company="Microsoft">
-// TODO: Update copyright text.
+﻿// ----------------------------------------------------------------------
+// <copyright file="AffiliateSettings.cs" company="Nexcel Solutions Vietnam">
+//     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
 // </copyright>
-// -----------------------------------------------------------------------
+// ------------------------------------------------------------------------
+// <history>
+//   <change who="Long.Luu" date="2014/03/26">Created</change>
+//   <change who="" date=""></change>
+// </history>
 
 namespace Fanex.Affiliate.DTO
 {
@@ -10,7 +14,7 @@ namespace Fanex.Affiliate.DTO
     using System.Collections.Generic;
 
     /// <summary>
-    /// TODO: Update summary.
+    /// Affiliate Settings.
     /// </summary>
     public class AffiliateSettings
     {

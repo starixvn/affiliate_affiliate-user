@@ -11,7 +11,7 @@
 namespace Fanex.Affiliate.DTO
 {
     /// <summary>
-    /// TODO: Update summary.
+    /// Referrers Statistics Detail.
     /// </summary>
     public class ReferrersStatisticsDetail
     {

@@ -15,7 +15,7 @@ namespace Fanex.Affiliate.DTO
     using System.Web.Mvc;
 
     /// <summary>
-    /// TODO: Update summary.
+    /// Site Domain Info.
     /// </summary>
     [Serializable]
     public class SiteDomainInfo
@@ -38,10 +38,6 @@ namespace Fanex.Affiliate.DTO
         public static SiteDomainInfo Parse(Controller controller)
         {
             var siteUrl = controller.Request.Url;
-            
-            // siteUrl = new Uri(@"http://10.18.200.209:8019/V1");
-            // siteUrl = new Uri(@"http://affiliate.12bet.com:8080");
-            // siteUrl = new Uri(@"http://affiliate.athena000.com:7001");
             var regex = new Regex(@":\d+");
             var host = regex.Replace(siteUrl.Authority, string.Empty);
             var scheme = siteUrl.Scheme;

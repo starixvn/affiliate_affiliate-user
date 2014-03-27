@@ -18,7 +18,7 @@ namespace Fanex.Affiliate.Utilities
     using Fanex.BetList.Core.Entities;
 
     /// <summary>
-    /// TODO: Update summary.
+    /// Affiliate BetList HTML Builder.
     /// </summary>
     public static class AffBetListHtmlBuilder
     {

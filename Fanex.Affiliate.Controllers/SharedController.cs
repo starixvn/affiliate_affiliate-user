@@ -12,7 +12,7 @@ namespace Fanex.Affiliate.Controllers
     using System.Web.Mvc;
 
     /// <summary>
-    /// TODO: Update summary.
+    /// Shared Controller.
     /// </summary>
     public class SharedController : BaseController
     {

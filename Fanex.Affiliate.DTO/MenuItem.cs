@@ -11,7 +11,7 @@
 namespace Fanex.Affiliate.DTO
 {
     /// <summary>
-    /// TODO: Update summary.
+    /// Menu Item data object.
     /// </summary>
     public class MenuItem
     {

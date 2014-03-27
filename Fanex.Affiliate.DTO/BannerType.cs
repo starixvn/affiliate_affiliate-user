@@ -10,7 +10,7 @@
 namespace Fanex.Affiliate.DTO
 {
     /// <summary>
-    /// TODO: Update summary.
+    /// Banner Type.
     /// </summary>
     public class BannerType
     {

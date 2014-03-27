@@ -11,7 +11,7 @@
 namespace Fanex.Affiliate.Web.Pager
 {
     /// <summary>
-    /// TODO: Update summary.
+    /// Pagination Link.
     /// </summary>
     public class PaginationLink
     {

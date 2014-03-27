@@ -8,6 +8,7 @@
 //   <change who="Kaden.Trinh" date="2013.06.13">Get list payment request</change>
 //   <change who="Long.Luu" date="2013.07.01">handle payment request/cancel payment</change>
 // </history>
+
 namespace Fanex.Affiliate.Services.Impl
 {
     using Common.Helper;

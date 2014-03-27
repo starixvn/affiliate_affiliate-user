@@ -14,7 +14,7 @@ namespace Fanex.Affiliate.Configurations
     using Fanex.Affiliate.DTO;
     
     /// <summary>
-    /// TODO: Update summary.
+    /// Menu Settings.
     /// </summary>
     public static class MenuSettings
     {

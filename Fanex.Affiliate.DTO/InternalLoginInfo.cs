@@ -10,7 +10,7 @@
 namespace Fanex.Affiliate.DTO
 {
     /// <summary>
-    /// TODO: Update summary.
+    /// Internal Login Info.
     /// </summary>
     public class InternalLoginInfo
     {

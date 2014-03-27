@@ -29,13 +29,13 @@ namespace Fanex.Affiliate.Link.Controllers
         #endregion Const
 
         #region Services
-        /// <summary>
-        /// Define Payment service.
-        /// </summary>
+        
         private readonly ITrackingSystemService _trackingSystemService;
+        
         #endregion Services
 
         #region Constructor
+
         /// <summary>
         /// Initializes a new instance of the HomeController class.
         /// </summary>
@@ -43,6 +43,7 @@ namespace Fanex.Affiliate.Link.Controllers
         {
             _trackingSystemService = new TrackingSystemService();
         }
+
         #endregion Constructor
 
         /// <summary>

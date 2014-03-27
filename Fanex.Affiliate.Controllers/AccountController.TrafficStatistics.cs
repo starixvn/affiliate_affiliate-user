@@ -64,7 +64,6 @@ namespace Fanex.Affiliate.Controllers
             });
 
             criteria.AffId = CurrentSession.AffId;
-
             if (!ModelState.IsValid)
             {
                 var destinateDate = DateTime.Now.Date;
@@ -78,7 +77,7 @@ namespace Fanex.Affiliate.Controllers
             }
 
             var data = criteria.IsValid() ? AccountService.GetLandingPagesStatistics(criteria) : new List<TrafficStatistic>();
-            var model = new TrafficStatisticsViewModel
+            var viewModel = new TrafficStatisticsViewModel
             {
                 PageSelected = "All",
                 PageList = pageList as List<SystemSetting>,
@@ -88,7 +87,7 @@ namespace Fanex.Affiliate.Controllers
                 LandingPagesStatisticsList = data
             };
 
-            return View(model);
+            return View(viewModel);
         }
 
         /// <summary>
@@ -152,14 +151,14 @@ namespace Fanex.Affiliate.Controllers
             }
 
             criteria.AffId = CurrentSession.AffId;
-            var model = new TrafficStatisticsViewModel
+            var viewModel = new TrafficStatisticsViewModel
             {
                 ReferrersStatisticsList = criteria.IsValid() ? AccountService.GetReferrersStatistics(criteria) : new List<TrafficStatistic>(),
                 FromDate = criteria.FromDate,
                 ToDate = criteria.ToDate
             };
 
-            return View(model);
+            return View(viewModel);
         }
 
         /// <summary>

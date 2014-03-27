@@ -6,6 +6,7 @@
 // <history>
 //   <change who="Long.Luu" date="2013.07.04">call Taiwan side's apis</change>
 // </history>
+
 namespace Fanex.Affiliate.Services.Interface
 {
     using System;
