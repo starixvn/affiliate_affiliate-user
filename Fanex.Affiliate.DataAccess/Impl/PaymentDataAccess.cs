@@ -7,6 +7,7 @@
 //   <change who="Kaden.Trinh" date="2013.06.03">Created</change>
 //   <change who="Kaden.Trinh" date="2013.06.13">Get list payment request</change>
 // </history>
+
 namespace Fanex.Affiliate.DataAccess.Impl
 {
     using System;

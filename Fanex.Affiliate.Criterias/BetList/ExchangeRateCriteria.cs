@@ -25,7 +25,6 @@ namespace Fanex.Affiliate.Criteria
         public DateTime Date { get; set; }
 
         // Output paramaters
-        [SpParam(Ignored = true)]
         public float Rate { get; set; }
 
         /// <summary>

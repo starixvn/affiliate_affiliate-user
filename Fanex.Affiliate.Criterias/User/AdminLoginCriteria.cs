@@ -42,6 +42,7 @@ namespace Fanex.Affiliate.Criteria
         [SpParam(SqlParamName = "on_userid")]
         public int AccOnId { get; set; }
 
+        // Output parameters
         [SpParam(SqlParamName = "netsessionid")]
         public string NetSessionId { get; set; }
 

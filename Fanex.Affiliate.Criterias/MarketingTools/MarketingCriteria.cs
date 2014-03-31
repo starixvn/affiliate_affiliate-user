@@ -53,8 +53,10 @@ namespace Fanex.Affiliate.Criteria
         [SpParam(Ignored = true)]
         public short? BannerSubCategory { get; set; }
 
+        [SpParam(Ignored = true)]
         public string Domain { get; set; }
 
+        [SpParam(Ignored = true)]
         public string LinkTo { get; set; }
 
         [SpParam(Ignored = true)]

@@ -59,7 +59,6 @@ namespace Fanex.Affiliate.Controllers
                 ToDate = winlostDate,
                 MoveBetsDay = balanceUpMoveBetCriteria.MoveBetsDay,
                 BalanceUpDay = balanceUpMoveBetCriteria.BalanceUpDay,
-                BaseCurrency = CurrentSession.Currency,
                 CustId = customerInfoBetList.CustId
             };
 

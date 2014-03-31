@@ -54,6 +54,7 @@ namespace Fanex.Affiliate.Criteria
 
         public int ErrCode { get; set; }
 
+        [SpParam(Ignored = true)]
         [Required(ErrorMessageResourceType = typeof(Lang), ErrorMessageResourceName = "MsgEmptyCaptcha")]
         public string ValidCode { get; set; }
 

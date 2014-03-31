@@ -49,6 +49,7 @@ namespace Fanex.Affiliate.Criteria
             }
         }
 
+        [SpParam(Ignored = true)]
         public int NRows { get; set; }
         
         [SpParam(Ignored = true)]

@@ -27,10 +27,13 @@ namespace Fanex.Affiliate.Criteria
 
         public int? ParentType { get; set; }
 
+        [SpParam(Ignored = true)]
         public bool GenAll { get; set; }
 
+        [SpParam(Ignored = true)]
         public string Category { get; set; }
 
+        [SpParam(Ignored = true)]
         public int ActiveValue { get; set; }
 
         /// <summary>

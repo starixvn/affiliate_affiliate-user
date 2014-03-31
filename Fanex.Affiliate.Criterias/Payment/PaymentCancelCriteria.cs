@@ -41,19 +41,14 @@ namespace Fanex.Affiliate.Criteria
         public string IBCUsername { get; set; }
 
         // Output parameters
-        [SpParam(Ignored = true)]
         public string PreferredLanguage { get; set; }
 
-        [SpParam(Ignored = true)]
         public bool MailOption { get; set; }
 
-        [SpParam(Ignored = true)]
         public DateTime TransDate { get; set; }
 
-        [SpParam(Ignored = true)]
         public decimal Amount { get; set; }
 
-        [SpParam(Ignored = true)]
         public int ErrCode { get; set; }
 
         /// <summary>

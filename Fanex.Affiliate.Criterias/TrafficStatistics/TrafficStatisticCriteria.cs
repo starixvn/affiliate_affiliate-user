@@ -24,6 +24,7 @@ namespace Fanex.Affiliate.Criteria
 
         public DateTime ToDate { get; set; }
 
+        // Output parameters
         public int TotalClicks { get; set; }
 
         public int UniqueClicks { get; set; }

@@ -20,20 +20,10 @@ namespace Fanex.Affiliate.Criteria
     /// </summary>
     public class BetListCriteria : CriteriaBase
     {
-        private readonly DateTime _oldDate = new DateTime(2008, 12, 31);
-
         public BetListCriteria()
         {
-            var filterDate = DateTime.Today;
-            var lastMonth = filterDate.AddMonths(-1);
-            Year = filterDate.Year;
-            Month = filterDate.Month;
-            FromDay = 1;
-            var endOfLastMonth = new DateTime(Year, Month, 1).AddMonths(1).AddDays(-1);
-            ToDay = filterDate == lastMonth ? endOfLastMonth.Day : filterDate.Day;
-            ReportType = 1;
-            DrawFilter = 1;
             BaseCurrency = "EUR";
+            DrawFilter = 1;
             ShowSB = false;
             ShowRB = false;
             ShowNG = false;
@@ -46,36 +36,12 @@ namespace Fanex.Affiliate.Criteria
 
         public int LicenseeId { get; set; }
 
-        public string LicenseeName { get; set; }
-
-        public int LicenseeMiniumFee { get; set; }
-
+        [SpParam(Ignored = true)]
         public string BaseCurrency { get; set; }
-
-        public string CurrencyName { get; set; }
-        
-        [Range(1, 3)]
-        [DefaultValue(1)]
-        public int ReportType { get; set; }
 
         [Range(1, 3)]
         [DefaultValue(1)]
         public int DrawFilter { get; set; }
-
-        public bool IsExcludeTestData { get; set; }
-        
-        [Range(0, 7)]
-        public int DateOption { get; set; }
-
-        public bool ShowContent { get; set; }
-
-        public int Year { get; set; }
-
-        public int Month { get; set; }
-
-        public int FromDay { get; set; }
-
-        public int ToDay { get; set; }
 
         public DateTime FromDate { get; set; }
 
@@ -88,18 +54,6 @@ namespace Fanex.Affiliate.Criteria
         public DateTime MoveBetsDay { get; set; }
 
         public DateTime BalanceUpDay { get; set; }
-
-        public string ReportName { get; set; }
-
-        public int DrillDownCurrency { get; set; }
-
-        public DateTime DrillDownDate { get; set; }
-
-        // This property is for drilldown only.
-        public DateTime DrillDownFromDate { get; set; }
-
-        // This property is for drilldown only
-        public DateTime DrillDownToDate { get; set; }
 
         public bool ShowSB { get; set; }
 
@@ -117,6 +71,7 @@ namespace Fanex.Affiliate.Criteria
 
         public bool ShowBG { get; set; }
         
+        // Output parameters
         public decimal TotalRows { get; set; }
 
         /// <summary>

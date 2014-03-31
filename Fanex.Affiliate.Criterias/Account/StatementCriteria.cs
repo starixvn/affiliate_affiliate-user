@@ -22,6 +22,7 @@ namespace Fanex.Affiliate.Criteria
 
         public int PageIndex { get; set; }
 
+        // Output parameters
         public int TotalPages { get; set; }
 
         /// <summary>

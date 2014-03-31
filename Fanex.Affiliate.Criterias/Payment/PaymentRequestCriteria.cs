@@ -33,19 +33,14 @@ namespace Fanex.Affiliate.Criteria
         public string Language { get; set; }
 
         // Output parameters
-        [SpParam(Ignored = true)]
         public string PreferredLanguage { get; set; }
 
-        [SpParam(Ignored = true)]
         public bool MailOption { get; set; }
 
-        [SpParam(Ignored = true)]
-        public DateTime TransDate { get; set; }
+        public DateTime? TransDate { get; set; }
 
-        [SpParam(Ignored = true)]
         public long TransID { get; set; }
 
-        [SpParam(Ignored = true)]
         public int ErrCode { get; set; }
 
         /// <summary>

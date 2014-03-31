@@ -47,18 +47,15 @@ namespace Fanex.Affiliate.Criteria
 
         public string Country { get; set; }
 
-        [SpParam(Ignored = true)]
-        public string RedirectPage { get; set; }
-
-        [SpParam(Ignored = true)]
-        public long ClickID { get; set; }
-
         public string Language { get; set; }
 
-        [SpParam(Ignored = true)]
+        // Output parameters
+        public string RedirectPage { get; set; }
+
+        public long ClickID { get; set; }
+
         public int ErrCode { get; set; }
 
-        [SpParam(Ignored = true)]
         public string ErrMsg { get; set; }
 
         /// <summary>

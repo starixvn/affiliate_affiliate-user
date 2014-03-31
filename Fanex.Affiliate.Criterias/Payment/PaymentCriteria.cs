@@ -19,6 +19,7 @@ namespace Fanex.Affiliate.Criteria
     {
         public int AffId { get; set; }
 
+        // Output parameters
         public string PreferredPayment { get; set; }
 
         [SpParam(SqlParamName = "BalBroughtForward")]

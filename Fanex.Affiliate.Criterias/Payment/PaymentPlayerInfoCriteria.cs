@@ -20,20 +20,13 @@ namespace Fanex.Affiliate.Criteria
         public int AffId { get; set; }
 
         // Output parameters
-        [SpParam(Ignored = true)]
         public string PlayerUsername { get; set; }
         
-        [SpParam(Ignored = true)]
         public string SystemName { get; set; }
 
-        [SpParam(Ignored = true)]
         public string DummyBalAcc { get; set; }
 
-        [SpParam(Ignored = true)]
         public string AffCurrency { get; set; }
-
-        [SpParam(Ignored = true)]
-        public int ErrCode { get; set; }
 
         /// <summary>
         /// Get the reference SP's Name which is specified in Config file.

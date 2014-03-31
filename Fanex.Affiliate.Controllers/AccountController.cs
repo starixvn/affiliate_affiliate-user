@@ -421,7 +421,7 @@ namespace Fanex.Affiliate.Controllers
                     {
                         AffId = CurrentSession.AffId
                     });
-
+                    
                     // Call API to check whether member is exists
                     string ibcUsername = string.Empty, playerCurrency = string.Empty, strErrorMsg = string.Empty;
                     if (!IsExistLicenseeCustInfo(paymentInfo.SystemName, paymentInfo.PlayerUsername, ref ibcUsername, ref playerCurrency, ref strErrorMsg))
@@ -435,12 +435,12 @@ namespace Fanex.Affiliate.Controllers
                     }
                 }
             }
-
+            
             var freshPayment = PaymentService.GetPaymentRequest(new PaymentCriteria
             {
                 AffId = CurrentSession.AffId
             });
-
+            
             ViewBag.Result = result;
 
             return View(freshPayment);
@@ -468,7 +468,7 @@ namespace Fanex.Affiliate.Controllers
                 IP = ip,
                 Language = AppSession.Language
             };
-
+            
             var paymentRequest = PaymentService.InsertPaymentRequest(criteria);
 
             if (criteria.ErrCode == 0)

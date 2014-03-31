@@ -19,8 +19,10 @@ namespace Fanex.Affiliate.Criteria
     public class BalanceUpMoveBetCriteria : CriteriaBase
     {
         // Output parameters
+        [SpParam(Ignored = true)]
         public DateTime MoveBetsDay { get; set; }
 
+        [SpParam(Ignored = true)]
         public DateTime BalanceUpDay { get; set; }
 
         /// <summary>

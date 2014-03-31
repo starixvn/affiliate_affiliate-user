@@ -34,7 +34,7 @@ namespace Fanex.Affiliate.Criteria
 
         public DateTime BalanceUpDay { get; set; }
 
-        [SpParam(Ignored = true)]
+        // Output parameters
         public decimal Outstanding { get; set; }
 
         /// <summary>
