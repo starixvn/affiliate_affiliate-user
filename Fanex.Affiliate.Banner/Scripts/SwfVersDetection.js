@@ -1,3 +1,5 @@
+/* jshint ignore:start */
+
 //v1.7
 // Flash Player Version Detection
 // Detect Client Browser type
@@ -257,3 +259,5 @@ function AC_GetArgs(args, ext, srcParamName, classid, mimeType) {
     if (mimeType) ret.embedAttrs["type"] = mimeType;
     return ret;
 }
+
+/* jshint ignore:end */

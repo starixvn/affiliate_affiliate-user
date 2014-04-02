@@ -1,35 +1,39 @@
-﻿var SIGNUP = function ($) {
+﻿/* global AFFILIATE */
+"use strict";
+
+var SIGNUP = (function ($) {
     return {
-        init: function() {
-            $('#captcha-signup').click(function() {
+        init: function () {
+            $('#captcha-signup').click(function () {
                 SIGNUP.reloadCaptcha();
             });
-            $('#btnRegister').click(function() {
+            $('#btnRegister').click(function () {
                 SIGNUP.submitForm();
             });
-            $('#btnRegister').bind('keypress', function(e) {
-                if (e.keyCode == 13) {
+            $('#btnRegister').bind('keypress', function (e) {
+                if (e.keyCode === 13) {
                     SIGNUP.submitForm();
                 }
             });
-            $('#btnAddSite').click(function() {
+            $('#btnAddSite').click(function () {
                 SIGNUP.addUrl();
             });
         },
-        submitForm: function() {
+        submitForm: function () {
             var moreSiteUrls = '';
-            $(".more-site").each(function() {
-                if (moreSiteUrls != '')
+            $(".more-site").each(function () {
+                if (moreSiteUrls !== '') {
                     moreSiteUrls += ';';
+                }
                 moreSiteUrls += $.trim($(this).val());
             });
             $("#moreSiteUrls").val(moreSiteUrls);
             document.forms[0].submit();
         },
-        reloadCaptcha: function() {
+        reloadCaptcha: function () {
             var currentDate;
             if (!Date.now) {
-                currentDate = function() {
+                currentDate = function () {
                     return new Date().valueOf();
                 };
             } else {
@@ -38,11 +42,11 @@
             var url = AFFILIATE.getAbsoluteUrl("User/CaptchaImage?" + currentDate);
             $('#captcha-signup').attr('src', url);
         },
-        addUrl: function() {
+        addUrl: function () {
             var sites = $(".sites");
             var numberSite = sites.length;
             if (sites[numberSite - 1]) {
-                if ($(sites[numberSite - 1]).val() == '') {
+                if ($(sites[numberSite - 1]).val() === '') {
                     alert($("#messageWebsite").attr("more-url") + numberSite);
                     sites[numberSite - 1].focus();
                     return;
@@ -61,12 +65,12 @@
                 $("#more_" + numberSite).focus();
             }
         },
-        delUrl: function(obj) {
+        delUrl: function (obj) {
             var index = $(obj).parents("tr").attr("id").replace("site_", "");
             $("#site_" + index).remove();
             SIGNUP.reOrderRows();
         },
-        reOrderRows: function() {
+        reOrderRows: function () {
             var rows = $("#siteinfo").find("tr");
             for (var rowIndex = 1; rowIndex < rows.length; rowIndex++) {
                 var index = (rowIndex + 1);
@@ -76,7 +80,8 @@
             }
         }
     };
-} (jQuery);
+} (jQuery));
+
 $(function () {
 	SIGNUP.init();
 });

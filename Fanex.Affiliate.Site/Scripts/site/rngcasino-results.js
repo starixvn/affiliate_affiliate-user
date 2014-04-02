@@ -8,6 +8,9 @@
 //   <change who="" date=""></change>
 // </history>
 
+/*global AFFILIATE, QueryString*/
+"use strict";
+
 var RNGCasinoResults = (function ($) {
     return {
         initialize: function () {

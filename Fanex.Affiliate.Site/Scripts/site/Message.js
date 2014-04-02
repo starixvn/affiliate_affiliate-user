@@ -1,5 +1,7 @@
-﻿var MESSAGE = function ($) {
+﻿/* global QueryString */
+"use strict";
 
+var MESSAGE = (function ($) {
     return {
         init: function () {
             var disableCalendar = $('#IsCheckDate').is(":checked");
@@ -51,7 +53,8 @@
             });
         }
     };
-} (jQuery);
+} (jQuery));
+
 $(function () {
     MESSAGE.init();
 });

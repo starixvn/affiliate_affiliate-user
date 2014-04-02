@@ -1,4 +1,6 @@
-﻿function _affChangeMediaText{systemname}{id}() {
+﻿/* jshint ignore:start */
+
+function _affChangeMediaText{systemname}{id}() {
     var _affscript = document.createElement('script');
     _affscript.type = 'text/javascript';
     _affscript.id = '_affScript{systemname}{id}';
@@ -16,3 +18,5 @@ _affChangeMediaText{systemname}{id}();
 if(!window.affTimers)    window.affTimers = {};
 if(!window.affTimers.t{systemname}{id})
     window.affTimers.t{systemname}{id} = window.setInterval("_affChangeMediaText{systemname}{id}()", {requesttime});
+
+/* jshint ignore:end */

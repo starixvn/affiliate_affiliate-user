@@ -1,4 +1,7 @@
-﻿var ReferrersStatistics = function ($) {
+﻿/* global AFFILIATE, Lang */
+"use strict";
+
+var ReferrersStatistics = (function ($) {
     return {
         Init: function() {
             // Event click on Domain referrer
@@ -15,7 +18,7 @@
             });
         }
     };
-} (jQuery);
+} (jQuery));
 
 $(function () {
     ReferrersStatistics.Init();

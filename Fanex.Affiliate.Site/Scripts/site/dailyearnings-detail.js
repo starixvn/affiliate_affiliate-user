@@ -1,4 +1,8 @@
-﻿var DailyEarningsDetails = function ($) {
+﻿/* global AFFILIATE */
+/* exported showBetlistTooltip */
+"use strict";
+
+var DailyEarningsDetails = (function ($) {
     return {
         init: function () {
             $('.domain-view-detail').click(function () {
@@ -17,7 +21,7 @@
             });
         }
     };
-} (jQuery);
+} (jQuery));
 
 function showBetlistTooltip()
 {

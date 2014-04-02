@@ -1,7 +1,9 @@
-﻿var ContactUs = function ($) {
+﻿"use strict";
+
+var ContactUs = (function ($) {
     return {
         init: function() {
-            if ($("#Sender").val() == "") {
+            if ($("#Sender").val() === "") {
                 $("#Sender").focus();
             } else {
                 $("#Captcha").focus();
@@ -23,7 +25,8 @@
             $('#imgCaptchaContactUs').attr('src', '/ContactUs/CaptchaImage' + "?" + currentDate);
         }
     };
-} (jQuery);
+} (jQuery));
+
 $(function () {
     ContactUs.init();
 });

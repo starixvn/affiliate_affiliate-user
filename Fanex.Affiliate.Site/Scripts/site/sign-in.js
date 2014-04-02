@@ -1,7 +1,17 @@
-﻿var SIGNIN = function ($) {
+﻿/* global AFFILIATE, Lang */
+"use strict";
+
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+var SIGNIN = (function ($) {
     return {
         init: function () {
-            if ($("#Username").val() == "") {
+            if ($("#Username").val() === "") {
                 $("#Username").focus();
             } else {
                 $("#Password").focus();
@@ -15,7 +25,7 @@
                 SIGNIN.submitForm();
             });
             $('.login-block input').bind('keypress', function (e) {
-                if (e.keyCode == 13) {
+                if (e.keyCode === 13) {
                     SIGNIN.submitForm();
                 }
             });
@@ -40,9 +50,9 @@
                 captCha = $("#CaptchaLogin").val();
             var returnUrl = getParameterByName("ReturnUrl");
 
-            if (username == "" || password == "") {
+            if (username === "" || password === "") {
                 alert(Lang.EmptyUsernamePassword);
-            } else if (captCha == "") {
+            } else if (captCha === "") {
                 alert(Lang.EmptyCaptcha);
             } else {
                 $.blockUI();
@@ -65,7 +75,7 @@
                             $("#Password").val("");
                             SIGNIN.reloadCaptcha();
                         } else {
-                            if (returnUrl == "") {
+                            if (returnUrl === "") {
                                 parent.location.href = AFFILIATE.getAbsoluteUrl("Account/Overview");
                             }
                             else {
@@ -82,14 +92,8 @@
             }
         }
     };
-} (jQuery);
+} (jQuery));
+
 $(function () {
 	SIGNIN.init();
 });
-
-function getParameterByName(name) {
-    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-        results = regex.exec(location.search);
-    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-}

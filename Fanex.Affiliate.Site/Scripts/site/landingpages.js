@@ -1,4 +1,7 @@
-﻿var ClicksLandingPages = function ($) {
+﻿/* global AFFILIATE, Lang */
+"use strict";
+
+var ClicksLandingPages = (function ($) {
     return {
         init: function() {
             $('.act-view-detail').click(function() {
@@ -14,7 +17,7 @@
             });
         }
     };
-} (jQuery);
+} (jQuery));
 
 $(function () {
     ClicksLandingPages.init();

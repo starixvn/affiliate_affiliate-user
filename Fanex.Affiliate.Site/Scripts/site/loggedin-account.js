@@ -1,4 +1,7 @@
-﻿var ACCOUNT = function ($) {
+﻿/* global AFFILIATE */
+"use strict";
+
+var ACCOUNT = (function ($) {
     return {
         init: function () {
             // Event click on product link
@@ -19,11 +22,13 @@
                 window.location.replace(url);
             });
 
-            setInterval("ACCOUNT.ReCheckIn()", 15000);
+            setInterval(function () {
+                ACCOUNT.ReCheckIn();
+            }, 15000);
         },
         ChangeProduct: function (lnkId, ddlId, isSel) {
             var select = $(ddlId);
-            if ($(ddlId + " option").length == 0) {
+            if ($(ddlId + " option").length === 0) {
                 return;
             }
 
@@ -47,10 +52,10 @@
                 dataType: "json",
                 success: function (result) {
                     if (result.Success) { //Use Success = IsKickedOut
-                        if (result.ErrorMessage == "Expired") {
+                        if (result.ErrorMessage === "Expired") {
                             alert(result.Message);
                             parent.location.href = AFFILIATE.getAbsoluteUrl("");
-                        } else if (result.ErrorMessage == "UM") {
+                        } else if (result.ErrorMessage === "UM") {
                             parent.location.href = AFFILIATE.getAbsoluteUrl("/UnderMaintenance");
                         }
                     }
@@ -62,7 +67,8 @@
             });
         }
     };
-} (jQuery);
+} (jQuery));
+
 $(function () {
 	ACCOUNT.init();
 });

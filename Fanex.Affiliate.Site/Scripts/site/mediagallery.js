@@ -1,4 +1,7 @@
-﻿var MARKETING = function ($) {
+﻿/* global AFFILIATE, Lang, QueryString */
+"use strict";
+
+var MARKETING = (function ($) {
     return {
         init: function () {
             // Event click on media search
@@ -27,8 +30,9 @@
             });
         },
         loadData: function (value) {
-            if ($("#page"))
+            if ($("#page")) {
                 $("#page").value = value;
+            }
             location.href = MARKETING.getUrl();
         },
         getSubCategory: function (category, subCategory) {
@@ -47,7 +51,8 @@
                 success: function (result) {
                     var html = "<select id='slSubCategory' name='BannerSubCategory'><option value=''>" + Lang.All + "</option>";
                     for (var index = 0; index < result.length; index++) {
-                        html += "<option value='" + result[index].TypeId + "'" + (subCategory == result[index].TypeId ? "selected='selected'" : "") + ">" + result[index].Value + "</option>";
+                        html += "<option value='" + result[index].TypeId + "'" + (subCategory === result[index].TypeId ? "selected='selected'" : "");
+                        html += ">" + result[index].Value + "</option>";
                     }
                     html += '</select>';
                     td.html(html);
@@ -61,28 +66,38 @@
         },
         getUrl: function (url) {
             var result = url;
-            if (result == undefined)
+            if (result === undefined) {
                 result = location.href.match(new RegExp("[^?]+")).toString();
-            if ($("#slCategory"))
+            }
+            if ($("#slCategory")) {
                 result = QueryString.setParam(result, "bannercategory", $("#slCategory").val());
-            if ($("#slSubCategory"))
+            }
+            if ($("#slSubCategory")) {
                 result = QueryString.setParam(result, "bannersubcategory", $("#slSubCategory").val());
-            if ($("#slLanguage"))
+            }
+            if ($("#slLanguage")) {
                 result = QueryString.setParam(result, "language", $("#slLanguage").val());
-            if ($("#slCurrency"))
+            }
+            if ($("#slCurrency")) {
                 result = QueryString.setParam(result, "currency", $("#slCurrency").val());
-            if ($("#slImageType"))
+            }
+            if ($("#slImageType")) {
                 result = QueryString.setParam(result, "imagetype", $("#slImageType").val());
-            if ($("#slSize"))
+            }
+            if ($("#slSize")) {
                 result = QueryString.setParam(result, "size", $("#slSize").val());
-            if ($("#slDomain"))
+            }
+            if ($("#slDomain")) {
                 result = QueryString.setParam(result, "domain", $("#slDomain").val());
-            if ($("#slLinkTo"))
+            }
+            if ($("#slLinkTo")) {
                 result = QueryString.setParam(result, "linkto", $("#slLinkTo").val());
+            }
             return result;
         }
     };
-} (jQuery);
+} (jQuery));
+
 $(function () {
     MARKETING.init();
 });

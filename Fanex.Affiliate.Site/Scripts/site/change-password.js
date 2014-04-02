@@ -1,4 +1,8 @@
-﻿var ChangePassword = function ($) {
+﻿/* global AFFILIATE */
+/* exported HandleCancelEvent */
+"use strict";
+
+var ChangePassword = (function ($) {
     return {
         init: function() {
             $("#NewPassword").tooltip();
@@ -23,7 +27,7 @@
             }
         },
         check: function(str) {
-            numbers = new String("0123456789");
+            var numbers = "0123456789";
             var i = 0;
             var nCount = 0;
             while (i < str.length) {
@@ -33,7 +37,7 @@
             return ((nCount > (str.length - 2)) || nCount < 2) ? false : true;
         }
     };
-} (jQuery);
+} (jQuery));
 
 $(function () {
     ChangePassword.init();

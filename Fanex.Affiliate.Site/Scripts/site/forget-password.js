@@ -1,7 +1,9 @@
-﻿var FORGETPASSWORD = function ($) {
+﻿"use strict";
+
+var FORGETPASSWORD = (function ($) {
     return {
         init: function() {
-            if ($("#Email").val() == "") {
+            if ($("#Email").val() === "") {
                 $("#Email").focus();
             } else {
                 $("#Captcha").focus();
@@ -23,7 +25,8 @@
             $('#img-captchaForgetPassword').attr('src', '/User/CaptchaImageForgetPwd' + "?" + currentDate);
         }
     };
-} (jQuery);
+} (jQuery));
+
 $(function () {
 	FORGETPASSWORD.init();
 });

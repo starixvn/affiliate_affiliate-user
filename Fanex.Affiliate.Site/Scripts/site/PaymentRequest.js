@@ -1,4 +1,7 @@
-﻿var PAYMENTREQUEST = function ($) {
+﻿/* global AFFILIATE, Lang */
+"use strict";
+
+var PAYMENTREQUEST = (function ($) {
     return {
         init: function () {
             // check constraints
@@ -13,7 +16,7 @@
 
             $('#RequestPaymentForm').submit(function () {
                 $('#tbAmount').val($('#tbAmount').val().replace(/,/g, ""));
-                var reqAmount = new Number($('#tbAmount').val());
+                var reqAmount = $('#tbAmount').val();
 
                 if ($('#tbAmount').val().length <= 0 || isNaN(reqAmount)) {
                     AFFILIATE.showErrorMsg(message);
@@ -22,7 +25,8 @@
             });
         }
     };
-} (jQuery);
+} (jQuery));
+
 $(function () {
     PAYMENTREQUEST.init();
 });

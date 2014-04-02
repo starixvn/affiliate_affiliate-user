@@ -1,4 +1,8 @@
-﻿var AFFILIATE = (function ($) {
+﻿/* jshint unused:false */
+/* global ApoRes, sysGmt, sysYear, sysMonth:true, sysDay:true, sysHour:true, sysMinute:true, sysSecond:true, sysMonthName */
+"use strict";
+
+var AFFILIATE = (function ($) {
     return {
         scrollTop: function () {
             $('html, body').animate({ scrollTop: $('.container-fluid').offset().top }, 400);
@@ -15,18 +19,23 @@
                     var year = parseInt(parts[2], 10);
 
                     // Check the ranges of month and year
-                    if (year < 1000 || year > 3000 || month == 0 || month > 12)
+                    if (year < 1000 || year > 3000 || month === 0 || month > 12)
+                    {
                         return false;
+                    }
 
                     var monthLength = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
                     // Adjust for leap years
-                    if (year % 400 == 0 || (year % 100 != 0 && year % 4 == 0))
+                    if (year % 400 === 0 || (year % 100 !== 0 && year % 4 === 0))
+                    {
                         monthLength[1] = 29;
+                    }
 
                     // Check the range of the day
                     return day > 0 && day <= monthLength[month - 1];
                 };
+
                 var validateDate = function (target) {
                     var minDate = target.datepicker("option", "minDate");
                     var maxDate = target.datepicker("option", "maxDate");
@@ -38,10 +47,10 @@
                     if (!isValidDate(inputDate)) {
                         errMsg = ApoRes.InvalidDate;
                     }
-                    if (errMsg.length == 0 && currentDate < minDate) {
+                    if (errMsg.length === 0 && currentDate < minDate) {
                         errMsg = ApoRes.DateIsOutOfRange;
                     }
-                    if (errMsg.length == 0 && maxDate < currentDate) {
+                    if (errMsg.length === 0 && maxDate < currentDate) {
                         errMsg = ApoRes.DateIsOutOfRange;
                     }
 
@@ -65,21 +74,13 @@
                         _limit = _limit.split("/");
 
                         var year = _limit[2],
-								month = _limit[0],
-								day = _limit[1];
+                            month = _limit[0],
+                            day = _limit[1];
 
                         return new Date(year, month - 1, day);
                     }
 
                     return null;
-                };
-                var shiftDate = function (target, increment) {
-                    var currDate = target.datepicker('getDate');
-                    var d = currDate.getDate() + increment;
-                    var m = currDate.getMonth();
-                    var y = currDate.getFullYear();
-
-                    target.datepicker('setDate', new Date(y, m, d));
                 };
 
                 datePickers.each(function () {
@@ -90,19 +91,18 @@
                         dateFormat: "mm/dd/yy",
                         minDate: limitDate($this, "mindate"),
                         maxDate: limitDate($this, "maxdate"),
-                        beforeShow: function (input, inst) {
-                            //inst.dpDiv.css({ marginTop: '2px' });
+                        beforeShow: function () {
                         },
-                        onSelect: function (dateText, inst) {
+                        onSelect: function () {
                             //validateDate($this);
                         }
                     })
-						.blur(function () {
-						    //validateDate($this);
-						})
-						.parents('form').submit(function () {
-						    //return validateDate($this);
-						});
+                    .blur(function () {
+                        //validateDate($this);
+                    })
+                    .parents('form').submit(function () {
+                        //return validateDate($this);
+                    });
 
                     $this.next('.icon-calendar').click(function () {
                         $this.datepicker("show");
@@ -133,7 +133,7 @@
                 contentType: "application/json",
                 dataType: "json",
                 data: JSON.stringify(param),
-                success: function (result) {
+                success: function () {
                     window.location.reload();
                 }
             });
@@ -151,9 +151,15 @@
         currentOpenDialog: null,
         openDialog: function (target, title, options) {
             options = options || {};
-            if (title) options.title = title;
+            if (title)
+            {
+                options.title = title;
+            }
 
-            if (target instanceof jQuery == false) target = $(target);
+            if (target instanceof jQuery === false)
+            {
+                target = $(target);
+            }
 
             AFFILIATE.currentOpenDialog = target.dialog($.extend({}, AFFILIATE.dialogOpt, options));
 
@@ -199,13 +205,13 @@
                 msgWrp.removeClass('success');
             }
             msgWrp.addClass('validation-summary-errors')
-					.find('li:first').html(msg).show();
+                    .find('li:first').html(msg).show();
         },
         showSuccessMsg: function (msg) {
             var msgWrp = $('.validation-summary-valid');
             msgWrp.show();
             msgWrp.addClass('success')
-			        .find('li:first').html(msg).show();
+                    .find('li:first').html(msg).show();
         },
         hideMessageRegion: function() {
             var msgWrp = $('.validation-summary-errors');
@@ -213,26 +219,39 @@
         },
         isValidDate: function (year, month, day) {
             var beginDate = new Date(parseFloat(year) + "/" + month + "/" + day);
+            var begYear;
             if (beginDate.getYear() < 200)
-                var begYear = beginDate.getYear() + 1900;
-            else var begYear = beginDate.getYear();
-            if (begYear != parseFloat(year) || beginDate.getMonth() + 1 != parseFloat(month) || beginDate.getDate() != parseFloat(day))
+            {
+                begYear = beginDate.getYear() + 1900;
+            }
+            else
+            {
+                begYear = beginDate.getYear();
+            }
+
+            if (begYear !== parseFloat(year) || beginDate.getMonth() + 1 !== parseFloat(month) || beginDate.getDate() !== parseFloat(day))
+            {
                 return false;
-            else return true;
+            }
+            else
+            {
+                return true;
+            }
         },
 
         //Clock 
         clock: function () {
+            var strHrs, strMin, strSec;
             sysSecond++;
-            if (sysSecond == 60) {
+            if (sysSecond === 60) {
                 sysSecond = 0;
                 sysMinute++;
             }
-            if (sysMinute == 60) {
+            if (sysMinute === 60) {
                 sysMinute = 0;
                 sysHour++;
             }
-            if (sysHour == 24) {
+            if (sysHour === 24) {
                 sysHour = 0;
                 sysSecond = 0;
                 sysMinute = 0;
@@ -290,26 +309,12 @@
             return height - offset.top - exHeight;
         },
 
-        getMaxWidth: function (element) {
-            var width = 0;
-            var marginRight = 5;
-
-            var body = window.document.body;
-            if (window.innerWidth) {
-                width = window.innerWidth;
-            } else if (body.parentElement.clientWidth) {
-                width = body.parentElement.clientWidth;
-            } else if (body && body.clientWidth) {
-                width = body.clientWidth;
-            }
-
-            return width - marginRight;
-        },
-
         detectBrowser: function (userAgent) {
             if (userAgent === undefined) { userAgent = navigator.userAgent; }
             userAgent = userAgent.toLowerCase();
-            var match = /(chrome)[ \/]([\w.]+)/.exec(userAgent) || /(webkit)[ \/]([\w.]+)/.exec(userAgent) || /(opera)(?:.*version|)[ \/]([\w.]+)/.exec(userAgent) || /(msie) ([\w.]+)/.exec(userAgent) || userAgent.indexOf("compatible") < 0 && /(mozilla)(?:.*? rv:([\w.]+)|)/.exec(userAgent) || [];
+            var match = /(chrome)[ \/]([\w.]+)/.exec(userAgent) || /(webkit)[ \/]([\w.]+)/.exec(userAgent);
+            match = match || /(opera)(?:.*version|)[ \/]([\w.]+)/.exec(userAgent) || /(msie) ([\w.]+)/.exec(userAgent);
+            match = match || userAgent.indexOf("compatible") < 0 && /(mozilla)(?:.*? rv:([\w.]+)|)/.exec(userAgent) || [];
 
             return {
                 browser: match[1] || "",
@@ -322,18 +327,16 @@
         },
 
         isInteger: function (text) {
-            return typeof AFFILIATE.isNumber(text) && parseFloat(text) == parseInt(text, 10) && !isNaN(text);
+            return typeof AFFILIATE.isNumber(text) && parseFloat(text) === parseInt(text, 10) && !isNaN(text);
         },
 
         asBool: function (input) {
-            if (typeof input == 'string') {
-                return input.toLowerCase() == 'true';
+            if (typeof input === 'string') {
+                return input.toLowerCase() === 'true';
             }
 
             return !!input;
-        },
-
-
+        }
     };
 })(jQuery);
 
@@ -349,7 +352,9 @@ $(function () {
     //clock
     if ($("#lblDateTime").length > 0) {
         AFFILIATE.clock();
-        setInterval("AFFILIATE.clock();", 1000);
+        setInterval(function() {
+            AFFILIATE.clock();
+        }, 1000);
 
     }
     // Show or Hide language Box
