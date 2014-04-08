@@ -56,6 +56,9 @@
                 <td colspan="13" class="rngcasino_group">@RNGCasino.SessionID: @currentSessionID </td>
             </tr>
             var showPicHtmlString = "</td><td class=\"rngcasino_alignleft\"><a href='javascript:;' class='hand-history-detail-link' data-url='";
+            decimal sumStake = 0;
+            decimal sumBet = 0;
+            decimal sumWinloss = 0;
             foreach (var item in Model.Data)
             {
                 var rngCasinoDetailUrl = "?userbetid=" + item.UserBetId;
@@ -70,17 +73,23 @@
                     currentSessionID = item.SessionLogId;
                     <tr class="rngcasino_subtotal">
                         <td class="r" colspan="9">Total</td>
-                        <td class="r">@FormaterCurrency.Format(Model.SubTotal[sessionLogCounter].Stake)</td>
-                        <td class="r">@FormaterCurrency.Format(Model.SubTotal[sessionLogCounter].Bet)</td>
-                        <td class="r">@Html.Raw(FormaterCurrency.Format(Model.SubTotal[sessionLogCounter].WinLoss))</td>
+                        <td class="r">@FormaterCurrency.Format(sumStake)</td>
+                        <td class="r">@FormaterCurrency.Format(sumBet)</td>
+                        <td class="r">@Html.Raw(FormaterCurrency.Format(sumWinloss))</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td colspan="13" class="rngcasino_group">@RNGCasino.SessionID: @currentSessionID </td>
                     </tr>
                     sessionLogCounter++;
+                    sumStake = 0;
+                    sumBet = 0;
+                    sumWinloss = 0;
                 }
-                
+
+                sumStake += item.Stake;
+                sumBet += item.Bet;
+                sumWinloss += item.WinLoss;
                 <tr>
                     <td class="rngcasino_alignleft">@item.Index</td>
                     <td class="rngcasino_alignleft">@item.GameId</td>
@@ -99,9 +108,9 @@
             }
             <tr class="rngcasino_subtotal">
                 <td class="r" colspan="9">Total</td>
-                <td class="r">@FormaterCurrency.Format(Model.SubTotal.Last().Stake)</td>
-                <td class="r">@FormaterCurrency.Format(Model.SubTotal.Last().Bet)</td>
-                <td class="r">@Html.Raw(FormaterCurrency.Format(Model.SubTotal.Last().WinLoss))</td>
+                <td class="r">@FormaterCurrency.Format(sumStake)</td>
+                <td class="r">@FormaterCurrency.Format(sumBet)</td>
+                <td class="r">@Html.Raw(FormaterCurrency.Format(sumWinloss))</td>
                 <td></td>
             </tr>
             
@@ -115,7 +124,7 @@
                 winloss += subTotalItem.WinLoss;
             }
             <tr class="bl_footertotal footer" id="tr_footer">
-                <td class="r" colspan="9">Total</td>
+                <td class="r" colspan="9">Grand Total</td>
                 <td class="r">@FormaterCurrency.Format(stake)</td>
                 <td class="r">@FormaterCurrency.Format(bet)</td>
                 <td class="r">@Html.Raw(FormaterCurrency.Format(winloss))</td>
@@ -126,5 +135,4 @@
 </table>
 
 @Scripts.Render("~/js/jquery")
-@Scripts.Render("~/js/core")
-@Scripts.Render("~/js/betlist")
+@Scripts.Render("~/js/betlistrngcasino")
