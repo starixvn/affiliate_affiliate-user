@@ -25,13 +25,13 @@
                 <div class="content-block">
                     <table>
                         <tr>
-                            <td width="150px">
+                            <td class="width150">
                                 @Lang.Username
                             </td>
-                            <td width="16px">
+                            <td class="width16">
                                 &nbsp;
                             </td>
-                            <td width="220px">
+                            <td class="width220">
                                 @SessionManager.CurrentSession.Username
                             </td>
                         </tr>
@@ -56,13 +56,13 @@
                 <div class="content-block">
                     <table>
                         <tr>
-                            <td width="150px">
+                            <td class="width150">
                                 @Html.LabelFor(m => m.Gender)
                             </td>
-                            <td width="16px">
+                            <td class="width16">
                                 <span class="txtRequire">*</span>
                             </td>
-                            <td width="220px" class="middle">
+                            <td class="middle width220">
                                 @Html.RadioButtonFor(model => model.Gender, "false") @Lang.Female
                                 @Html.RadioButtonFor(model => model.Gender, "true") @Lang.Male
                             </td>
@@ -167,16 +167,15 @@
                 <div class="content-block">
                     <table id="siteinfo">
                         <tr>
-                            <td width="150px">
+                            <td class="width150">
                                 @Html.LabelFor(m => m.SiteURL)
                             </td>
-                            <td width="16px">
+                            <td class="width16">
                                 <span class="txtRequire"></span>
                             </td>
-                            <td width="220px">
+                            <td class="width220">
                                 @Html.TextBoxFor(m => m.SiteURL, new { @readonly = true, @class = "sites" })
                             </td>
-                                &nbsp;
                             <td>
                                <input type="button" id="btnAddSite" class="button" value="@Lang.AddUrl" />
                             </td>
@@ -194,13 +193,13 @@
                 <div class="content-block">
                     <table>
                         <tr>
-                            <td width="150px">
+                            <td class="width150">
                                 @Html.LabelFor(m => m.Language)
                             </td>
-                            <td width="16px">
+                            <td class="width16">
                                 <span class="txtRequire">*</span>
                             </td>
-                            <td width="220px">
+                            <td class="width220">
                                 @Html.DropDownListFor(m => m.Language, Model.LanguageSelectListItem, new { id = "slLanguage" })
                             </td>
                         </tr>
@@ -244,19 +243,19 @@
                             </td>
                         </tr>
                         <tr>
-                            <td width="150px">
+                            <td class="width150">
                                 <label>
                                     @Html.RadioButtonFor(m => m.PreferredPayment, "Player", new { @checked = "checked"})
                                     @Lang.PlayerAcc
                                 </label>
                             </td>
-                            <td width="16px">
+                            <td class="width16">
                                 &nbsp;
                             </td>
-                            <td width="150px">
+                            <td class="width150">
                                 @Html.LabelFor(m => m.Player_Username)
                             </td>
-                            <td width="16px">
+                            <td class="width16">
                                 <span class="txtRequire"></span>
                             </td>
                             <td>
@@ -283,7 +282,7 @@
     <input id="Captcha" name="Captcha" type="hidden" value="Captcha" />
     <input id="VerifyEmail" name="VerifyEmail" type="hidden" value="@Model.Email" />
     <input type="hidden" id="moreSiteUrls" name="MoreSiteURLs"/>
-    <div id="messageWebsite" site-info="@Lang.SiteURL" more-url="@Lang.WebsiteUrl" del="@Lang.Delete"></div>
+    <div id="messageWebsite" data-site-info="@Lang.SiteURL" data-more-url="@Lang.WebsiteUrl" data-del="@Lang.Delete"></div>
     @Html.HiddenFor(m => m.Country)
     @Html.HiddenFor(m => m.Currency)
 }

@@ -154,7 +154,8 @@
                         TỔNG LỢI NHUẬN THỰC TRONG THÁNG = |- Tổng thắng thua của người chơi - Bất kỳ tiền thưởng - Khoản bồi hoàn - Bất kỳ lợi nhuận doanh thu khác - Các khoản tín dụng, tiền bồi thường hoặc tiền hoàn lại cho thành viên |
                         @if (AppSettings.CompanyNegativeNetWin > 0)
                         {
-                            <p>@string.Format("Trong trường hợp lợi nhuận công ty thu về là số âm, hội viên phải chịu ít nhất {0}% tiền lợi nhuận âm đó cùng công ty cho mỗi sản phẩm được liệt kê ở trên.", AppSettings.CompanyNegativeNetWin)</p>
+                            <br />
+                            <span>@string.Format("Trong trường hợp lợi nhuận công ty thu về là số âm, hội viên phải chịu ít nhất {0}% tiền lợi nhuận âm đó cùng công ty cho mỗi sản phẩm được liệt kê ở trên.", AppSettings.CompanyNegativeNetWin)</span>
                         }
                     </p>
                     <span></span>

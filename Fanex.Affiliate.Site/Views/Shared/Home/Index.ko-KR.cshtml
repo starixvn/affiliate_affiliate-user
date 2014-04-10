@@ -154,7 +154,8 @@
                         “월간 회사의 순수 승리” =월간 총 매출 - 배당금(승리) -지급된 상여금 – 지불 거절액 – 기타의 수입 환불 – 경기자에게 주어진 크레딧, 보상 혹은 환불
                         @if (AppSettings.CompanyNegativeNetWin > 0)
                         {
-                            <p>@string.Format("회사의 순 승리율이 마이너스가 되면, 가맹자는 회사와 그달의(각 상품에 대해 적용) 수익의 {0}%를 부담해야합니다. ", AppSettings.CompanyNegativeNetWin)</p>
+                            <br />
+                            <span>@string.Format("회사의 순 승리율이 마이너스가 되면, 가맹자는 회사와 그달의(각 상품에 대해 적용) 수익의 {0}%를 부담해야합니다. ", AppSettings.CompanyNegativeNetWin)</span>
                         }
                     </p>
                     <span></span>

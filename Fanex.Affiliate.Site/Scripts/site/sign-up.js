@@ -46,17 +46,17 @@ var SIGNUP = (function ($) {
             var numberSite = sites.length;
             if (sites[numberSite - 1]) {
                 if ($(sites[numberSite - 1]).val() === '') {
-                    alert($("#messageWebsite").attr("more-url") + numberSite);
+                    alert($("#messageWebsite").attr("data-more-url") + numberSite);
                     sites[numberSite - 1].focus();
                     return;
                 }
             }
             numberSite++;
             var rowHtml = "<tr id='site_" + numberSite + "'>" +
-                "<td>" + $("#messageWebsite").attr("site-info") + ' ' + numberSite + "</td>" +
+                "<td>" + $("#messageWebsite").attr("data-site-info") + ' ' + numberSite + "</td>" +
                 "<td></td>" +
                 "<td><input type='text' class='sites more-site' id='SiteURL_" + numberSite + "'/></td>" +
-                "<td><input type='button' value='" + $("#messageWebsite").attr("del") + "' class='button' onclick='SIGNUP.delUrl(this);'/></td>" +
+                "<td><input type='button' value='" + $("#messageWebsite").attr("data-del") + "' class='button' onclick='SIGNUP.delUrl(this);'/></td>" +
                 "</tr>";
             $("#siteinfo").append(rowHtml);
 
@@ -74,7 +74,7 @@ var SIGNUP = (function ($) {
             for (var rowIndex = 1; rowIndex < rows.length; rowIndex++) {
                 var index = (rowIndex + 1);
                 $(rows[rowIndex]).attr("id", 'site_' + index);
-                $(rows[rowIndex]).find("td").filter(":first").html($("#messageWebsite").attr("site-info") + ' ' + index);
+                $(rows[rowIndex]).find("td").filter(":first").html($("#messageWebsite").attr("data-site-info") + ' ' + index);
                 $(rows[rowIndex]).find("input[type='text']").filter(":first").attr("id", "more_" + index);
             }
         }

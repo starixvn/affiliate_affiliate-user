@@ -26,7 +26,7 @@
                 <table class="frmContact">
                     <tbody>
                         <tr>
-                            <td colspan="6">
+                            <td colspan="4">
                                 @Html.Raw(string.Format(Lang.PleaseDirectAnyComment, string.Format("<a href='mailto:{0}'>{0}</a>", ViewData["mailContact"])))
                             </td>
                         </tr>
@@ -82,9 +82,9 @@
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="6" align="center">
-                                <input type="submit" value="@Lang.Submit" class="button" id="btnSubmit" name="btnSubmit">
-                                <input type="Reset" value="@Lang.Reset" name="btnClear" id="btnClear" class="button">
+                            <td colspan="4" class="text-center">
+                                <input type="submit" value="@Lang.Submit" class="button" id="btnSubmit" name="btnSubmit" />
+                                <input type="Reset" value="@Lang.Reset" name="btnClear" id="btnClear" class="button" />
                             </td>
                         </tr>
                     </tbody>

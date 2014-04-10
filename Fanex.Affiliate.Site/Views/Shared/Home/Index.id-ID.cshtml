@@ -154,7 +154,8 @@
                         "KEUNTUNGAN BERSIH PERUSAHAAN BULAN INI" =|-Pendapatan(Menang atau Kalah) - Setiap bonus yang dipayarkan - Pengembalian - Setiap penghasilan lain - Kredit, kompensasi atau pengembalian yang diberikan pada Pemain|
                         @if (AppSettings.CompanyNegativeNetWin > 0)
                         {
-                            <p>@string.Format("Jika Keuntungan Bersih Perusahaan adalah negatif, maka Affiliasi harus menanggung {0}% dari kekalahan perusahaan tersebut (diterapkan per produk, bukan total keseluruhan)", AppSettings.CompanyNegativeNetWin)</p>
+                            <br />
+                            <span>@string.Format("Jika Keuntungan Bersih Perusahaan adalah negatif, maka Affiliasi harus menanggung {0}% dari kekalahan perusahaan tersebut (diterapkan per produk, bukan total keseluruhan)", AppSettings.CompanyNegativeNetWin)</span>
                         }
                     </p>
                     <span></span>

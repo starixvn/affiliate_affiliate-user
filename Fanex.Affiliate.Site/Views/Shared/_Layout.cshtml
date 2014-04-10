@@ -14,15 +14,15 @@
     @RenderBody()
     @Html.Partial("_AffResources")
     @MiniProfiler.RenderIncludes()
+
+    @Scripts.Render("~/js/jquery")
+    @Scripts.Render("~/js/core")
+     <script type="text/ecmascript">
+         $.unblockUI();
+         AFFILIATE.getAbsoluteUrl = function (relativeUrl) {
+             return '@Url.Content("~/")' + relativeUrl;
+         };
+    </script>
+    @RenderSection("scripts", required: false)
 </body>
 </html>
-
-@Scripts.Render("~/js/jquery")
-@Scripts.Render("~/js/core")
- <script type="text/ecmascript">
-    $.unblockUI();
-    AFFILIATE.getAbsoluteUrl = function (relativeUrl) {
-        return '@Url.Content("~/")' + relativeUrl;
-    };
-</script>
-@RenderSection("scripts", required: false)

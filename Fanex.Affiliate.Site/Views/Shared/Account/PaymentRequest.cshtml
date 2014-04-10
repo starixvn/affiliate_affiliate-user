@@ -33,34 +33,34 @@
                 <div data-valmsg-summary="true" class="validation-summary-valid"><ul><li style="display:none"></li>
                 </ul></div>       
                 <div class="content-block">
-                    <table cellspacing="2" cellpadding="2" border="0">
+                    <table class="table-padding">
                         <tr>
-                            <td width="250px">@Lang.BalanceBroughtForward
+                            <td class="width250">@Lang.BalanceBroughtForward
                             </td>
-                            <td align="right" width="120px">
+                            <td class="text-right width120">
                                 <div id="maxValue">@Html.Raw(FormaterCurrency.Format(Model.BalanceBroughtForward, SessionManager.CurrentSession.Currency, true, true))</div>
-                                @Html.TextBoxFor(m => m.BalanceBroughtForward, Model.BalanceBroughtForward.ToString(), new { @id = "tbMaxAmount", @Style = "display:none" })
+                                @Html.TextBoxFor(m => m.BalanceBroughtForward, Model.BalanceBroughtForward.ToString(), new { @id = "tbMaxAmount", @style = "display:none" })
                             </td>
                         </tr>
                         <tr>
                             <td>@Lang.MinimumWithdrawalAmount
                             </td>
-                            <td align="right">
+                            <td class="text-right">
                                 <div id="minValue">
                                     @Html.Raw(FormaterCurrency.Format(Model.MinimumWithdrawalAmount, SessionManager.CurrentSession.Currency, true, true))
                                 </div>
-                                @Html.TextBoxFor(m => m.MinimumWithdrawalAmount, Model.MinimumWithdrawalAmount.ToString(), new { @id = "tbMinAmount", @Style = "display:none" })
+                                @Html.TextBoxFor(m => m.MinimumWithdrawalAmount, Model.MinimumWithdrawalAmount.ToString(), new { @id = "tbMinAmount", @style = "display:none" })
                             </td>
                         </tr>
                         <tr>
                             <td>@Lang.InputRequestAmount
                             </td>
-                            <td align="right">
-                                @Html.TextBoxFor(m => m.Amount, string.Empty, new { @id = "tbAmount", @class = "input-amount", @Value = "", @Style = "text-align:right", @maxlength = "25" })
+                            <td class="text-right">
+                                @Html.TextBoxFor(m => m.Amount, string.Empty, new { @id = "tbAmount", @class = "input-amount", @value = "", @style = "text-align:right", @maxlength = "25" })
                             </td>
                         </tr>
                         <tr>
-                            <td align="right" colspan="2">
+                            <td class="text-right" colspan="2">
                                 <div style="height:10px;"> @Html.HiddenFor(m => m.PreferredPayment)</div>
                                 <div>
                                     <input type="submit" value="@Lang.RequestPayout" class="button" id="btnSubmit" name="btnSubmit" />
@@ -102,16 +102,16 @@
                 {
                     i++;
                                 <tr class="@(i % 2 == 0 ? "even" : "odd")">
-                                    <td align="center">
+                                    <td class="text-center">
                                         @Common.ConvertDateTime(pending.TransDate, "/", true, false)
                                     </td>
-                                    <td align="right">
+                                    <td class="text-right">
                                         @Html.Raw(FormaterCurrency.Format(pending.Amount))
                                     </td>
-                                    <td align="center">
+                                    <td class="text-center">
                                         @Utility.Status(pending.Status)
                                     </td>
-                                    <td align="center">
+                                    <td class="text-center">
                                         @using (Html.BeginForm("CancelPaymentRequest", "Account", FormMethod.Post))
                                         {
                                             @Html.TextBoxFor(m => m.TransID, pending.TransID.ToString(), new { @id = "tbTransID", @Style = "display:none" })

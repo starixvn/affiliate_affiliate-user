@@ -154,7 +154,8 @@
                         “本月公司淨收益” = |–返款（收益或損失）–任何支付的獎金–退款–任何其它收入返款–給玩家的貸款、賠償或退款|
                         @if (AppSettings.CompanyNegativeNetWin > 0)
                         {
-                            <p>@string.Format("如果公司淨贏是負數，則子公司與該公司每月要承擔{0}％（適用於每個產品）", AppSettings.CompanyNegativeNetWin)</p>
+                            <br />
+                            <span>@string.Format("如果公司淨贏是負數，則子公司與該公司每月要承擔{0}％（適用於每個產品）", AppSettings.CompanyNegativeNetWin)</span>
                         }
                     </p>
                     <span></span>

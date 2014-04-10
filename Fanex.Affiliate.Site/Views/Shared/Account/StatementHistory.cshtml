@@ -89,7 +89,7 @@
                                             @Html.Raw(string.Format("<a href='DailyEarnings?MonthDate={0}'>{1}</a>", monthDate, FormaterCurrency.Format(item.Amount)))
                                         }
                                     </td>
-                                    <td align="center">
+                                    <td class="text-center">
                                         @item.Status
                                     </td>
                                     <td>
@@ -105,7 +105,7 @@
                     {
                         <tfoot>
                             <tr>
-                                <td colspan="6" align="center">@Lang.NoInformation
+                                <td colspan="6" class="text-center">@Lang.NoInformation
                                 </td>
                             </tr>
                         </tfoot>

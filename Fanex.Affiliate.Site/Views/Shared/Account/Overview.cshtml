@@ -29,18 +29,18 @@
                 <div class="line-block">
                 </div>
                 <div class="content-block">
-                    <table cellspacing="2" cellpadding="2" border="0" class="table-striped odd-even">
+                    <table class="table-striped odd-even table-padding">
                         <tr class="odd">
-                            <td width="250px">@Lang.NewSignups
+                            <td class="width250">@Lang.NewSignups
                             </td>
-                            <td align="right" width="120px">
+                            <td class="text-right width120">
                                 @statistics.NewSignUp
                             </td>
                         </tr>
                         <tr class="even">
                             <td>@Lang.TotalActivePlayers
                             </td>
-                            <td align="right">
+                            <td class="text-right">
                                 @statistics.TotalActivePlayer
                             </td>
                         </tr>
@@ -51,21 +51,21 @@
                                         "<a href='#' id='lnkProduct'>" + Model.FirstListProduct + "</a>"
                                         + RazorHelper.DropDownListProduct(Model.ListProduct, Model.FirstListProduct, new Dictionary<string, object> { { "id", "ddlProduct" }, { "style", "display:none; width:100px;" } })))
                                 </td>
-                                <td id="totalqualifiedmembers" align="right">
+                                <td id="totalqualifiedmembers" class="text-right">
                                     @Model.TotalqualifedMembers
                                 </td>
                             </tr>
                             <tr class="even">
                                 <td>@Lang.TotalDeposits
                                 </td>
-                                <td align="right">
+                                <td class="text-right">
                                     @Html.Raw(FormaterCurrency.Format(statistics.TotalDeposit, true, true))
                                 </td>
                             </tr>
                             <tr class="odd">
                                 <td>@Lang.Turnover
                                 </td>
-                                <td align="right">
+                                <td class="text-right">
                                     @Html.Raw(FormaterCurrency.Format(statistics.TotalTurnover, true, true))
                                 </td>
                             </tr>
@@ -75,14 +75,14 @@
                             <tr class="odd">
                                 <td>@Lang.TotalDeposits
                                 </td>
-                                <td align="right">
+                                <td class="text-right">
                                     @Html.Raw(FormaterCurrency.Format(statistics.TotalDeposit, true, true))
                                 </td>
                             </tr>
                             <tr class="even">
                                 <td>@Lang.Turnover
                                 </td>
-                                <td align="right">
+                                <td class="text-right">
                                     @Html.Raw(FormaterCurrency.Format(statistics.TotalTurnover, true, true))
                                 </td>
                             </tr>
@@ -97,25 +97,25 @@
                 <div class="line-block">
                 </div>
                 <div class="content-block">
-                    <table cellspacing="2" cellpadding="2" border="0" class="table-striped odd-even">
+                    <table class="table-striped odd-even table-padding">
                         <tr class="odd">
-                            <td width="250px">@Lang.TotalPlayers
+                            <td class="width250">@Lang.TotalPlayers
                             </td>
-                            <td align="right" width="120px">
+                            <td class="text-right width120">
                                 @statistics.TotalPlayer
                             </td>
                         </tr>
                         <tr class="even">
                             <td>@Lang.Turnover
                             </td>
-                            <td align="right">
+                            <td class="text-right">
                                 @Html.Raw(FormaterCurrency.Format(statistics.TotalTurnoverUp, true, true))
                             </td>
                         </tr>
                         <tr class="odd">
                             <td>@Lang.TotalDeposits
                             </td>
-                            <td align="right">
+                            <td class="text-right">
                                 @Html.Raw(FormaterCurrency.Format(statistics.TotalDepositUp, true, true))
                             </td>
                         </tr>
@@ -124,7 +124,7 @@
                             <tr class="even">
                                 <td>@Lang.BalanceBroughtForward
                                 </td>
-                                <td align="right">
+                                <td class="text-right">
                                     @Html.Raw(FormaterCurrency.Format(statistics.BalBroughtforward, true, true))
                                 </td>
                             </tr>
@@ -153,10 +153,10 @@
                                     <th>
                                         @string.Format(Lang.ComNetWin, FormaterCurrency.GetCurrencySymbol())
                                     </th>
-                                    <th style="width: 130px">
+                                    <th class="width130">
                                         @Lang.QualifyingMembers
                                     </th>
-                                    <th style="width: 50px">
+                                    <th class="width50">
                                         @Lang.Commission
                                     </th>
                                 </tr>
@@ -218,7 +218,7 @@
                             {
                                 <tfoot>
                                     <tr>
-                                        <td colspan="5" align="center">@Lang.NoInformation
+                                        <td colspan="5" class="text-center">@Lang.NoInformation
                                         </td>
                                     </tr>
                                 </tfoot>

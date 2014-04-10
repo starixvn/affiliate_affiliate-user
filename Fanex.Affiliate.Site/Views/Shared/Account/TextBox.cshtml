@@ -23,9 +23,9 @@
                 <div class="line-block">
                 </div>
                 <div class="content-block">
-                    <table cellspacing="2" cellpadding="2" border="0" class="table-striped">
+                    <table class="table-striped table-padding">
                         <tr>
-                            <td width="100px">@Lang.Category
+                            <td style="width:100px;">@Lang.Category
                             </td>
                             <td>
                                 @RazorHelper.DropDownListCategory(Model.CategoryList.ToList(), Model.CategorySelected, new Dictionary<string, object> { { "id", "slCategory" }, { "name", "BannerCategory" } })
@@ -48,7 +48,7 @@
                         <tr>
                             <td></td>
                             <td style="height: 35px;">
-                                <input type="button" class="button" value="@Lang.Search" id="btnSearch" name="btnSearch"/>
+                                <input type="button" class="button" value="@Lang.Search" id="btnSearch" name="btnSearch" />
                             </td>
                         </tr>
                     </table>
@@ -59,9 +59,9 @@
                 <div class="line-block">
                 </div>
                 <div class="content-block">
-                     <table cellspacing="2" cellpadding="2" border="0" class="table-striped">
+                     <table class="table-striped table-padding">
                         <tr>
-                            <td width="100px" style="white-space: nowrap;">@Lang.AvailableDomains
+                            <td style="white-space: nowrap; width:100px;">@Lang.AvailableDomains
                             </td>
                             <td>
                                 @RazorHelper.DropDownListDomain(Model.DomainList.ToList(), Model.DomainSelected, new Dictionary<string, object> { { "id", "slDomain" }, { "name", "Domain" } })
@@ -72,7 +72,7 @@
                             </td>
                             <td>
                                 @RazorHelper.DropDownListLink(Model.LinkList.ToList(), Model.LinkSelected, new Dictionary<string, object> { { "id", "slLinkTo" }, { "name", "LinkTo" } })
-                                &nbsp;&nbsp;<input type="button" class="button" value="@Lang.GenerateLink" id="btnGenerateLink" name="btnGenerateLink"/>
+                                &nbsp;&nbsp;<input type="button" class="button" value="@Lang.GenerateLink" id="btnGenerateLink" name="btnGenerateLink" />
                             </td>
                         </tr>
                         @foreach (var lang in Model.BaseLanguages.ToList())
@@ -114,7 +114,7 @@
                         <div class="paging-info clear">
                             @Html.Pager(bannerList.PageSize, bannerList.PageNumber, bannerList.TotalItemCount)
                         </div>
-                        <table class="aff-table" cellspacing="1" cellpadding="1" style="width:100%">
+                        <table class="aff-table table-padding" style="width:100%">
                             <tbody id="result">
                                     @foreach (var banner in Model.BannerList)
                                     {
@@ -145,7 +145,7 @@
                 }
                 else
                 {
-                    <table class="aff-table" cellspacing="1" cellpadding="1" style="width:100%">
+                    <table class="aff-table table-padding" style="width:100%">
                         <tbody>
                             <tr>
                                 <td class="text-center">@Lang.NoInformation
