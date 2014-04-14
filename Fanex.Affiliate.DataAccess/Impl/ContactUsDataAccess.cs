@@ -16,7 +16,7 @@ namespace Fanex.Affiliate.DataAccess.Impl
     using Interface;
 
     /// <summary>
-    /// TODO: Update summary.
+    /// Contact Us Data Access.
     /// </summary>
     public class ContactUsDataAccess : IContactUsDataAccess
     {

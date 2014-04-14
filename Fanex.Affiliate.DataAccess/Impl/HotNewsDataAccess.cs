@@ -19,7 +19,7 @@ namespace Fanex.Affiliate.DataAccess.Impl
     using Interface;
 
     /// <summary>
-    /// TODO: Update summary.
+    /// Hot News Data Access.
     /// </summary>
     public class HotNewsDataAccess : IHotNewsDataAccess
     {

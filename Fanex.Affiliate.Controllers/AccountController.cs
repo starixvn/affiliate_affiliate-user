@@ -565,7 +565,6 @@ namespace Fanex.Affiliate.Controllers
                 };
                 var paymentCancel = PaymentService.CancelPaymentRequest(criteria);
 
-                // success
                 if (criteria.ErrCode == 0)
                 {
                     result.Message = Lang.PaymentRequestCancel;
@@ -577,7 +576,6 @@ namespace Fanex.Affiliate.Controllers
 
                     SendCancelPaymentEmail(paymentCancel, paymentModel.TransID);
 
-                    // redirect back to Payment Request page
                     return RedirectToAction("PaymentRequest", new { success = 1 });
                 }
                 else
@@ -587,7 +585,6 @@ namespace Fanex.Affiliate.Controllers
                 }
             }
 
-            // refresh view
             var payment = PaymentService.GetPaymentRequest(new PaymentCriteria
             {
                 AffId = CurrentSession.AffId
@@ -820,7 +817,6 @@ namespace Fanex.Affiliate.Controllers
         [HttpPost]
         public ActionResult QCPreTest(string email, string preferLangs)
         {
-            // Send email
             var storeSessionEmail = CurrentSession.Email;
             CurrentSession.Email = string.IsNullOrEmpty(email) ? storeSessionEmail : email;
 

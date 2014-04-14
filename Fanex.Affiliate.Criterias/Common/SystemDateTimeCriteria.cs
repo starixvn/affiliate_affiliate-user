@@ -12,7 +12,7 @@ namespace Fanex.Affiliate.Criteria
     using NAP.Framework.Data;
 
     /// <summary>
-    /// TODO: Update summary.
+    /// System Date Time Criteria.
     /// </summary>
     public class SystemDateTimeCriteria : CriteriaBase
     {

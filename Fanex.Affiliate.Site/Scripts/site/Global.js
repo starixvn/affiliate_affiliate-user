@@ -129,7 +129,7 @@ var AFFILIATE = (function ($) {
             };
             $.ajax({
                 type: "POST",
-                url: AFFILIATE.getAbsoluteUrl("Header/ChangeLanguage"),
+                url: AFFILIATE.getAbsoluteUrl("Shared/ChangeLanguage"),
                 contentType: "application/json",
                 dataType: "json",
                 data: JSON.stringify(param),

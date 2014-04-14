@@ -14,7 +14,7 @@ namespace Fanex.Affiliate.Services.Interface
     using ViewModels;
 
     /// <summary>
-    /// TODO: Update summary.
+    /// Hot News Service.
     /// </summary>
     public interface IHotNewsService
     {

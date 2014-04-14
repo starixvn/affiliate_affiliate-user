@@ -13,7 +13,7 @@ namespace Fanex.Affiliate.DataAccess.Interface
     using Criteria;
 
     /// <summary>
-    /// TODO: Update summary.
+    /// Contact Us Data Access.
     /// </summary>
     public interface IContactUsDataAccess
     {

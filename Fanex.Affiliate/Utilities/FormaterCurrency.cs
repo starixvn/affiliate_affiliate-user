@@ -6,6 +6,7 @@
 // <history>
 //   <change who="Kaden.Trinh" date="2013.06.11">Created</change>
 // </history>
+
 namespace Fanex.Affiliate.Utilities
 {
     using System.Collections.Generic;

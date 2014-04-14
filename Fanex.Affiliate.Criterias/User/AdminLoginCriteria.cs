@@ -13,7 +13,7 @@ namespace Fanex.Affiliate.Criteria
     using NAP.Framework.Data;
 
     /// <summary>
-    /// TODO: Update summary.
+    /// Admin Login Criteria.
     /// </summary>
     public class AdminLoginCriteria : CriteriaBase
     {

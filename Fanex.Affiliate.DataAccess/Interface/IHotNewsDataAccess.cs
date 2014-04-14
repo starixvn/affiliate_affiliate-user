@@ -7,13 +7,14 @@
 //   <change who="Brian.Dinh" date="2013/07/15">Created</change>
 //   <change who="" date=""></change>
 // </history>
+
 namespace Fanex.Affiliate.DataAccess.Interface
 {
     using Criteria;
     using DTO;
 
     /// <summary>
-    /// TODO: Update summary.
+    /// Hot News Data Access.
     /// </summary>
     public interface IHotNewsDataAccess
     {

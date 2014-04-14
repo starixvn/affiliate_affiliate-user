@@ -13,7 +13,7 @@ namespace Fanex.Affiliate.Services.Interface
     using Criteria;
 
     /// <summary>
-    /// TODO: Update summary.
+    /// Contact Us Service.
     /// </summary>
     public interface IContactUsService
     {

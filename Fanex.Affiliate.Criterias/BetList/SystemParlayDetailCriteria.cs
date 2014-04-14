@@ -14,7 +14,7 @@ namespace Fanex.Affiliate.Criteria
     using NAP.Framework.Data;
 
     /// <summary>
-    /// TODO: Update summary.
+    /// System Parlay Detail Criteria.
     /// </summary>
     public class SystemParlayDetailCriteria : CriteriaBase
     {

@@ -114,7 +114,7 @@ namespace Fanex.Affiliate.Banner.Controllers
             }
             finally
             {
-                BannerUpdateSatistic(id);
+                BannerUpdateStatistic(id);
             }
         }
 
@@ -233,7 +233,7 @@ namespace Fanex.Affiliate.Banner.Controllers
         /// Store banner statistic into database.
         /// </summary>
         /// <param name="bannerID">Input Banner ID.</param>
-        public void BannerUpdateSatistic(int bannerID)
+        public void BannerUpdateStatistic(int bannerID)
         {
             var criteria = new BannerUpdateStatisticCriteria
             {
