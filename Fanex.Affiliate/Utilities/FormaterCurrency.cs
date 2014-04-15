@@ -88,13 +88,13 @@ namespace Fanex.Affiliate.Utilities
         /// <returns>Culture information.</returns>
         public static CultureInfo GetCulture(string currencyCode)
         {
-            // default currency code
+            // Default currency code
             if (string.IsNullOrEmpty(currencyCode))
             {
                 return SymbolsByCode["MYR"];
             }
 
-            // test currency
+            // Test currency
             if (currencyCode.ToUpper() == "UUS")
             {
                 return SymbolsByCode["USD"];
@@ -116,12 +116,12 @@ namespace Fanex.Affiliate.Utilities
             double d = 0;
             double.TryParse(value.ToString(), out d);
 
-            // check whether adding currency symbol or not
+            // Check whether adding currency symbol or not
             var currencySymbol = !hasCurrency ? string.Empty
                 : (culture.NumberFormat.CurrencySymbol ?? _defaultCulture.NumberFormat.CurrencySymbol);
             var newValue = string.Format("{0}{1}", currencySymbol, string.Format(Decimalformat20, value));
 
-            // format negative value: replace "-value" by "(value)"
+            // Format negative value: replace "-value" by "(value)"
             if (d < 0 && checkMinus)
             {
                 if (newValue.Contains("-"))

@@ -6,6 +6,7 @@
 // <history>
 //   <change who="Kaden.Trinh" date="2013.05.29">Created</change>
 // </history>
+
 namespace Fanex.Affiliate.Controllers
 {
     using System.Web.Mvc;

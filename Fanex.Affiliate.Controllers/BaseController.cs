@@ -98,7 +98,7 @@ namespace Fanex.Affiliate.Controllers
                 graphics.TextRenderingHint = TextRenderingHint.ClearTypeGridFit;
                 graphics.SmoothingMode = SmoothingMode.AntiAlias;
 
-                // add noise
+                // Add noise
                 if (noisy)
                 {
                     int i;
@@ -116,10 +116,10 @@ namespace Fanex.Affiliate.Controllers
                     }
                 }
 
-                // add captcha
+                // Add captcha
                 graphics.DrawString(captcha.ToString(), new Font("Tahoma", 13), Brushes.White, 1, 0);
 
-                // render as JPEG
+                // Render as JPEG
                 bitmap.Save(memoryStream, ImageFormat.Jpeg);
                 img = File(memoryStream.GetBuffer(), "image/Jpeg");
             }

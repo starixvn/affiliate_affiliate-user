@@ -100,17 +100,19 @@ namespace Fanex.Affiliate.DataAccess.Impl
                 systemParlayData.TicketList = new List<ISystemParlayTicket>();
                 foreach (DataRow row in ticketData.Rows)
                 {
-                    var ticket = new SystemParlayTicket();
-                    ticket.Comm = Converter.ToDecimal(row["comm"]);
-                    ticket.MOdds = Converter.ToDecimal(row["modds"]);
-                    ticket.PlayerComm = Converter.ToDecimal(row["playercomm"]);
-                    ticket.Serial = Convert.ToInt64(row["serial"]);
-                    ticket.Stake = Converter.ToDecimal(row["stake"]);
-                    ticket.Status = Converter.ToString2(row["status"]);
-                    ticket.StatusId = Converter.ToInt(row["statusid"]);
-                    ticket.TransId = Convert.ToInt64(row["transid"]);
-                    ticket.WinLost = Converter.ToDecimal(row["winlost"]);
-                    ticket.WinLostDate = Converter.ToDateTime(row["winlostdate"]);
+                    var ticket = new SystemParlayTicket
+                    {
+                        Comm = Converter.ToDecimal(row["comm"]),
+                        MOdds = Converter.ToDecimal(row["modds"]),
+                        PlayerComm = Converter.ToDecimal(row["playercomm"]),
+                        Serial = Convert.ToInt64(row["serial"]),
+                        Stake = Converter.ToDecimal(row["stake"]),
+                        Status = Converter.ToString2(row["status"]),
+                        StatusId = Converter.ToInt(row["statusid"]),
+                        TransId = Convert.ToInt64(row["transid"]),
+                        WinLost = Converter.ToDecimal(row["winlost"]),
+                        WinLostDate = Converter.ToDateTime(row["winlostdate"])
+                    };
 
                     systemParlayData.TicketList.Add(ticket);
                 }
@@ -118,10 +120,12 @@ namespace Fanex.Affiliate.DataAccess.Impl
                 systemParlayData.SerialList = new List<ISystemParlaySerial>();
                 foreach (DataRow row in serialData.Rows)
                 {
-                    var serial = new SystemParlaySerial();
-                    serial.Serial = Convert.ToInt64(row["serial"]);
-                    serial.HomeId = Converter.ToInt(row["homeid"]);
-                    serial.AwayId = Converter.ToInt(row["awayid"]);
+                    var serial = new SystemParlaySerial
+                    {
+                        Serial = Convert.ToInt64(row["serial"]),
+                        HomeId = Converter.ToInt(row["homeid"]),
+                        AwayId = Converter.ToInt(row["awayid"])
+                    };
 
                     systemParlayData.SerialList.Add(serial);
                 }
@@ -152,7 +156,7 @@ namespace Fanex.Affiliate.DataAccess.Impl
 
             var columnCollection = dataTable.Columns;
 
-            // string
+            // String
             var containsUsername = columnCollection.Contains("username");
             var containsRefNo = columnCollection.Contains("refno");
             var containsMatchCode = columnCollection.Contains("matchcode");
@@ -205,7 +209,7 @@ namespace Fanex.Affiliate.DataAccess.Impl
             {
                 var ticket = new AffTicket();
 
-                // string
+                // String
                 ticket.UserName = containsUsername ? Converter.ToString2(dataRow["username"]) : string.Empty;
                 ticket.RefNo = containsRefNo ? Converter.ToString2(dataRow["refno"]) : string.Empty;
                 ticket.MatchCode = containsMatchCode ? Converter.ToString2(dataRow["matchcode"]) : string.Empty;
@@ -273,14 +277,15 @@ namespace Fanex.Affiliate.DataAccess.Impl
             var containsStake = data.Columns.Contains("stake");
             foreach (DataRow dataRow in data.Rows)
             {
-                var ticket = new TicketData();
-
-                ticket.BetTeam = containsBetTeam ? dataRow["betteam"].ToString() : string.Empty;
-                ticket.RefNo = dataRow["refno"].ToString();
-                ticket.Status = dataRow["status"].ToString();
-                ticket.BetTypeId = Convert.ToInt32(dataRow["bettype"]);
-                ticket.Stake = containsStake ? Convert.ToDecimal(dataRow["stake" + baseCurrency]) : 0;
-                ticket.Odds = Convert.ToDecimal(dataRow["odds"]);
+                var ticket = new TicketData
+                {
+                    BetTeam = containsBetTeam ? dataRow["betteam"].ToString() : string.Empty,
+                    RefNo = dataRow["refno"].ToString(),
+                    Status = dataRow["status"].ToString(),
+                    BetTypeId = Convert.ToInt32(dataRow["bettype"]),
+                    Stake = containsStake ? Convert.ToDecimal(dataRow["stake" + baseCurrency]) : 0,
+                    Odds = Convert.ToDecimal(dataRow["odds"])
+                };
 
                 result.Add(ticket);
             }

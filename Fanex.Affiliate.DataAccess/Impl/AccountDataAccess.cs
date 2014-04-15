@@ -42,7 +42,7 @@ namespace Fanex.Affiliate.DataAccess.Impl
                 var param = criteria.GetSpParams();
                 listProduct = objectDb.Query<Product>(param) as List<Product>;
 
-                // get output parameter
+                // Get output parameters
                 statistics.TotalActivePlayer = Convert.ToInt32(param["totalactiveplayer"]);
                 statistics.TotalPlayerDepUp = Convert.ToInt32(param["totalplayerdepup"]);
                 statistics.NewSignUpDep = Convert.ToInt32(param["newsignupdep"]);

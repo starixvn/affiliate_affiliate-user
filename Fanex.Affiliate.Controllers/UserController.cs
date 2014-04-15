@@ -80,8 +80,8 @@ namespace Fanex.Affiliate.Controllers
             {
                 var model = new ResultViewModel();
 
-                var isValidCapcha = IsValidCapcha(user.Captcha, false);
-                if (!isValidCapcha)
+                var isValidCaptcha = IsValidCaptcha(user.Captcha, false);
+                if (!isValidCaptcha)
                 {
                     model.Success = false;
                     model.Message = Lang.MsgIncorrectCaptchaMsg;
@@ -91,7 +91,6 @@ namespace Fanex.Affiliate.Controllers
                     var criteria = new UserInsertCriteria();
                     model = UpdateAffiliateInfo(user, Common.GetIPAddressOfClient(), ref criteria);
 
-                    // Update Success
                     if (model.ErrorCode == 0)
                     {
                         SignUpSendMail(criteria);
@@ -262,8 +261,8 @@ namespace Fanex.Affiliate.Controllers
             }
             else if (ModelState.IsValid)
             {
-                var isValidCapcha = IsValidCapcha(captcha, false);
-                if (!isValidCapcha)
+                var isValidCaptcha = IsValidCaptcha(captcha, false);
+                if (!isValidCaptcha)
                 {
                     result.Success = false;
                     result.Message = Lang.MsgIncorrectCaptchaMsg;
@@ -342,14 +341,12 @@ namespace Fanex.Affiliate.Controllers
 
             var checkKickedOut = _userService.ReCheckIn(criteria);
 
-            // check internal site login, if internal login not allow to edit account information
+            // Check internal site login, if internal login not allow to edit account information
             if (SessionManager.CurrentSession == null || (!SessionManager.CurrentSession.IsInternalSite && !AppSettings.IsTesting && checkKickedOut))
             {
                 result.Success = checkKickedOut;
                 result.Message = checkKickedOut ? Lang.MsgKickout : string.Empty;
                 result.ErrorMessage = "Expired";
-
-                // Signout to clean all session
                 DoSignOut();
             }
 
@@ -362,8 +359,6 @@ namespace Fanex.Affiliate.Controllers
                 result.Success = checkKickedOut;
                 result.Message = "Undermaintenance";
                 result.ErrorMessage = "UM";
-
-                // Signout to clean all session
                 DoSignOut();
             }
 
@@ -421,7 +416,7 @@ namespace Fanex.Affiliate.Controllers
             var rand = new Random((int)DateTime.Now.Ticks);
             var captcha = rand.Next(1000, 9999);
 
-            // saves answer
+            // Save answer
             AppSession.CaptchaCode = captcha.ToString(CultureInfo.InvariantCulture);
 
             return GenerateCaptchaImage(rand, captcha, noisy);
@@ -437,7 +432,7 @@ namespace Fanex.Affiliate.Controllers
             var rand = new Random((int)DateTime.Now.Ticks);
             var captcha = rand.Next(1000, 9999);
 
-            // saves answer
+            // Save answer
             AppSession.CaptchaCodeForgetPwd = captcha.ToString(CultureInfo.InvariantCulture);
 
             return GenerateCaptchaImage(rand, captcha, noisy);
@@ -468,7 +463,7 @@ namespace Fanex.Affiliate.Controllers
             var result = new ResultViewModel();
             if (ModelState.IsValid)
             {
-                if (!IsValidCapcha(criteria.ValidCode, true))
+                if (!IsValidCaptcha(criteria.ValidCode, true))
                 {
                     result.Success = false;
                     result.Message = Lang.MsgIncorrectCaptchaMsg;
@@ -526,7 +521,7 @@ namespace Fanex.Affiliate.Controllers
             AppSession.Language = user.PreferLang;
             ChangeSystemLanguage();
 
-            // send email to user with new password
+            // Send email to user with new password
             var emailFormat = user.MailOption ? ".txt" : ".cshtml";
             var templatePath = string.Format("~/Views/Shared/Email/ForgetPassword/ForgetPassword.{0}{1}", AppSession.Language, emailFormat);
             templatePath = Server.MapPath(templatePath);
@@ -578,10 +573,10 @@ namespace Fanex.Affiliate.Controllers
 
             if (affId != 0 && !string.IsNullOrEmpty(vid))
             {
-                // generate new password
+                // Generate new password
                 var newPassword = Membership.GeneratePassword(8, 0);
 
-                // stored into database
+                // Stored into database
                 var criteria = new ResetPasswordCriteria
                             {
                                 AffID = affId,
@@ -599,15 +594,12 @@ namespace Fanex.Affiliate.Controllers
                     AppSession.Language = currentLanguage;
                     ChangeSystemLanguage();
 
-                    // redirect to forget password page with success message
+                    // Redirect to forget password page with success message
                     return RedirectToAction("ForgetPasswordResults", "User", new { result = 1 });
                 }
-
-                // redirect to forget password page with error message
-                return RedirectToAction("ForgetPasswordResults", new { result = 0 });
             }
 
-            // redirect to forget password page with error message
+            // Redirect to forget password page with error message
             return RedirectToAction("ForgetPasswordResults", new { result = 0 });
         }
 
@@ -622,7 +614,7 @@ namespace Fanex.Affiliate.Controllers
             AppSession.Language = user.PreferLang;
             ChangeSystemLanguage();
 
-            // send email to user with new password
+            // Send email to user with new password
             var siteDomainInfo = GetSiteDomainInfo();
             var templatePath = string.Format(
                 "~/Views/Shared/Email/RecoverPassword/RecoverPassword.{0}{1}",
@@ -736,14 +728,14 @@ namespace Fanex.Affiliate.Controllers
 
         #region Private
 
-        private static bool IsValidCapcha(string capcha, bool isForgetPassword)
+        private static bool IsValidCaptcha(string captcha, bool isForgetPassword)
         {
-            capcha = string.IsNullOrEmpty(capcha) ? string.Empty : capcha.Trim();
+            captcha = string.IsNullOrEmpty(captcha) ? string.Empty : captcha.Trim();
             var captchaSession = isForgetPassword ? AppSession.CaptchaCodeForgetPwd : AppSession.CaptchaCode;
-            var isCheatCapcha = capcha.Equals(CheatCaptchaCode);
-            var isValidCapcha = !string.IsNullOrEmpty(capcha) && capcha.Equals(captchaSession);
+            var isCheatCaptcha = captcha.Equals(CheatCaptchaCode);
+            var isValidCaptcha = !string.IsNullOrEmpty(captcha) && captcha.Equals(captchaSession);
 
-            return isCheatCapcha || isValidCapcha;
+            return isCheatCaptcha || isValidCaptcha;
         }
 
         #endregion

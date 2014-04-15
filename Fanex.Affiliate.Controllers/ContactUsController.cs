@@ -98,7 +98,7 @@ namespace Fanex.Affiliate.Controllers
                     {
                         SendContactUsEmail(criteria);
 
-                        // redirect to contact us page with success message
+                        // Redirect to contact us page with success message
                         return RedirectToAction("ContactUsResult", new { result = 1 });
                     }
                 }
@@ -176,7 +176,7 @@ namespace Fanex.Affiliate.Controllers
             var rand = new Random((int)DateTime.Now.Ticks);
             var captcha = rand.Next(1000, 9999);
 
-            // saves answer
+            // Save answer
             AppSession.CaptchaContactUs = captcha.ToString();
 
             return GenerateCaptchaImage(rand, captcha, noisy);

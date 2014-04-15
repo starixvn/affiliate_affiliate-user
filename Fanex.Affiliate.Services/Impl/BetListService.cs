@@ -137,7 +137,7 @@ namespace Fanex.Affiliate.Services.Impl
         public IList<Sportbook> GetPopUpMatch(int matchId, int licenseeId, int userId)
         {
             var data = _betlistDataAccess.GetPopUpMatch(matchId, -1, licenseeId, userId);
-            return BindSportbook(data);
+            return BindSportsbook(data);
         }
 
         /// <summary>
@@ -319,11 +319,11 @@ namespace Fanex.Affiliate.Services.Impl
         #region BetList.Results.Utilities
 
         /// <summary>
-        /// Mapping data to Sport-book DTO.
+        /// Mapping data to Sports-book DTO.
         /// </summary>
         /// <param name="data">The data table.</param>
-        /// <returns>The sport-book data list.</returns>
-        private static IList<Sportbook> BindSportbook(DataTable data)
+        /// <returns>The sports-book data list.</returns>
+        private static IList<Sportbook> BindSportsbook(DataTable data)
         {
             if (data != null && data.Rows.Count > 0)
             {

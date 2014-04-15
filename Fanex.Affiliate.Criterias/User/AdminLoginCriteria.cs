@@ -54,10 +54,5 @@ namespace Fanex.Affiliate.Criteria
         {
             return "Aff_User_OnUserSelNetSessionID";
         }
-
-        public override bool IsValid()
-        {
-            return true;
-        }
     }
 }

@@ -56,46 +56,45 @@
     <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AffiliateSettings.cs" />
-    <Compile Include="Banner.cs" />
+    <Compile Include="Common\AffiliateSettings.cs" />
+    <Compile Include="MarketingTools\Banner.cs" />
     <Compile Include="BetList\AffTicket.cs" />
     <Compile Include="BetList\RNGCasinoResultWinlossDetailHeader.cs" />
     <Compile Include="BetList\RNGCasinoResultWinlossDetail.cs" />
     <Compile Include="BetList\RNGCasinoResult.cs" />
     <Compile Include="BetList\TicketResult.cs" />
     <Compile Include="BetList\TicketText.cs" />
-    <Compile Include="CustomerInfoBetList.cs" />
-    <Compile Include="CustomerInfo.cs" />
-    <Compile Include="DailyEarningsDetail.cs" />
+    <Compile Include="BetList\CustomerInfoBetList.cs" />
+    <Compile Include="Account\CustomerInfo.cs" />
+    <Compile Include="DailyEarnings\DailyEarningsDetail.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
-    <Compile Include="HotNews.cs" />
-    <Compile Include="MenuItem.cs" />
-    <Compile Include="ProductOption.cs" />
-    <Compile Include="SiteDomainInfo.cs" />
-    <Compile Include="Utility.cs" />
-    <Compile Include="InternalLoginInfo.cs" />
-    <Compile Include="BannerType.cs" />
-    <Compile Include="ClicksLandingPagesDetail.cs" />
-    <Compile Include="Currency.cs" />
-    <Compile Include="Message.cs" />
-    <Compile Include="DailyEarning.cs" />
-    <Compile Include="Domain.cs" />
-    <Compile Include="ReferrersStatisticsDetail.cs" />
-    <Compile Include="SecurityQuestion.cs" />
-    <Compile Include="Exchange.cs" />
-    <Compile Include="Country.cs" />
-    <Compile Include="GroupSetting.cs" />
-    <Compile Include="Language.cs" />
-    <Compile Include="AccountOverview\StatisticsOverview.cs" />
-    <Compile Include="Marketing.cs" />
-    <Compile Include="Payment.cs" />
-    <Compile Include="Product.cs" />
+    <Compile Include="Common\HotNews.cs" />
+    <Compile Include="Common\MenuItem.cs" />
+    <Compile Include="Common\SiteDomainInfo.cs" />
+    <Compile Include="Common\Utility.cs" />
+    <Compile Include="User\InternalLoginInfo.cs" />
+    <Compile Include="MarketingTools\BannerType.cs" />
+    <Compile Include="TrafficStatistics\ClicksLandingPagesDetail.cs" />
+    <Compile Include="Common\Currency.cs" />
+    <Compile Include="Common\Message.cs" />
+    <Compile Include="DailyEarnings\DailyEarning.cs" />
+    <Compile Include="MarketingTools\Domain.cs" />
+    <Compile Include="TrafficStatistics\ReferrersStatisticsDetail.cs" />
+    <Compile Include="Common\SecurityQuestion.cs" />
+    <Compile Include="Common\Exchange.cs" />
+    <Compile Include="Common\Country.cs" />
+    <Compile Include="Account\GroupSetting.cs" />
+    <Compile Include="Common\Language.cs" />
+    <Compile Include="Account\StatisticsOverview.cs" />
+    <Compile Include="MarketingTools\Marketing.cs" />
+    <Compile Include="Payment\Payment.cs" />
+    <Compile Include="Account\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Statement.cs" />
-    <Compile Include="SystemDateTime.cs" />
-    <Compile Include="SystemSetting.cs" />
-    <Compile Include="TrafficStatistic.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="Account\Statement.cs" />
+    <Compile Include="Common\SystemDateTime.cs" />
+    <Compile Include="Common\SystemSetting.cs" />
+    <Compile Include="TrafficStatistics\TrafficStatistic.cs" />
+    <Compile Include="User\User.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Fanex.Affiliate.Resources\Fanex.Affiliate.Resources.csproj">
@@ -128,10 +127,11 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/3/28" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2014/3/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -6,6 +6,7 @@
 // <history>
 //   <change who="Kaden.Trinh" date="2013.06.14">Created</change>
 // </history>
+
 namespace Fanex.Affiliate.Criteria
 {
     using System;

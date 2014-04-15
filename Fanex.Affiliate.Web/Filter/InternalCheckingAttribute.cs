@@ -7,6 +7,7 @@
 //   <change who="Long.Luu" date="2013/08/01">Created</change>
 //   <change who="" date=""></change>
 // </history>
+
 namespace Fanex.Affiliate.Web.Filter
 {
     using System;

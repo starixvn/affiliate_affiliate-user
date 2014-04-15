@@ -66,10 +66,5 @@ namespace Fanex.Affiliate.Criteria
         {
             return "Aff_User_HotNewsSel_New";
         }
-
-        public override bool IsValid()
-        {
-            return true;
-        }
     }
 }

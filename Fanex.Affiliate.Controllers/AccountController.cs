@@ -365,14 +365,14 @@ namespace Fanex.Affiliate.Controllers
             
             if (success != 1)
             {
-                // check pending request
+                // Check pending request
                 if (payment.ListPayment.Where(p => p.Status.ToLower() == PaymentStatus.Pending.ToString().ToLower()).ToList().Any())
                 {
                     result.Success = false;
                     result.Message = Lang.Msg130;
                 }
 
-                // check whether balance is zero
+                // Check whether balance is zero
                 if (payment.BalanceBroughtForward <= 0 || payment.BalanceBroughtForward < payment.MinimumWithdrawalAmount)
                 {
                     result.Success = false;
@@ -958,7 +958,7 @@ namespace Fanex.Affiliate.Controllers
             AppSession.Language = preferredLanguage;
             ChangeSystemLanguage();
 
-            // send email to user with new password
+            // Send email to user with new password
             var templatePath = string.Format("~/Views/Shared/Email/ForgetPassword/ForgetPassword.{0}{1}", AppSession.Language, ".cshtml");
             templatePath = Server.MapPath(templatePath);
 
@@ -1006,7 +1006,7 @@ namespace Fanex.Affiliate.Controllers
             AppSession.Language = preferredLanguage;
             ChangeSystemLanguage();
 
-            // send email to user with new password
+            // Send email to user with new password
             var siteDomainInfo = GetSiteDomainInfo();
             var templatePath = string.Format("~/Views/Shared/Email/RecoverPassword/RecoverPassword.{0}{1}", AppSession.Language, ".cshtml");
             templatePath = Server.MapPath(templatePath);

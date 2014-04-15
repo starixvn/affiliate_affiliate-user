@@ -52,55 +52,5 @@ namespace Fanex.Affiliate.Controllers
             var model = _accountService.GetDefaultProductCommission(new DefaultCommissionCriteria());
             return View(model);
         }
-
-        /// <summary>
-        /// Load Affiliate Setting.
-        /// </summary>
-        /// <returns>Return view.</returns>
-        [HttpGet]
-        public ActionResult AffiliateSetting()
-        {
-            ViewBag.SupportedLanguages = AppSettings.AffiliateSupportedLanguages;
-            ViewBag.AllLanguages = AppSettings.AllLanguages;
-            return View();
-        }
-
-        /// <summary>
-        /// Save Affiliate Setting.
-        /// </summary>
-        /// <param name="langsList">Language list.</param>
-        /// <returns>Return view.</returns>
-        [HttpPost]
-        public string AffiliateSetting(string langsList)
-        {
-            try
-            {
-                var config = new XmlDocument();
-                config.Load(Server.MapPath("~/Web.AppSettings.config"));
-
-                var supportedLangs = config.SelectSingleNode("appSettings/add[@key='AffiliateSupportedLanguages']");
-                if (supportedLangs != null)
-                {
-                    supportedLangs.Attributes["value"].Value = langsList;
-                }
-
-                config.Save(Server.MapPath("~/Web.AppSettings.config"));
-
-                return "success";
-            }
-            catch
-            {
-                return "failed";
-            }
-        }
-
-        /// <summary>
-        /// Tests this instance.
-        /// </summary>
-        /// <returns>Return view.</returns>
-        public ActionResult Test()
-        {
-            return Content("Test only");
-        }
     }
 }
