@@ -10,7 +10,7 @@
 namespace Fanex.Affiliate.ViewModels
 {
     /// <summary>
-    /// Overview View Model.
+    /// Hot News View Model.
     /// </summary>
     public class HotNewsViewModel
     {

@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Functions>
-  <Function Name="Aff-Email">
-    <Setting Key="affiliate_athena000_GetAffiliateInfo" SpName="Aff_API_GetAffInfoByID" DbName="Affiliate_Athena000" Plain="0" />
-  </Function>
-
-</Functions>

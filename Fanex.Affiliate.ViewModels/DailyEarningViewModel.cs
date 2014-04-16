@@ -13,7 +13,7 @@ namespace Fanex.Affiliate.ViewModels
     using DTO;
 
     /// <summary>
-    /// Overview View Model.
+    /// Daily Earning View Model.
     /// </summary>
     public class DailyEarningViewModel
     {

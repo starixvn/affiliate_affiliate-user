@@ -13,7 +13,7 @@ namespace Fanex.Affiliate.WebServices.Criteria
     using Fanex.NAP.Framework.Data;
 
     /// <summary>
-    /// Affiliate Information Criteria.
+    /// Affiliate Information.
     /// </summary>
     public class AffiliateInfoCriteria : CriteriaBase
     {

@@ -13,7 +13,7 @@ namespace Fanex.Affiliate.ViewModels
     using DTO;
 
     /// <summary>
-    /// Overview View Model.
+    /// Account View Model.
     /// </summary>
     public class AccountOverviewViewModel
     {

@@ -15,7 +15,7 @@ namespace Fanex.Affiliate.ViewModels
     using DTO.BetList;
 
     /// <summary>
-    /// RNGCasinoResultViewModel class.
+    /// RNG Casino Result Detail class.
     /// </summary>
     public class BetListResultsRNGCasinoDetailViewModel
     {

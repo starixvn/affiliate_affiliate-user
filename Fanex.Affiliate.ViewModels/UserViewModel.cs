@@ -14,8 +14,8 @@ namespace Fanex.Affiliate.ViewModels
     using System.Linq;
     using System.Web.Mvc;
     using Configurations;
-    using DTO;  
-    using Fanex.Affiliate.Resources;
+    using DTO;
+    using Resources;
 
     /// <summary>
     /// Overview View Model.

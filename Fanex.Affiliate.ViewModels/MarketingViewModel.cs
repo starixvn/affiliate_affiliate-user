@@ -13,7 +13,7 @@ namespace Fanex.Affiliate.ViewModels
     using DTO;
 
     /// <summary>
-    /// TODO: Update summary.
+    /// Marketing View Model.
     /// </summary>
     public class MarketingViewModel
     {
