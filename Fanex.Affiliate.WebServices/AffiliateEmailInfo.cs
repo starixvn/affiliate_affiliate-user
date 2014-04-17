@@ -12,6 +12,9 @@ namespace Fanex.Affiliate.WebServices
 {
     using System.Xml.Serialization;
 
+    /// <summary>
+    /// Affiliate Email Information.
+    /// </summary>
     [XmlRoot("AffiliateInformation")]
     public class AffiliateEmailInfo : AffiliateInfo
     {

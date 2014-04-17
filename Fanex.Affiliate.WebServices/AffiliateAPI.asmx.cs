@@ -44,6 +44,12 @@ namespace Fanex.Affiliate.WebServices
             AffiliateService = new AffiliateService();
         }
 
+        /// <summary>
+        /// Get Affiliate Email.
+        /// </summary>
+        /// <param name="siteName">Site Name.</param>
+        /// <param name="btag">Identify B tag.</param>
+        /// <returns>Affiliate email.</returns>
         [WebMethod]
         public string GetAffiliateEmail(string siteName, string btag)
         {
@@ -59,6 +65,11 @@ namespace Fanex.Affiliate.WebServices
             }
         }
 
+        /// <summary>
+        /// Convert an object into XML format.
+        /// </summary>
+        /// <param name="obj">Input object.</param>
+        /// <returns>XML String.</returns>
         public string ToXML(object obj)
         {
             XmlSerializer serializer = new XmlSerializer(obj.GetType());
