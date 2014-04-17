@@ -149,7 +149,7 @@ namespace Fanex.Affiliate.Controllers
         public void SendContactUsEmail(ContactUsCriteria criteria)
         {
             var templatePath = Server.MapPath("~/Views/Shared/Email/ContactUs/ContactUs.txt");
-            var emailTitle = string.Format("{0} Affiliates - Contact Us – {1}", AppSettings.AffiliateName, criteria.Subject);
+
             dynamic emailContent = new
                                     {
                                         AffiliateName = AppSettings.AffiliateName,
@@ -160,6 +160,8 @@ namespace Fanex.Affiliate.Controllers
                                         Subject = criteria.Subject,
                                         MailContact = AppSettings.MailContact
                                     };
+
+            var emailTitle = string.Format("{0} Affiliates - Contact Us – {1}", AppSettings.AffiliateName, criteria.Subject);
             var emailBody = (new EmailTemplateResolverService()).GetEmailBody(templatePath, emailContent);
             Common.SendEmail(emailBody, AppSettings.MailContact, emailTitle, AppSettings.BccMail);
         }

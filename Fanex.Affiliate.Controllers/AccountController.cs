@@ -8,6 +8,7 @@
 //   <change who="Kaden.Trinh" date="2013.05.30">Implement SignIn action</change>
 //   <change who="Kaden.Trinh" date="2013.06.11">Implement action: Overview account</change>
 //   <change who="Johny.Trinh" date="2013.07.01">Implement action: My Account</change>
+//   <change who="Long.Luu" date="2014.04.17">Refactor</change>
 // </history>
 
 namespace Fanex.Affiliate.Controllers
@@ -16,7 +17,6 @@ namespace Fanex.Affiliate.Controllers
     using System.Collections.Generic;
     using System.Linq;
     using System.Net;
-    using System.Text.RegularExpressions;
     using System.Web.Mvc;
     using Configurations;
     using Criteria;
@@ -497,44 +497,26 @@ namespace Fanex.Affiliate.Controllers
         /// <param name="amount">Request amount.</param>
         public void SendPaymentRequestEmail(PaymentViewModel paymentRequest, decimal amount)
         {
-            var mapPath = string.Format(
-                "~/Views/Shared/Email/PaymentRequest/PaymentRequest.{0}{1}",
-                paymentRequest.PreferredLanguage,
-                paymentRequest.MailOption ? ".txt" : ".cshtml");
-            var templatePath = Server.MapPath(mapPath);
             var currentLanguage = AppSession.Language;
             AppSession.Language = paymentRequest.PreferredLanguage;
             ChangeSystemLanguage();
 
+            var templatePath = string.Format(
+                "~/Views/Shared/Email/PaymentRequest/PaymentRequest.{0}{1}",
+                paymentRequest.PreferredLanguage,
+                paymentRequest.MailOption ? ".txt" : ".cshtml");
+            templatePath = Server.MapPath(templatePath);
+
+            dynamic emailContent = GenerateEmailContent(CurrentSession.FirstName);
+            emailContent.PaymentRequestDate = paymentRequest.TransDate.ToString();
+            emailContent.PaymentAmount = FormaterCurrency.Format(amount, SessionManager.CurrentSession.Currency, true, true);
+            emailContent.PaymentID = paymentRequest.TransID;
+            
             var emailTitle = string.Format(
                 "{0} Affiliates - {1} - {2}",
                 AppSettings.AffiliateName,
                 paymentRequest.TransID,
                 Lang.RequestPaymentEmailTitle);
-            var siteDomainInfo = GetSiteDomainInfo();
-            dynamic emailContent = new
-                                    {
-                                        AffiliateName = AppSettings.AffiliateName,
-                                        CurrentMemberSiteDomain = siteDomainInfo.MemberSiteDomain,
-                                        MemberSiteDomainEmail = siteDomainInfo.MemberSiteDomainEmail,
-                                        FirstName = CurrentSession.FirstName,
-                                        PaymentRequestDate = paymentRequest.TransDate.ToString(),
-                                        PaymentAmount = FormaterCurrency.Format(amount, SessionManager.CurrentSession.Currency, true, true),
-                                        PaymentID = paymentRequest.TransID,
-                                        MailContact = AppSettings.MailContact,
-                                        ThemeID = "theme" + AppSettings.Theme,
-                                        RootUrl = siteDomainInfo.RootDomain,
-                                        LanguageCode = paymentRequest.PreferredLanguage + ".jpg",
-                                        CopyrightYear = DateTime.Now.Year,
-                                        HeaderBgColor = AppSettings.EmailHeaderBgColor,
-                                        HeaderFontColor = AppSettings.EmailHeaderFontColor,
-                                        ContentBgColor = AppSettings.EmailContentBgColor,
-                                        ContentFontColor = AppSettings.EmailContentFontColor,
-                                        CopyrightBgColor = AppSettings.EmailCopyrightBgColor,
-                                        CopyrightFontColor = AppSettings.EmailCopyrightFontColor,
-                                        FooterBgColor = AppSettings.EmailFooterBgColor,
-                                        FooterFontColor = AppSettings.EmailFooterFontColor
-                                    };
             var emailBody = (new EmailTemplateResolverService()).GetEmailBody(templatePath, emailContent);
             Common.SendEmail(emailBody, CurrentSession.Email, emailTitle, AppSettings.BccMail);
 
@@ -601,40 +583,22 @@ namespace Fanex.Affiliate.Controllers
         /// <param name="transId">Transaction id.</param>
         public void SendCancelPaymentEmail(PaymentViewModel paymentCancel, long transId)
         {
-            var mapPath = string.Format(
-                "~/Views/Shared/Email/PaymentCancel/PaymentCancel.{0}{1}",
-                paymentCancel.PreferredLanguage,
-                paymentCancel.MailOption ? ".txt" : ".cshtml");
-            var templatePath = Server.MapPath(mapPath);
             var currentLanguage = AppSession.Language;
             AppSession.Language = paymentCancel.PreferredLanguage;
             ChangeSystemLanguage();
 
+            var templatePath = string.Format(
+                "~/Views/Shared/Email/PaymentCancel/PaymentCancel.{0}{1}",
+                paymentCancel.PreferredLanguage,
+                paymentCancel.MailOption ? ".txt" : ".cshtml");
+            templatePath = Server.MapPath(templatePath);
+
+            dynamic emailContent = GenerateEmailContent(CurrentSession.FirstName);
+            emailContent.PaymentRequestDate = paymentCancel.TransDate.ToString();
+            emailContent.PaymentAmount = FormaterCurrency.Format(Math.Abs(paymentCancel.Amount), SessionManager.CurrentSession.Currency, true, true);
+            emailContent.PaymentID = transId;
+
             var emailTitle = string.Format("{0} Affiliates - {1} - {2}", AppSettings.AffiliateName, transId, Lang.RequestPaymentEmailTitle);
-            var siteDomainInfo = GetSiteDomainInfo();
-            dynamic emailContent = new
-                                    {
-                                        AffiliateName = AppSettings.AffiliateName,
-                                        CurrentMemberSiteDomain = siteDomainInfo.MemberSiteDomain,
-                                        MemberSiteDomainEmail = siteDomainInfo.MemberSiteDomainEmail,
-                                        FirstName = CurrentSession.FirstName,
-                                        PaymentRequestDate = paymentCancel.TransDate.ToString(),
-                                        PaymentAmount = FormaterCurrency.Format(Math.Abs(paymentCancel.Amount), SessionManager.CurrentSession.Currency, true, true),
-                                        PaymentID = transId,
-                                        MailContact = AppSettings.MailContact,
-                                        ThemeID = "theme" + AppSettings.Theme,
-                                        RootUrl = siteDomainInfo.RootDomain,
-                                        LanguageCode = paymentCancel.PreferredLanguage + ".jpg",
-                                        CopyrightYear = DateTime.Now.Year,
-                                        HeaderBgColor = AppSettings.EmailHeaderBgColor,
-                                        HeaderFontColor = AppSettings.EmailHeaderFontColor,
-                                        ContentBgColor = AppSettings.EmailContentBgColor,
-                                        ContentFontColor = AppSettings.EmailContentFontColor,
-                                        CopyrightBgColor = AppSettings.EmailCopyrightBgColor,
-                                        CopyrightFontColor = AppSettings.EmailCopyrightFontColor,
-                                        FooterBgColor = AppSettings.EmailFooterBgColor,
-                                        FooterFontColor = AppSettings.EmailFooterFontColor
-                                    };
             var emailBody = (new EmailTemplateResolverService()).GetEmailBody(templatePath, emailContent);
             Common.SendEmail(emailBody, CurrentSession.Email, emailTitle, AppSettings.BccMail);
 
@@ -889,33 +853,14 @@ namespace Fanex.Affiliate.Controllers
             ChangeSystemLanguage();
 
             // Send mail to Affiliate
-            var affilatePath = string.Format("~/Views/Shared/Email/SignUp/SignUp.{0}{1}", AppSession.Language, ".cshtml");
-            var templatePath = Server.MapPath(affilatePath);
-            var siteDomainInfo = GetSiteDomainInfo();
-            dynamic emailContent = new
-                                    {
-                                        AffiliateName = AppSettings.AffiliateName,
-                                        CurrentMemberSiteDomain = siteDomainInfo.MemberSiteDomain,
-                                        MemberSiteDomainEmail = siteDomainInfo.MemberSiteDomainEmail,
-                                        FirstName = "Mai Ngao Suong",
-                                        MailContact = AppSettings.MailContact,
-                                        RootUrl = siteDomainInfo.RootDomain,
-                                        ThemeID = "theme" + AppSettings.Theme,
-                                        LanguageCode = AppSession.Language + ".jpg",
-                                        CopyrightYear = DateTime.Now.Year,
-                                        HeaderBgColor = AppSettings.EmailHeaderBgColor,
-                                        HeaderFontColor = AppSettings.EmailHeaderFontColor,
-                                        ContentBgColor = AppSettings.EmailContentBgColor,
-                                        ContentFontColor = AppSettings.EmailContentFontColor,
-                                        CopyrightBgColor = AppSettings.EmailCopyrightBgColor,
-                                        CopyrightFontColor = AppSettings.EmailCopyrightFontColor,
-                                        FooterBgColor = AppSettings.EmailFooterBgColor,
-                                        FooterFontColor = AppSettings.EmailFooterFontColor
-                                    };
-            var affiliateEmailBody = (new EmailTemplateResolverService()).GetEmailBody(templatePath, emailContent);
+            var templatePath = string.Format("~/Views/Shared/Email/SignUp/SignUp.{0}{1}", AppSession.Language, ".cshtml");
+            templatePath = Server.MapPath(templatePath);
 
-            var affiliateSubject = string.Format(Lang.SignUpMailSubject, AppSettings.AffiliateName);
-            Common.SendEmail(affiliateEmailBody, email, affiliateSubject, AppSettings.BccMail);
+            dynamic emailContent = GenerateEmailContent("Mai Ngao Suong");
+
+            var emailTitle = string.Format(Lang.SignUpMailSubject, AppSettings.AffiliateName);
+            var emailBody = (new EmailTemplateResolverService()).GetEmailBody(templatePath, emailContent);
+            Common.SendEmail(emailBody, email, emailTitle, AppSettings.BccMail);
 
             // Send mail to CSD
             SendSignUpEmailToCsd(email);
@@ -930,7 +875,8 @@ namespace Fanex.Affiliate.Controllers
         /// <param name="email">Input email.</param>
         public void SendSignUpEmailToCsd(string email)
         {
-            var csdPath = Server.MapPath("~/Views/Shared/Email/SignUp/CsdMail.txt");
+            var templatePath = Server.MapPath("~/Views/Shared/Email/SignUp/CsdMail.txt");
+
             dynamic emailContent = new
                                     {
                                         AffiliateName = AppSettings.AffiliateName,
@@ -941,10 +887,10 @@ namespace Fanex.Affiliate.Controllers
                                         MoreUrls = "www.mnsmnl.com",
                                         MailContact = AppSettings.MailContact
                                     };
-            var csdEmailBody = (new EmailTemplateResolverService()).GetEmailBody(csdPath, emailContent);
 
-            var csdSubject = string.Format(Lang.CsdMailSubject, AppSettings.AffiliateName, "MaiNgaoSuong");
-            Common.SendEmail(csdEmailBody, email, csdSubject, AppSettings.BccMail);
+            var emailTitle = string.Format(Lang.CsdMailSubject, AppSettings.AffiliateName, "MaiNgaoSuong");
+            var emailBody = (new EmailTemplateResolverService()).GetEmailBody(templatePath, emailContent);
+            Common.SendEmail(emailBody, email, emailTitle, AppSettings.BccMail);
         }
 
         /// <summary>
@@ -962,34 +908,13 @@ namespace Fanex.Affiliate.Controllers
             var templatePath = string.Format("~/Views/Shared/Email/ForgetPassword/ForgetPassword.{0}{1}", AppSession.Language, ".cshtml");
             templatePath = Server.MapPath(templatePath);
 
-            var siteDomainInfo = GetSiteDomainInfo();
-            var recoverPasswordUrl = string.Format("{0}User/RecoverPassword", siteDomainInfo.AffiliateDomain);
-            dynamic emailContent = new
-                                    {
-                                        AffiliateName = AppSettings.AffiliateName,
-                                        CurrentMemberSiteDomain = siteDomainInfo.MemberSiteDomain,
-                                        MemberSiteDomainEmail = siteDomainInfo.MemberSiteDomainEmail,
-                                        FirstName = "Suong",
-                                        Username = "MaiNgaoSuong",
-                                        RecoverPwdURL = recoverPasswordUrl,
-                                        CustID = "220984",
-                                        ValidationCode = "2209",
-                                        MailContact = AppSettings.MailContact,
-                                        ThemeID = string.Format("theme{0}", AppSettings.Theme),
-                                        RootUrl = siteDomainInfo.RootDomain,
-                                        LanguageCode = string.Format("{0}.jpg", AppSession.Language),
-                                        CopyrightYear = DateTime.Now.Year,
-                                        HeaderBgColor = AppSettings.EmailHeaderBgColor,
-                                        HeaderFontColor = AppSettings.EmailHeaderFontColor,
-                                        ContentBgColor = AppSettings.EmailContentBgColor,
-                                        ContentFontColor = AppSettings.EmailContentFontColor,
-                                        CopyrightBgColor = AppSettings.EmailCopyrightBgColor,
-                                        CopyrightFontColor = AppSettings.EmailCopyrightFontColor,
-                                        FooterBgColor = AppSettings.EmailFooterBgColor,
-                                        FooterFontColor = AppSettings.EmailFooterFontColor
-                                    };
+            dynamic emailContent = GenerateEmailContent("Suong", "MaiNgaoSuong");
+            emailContent.CustID = "220984";
+            emailContent.ValidationCode = "2209";
+
+            var emailTitle = string.Format(Lang.ForgetPasswordEmailTitle, AppSettings.AffiliateName);
             var emailBody = (new EmailTemplateResolverService()).GetEmailBody(templatePath, emailContent);
-            Common.SendEmail(emailBody, email, string.Format(Lang.ForgetPasswordEmailTitle, AppSettings.AffiliateName), AppSettings.BccMail);
+            Common.SendEmail(emailBody, email, emailTitle, AppSettings.BccMail);
 
             AppSession.Language = currentLanguage;
             ChangeSystemLanguage();
@@ -1007,40 +932,16 @@ namespace Fanex.Affiliate.Controllers
             ChangeSystemLanguage();
 
             // Send email to user with new password
-            var siteDomainInfo = GetSiteDomainInfo();
             var templatePath = string.Format("~/Views/Shared/Email/RecoverPassword/RecoverPassword.{0}{1}", AppSession.Language, ".cshtml");
             templatePath = Server.MapPath(templatePath);
-            var changePasswordUrl = string.Format("{0}Account/ChangePassword", siteDomainInfo.AffiliateDomain);
-            var regex = new Regex(@":\d+");
-            changePasswordUrl = regex.Replace(changePasswordUrl, string.Empty);
-            dynamic emailContent = new 
-                                    {
-                                        AffiliateName = AppSettings.AffiliateName,
-                                        CurrentMemberSiteDomain = siteDomainInfo.MemberSiteDomain,
-                                        MemberSiteDomainEmail = siteDomainInfo.MemberSiteDomainEmail,
-                                        FirstName = "Suong",
-                                        Username = "MaiNgaoSuong",
-                                        Password = "Whazzup?",
-                                        ChangePwdURL = changePasswordUrl,
-                                        MailContact = AppSettings.MailContact,
-                                        ThemeID = string.Format("theme{0}", AppSettings.Theme),
-                                        RootUrl = siteDomainInfo.RootDomain,
-                                        LanguageCode = string.Format("{0}.jpg", AppSession.Language),
-                                        CopyrightYear = DateTime.Now.Year,
-                                        ChangePassword = Lang.ChangePassword,
-                                        HeaderBgColor = AppSettings.EmailHeaderBgColor,
-                                        HeaderFontColor = AppSettings.EmailHeaderFontColor,
-                                        ContentBgColor = AppSettings.EmailContentBgColor,
-                                        ContentFontColor = AppSettings.EmailContentFontColor,
-                                        CopyrightBgColor = AppSettings.EmailCopyrightBgColor,
-                                        CopyrightFontColor = AppSettings.EmailCopyrightFontColor,
-                                        FooterBgColor = AppSettings.EmailFooterBgColor,
-                                        FooterFontColor = AppSettings.EmailFooterFontColor
-                                    };
 
+            dynamic emailContent = GenerateEmailContent("Suong", "MaiNgaoSuong");
+            emailContent.ChangePassword = Lang.ChangePassword;
+            emailContent.Password = "Whazzup?";
+
+            var emailTitle = string.Format(Lang.ChangePasswordEmailTitle, AppSettings.AffiliateName);
             var emailBody = (new EmailTemplateResolverService()).GetEmailBody(templatePath, emailContent);
-                                
-            Common.SendEmail(emailBody, email, string.Format(Lang.ChangePasswordEmailTitle, AppSettings.AffiliateName), AppSettings.BccMail);
+            Common.SendEmail(emailBody, email, emailTitle, AppSettings.BccMail);
 
             AppSession.Language = currentLanguage;
             ChangeSystemLanguage();

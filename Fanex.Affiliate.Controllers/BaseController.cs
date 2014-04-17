@@ -15,7 +15,9 @@ namespace Fanex.Affiliate.Controllers
     using System.Drawing.Imaging;
     using System.Drawing.Text;
     using System.IO;
+    using System.Text.RegularExpressions;
     using System.Web.Mvc;
+    using Configurations;
     using DTO;
     using Utilities;
     using Web;
@@ -125,6 +127,44 @@ namespace Fanex.Affiliate.Controllers
             }
 
             return img;
+        }
+        
+        /// <summary>
+        /// Generate email content.
+        /// </summary>
+        /// <param name="firstName">First name.</param>
+        /// <param name="userName">User name.</param>
+        /// <returns>Return an object.</returns>
+        protected dynamic GenerateEmailContent(string firstName, string userName = null)
+        {
+            var siteDomainInfo = GetSiteDomainInfo();
+            var changePasswordUrl = string.Format("{0}Account/ChangePassword", siteDomainInfo.AffiliateDomain);
+            var regex = new Regex(@":\d+");
+            changePasswordUrl = regex.Replace(changePasswordUrl, string.Empty);
+
+            return new
+            {
+                AffiliateName = AppSettings.AffiliateName,
+                CurrentMemberSiteDomain = siteDomainInfo.MemberSiteDomain,
+                MemberSiteDomainEmail = siteDomainInfo.MemberSiteDomainEmail,
+                RootUrl = siteDomainInfo.RootDomain,
+                FirstName = firstName,
+                Username = userName,
+                RecoverPwdURL = string.Format("{0}User/RecoverPassword", siteDomainInfo.AffiliateDomain),
+                ChangePwdURL = changePasswordUrl,
+                MailContact = AppSettings.MailContact,
+                ThemeID = "theme" + AppSettings.Theme,
+                LanguageCode = AppSession.Language + ".jpg",
+                CopyrightYear = DateTime.Now.Year,
+                HeaderBgColor = AppSettings.EmailHeaderBgColor,
+                HeaderFontColor = AppSettings.EmailHeaderFontColor,
+                ContentBgColor = AppSettings.EmailContentBgColor,
+                ContentFontColor = AppSettings.EmailContentFontColor,
+                CopyrightBgColor = AppSettings.EmailCopyrightBgColor,
+                CopyrightFontColor = AppSettings.EmailCopyrightFontColor,
+                FooterBgColor = AppSettings.EmailFooterBgColor,
+                FooterFontColor = AppSettings.EmailFooterFontColor
+            };
         }
     }
 }

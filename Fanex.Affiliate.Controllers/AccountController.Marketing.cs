@@ -46,28 +46,15 @@ namespace Fanex.Affiliate.Controllers
             var viewModel = new MarketingViewModel
             {
                 CategoryList = categoryList,
-                CurrencyList = AppSettings.PlayerCurrencies,
                 TypeList = typeList,
                 SizeList = sizeList,
                 DomainList = domainList,
                 LinkList = linkList,
-                BaseLanguages = AppSettings.BaseLanguages,
-                PreferLanguage = CurrentSession.PreferredLanguage,
-                CustomerID = CurrentSession.AffId,
-                CategorySelected = (short)(!criteria.BannerCategory.HasValue ? 0 : criteria.BannerCategory),
-                SubCategorySelected = (short)(!criteria.BannerSubCategory.HasValue ? 0 : criteria.BannerSubCategory),
-                LanguageSelected = criteria.Language,
-                CurrencySelected = (short)(!criteria.Currency.HasValue ? 0 : criteria.Currency),
-                TypeSelected = (short)(!criteria.ImageType.HasValue ? 0 : criteria.ImageType),
-                SizeSelected = (short)(!criteria.Size.HasValue ? 0 : criteria.Size),
-                DomainSelected = criteria.Domain,
-                LinkSelected = criteria.LinkTo,
-                PageIndex = criteria.Page,
-                PageSize = criteria.PageSize,
                 TotalPages = totalPage,
                 BannerList = bannerList
             };
 
+            AssignDataToModel(viewModel, criteria);
             if (string.IsNullOrEmpty(viewModel.DomainSelected) && domainList.GetEnumerator().MoveNext())
             {
                 viewModel.DomainSelected = ((List<Domain>)domainList)[0].DomainId;
@@ -123,26 +110,13 @@ namespace Fanex.Affiliate.Controllers
             var viewModel = new MarketingViewModel
             {
                 CategoryList = categoryList,
-                CurrencyList = AppSettings.PlayerCurrencies,
                 DomainList = domainList,
                 LinkList = linkList,
-                BaseLanguages = AppSettings.BaseLanguages,
-                PreferLanguage = CurrentSession.PreferredLanguage,
-                CustomerID = CurrentSession.AffId,
-                CategorySelected = (short)(!criteria.BannerCategory.HasValue ? 0 : criteria.BannerCategory),
-                SubCategorySelected = (short)(!criteria.BannerSubCategory.HasValue ? 0 : criteria.BannerSubCategory),
-                LanguageSelected = criteria.Language,
-                CurrencySelected = (short)(!criteria.Currency.HasValue ? 0 : criteria.Currency),
-                TypeSelected = (short)(!criteria.ImageType.HasValue ? 0 : criteria.ImageType),
-                SizeSelected = (short)(!criteria.Size.HasValue ? 0 : criteria.Size),
-                DomainSelected = criteria.Domain,
-                LinkSelected = criteria.LinkTo,
-                PageIndex = criteria.Page,
-                PageSize = criteria.PageSize,
                 TotalPages = totalPage,
                 BannerList = bannerList
             };
 
+            AssignDataToModel(viewModel, criteria);
             if (string.IsNullOrEmpty(viewModel.DomainSelected) && domainList.GetEnumerator().MoveNext())
             {
                 viewModel.DomainSelected = ((List<Domain>)domainList)[0].DomainId;
@@ -154,6 +128,29 @@ namespace Fanex.Affiliate.Controllers
             }
 
             return View(viewModel);
+        }
+
+        /// <summary>
+        /// Assign more data to View Model.
+        /// </summary>
+        /// <param name="model">View Model.</param>
+        /// <param name="criteria">Criteria including data.</param>
+        public void AssignDataToModel(MarketingViewModel model, MarketingCriteria criteria)
+        {
+            model.CurrencyList = AppSettings.PlayerCurrencies;
+            model.BaseLanguages = AppSettings.BaseLanguages;
+            model.PreferLanguage = CurrentSession.PreferredLanguage;
+            model.CustomerID = CurrentSession.AffId;
+            model.CategorySelected = (short)(!criteria.BannerCategory.HasValue ? 0 : criteria.BannerCategory);
+            model.SubCategorySelected = (short)(!criteria.BannerSubCategory.HasValue ? 0 : criteria.BannerSubCategory);
+            model.LanguageSelected = criteria.Language;
+            model.CurrencySelected = (short)(!criteria.Currency.HasValue ? 0 : criteria.Currency);
+            model.TypeSelected = (short)(!criteria.ImageType.HasValue ? 0 : criteria.ImageType);
+            model.SizeSelected = (short)(!criteria.Size.HasValue ? 0 : criteria.Size);
+            model.DomainSelected = criteria.Domain;
+            model.LinkSelected = criteria.LinkTo;
+            model.PageIndex = criteria.Page;
+            model.PageSize = criteria.PageSize;
         }
 
         /// <summary>
