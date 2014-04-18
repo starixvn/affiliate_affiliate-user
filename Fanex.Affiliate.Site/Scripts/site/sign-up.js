@@ -12,7 +12,6 @@ var SIGNUP = (function ($) {
             $('#btnRegister').bind('keypress', function (e) {
                 if (e.keyCode === 13) {
                     SIGNUP.submitForm();
-                    document.forms[0].submit();
                 }
             });
             $('#btnAddSite').click(function () {
@@ -28,6 +27,7 @@ var SIGNUP = (function ($) {
                 moreSiteUrls += $.trim($(this).val());
             });
             $("#moreSiteUrls").val(moreSiteUrls);
+            document.forms[0].submit();
         },
         reloadCaptcha: function () {
             var currentDate;
@@ -38,7 +38,6 @@ var SIGNUP = (function ($) {
             } else {
                 currentDate = Date.now();
             }
-            //var url = AFFILIATE.getAbsoluteUrl("User/CaptchaImage?" + currentDate);
             $('#captcha-signup').attr('src', '/User/CaptchaImage' + "?" + currentDate);
         },
         addUrl: function () {

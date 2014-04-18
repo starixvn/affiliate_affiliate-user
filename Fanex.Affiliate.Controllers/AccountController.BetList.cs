@@ -274,21 +274,7 @@ namespace Fanex.Affiliate.Controllers
 
             foreach (var item in listProduct)
             {
-                switch (item.ProductName)
-                {
-                    case "Sportsbook":
-                        criteria.ShowSB = true;
-                        break;
-                    case "Number Game":
-                        criteria.ShowNG = true;
-                        break;
-                    case "RNG Casino":
-                        criteria.ShowCS = true;
-                        break;
-                    case "Live Casino":
-                        criteria.ShowLC = true;
-                        break;
-                }
+                ViewBetListBySpecificProduct(criteria, item.ProductName);
             }
         }
 

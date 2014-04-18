@@ -152,11 +152,7 @@ namespace Fanex.Affiliate.Site
             // Media gallery
             bundles.Add(new ScriptBundle("~/js/mediagallery")
                 .Include("~/Scripts/site/mediagallery.js"));
-
-            // My account
-            bundles.Add(new ScriptBundle("~/js/myaccount")
-                .Include("~/Scripts/site/myaccount.js"));
-
+            
             // Payment request
             bundles.Add(new ScriptBundle("~/js/paymentrequest")
                 .Include("~/Scripts/site/paymentrequest.js"));
