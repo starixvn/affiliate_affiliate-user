@@ -1,147 +1,11 @@
 ﻿/// <reference path="/@JSense.js" />
-/* global AFFILIATE, BetListOption, jqGridAdditional, QueryString */
+/* global AFFILIATE, QueryString */
 /* exported showCombMP, showCombMPDetail, showMP, ViewResult */
 "use strict";
 
 var BetList = (function ($) {
     return {
-        submiting: true,
         initialize: function () {
-            $(window).on('resize', function () {
-                $("#BetListGrid").setGridWidth($(window).width());
-            }).trigger('resize');
-        },
-
-        gridComplete: function (grid, gridOption, betListGrid, totalRowCount) {
-            betListGrid.setGridWidth($("#BodyContent").width());
-            // Resize
-            jqGridAdditional.gridComplete(grid, gridOption, totalRowCount);
-            // Remove unnecessary item
-            $(".ui-jqgrid-ftable td[aria-describedby=BetListGrid_Stake]").html("Total").removeAttr("title");
-            $("table.ui-jqgrid-htable .ui-jqgrid-resize").css("height", "14px");
-            $(".content-filter").attr("style", "width: " + $("#gbox_BetListGrid").css("width"));
-
-            // Show no information if there is no record
-            var rowCount = $("#BetListGrid").getGridParam("reccount");
-            if (rowCount === 0) {
-                jqGridAdditional.setNoInfo(BetListOption.columnModel);
-                $("#pager2").hide();
-            }
-            else {
-                // Remove noinfo message if exist
-                var contentTable = $("table.ui-jqgrid-htable");
-                if (contentTable.find(".no-info-row").length > 0) {
-                    $(".ui-jqgrid-htable tbody .no-info-row").remove();
-                }
-                $("#pager2").show();
-            }
-        },
-
-        getGridOption: function () {
-            var gridOption = $.extend(true, {}, BetListOption.gridOption);
-            // Specify the hidden column
-            var hiddenColumnList = $("#HiddenColumnList").val();
-            var hiddenColumnTokens = hiddenColumnList.split(",");
-            var showSummary = hiddenColumnList.indexOf("licenseewl") < 0;
-
-            $.each(hiddenColumnTokens, function (index, value) {
-                jqGridAdditional.setColumnVisible(BetListOption.columnModel, value, true);
-            });
-            gridOption.colNames = BetListOption.columnNames;
-            gridOption.colModel = BetListOption.columnModel;
-            gridOption.footerrow = showSummary;
-            var hasCustComm = $('#HasCustComm').val();
-            if (hasCustComm === '1') {
-                gridOption.colNames = $.map(gridOption.colNames, function (val) {
-                    if (val === 'WinLoss') {
-                        return '@[WinLoss]/@[Comm]';
-                    }
-                    return val;
-                });
-            }
-            gridOption.colNames = "gridOption.colNames";
-            return gridOption;
-        },
-
-        loadData: function (params, url) {
-            var paramString = typeof (params) === "object" ? JSON.stringify(params) : params;
-            $.ajax({
-                type: "POST",
-                data: paramString,
-                contentType: 'application/json',
-                dataType: "json",
-                cache: false,
-                url: url,
-                error: function () {
-                },
-                success: function (response) {
-                    if (response != null) {
-                        BetList.bindData(response);
-                        BetList.setLeagueTitle(response.LeagueName);
-                    }
-                },
-                beforeSend: function () {
-
-                },
-                complete: function () {
-
-                }
-            });
-        },
-
-        loadDataPaging: function (url) {
-
-
-            var rows = BetListOption.gridOption.rowList[0];
-            BetList.submiting = true;
-
-            var gridOption = BetList.getGridOption();
-            gridOption.url = url;
-            gridOption.rowNum = rows;
-            gridOption.height = 0;
-            gridOption.loadonce = false;
-            gridOption.datatype = "json";
-            gridOption.gridComplete = function () {
-                var totalRowCount = gridOption.footerrow ? 2 : 1;
-                BetList.gridComplete(this, gridOption, $("#BetListGrid"), totalRowCount);
-                if (BetList.submiting) {
-                    $(".ui-pg-selbox").val(rows);
-                }
-                BetList.submiting = false;
-            };
-
-            // Show the grid
-            $("#BetListGrid").jqGrid('GridUnload');
-            $("#BetListGrid").jqGrid(gridOption);
-        },
-
-        bindData: function (response) {
-            if (response != null) {
-                var rawData = response.Main;
-                var summary = response.Total;
-                var sumWinLoss = jqGridAdditional.formatDecimal(summary.SumWinLoss);
-                var sumLicenseeWl = jqGridAdditional.formatLicenseeWl(summary.SumLicenseeWl);
-
-                // Show the grid
-                var gridOption = BetList.getGridOption();
-                gridOption.data = rawData;
-                gridOption.userData = { WinLoss: sumWinLoss, LicenseeWl: sumLicenseeWl };
-
-                if (response.IsShowTotal === undefined || response.IsShowTotal) {
-                    gridOption.userDataOnFooter = true;
-                }
-                else {
-                    gridOption.userDataOnFooter = false;
-                    gridOption.footerrow = false;
-                }
-                gridOption.gridComplete = function () {
-                    var totalRowCount = gridOption.footerrow ? 2 : 1;
-                    BetList.gridComplete(this, gridOption, $("#BetListGrid"), totalRowCount);
-                };
-
-                $("#BetListGrid").jqGrid('GridUnload');
-                $("#BetListGrid").jqGrid(gridOption);
-            }
         },
 
         getMixParlayResultUrl: function (refno, winlostdate, bettype, username) {
@@ -165,11 +29,6 @@ var BetList = (function ($) {
             url = QueryString.setParam(url, "username", username);
 
             return url;
-        },
-
-        setLeagueTitle: function (leagueName) {
-            var leagueNameText = leagueName === '' || leagueName === undefined ? 'BetList' : leagueName;
-            $(".league-name-title").html(leagueNameText + " - ");
         },
 
         showResult: function (matchid, raceNo, bettype, sporttype, refno, username, winlostdate, refnoMixParlay, league, isOutright) {
@@ -222,14 +81,6 @@ var BetList = (function ($) {
             }
         },
 
-        resetContentHeight: function () {
-            var bodyHeight = 650;
-            var actualHeight = $('.ui-jqgrid-bdiv .ui-jqgrid-btable').height();
-            var bodyDiv = $('.ui-jqgrid-bdiv');
-            bodyDiv.css({ 'height': actualHeight });
-            bodyDiv.css({ 'max-height': bodyHeight });
-        },
-
         showSystemParlayDetail: function (transId, refNo, betId, custId, betTeam, baseCurrency) {
             if (transId === 0) {
                 return;
@@ -254,23 +105,6 @@ var BetList = (function ($) {
                 width: width + 25,
                 height: height + 50
             });
-        },
-        ValidProducts: function () {
-            var temp = true;
-            $("#ProductList input[type=checkbox]").checkboxgroup();
-            if ($("input.childCheckbox:checked").length === 0) {
-                temp = false;
-                var title = "Notification";
-                $('<div title="' + title + '">' + "You should choose a product." + '</div>').dialog({
-                    open: function () {
-                        $('#SubmitButton').prop('disabled', true);
-                    },
-                    close: function () {
-                        $('#SubmitButton').removeAttr('disabled');
-                    }
-                });
-            }
-            return temp;
         },
 
         ViewCasinoHandHistory: function (refNo) {

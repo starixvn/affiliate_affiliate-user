@@ -973,8 +973,15 @@
     <None Include="Content\themes\theme17\mixins.less" />
     <None Include="Content\themes\theme17\variables.less" />
     <Content Include="ThirdParties\Glimpse.AspNet.dll" />
+    <Content Include="ThirdParties\Glimpse.Core.dll" />
     <Content Include="ThirdParties\NetUtility.dll" />
+    <Content Include="ThirdParties\Newtonsoft.Json.dll" />
     <Content Include="ThirdParties\Sunplus.Libraries.AOP.dll" />
+    <Content Include="ThirdParties\System.Net.Http.dll" />
+    <Content Include="ThirdParties\System.Web.Helpers.dll" />
+    <Content Include="ThirdParties\System.Web.Optimization.dll" />
+    <Content Include="ThirdParties\System.Web.Razor.dll" />
+    <Content Include="ThirdParties\System.Web.WebPages.Razor.dll" />
     <Content Include="Views\Shared\Email\ContactUs\ContactUs.txt" />
     <Content Include="Views\Shared\Email\ForgetPassword\ForgetPassword.ko-KR.txt" />
     <Content Include="Views\Shared\Email\ForgetPassword\ForgetPassword.vi-VN.txt" />
