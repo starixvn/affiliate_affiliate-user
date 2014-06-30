@@ -70,7 +70,7 @@ namespace Fanex.Affiliate.WebServices
         /// </summary>
         /// <param name="obj">Input object.</param>
         /// <returns>XML String.</returns>
-        public string ToXML(object obj)
+        public static string ToXML(object obj)
         {
             XmlSerializer serializer = new XmlSerializer(obj.GetType());
 

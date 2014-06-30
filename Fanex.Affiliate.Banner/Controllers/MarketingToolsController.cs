@@ -220,7 +220,7 @@ namespace Fanex.Affiliate.Banner.Controllers
         /// </summary>
         /// <param name="html">Original HTML string.</param>
         /// <returns>Simplified HTML string.</returns>
-        public string MinifyHtml(string html)
+        public static string MinifyHtml(string html)
         {
             html = Regex.Replace(html, @"\n|\t", " ");
             html = Regex.Replace(html, @">\s+<", "><").Trim();
@@ -263,7 +263,7 @@ namespace Fanex.Affiliate.Banner.Controllers
         /// </summary>
         /// <param name="fileScript">Script file name.</param>
         /// <returns>Script's content.</returns>
-        public StringBuilder ReadFile(string fileScript)
+        public static StringBuilder ReadFile(string fileScript)
         {
             // Script existed in cache.
             if (CacheFactory.GetCacheManager().GetData(fileScript) != null)

@@ -15,7 +15,7 @@ namespace Fanex.Affiliate.Link
     /// <summary>
     /// Bundle configuration.
     /// </summary>
-    public class BundleConfig
+    public static class BundleConfig
     {
         /// <summary>
         /// Register Bundles.
