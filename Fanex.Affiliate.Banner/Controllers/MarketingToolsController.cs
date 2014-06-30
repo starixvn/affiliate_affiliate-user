@@ -67,6 +67,46 @@ namespace Fanex.Affiliate.Banner.Controllers
             _bannerService = new BannerService();
         }
         #endregion Constructor
+        
+        /// <summary>
+        /// Simplify HTML string.
+        /// </summary>
+        /// <param name="html">Original HTML string.</param>
+        /// <returns>Simplified HTML string.</returns>
+        public static string MinifyHtml(string html)
+        {
+            html = Regex.Replace(html, @"\n|\t", " ");
+            html = Regex.Replace(html, @">\s+<", "><").Trim();
+            html = Regex.Replace(html, @"\s{2,}", " ");
+
+            return html;
+        }
+
+        /// <summary>
+        /// Read script file.
+        /// </summary>
+        /// <param name="fileScript">Script file name.</param>
+        /// <returns>Script's content.</returns>
+        public static StringBuilder ReadFile(string fileScript)
+        {
+            // Script existed in cache.
+            if (CacheFactory.GetCacheManager().GetData(fileScript) != null)
+            {
+                return new StringBuilder(CacheFactory.GetCacheManager().GetData(fileScript).ToString());
+            }
+
+            // Read script from file.
+            var scriptContent = new StringBuilder();
+            using (var fileReader = System.IO.File.OpenText(fileScript))
+            {
+                scriptContent.Append(fileReader.ReadToEnd());
+                fileReader.Close();
+            }
+
+            CacheFactory.GetCacheManager().Add(fileScript, scriptContent.ToString());
+            return scriptContent;
+        }
+
         /// <summary>
         /// Action Error page.
         /// </summary>
@@ -216,20 +256,6 @@ namespace Fanex.Affiliate.Banner.Controllers
         }
 
         /// <summary>
-        /// Simplify HTML string.
-        /// </summary>
-        /// <param name="html">Original HTML string.</param>
-        /// <returns>Simplified HTML string.</returns>
-        public static string MinifyHtml(string html)
-        {
-            html = Regex.Replace(html, @"\n|\t", " ");
-            html = Regex.Replace(html, @">\s+<", "><").Trim();
-            html = Regex.Replace(html, @"\s{2,}", " ");
-
-            return html;
-        }
-
-        /// <summary>
         /// Store banner statistic into database.
         /// </summary>
         /// <param name="bannerID">Input Banner ID.</param>
@@ -256,31 +282,6 @@ namespace Fanex.Affiliate.Banner.Controllers
             };
 
             return _bannerService.BannerSelectInfo(criteria);
-        }
-
-        /// <summary>
-        /// Read script file.
-        /// </summary>
-        /// <param name="fileScript">Script file name.</param>
-        /// <returns>Script's content.</returns>
-        public static StringBuilder ReadFile(string fileScript)
-        {
-            // Script existed in cache.
-            if (CacheFactory.GetCacheManager().GetData(fileScript) != null)
-            {
-                return new StringBuilder(CacheFactory.GetCacheManager().GetData(fileScript).ToString());
-            }
-
-            // Read script from file.
-            var scriptContent = new StringBuilder();
-            using (var fileReader = System.IO.File.OpenText(fileScript))
-            {
-                scriptContent.Append(fileReader.ReadToEnd());
-                fileReader.Close();
-            }
-
-            CacheFactory.GetCacheManager().Add(fileScript, scriptContent.ToString());
-            return scriptContent;
         }
     }
 }

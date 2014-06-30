@@ -45,6 +45,22 @@ namespace Fanex.Affiliate.WebServices
         }
 
         /// <summary>
+        /// Convert an object into XML format.
+        /// </summary>
+        /// <param name="obj">Input object.</param>
+        /// <returns>XML String.</returns>
+        public static string ToXML(object obj)
+        {
+            XmlSerializer serializer = new XmlSerializer(obj.GetType());
+
+            using (StringWriter textWriter = new StringWriter())
+            {
+                serializer.Serialize(textWriter, obj);
+                return textWriter.ToString();
+            }
+        }
+
+        /// <summary>
         /// Get Affiliate Email.
         /// </summary>
         /// <param name="siteName">Site Name.</param>
@@ -62,22 +78,6 @@ namespace Fanex.Affiliate.WebServices
             catch
             {
                 return ToXML(new AffiliateInfo(100, "Invalid Site Name."));
-            }
-        }
-
-        /// <summary>
-        /// Convert an object into XML format.
-        /// </summary>
-        /// <param name="obj">Input object.</param>
-        /// <returns>XML String.</returns>
-        public static string ToXML(object obj)
-        {
-            XmlSerializer serializer = new XmlSerializer(obj.GetType());
-
-            using (StringWriter textWriter = new StringWriter())
-            {
-                serializer.Serialize(textWriter, obj);
-                return textWriter.ToString();
             }
         }
     }
