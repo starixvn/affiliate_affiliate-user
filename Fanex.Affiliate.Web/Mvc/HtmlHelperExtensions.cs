@@ -7,6 +7,7 @@
 //   <change who="Kaden.Trinh" date="2013.05.28">Created</change>
 //   <change who="Kaden.Trinh" date="2013.06.14">Add new extension DropDownListFor</change>
 // </history>
+
 namespace Fanex.Affiliate.Web.Mvc
 {
     using System;

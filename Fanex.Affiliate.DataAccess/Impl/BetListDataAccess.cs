@@ -44,13 +44,13 @@ namespace Fanex.Affiliate.DataAccess.Impl
             {
                 var param = criteria.GetSpParams();
                 var ds = objectDb.ExecuteDataSet(param);
-                var baseCurrency = criteria.BaseCurrency.ToLower();
+                var baseCurrency = string.Empty;
 
                 var mainTable = ds.Tables.Count > 0 ? ds.Tables[0] : new DataTable();
-                result.MainTicketList = this.ReadMainTicketData(mainTable, string.Empty);
+                result.MainTicketList = this.ReadMainTicketData(mainTable, baseCurrency);
 
                 var referenceTable = ds.Tables.Count > 1 ? ds.Tables[1] : new DataTable();
-                result.TicketDataList = this.ReadReferneceTicket(referenceTable, string.Empty);
+                result.TicketDataList = this.ReadReferneceTicket(referenceTable, baseCurrency);
 
                 result.TotalRows = Converter.ToInt(param["totalrows"]);
             }
@@ -150,8 +150,6 @@ namespace Fanex.Affiliate.DataAccess.Impl
             var playerCommCol = "playercomm" + baseCurrency;
             var commCol = "comm" + baseCurrency;
             var licenseeWlCol = "licenseewl" + baseCurrency;
-            var winlostCol = "winlost" + baseCurrency;
-            var stakeCol = "stake" + baseCurrency;
             var actualStakeCol = "actual_stake" + baseCurrency;
 
             var columnCollection = dataTable.Columns;

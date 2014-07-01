@@ -266,9 +266,6 @@ namespace Fanex.Affiliate.Services.Impl
             GetResultFromAPI(criteria, out dataTable);
             if (dataTable != null && dataTable.Rows.Count > 0)
             {
-                var currency = GetDataRowExtension(dataTable.Rows[0], "Currency");
-                var date = Converter.ToDateTime(GetDataRowExtension(dataTable.Rows[0], "StartTime"));
-
                 for (int i = 0; i < dataTable.Rows.Count; i++)
                 {
                     var dr = dataTable.Rows[i];
@@ -525,8 +522,6 @@ namespace Fanex.Affiliate.Services.Impl
             DataTable headTable,
             DataTable detailTable)
         {
-            var betTime = Converter.ToDateTime(GetDataRowExtension(headTable.Rows[0], "BetTime"));
-
             foreach (DataRow dr in headTable.Rows)
             {
                 var headItem = MapDataToHeaderItem(dr);
