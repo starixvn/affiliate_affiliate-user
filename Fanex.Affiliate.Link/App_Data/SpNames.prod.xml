@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Functions>
+  <Function Name="Aff-Link">
+    <Setting Key="Aff_AffiliateInsClickStatistics" SpName="Aff_Link_AffiliateInsClickStatistics" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+  </Function>
+</Functions>

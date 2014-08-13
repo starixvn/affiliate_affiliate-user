@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9E0AFD07-A5ED-430B-AB87-8045B051436A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fanex.Affiliate.DTO</RootNamespace>
+    <AssemblyName>Fanex.Affiliate.DTO</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Fanex.BetList.Core, Version=1.0.5185.18943, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\Fanex.BetList.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\AffiliateSettings.cs" />
+    <Compile Include="MarketingTools\Banner.cs" />
+    <Compile Include="BetList\AffTicket.cs" />
+    <Compile Include="BetList\RNGCasinoResultWinlossDetailHeader.cs" />
+    <Compile Include="BetList\RNGCasinoResultWinlossDetail.cs" />
+    <Compile Include="BetList\RNGCasinoResult.cs" />
+    <Compile Include="BetList\TicketResult.cs" />
+    <Compile Include="BetList\TicketText.cs" />
+    <Compile Include="BetList\CustomerInfoBetList.cs" />
+    <Compile Include="Account\CustomerInfo.cs" />
+    <Compile Include="DailyEarnings\DailyEarningsDetail.cs" />
+    <Compile Include="GlimpseSecurityPolicy.cs" />
+    <Compile Include="Common\HotNews.cs" />
+    <Compile Include="Common\MenuItem.cs" />
+    <Compile Include="Common\SiteDomainInfo.cs" />
+    <Compile Include="Common\Utility.cs" />
+    <Compile Include="User\InternalLoginInfo.cs" />
+    <Compile Include="MarketingTools\BannerType.cs" />
+    <Compile Include="TrafficStatistics\ClicksLandingPagesDetail.cs" />
+    <Compile Include="Common\Currency.cs" />
+    <Compile Include="Common\Message.cs" />
+    <Compile Include="DailyEarnings\DailyEarning.cs" />
+    <Compile Include="MarketingTools\Domain.cs" />
+    <Compile Include="TrafficStatistics\ReferrersStatisticsDetail.cs" />
+    <Compile Include="Common\SecurityQuestion.cs" />
+    <Compile Include="Common\Exchange.cs" />
+    <Compile Include="Common\Country.cs" />
+    <Compile Include="Account\GroupSetting.cs" />
+    <Compile Include="Common\Language.cs" />
+    <Compile Include="Account\StatisticsOverview.cs" />
+    <Compile Include="MarketingTools\Marketing.cs" />
+    <Compile Include="Payment\Payment.cs" />
+    <Compile Include="Account\Product.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Account\Statement.cs" />
+    <Compile Include="Common\SystemDateTime.cs" />
+    <Compile Include="Common\SystemSetting.cs" />
+    <Compile Include="TrafficStatistics\TrafficStatistic.cs" />
+    <Compile Include="User\User.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fanex.Affiliate.Resources\Fanex.Affiliate.Resources.csproj">
+      <Project>{7F4AF1BE-6FCF-49AF-8A3B-FE946CD89CA6}</Project>
+      <Name>Fanex.Affiliate.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+<<<<<<< HEAD
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2014/3/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
+=======
+      <UserProperties BuildVersion_StartDate="2014/4/4" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" />
+>>>>>>> origin/master
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

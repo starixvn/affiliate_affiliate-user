@@ -1,0 +1,14 @@
+﻿@{
+    Layout = null;
+}
+<<<<<<< HEAD
+<link href="@Url.Content("/Content/betlist/rngcasino.handhistory.css")" rel="stylesheet" type="text/css" />
+=======
+<link href="@Url.Content("/Content/betlist/rng-casino-hand-history.css")" rel="stylesheet" type="text/css" />
+>>>>>>> origin/master
+<table style="width: 100%;" class="casino-detail-table" cellpading="0" cellspacing="0">
+    <tr>
+        <td><h2>This game type has not been supported yet!</h2>
+        </td>
+    </tr>
+</table>

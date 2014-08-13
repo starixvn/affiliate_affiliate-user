@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Functions>
+  <Function Name="Aff-Account">
+    <Setting Key="Aff_AffiliateLogin" SpName="Aff_User_AffiliateLogin" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_Recheckin" SpName="Aff_User_Recheckin" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_Logout" SpName="Aff_User_Logout" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_AffiliateForgotPwd" SpName="Aff_User_AffiliateForgotPwd" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_AffiliateRecoverPwd" SpName="Aff_User_AffiliateRecoverPwd" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_OnUserSelNetSessionID" SpName="Aff_User_OnUserSelNetSessionID" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_AffiliateInternalLogin" SpName="Aff_User_AffiliateInternalLogin" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_AffiliateUpdPwd" SpName="Aff_User_AffiliateUpdPwd" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+  </Function>
+
+  <Function Name="Aff-Account-Overview">
+    <Setting Key="Aff_StatisticsSel" SpName="Aff_User_StatisticsSel" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_CommGroupSelDetail" SpName="Aff_User_CommGroupSelDetail" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+  </Function>
+
+  <Function Name="Aff-Statement">
+    <Setting Key="Aff_StatementHistorySel" SpName="Aff_User_AffiliateStatementHistorySel" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_EarningSelDaily" SpName="Aff_User_EarningSelDaily" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_EarningSelDetail" SpName="Aff_User_EarningSelDetail" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_GetExchangeRate" SpName="Aff_User_GetExchangeRate" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_BetList" SpName="Aff_User_BetList" DbName="DBExtBODB02_bodbAdminNet" Plain="0" />
+    <Setting Key="Aff_BetListParlay" SpName="Aff_User_BetListParlay" DbName="DBExtBODB02_bodbAdminNet" Plain="0" />
+    <Setting Key="Aff_BetListSystemParlayDetail" SpName="Aff_User_BetListSystemParlayDetail" DbName="DBExtBODB02_bodbAdminNet" Plain="0" />
+    <Setting Key="Aff_SelBalanceUpDay" SpName="Aff_User_SelBalanceUpDay" DbName="DBExtBODB02_bodbAdminNet" Plain="0" />
+    <Setting Key="Aff_DummyAccID" SpName="Aff_User_DummyAccID" DbName="DBExtBODB02_bodbAdminNet" Plain="0" />
+
+    <Setting Key="Aff_BetListResult_SelMatch" SpName="Aff_User_BetListResult_SelMatch" DbName="DBExtBODB02_bodbAdminNet" Plain="0" />
+    <Setting Key="Aff_BetListResult_SelMatchParlay" SpName="Aff_User_BetListResult_SelMatchParlay" DbName="DBExtBODB02_bodbAdminNet" Plain="0" />
+    <Setting Key="Aff_BetListResult_SelMatchNumberGame" SpName="Aff_User_BetListResult_SelMatchNumberGame" DbName="DBExtBODB02_bodbAdminNet" Plain="0" />
+</Function>
+
+  <Function Name="Aff-CustomerInfo">
+    <Setting Key="Aff_MemberListSel" SpName="Aff_User_MemberListSel" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+  </Function>
+
+  <Function Name="Aff-Payment">
+    <Setting Key="Aff_PaymentRequestSelInfoByAff" SpName="Aff_User_PaymentRequestSelInfoByAff" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_PlayerPayoutInfoSel" SpName="Aff_User_PlayerPayoutInfoSel" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_PaymentRequestIns" SpName="Aff_User_PaymentRequestIns" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_PaymentRequestUpd" SpName="Aff_User_PaymentRequestUpd" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+  </Function>
+
+  <Function Name="Aff-Statistics">
+    <Setting Key="Aff_ClickStatisticsSelByPage" SpName="Aff_User_ClickStatisticsSelByPage" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_ClickStatisticsDetailBySite" SpName="Aff_User_ClickStatisticsDetailBySite" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_ClickStatisticsSelBySite" SpName="Aff_User_ClickStatisticsSelBySite" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+  </Function>
+
+  <Function Name="Aff-System-Settings">
+    <Setting Key="Aff_SystemSettingsSelByType" SpName="Aff_User_SystemSettingsSelByType" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_SystemSettingsSelByName" SpName="Aff_User_SystemSettingsSelByName" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_AffiliateSelDBTime" SpName="Aff_User_AffiliateSelDBTime" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_GetAllAffSystemSettings" SpName="Aff_User_GetAllAffSystemSettings" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />    
+  </Function>
+
+  <Function Name="Aff-Affiliate-Account">
+    <Setting Key="Aff_AffiliateIns" SpName="Aff_User_AffiliateIns" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_AffiliateUpdInfo" SpName="Aff_User_AffiliateUpdInfo" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_AffiliateSelEditInfo" SpName="Aff_User_AffiliateSelEditInfo" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+  </Function>
+
+  <Function Name="Aff-Product">
+    <Setting Key="Aff_ProductSelByAffID" SpName="Aff_User_ProductSelByAffID" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+  </Function>
+
+  <Function Name="Aff-Marketing">
+    <Setting Key="Aff_BannerSelType" SpName="Aff_User_BannerSelType" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_DomainAffClientSel" SpName="Aff_User_DomainAffClientSel" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_BannerSel" SpName="Aff_User_BannerSel" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_TextSel" SpName="Aff_User_TextSel" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+  </Function>
+
+  <Function Name="Aff-Message">
+    <Setting Key="Aff_HotNewsSel_New" SpName="Aff_User_HotNewsSel_New" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_HotNewsDetail_New" SpName="Aff_User_HotNewsDetail_New" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0"/>
+  </Function>
+
+  <Function Name="Aff-Contact-Us">
+    <Setting Key="Aff_EmailHistoryIns" SpName="Aff_User_EmailHistoryIns" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+  </Function>
+
+  <Function Name="Aff-Group-Settings">
+    <Setting Key="Aff_GetDefaultProductCommission" SpName="Aff_User_GetDefaultProductCommission" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+  </Function>
+
+  <!--SPs for Affiliate Link-->
+  <Function Name="Aff-Link">
+    <Setting Key="Aff_AffiliateInsClickStatistics" SpName="Aff_Link_AffiliateInsClickStatistics" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
+  </Function>
+
+</Functions>
