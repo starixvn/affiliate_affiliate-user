@@ -156,7 +156,7 @@ namespace Fanex.Affiliate.Controllers
                                         Name = criteria.Sender,
                                         AffID = CurrentSession != null ? CurrentSession.AffId.ToString() : string.Empty,
                                         Email = criteria.Email,
-                                        Comment = criteria.Content,
+                                        Comment = HttpUtility.HtmlDecode(criteria.Content),
                                         Subject = criteria.Subject,
                                         MailContact = AppSettings.MailContact
                                     };

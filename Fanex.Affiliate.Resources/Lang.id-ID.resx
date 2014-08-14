@@ -1107,4 +1107,19 @@ Tim Dukungan Afiliasi {0}</value>
   <data name="BetListResults" xml:space="preserve">
     <value>Results</value>
   </data>
+  <data name="PlaytechCasino" xml:space="preserve">
+    <value>Casino</value>
+  </data>
+  <data name="PlayerComm" xml:space="preserve">
+    <value>Player Comm.</value>
+  </data>
+  <data name="PlaytechCasinoNetGaming" xml:space="preserve">
+    <value>Net Gaming</value>
+  </data>
+  <data name="PlaytechCasinoPShare" xml:space="preserve">
+    <value>P.Share</value>
+  </data>
+  <data name="PlaytechCasinoPWin" xml:space="preserve">
+    <value>P.Win</value>
+  </data>
 </root>

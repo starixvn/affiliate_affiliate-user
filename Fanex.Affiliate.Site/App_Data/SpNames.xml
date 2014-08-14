@@ -22,7 +22,7 @@
     <Setting Key="Aff_User_EarningSelDetail" SpName="Aff_User_EarningSelDetail" DbName="affiliate" Plain="0" />
     <Setting Key="Aff_User_GetExchangeRate" SpName="Aff_User_GetExchangeRate" DbName="affiliate" Plain="0" />
     <Setting Key="Aff_User_BetList" SpName="Aff_User_BetList" DbName="bodb02" Plain="0" />
-    <Setting Key="Aff_BetListParlay" SpName="Aff_User_BetListParlay_xTest" DbName="bodb02" Plain="0" />
+    <Setting Key="Aff_User_BetListParlay" SpName="Aff_User_BetListParlay" DbName="bodb02" Plain="0" />
     <Setting Key="Aff_User_BetListSystemParlayDetail" SpName="Aff_User_BetListSystemParlayDetail" DbName="bodb02" Plain="0" />
     <Setting Key="Aff_User_SelBalanceUpDay" SpName="Aff_User_SelBalanceUpDay" DbName="bodb02" Plain="0" />
     <Setting Key="Aff_User_DummyAccID" SpName="Aff_User_DummyAccID" DbName="bodb02" Plain="0" />

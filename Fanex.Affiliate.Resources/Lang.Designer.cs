@@ -2208,6 +2208,15 @@ namespace Fanex.Affiliate.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Player Comm..
+        /// </summary>
+        public static string PlayerComm {
+            get {
+                return ResourceManager.GetString("PlayerComm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Player Username.
         /// </summary>
         public static string PlayerUsername {
@@ -2222,6 +2231,42 @@ namespace Fanex.Affiliate.Resources {
         public static string PlayerUsernameIsRequired {
             get {
                 return ResourceManager.GetString("PlayerUsernameIsRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Casino.
+        /// </summary>
+        public static string PlaytechCasino {
+            get {
+                return ResourceManager.GetString("PlaytechCasino", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Net Gaming.
+        /// </summary>
+        public static string PlaytechCasinoNetGaming {
+            get {
+                return ResourceManager.GetString("PlaytechCasinoNetGaming", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to P.Share.
+        /// </summary>
+        public static string PlaytechCasinoPShare {
+            get {
+                return ResourceManager.GetString("PlaytechCasinoPShare", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to P.Win.
+        /// </summary>
+        public static string PlaytechCasinoPWin {
+            get {
+                return ResourceManager.GetString("PlaytechCasinoPWin", resourceCulture);
             }
         }
         

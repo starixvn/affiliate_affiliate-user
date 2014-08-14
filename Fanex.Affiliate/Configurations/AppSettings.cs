@@ -9,6 +9,7 @@
 //   <change who="Kaden.Trinh" date="2013.06.25">Load all setting default from DB</change>
 //   <change who="Long.Luu" date="2013.07.23">Refine load system settings data</change>
 // </history>
+
 namespace Fanex.Affiliate.Configurations
 {
     using System;
@@ -36,8 +37,6 @@ namespace Fanex.Affiliate.Configurations
         private static readonly ISystemSettingService SystemSetting = new SystemSettingService();
 
         private static readonly ICache CacheInstance = CacheService.CreateInstance(CacheType.MemoryCache);
-
-        private static AffiliateSettings _defaultAffSettings;
 
         #region Constructor
 
@@ -469,22 +468,12 @@ namespace Fanex.Affiliate.Configurations
 
                 try
                 {
-                    string startTime;
-                    string endTime;
                     var affiliateSettings = new AffiliateSettings();
 
-                    if (!UnderMaintenanceService.GetDownTime(out startTime, out endTime))
-                    {
-                        affiliateSettings = LoadAffiliateSettings();
-                        CacheInstance.Set(AffiliateSettingsCacheKey, affiliateSettings, CacheDuration);
-                        _defaultAffSettings = affiliateSettings;
+                    affiliateSettings = LoadAffiliateSettings();
+                    CacheInstance.Set(AffiliateSettingsCacheKey, affiliateSettings, CacheDuration);
 
-                        return affiliateSettings;
-                    }
-                    else
-                    {
-                        return _defaultAffSettings;
-                    }
+                    return affiliateSettings;
                 }
                 catch (Exception exception)
                 {

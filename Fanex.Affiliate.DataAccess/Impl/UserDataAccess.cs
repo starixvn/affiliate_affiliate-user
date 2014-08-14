@@ -17,8 +17,9 @@ namespace Fanex.Affiliate.DataAccess.Impl
     using Criteria;
     using Data;
     using DTO;
+    using Fanex.NAP.Framework.Command;
     using Interface;
-    using NAP.Framework.Command;
+    using NAP.Framework;
     using NAP.Framework.Data;
     using ViewModels;
 
@@ -284,7 +285,7 @@ namespace Fanex.Affiliate.DataAccess.Impl
                                 Email = internalLoginInfo.Email,
                                 PreferLang = internalLoginInfo.PreferLang,
                                 Currency = internalLoginInfo.Currency,
-                                CurrencyID = Converter.ToInt(param["currencyid"]),
+                                CurrencyID = internalLoginInfo.CurrencyID,
                                 AffType = internalLoginInfo.AffType,
                                 AffLevel = internalLoginInfo.AffLevel,
                                 HasSecurityQuestion = true

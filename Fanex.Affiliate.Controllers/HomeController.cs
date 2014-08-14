@@ -49,7 +49,13 @@ namespace Fanex.Affiliate.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            var model = _accountService.GetDefaultProductCommission(new DefaultCommissionCriteria());
+            var criteria = new DefaultCommissionCriteria()
+            {
+                Environment = AppSettings.Environment
+            };
+
+            var model = _accountService.GetDefaultProductCommission(criteria);
+
             return View(model);
         }
     }

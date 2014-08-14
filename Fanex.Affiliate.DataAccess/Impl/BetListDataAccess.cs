@@ -67,7 +67,7 @@ namespace Fanex.Affiliate.DataAccess.Impl
         {
             var result = new TicketResult();
 
-            using (var objectDb = new ObjectDb("Aff_BetListParlay"))
+            using (var objectDb = new ObjectDb("Aff_User_BetListParlay"))
             {
                 objectDb.AddInParameter("TransId", DbType.Int64, transId);
                 var ds = objectDb.ExecuteDataSet();

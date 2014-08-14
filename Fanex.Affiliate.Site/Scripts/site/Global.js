@@ -134,7 +134,8 @@ var AFFILIATE = (function ($) {
                 dataType: "json",
                 data: JSON.stringify(param),
                 success: function () {
-                    window.location.reload();
+                    var currentUrl = window.location.href;
+                    window.location = currentUrl.substring(0, currentUrl.length - 1);
                 }
             });
         },

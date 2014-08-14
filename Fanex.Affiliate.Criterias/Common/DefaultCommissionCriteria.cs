@@ -16,14 +16,12 @@ namespace Fanex.Affiliate.Criteria
     /// </summary>
     public class DefaultCommissionCriteria : CriteriaBase
     {
-        private const int DEFAULTCOMMISSIONGROUPID = 101;
-
         public DefaultCommissionCriteria()
         {
-            GroupId = DEFAULTCOMMISSIONGROUPID;
+            Environment = string.Empty;
         }
 
-        public int GroupId { get; set; }
+        public string Environment { get; set; }
 
         /// <summary>
         /// Get SP name.

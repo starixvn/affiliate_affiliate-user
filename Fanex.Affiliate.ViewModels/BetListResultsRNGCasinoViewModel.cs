@@ -29,7 +29,7 @@ namespace Fanex.Affiliate.ViewModels
             Param = criteria;
             RefNo = criteria.RefNo.ToString();
             IsShowPic = criteria.IsShowPic;
-            Username = criteria.ExternalId;
+            Username = criteria.SystemId;
         }
 
         public IList<RNGCasinoResult> Data { get; set; }

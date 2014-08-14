@@ -44,7 +44,7 @@ namespace Fanex.Affiliate.Controllers
         /// /// <param name="currency">Currency value.</param>
         /// <returns>Result value.</returns>
         [HttpGet]
-        public ActionResult BetList(string username, string product, string winlostdate, string currency)
+        public ActionResult BetList(string username, int product, string winlostdate, string currency)
         {
             DateTime winlostDate;
             DateTime.TryParse(winlostdate, out winlostDate);
@@ -218,9 +218,9 @@ namespace Fanex.Affiliate.Controllers
         /// </summary>
         /// <param name="criteria">Bet list criteria.</param>
         /// <param name="product">Product parameter.</param>
-        public void ViewBetListByProduct(BetListCriteria criteria, string product)
+        public void ViewBetListByProduct(BetListCriteria criteria, int product)
         {
-            if (product == "All")
+            if (product == 0)
             {
                 ViewBetListByAllProducts(criteria);
             }
@@ -235,20 +235,20 @@ namespace Fanex.Affiliate.Controllers
         /// </summary>
         /// <param name="criteria">Bet List Criteria.</param>
         /// <param name="product">Selected product.</param>
-        public void ViewBetListBySpecificProduct(BetListCriteria criteria, string product)
+        public void ViewBetListBySpecificProduct(BetListCriteria criteria, int product)
         {
             switch (product)
             {
-                case "Sportsbook":
+                case 1:
                     criteria.ShowSB = true;
                     break;
-                case "Number Game":
-                    criteria.ShowNG = true;
-                    break;
-                case "RNG Casino":
+                case 2:
                     criteria.ShowCS = true;
                     break;
-                case "Live Casino":
+                case 3:
+                    criteria.ShowNG = true;
+                    break;
+                case 4:
                     criteria.ShowLC = true;
                     break;
                 default:
@@ -274,7 +274,7 @@ namespace Fanex.Affiliate.Controllers
 
             foreach (var item in listProduct)
             {
-                ViewBetListBySpecificProduct(criteria, item.ProductName);
+                ViewBetListBySpecificProduct(criteria, item.ProductId);
             }
         }
 

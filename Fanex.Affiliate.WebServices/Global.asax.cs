@@ -4,7 +4,7 @@
 // </copyright>
 // ------------------------------------------------------------------------
 // <history>
-//   <change who="Long.Luu" date="2014/08/05">Created</change>
+//   <change who="Long.Luu" date="2014/08/13">Created</change>
 //   <change who="" date=""></change>
 // </history>
 
@@ -19,7 +19,7 @@ namespace Fanex.Affiliate.WebServices
     using Fanex.Data.Configuration;
 
     /// <summary>
-    /// Global control for Web Services.
+    /// Global control of web service.
     /// </summary>
     public class Global : System.Web.HttpApplication
     {

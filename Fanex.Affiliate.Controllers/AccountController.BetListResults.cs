@@ -19,6 +19,7 @@ namespace Fanex.Affiliate.Controllers
     using Criteria;
     using DTO.BetList;
     using Enumerations;
+    using Fanex.Affiliate.Web;
     using Fanex.Common;
     using Fanex.Result.Core;
     using Utilities;
@@ -33,6 +34,8 @@ namespace Fanex.Affiliate.Controllers
     {
         #region Variables
 
+        private List<string> _resultsSupportedLanguages = new List<string>() { "en-US", "zh-TW", "zh-CN", "ja-JP", "th-TH", "ko-KR", "vi-VN" };
+        
         #endregion
 
         #region BetList.Results
@@ -63,7 +66,7 @@ namespace Fanex.Affiliate.Controllers
                 IsOutRight = criteria.IsOutRight.HasValue && criteria.IsOutRight.Value > 0,
                 IsParlayPopUp = criteria.Bettype == (int)BetType.MixParlay || criteria.Bettype == (int)BetType.CombinationMixParlay,
                 IsPopUp = true,
-                LanguageCode = CurrentSession.Language
+                LanguageCode = _resultsSupportedLanguages.Exists(i => i.Equals(AppSession.Language)) ? AppSession.Language : "en-US"
             };
 
             if (displaySettings.IsParlayPopUp && criteria.RefNo != null)
@@ -135,7 +138,6 @@ namespace Fanex.Affiliate.Controllers
             var customerInfoBetList = BetListService.GetPlayerIbcInfo(AppSettings.AffiliateName + "$" + criteria.UserName);
             criteria.BaseCurrency = criteria.BaseCurrency ?? string.Empty;
             criteria.ExternalId = customerInfoBetList.Username;
-            criteria.SystemId = customerInfoBetList.IBCUsername;
             criteria.CurrencyId = customerInfoBetList.CurrencyId;
             var data = criteria.IsValid()
                 ? BetListService.GetRNGCasinoResult(criteria)

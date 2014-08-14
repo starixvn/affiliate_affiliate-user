@@ -57,29 +57,78 @@
                 <div class="content-block no-padding">
                     <table class="table odd-even list no-margin">
                         <thead>
-                            <tr class="gradient-header">
-                                <th style="width: 15px;">
-                                    &nbsp;
-                                </th>
-                                <th style="width: 80px;">
-                                    @Lang.Date
-                                </th>
-                                <th style="width: 100px;">
-                                    @string.Format("{0} ({1})", Lang.Deposit, FormaterCurrency.GetCurrencySymbol())
-                                </th>
-                                <th style="width: 100px;">
-                                    @string.Format("{0} ({1})", Lang.Turnover, FormaterCurrency.GetCurrencySymbol())
-                                </th>
-                                <th style="width: 100px;">
-                                    @string.Format("{0} ({1})", Lang.Winlost, FormaterCurrency.GetCurrencySymbol())
-                                </th>
-                                <th style="width: 70px;">
-                                    @string.Format("{0} ({1})", Lang.Bonus, FormaterCurrency.GetCurrencySymbol())
-                                </th>
-                                <th>
-                                    @string.Format("{0} ({1})", Lang.Adjustment, FormaterCurrency.GetCurrencySymbol())
-                                </th>
-                            </tr>
+                            @if(Model.ProductId == 0 || Model.ListProduct.Where(i=>i.ProductId == Model.ProductId).First().ProductName == "Casino")
+                            {
+                                <tr class="gradient-header">
+                                    <th style="width: 15px;" rowspan="2">
+                                        &nbsp;
+                                    </th>
+                                    <th style="width: 80px;" rowspan="2">
+                                        @Lang.Date
+                                    </th>
+                                    <th style="width: 100px;" rowspan="2">
+                                        @string.Format("{0} ({1})", Lang.Deposit, FormaterCurrency.GetCurrencySymbol())
+                                    </th>
+                                    <th style="width: 70px;" rowspan="2">
+                                        @string.Format("{0} ({1})", Lang.Bonus, FormaterCurrency.GetCurrencySymbol())
+                                    </th>
+                                    <th style="width: 100px;" rowspan="2">
+                                        @string.Format("{0} ({1})", Lang.Turnover, FormaterCurrency.GetCurrencySymbol())
+                                    </th>
+                                    <th style="width: 100px;" rowspan="2">
+                                        @string.Format("{0} ({1})", Lang.PlayerComm, FormaterCurrency.GetCurrencySymbol())
+                                    </th>
+                                    <th style="width: 300px;" colspan="3">
+                                        @string.Format("{0} ({1})", Lang.Casino, FormaterCurrency.GetCurrencySymbol())
+                                    </th>
+                                    <th style="width: 100px;" rowspan="2">
+                                        @string.Format("{0} ({1})", Lang.Adjustment, FormaterCurrency.GetCurrencySymbol())
+                                    </th>
+                                    <th style="width: 100px;" rowspan="2">
+                                        @string.Format("{0} ({1})", Lang.Winlost, FormaterCurrency.GetCurrencySymbol())
+                                    </th>
+                                </tr>
+                                <tr class="gradient-header">
+                                    <th style="width: 15px;">
+                                        @Lang.PlaytechCasinoPShare
+                                    </th>
+                                    <th style="width: 80px;">
+                                        @Lang.PlaytechCasinoPWin
+                                    </th>
+                                    <th style="width: 100px;">
+                                        @Lang.PlaytechCasinoNetGaming
+                                    </th>
+                                </tr>
+                            }
+                            else
+                            {
+                                <tr class="gradient-header">
+                                    <th style="width: 15px;">
+                                        &nbsp;
+                                    </th>
+                                    <th style="width: 80px;">
+                                        @Lang.Date
+                                    </th>
+                                    <th style="width: 100px;">
+                                        @string.Format("{0} ({1})", Lang.Deposit, FormaterCurrency.GetCurrencySymbol())
+                                    </th>
+                                    <th style="width: 70px;">
+                                        @string.Format("{0} ({1})", Lang.Bonus, FormaterCurrency.GetCurrencySymbol())
+                                    </th>
+                                    <th style="width: 100px;">
+                                        @string.Format("{0} ({1})", Lang.Turnover, FormaterCurrency.GetCurrencySymbol())
+                                    </th>
+                                    <th>
+                                        @string.Format("{0} ({1})", Lang.PlayerComm, FormaterCurrency.GetCurrencySymbol())
+                                    </th>
+                                    <th>
+                                        @string.Format("{0} ({1})", Lang.Adjustment, FormaterCurrency.GetCurrencySymbol())
+                                    </th>
+                                    <th style="width: 100px;">
+                                        @string.Format("{0} ({1})", Lang.Winlost, FormaterCurrency.GetCurrencySymbol())
+                                    </th>
+                                </tr>
+                            }
                         </thead>
                         @if (Model.ListDailyEarning.Any())
                         {
@@ -92,6 +141,10 @@
                                     decimal totalWinlost = 0;
                                     decimal totalBonus = 0;
                                     decimal totalAdjustment = 0;
+                                    decimal totalPlayerComm = 0;
+                                    decimal totalPlaytechCasinoPShare = 0;
+                                    decimal totalPlaytechCasinoPWin = 0;
+                                    decimal totalPlaytechCasinoNetGaming = 0;
 
                                     foreach (var dailyEarning in Model.ListDailyEarning)
                                     {
@@ -101,6 +154,10 @@
                                         totalWinlost += dailyEarning.MemberWinlost;
                                         totalBonus += dailyEarning.Bonus;
                                         totalAdjustment += dailyEarning.Adjustment;
+                                        totalPlayerComm += dailyEarning.Adjustment;
+                                        totalPlaytechCasinoPShare += dailyEarning.Adjustment;
+                                        totalPlaytechCasinoPWin += dailyEarning.Adjustment;
+                                        totalPlaytechCasinoNetGaming += dailyEarning.Adjustment;
 
                                         <tr class="@(i%2 == 0 ? "even" : "odd")">
                                             <td class="text-center">@count.ToString()
@@ -119,13 +176,24 @@
                                             }
                                             <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarning.Deposit))
                                             </td>
-                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarning.Turnover))
-                                            </td>
-                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarning.MemberWinlost))
-                                            </td>
                                             <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarning.Bonus))
                                             </td>
+                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarning.Turnover))
+                                            </td>
+                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarning.Turnover))
+                                            </td>
+                                            @if(Model.ProductId == 0 || Model.ListProduct.Where(l=>l.ProductId == Model.ProductId).First().ProductName == "Casino")
+                                            {
+                                                <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarning.Turnover))
+                                                </td>
+                                                <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarning.Turnover))
+                                                </td>
+                                                <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarning.Turnover))
+                                                </td>
+                                            }
                                             <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarning.Adjustment))
+                                            </td>
+                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarning.MemberWinlost))
                                             </td>
                                         </tr>
 
@@ -138,13 +206,24 @@
                                             </td>
                                             <td class="text-right">@Html.Raw(FormaterCurrency.Format(totalDeposit))
                                             </td>
-                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(totalTurnover))
-                                            </td>
-                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(totalWinlost))
-                                            </td>
                                             <td class="text-right">@Html.Raw(FormaterCurrency.Format(totalBonus))
                                             </td>
+                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(totalTurnover))
+                                            </td>
+                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(totalPlayerComm))
+                                            </td>
+                                            @if(Model.ProductId == 0 || Model.ListProduct.Where(l=>l.ProductId == Model.ProductId).First().ProductName == "Casino")
+                                            {
+                                                <td class="text-right">@Html.Raw(FormaterCurrency.Format(totalPlaytechCasinoPShare))
+                                                </td>
+                                                <td class="text-right">@Html.Raw(FormaterCurrency.Format(totalPlaytechCasinoPWin))
+                                                </td>
+                                                <td class="text-right">@Html.Raw(FormaterCurrency.Format(totalPlaytechCasinoNetGaming))
+                                                </td>
+                                            }
                                             <td class="text-right">@Html.Raw(FormaterCurrency.Format(totalAdjustment))
+                                            </td>
+                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(totalWinlost))
                                             </td>
                                         </tr>
                                 }
@@ -154,8 +233,16 @@
                         {
                             <tfoot>
                                 <tr>
-                                    <td colspan="7" style="text-align: center;">@Lang.NoInformation
-                                    </td>
+                                    @if(Model.ProductId == 0 || Model.ListProduct.Where(l=>l.ProductId == Model.ProductId).First().ProductName == "Casino")
+                                    {
+                                        <td colspan="11" style="text-align: center;">@Lang.NoInformation
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td colspan="8" style="text-align: center;">@Lang.NoInformation
+                                        </td>
+                                    }
                                 </tr>
                             </tfoot>
                         }

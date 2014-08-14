@@ -185,11 +185,11 @@ namespace Fanex.Affiliate.Services.Impl
                                                     FinalAwayScore =
                                                         i["finalawayscore"] != DBNull.Value
                                                             ? int.Parse(i["finalawayscore"].ToString())
-                                                            : -1,
+                                                            : new int?(),
                                                     HtAwayScore =
                                                         i["htawayscore"] != DBNull.Value
                                                             ? int.Parse(i["htawayscore"].ToString())
-                                                            : -1,
+                                                            : new int?(),
                                                     Color = i.Table.Columns.Contains("lcolor") &&
                                                         i["lcolor"] != DBNull.Value
                                                             ? i["lcolor"].ToString()
@@ -197,11 +197,11 @@ namespace Fanex.Affiliate.Services.Impl
                                                     FinalHomeScore =
                                                         i["finalhomescore"] != DBNull.Value
                                                             ? int.Parse(i["finalhomescore"].ToString())
-                                                            : -1,
+                                                            : new int?(),
                                                     HtHomeScore =
                                                         i["finalhomescore"] != DBNull.Value
                                                             ? int.Parse(i["hthomescore"].ToString())
-                                                            : -1,
+                                                            : new int?(),
                                                     EventDate = DateTime.Parse(i["eventdate"].ToString()),
                                                     IsNeutral = bool.Parse(i["IsNeutral"].ToString()),
                                                     IsPending = bool.Parse(i["IsPending"].ToString()),
@@ -268,8 +268,8 @@ namespace Fanex.Affiliate.Services.Impl
             {
                 for (int i = 0; i < dataTable.Rows.Count; i++)
                 {
-                    var dr = dataTable.Rows[i];
-                    var casino = MapDataToCasinoItem(dr);
+                    var dataRow = dataTable.Rows[i];
+                    var casino = MapDataToCasinoItem(dataRow);
 
                     casino.Index = i + 1;
                     casino.Result = casino.Result.Replace("/Form", this._subDomainPath + "/Form");
@@ -340,18 +340,18 @@ namespace Fanex.Affiliate.Services.Impl
                                     FinalAwayScore =
                                         i["finalawayscore"] != DBNull.Value
                                             ? int.Parse(i["finalawayscore"].ToString())
-                                            : -1,
+                                            : new int?(),
                                     HtAwayScore =
                                         i["htawayscore"] != DBNull.Value ? int.Parse(i["htawayscore"].ToString()) : -1,
                                     Color = i.Table.Columns.Contains("lcolor") && i["lcolor"] != DBNull.Value ? i["lcolor"].ToString() : string.Empty,
                                     FinalHomeScore =
                                         i["finalhomescore"] != DBNull.Value
                                             ? int.Parse(i["finalhomescore"].ToString())
-                                            : -1,
+                                            : new int?(),
                                     HtHomeScore =
                                         i["hthomescore"] != DBNull.Value
                                             ? int.Parse(i["hthomescore"].ToString())
-                                            : -1,
+                                            : new int?(),
                                     EventDate = DateTime.Parse(i["eventdate"].ToString()),
                                     IsNeutral = bool.Parse(i["IsNeutral"].ToString()),
                                     IsPending = bool.Parse(i["IsPending"].ToString()),

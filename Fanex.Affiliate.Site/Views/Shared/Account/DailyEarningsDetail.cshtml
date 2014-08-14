@@ -113,11 +113,7 @@
                                             <td class="text-center">
                                                 @if(dailyEarningDetail.Turnover > 0)
                                                 {
-                                                    var selectedProduct = Model.ListProduct.Where(l => l.ProductId == Model.ProductId);
-                                                    var selectedProductName = selectedProduct.Count() > 0
-                                                        ? selectedProduct.First().ProductName
-                                                        : "All";
-                                                    @Html.Raw(string.Format("<a href='javascript:;' class='domain-view-detail' data-domain-username='{0}' data-domain-product='{1}' data-domain-winlostdate='{2}' data-domain-currency='{3}' data-domain-affcurrency='{4}'>{5}</a>", dailyEarningDetail.Username, selectedProductName, Model.MonthDate, dailyEarningDetail.Currency, ViewBag.AffiliateCurrency, dailyEarningDetail.Username));
+                                                    @Html.Raw(string.Format("<a href='javascript:;' class='domain-view-detail' data-domain-username='{0}' data-domain-product='{1}' data-domain-winlostdate='{2}' data-domain-currency='{3}' data-domain-affcurrency='{4}'>{5}</a>", dailyEarningDetail.Username, Model.ProductId, Model.MonthDate, dailyEarningDetail.Currency, ViewBag.AffiliateCurrency, dailyEarningDetail.Username));
                                                 }
                                                 else
                                                 {

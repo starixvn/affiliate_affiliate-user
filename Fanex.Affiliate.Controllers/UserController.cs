@@ -88,7 +88,7 @@ namespace Fanex.Affiliate.Controllers
                 else
                 {
                     var criteria = new UserInsertCriteria();
-                    model = UpdateAffiliateInfo(user, Common.GetIPAddressOfClient(), ref criteria);
+                    model = InsertAffiliate(user, Common.GetIPAddressOfClient(), ref criteria);
 
                     if (model.ErrorCode == 0)
                     {
@@ -132,7 +132,7 @@ namespace Fanex.Affiliate.Controllers
         /// <param name="ip">IP parameter.</param>
         /// <param name="criteria">User criteria.</param>
         /// <returns>Return result view model.</returns>
-        public ResultViewModel UpdateAffiliateInfo(UserViewModel user, string ip, ref UserInsertCriteria criteria)
+        public ResultViewModel InsertAffiliate(UserViewModel user, string ip, ref UserInsertCriteria criteria)
         {
             criteria.FirstName = WebUtility.HtmlEncode(user.FirstName.TrimEnd().TrimStart());
             criteria.LastName = WebUtility.HtmlEncode(user.LastName.TrimEnd().TrimStart());
@@ -640,7 +640,7 @@ namespace Fanex.Affiliate.Controllers
                     UserName = criteria.CustName,
                     LoginIp = Common.GetIPAddressOfClient(),
                     Language = AppSettings.DefaultLanguage,
-                    InputAffType = 1
+                    InputAffType = AppSettings.InputAffType
                 };
 
                 var user = _userService.InternalAuthenticateUser(internalLoginCriteria);
