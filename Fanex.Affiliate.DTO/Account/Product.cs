@@ -18,6 +18,8 @@ namespace Fanex.Affiliate.DTO
 
         public string ProductName { get; set; }
 
+        public string OriginalProductName { get; set; }
+
         public int TotalQualifiedMembers { get; set; }
     }
 }

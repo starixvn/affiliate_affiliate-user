@@ -197,6 +197,7 @@ namespace Fanex.Affiliate.Controllers
             }
 
             model.ListProduct = ProductService.GetProductList(productCriteria).ToList();
+            model.ListProduct.ForEach(l => l.OriginalProductName = l.ProductName);
             model.ListProduct.ForEach(i => i.ProductName = ProductsFormatter.Format(i.ProductName));
             model.ProductId = criteria.ProductId;
             model.ListDailyEarning = AccountService.GetDailyEarnings(criteria).ToList();
@@ -244,6 +245,7 @@ namespace Fanex.Affiliate.Controllers
 
             var model = new DailyEarningsKioskDetailViewModel();
             model.ListProduct = ProductService.GetProductList(productCriteria).ToList();
+            model.ListProduct.ForEach(i => i.OriginalProductName = i.ProductName);
             model.ListProduct.ForEach(i => i.ProductName = ProductsFormatter.Format(i.ProductName));
             if (criteria.MonthDate != null)
             {

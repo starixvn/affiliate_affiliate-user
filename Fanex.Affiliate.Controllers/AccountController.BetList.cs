@@ -44,7 +44,7 @@ namespace Fanex.Affiliate.Controllers
         /// /// <param name="currency">Currency value.</param>
         /// <returns>Result value.</returns>
         [HttpGet]
-        public ActionResult BetList(string username, int product, string winlostdate, string currency)
+        public ActionResult BetList(string username, string product, string winlostdate, string currency)
         {
             DateTime winlostDate;
             DateTime.TryParse(winlostdate, out winlostDate);
@@ -218,9 +218,9 @@ namespace Fanex.Affiliate.Controllers
         /// </summary>
         /// <param name="criteria">Bet list criteria.</param>
         /// <param name="product">Product parameter.</param>
-        public void ViewBetListByProduct(BetListCriteria criteria, int product)
+        public void ViewBetListByProduct(BetListCriteria criteria, string product)
         {
-            if (product == 0)
+            if (product == "All")
             {
                 ViewBetListByAllProducts(criteria);
             }
@@ -235,20 +235,20 @@ namespace Fanex.Affiliate.Controllers
         /// </summary>
         /// <param name="criteria">Bet List Criteria.</param>
         /// <param name="product">Selected product.</param>
-        public void ViewBetListBySpecificProduct(BetListCriteria criteria, int product)
+        public void ViewBetListBySpecificProduct(BetListCriteria criteria, string product)
         {
             switch (product)
             {
-                case 1:
+                case "Sportsbook":
                     criteria.ShowSB = true;
                     break;
-                case 2:
+                case "RNG Casino":
                     criteria.ShowCS = true;
                     break;
-                case 3:
+                case "Number Game":
                     criteria.ShowNG = true;
                     break;
-                case 4:
+                case "Live Casino":
                     criteria.ShowLC = true;
                     break;
                 default:
