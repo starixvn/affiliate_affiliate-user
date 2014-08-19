@@ -38,5 +38,13 @@ namespace Fanex.Affiliate.DTO
         public double Turnover { get; set; }
 
         public double Psp { get; set; }
+
+        public double PlayerComm { get; set; }
+
+        public double PWin { get; set; }
+
+        public double PShare { get; set; }
+
+        public double NetGaming { get; set; }
     }
 }

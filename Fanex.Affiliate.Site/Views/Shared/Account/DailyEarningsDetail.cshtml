@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class="block">
-                <div class="content-block no-padding" style="overflow-x: scroll;">
+                <div class="content-block no-padding" style="overflow-x: auto;">
                     <table class="table odd-even list no-margin">
                         <thead>
                             @if (Model.ProductId == 0 || Model.ListProduct.Where(i => i.ProductId == Model.ProductId).First().ProductName == "Casino")
@@ -159,10 +159,10 @@
                                 totalWinlost += dailyEarningDetail.Winlost;
                                 totalBonus += dailyEarningDetail.Bonus;
                                 totalAdjustment += dailyEarningDetail.Adjustment;
-                                totalPlayerComm += dailyEarningDetail.Adjustment;
-                                totalPlaytechCasinoPShare += dailyEarningDetail.Adjustment;
-                                totalPlaytechCasinoPWin += dailyEarningDetail.Adjustment;
-                                totalPlaytechCasinoNetGaming += dailyEarningDetail.Adjustment;
+                                totalPlayerComm += dailyEarningDetail.PlayerComm;
+                                totalPlaytechCasinoPShare += dailyEarningDetail.PShare;
+                                totalPlaytechCasinoPWin += dailyEarningDetail.PWin;
+                                totalPlaytechCasinoNetGaming += dailyEarningDetail.NetGaming;
 
                                         <tr class="@(i % 2 == 0 ? "even" : "odd")">
                                             <td class="text-center">@count.ToString()
@@ -183,15 +183,15 @@
                                             </td>
                                             <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarningDetail.Turnover))
                                             </td>
-                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarningDetail.Turnover))
+                                            <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarningDetail.PlayerComm))
                                             </td>
                                             @if (Model.ProductId == 0 || Model.ListProduct.Where(l => l.ProductId == Model.ProductId).First().ProductName == "Casino")
                                             {
-                                                <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarningDetail.Turnover))
+                                                <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarningDetail.PShare))
                                                 </td>
-                                                <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarningDetail.Turnover))
+                                                <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarningDetail.PWin))
                                                 </td>
-                                                <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarningDetail.Turnover))
+                                                <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarningDetail.NetGaming))
                                                 </td>
                                             }
                                             <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarningDetail.Adjustment))

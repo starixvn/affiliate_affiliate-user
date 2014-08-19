@@ -33,5 +33,13 @@ namespace Fanex.Affiliate.DTO
         public decimal Turnover { get; set; }
 
         public decimal Psp { get; set; }
+
+        public decimal PlayerComm { get; set; }
+
+        public decimal PWin { get; set; }
+
+        public decimal PShare { get; set; }
+
+        public decimal NetGaming { get; set; }
     }
 }

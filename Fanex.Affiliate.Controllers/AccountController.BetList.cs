@@ -274,7 +274,7 @@ namespace Fanex.Affiliate.Controllers
 
             foreach (var item in listProduct)
             {
-                ViewBetListBySpecificProduct(criteria, item.ProductId);
+                ViewBetListBySpecificProduct(criteria, item.ProductName);
             }
         }
 
