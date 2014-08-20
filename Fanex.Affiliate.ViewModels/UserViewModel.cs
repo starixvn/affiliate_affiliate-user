@@ -79,6 +79,7 @@ namespace Fanex.Affiliate.ViewModels
 
         [Display(Name = "Address", ResourceType = typeof(Lang))]
         [Required(ErrorMessageResourceType = typeof(Lang), ErrorMessageResourceName = "AddressIsRequired")]
+        [StringLength(80, ErrorMessage = "The Address value cannot exceed 80 characters. ")]
         public string Address { get; set; }
 
         [Display(Name = "City", ResourceType = typeof(Lang))]
@@ -95,6 +96,7 @@ namespace Fanex.Affiliate.ViewModels
 
         [Display(Name = "SiteURL", ResourceType = typeof(Lang))]
         [Required(ErrorMessageResourceType = typeof(Lang), ErrorMessageResourceName = "SiteURLIsRequired")]
+        [StringLength(100, ErrorMessage = "The Site URL value cannot exceed 100 characters. ")]
         public string SiteURL { get; set; }
 
         [Display(Name = "MoreSiteURLs", ResourceType = typeof(Lang))]

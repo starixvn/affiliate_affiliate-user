@@ -201,6 +201,8 @@ namespace Fanex.Affiliate.Controllers
             model.ListProduct.ForEach(i => i.ProductName = ProductsFormatter.Format(i.ProductName));
             model.ProductId = criteria.ProductId;
             model.ListDailyEarning = AccountService.GetDailyEarnings(criteria).ToList();
+            model.ShowPlaytechCasinoData = (model.ProductId == 0 && model.ListProduct.Count(l => l.OriginalProductName == "Casino") > 0) 
+                || (model.ProductId != 0 && model.ListProduct.Where(i => i.ProductId == model.ProductId).First().OriginalProductName == "Casino");
             FormaterCurrency.SetDefaultCurrency(criteria.AffCurrency);
 
             return View(model);
@@ -255,6 +257,8 @@ namespace Fanex.Affiliate.Controllers
             criteria.AffId = CurrentSession.AffId;
             model.ProductId = criteria.ProductId;
             model.ListDailyEarningDetail = AccountService.GetDailyEarningsDetail(criteria).ToList();
+            model.ShowPlaytechCasinoData = (model.ProductId == 0 && model.ListProduct.Count(l => l.OriginalProductName == "Casino") > 0)
+                || (model.ProductId != 0 && model.ListProduct.Where(i => i.ProductId == model.ProductId).First().OriginalProductName == "Casino");
             FormaterCurrency.SetDefaultCurrency(criteria.AffCurrency);
             ViewBag.AffiliateCurrency = CurrentSession.Currency;
 

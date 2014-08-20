@@ -57,7 +57,7 @@
                 <div class="content-block no-padding" style="overflow-x: auto;">
                     <table class="table odd-even list no-margin">
                         <thead>
-                            @if(Model.ProductId == 0 || Model.ListProduct.Where(i=>i.ProductId == Model.ProductId).First().ProductName == "Casino")
+                            @if(Model.ShowPlaytechCasinoData)
                             {
                                 <tr class="gradient-header">
                                     <th style="width: 15px;" rowspan="2">
@@ -182,7 +182,7 @@
                                             </td>
                                             <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarning.PlayerComm))
                                             </td>
-                                            @if(Model.ProductId == 0 || Model.ListProduct.Where(l=>l.ProductId == Model.ProductId).First().ProductName == "Casino")
+                                            @if(Model.ShowPlaytechCasinoData)
                                             {
                                                 <td class="text-right">@Html.Raw(FormaterCurrency.Format(dailyEarning.PShare))
                                                 </td>
@@ -212,7 +212,7 @@
                                             </td>
                                             <td class="text-right">@Html.Raw(FormaterCurrency.Format(totalPlayerComm))
                                             </td>
-                                            @if(Model.ProductId == 0 || Model.ListProduct.Where(l=>l.ProductId == Model.ProductId).First().ProductName == "Casino")
+                                            @if(Model.ShowPlaytechCasinoData)
                                             {
                                                 <td class="text-right">@Html.Raw(FormaterCurrency.Format(totalPlaytechCasinoPShare))
                                                 </td>
@@ -233,7 +233,7 @@
                         {
                             <tfoot>
                                 <tr>
-                                    @if(Model.ProductId == 0 || Model.ListProduct.Where(l=>l.ProductId == Model.ProductId).First().ProductName == "Casino")
+                                    @if(Model.ShowPlaytechCasinoData)
                                     {
                                         <td colspan="11" style="text-align: center;">@Lang.NoInformation
                                         </td>

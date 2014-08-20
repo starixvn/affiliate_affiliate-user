@@ -34,5 +34,7 @@ namespace Fanex.Affiliate.ViewModels
         public List<Product> ListProduct { get; set; }
 
         public List<DailyEarningsDetail> ListDailyEarningDetail { get; set; }
+
+        public bool ShowPlaytechCasinoData { get; set; }
     }
 }
