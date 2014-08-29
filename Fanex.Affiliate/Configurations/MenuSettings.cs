@@ -79,7 +79,7 @@ namespace Fanex.Affiliate.Configurations
             }
         };
 
-        public static List<MenuItem> Menus()
+        public static ICollection<MenuItem> Menus()
         {
             return menusList;
         }

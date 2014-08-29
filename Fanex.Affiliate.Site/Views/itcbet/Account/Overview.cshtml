@@ -1,0 +1,235 @@
+﻿@{
+    ViewBag.Title = Lang.AccountOverview;
+    Layout = @String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
+}
+@model Fanex.Affiliate.ViewModels.AccountOverviewViewModel
+@using (Html.BeginForm("Overview", "Account"))
+{
+    var statistics = Model.Statistics;
+    <div class="span12 box-insite">
+        <div class="top">
+            <div class="in-top">
+                @Lang.AccountOverview
+            </div>
+            <div class="in-right">
+            </div>
+        </div>
+        <div class="content">
+            <div class="block">
+                <div class="title-block">
+                    @Html.Raw(string.Format(Lang.StatisticsFor, RazorHelper.GetMonthName(Model.Month), Model.Year))
+                    <div class="pull-right">
+                        @RazorHelper.DropDownListGetMonth(Model.Month, new Dictionary<string, object> { { "id", "month" } })
+                        @RazorHelper.DropDownListGetYear(AppSettings.SystemStartDate.Year, Model.Year, new Dictionary<string, object> { { "id", "year" } })
+                        <input type="submit" value="@Lang.Submit" class="button" />
+                    </div>
+                </div>
+                <div class="line-block">
+                </div>
+                <div class="content-block">
+                    <table cellspacing="2" cellpadding="2" border="0" class="table-striped odd-even">
+                        <tr class="odd">
+                            <td width="250px">@Lang.NewSignups
+                            </td>
+                            <td align="right" width="120px">
+                                @statistics.NewSignUp
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>@Lang.TotalActivePlayers
+                            </td>
+                            <td align="right">
+                                @statistics.TotalActivePlayer
+                            </td>
+                        </tr>
+                        @if (!AppSettings.IsKiosk)
+                        {
+                            <tr class="odd">
+                                <td>@Html.Raw(string.Format(Lang.TotalQualifiedActive,
+                                        "<a href='#' id='lnkProduct'>" + Model.FirstListProduct + "</a>"
+                                        + RazorHelper.DropDownListProduct(Model.ListProduct, Model.FirstListProduct, new Dictionary<string, object> { { "id", "ddlProduct" }, { "style", "display:none; width:100px;" } })))
+                                </td>
+                                <td id="totalqualifiedmembers" align="right">
+                                    @Model.TotalqualifedMembers
+                                </td>
+                            </tr>
+                            <tr class="even">
+                                <td>@Lang.TotalDeposits
+                                </td>
+                                <td align="right">
+                                    @Html.Raw(FormaterCurrency.Format(statistics.TotalDeposit, true, true))
+                                </td>
+                            </tr>
+                            <tr class="odd">
+                                <td>@Lang.Turnover
+                                </td>
+                                <td align="right">
+                                    @Html.Raw(FormaterCurrency.Format(statistics.TotalTurnover, true, true))
+                                </td>
+                            </tr>
+                        }
+                        else
+                        {
+                            <tr class="odd">
+                                <td>@Lang.TotalDeposits
+                                </td>
+                                <td align="right">
+                                    @Html.Raw(FormaterCurrency.Format(statistics.TotalDeposit, true, true))
+                                </td>
+                            </tr>
+                            <tr class="even">
+                                <td>@Lang.Turnover
+                                </td>
+                                <td align="right">
+                                    @Html.Raw(FormaterCurrency.Format(statistics.TotalTurnover, true, true))
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            </div>
+            <div class="block">
+                <div class="title-block">
+                    @Lang.StatisticsUpToNow
+                </div>
+                <div class="line-block">
+                </div>
+                <div class="content-block">
+                    <table cellspacing="2" cellpadding="2" border="0" class="table-striped odd-even">
+                        <tr class="odd">
+                            <td width="250px">@Lang.TotalPlayers
+                            </td>
+                            <td align="right" width="120px">
+                                @statistics.TotalPlayer
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>@Lang.Turnover
+                            </td>
+                            <td align="right">
+                                @Html.Raw(FormaterCurrency.Format(statistics.TotalTurnoverUp, true, true))
+                            </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>@Lang.TotalDeposits
+                            </td>
+                            <td align="right">
+                                @Html.Raw(FormaterCurrency.Format(statistics.TotalDepositUp, true, true))
+                            </td>
+                        </tr>
+                        @if (!AppSettings.IsKiosk)
+                        {
+                            <tr class="even">
+                                <td>@Lang.BalanceBroughtForward
+                                </td>
+                                <td align="right">
+                                    @Html.Raw(FormaterCurrency.Format(statistics.BalBroughtforward, true, true))
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            </div>
+            @if (!AppSettings.IsKiosk)
+            {
+                <div class="block">
+                    <div class="title-block">
+                        @Lang.CurrentCommissionSetting
+                    </div>
+                    <div class="line-block">
+                    </div>
+                    <div class="content-block">
+                        <table class="table odd-even list">
+                            <thead>
+                                <tr class="gradient-header">
+                                    <th style="width: 85px">
+                                        @Lang.Product
+                                    </th>
+                                    <th style="width: 10px">
+                                        @Lang.Tier
+                                    </th>
+                                    <th>
+                                        @string.Format(Lang.ComNetWin, FormaterCurrency.GetCurrencySymbol())
+                                    </th>
+                                    <th style="width: 130px">
+                                        @Lang.QualifyingMembers
+                                    </th>
+                                    <th style="width: 50px">
+                                        @Lang.Commission
+                                    </th>
+                                </tr>
+                            </thead>
+                            @if (Model.ListProductOnCommissionSetting.Any())
+                            {
+                                <tbody>
+                                    @{
+                                const int MAXQM = 1000000000;
+                                const long MAXAMOUNT = 100000000000000;
+                                var oldProductId = 0;
+                                var index = 0;
+                                foreach (var product in Model.ListProductOnCommissionSetting)
+                                {
+                                    var listGroupSetting = Model.ListGroupSetting.Where(p => p.ProductId == product.ProductId).ToList();
+                                    int totalShownTier = listGroupSetting.Count;
+                                    var noTier = 0;
+                                    if (totalShownTier > 0)
+                                    {
+                                        index++;
+                                        foreach (var groupSetting in listGroupSetting)
+                                        {
+                                            if (groupSetting.Commission != 0 || listGroupSetting.Count > 0)
+                                            {
+                                                        <tr class="@(index % 2 == 0 ? "even" : "odd")">
+                                                            @if (oldProductId != groupSetting.ProductId)
+                                                            {
+                                                                <td rowspan="@totalShownTier" class="bold text-center">
+                                                                    @ProductsFormatter.Format(product.ProductName)
+                                                                </td>
+                                                            }
+                                                            <td class="text-center">
+                                                                @(++noTier)
+                                                            </td>
+                                                            <td class="text-right">
+                                                                @string.Format("{0}{1}", FormaterCurrency.Format(groupSetting.MinAmount),
+                                                                    groupSetting.MaxAmount == MAXAMOUNT ? "+" : " - " + FormaterCurrency.Format(Convert.ToInt64(groupSetting.MaxAmount) + 0.99))
+                                                            </td>
+                                                            <td class="text-right">
+                                                                @string.Format("{0}{1}", groupSetting.MinQM, groupSetting.MaxQM == MAXQM ? "+" : " - " + groupSetting.MaxQM.ToString())
+                                                            </td>
+                                                            <td class="text-right">
+                                                                @string.Format("{0}%", Convert.ToDouble(groupSetting.Commission) * 100)
+                                                            </td>
+                                                        </tr>
+                                            }
+                                            else
+                                            {
+                                                totalShownTier--;
+                                            }
+                                            oldProductId = product.ProductId;
+                                        }
+                                    }
+                                }
+                                    }
+                                </tbody>
+                            }
+                            else
+                            {
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="5" align="center">@Lang.NoInformation
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            }
+                        </table>
+                        <br />
+                        @if(AppSettings.CompanyNegativeNetWin > 0)
+                        {
+                            <p>@string.Format(Lang.CompanyNegativeNetWin, AppSettings.CompanyNegativeNetWin)</p>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}

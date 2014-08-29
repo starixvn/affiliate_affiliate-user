@@ -11,6 +11,7 @@ namespace Fanex.Affiliate.Enumerations
 {
     public enum ErrorCode
     {
+        None = 0,
         /// <summary>
         /// Wrong username or password.
         /// </summary>

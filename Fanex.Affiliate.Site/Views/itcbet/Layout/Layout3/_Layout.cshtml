@@ -1,0 +1,43 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    var currentSession = SessionManager.CurrentSession;
+}
+@section css
+{
+    @RenderSection("css", required: false)
+}
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12 header">
+            <div class="row-fluid">
+                @Html.Partial("Header")
+                @Html.Partial("Menu")
+            </div>
+        </div>
+        <div class="span12 hotNews">
+            @Html.Partial("HotNews")
+        </div>
+        <div class="span12 login-banner">
+            <div class="row-fluid content">
+                <div class="span3 login-block">
+                    @(currentSession == null ? Html.Partial("SignIn") : Html.Partial("AfterSignIn"))</div>
+                <div class="span9 banner_main">
+                    <img src="~/Content/themes/theme3/images/banner.png" title="Banner" alt="Banner" />
+                </div>
+            </div>
+        </div>
+        <div class="span12 contents">
+            <div class="row-fluid">
+                @RenderBody()
+            </div>
+        </div>
+        <div class="span12 footer">
+            @Html.Partial("Footer")
+        </div>
+    </div>
+</div>
+@section scripts
+{
+}

@@ -1,0 +1,186 @@
+﻿@{
+    ViewBag.Title = Lang.ProgramDetails;
+    Layout = @String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
+}
+@model DefaultProductCommissionViewModel
+@{
+    string productList = string.Empty;
+
+    if (Model.ProductList.Count > 0)
+    {
+        foreach (var product in Model.ProductList)
+        {
+            productList += ProductsFormatter.Format(product.ProductName) + ", ";
+        }
+
+        productList = productList.Substring(0, productList.Length - 2);
+    }
+}
+
+@{
+    var classThai = AppSession.Language.Equals("th-TH") ? AppSession.Language : string.Empty;
+    var classType = string.Format("class='span12 box-insite {0}'", classThai);
+}
+
+<div @Html.Raw(classType)>
+    <div class="top">
+        <div class="in-top">@Lang.ProgramDetails</div>
+        <div class="in-right">
+        </div>
+    </div>
+    <div class="content">
+        <div class="block">
+            <div class="content-block">
+                <p>@Html.Raw(string.Format("Là hội viên của {0}, bạn sẽ được thanh toán tiền hoa hồng cho mỗi người chơi mà bạn giới thiệu tới {0} trong thời gian tồn tại tài khoản của người chơi. Hệ thống báo cáo trực tuyến của chúng tôi sẽ hoạt động 24 giờ/ngày, 7 ngày/tuần để bạn có thể sử dụng.", AppSettings.AffiliateName))</p>
+                <p>Số tiền bạn kiếm được tùy thuộc vào lượng lưu lượng bạn có thể gửi tới từ trang web của mình. Công việc của chúng tôi là hướng dẫn họ qua quá trình đăng ký, để họ thực hiện lần gửi tiền đầu tiên và duy trì việc hợp tác của họ với những khoản tiền thưởng và tiền tặng hấp dẫn. </p>
+            </div>
+        </div>
+        @if (!AppSettings.IsKiosk)
+        {
+            <div class="block">
+                <div class="title-block">
+                    Danh mục tiền tệ cho hội viên <a href="#" class="link-top"><span></span>@Lang.Top</a>
+                </div>
+                <div class="line-block">
+                </div>
+                <div class="content-block">
+                    <p>Chúng tôi cung cấp những loại tiền tệ cơ bản sau: @AppSettings.AffiliateBaseCurrencyList.</p>
+                    @{
+            var baseCurrencyList = AppSettings.AffiliateBaseCurrencyList.Split(',');
+            var multiplyByCurrencyList = AppSettings.AffiliateCurrencyListMultipliedBy.Split(',');
+            var commonCurrencyList = baseCurrencyList.Intersect(multiplyByCurrencyList);
+
+            if (commonCurrencyList.Any())
+            {
+                            <p>@string.Format("Trong các báo cáo và thiết lập hoa hồng, chúng tôi sẽ bỏ những chữ số 0 cuối cùng cho những loại tiền tệ như {0}. Ví dụ: 1{1} là {2}{1} theo giá trị thực.", AppSettings.AffiliateCurrencyListMultipliedBy, FormaterCurrency.GetCurrencySymbol(commonCurrencyList.First()), AppSettings.MulitpliedBy)</p>
+            }
+                    }
+                </div>
+            </div>
+            <div class="block">
+                <div class="title-block">
+                   Mức thu nhập của hội viên <a href="#" class="link-top"><span></span>@Lang.Top</a>
+                </div>
+                <div class="line-block">
+                </div>
+                <div class="content-block">
+                    <p>
+                        <b>Mô hình chia sẻ doanh thu</b>
+                        <br />
+                        Mô hình doanh thu chia sẻ của chúng tôi bao gồm các sản phẩm sau: @productList.
+                    </p>
+                    <p>Tổng tiền doanh thu chia sẻ sẽ là tổng số doanh thu của tất cả các sản phẩm. Dưới đây là một mô hình mẫu từ hệ thống của chúng tôi:</p>
+                    <table class="table odd-even list">
+                        <thead>
+                            <tr>
+                                <th style="width: 85px; text-align: center;">
+                                    @Lang.Product
+                                </th>
+                                <th style="width: 10px; text-align: center;">
+                                    @Lang.Tier
+                                </th>
+                                <th style="text-align: center;">
+                                    @string.Format(Lang.ComNetWin, AppSettings.DefaultCurrencySymbol)
+                                </th>
+                                <th style="width: 150px; text-align: center;">
+                                    @Lang.QualifyingMembers
+                                </th>
+                                <th style="width: 50px; text-align: center;">
+                                    @Lang.Commission
+                                </th>
+                            </tr>
+                        </thead>
+                        @if (Model.ProductList.Any())
+                        {
+                            <tbody>
+                                @{
+                            const int MAXQM = 1000000000;
+                            const long MAXAMOUNT = 100000000000000;
+                            var oldProductId = 0;
+                            var index = 0;
+                            foreach (var product in Model.ProductList)
+                            {
+                                var listGroupSetting = Model.GroupSetting.Where(p => (AppSettings.IsShowZeroCommission == "1") ? p.ProductId == product.ProductId : p.ProductId == product.ProductId && p.Commission != 0).ToList();
+                                int totalShownTier = listGroupSetting.Count;
+                                var noTier = 0;
+                                if (totalShownTier > 0)
+                                {
+                                    index++;
+                                    foreach (var groupSetting in listGroupSetting)
+                                    {
+
+                                            <tr class="@(index % 2 == 0 ? "even" : "odd")">
+                                                @if (oldProductId != groupSetting.ProductId)
+                                                {
+                                                    <td rowspan="@totalShownTier" class="bold text-center">
+                                                        @ProductsFormatter.Format(product.ProductName)
+                                                    </td>
+                                                }
+                                                <td class="text-center">
+                                                    @(++noTier)
+                                                </td>
+                                                <td class="text-right">
+                                                    @string.Format("{0}{1}", FormaterCurrency.Format(groupSetting.MinAmount),
+                                                    groupSetting.MaxAmount == MAXAMOUNT ? "+" : " - " + FormaterCurrency.Format(Convert.ToInt64(groupSetting.MaxAmount) + 0.99))
+                                                </td>
+                                                <td class="text-right">
+                                                    @string.Format("{0}{1}", groupSetting.MinQM,
+                                                    groupSetting.MaxQM == MAXQM ? "+" : " - " + groupSetting.MaxQM.ToString())
+                                                </td>
+                                                <td class="text-right">
+                                                    @string.Format("{0}%", Convert.ToDouble(groupSetting.Commission) * 100)
+                                                </td>
+                                            </tr>
+                                                oldProductId = product.ProductId;
+                                    }
+                                }
+                            }
+                                }
+                            </tbody>
+                        }
+                        else
+                        {
+                            <tfoot>
+                                <tr>
+                                    <td colspan="5" align="center">@Lang.NoInformation
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        }
+                    </table>
+                    <p>
+                        Giải thích cho bảng thiết lập hoa hồng mẫu trên đây:
+                        <br />
+                        TỔNG LỢI NHUẬN THỰC TRONG THÁNG = |- Tổng thắng thua của người chơi - Bất kỳ tiền thưởng - Khoản bồi hoàn - Bất kỳ lợi nhuận doanh thu khác - Các khoản tín dụng, tiền bồi thường hoặc tiền hoàn lại cho thành viên |
+                        @if (AppSettings.CompanyNegativeNetWin > 0)
+                        {
+                            <p>@string.Format("Trong trường hợp lợi nhuận công ty thu về là số âm, hội viên phải chịu ít nhất {0}% tiền lợi nhuận âm đó cùng công ty cho mỗi sản phẩm được liệt kê ở trên.", AppSettings.CompanyNegativeNetWin)</p>
+                        }
+                    </p>
+                    <span></span>
+                </div>
+            </div>
+            <div class="block">
+                <div class="title-block">Số dư âm<a href="#" class="link-top"><span></span>@Lang.Top</a>
+                </div>
+                <div class="line-block">
+                </div>
+                <div class="content-block">
+                    <p>@Html.Raw(string.Format("Số tiền thưởng bằng âm bất kỳ trong 1 tháng sẽ được chuyển tiếp vào tháng sau. Ví dụ: nếu cuối tháng 1 sau khi tổng kết, số tiền trong tài khoản của hội viên là -{0}2,555, số tiền này sẽ chuyển tiếp vào tháng 2. Nếu tháng 2 số dư trong tài khoản là {0}3,400, thì số dư tài khoản sẽ là {0}845 ({0}3,400 trừ {0}2,555). Nhưng nếu tháng 2 số dư vẫn là số âm, ví dụ là -{0}1,600, thì sẽ tiếp tục tích lũy sổ âm của tháng trước đến tháng sau, vậy số tiền chuyển đến tháng 3 sẽ là -{0}4,155. Hội viên sẽ hưởng hoa hồng thu nhập tương ứng với cấp bậc tỷ lệ .", AppSettings.DefaultCurrencySymbol))</p>
+                    <p>Xin lưu ý rằng, trên đây là 1 ví dụ cụ thể dành cho loại tiền @AppSettings.DefaultCurrency</p>
+                </div>
+            </div>
+            <div class="block">
+                <div class="title-block">
+                    Rút tiền hoa hồng <a href="#" class="link-top"><span></span>@Lang.Top</a>
+                </div>
+                <div class="line-block">
+                </div>
+                <div class="content-block">
+                    <p>@string.Format("Bạn có thể yêu cầu rút tiền bằng đơn vị tiền tệ như {0}. Tỷ lệ ngoại tệ sẽ được đổi dựa vào tỷ lệ ngày rút tiền hôm đó. ", string.Join(", ", AppSettings.PlayerCurrencies.OrderBy(c => c.CurrencyCode).Select(x => x.CurrencyCode).ToArray()))</p>
+                    <p>@string.Format("Chúng tôi cung cấp phương thức rút tiền thông qua tài khoản người chơi tại {0}. Số tiền tối thiểu cho mỗi đợt rút tiền được qui định cụ thể tùy theo loại tiền tệ mà bạn chọn.", AppSettings.AffiliateName)</p>
+                </div>
+            </div>
+        }
+    </div>
+</div>

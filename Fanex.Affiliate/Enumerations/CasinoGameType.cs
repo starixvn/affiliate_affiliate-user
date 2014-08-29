@@ -18,6 +18,7 @@ namespace Fanex.Affiliate.Enumerations
     [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1602:EnumerationItemsMustBeDocumented", Justification = "Reviewed.")]
     public enum CasinoGameType
     {
+        None = 0,
         LiveMiniBaccarat = 1,
         LiveBaccarat = 2,
         LiveRoulette = 6,
