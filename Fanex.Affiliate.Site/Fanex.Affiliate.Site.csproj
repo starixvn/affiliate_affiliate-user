@@ -1448,7 +1448,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\Shared\_AffResources.cshtml" />
-<<<<<<< HEAD
     <Content Include="Web.AppSettings.local.config" />
     <Content Include="Web.AppSettings.prod.config" />
     <Content Include="Web.AppSettings.uat.config" />
@@ -1469,7 +1468,6 @@
   <ItemGroup>
     <Folder Include="Content\themes\theme15\images\" />
     <Folder Include="Scripts\site\Casino\" />
-=======
     <Content Include="Views\itcbet\Layout\Layout1\_Layout.cshtml" />
     <Content Include="Views\itcbet\Layout\Layout1\_Layout_Notify.cshtml" />
     <Content Include="Views\itcbet\Layout\Layout2\_Layout.cshtml" />
@@ -1484,7 +1482,6 @@
     <Content Include="Views\itcbet\Home\Index.vi-VN.cshtml" />
     <Content Include="Views\itcbet\Home\Index.zh-CN.cshtml" />
     <Content Include="Views\itcbet\Account\Overview.cshtml" />
->>>>>>> ea8909e... #21386 - Merge - Modify text of Program Details and Account Overview
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
