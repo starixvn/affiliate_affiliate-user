@@ -12,12 +12,12 @@ namespace Fanex.Affiliate.Web.Filter
     using System;
     using System.Web.Mvc;
     using System.Web.Routing;
-    using Fanex.Affiliate.Services.Impl;
+    using Services;
 
     /// <summary>
     /// Attribute for under maintenance service.
     /// </summary>
-    public class UndermaintenanceAttribute : ActionFilterAttribute
+    public sealed class UndermaintenanceAttribute : ActionFilterAttribute
     {
         /// <summary>
         /// Action filter for under maintenance service.

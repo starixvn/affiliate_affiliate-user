@@ -11,6 +11,7 @@
 namespace Fanex.Affiliate.Criteria
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
     using NAP.Framework.Data;
 
     /// <summary>
@@ -18,8 +19,7 @@ namespace Fanex.Affiliate.Criteria
     /// </summary>
     public class BetListResultsRNGCasinoCriteria : CriteriaBase
     {
-        public long RefNo { get; set; }
-
+        [SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic", Justification = "Reviewed")]
         public string BetType
         {
             get
@@ -27,6 +27,8 @@ namespace Fanex.Affiliate.Criteria
                 return "Casino";
             }
         }
+
+        public long RefNo { get; set; }
 
         public bool IsShowPic { get; set; }
 

@@ -16,7 +16,7 @@ namespace Fanex.Affiliate.Web
     /// <summary>
     /// App Session.
     /// </summary>
-    public class AppSession
+    public static class AppSession
     {
         #region Const
         private const string _AFFILIATESESSIONCAPTCHA = "AffiliateCaptcha";

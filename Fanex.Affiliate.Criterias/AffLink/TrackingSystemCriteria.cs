@@ -10,6 +10,7 @@
 
 namespace Fanex.Affiliate.Criteria
 {
+    using System;
     using NAP.Framework.Data;
 
     /// <summary>
@@ -29,7 +30,7 @@ namespace Fanex.Affiliate.Criteria
 
         public string Browser { get; set; }
 
-        public string URLReferrer { get; set; }
+        public Uri URLReferrer { get; set; }
 
         public string DomainReferrer { get; set; }
 

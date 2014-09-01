@@ -10,6 +10,7 @@
 
 namespace Fanex.Affiliate.Criteria
 {
+    using System;
     using System.Web.Mvc;
     using NAP.Framework.Data;
 
@@ -62,7 +63,7 @@ namespace Fanex.Affiliate.Criteria
         
         public string PlayerCurrency { get; set; }
 
-        public string SiteURL { get; set; }
+        public Uri SiteURL { get; set; }
 
         public string MoreSiteURLs { get; set; }
 

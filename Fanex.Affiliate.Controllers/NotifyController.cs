@@ -11,7 +11,7 @@ namespace Fanex.Affiliate.Controllers
 {
     using System.Web.Mvc;
     using Configurations;
-    using Services.Impl;
+    using Services;
 
     /// <summary>
     /// Notify Controller.

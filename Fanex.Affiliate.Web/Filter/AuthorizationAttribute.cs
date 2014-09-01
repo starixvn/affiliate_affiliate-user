@@ -19,7 +19,7 @@ namespace Fanex.Affiliate.Web.Filter
     /// <summary>
     /// Authorization attribute.
     /// </summary>
-    public class AuthorizationAttribute : AuthorizeAttribute
+    public sealed class AuthorizationAttribute : AuthorizeAttribute
     {
         /// <summary>
         /// On authorization.
@@ -46,7 +46,7 @@ namespace Fanex.Affiliate.Web.Filter
         /// Do Un-authorized.
         /// </summary>
         /// <param name="filterContext">Authorization Context.</param>
-        private void DoUnAuthorized(AuthorizationContext filterContext)
+        private static void DoUnAuthorized(AuthorizationContext filterContext)
         {
             var response = filterContext.HttpContext.Response;
             if (filterContext.HttpContext.Request.IsAjaxRequest())

@@ -12,7 +12,7 @@ namespace Fanex.Affiliate.Controllers
     using System.Web.Mvc;
     using Configurations;
     using Criteria;
-    using Services.Interface;
+    using Services;
     using ViewModels;
     using Web;
     using Web.Filter;

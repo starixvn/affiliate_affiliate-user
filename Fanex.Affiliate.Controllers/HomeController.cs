@@ -13,7 +13,7 @@ namespace Fanex.Affiliate.Controllers
     using System.Xml;
     using Configurations;
     using Criteria;
-    using Services.Interface;
+    using Services;
 
     /// <summary>
     /// Home Controller.

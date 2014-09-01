@@ -17,9 +17,8 @@ namespace Fanex.Affiliate.Banner.Controllers
     using System.Web.Mvc;
     using Criteria;
     using DTO;
-    using Fanex.Affiliate.Services.Impl;
-    using Fanex.Affiliate.Services.Interface;
     using Microsoft.Practices.EnterpriseLibrary.Caching;
+    using Services;
 
     /// <summary>
     /// Marketing Tools controller of Affiliate Banner.

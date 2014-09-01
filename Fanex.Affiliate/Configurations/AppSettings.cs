@@ -22,8 +22,7 @@ namespace Fanex.Affiliate.Configurations
     using Criteria;
     using DTO;
     using Logging;
-    using Services.Impl;
-    using Services.Interface;
+    using Services;
 
     /// <summary>
     /// App Settings.
@@ -156,11 +155,11 @@ namespace Fanex.Affiliate.Configurations
             }
         }
 
-        public static string AffCustomerServiceUrl
+        public static Uri AffCustomerServiceUrl
         {
             get
             {
-                return GetValue("AffCustomerServiceUrl");
+                return new Uri(GetValue("AffCustomerServiceUrl"));
             }
         }
 
@@ -408,7 +407,7 @@ namespace Fanex.Affiliate.Configurations
             }
         }
 
-        public static string BannerScriptUrl
+        public static Uri BannerScriptUrl
         {
             get
             {
@@ -578,7 +577,7 @@ namespace Fanex.Affiliate.Configurations
             affiliateSettings.BannerDomain = GetCommonAffiliateSettingString(commonSetting, "BannerDomain");
             affiliateSettings.LicenseeID = GetCommonAffiliateSettingInteger(commonSetting, "LicenseeID");
             affiliateSettings.SystemName = GetCommonAffiliateSettingString(commonSetting, "SystemName");
-            affiliateSettings.BannerScriptUrl = GetCommonAffiliateSettingString(commonSetting, "BannerScriptUrl");
+            affiliateSettings.BannerScriptUrl = new Uri(GetCommonAffiliateSettingString(commonSetting, "BannerScriptUrl"));
             affiliateSettings.BannerDirectory = GetCommonAffiliateSettingString(commonSetting, "BannerDirectory");
             affiliateSettings.AffiliateSupportedLanguages = GetCommonAffiliateSettingString(commonSetting, "AFF_AffiliateSupportedLanguages");
             affiliateSettings.AffiliateBaseCurrencyList = GetCommonAffiliateSettingString(commonSetting, "AffiliateCurrencies");

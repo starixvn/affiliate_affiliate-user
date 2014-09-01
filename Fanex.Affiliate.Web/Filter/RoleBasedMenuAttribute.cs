@@ -20,7 +20,7 @@ namespace Fanex.Affiliate.Web.Filter
     /// <summary>
     /// Role Based Menu Attribute.
     /// </summary>
-    public class RoleBasedMenuAttribute : ActionFilterAttribute
+    public sealed class RoleBasedMenuAttribute : ActionFilterAttribute
     {
         /// <summary>
         /// On action executing.

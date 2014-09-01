@@ -17,7 +17,7 @@ namespace Fanex.Affiliate.Web.Filter
     /// <summary>
     /// Internal Checking Attribute.
     /// </summary>
-    public class InternalCheckingAttribute : ActionFilterAttribute
+    public sealed class InternalCheckingAttribute : ActionFilterAttribute
     {
         /// <summary>
         /// On action executing.

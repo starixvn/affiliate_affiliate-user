@@ -11,8 +11,7 @@ namespace Fanex.Affiliate.Site.App_Start
 {
     using System.Reflection;
     using System.Web.Mvc;
-    using Fanex.Affiliate.Services.Impl;
-    using Fanex.Affiliate.Services.Interface;
+    using Services;
     using SimpleInjector;
     using SimpleInjector.Integration.Web.Mvc;
 

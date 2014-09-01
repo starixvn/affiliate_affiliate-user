@@ -16,8 +16,7 @@ namespace Fanex.Affiliate.Controllers
     using Configurations;
     using Criteria;
     using Resources;
-    using Services.Impl;
-    using Services.Interface;
+    using Services;
     using Utilities;
     using ViewModels;
     using Web;

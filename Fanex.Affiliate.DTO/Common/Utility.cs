@@ -16,7 +16,7 @@ namespace Fanex.Affiliate.DTO
     /// <summary>
     /// Utility data object.
     /// </summary>
-    public class Utility
+    public static class Utility
     {
         /// <summary>
         /// Convert to date time.

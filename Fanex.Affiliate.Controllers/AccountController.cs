@@ -24,8 +24,7 @@ namespace Fanex.Affiliate.Controllers
     using DTO;
     using Enumerations;
     using Resources;
-    using Services.Impl;
-    using Services.Interface;
+    using Services;
     using StackExchange.Profiling;
     using Utilities;
     using ViewModels;

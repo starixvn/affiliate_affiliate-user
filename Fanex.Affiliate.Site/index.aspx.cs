@@ -13,9 +13,9 @@ namespace Fanex.Affiliate.Site
     using System;
     using System.Linq;
     using System.Web.UI;
-    using Fanex.Affiliate.Configurations;
-    using Fanex.Affiliate.Criteria;
-    using Fanex.Affiliate.Services.Impl;
+    using Configurations;
+    using Criteria;
+    using Services;
     using Web;
 
     /// <summary>

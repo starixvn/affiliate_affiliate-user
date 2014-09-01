@@ -153,32 +153,32 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GlimpseSecurityPolicy.cs" />
-    <Compile Include="Impl\AccountService.cs" />
-    <Compile Include="Impl\ContactUsService.cs" />
-    <Compile Include="Impl\BannerService.cs" />
-    <Compile Include="Impl\BetListService.cs" />
-    <Compile Include="Impl\HotNewsService.cs" />
-    <Compile Include="Impl\MessageService.cs" />
-    <Compile Include="Impl\EmailTemplateResolverService.cs" />
-    <Compile Include="Impl\PaymentService.cs" />
-    <Compile Include="Impl\ProductService.cs" />
-    <Compile Include="Impl\ServiceWrapper.cs" />
-    <Compile Include="Impl\TrackingSystemService.cs" />
-    <Compile Include="Impl\MarketingService.cs" />
-    <Compile Include="Impl\UserService.cs" />
-    <Compile Include="Interface\IBetListService.cs" />
-    <Compile Include="Interface\IBannerService.cs" />
-    <Compile Include="Interface\IHotNewsService.cs" />
-    <Compile Include="Interface\IContactUsService.cs" />
-    <Compile Include="Interface\IServiceWrapper.cs" />
-    <Compile Include="Interface\IMessageService.cs" />
-    <Compile Include="Interface\IAccountService.cs" />
-    <Compile Include="Interface\IEmailTemplateResolverService.cs" />
-    <Compile Include="Interface\IMarketingService.cs" />
-    <Compile Include="Interface\IPaymentService.cs" />
-    <Compile Include="Interface\IProductService.cs" />
-    <Compile Include="Interface\ITrackingSystemService.cs" />
-    <Compile Include="Interface\IUserService.cs" />
+    <Compile Include="AccountService.cs" />
+    <Compile Include="ContactUsService.cs" />
+    <Compile Include="BannerService.cs" />
+    <Compile Include="BetListService.cs" />
+    <Compile Include="HotNewsService.cs" />
+    <Compile Include="MessageService.cs" />
+    <Compile Include="EmailTemplateResolverService.cs" />
+    <Compile Include="PaymentService.cs" />
+    <Compile Include="ProductService.cs" />
+    <Compile Include="ServiceWrapper.cs" />
+    <Compile Include="TrackingSystemService.cs" />
+    <Compile Include="MarketingService.cs" />
+    <Compile Include="UserService.cs" />
+    <Compile Include="IBetListService.cs" />
+    <Compile Include="IBannerService.cs" />
+    <Compile Include="IHotNewsService.cs" />
+    <Compile Include="IContactUsService.cs" />
+    <Compile Include="IServiceWrapper.cs" />
+    <Compile Include="IMessageService.cs" />
+    <Compile Include="IAccountService.cs" />
+    <Compile Include="IEmailTemplateResolverService.cs" />
+    <Compile Include="IMarketingService.cs" />
+    <Compile Include="IPaymentService.cs" />
+    <Compile Include="IProductService.cs" />
+    <Compile Include="ITrackingSystemService.cs" />
+    <Compile Include="IUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\MemberSiteService\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -284,7 +284,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2014/3/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
+      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/3/28" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

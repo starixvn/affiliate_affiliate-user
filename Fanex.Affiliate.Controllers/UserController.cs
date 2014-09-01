@@ -24,8 +24,7 @@ namespace Fanex.Affiliate.Controllers
     using DTO;
     using Enumerations;
     using Resources;
-    using Services.Impl;
-    using Services.Interface;
+    using Services;
     using Utilities;
     using ViewModels;
     using Web;
@@ -146,7 +145,7 @@ namespace Fanex.Affiliate.Controllers
             criteria.State = WebUtility.HtmlEncode(user.State.TrimEnd().TrimStart());
             criteria.Postal = WebUtility.HtmlEncode(user.Postal.TrimEnd().TrimStart());
             criteria.Country = WebUtility.HtmlEncode(user.Country.TrimEnd().TrimStart());
-            criteria.SiteURL = WebUtility.HtmlEncode(user.SiteURL.TrimEnd().TrimStart());
+            criteria.SiteURL = new Uri(WebUtility.HtmlEncode(user.SiteURL.TrimEnd().TrimStart()));
             criteria.MoreSiteURLs = WebUtility.HtmlEncode(user.MoreSiteURLs);
             criteria.PreferredLanguage = user.Language;
             criteria.Currency = user.Currency;

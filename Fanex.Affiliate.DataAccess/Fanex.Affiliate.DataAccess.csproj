@@ -106,22 +106,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GlimpseSecurityPolicy.cs" />
-    <Compile Include="Impl\AccountDataAccess.cs" />
-    <Compile Include="Impl\ContactUsDataAccess.cs" />
-    <Compile Include="Impl\BannerDataAccess.cs" />
-    <Compile Include="Impl\BetListDataAccess.cs" />
-    <Compile Include="Impl\HotNewsDataAccess.cs" />
-    <Compile Include="Impl\PaymentDataAccess.cs" />
-    <Compile Include="Impl\TrackingSystemDataAccess.cs" />
-    <Compile Include="Impl\UserDataAccess.cs" />
-    <Compile Include="Interface\IBetListDataAccess.cs" />
-    <Compile Include="Interface\IBannerDataAccess.cs" />
-    <Compile Include="Interface\IHotNewsDataAccess.cs" />
-    <Compile Include="Interface\IContactUsDataAccess.cs" />
-    <Compile Include="Interface\IPaymentDataAccess.cs" />
-    <Compile Include="Interface\IAccountDataAccess.cs" />
-    <Compile Include="Interface\ITrackingSystemDataAccess.cs" />
-    <Compile Include="Interface\IUserDataAccess.cs" />
+    <Compile Include="AccountDataAccess.cs" />
+    <Compile Include="ContactUsDataAccess.cs" />
+    <Compile Include="BannerDataAccess.cs" />
+    <Compile Include="BetListDataAccess.cs" />
+    <Compile Include="HotNewsDataAccess.cs" />
+    <Compile Include="PaymentDataAccess.cs" />
+    <Compile Include="TrackingSystemDataAccess.cs" />
+    <Compile Include="UserDataAccess.cs" />
+    <Compile Include="IBetListDataAccess.cs" />
+    <Compile Include="IBannerDataAccess.cs" />
+    <Compile Include="IHotNewsDataAccess.cs" />
+    <Compile Include="IContactUsDataAccess.cs" />
+    <Compile Include="IPaymentDataAccess.cs" />
+    <Compile Include="IAccountDataAccess.cs" />
+    <Compile Include="ITrackingSystemDataAccess.cs" />
+    <Compile Include="IUserDataAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -187,10 +187,11 @@
     <Content Include="Content\Fanex.Result\images\last-goal.gif" />
     <Content Include="Content\Fanex.Result\images\tab_topbg.gif" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2014/3/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
+      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/3/28" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

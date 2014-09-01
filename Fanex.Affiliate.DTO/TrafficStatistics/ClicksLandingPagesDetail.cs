@@ -9,6 +9,8 @@
 
 namespace Fanex.Affiliate.DTO
 {
+    using System;
+
     /// <summary>
     /// Clicks Landing Pages Detail.
     /// </summary>
@@ -16,7 +18,7 @@ namespace Fanex.Affiliate.DTO
     {
         public long TheCount { get; set; }
 
-        public string UrlReferrer { get; set; }
+        public Uri UrlReferrer { get; set; }
 
         public int TotalClick { get; set; }
 

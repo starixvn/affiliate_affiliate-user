@@ -15,8 +15,7 @@ namespace Fanex.Affiliate.Link.Controllers
     using System.Globalization;
     using System.Web.Mvc;
     using Fanex.Affiliate.Criteria;
-    using Services.Impl;
-    using Services.Interface;
+    using Services;
     using Utilities;
 
     /// <summary>
@@ -105,7 +104,7 @@ namespace Fanex.Affiliate.Link.Controllers
                     LanguageCode = lang,
                     IP = Common.GetIPAddressOfClient(),
                     Browser = Request.Browser.Browser,
-                    URLReferrer = urlReferrer,
+                    URLReferrer = new Uri(urlReferrer),
                     DomainReferrer = domainReferrer,
                     OS = Common.GetOsName(Request.UserAgent),
                     Device = Common.GetDeviceName(Request.UserAgent),

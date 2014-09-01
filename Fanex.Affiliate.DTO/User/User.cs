@@ -9,6 +9,8 @@
 
 namespace Fanex.Affiliate.DTO
 {
+    using System;
+
     /// <summary>
     /// User data object.
     /// </summary>
@@ -60,7 +62,7 @@ namespace Fanex.Affiliate.DTO
 
         public bool EmailFormat { get; set; }
 
-        public string SiteURL { get; set; }
+        public Uri SiteURL { get; set; }
 
         public string MoreSiteURLs { get; set; }
 

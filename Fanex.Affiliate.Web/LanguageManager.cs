@@ -21,11 +21,6 @@ namespace Fanex.Affiliate.Web
     public class LanguageManager
     {
         /// <summary>
-        /// Culture USA.
-        /// </summary>
-        private static readonly CultureInfo _DefaultCulture = CultureInfo.CreateSpecificCulture(AppSettings.DefaultLanguage);
-        
-        /// <summary>
         /// Resource mapper language.
         /// </summary>
         private readonly ResourceManager _resourceManagerLang;
