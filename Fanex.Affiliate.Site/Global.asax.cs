@@ -44,7 +44,6 @@ namespace Fanex.Affiliate.Site
             // Start setting connect to DB
             DbSettingProviderManager.Current.Start();
             AreaRegistration.RegisterAllAreas();
-            WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);

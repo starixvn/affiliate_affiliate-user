@@ -465,8 +465,8 @@ namespace Fanex.Affiliate.Services.Impl
                                 new Racing
                                 {
                                     LeagueId = int.Parse(i["meetingid"].ToString()),
-                                    HorseId = i["HorseId"].ToString(),
-                                    HorseNo = i["HorseNo"].ToString(),
+                                    EngineId = i["HorseId"].ToString(),
+                                    EngineNo = i["HorseNo"].ToString(),
                                     IsFavor = i["IsFavor"] != DBNull.Value && i["IsFavor"].ToString().Equals("1") ? true : false,
                                     IsSCR = i["IsSCR"] != DBNull.Value && i["IsSCR"].ToString().Equals("1") ? true : false,
                                     Place = int.Parse(i["place"].ToString()),

@@ -35,7 +35,7 @@ namespace Fanex.Affiliate.Utilities
         /// <param name="currencyName">Currency Name.</param>
         /// <param name="username">User Name.</param>
         /// <returns>Ticket status text.</returns>
-        [SuppressMessage("Microsoft.Design", "CA1002:DoNotExposeGenericLists")]
+        [SuppressMessage("Microsoft.Design", "CA1002:DoNotExposeGenericLists", Justification = "Since Betlist.dll used that data-structure.")]
         public static string BuildAffBetListResultStatus(
             this BetListHTMLBuilder builder,
             AffTicket ticket,
