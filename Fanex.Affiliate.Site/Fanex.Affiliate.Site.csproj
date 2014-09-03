@@ -47,7 +47,6 @@
       <HintPath>..\packages\BundleTransformer.Less.1.6.26\lib\net40\BundleTransformer.Less.dll</HintPath>
     </Reference>
     <Reference Include="CasinoLibrary, Version=1.0.2.2, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\CasinoLibrary.1.0.2.2\lib\net40\CasinoLibrary.dll</HintPath>
     </Reference>
     <Reference Include="CasinoSetting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -59,6 +58,9 @@
     <Reference Include="dotless.Core">
       <HintPath>..\packages\dotless.1.3.1.0\lib\dotless.Core.dll</HintPath>
     </Reference>
+    <Reference Include="Fanex.Common, Version=1.0.404.97, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Common.1.0.404.97\lib\net40\Fanex.Common.dll</HintPath>
+    </Reference>
     <Reference Include="Fanex.Data, Version=0.5.404.63, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Fanex.Data.0.5.404.63\lib\net40\Fanex.Data.dll</HintPath>
@@ -67,8 +69,7 @@
       <HintPath>..\packages\Fanex.Logging.1.0.0.0\lib\net40\Fanex.Logging.dll</HintPath>
     </Reference>
     <Reference Include="Fanex.NAP.Framework, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Dependencies\Fanex.NAP.Framework.dll</HintPath>
+      <HintPath>..\packages\Fanex.NAP.Framework.1.0.0.3\lib\net40\Fanex.NAP.Framework.dll</HintPath>
     </Reference>
     <Reference Include="Fanex.Result.Core, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -103,8 +104,9 @@
     <Reference Include="ILogger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ILogger.1.0.0.0\lib\net40\ILogger.dll</HintPath>
     </Reference>
-    <Reference Include="log4net, Version=1.2.9.0, Culture=neutral, PublicKeyToken=b32731d11ce58905">
-      <HintPath>..\Dependencies\log4net.dll</HintPath>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ApplicationBlocks.Data, Version=3.1.0.0, Culture=neutral">
       <HintPath>..\packages\HandHistoryLibrary.2014.5.29.957\lib\net40\Microsoft.ApplicationBlocks.Data.dll</HintPath>
@@ -1419,7 +1421,6 @@
     <Content Include="Content\themes\theme9\images\ui-icons_454545_256x240.png" />
     <Content Include="Global.asax" />
     <Content Include="Index.aspx" />
-   
     <Content Include="Scripts\libraries\jquery-1.10.1.js" />
     <Content Include="Scripts\libraries\jquery-1.10.1.min.js" />
     <Content Include="Scripts\libraries\jquery-ui-languages.js" />
@@ -1465,7 +1466,6 @@
     <None Include="App_Data\Fanex.Result\Tennis.xls" />
     <None Include="App_Data\Fanex.Result\VSHRacing.xls" />
     <None Include="App_Data\Fanex.Result\VSTennis.xls" />
-   
     <Content Include="Views\itcbet\Account\Overview.cshtml" />
     <Content Include="Views\itcbet\Layout\Layout1\_Layout.cshtml" />
     <Content Include="Views\itcbet\Layout\Layout1\_Layout_Notify.cshtml" />
@@ -1884,7 +1884,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
