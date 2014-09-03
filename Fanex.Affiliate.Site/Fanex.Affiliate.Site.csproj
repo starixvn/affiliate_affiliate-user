@@ -234,10 +234,18 @@
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Content Include="App_Data\SpNames.sandbox.xml" />
-    <Content Include="App_Data\SpNames.local.xml" />
-    <Content Include="App_Data\SpNames.prod.xml" />
-    <Content Include="App_Data\SpNames.UAT.xml" />
+    <Content Include="App_Data\SpNames.local.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\SpNames.UAT.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\SpNames.sandbox.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\SpNames.prod.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\SpNames.xml">
       <SubType>Designer</SubType>
     </Content>

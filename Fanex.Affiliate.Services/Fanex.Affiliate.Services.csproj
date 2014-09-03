@@ -50,14 +50,13 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="CasinoLibrary, Version=1.0.2.2, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\CasinoLibrary.1.0.2.2\lib\net40\CasinoLibrary.dll</HintPath>
     </Reference>
     <Reference Include="CasinoSetting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\Dependencies\CasinoSetting.dll</HintPath>
+      <HintPath>..\packages\CasinoSetting.1.0.0.0\lib\net40\CasinoSetting.dll</HintPath>
     </Reference>
     <Reference Include="CasinoUtility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\Dependencies\CasinoUtility.dll</HintPath>
+      <HintPath>..\packages\CasinoUtility.1.2.9.0\lib\net40\CasinoUtility.dll</HintPath>
     </Reference>
     <Reference Include="Couchbase">
       <HintPath>..\packages\Fanex.Caching.1.0.404.95\lib\net40\Couchbase.dll</HintPath>
@@ -89,16 +88,16 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Fanex.Result.Core-NPOI.2.0.6.1.5.3.0\lib\net40\Fanex.Result.Core.dll</HintPath>
     </Reference>
-    <Reference Include="GotDotNet.ApplicationBlocks.Data">
+    <Reference Include="GotDotNet.ApplicationBlocks.Data, Version=3.1.0.0, Culture=neutral">
       <HintPath>..\packages\HandHistoryLibrary.2014.5.29.957\lib\net40\GotDotNet.ApplicationBlocks.Data.dll</HintPath>
     </Reference>
     <Reference Include="HandHistoryLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\HandHistoryLibrary.2014.5.29.957\lib\net40\HandHistoryLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="IBCCrypt">
+    <Reference Include="IBCCrypt, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.Crypt.1.1.0.0\lib\net40\IBCCrypt.dll</HintPath>
     </Reference>
-    <Reference Include="IBCDBLibrary">
+    <Reference Include="IBCDBLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.DBLibrary.1.0.0.0\lib\net40\IBCDBLibrary.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
@@ -107,10 +106,11 @@
     <Reference Include="ILogger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ILogger.1.0.0.0\lib\net40\ILogger.dll</HintPath>
     </Reference>
-    <Reference Include="log4net">
-      <HintPath>..\Dependencies\log4net.dll</HintPath>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ApplicationBlocks.Data">
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=3.1.0.0, Culture=neutral">
       <HintPath>..\packages\HandHistoryLibrary.2014.5.29.957\lib\net40\Microsoft.ApplicationBlocks.Data.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -137,7 +137,7 @@
     <Reference Include="NetUtility, Version=1.0.4199.22106, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\HandHistoryLibrary.2014.5.29.957\lib\net40\NetUtility.dll</HintPath>
     </Reference>
-    <Reference Include="Nini">
+    <Reference Include="Nini, Version=1.1.0.0, Culture=neutral, PublicKeyToken=691faec150a7fa7b, processorArchitecture=MSIL">
       <HintPath>..\packages\Trove.Nini.1.1.0.0\lib\net20\Nini.dll</HintPath>
     </Reference>
     <Reference Include="NPOI, Version=2.0.6.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
