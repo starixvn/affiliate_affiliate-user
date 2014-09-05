@@ -1,5 +1,4 @@
-﻿
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <Functions>
   <Function Name="Aff-Account">
     <Setting Key="Aff_User_AffiliateLogin" SpName="Aff_User_AffiliateLogin" DbName="DBAFFM8BOLA.Affiliate_m8bola.bodbDownlineNet" Plain="0" />
@@ -89,5 +88,4 @@
   <Function Name="Aff-Link">
     <Setting Key="Aff_Link_AffiliateInsClickStatistics" SpName="Aff_Link_AffiliateInsClickStatistics" DbName="DBAFFM8BOLA.Affiliate_m8bola.bodbDownlineNet" Plain="0" />
   </Function>
-
 </Functions>
