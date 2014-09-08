@@ -52,7 +52,7 @@ namespace Fanex.Affiliate.Site
         }
 
         #region Components
-        
+
         /// <summary>
         /// Registers the JAVASCRIPT component bundles.
         /// </summary>
@@ -105,7 +105,7 @@ namespace Fanex.Affiliate.Site
             .Include("~/Content/themes/base/calendar.less"));
         }
 
-        #endregion
+        #endregion Components
 
         #region Functions
 
@@ -152,7 +152,7 @@ namespace Fanex.Affiliate.Site
             // Media gallery
             bundles.Add(new ScriptBundle("~/js/mediagallery")
                 .Include("~/Scripts/site/mediagallery.js"));
-            
+
             // Payment request
             bundles.Add(new ScriptBundle("~/js/paymentrequest")
                 .Include("~/Scripts/site/paymentrequest.js"));
@@ -179,7 +179,7 @@ namespace Fanex.Affiliate.Site
 
             bundles.Add(new ScriptBundle("~/js/message")
                 .Include("~/Scripts/site/message.js"));
-            
+
             bundles.Add(new ScriptBundle("~/js/contactus")
                 .Include("~/Scripts/site/contact-us.js"));
         }
@@ -216,6 +216,6 @@ namespace Fanex.Affiliate.Site
             .Include("~/Content/betlist/systemparlay.detail.css"));
         }
 
-        #endregion
+        #endregion Functions
     }
 }

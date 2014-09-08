@@ -73,7 +73,7 @@
 
   <Function Name="Aff-Message">
     <Setting Key="Aff_User_HotNewsSel_New" SpName="Aff_User_HotNewsSel_New" DbName="affiliate" Plain="0" />
-    <Setting Key="Aff_User_HotNewsDetail_New" SpName="Aff_User_HotNewsDetail_New" DbName="affiliate" Plain="0"/>
+    <Setting Key="Aff_User_HotNewsDetail_New" SpName="Aff_User_HotNewsDetail_New" DbName="affiliate" Plain="0" />
   </Function>
 
   <Function Name="Aff-Contact-Us">
@@ -88,5 +88,4 @@
   <Function Name="Aff-Link">
     <Setting Key="Aff_Link_AffiliateInsClickStatistics" SpName="Aff_Link_AffiliateInsClickStatistics" DbName="affiliate" Plain="0" />
   </Function>
-
 </Functions>
