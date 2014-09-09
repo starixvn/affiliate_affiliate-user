@@ -16,6 +16,11 @@ using JSoft.Utility;
 /// </summary>
 public partial class HistoryImage_PokerWheel : System.Web.UI.Page
 {
+    /// <summary>
+    /// Page load.
+    /// </summary>
+    /// <param name="sender">Object sender.</param>
+    /// <param name="e">Event arguments.</param>
     protected void Page_Load(object sender, EventArgs e)
     {
         GenImage_PokerWheel objImg = new GenImage_PokerWheel();

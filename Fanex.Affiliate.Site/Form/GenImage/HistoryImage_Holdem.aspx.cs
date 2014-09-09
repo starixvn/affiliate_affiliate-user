@@ -16,6 +16,11 @@ using JSoft.Utility;
 /// </summary>
 public partial class HistoryImage_Holdem : System.Web.UI.Page
 {
+    /// <summary>
+    /// Page load.
+    /// </summary>
+    /// <param name="sender">Object sender.</param>
+    /// <param name="e">Event arguments.</param>
     protected void Page_Load(object sender, EventArgs e)
     {
         GenImage_Holdem objImg = new GenImage_Holdem();

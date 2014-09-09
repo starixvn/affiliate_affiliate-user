@@ -16,6 +16,11 @@ using JSoft.Utility;
 /// </summary>
 public partial class HistoryImage_TattooArt : System.Web.UI.Page
 {
+    /// <summary>
+    /// Page load.
+    /// </summary>
+    /// <param name="sender">Object sender.</param>
+    /// <param name="e">Event arguments.</param>
     protected void Page_Load(object sender, EventArgs e)
     {
         GenImage_TattooArt objImg = new GenImage_TattooArt();

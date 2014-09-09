@@ -16,6 +16,11 @@ using LiveCasinoLibrary.SBAgent;
 /// </summary>
 public partial class LiveGenHistoryImg_GenImage : System.Web.UI.Page
 {
+    /// <summary>
+    /// Page load.
+    /// </summary>
+    /// <param name="sender">Object sender.</param>
+    /// <param name="e">Event arguments.</param>
     protected void Page_Load(object sender, EventArgs e)
     {
         string strGameType = StringUtil.CStr(Request["GameType"]); // 遊戲分類

@@ -16,6 +16,11 @@ using JSoft.Utility;
 /// </summary>
 public partial class GenHistoryImg : System.Web.UI.Page
 {
+    /// <summary>
+    /// Page load.
+    /// </summary>
+    /// <param name="sender">Object sender.</param>
+    /// <param name="e">Event arguments.</param>
     protected void Page_Load(object sender, EventArgs e)
     {
         string strGameType = StringUtil.CStr(Request["GameType"], true); // 遊戲分類
