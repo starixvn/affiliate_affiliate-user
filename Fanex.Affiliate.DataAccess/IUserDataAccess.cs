@@ -28,6 +28,12 @@ namespace Fanex.Affiliate.DataAccess
         User AuthenticateUser(AffiliateLoginCriteria criteria);
 
         /// <summary>
+        /// Update login result into DB.
+        /// </summary>
+        /// <param name="criteria">Input criteria.</param>
+        void UpdateLoginResult(AffiliateLoginResultCriteria criteria);
+
+        /// <summary>
         /// Check Is kicked out.
         /// </summary>
         /// <param name="criteria">Re-check in criteria.</param>

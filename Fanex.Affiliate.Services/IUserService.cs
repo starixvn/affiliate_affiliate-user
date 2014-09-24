@@ -27,6 +27,12 @@ namespace Fanex.Affiliate.Services
         User AuthenticateUser(AffiliateLoginCriteria criteria);
 
         /// <summary>
+        /// Update login result into DB.
+        /// </summary>
+        /// <param name="criteria">Input criteria.</param>
+        void UpdateLoginResult(AffiliateLoginResultCriteria criteria);
+
+        /// <summary>
         /// Validates a username and password.
         /// </summary>
         /// <param name="criteria">Input criteria.</param>

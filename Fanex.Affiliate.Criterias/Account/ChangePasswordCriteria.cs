@@ -1,10 +1,11 @@
-﻿// --------------------------------------------------------------------------
+﻿// ----------------------------------------------------------------------
 // <copyright file="ChangePasswordCriteria.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
+//     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
 // </copyright>
-// --------------------------------------------------------------------------
+// ------------------------------------------------------------------------
 // <history>
-//   <change who="Leo.Vo" date="2013.07.05">Created</change>
+//   <change who="Long.Luu" date="2014/09/23">Created</change>
+//   <change who="" date=""></change>
 // </history>
 
 namespace Fanex.Affiliate.Criteria
@@ -22,7 +23,7 @@ namespace Fanex.Affiliate.Criteria
         public int AffId { get; set; }
 
         [Required(ErrorMessageResourceName = "OldPasswordRequired", ErrorMessageResourceType = typeof(Lang))]
-        [SpParam(SqlParamName = "oldpwd")]
+        [SpParam(Ignored = true)]
         [AllowHtml]
         public string OldPassword { get; set; }
 
@@ -36,7 +37,12 @@ namespace Fanex.Affiliate.Criteria
         [AllowHtml]
         public string ConfirmPassword { get; set; }
 
-        public string Ip { get; set; }
+        [SpParam(Ignored = true)]
+        public string SecureToken { get; set; }
+
+        public bool IsSuccess { get; set; }
+
+        public string IP { get; set; }
 
         public string Language { get; set; }
 
@@ -48,7 +54,7 @@ namespace Fanex.Affiliate.Criteria
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_User_AffiliateUpdPwd";
+            return "Aff_User_SecureUpdPasswordUpdate";
         }
     }
 }

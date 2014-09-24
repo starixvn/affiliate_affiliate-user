@@ -13,6 +13,7 @@ namespace Fanex.Affiliate.Controllers
     using System.Xml;
     using Configurations;
     using Criteria;
+    using Fanex.Affiliate.Web;
     using Services;
 
     /// <summary>
@@ -55,6 +56,7 @@ namespace Fanex.Affiliate.Controllers
             };
 
             var model = _accountService.GetDefaultProductCommission(criteria);
+            this.AddLoginTokenToCookie(AppSession.SecureLoginToken);
 
             return View(model);
         }

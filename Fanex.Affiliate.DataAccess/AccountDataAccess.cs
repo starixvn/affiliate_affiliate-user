@@ -18,6 +18,7 @@ namespace Fanex.Affiliate.DataAccess
     using Criteria;
     using Data;
     using DTO;
+    using Fanex.NAP.Framework.Command;
     using ViewModels;
 
     /// <summary>
@@ -154,7 +155,32 @@ namespace Fanex.Affiliate.DataAccess
         /// Changes the password.
         /// </summary>
         /// <param name="criteria">The criteria.</param>
-        public void ChangePassword(ChangePasswordCriteria criteria)
+        /// <returns>Old-Password string.</returns>
+        public string GetChangePasswordInfo(ChangePasswordInfoCriteria criteria)
+        {
+            var oldPassword = string.Empty;
+
+            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            {
+                var param = criteria.GetSpParams();
+                var reader = objectDb.ExecuteReader(param);
+
+                while (reader.Read())
+                {
+                    oldPassword = reader["password"].ToString();
+                }
+
+                criteria.ErrCode = Converter.ToInt(objectDb.GetOuputParams()["errcode"]);
+            }
+
+            return oldPassword;
+        }
+
+        /// <summary>
+        /// Update change password result into DB.
+        /// </summary>
+        /// <param name="criteria">Input criteria.</param>
+        public void UpdateChangePasswordResult(ChangePasswordCriteria criteria)
         {
             using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
             {

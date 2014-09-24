@@ -15,7 +15,9 @@ namespace Fanex.Affiliate.Controllers
     using System;
     using System.Globalization;
     using System.Net;
+    using System.Text;
     using System.Text.RegularExpressions;
+    using System.Web;
     using System.Web.Mvc;
     using System.Web.Routing;
     using System.Web.Security;
@@ -253,9 +255,10 @@ namespace Fanex.Affiliate.Controllers
         /// <param name="username">User name parameter.</param>
         /// <param name="password">Password parameter.</param>
         /// <param name="captcha">Captcha parameter.</param>
+        /// <param name="loginToken">Login token.</param>
         /// <returns>Return view.</returns>
         [HttpPost]
-        public ActionResult SignIn(string username, string password, string captcha)
+        public ActionResult SignIn(string username, string password, string captcha, string loginToken)
         {
             var result = new ResultViewModel();
             if (!Request.IsAjaxRequest())
@@ -265,41 +268,88 @@ namespace Fanex.Affiliate.Controllers
             }
             else if (ModelState.IsValid)
             {
-                var isValidCaptcha = IsValidCaptcha(captcha, false);
-                if (!isValidCaptcha)
+                if (!IsValidCaptcha(captcha, false))
                 {
-                    result.Success = false;
-                    result.Message = Lang.MsgIncorrectCaptchaMsg;
+                    return Json(new ResultViewModel
+                        {
+                            Success = false,
+                            Message = Lang.MsgIncorrectCaptchaMsg
+                        });
+                }
+
+                var errorCode = 0;
+                var user = GetUserInfoBasedOnUsername(username, ref errorCode);
+                if (errorCode != 0 && user.AffId <= 0)
+                {
+                    result = GetResultModel(errorCode);
+
+                    return Json(result);
+                }
+
+                var hashPasswordFromDB = Common.EncryptUsingSHA256(user.Password + loginToken);
+                if (password == hashPasswordFromDB)
+                {
+                    result.Success = true;
                 }
                 else
                 {
-                    var language = AppSession.Language;
-                    var criteria = new AffiliateLoginCriteria
-                        {
-                            Username = username.Trim(),
-                            Password = password.Trim(),
-                            LoginIp = Common.GetIPAddressOfClient(),
-                            Language = language,
-                            InputAffType = AppSettings.InputAffType,
-                            ServerId = AppSettings.ServerId,
-                            NetSessionID = Session.SessionID
-                        };
+                    result = GetResultModel((int)ErrorCode.WrongUserOrPassword);
+                }
 
-                    var user = _userService.AuthenticateUser(criteria);
-                    if (criteria.ErrCode == 0 && user.AffId > 0)
-                    {
-                        FormsAuthentication.SetAuthCookie(username, true);
-                        SessionManager.CurrentSession = new CurrentSession(user, language);
-                        result.Success = true;
-                    }
-                    else
-                    {
-                        result = GetResultModel(criteria.ErrCode);
-                    }
+                var currentUserId = UpdateLoginInfo(user.AffId, result.Success);
+                if (result.Success)
+                {
+                    user.OnUserID = currentUserId;
+                    FormsAuthentication.SetAuthCookie(username, true);
+                    SessionManager.CurrentSession = new CurrentSession(user, AppSession.Language);
                 }
             }
 
             return Json(result);
+        }
+
+        /// <summary>
+        /// Get user info based on User name.
+        /// </summary>
+        /// <param name="username">User name.</param>
+        /// <param name="errorCode">Error code.</param>
+        /// <returns>User Information.</returns>
+        public User GetUserInfoBasedOnUsername(string username, ref int errorCode)
+        {
+            var criteria = new AffiliateLoginCriteria
+                {
+                    Username = username.Trim(),
+                    InputAffType = AppSettings.InputAffType,
+                    ServerId = AppSettings.ServerId,
+                    LoginIp = Common.GetIPAddressOfClient()
+                };
+
+            var userInfo = _userService.AuthenticateUser(criteria);
+            errorCode = criteria.ErrCode;
+
+            return userInfo;
+        }
+
+        /// <summary>
+        /// Update login result into DB.
+        /// </summary>
+        /// <param name="affId">Affiliate ID.</param>
+        /// <param name="loginSuccess">Login Result.</param>
+        /// <returns>On User ID.</returns>
+        public int UpdateLoginInfo(int affId, bool loginSuccess)
+        {
+            var loginResultCriteria = new AffiliateLoginResultCriteria
+            {
+                AffId = affId,
+                IsSuccess = loginSuccess,
+                ServerID = AppSettings.ServerId,
+                LoginIP = Common.GetIPAddressOfClient(),
+                NetSessionID = Session.SessionID
+            };
+
+            _userService.UpdateLoginResult(loginResultCriteria);
+
+            return loginResultCriteria.OnUserID;
         }
 
         /// <summary>

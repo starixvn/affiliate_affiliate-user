@@ -766,42 +766,54 @@ namespace Fanex.Affiliate.Controllers
         [HttpPost]
         public ActionResult ChangePassword(ChangePasswordCriteria criteria)
         {
+            CheckPasswordFormat(criteria);
+
             if (ModelState.IsValid)
             {
-                criteria.OldPassword = criteria.OldPassword.Trim();
-                criteria.NewPassword = criteria.NewPassword.Trim();
-                criteria.ConfirmPassword = criteria.ConfirmPassword.Trim();
-                if (criteria.NewPassword != criteria.ConfirmPassword)
+                var passwordFromDB = AccountService.GetChangePasswordInfo(new ChangePasswordInfoCriteria
                 {
-                    ModelState.AddModelError("ConfirmPassword", Lang.PasswordNotMatched);
+                    AffId = CurrentSession.AffId
+                });
+
+                passwordFromDB = Common.EncryptUsingSHA256(passwordFromDB + criteria.SecureToken);
+                criteria.AffId = CurrentSession.AffId;
+                criteria.IP = Common.GetIPAddressOfClient();
+                criteria.Language = CurrentSession.Language;
+                criteria.IsSuccess = passwordFromDB == criteria.OldPassword;
+                AccountService.UpdateChangePasswordResult(criteria);
+                if (criteria.ErrCode == 0)
+                {
+                    ViewBag.Result = new ResultViewModel { Success = true, Message = Lang.PwdChanged };
                 }
-
-                var digitCount = criteria.NewPassword.Count(letter => letter >= '0' && letter <= '9');
-
-                if (criteria.NewPassword.Length < 6 || digitCount < 2 || (criteria.NewPassword.Length - digitCount) < 2)
+                else
                 {
-                    ModelState.AddModelError("NewPassword", Lang.PasswordPattern);
-                }
-
-                if (ModelState.IsValid)
-                {
-                    criteria.AffId = CurrentSession.AffId;
-                    criteria.Ip = Common.GetIPAddressOfClient();
-                    criteria.Language = CurrentSession.Language;
-                    AccountService.ChangePassword(criteria);
-                    if (criteria.ErrCode == 0)
-                    {
-                        var result = new ResultViewModel { Success = true, Message = Lang.PwdChanged };
-                        ViewBag.Result = result;
-                        return View();
-                    }
-
-                    var errMsg = Common.GetErrorMsg(criteria.ErrCode);
-                    ModelState.AddModelError(criteria.ErrCode == 150 ? "OldPassword" : "NewPassword", errMsg);
+                    ModelState.AddModelError("OldPassword", Common.GetErrorMsg(criteria.ErrCode));
                 }
             }
 
             return View();
+        }
+
+        /// <summary>
+        /// Check whether the format of passwords inputted from user are correct.
+        /// </summary>
+        /// <param name="criteria">Change password criteria.</param>
+        public void CheckPasswordFormat(ChangePasswordCriteria criteria)
+        {
+            criteria.OldPassword = criteria.OldPassword.Trim();
+            criteria.NewPassword = criteria.NewPassword.Trim();
+            criteria.ConfirmPassword = criteria.ConfirmPassword.Trim();
+            if (criteria.NewPassword != criteria.ConfirmPassword)
+            {
+                ModelState.AddModelError("ConfirmPassword", Lang.PasswordNotMatched);
+            }
+
+            var digitCount = criteria.NewPassword.Count(letter => letter >= '0' && letter <= '9');
+
+            if (criteria.NewPassword.Length < 6 || digitCount < 2 || (criteria.NewPassword.Length - digitCount) < 2)
+            {
+                ModelState.AddModelError("NewPassword", Lang.PasswordPattern);
+            }
         }
 
         #endregion Change Password

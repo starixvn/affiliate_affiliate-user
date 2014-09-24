@@ -16,6 +16,8 @@ namespace Fanex.Affiliate.Utilities
     using System.Globalization;
     using System.Linq;
     using System.Resources;
+    using System.Security.Cryptography;
+    using System.Text;
     using System.Web;
     using Fanex.Affiliate.DTO;
     using Fanex.MailDeliver.MailClient.API;
@@ -249,6 +251,19 @@ namespace Fanex.Affiliate.Utilities
             }
 
             return string.Empty;
+        }
+
+        /// <summary>
+        /// Encrypt a string using SHA256.
+        /// </summary>
+        /// <param name="inputString">Input string.</param>
+        /// <returns>Encrypted string.</returns>
+        public static string EncryptUsingSHA256(string inputString)
+        {
+            var hashAlgorithm = new SHA256Managed();
+            var hashData = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(inputString));
+
+            return BitConverter.ToString(hashData).Replace("-", string.Empty).ToLower();
         }
     }
 }

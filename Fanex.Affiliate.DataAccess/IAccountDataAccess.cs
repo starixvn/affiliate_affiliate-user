@@ -59,7 +59,14 @@ namespace Fanex.Affiliate.DataAccess
         /// Changes the password.
         /// </summary>
         /// <param name="criteria">The criteria.</param>
-        void ChangePassword(ChangePasswordCriteria criteria);
+        /// <returns>Old-Password string.</returns>
+        string GetChangePasswordInfo(ChangePasswordInfoCriteria criteria);
+
+        /// <summary>
+        /// Update change password result into DB.
+        /// </summary>
+        /// <param name="criteria">Input criteria.</param>
+        void UpdateChangePasswordResult(ChangePasswordCriteria criteria);
 
         /// <summary>
         /// Get Default Product Commission.

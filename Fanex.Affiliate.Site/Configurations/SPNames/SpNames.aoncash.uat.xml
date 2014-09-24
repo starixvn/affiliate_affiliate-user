@@ -1,14 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Functions>
   <Function Name="Aff-Account">
-    <Setting Key="Aff_User_AffiliateLogin" SpName="Aff_User_AffiliateLogin" DbName="DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_User_SecureLoginInfo" SpName="Aff_User_SecureLoginInfo" DbName="DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_User_SecureLoginUpdate" SpName="Aff_User_SecureLoginUpdate" DbName="DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet" Plain="0" />
     <Setting Key="Aff_User_Recheckin" SpName="Aff_User_Recheckin" DbName="DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet" Plain="0" />
     <Setting Key="Aff_User_Logout" SpName="Aff_User_Logout" DbName="DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet" Plain="0" />
     <Setting Key="Aff_User_AffiliateForgotPwd" SpName="Aff_User_AffiliateForgotPwd" DbName="DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet" Plain="0" />
     <Setting Key="Aff_User_AffiliateRecoverPwd" SpName="Aff_User_AffiliateRecoverPwd" DbName="DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet" Plain="0" />
     <Setting Key="Aff_User_OnUserSelNetSessionID" SpName="Aff_User_OnUserSelNetSessionID" DbName="DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet" Plain="0" />
     <Setting Key="Aff_User_AffiliateInternalLogin" SpName="Aff_User_AffiliateInternalLogin" DbName="DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet" Plain="0" />
-    <Setting Key="Aff_User_AffiliateUpdPwd" SpName="Aff_User_AffiliateUpdPwd" DbName="DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_User_SecureUpdPasswordInfo" SpName="Aff_User_SecureUpdPasswordInfo" DbName="DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_User_SecureUpdPasswordUpdate" SpName="Aff_User_SecureUpdPasswordUpdate" DbName="DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet" Plain="0" />
   </Function>
 
   <Function Name="Aff-Account-Overview">
@@ -30,7 +32,7 @@
     <Setting Key="Aff_User_BetListResult_SelMatch" SpName="Aff_User_BetListResult_SelMatch" DbName="DBEXT.bodb02.bodbAdminNet" Plain="0" />
     <Setting Key="Aff_User_BetListResult_SelMatchParlay" SpName="Aff_User_BetListResult_SelMatchParlay" DbName="DBEXT.bodb02.bodbAdminNet" Plain="0" />
     <Setting Key="Aff_User_BetListResult_SelMatchNumberGame" SpName="Aff_User_BetListResult_SelMatchNumberGame" DbName="DBEXT.bodb02.bodbAdminNet" Plain="0" />
-</Function>
+  </Function>
 
   <Function Name="Aff-CustomerInfo">
     <Setting Key="Aff_User_MemberListSel" SpName="Aff_User_MemberListSel" DbName="DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet" Plain="0" />

@@ -8,7 +8,8 @@
     <Setting Key="Aff_User_AffiliateRecoverPwd" SpName="Aff_User_AffiliateRecoverPwd" DbName="affiliate" Plain="0" />
     <Setting Key="Aff_User_OnUserSelNetSessionID" SpName="Aff_User_OnUserSelNetSessionID" DbName="affiliate" Plain="0" />
     <Setting Key="Aff_User_AffiliateInternalLogin" SpName="Aff_User_AffiliateInternalLogin" DbName="affiliate" Plain="0" />
-    <Setting Key="Aff_User_AffiliateUpdPwd" SpName="Aff_User_AffiliateUpdPwd" DbName="affiliate" Plain="0" />
+    <Setting Key="Aff_User_SecureUpdPasswordInfo" SpName="Aff_User_SecureUpdPasswordInfo" DbName="affiliate" Plain="0" />
+    <Setting Key="Aff_User_SecureUpdPasswordUpdate" SpName="Aff_User_SecureUpdPasswordUpdate" DbName="affiliate" Plain="0" />
   </Function>
 
   <Function Name="Aff-Account-Overview">

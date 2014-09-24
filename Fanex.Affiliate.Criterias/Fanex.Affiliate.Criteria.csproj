@@ -83,9 +83,11 @@
   <ItemGroup>
     <Compile Include="Account\AccountCommGroupCriteria.cs" />
     <Compile Include="Account\AccountStatisticInfoCriteria.cs" />
+    <Compile Include="Account\ChangePasswordInfoCriteria.cs" />
     <Compile Include="AffBanner\BannerInfoCriteria.cs" />
     <Compile Include="Common\SystemSettingsByTypeCriteria.cs" />
     <Compile Include="TrafficStatistics\TrafficStatisticDetailCriteria.cs" />
+    <Compile Include="User\AffiliateLoginResultCriteria.cs" />
     <Compile Include="User\UserUpdateInfoCriteria.cs" />
     <Compile Include="User\UserInsertCriteria.cs" />
     <Compile Include="User\UserSelectInfoCriteria.cs" />

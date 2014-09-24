@@ -1,0 +1,158 @@
+﻿/// <reference path="/@JSense.js" />
+/// //##
+/* global AFFILIATE, Site, RNGCasinoOption, QueryString, jqGridAdditional */
+/* exported xhRequest */
+"use strict";
+
+var RNGCasino = (function ($) {
+    return {
+        initialize: function () {
+            RNGCasino.initEvent();
+        },
+
+        initEvent: function () {
+            $("body").on("click", ".hand-history-detail-link", function () {
+                var dataUrl = $(this).attr("data-url");
+                RNGCasino.viewCasinoDetail(dataUrl);
+            });
+
+            $("#chkIsShowPic").on('click', function () {
+                var isShowPic = $("#chkIsShowPic").is(':checked');
+                var url = window.location.href;
+                url = QueryString.setParam(url, "IsShowPic", isShowPic);
+                window.location.href = url;
+            });
+        },
+
+        viewCasinoDetail: function (dataUrl) {
+            var popH = 550, popW = 720;
+            var dialogForm = '<td title="Hand History Detail"><iframe frameborder="0" width="' + popW + '" height="100%" src="' + dataUrl + '" ></iframe></td>';
+
+            $(dialogForm).dialog({
+                modal: true,
+                width: popW + 50,
+                height: popH + 50
+            });
+        },
+
+        bindTotal: function (totalData) { // , summaryTotal) {
+            console.log("Bind RNGCasino Total.");
+            var columnModel = RNGCasinoOption.getTotalColModel();
+            var colspan = RNGCasinoOption.totalColspan[0];
+            var summaryColspan = colspan + 1;
+            jqGridAdditional.assignTotal(totalData, columnModel);
+            jqGridAdditional.setGroupFooters(colspan, summaryColspan, undefined);
+
+            var grandTotalCell = $('.grandTotal td:first-child');
+            grandTotalCell.html(Site.getSingleResource('GrandTotal'));
+            grandTotalCell.css('text-align', 'right');
+
+            // set group color
+            $('.jqgroup td').css('background-color', '#F4E8D4');
+            $('.jqfoot td').css('background-color', '#CEF6CA');
+            $('.footrow td').css('background-color', '#B2DFEF');
+
+            // resize when group collapse
+            $(".tree-wrap-ltr").click(function () {
+                var scrollHeight = $("#ReportGrid").width() > $('.ui-jqgrid-bdiv').width() ? 18 : 0;
+                // var borderHeight = $('.ui-jqgrid-bdiv').height();
+                var contentHeight = $("#ReportGrid").height();
+                $('.ui-jqgrid-bdiv').height(Math.min(contentHeight + scrollHeight, 778));
+            });
+        },
+        bindData: function (response) {
+            console.log("Bind RNGCasino data.");
+            jqGridAdditional.clearGrid("ReportGrid");
+            var reportGrid = $("#ReportGrid");
+            var onPaging = false;
+            var gridOption = RNGCasinoOption.getGridOption();
+            var numOfRow = response.Data.length;
+            var numOfTotalRow = response.Total.length;
+            gridOption.data = response.Data;
+            gridOption.pager = '#ppdata';
+            /*gridOption.onPaging = function (pgButton) {
+                if (numOfRow > RNGCasinoOption.pageSize) {
+                    onPaging = true;
+                    if ($("#" + pgButton).hasClass("ui-state-disabled") == false) {
+                    }
+                }
+                else {
+                    return 'stop';
+                }
+            };*/
+
+            gridOption.gridComplete = function () {
+                console.log("Bind RNGCasino data. Grid Complete.");
+                jqGridAdditional.gridComplete(this, gridOption, numOfTotalRow + 1);
+                if (numOfRow > RNGCasinoOption.pageSize) {
+                    $("#pg_ppdata").show();
+                    console.log("Bind RNGCasino data. Grid Complete. SHow.");
+                }
+                else {
+                    $("#pg_ppdata").hide();
+                    console.log("Bind RNGCasino data. Grid Complete. Hide.");
+                }
+
+                if (response == null || numOfRow === 0) {
+                    jqGridAdditional.setNoInfo(gridOption.colModel);
+                    console.log("Bind RNGCasino data. Grid Complete. No Info.");
+                }
+                else {
+                    console.log("Bind RNGCasino data. Grid Complete. Finalize.");
+                    if (onPaging) {
+                        $(".ui-jqgrid-ftable").html($("#footer").html());
+                    }
+                    else {
+                        RNGCasino.bindTotal(response.Total); // , response.SummaryTotal);
+                        $("#footer").html($(".ui-jqgrid-ftable").html());
+                    }
+
+                    onPaging = false;
+                }
+            };
+            // Show the grid
+            reportGrid.jqGrid(gridOption);
+
+            jqGridAdditional.resetLayout(reportGrid);
+            jqGridAdditional.showRecommendedBrowser(gridOption.pager);
+        },
+
+        ajaxComplete: function (response) {
+            RNGCasino.bindData(response);
+        },
+
+        loadContent: function () {
+            var currentUrl = location.href;
+            var urlTokens = currentUrl.split("?");
+            $.ajax({
+                type: "GET",
+                dataType: "json",
+                contentType: "application/json",
+                url: AFFILIATE.getAbsoluteUrl(RNGCasinoOption.urlData) + "?" + urlTokens[1],
+                error: function () { },
+                success: function (response) {
+                    RNGCasino.ajaxComplete(response);
+                },
+                beforeSend: function () {
+                },
+                complete: function () {
+                }
+            });
+
+            return true;
+        }
+    };
+})(jQuery);
+$(window).load(function () {
+    RNGCasino.initialize();
+    RNGCasino.loadContent();
+});
+//#end
+$(window).resize(function () {
+    var reportGrid = $("#ReportGrid");
+    jqGridAdditional.resetLayout(reportGrid);
+});
+
+$(window).unload(function () {
+    $(window).unbind("resize");
+});

@@ -1,14 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Functions>
   <Function Name="Aff-Account">
-    <Setting Key="Aff_User_AffiliateLogin" SpName="Aff_User_AffiliateLogin" DbName="DBAFFLB365.Affiliate_LB365.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_User_SecureLoginInfo" SpName="Aff_User_SecureLoginInfo" DbName="DBAFFLB365.Affiliate_LB365.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_User_SecureLoginUpdate" SpName="Aff_User_SecureLoginUpdate" DbName="DBAFFLB365.Affiliate_LB365.bodbDownlineNet" Plain="0" />
     <Setting Key="Aff_User_Recheckin" SpName="Aff_User_Recheckin" DbName="DBAFFLB365.Affiliate_LB365.bodbDownlineNet" Plain="0" />
     <Setting Key="Aff_User_Logout" SpName="Aff_User_Logout" DbName="DBAFFLB365.Affiliate_LB365.bodbDownlineNet" Plain="0" />
     <Setting Key="Aff_User_AffiliateForgotPwd" SpName="Aff_User_AffiliateForgotPwd" DbName="DBAFFLB365.Affiliate_LB365.bodbDownlineNet" Plain="0" />
     <Setting Key="Aff_User_AffiliateRecoverPwd" SpName="Aff_User_AffiliateRecoverPwd" DbName="DBAFFLB365.Affiliate_LB365.bodbDownlineNet" Plain="0" />
     <Setting Key="Aff_User_OnUserSelNetSessionID" SpName="Aff_User_OnUserSelNetSessionID" DbName="DBAFFLB365.Affiliate_LB365.bodbDownlineNet" Plain="0" />
     <Setting Key="Aff_User_AffiliateInternalLogin" SpName="Aff_User_AffiliateInternalLogin" DbName="DBAFFLB365.Affiliate_LB365.bodbDownlineNet" Plain="0" />
-    <Setting Key="Aff_User_AffiliateUpdPwd" SpName="Aff_User_AffiliateUpdPwd" DbName="DBAFFLB365.Affiliate_LB365.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_User_SecureUpdPasswordInfo" SpName="Aff_User_SecureUpdPasswordInfo" DbName="DBAFFLB365.Affiliate_LB365.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_User_SecureUpdPasswordUpdate" SpName="Aff_User_SecureUpdPasswordUpdate" DbName="DBAFFLB365.Affiliate_LB365.bodbDownlineNet" Plain="0" />
   </Function>
 
   <Function Name="Aff-Account-Overview">
@@ -30,7 +32,7 @@
     <Setting Key="Aff_User_BetListResult_SelMatch" SpName="Aff_User_BetListResult_SelMatch" DbName="DBEXT.bodb02.bodbAdminNet" Plain="0" />
     <Setting Key="Aff_User_BetListResult_SelMatchParlay" SpName="Aff_User_BetListResult_SelMatchParlay" DbName="DBEXT.bodb02.bodbAdminNet" Plain="0" />
     <Setting Key="Aff_User_BetListResult_SelMatchNumberGame" SpName="Aff_User_BetListResult_SelMatchNumberGame" DbName="DBEXT.bodb02.bodbAdminNet" Plain="0" />
-</Function>
+  </Function>
 
   <Function Name="Aff-CustomerInfo">
     <Setting Key="Aff_User_MemberListSel" SpName="Aff_User_MemberListSel" DbName="DBAFFLB365.Affiliate_LB365.bodbDownlineNet" Plain="0" />

@@ -1,4 +1,4 @@
-﻿/* global AFFILIATE, Lang */
+﻿/* global AFFILIATE, Lang, CryptoJS */
 "use strict";
 
 function getParameterByName(name) {
@@ -47,7 +47,8 @@ var SIGNIN = (function ($) {
         submitForm: function () {
             var username = $("#Username").val(),
                 password = $("#Password").val(),
-                captCha = $("#CaptchaLogin").val();
+                captCha = $("#CaptchaLogin").val(),
+                loginToken = $("#SecureToken").val();
             var returnUrl = getParameterByName("ReturnUrl");
 
             if (username === "" || password === "") {
@@ -56,10 +57,12 @@ var SIGNIN = (function ($) {
                 alert(Lang.EmptyCaptcha);
             } else {
                 $.blockUI();
+                //SIGNIN.encryptPassword(password, loginToken);
                 var param = {
                     "Username": username,
-                    "Password": password,
-                    "Captcha": captCha
+                    "Password": SIGNIN.encryptPassword(password, loginToken),
+                    "Captcha": captCha,
+                    "loginToken": loginToken
                 };
 
                 $.ajax({
@@ -90,6 +93,13 @@ var SIGNIN = (function ($) {
                     }
                 });
             }
+        },
+        encryptPassword: function (originalPassword, loginToken) {
+            var encryptedPassword = CryptoJS.CfsEnCode(originalPassword);
+            var hashedPassword = CryptoJS.SHA256(encryptedPassword + loginToken);
+
+            $("#Password").val(hashedPassword);
+            return decodeURI(hashedPassword);
         }
     };
 } (jQuery));

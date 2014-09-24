@@ -14,6 +14,7 @@ namespace Fanex.Affiliate.DataAccess
     using System;
     using System.Linq;
     using Common;
+    using Common.Extensions;
     using Criteria;
     using Data;
     using DTO;
@@ -35,32 +36,48 @@ namespace Fanex.Affiliate.DataAccess
         public User AuthenticateUser(AffiliateLoginCriteria criteria)
         {
             var user = new User();
+
             using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
             {
-                var currentParams = criteria.GetSpParams();
-                objectDb.ExecuteNonQuery(currentParams);
-                criteria.ErrCode = Converter.ToInt(currentParams["errcode"]);
-                var affId = Converter.ToInt(currentParams["affid"]);
-                if (affId > 0)
+                var param = criteria.GetSpParams();
+                var reader = objectDb.ExecuteReader(param);
+
+                while (reader.Read())
                 {
-                    user.AffId = Converter.ToInt(currentParams["affid"]);
-                    user.Username = Converter.ToString2(currentParams["username"]);
-                    user.FirstName = Converter.ToString2(currentParams["firstname"]);
-                    user.LastName = Converter.ToString2(currentParams["lastname"]);
-                    user.Email = Converter.ToString2(currentParams["email"]);
-                    user.PreferLang = Converter.ToString2(currentParams["preferlang"]);
-                    user.Currency = Converter.ToString2(currentParams["currency"]);
-                    user.CurrencyID = Converter.ToInt(currentParams["currencyid"]);
-                    user.MailOption = Converter.ToBool(currentParams["mailoption"]);
-                    user.HasSecurityQuestion = Converter.ToBool(currentParams["hassecurityquestion"]);
-                    user.IsAllowedPersonalizedPage = Converter.ToBool(currentParams["isallowedpersonalizedpage"]);
-                    user.AffLevel = Converter.ToInt(currentParams["afflevel"]);
-                    user.AffType = Converter.ToInt(currentParams["afftype"]);
-                    user.OnUserID = Converter.ToInt(currentParams["onuserid"]);
+                    user.AffId = reader.ToInt("affid");
+                    user.Password = reader["password"].ToString();
+                    user.FirstName = reader["firstname"].ToString();
+                    user.LastName = reader["lastname"].ToString();
+                    user.Email = reader["email"].ToString();
+                    user.MailOption = reader.ToBool("mailoption");
+                    user.PreferLang = reader["preferlang"].ToString();
+                    user.HasSecurityQuestion = reader.ToBool("hassecurityquestion");
+                    user.IsAllowedPersonalizedPage = reader.ToBool("isallowedpersonalizedpage");
+                    user.AffLevel = reader.ToInt("afflevel");
+                    user.AffType = reader.ToInt("afftype");
+                    user.Currency = reader["currency"].ToString();
+                    user.CurrencyID = reader.ToInt("currencyid");
                 }
+
+                criteria.ErrCode = Converter.ToInt(objectDb.GetOuputParams()["errcode"]);
             }
 
             return user;
+        }
+
+        /// <summary>
+        /// Update login result into DB.
+        /// </summary>
+        /// <param name="criteria">Input criteria.</param>
+        public void UpdateLoginResult(AffiliateLoginResultCriteria criteria)
+        {
+            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            {
+                var param = criteria.GetSpParams();
+                objectDb.ExecuteNonQuery(param);
+                criteria.OnUserID = Converter.ToInt(param["onuserid"]);
+                criteria.ErrCode = Converter.ToInt(param["errcode"]);
+            }
         }
 
         /// <summary>

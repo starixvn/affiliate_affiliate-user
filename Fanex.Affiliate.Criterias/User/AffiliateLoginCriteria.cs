@@ -20,26 +20,19 @@ namespace Fanex.Affiliate.Criteria
         [AllowHtml]
         public string Username { get; set; }
 
-        [AllowHtml]
-        public string Password { get; set; }
-
-        public string LoginIp { get; set; }
-
-        public string Language { get; set; }
-
         public int InputAffType { get; set; }
 
         public int ServerId { get; set; }
 
-        public string NetSessionID { get; set; }
+        public string LoginIp { get; set; }
 
         [SpParam(Ignored = true)]
         public string Captcha { get; set; }
 
         // Output parameters
-        public int OnUserID { get; set; }
-
         public int AffId { get; set; }
+
+        public string Password { get; set; }
 
         public string FirstName { get; set; }
 
@@ -63,6 +56,8 @@ namespace Fanex.Affiliate.Criteria
 
         public int CurrencyID { get; set; }
 
+        public int FailedCount { get; set; }
+
         public int ErrCode { get; set; }
 
         /// <summary>
@@ -71,7 +66,7 @@ namespace Fanex.Affiliate.Criteria
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_User_AffiliateLogin";
+            return "Aff_User_SecureLoginInfo";
         }
 
         public override bool IsValid()

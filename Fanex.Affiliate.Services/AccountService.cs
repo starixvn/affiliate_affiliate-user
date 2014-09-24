@@ -176,13 +176,21 @@ namespace Fanex.Affiliate.Services
         /// Changes the password.
         /// </summary>
         /// <param name="criteria">The criteria.</param>
-        public void ChangePassword(ChangePasswordCriteria criteria)
+        /// <returns>Old-Password string.</returns>
+        public string GetChangePasswordInfo(ChangePasswordInfoCriteria criteria)
         {
             Check.Argument.IsNotNull(criteria, "criteria");
-            criteria.OldPassword = Cryptography.CfsEnCode(criteria.OldPassword.Trim());
-            criteria.NewPassword = Cryptography.CfsEnCode(criteria.NewPassword.Trim());
+            return _accountDataAccess.GetChangePasswordInfo(criteria);
+        }
 
-            _accountDataAccess.ChangePassword(criteria);
+        /// <summary>
+        /// Update change password result into DB.
+        /// </summary>
+        /// <param name="criteria">Input criteria.</param>
+        public void UpdateChangePasswordResult(ChangePasswordCriteria criteria)
+        {
+            Check.Argument.IsNotNull(criteria, "criteria");
+            _accountDataAccess.UpdateChangePasswordResult(criteria);
         }
 
         #endregion Change Password

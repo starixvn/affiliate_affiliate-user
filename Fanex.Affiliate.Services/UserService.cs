@@ -60,8 +60,17 @@ namespace Fanex.Affiliate.Services
         public User AuthenticateUser(AffiliateLoginCriteria criteria)
         {
             Check.Argument.IsNotNull(criteria, "criteria");
-            criteria.Password = Cryptography.CfsEnCode(criteria.Password);
             return _userDataAccess.AuthenticateUser(criteria);
+        }
+
+        /// <summary>
+        /// Update login result into DB.
+        /// </summary>
+        /// <param name="criteria">Input criteria.</param>
+        public void UpdateLoginResult(AffiliateLoginResultCriteria criteria)
+        {
+            Check.Argument.IsNotNull(criteria, "criteria");
+            _userDataAccess.UpdateLoginResult(criteria);
         }
 
         /// <summary>

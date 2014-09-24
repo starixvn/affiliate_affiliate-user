@@ -26,6 +26,8 @@ namespace Fanex.Affiliate.Web
         private const string _AFFILIATECONTACTUSSESSIONCAPTCHA = "AffiliateContactUsCaptcha";
 
         private const string _LANGUAGE = "AffiliateLanguage";
+
+        private const string _SECURELOGINTOKEN = "SecureLoginToken";
         #endregion Const
 
         public static string Language
@@ -85,6 +87,21 @@ namespace Fanex.Affiliate.Web
             set
             {
                 HttpContext.Current.Session[_AFFILIATECONTACTUSSESSIONCAPTCHA] = value;
+            }
+        }
+
+        public static string SecureLoginToken
+        {
+            get
+            {
+                return HttpContext.Current != null
+                    ? Convert.ToString(HttpContext.Current.Session[_SECURELOGINTOKEN])
+                    : string.Empty;
+            }
+
+            set
+            {
+                HttpContext.Current.Session[_SECURELOGINTOKEN] = value;
             }
         }
     }

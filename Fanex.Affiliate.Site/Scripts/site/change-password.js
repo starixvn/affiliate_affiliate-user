@@ -1,4 +1,4 @@
-﻿/* global AFFILIATE */
+﻿/* global AFFILIATE, CryptoJS */
 /* exported HandleCancelEvent */
 "use strict";
 
@@ -7,6 +7,11 @@ var ChangePassword = (function ($) {
         init: function() {
             $("#NewPassword").tooltip();
             $("#ConfirmPassword").tooltip();
+
+            // Event click login
+            $("#btnSubmit").click(function () {
+                ChangePassword.submitForm();
+            });
         },
         validate: function(obj) {
             var validator = $("#" + obj.id + "_validator");
@@ -35,6 +40,48 @@ var ChangePassword = (function ($) {
                 i++;
             }
             return ((nCount > (str.length - 2)) || nCount < 2) ? false : true;
+        },
+        submitForm: function () {
+            var oldPassword = $("#OldPassword").val(),
+                newPassword = $("#NewPassword").val(),
+                confirmPassword = $("#ConfirmPassword").val(),
+                secureToken = $("#SecureToken").val();
+
+            $.blockUI();
+            var param = {
+                "OldPassword": ChangePassword.hashPassword(oldPassword, secureToken, "OldPassword"),
+                "NewPassword": ChangePassword.encryptPassword(newPassword, "NewPassword"),
+                "ConfirmPassword": ChangePassword.encryptPassword(confirmPassword, "ConfirmPassword"),
+                "SecureToken": secureToken
+            };
+
+            $.ajax({
+                type: "POST",
+                url: AFFILIATE.getAbsoluteUrl("Account/ChangePassword"),
+                contentType: "application/json",
+                dataType: "json",
+                data: JSON.stringify(param),
+                success: function () {
+                },
+                error: function () {
+                },
+                complete: function () {
+                    $.unblockUI();
+                }
+            });
+        },
+        encryptPassword: function (originalPassword, controlName) {
+            var encryptedPassword = CryptoJS.CfsEnCode(originalPassword);
+
+            $("#" + controlName).val(encryptedPassword);
+            return decodeURI(encryptedPassword);
+        },
+        hashPassword: function (originalPassword, loginToken, controlName) {
+            var encryptedPassword = CryptoJS.CfsEnCode(originalPassword);
+            var hashedPassword = CryptoJS.SHA256(encryptedPassword + loginToken);
+
+            $("#" + controlName).val(hashedPassword);
+            return decodeURI(hashedPassword);
         }
     };
 } (jQuery));

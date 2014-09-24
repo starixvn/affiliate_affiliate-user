@@ -14,6 +14,7 @@
         <label for="Username">@Lang.Password</label>
     </div>
     <input type="password" name="Password" id="Password" autocomplete="off" />
+    <input id="SecureToken" name="SecureToken" value="@ViewBag.SecureToken" type ="hidden" />
 <div class="action">
     <input type="text" value="" placeholder="@Lang.Validation" name="CaptchaLogin" id="CaptchaLogin"
            class="inputValidate" autocomplete="off">

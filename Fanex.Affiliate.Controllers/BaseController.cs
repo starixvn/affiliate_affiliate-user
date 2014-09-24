@@ -16,7 +16,9 @@ namespace Fanex.Affiliate.Controllers
     using System.Drawing.Text;
     using System.IO;
     using System.Text.RegularExpressions;
+    using System.Web;
     using System.Web.Mvc;
+    using System.Web.Security;
     using Configurations;
     using DTO;
     using Utilities;
@@ -27,6 +29,7 @@ namespace Fanex.Affiliate.Controllers
     /// </summary>
     public class BaseController : Controller
     {
+        protected readonly string FormTokenName = "SecureLoginToken";
         private readonly LanguageManager _langManager;
 
         /// <summary>
@@ -43,11 +46,64 @@ namespace Fanex.Affiliate.Controllers
             {
                 FormaterCurrency.SetDefaultCurrency(CurrentSession.Currency);
             }
+
+            // Generate a session token
+            var secureToken = Guid.NewGuid().ToString("N");
+            AppSession.SecureLoginToken = secureToken;
+            ViewBag.SecureToken = secureToken;
         }
 
         protected ICurrentSession CurrentSession
         {
             get { return SessionManager.CurrentSession; }
+        }
+
+        /// <summary>
+        /// Add secure token to the response's cookie.
+        /// </summary>
+        /// <param name="loginToken">Login token.</param>
+        public void AddLoginTokenToCookie(string loginToken)
+        {
+            var responseCookie = new HttpCookie(FormTokenName)
+            {
+                HttpOnly = true,
+                Value = loginToken
+            };
+
+            if (FormsAuthentication.RequireSSL && Request.IsSecureConnection)
+            {
+                responseCookie.Secure = true;
+            }
+
+            Response.Cookies.Set(responseCookie);
+        }
+
+        /// <summary>
+        /// Clear Login Token in case of login successfully.
+        /// </summary>
+        public void ClearLoginToken()
+        {
+            AppSession.SecureLoginToken = string.Empty;
+
+            if (Request.Cookies[FormTokenName] != null)
+            {
+                var httpCookie = new HttpCookie(FormTokenName);
+                httpCookie.Expires = DateTime.Now.AddDays(-1d);
+                Response.Cookies.Add(httpCookie);
+            }
+        }
+
+        /// <summary>
+        /// Check whether the Request's Login-Token is correct.
+        /// </summary>
+        /// <param name="loginToken">Login Token.</param>
+        /// <returns>True if the Request's login-token is correct, and vice versa.</returns>
+        public bool CheckLoginToken(string loginToken)
+        {
+            return !string.IsNullOrWhiteSpace(loginToken)
+                && AppSession.SecureLoginToken == loginToken
+                && Request.Cookies[FormTokenName] != null
+                && loginToken == Request.Cookies[FormTokenName].Value;
         }
 
         /// <summary>

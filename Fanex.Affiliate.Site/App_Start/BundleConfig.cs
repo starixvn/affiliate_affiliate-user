@@ -87,7 +87,8 @@ namespace Fanex.Affiliate.Site
                 .Include("~/Scripts/libraries/jquery.formattyping.js")
                 .Include("~/Scripts/libraries/jquery.blockUI.js")
                 .Include("~/Scripts/libraries/jquery.validate.js")
-                .Include("~/Scripts/libraries/jquery.validate.unobtrusive.js"));
+                .Include("~/Scripts/libraries/jquery.validate.unobtrusive.js")
+                .Include("~/Scripts/libraries/cryptoJS.js"));
         }
 
         /// <summary>
