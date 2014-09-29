@@ -30,34 +30,6 @@ namespace Fanex.Affiliate.Criteria
         public string Captcha { get; set; }
 
         // Output parameters
-        public int AffId { get; set; }
-
-        public string Password { get; set; }
-
-        public string FirstName { get; set; }
-
-        public string LastName { get; set; }
-
-        public string Email { get; set; }
-
-        public bool MailOption { get; set; }
-
-        public string PreferLang { get; set; }
-
-        public bool HasSecurityQuestion { get; set; }
-
-        public bool IsAllowedPersonalizedPage { get; set; }
-
-        public int AffLevel { get; set; }
-
-        public int AffType { get; set; }
-
-        public string Currency { get; set; }
-
-        public int CurrencyID { get; set; }
-
-        public int FailedCount { get; set; }
-
         public int ErrCode { get; set; }
 
         /// <summary>
@@ -71,7 +43,7 @@ namespace Fanex.Affiliate.Criteria
 
         public override bool IsValid()
         {
-            return !string.IsNullOrWhiteSpace(Username) && !string.IsNullOrWhiteSpace(Password);
+            return !string.IsNullOrWhiteSpace(Username);
         }
     }
 }
