@@ -33,7 +33,7 @@ namespace Fanex.Affiliate.DTO
             if (checkFullDate)
             {
                 var resultString = date.ToString("MM" + slash + "dd" + slash) + date.ToString("yyyy", culture);
-                return resultString + (hasTime ? " " + date.ToString("hh:mm:ss") : string.Empty);
+                return resultString + (hasTime ? " " + date.ToString("HH:mm:ss") : string.Empty);
             }
             else
             {
