@@ -757,9 +757,9 @@ namespace Fanex.Affiliate.Controllers
                 };
 
                 var user = _userService.InternalAuthenticateUser(internalLoginCriteria);
-                if (internalLoginCriteria.ErrorCode != 0)
+                if (internalLoginCriteria.ErrCode != 0)
                 {
-                    throw new Exception(Common.GetErrorMsg(internalLoginCriteria.ErrorCode));
+                    throw new Exception(Common.GetErrorMsg(internalLoginCriteria.ErrCode));
                 }
 
                 if (AppSession.Language == null)

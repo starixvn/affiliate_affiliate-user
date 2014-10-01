@@ -29,12 +29,11 @@ namespace Fanex.Affiliate.Criteria
 
         public int InputAffType { get; set; }
 
-
         [SpParam(Ignored = true)]
         public int AccId { get; set; }
 
         // Output parameters
-        public int ErrorCode { get; set; }
+        public int ErrCode { get; set; }
 
         /// <summary>
         /// Get SP name.

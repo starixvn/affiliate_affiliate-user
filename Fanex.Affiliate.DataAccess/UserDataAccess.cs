@@ -287,7 +287,7 @@ namespace Fanex.Affiliate.DataAccess
             {
                 var param = criteria.GetSpParams();
                 var internalLoginInfo = objectDb.Query<InternalLoginInfo>(param).FirstOrDefault();
-                criteria.ErrorCode = Converter.ToInt(param["errcode"]);
+                criteria.ErrCode = Converter.ToInt(param["errcode"]);
 
                 return internalLoginInfo == null
                     ? null
