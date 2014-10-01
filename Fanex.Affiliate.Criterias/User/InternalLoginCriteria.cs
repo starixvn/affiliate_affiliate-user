@@ -1,10 +1,11 @@
-﻿// --------------------------------------------------------------------------
+﻿// ----------------------------------------------------------------------
 // <copyright file="InternalLoginCriteria.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
+//     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
 // </copyright>
-// --------------------------------------------------------------------------
+// ------------------------------------------------------------------------
 // <history>
-//   <change who="Leo.Vo" date="2013.07.03">Created</change>
+//   <change who="Long.Luu" date="2014/10/01">Created</change>
+//   <change who="" date=""></change>
 // </history>
 
 namespace Fanex.Affiliate.Criteria
@@ -28,9 +29,9 @@ namespace Fanex.Affiliate.Criteria
 
         public int InputAffType { get; set; }
 
-        public int AccId { get; set; }
 
-        public int CurrencyId { get; set; }
+        [SpParam(Ignored = true)]
+        public int AccId { get; set; }
 
         // Output parameters
         public int ErrorCode { get; set; }
