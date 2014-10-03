@@ -58,7 +58,7 @@ namespace Fanex.Affiliate.Criteria
 
         public short Currency { get; set; }
 
-        public Uri SiteURL { get; set; }
+        public string SiteURL { get; set; }
 
         public string MoreSiteURLs { get; set; }
 
