@@ -11,6 +11,7 @@
 namespace Fanex.Affiliate.Site
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
     using System.Linq;
     using System.Web.UI;
     using Configurations;
@@ -30,6 +31,7 @@ namespace Fanex.Affiliate.Site
         /// </summary>
         /// <param name="sender">Object sender.</param>
         /// <param name="e">Event arguments.</param>
+        [SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes", Justification = "Reviewed. Suppression is OK here.")]
         protected void Page_Load(object sender, EventArgs e)
         {
             string lang = Request.QueryString["lang"] ?? AppSettings.DefaultLanguage;

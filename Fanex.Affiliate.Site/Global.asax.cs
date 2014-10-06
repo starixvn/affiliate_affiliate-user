@@ -11,6 +11,7 @@
 namespace Fanex.Affiliate.Site
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
     using System.Linq;
     using System.Web;
     using System.Web.Http;
@@ -39,6 +40,7 @@ namespace Fanex.Affiliate.Site
         /// <summary>
         /// Application Start.
         /// </summary>
+        [SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic", Justification = "Reviewed. Suppression is OK here.")]
         protected void Application_Start()
         {
             // Start setting connect to DB

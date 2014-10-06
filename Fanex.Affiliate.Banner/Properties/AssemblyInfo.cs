@@ -8,6 +8,7 @@
 //   <change who="" date=""></change>
 // </history>
 
+using System;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
@@ -23,6 +24,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
+[assembly: CLSCompliantAttribute(false)]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
@@ -41,5 +43,5 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("1.0.35.1038")]
-[assembly: AssemblyFileVersion("1.0.35.1038")]
+[assembly: AssemblyVersion("1.0.49.0952")]
+[assembly: AssemblyFileVersion("1.0.49.0952")]

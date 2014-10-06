@@ -12,6 +12,7 @@ namespace Fanex.Affiliate.DTO
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
 
     /// <summary>
     /// Hot News class.
@@ -26,11 +27,13 @@ namespace Fanex.Affiliate.DTO
 
         public bool Important { get; set; }
 
+        [SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", Justification = "Reviewed. Suppression is OK here")]
         public Dictionary<string, string> Message { get; set; }
 
-        public string GetMessageByLanguage(string lang = "en-US")
+        public string GetMessageByLanguage(string lang)
         {
-            return Message.ContainsKey(lang) ? Message[lang] : string.Empty;
+            var language = string.IsNullOrEmpty(lang) ? "en-US" : lang;
+            return Message.ContainsKey(lang) ? Message[language] : string.Empty;
         }
     }
 }

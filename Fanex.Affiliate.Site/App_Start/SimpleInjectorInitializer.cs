@@ -18,7 +18,7 @@ namespace Fanex.Affiliate.Site.App_Start
     /// <summary>
     /// Simple Injector Initializer.
     /// </summary>
-    public class SimpleInjectorInitializer
+    public static class SimpleInjectorInitializer
     {
         /// <summary>
         /// Initialize function.

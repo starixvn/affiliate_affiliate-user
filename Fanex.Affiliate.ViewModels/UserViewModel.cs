@@ -11,6 +11,7 @@ namespace Fanex.Affiliate.ViewModels
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.Diagnostics.CodeAnalysis;
     using System.Linq;
     using System.Web.Mvc;
     using Configurations;
@@ -20,6 +21,8 @@ namespace Fanex.Affiliate.ViewModels
     /// <summary>
     /// Overview View Model.
     /// </summary>
+    [SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", Justification = "Reviewed. Suppression is OK here")]
+    [SuppressMessage("Microsoft.Design", "CA1002:DoNotExposeGenericLists", Justification = "Since Betlist.dll used that data-structure.")]
     public class UserViewModel : IValidatableObject
     {
         /// <summary>
@@ -94,6 +97,7 @@ namespace Fanex.Affiliate.ViewModels
         [Required(ErrorMessageResourceType = typeof(Lang), ErrorMessageResourceName = "PostcodeZiIsRequired")]
         public string Postal { get; set; }
 
+        [SuppressMessage("Microsoft.Design", "CA1056:UriPropertiesShouldNotBeStrings", Justification = "Reviewed.")]
         [Display(Name = "SiteURL", ResourceType = typeof(Lang))]
         [Required(ErrorMessageResourceType = typeof(Lang), ErrorMessageResourceName = "SiteURLIsRequired")]
         [StringLength(100, ErrorMessage = "The Site URL value cannot exceed 100 characters. ")]

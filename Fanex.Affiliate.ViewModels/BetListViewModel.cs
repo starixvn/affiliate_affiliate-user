@@ -11,11 +11,14 @@
 namespace Fanex.Affiliate.ViewModels
 {
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
     using Fanex.Affiliate.DTO.BetList;
 
     /// <summary>
     /// Bet List View Model.
     /// </summary>
+    [SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", Justification = "Reviewed. Suppression is OK here")]
+    [SuppressMessage("Microsoft.Design", "CA1002:DoNotExposeGenericLists", Justification = "Since Betlist.dll used that data-structure.")]
     public class BetListViewModel
     {
         public List<TicketText> TicketTextList { get; set; }

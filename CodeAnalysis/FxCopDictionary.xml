@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Dictionary>
+  <Words>
+    <Recognized />
+    <Unrecognized />
+    <Deprecated />
+    <Compound />
+    <DiscreteExceptions />
+  </Words>
+  <Acronyms>
+    <CasingExceptions>
+      <Acronym>CSMGPD</Acronym>
+      <Acronym>CSMGTRA</Acronym>
+      <Acronym>CSPD</Acronym>
+      <Acronym>CSTRA</Acronym>
+      <Acronym>DBON</Acronym>
+      <Acronym>DCAN</Acronym>
+      <Acronym>DCAN3rd</Acronym>
+      <Acronym>DDEP</Acronym>
+      <Acronym>DTRA</Acronym>
+      <Acronym>DTRATP</Acronym>
+      <Acronym>DWIT</Acronym>
+      <Acronym>P2PD</Acronym>
+      <Acronym>FirstHalf_1X2</Acronym>
+      <Acronym>Ft_1X2</Acronym>
+      <Acronym>HtFt</Acronym>
+      <Acronym>NG1stBallOU</Acronym>
+      <Acronym>NgLastBallOu</Acronym>
+      <Acronym>Ng1StBallOe</Acronym>
+      <Acronym>NgLastBallOe</Acronym>
+      <Acronym>NgOuFt</Acronym>
+      <Acronym>NgOeFt</Acronym>
+      <Acronym>NgHighLow</Acronym>
+      <Acronym>NgWarrior</Acronym>
+      <Acronym>NgNextCombo</Acronym>
+      <Acronym>NgNumberGroup</Acronym>
+      <Acronym>WinUkTote</Acronym>
+      <Acronym>PlaceUkTote</Acronym>
+      <Acronym>WinPlaceUkTote</Acronym>
+      <Acronym>NgNumberGroup</Acronym>
+      <Acronym>GongXiFaCai</Acronym>
+      <Acronym>HoHoHo</Acronym>
+      <Acronym>MahjongHiLo</Acronym>
+      <Acronym>MiniSicbo</Acronym>
+      <Acronym>MonkeyHiLo</Acronym>
+
+      <Acronym>AffID</Acronym>
+    </CasingExceptions>
+  </Acronyms>
+</Dictionary>

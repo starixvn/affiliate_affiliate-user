@@ -10,14 +10,17 @@
 
 namespace Fanex.Affiliate.WebServices.Criteria
 {
+    using System.Diagnostics.CodeAnalysis;
     using Fanex.NAP.Framework.Data;
 
     /// <summary>
     /// Affiliate Information.
     /// </summary>
+    [SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic", Justification = "Reviewed. Suppression is OK here.")]
     public class AffiliateInfoCriteria : CriteriaBase
     {
-        public int AffID { get; set; }
+        [SpParam(SqlParamName = "AffID")]
+        public int AffId { get; set; }
 
         public int ErrorCode { get; set; }
 

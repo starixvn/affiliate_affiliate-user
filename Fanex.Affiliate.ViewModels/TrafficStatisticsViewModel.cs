@@ -12,6 +12,7 @@ namespace Fanex.Affiliate.ViewModels
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
     using System.Linq;
     using System.Web.Mvc;
     using DTO;
@@ -20,6 +21,8 @@ namespace Fanex.Affiliate.ViewModels
     /// <summary>
     /// Traffic Statistics View Model.
     /// </summary>
+    [SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", Justification = "Reviewed. Suppression is OK here")]
+    [SuppressMessage("Microsoft.Design", "CA1002:DoNotExposeGenericLists", Justification = "Since Betlist.dll used that data-structure.")]
     public class TrafficStatisticsViewModel
     {
         public DateTime FromDate { get; set; }

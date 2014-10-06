@@ -11,6 +11,7 @@
 namespace Fanex.Affiliate.Criteria
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
     using System.Web.Mvc;
     using NAP.Framework.Data;
 
@@ -58,6 +59,7 @@ namespace Fanex.Affiliate.Criteria
 
         public short Currency { get; set; }
 
+        [SuppressMessage("Microsoft.Design", "CA1056:UriPropertiesShouldNotBeStrings", Justification = "Reviewed.")]
         public string SiteURL { get; set; }
 
         public string MoreSiteURLs { get; set; }

@@ -11,6 +11,7 @@
 namespace Fanex.Affiliate.Link
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
     using System.Web;
     using System.Web.Http;
     using System.Web.Mvc;
@@ -24,14 +25,12 @@ namespace Fanex.Affiliate.Link
     /// </summary>
     public class MvcApplication : HttpApplication
     {
+        [SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", Justification = "Reviewed. Suppression is OK here.")]
         protected void Application_Start()
         {
             DbSettingProviderManager.Current.Start();
-
             AreaRegistration.RegisterAllAreas();
-
             WebApiConfig.Register(GlobalConfiguration.Configuration);
-            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }

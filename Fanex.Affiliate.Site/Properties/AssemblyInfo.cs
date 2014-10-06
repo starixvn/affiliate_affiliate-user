@@ -1,11 +1,14 @@
-﻿// --------------------------------------------------------------------------
+﻿// ----------------------------------------------------------------------
 // <copyright file="AssemblyInfo.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
+//     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
 // </copyright>
-// --------------------------------------------------------------------------
+// ------------------------------------------------------------------------
 // <history>
-//   <change who="Kaden.Trinh" date="2013.05.29">Created</change>
+//   <change who="Long.Luu" date="2014/10/06">Created</change>
+//   <change who="" date=""></change>
 // </history>
+
+using System;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
@@ -21,6 +24,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCopyright("Copyright © Microsoft 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
+[assembly: CLSCompliantAttribute(false)]
 
 // Setting ComVisible to false makes the types in this assembly not visible
 // to COM components.  If you need to access a type in this assembly from
@@ -39,5 +43,5 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Revision and Build Numbers
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("1.0.60.1107")]
-[assembly: AssemblyFileVersion("1.0.60.1107")]
+[assembly: AssemblyVersion("1.0.65.1328")]
+[assembly: AssemblyFileVersion("1.0.65.1328")]

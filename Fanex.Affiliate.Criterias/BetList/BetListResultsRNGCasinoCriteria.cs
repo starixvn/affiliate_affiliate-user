@@ -19,7 +19,6 @@ namespace Fanex.Affiliate.Criteria
     /// </summary>
     public class BetListResultsRNGCasinoCriteria : CriteriaBase
     {
-        [SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic", Justification = "Reviewed")]
         public string BetType
         {
             get
@@ -60,7 +59,8 @@ namespace Fanex.Affiliate.Criteria
         {
             return RefNo > 0
                 && FromDate <= ToDate && CustId > 0
-                && !string.IsNullOrEmpty(UserName);
+                && !string.IsNullOrEmpty(UserName)
+                && !string.IsNullOrEmpty(BetType);
         }
     }
 }

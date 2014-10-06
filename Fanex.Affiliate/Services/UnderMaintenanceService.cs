@@ -34,14 +34,14 @@ namespace Fanex.Affiliate.Services
         {
             startTime = endTime = null;
             var now = DateTime.Now;
-            if (now >= AppSettings.UmStartTime && now <= AppSettings.UmEndTime)
+            if (now >= AppSettings.UmStartTime && now <= AppSettings.UMEndTime)
             {
                 startTime = AppSettings.UmStartTime.ToString("hh:mm tt");
-                endTime = AppSettings.UmEndTime.ToString("hh:mm tt");
+                endTime = AppSettings.UMEndTime.ToString("hh:mm tt");
                 return true;
             }
 
-            if (string.IsNullOrEmpty(AppSettings.LbUrl))
+            if (string.IsNullOrEmpty(AppSettings.LBUrl))
             {
                 return false;
             }
@@ -52,7 +52,7 @@ namespace Fanex.Affiliate.Services
             {
                 // Get Agnet Site UM Status.
                 var undermaintainCtrl = new UMBusiness();
-                checkUm = undermaintainCtrl.isUnderMaintainence(Sites.Affiliate, AppSettings.LbUrl, ref startTime, ref endTime);
+                checkUm = undermaintainCtrl.isUnderMaintainence(Sites.Affiliate, AppSettings.LBUrl, ref startTime, ref endTime);
                 MemoryCache.Add("IsUM", checkUm, DateTime.Now.AddSeconds(TimeCacheUm));
                 MemoryCache.Add("StartTime", startTime, DateTime.Now.AddSeconds(TimeCacheUm));
                 MemoryCache.Add("EndTime", endTime, DateTime.Now.AddSeconds(TimeCacheUm));

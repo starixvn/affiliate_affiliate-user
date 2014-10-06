@@ -11,6 +11,7 @@
 namespace Fanex.Affiliate.Banner
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
     using System.Web;
     using System.Web.Http;
     using System.Web.Mvc;
@@ -24,6 +25,7 @@ namespace Fanex.Affiliate.Banner
     /// </summary>
     public class MvcApplication : System.Web.HttpApplication
     {
+        [SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic", Justification = "Reviewed. Suppression is OK here.")]
         protected void Application_Start()
         {
             DbSettingProviderManager.Current.Start();

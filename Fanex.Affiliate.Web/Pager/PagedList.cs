@@ -12,12 +12,17 @@ namespace Fanex.Affiliate.Web.Pager
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
     using System.Linq;
 
     /// <summary>
     /// Paging class.
     /// </summary>
     /// <typeparam name="T">Type parameter.</typeparam>
+    [SuppressMessage(
+        "Microsoft.Design",
+        "CA1026:DefaultParametersShouldNotBeUsed",
+        Justification = "Since Betlist.dll used that data-structure.")]
     public class PagedList<T> : List<T>, IPagedList<T>
     {
         public PagedList(IEnumerable<T> source, int index, int pageSize, int? totalCount = null)

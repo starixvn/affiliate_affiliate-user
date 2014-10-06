@@ -123,7 +123,7 @@ namespace Fanex.Affiliate.Configurations
             }
         }
 
-        public static string LbUrl
+        public static string LBUrl
         {
             get
             {
@@ -147,7 +147,7 @@ namespace Fanex.Affiliate.Configurations
             }
         }
 
-        public static DateTime UmEndTime
+        public static DateTime UMEndTime
         {
             get
             {
@@ -211,7 +211,7 @@ namespace Fanex.Affiliate.Configurations
             }
         }
 
-        public static string EmailHeaderBgColor
+        public static string EmailHeaderBGColor
         {
             get
             {
@@ -227,7 +227,7 @@ namespace Fanex.Affiliate.Configurations
             }
         }
 
-        public static string EmailContentBgColor
+        public static string EmailContentBGColor
         {
             get
             {
@@ -243,7 +243,7 @@ namespace Fanex.Affiliate.Configurations
             }
         }
 
-        public static string EmailCopyrightBgColor
+        public static string EmailCopyrightBGColor
         {
             get
             {
@@ -259,7 +259,7 @@ namespace Fanex.Affiliate.Configurations
             }
         }
 
-        public static string EmailFooterBgColor
+        public static string EmailFooterBGColor
         {
             get
             {

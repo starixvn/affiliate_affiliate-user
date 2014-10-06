@@ -10,7 +10,9 @@
 
 namespace Fanex.Affiliate.WebServices
 {
+    using System;
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
     using System.IO;
     using System.Linq;
     using System.Text;
@@ -33,7 +35,7 @@ namespace Fanex.Affiliate.WebServices
     [System.ComponentModel.ToolboxItem(false)]
     public class AffiliateAPI : System.Web.Services.WebService
     {
-        protected readonly IAffiliateService AffiliateService;
+        private readonly IAffiliateService _affiliateService;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AffiliateAPI" /> class.
@@ -41,21 +43,21 @@ namespace Fanex.Affiliate.WebServices
         public AffiliateAPI()
         {
             DbSettingProviderManager.Current.Start();
-            AffiliateService = new AffiliateService();
+            _affiliateService = new AffiliateService();
         }
 
         /// <summary>
         /// Convert an object into XML format.
         /// </summary>
-        /// <param name="obj">Input object.</param>
+        /// <param name="inputObject">Input object.</param>
         /// <returns>XML String.</returns>
-        public static string ToXML(object obj)
+        public static string ToXml(object inputObject)
         {
-            XmlSerializer serializer = new XmlSerializer(obj.GetType());
+            XmlSerializer serializer = new XmlSerializer(inputObject.GetType());
 
             using (StringWriter textWriter = new StringWriter())
             {
-                serializer.Serialize(textWriter, obj);
+                serializer.Serialize(textWriter, inputObject);
                 return textWriter.ToString();
             }
         }
@@ -66,18 +68,19 @@ namespace Fanex.Affiliate.WebServices
         /// <param name="siteName">Site Name.</param>
         /// <param name="btag">Identify B tag.</param>
         /// <returns>Affiliate email.</returns>
+        [SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes", Justification = "Reviewed. Suppression is OK here.")]
         [WebMethod]
         public string GetAffiliateEmail(string siteName, string btag)
         {
             try
             {
-                var affID = int.Parse(btag.Trim().Split('_')[1]);
-                var criteria = new AffiliateInfoCriteria { AffID = affID };
-                return ToXML(AffiliateService.GetAffiliateInfo(criteria, siteName.Trim().ToLower()));
+                var affId = int.Parse(btag.Trim().Split('_')[1]);
+                var criteria = new AffiliateInfoCriteria { AffId = affId };
+                return ToXml(_affiliateService.GetAffiliateInfo(criteria, siteName.Trim().ToLower()));
             }
             catch
             {
-                return ToXML(new AffiliateInfo(100, "Invalid Site Name."));
+                return ToXml(new AffiliateInfo(100, "Invalid Site Name."));
             }
         }
     }

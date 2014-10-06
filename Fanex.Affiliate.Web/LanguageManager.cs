@@ -9,6 +9,7 @@
 
 namespace Fanex.Affiliate.Web
 {
+    using System.Diagnostics.CodeAnalysis;
     using System.Globalization;
     using System.Resources;
     using System.Threading;
@@ -37,6 +38,7 @@ namespace Fanex.Affiliate.Web
         /// Set Culture by Language code.
         /// </summary>
         /// <param name="language">Language parameter.</param>
+        [SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic", Justification = "Reviewed. Suppression is OK here.")]
         public void SetCulture(string language)
         {
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);

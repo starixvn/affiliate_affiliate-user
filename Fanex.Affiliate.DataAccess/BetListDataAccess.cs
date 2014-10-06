@@ -40,7 +40,11 @@ namespace Fanex.Affiliate.DataAccess
             "StyleCop.CSharp.Nexcel.NexcelCustomRules",
             "SP2101:MethodMustNotContainMoreLinesThan",
             Justification = "Reviewed. Suppression is OK here.")]
-        public static IList<AffTicket> ReadMainTicketData(DataTable dataTable, string baseCurrency)
+        [SuppressMessage(
+            "Microsoft.Maintainability",
+            "CA1502:AvoidExcessiveComplexity",
+            Justification = "Reviewed. Suppression is OK here.")]
+        public static List<AffTicket> ReadMainTicketData(DataTable dataTable, string baseCurrency)
         {
             var playerCommCol = "playercomm" + baseCurrency;
             var commCol = "comm" + baseCurrency;

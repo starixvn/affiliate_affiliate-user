@@ -11,12 +11,15 @@
 namespace Fanex.Affiliate.ViewModels
 {
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
     using Criteria;
     using DTO.BetList;
 
     /// <summary>
     /// RNG Casino Result Detail class.
     /// </summary>
+    [SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", Justification = "Reviewed. Suppression is OK here")]
+    [SuppressMessage("Microsoft.Design", "CA1002:DoNotExposeGenericLists", Justification = "Since Betlist.dll used that data-structure.")]
     public class BetListResultsRNGCasinoDetailViewModel
     {
         public BetListResultsRNGCasinoDetailViewModel()

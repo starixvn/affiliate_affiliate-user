@@ -12,6 +12,7 @@ namespace Fanex.Affiliate.Banner.Controllers
 {
     using System;
     using System.Configuration;
+    using System.IO;
     using System.Text;
     using System.Text.RegularExpressions;
     using System.Web.Mvc;
@@ -147,7 +148,7 @@ namespace Fanex.Affiliate.Banner.Controllers
 
                 return Content(scriptContent.ToString(), "text/javascript");
             }
-            catch (Exception exception)
+            catch (IOException exception)
             {
                 return Content(exception.Message, "text/plain");
             }
@@ -171,15 +172,14 @@ namespace Fanex.Affiliate.Banner.Controllers
             {
                 if (!string.IsNullOrEmpty(bannerInfo.Content))
                 {
-                    var script = new StringBuilder();
                     var fileName = fileNames[bannerInfo.ImageType] + ".htm";
 
-                    var bannerStrBuilder = ReadFile(Server.MapPath("~/Content/templates/" + fileName));
-                    bannerStrBuilder.Replace("{systemname}", _systemName).Replace("{id}", id.ToString());
-                    bannerStrBuilder = new StringBuilder(MinifyHtml(bannerStrBuilder.ToString()));
-                    bannerStrBuilder.Replace("{afflink}", signuplink);
+                    bannerInfo.BannerStringBuilder = ReadFile(Server.MapPath("~/Content/templates/" + fileName));
+                    bannerInfo.BannerStringBuilder.Replace("{systemname}", _systemName).Replace("{id}", id.ToString());
+                    bannerInfo.BannerStringBuilder = new StringBuilder(MinifyHtml(bannerInfo.BannerStringBuilder.ToString()));
+                    bannerInfo.BannerStringBuilder.Replace("{afflink}", signuplink);
 
-                    GenerateScript(id, signuplink, _systemName, bannerInfo, ref bannerStrBuilder, ref script);
+                    var script = GenerateScript(id, signuplink, _systemName, bannerInfo);
                     return Content(
                         @"function hasClass(element, cls) {
                                 return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
@@ -190,7 +190,7 @@ namespace Fanex.Affiliate.Banner.Controllers
                             if (hasClass(els[i],classname)){ if(!flag) flag = true; els[i].innerHTML = html;}}
                           return flag;
                         };"
-                        + "var content = \"" + bannerStrBuilder.ToString() + "\";"
+                        + "var content = \"" + bannerInfo.BannerStringBuilder.ToString() + "\";"
                         + "var r = replaceHtml('a','banner_" + _systemName + id + "',content); \n"
                         + " if(!r) {var el = document.getElementById('bannerContainer'); if(el) el.innerHTML =content;} \n" + script
                         + ";",
@@ -204,27 +204,25 @@ namespace Fanex.Affiliate.Banner.Controllers
         /// <summary>
         /// Generate script.
         /// </summary>
-        /// <param name="bannerID">Input banner ID.</param>
+        /// <param name="bannerId">Input banner ID.</param>
         /// <param name="signupLink">Sign up Link.</param>
         /// <param name="systemName">System name.</param>
         /// <param name="bannerInfo">Banner information.</param>
-        /// <param name="bannerStrBuilder">Banner string builder.</param>
-        /// <param name="script">Script string builder.</param>
-        public void GenerateScript(
-            int bannerID,
+        /// <returns>String Builder.</returns>
+        public StringBuilder GenerateScript(
+            int bannerId,
             string signupLink,
             string systemName,
-            Banner bannerInfo,
-            ref StringBuilder bannerStrBuilder,
-            ref StringBuilder script)
+            Banner bannerInfo)
         {
+            var script = new StringBuilder();
             switch (bannerInfo.ImageType)
             {
                 case TEXT:
-                    bannerStrBuilder.Replace("{content}", bannerInfo.Content.Replace("\r\n", "<br/>"));
+                    bannerInfo.BannerStringBuilder.Replace("{content}", bannerInfo.Content.Replace("\r\n", "<br/>"));
                     break;
                 case IMAGE:
-                    bannerStrBuilder.Replace(
+                    bannerInfo.BannerStringBuilder.Replace(
                     "{src}",
                     string.Format("{0}/Content/Banners/{1}?v={2}", Common.FullDomainName, Server.HtmlDecode(bannerInfo.Content), bannerInfo.Version));
                     break;
@@ -236,33 +234,34 @@ namespace Fanex.Affiliate.Banner.Controllers
                         Common.FullDomainName,
                         Server.HtmlDecode(bannerInfo.Content),
                         bannerInfo.Version);
-                    bannerStrBuilder.Replace("{src}", bannerURL);
-                    bannerStrBuilder.Replace("{width}", sizes[0]); // Width
-                    bannerStrBuilder.Replace("{height}", sizes[1]); // Height
+                    bannerInfo.BannerStringBuilder.Replace("{src}", bannerURL);
+                    bannerInfo.BannerStringBuilder.Replace("{width}", sizes[0]); // Width
+                    bannerInfo.BannerStringBuilder.Replace("{height}", sizes[1]); // Height
 
                     var file = ReadFile(Server.MapPath("~/Scripts/" + SWFVERSIONDETECTJS));
                     script = ReadFile(Server.MapPath("~/Content/templates/" + FLASHJS));
-
                     script.Replace("{width}", sizes[0]); // Width
                     script.Replace("{height}", sizes[1]); // Height
                     script.Replace("{afflink}", signupLink);
                     script.Replace("{srcnoswf}", _regex.Replace(bannerURL, string.Empty));
                     script.Replace("{systemname}", systemName);
-                    script.Replace("{id}", bannerID.ToString());
+                    script.Replace("{id}", bannerId.ToString());
                     script.Insert(0, file);
                     break;
             }
+
+            return script;
         }
 
         /// <summary>
         /// Store banner statistic into database.
         /// </summary>
-        /// <param name="bannerID">Input Banner ID.</param>
-        public void BannerUpdateStatistic(int bannerID)
+        /// <param name="bannerId">Input Banner ID.</param>
+        public void BannerUpdateStatistic(int bannerId)
         {
             var criteria = new BannerUpdateStatisticCriteria
             {
-                BannerID = bannerID
+                BannerID = bannerId
             };
 
             _bannerService.BannerUpdateStatistic(criteria);
@@ -271,13 +270,13 @@ namespace Fanex.Affiliate.Banner.Controllers
         /// <summary>
         /// Get first row of banner information.
         /// </summary>
-        /// <param name="bannerID">Input banner ID.</param>
+        /// <param name="bannerId">Input banner ID.</param>
         /// <returns>Banner data object.</returns>
-        public Banner GetFirstBannerRowInfo(int bannerID)
+        public Banner GetFirstBannerRowInfo(int bannerId)
         {
             var criteria = new BannerInfoCriteria
             {
-                BannerID = bannerID
+                BannerID = bannerId
             };
 
             return _bannerService.BannerSelectInfo(criteria);

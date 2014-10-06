@@ -190,13 +190,13 @@ namespace Fanex.Affiliate.Controllers
                 ThemeID = "theme" + AppSettings.Theme,
                 LanguageCode = AppSession.Language + ".jpg",
                 CopyrightYear = DateTime.Now.Year,
-                HeaderBgColor = AppSettings.EmailHeaderBgColor,
+                HeaderBgColor = AppSettings.EmailHeaderBGColor,
                 HeaderFontColor = AppSettings.EmailHeaderFontColor,
-                ContentBgColor = AppSettings.EmailContentBgColor,
+                ContentBgColor = AppSettings.EmailContentBGColor,
                 ContentFontColor = AppSettings.EmailContentFontColor,
-                CopyrightBgColor = AppSettings.EmailCopyrightBgColor,
+                CopyrightBgColor = AppSettings.EmailCopyrightBGColor,
                 CopyrightFontColor = AppSettings.EmailCopyrightFontColor,
-                FooterBgColor = AppSettings.EmailFooterBgColor,
+                FooterBgColor = AppSettings.EmailFooterBGColor,
                 FooterFontColor = AppSettings.EmailFooterFontColor
             };
             var affiliateEmailBody = (new EmailTemplateResolverService()).GetEmailBody(templatePath, emailContent);
@@ -597,13 +597,13 @@ namespace Fanex.Affiliate.Controllers
                 RootUrl = siteDomainInfo.RootDomain,
                 LanguageCode = string.Format("{0}.jpg", AppSession.Language),
                 CopyrightYear = DateTime.Now.Year,
-                HeaderBgColor = AppSettings.EmailHeaderBgColor,
+                HeaderBgColor = AppSettings.EmailHeaderBGColor,
                 HeaderFontColor = AppSettings.EmailHeaderFontColor,
-                ContentBgColor = AppSettings.EmailContentBgColor,
+                ContentBgColor = AppSettings.EmailContentBGColor,
                 ContentFontColor = AppSettings.EmailContentFontColor,
-                CopyrightBgColor = AppSettings.EmailCopyrightBgColor,
+                CopyrightBgColor = AppSettings.EmailCopyrightBGColor,
                 CopyrightFontColor = AppSettings.EmailCopyrightFontColor,
-                FooterBgColor = AppSettings.EmailFooterBgColor,
+                FooterBgColor = AppSettings.EmailFooterBGColor,
                 FooterFontColor = AppSettings.EmailFooterFontColor
             };
             var emailBody = (new EmailTemplateResolverService()).GetEmailBody(templatePath, emailContent);
@@ -693,13 +693,13 @@ namespace Fanex.Affiliate.Controllers
                 LanguageCode = string.Format("{0}.jpg", AppSession.Language),
                 CopyrightYear = DateTime.Now.Year,
                 Lang.ChangePassword,
-                HeaderBgColor = AppSettings.EmailHeaderBgColor,
+                HeaderBgColor = AppSettings.EmailHeaderBGColor,
                 HeaderFontColor = AppSettings.EmailHeaderFontColor,
-                ContentBgColor = AppSettings.EmailContentBgColor,
+                ContentBgColor = AppSettings.EmailContentBGColor,
                 ContentFontColor = AppSettings.EmailContentFontColor,
-                CopyrightBgColor = AppSettings.EmailCopyrightBgColor,
+                CopyrightBgColor = AppSettings.EmailCopyrightBGColor,
                 CopyrightFontColor = AppSettings.EmailCopyrightFontColor,
-                FooterBgColor = AppSettings.EmailFooterBgColor,
+                FooterBgColor = AppSettings.EmailFooterBGColor,
                 FooterFontColor = AppSettings.EmailFooterFontColor
             };
             var emailBody = (new EmailTemplateResolverService()).GetEmailBody(templatePath, emailContent);

@@ -65,23 +65,23 @@ namespace Fanex.Affiliate.Web.Mvc
         /// Generate external link.
         /// </summary>
         /// <param name="helper">The helper.</param>
-        /// <param name="url">The URL parameter.</param>
+        /// <param name="urlString">The URL parameter.</param>
         /// <param name="linkText">The link text.</param>
         /// <returns>MVC Html String.</returns>
-        public static MvcHtmlString Hyperlink(this HtmlHelper helper, string url, string linkText)
+        public static MvcHtmlString Hyperlink(this HtmlHelper helper, string urlString, string linkText)
         {
-            return MvcHtmlString.Create(string.Format("<a href='{0}' target='_blank'>{1}</a>", url, linkText));
+            return MvcHtmlString.Create(string.Format("<a href='{0}' target='_blank'>{1}</a>", urlString, linkText));
         }
 
         /// <summary>
         /// Generate external link.
         /// </summary>
         /// <param name="helper">The helper.</param>
-        /// <param name="url">The URL parameter.</param>
+        /// <param name="urlString">The URL parameter.</param>
         /// <returns>MVC Html String.</returns>
-        public static MvcHtmlString Hyperlink(this HtmlHelper helper, string url)
+        public static MvcHtmlString Hyperlink(this HtmlHelper helper, string urlString)
         {
-            return Hyperlink(helper, url, url);
+            return Hyperlink(helper, urlString, urlString);
         }
 
         public static MvcHtmlString Truncate(this HtmlHelper helper, string source, int maxLength = 120)

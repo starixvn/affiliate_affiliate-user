@@ -33,6 +33,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CodeAnalysis", "CodeAnalysis", "{5B02195A-2693-457F-9869-2011100C8240}"
 	ProjectSection(SolutionItems) = preProject
 		CodeAnalysis\CodeAnalysisConfiguration.xml = CodeAnalysis\CodeAnalysisConfiguration.xml
+		CodeAnalysis\FanexRules.ruleset = CodeAnalysis\FanexRules.ruleset
+		CodeAnalysis\FxCopDictionary.xml = CodeAnalysis\FxCopDictionary.xml
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanex.Affiliate.WebServices", "Fanex.Affiliate.WebServices\Fanex.Affiliate.WebServices.csproj", "{FD2CD90C-AA9D-4E09-9600-5CB6564045E1}"

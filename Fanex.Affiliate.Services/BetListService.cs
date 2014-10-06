@@ -257,6 +257,7 @@ namespace Fanex.Affiliate.Services
         /// </summary>
         /// <param name="criteria">The metal model.</param>
         /// <returns>The RNG Casino result list.</returns>
+        [SuppressMessage("Microsoft.Design", "CA1002:DoNotExposeGenericLists", Justification = "Reviewed. Suppression is OK here.")]
         public List<RNGCasinoResult> GetRNGCasinoResult(BetListResultsRNGCasinoCriteria criteria)
         {
             var casinoList = new List<RNGCasinoResult>();

@@ -18,7 +18,7 @@ namespace Fanex.Affiliate.Site
     /// <summary>
     /// Bundle Config.
     /// </summary>
-    public class BundleConfig
+    public static class BundleConfig
     {
         /// <summary>
         /// For more information on Bundling.

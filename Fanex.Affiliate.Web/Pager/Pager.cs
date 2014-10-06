@@ -193,7 +193,7 @@ namespace Fanex.Affiliate.Web.Pager
             {
                 var paramsList = HttpContext.Current.Request.QueryString;
                 var checkExistedParam = url.IndexOf('?') != -1;
-                foreach (string key in paramsList.Cast<string>().Where(key => key != PagerOptions.DefaultDefaults.DEFAULTPAGEROUTEVALUEKEY))
+                foreach (string key in paramsList.Cast<string>().Where(key => key != DefaultDefaults.DEFAULTPAGEROUTEVALUEKEY))
                 {
                     if (checkExistedParam)
                     {
