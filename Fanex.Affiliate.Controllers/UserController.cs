@@ -300,6 +300,7 @@ namespace Fanex.Affiliate.Controllers
                 if (result.Success)
                 {
                     user.OnUserID = currentUserId;
+                    user.Username = username;
                     FormsAuthentication.SetAuthCookie(username, true);
                     SessionManager.CurrentSession = new CurrentSession(user, AppSession.Language);
                 }
