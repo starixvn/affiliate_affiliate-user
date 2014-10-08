@@ -430,7 +430,7 @@ namespace Fanex.Affiliate.Controllers
                     
                     // Call API to check whether member is exists
                     string ibcUsername = string.Empty, playerCurrency = string.Empty, strErrorMsg = string.Empty;
-                    if (!IsExistLicenseeCustInfo(paymentInfo.SystemName, paymentInfo.PlayerUsername, ref ibcUsername, ref playerCurrency, ref strErrorMsg))
+                    if (false)//!IsExistLicenseeCustInfo(paymentInfo.SystemName, paymentInfo.PlayerUsername, ref ibcUsername, ref playerCurrency, ref strErrorMsg))
                     {
                         result.Success = false;
                         result.Message = Lang.Msg142;
@@ -567,7 +567,8 @@ namespace Fanex.Affiliate.Controllers
                     TransID = Convert.ToInt64(paymentModel.TransID),
                     IP = Common.GetIPAddressOfClient(),
                     Language = AppSession.Language,
-                    Status = PaymentStatus.Cancelled.ToString()
+                    Status = PaymentStatus.Cancelled.ToString(),
+                    TransDate = DateTime.Now
                 };
                 var paymentCancel = PaymentService.CancelPaymentRequest(criteria);
 
