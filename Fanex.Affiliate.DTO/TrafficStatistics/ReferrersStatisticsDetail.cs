@@ -19,7 +19,7 @@ namespace Fanex.Affiliate.DTO
     {
         public long TheCount { get; set; }
 
-        public Uri UrlReferrer { get; set; }
+        public string UrlReferrer { get; set; }
 
         public int TotalClick { get; set; }
 

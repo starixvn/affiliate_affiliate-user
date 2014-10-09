@@ -51,7 +51,7 @@ var MARKETING = (function ($) {
                 success: function (result) {
                     var html = "<select id='slSubCategory' name='BannerSubCategory'><option value=''>" + Lang.All + "</option>";
                     for (var index = 0; index < result.length; index++) {
-                        html += "<option value='" + result[index].TypeId + "'" + (subCategory === result[index].TypeId ? "selected='selected'" : "");
+                        html += "<option value='" + result[index].TypeId + "'" + (parseInt(subCategory) === result[index].TypeId ? "selected='selected'" : "");
                         html += ">" + result[index].Value + "</option>";
                     }
                     html += '</select>';
