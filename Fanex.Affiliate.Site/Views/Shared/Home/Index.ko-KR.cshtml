@@ -155,7 +155,7 @@
                         @if (AppSettings.CompanyNegativeNetWin > 0)
                         {
                             <br />
-                            <span>@string.Format("회사의 순 승리율이 마이너스가 되면, 가맹자는 회사와 그달의(각 상품에 대해 적용) 수익의 {0}%를 부담해야합니다. ", AppSettings.CompanyNegativeNetWin)</span>
+                            <span>@string.Format("If the Company Net Win is negative, then affiliate has to bear at least {0}% with the company if output commission is zero or follow the tier commission setting if output commission is greater than {0}% for that month (apply for each product).", AppSettings.CompanyNegativeNetWin)</span>
                         }
                     </p>
                     <span></span>

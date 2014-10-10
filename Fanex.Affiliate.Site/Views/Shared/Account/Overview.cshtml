@@ -227,7 +227,7 @@
                         <br />
                         @if(AppSettings.CompanyNegativeNetWin > 0)
                         {
-                            <p>@string.Format(Lang.CompanyNegativeNetWin, AppSettings.CompanyNegativeNetWin)</p>
+                            <p>@string.Format("If the Company Net Win is negative, then affiliate has to bear at least {0}% with the company if output commission is zero or follow the tier commission setting if output commission is greater than {0}% for that month (apply for each product).", AppSettings.CompanyNegativeNetWin)</p>
                         }
                     </div>
                 </div>

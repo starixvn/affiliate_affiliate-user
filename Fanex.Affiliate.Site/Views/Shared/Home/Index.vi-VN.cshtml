@@ -155,7 +155,7 @@
                         @if (AppSettings.CompanyNegativeNetWin > 0)
                         {
                             <br />
-                            <span>@string.Format("Trong trường hợp lợi nhuận công ty thu về là số âm, hội viên phải chịu ít nhất {0}% tiền lợi nhuận âm đó cùng công ty cho mỗi sản phẩm được liệt kê ở trên.", AppSettings.CompanyNegativeNetWin)</span>
+                            <span>@string.Format("If the Company Net Win is negative, then affiliate has to bear at least {0}% with the company if output commission is zero or follow the tier commission setting if output commission is greater than {0}% for that month (apply for each product).", AppSettings.CompanyNegativeNetWin)</span>
                         }
                     </p>
                     <span></span>
