@@ -8,10 +8,12 @@ var SIGNUP = (function ($) {
             });
             $('#btnRegister').click(function () {
                 SIGNUP.submitForm();
+                return false;
             });
             $('#btnRegister').bind('keypress', function (e) {
                 if (e.keyCode === 13) {
                     SIGNUP.submitForm();
+                    return false;
                 }
             });
             $('#btnAddSite').click(function () {
