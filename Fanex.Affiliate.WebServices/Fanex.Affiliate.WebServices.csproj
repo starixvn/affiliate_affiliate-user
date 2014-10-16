@@ -34,6 +34,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CasinoLibrary">
+      <HintPath>Dependencies\CasinoLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="CasinoSetting">
+      <HintPath>Dependencies\CasinoSetting.dll</HintPath>
+    </Reference>
+    <Reference Include="CasinoUtility">
+      <HintPath>Dependencies\CasinoUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Fanex.BetList.Core">
+      <HintPath>Dependencies\Fanex.BetList.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Fanex.Caching">
+      <HintPath>Dependencies\Fanex.Caching.dll</HintPath>
+    </Reference>
     <Reference Include="Fanex.Common, Version=1.0.404.97, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.Common.1.0.404.97\lib\net40\Fanex.Common.dll</HintPath>
     </Reference>
@@ -41,8 +56,29 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Fanex.Data.0.5.404.63\lib\net40\Fanex.Data.dll</HintPath>
     </Reference>
+    <Reference Include="Fanex.Logging">
+      <HintPath>Dependencies\Fanex.Logging.dll</HintPath>
+    </Reference>
     <Reference Include="Fanex.NAP.Framework, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.NAP.Framework.1.0.0.3\lib\net40\Fanex.NAP.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Fanex.Result.Core">
+      <HintPath>Dependencies\Fanex.Result.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="HandHistoryLibrary">
+      <HintPath>Dependencies\HandHistoryLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="IBCFile">
+      <HintPath>Dependencies\IBCFile.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>Dependencies\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCasinoLibrary">
+      <HintPath>Dependencies\LiveCasinoLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>Dependencies\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\EnterpriseLibrary.Common.5.0.414.0\lib\net40\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
@@ -59,8 +95,22 @@
     <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\EnterpriseLibrary.Unity.5.0.414.0\lib\net40\Microsoft.Practices.Unity.Interception.dll</HintPath>
     </Reference>
+    <Reference Include="NPOI">
+      <HintPath>Dependencies\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="RemotingRef">
+      <HintPath>Dependencies\RemotingRef.dll</HintPath>
+    </Reference>
+    <Reference Include="SPSRemoting">
+      <HintPath>Dependencies\SPSRemoting.dll</HintPath>
+    </Reference>
+    <Reference Include="Sunplus.Libraries.AOP">
+      <HintPath>Dependencies\Sunplus.Libraries.AOP.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
@@ -85,19 +135,43 @@
   <ItemGroup>
     <Compile Include="AffiliateEmailInfo.cs" />
     <Compile Include="AffiliateInfo.cs" />
-    <Compile Include="Criteria\AffiliateInfoCriteria.cs" />
-    <Compile Include="DataAccess\AffiliateDataAccess.cs" />
-    <Compile Include="DataAccess\IAffiliateDataAccess.cs" />
+    <Compile Include="Criteria\AffEmail\AffiliateInfoCriteria.cs" />
+    <Compile Include="Criteria\BetList\BalanceUpMoveBetCriteria.cs" />
+    <Compile Include="Criteria\BetList\BetListCriteria.cs" />
+    <Compile Include="Criteria\BetList\BetListResultsCriteria.cs" />
+    <Compile Include="Criteria\BetList\BetListResultsRNGCasinoCriteria.cs" />
+    <Compile Include="Criteria\BetList\BetListResultsRNGCasinoDetailCriteria.cs" />
+    <Compile Include="Criteria\BetList\ExchangeRateCriteria.cs" />
+    <Compile Include="Criteria\BetList\SystemParlayDetailCriteria.cs" />
+    <Compile Include="DataAccess\AffEmail\AffiliateDataAccess.cs" />
+    <Compile Include="DataAccess\Betlist\BetListDataAccess.cs" />
+    <Compile Include="DataAccess\AffEmail\IAffiliateDataAccess.cs" />
     <Compile Include="AffiliateAPI.asmx.cs">
       <DependentUpon>AffiliateAPI.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DataAccess\Betlist\IBetListDataAccess.cs" />
+    <Compile Include="DTO\BetList\AffTicket.cs" />
+    <Compile Include="DTO\BetList\CustomerInfoBetList.cs" />
+    <Compile Include="DTO\BetList\RNGCasinoResult.cs" />
+    <Compile Include="DTO\BetList\RNGCasinoResultWinlossDetail.cs" />
+    <Compile Include="DTO\BetList\RNGCasinoResultWinlossDetailHeader.cs" />
+    <Compile Include="DTO\BetList\TicketResult.cs" />
+    <Compile Include="DTO\BetList\TicketText.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\AffiliateService.cs" />
-    <Compile Include="Services\IAffiliateService.cs" />
+    <Compile Include="Services\AffEmail\AffiliateService.cs" />
+    <Compile Include="Services\AffEmail\IAffiliateService.cs" />
+    <Compile Include="Services\Betlist\BetListService.cs" />
+    <Compile Include="Services\Betlist\IBetListService.cs" />
+    <Compile Include="Services\Common\QueryService.cs" />
+    <Compile Include="Services\Common\ServiceBase.cs" />
+    <Compile Include="Utilities\AffBetListHtmlBuilder.cs" />
+    <Compile Include="ViewModels\Betlist\BetListResultsRNGCasinoDetailViewModel.cs" />
+    <Compile Include="ViewModels\Betlist\BetListResultsRNGCasinoViewModel.cs" />
+    <Compile Include="ViewModels\Betlist\BetListViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -118,6 +192,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.ConnectionString.uat.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dependencies\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

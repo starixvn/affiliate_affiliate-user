@@ -23,4 +23,12 @@
     <Setting Key="affiliate_goobet_GetAffiliateInfo" SpName="Aff_API_GetAffInfoByID" DbName="DBAFFGOOBET.Affiliate_GOOBET.bodbDownlineNet" Plain="0" />
     <Setting Key="affiliate_q8bola_GetAffiliateInfo" SpName="Aff_API_GetAffInfoByID" DbName="DBAFFQ8BOLA.Affiliate_Q8BOLA.bodbDownlineNet" Plain="0" />
   </Function>
+
+  <Function Name="Aff-Betlist">
+    <Setting Key="affiliate_aoncash_GetAffiliateInfoa" SpName="Aff_API_GetAffInfoByID" DbName="DBEXT.bodb02.bodbAdminNet.12bet" Plain="0" />
+  </Function>
+
+  <Function Name="Aff-Betlist-Results">
+    <Setting Key="affiliate_aoncash_GetAffiliateInfoa" SpName="Aff_API_GetAffInfoByID" DbName="DBEXT.bodb02.bodbAdminNet.Athena" Plain="0" />
+  </Function>
 </Functions>

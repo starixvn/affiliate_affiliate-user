@@ -35,7 +35,13 @@ namespace Fanex.Affiliate.WebServices
     [System.ComponentModel.ToolboxItem(false)]
     public class AffiliateAPI : System.Web.Services.WebService
     {
+        #region Properties
+
         private readonly IAffiliateService _affiliateService;
+
+        #endregion
+
+        #region Constructor
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AffiliateAPI" /> class.
@@ -45,6 +51,10 @@ namespace Fanex.Affiliate.WebServices
             DbSettingProviderManager.Current.Start();
             _affiliateService = new AffiliateService();
         }
+
+        #endregion
+
+        #region Utilities
 
         /// <summary>
         /// Convert an object into XML format.
@@ -61,6 +71,10 @@ namespace Fanex.Affiliate.WebServices
                 return textWriter.ToString();
             }
         }
+
+        #endregion
+
+        #region Web Methods - Affiliate's Email
 
         /// <summary>
         /// Get Affiliate Email.
@@ -83,5 +97,35 @@ namespace Fanex.Affiliate.WebServices
                 return ToXml(new AffiliateInfo(100, "Invalid Site Name."));
             }
         }
+
+        #endregion
+
+        #region Web Methods - Affiliate's Email
+
+        [WebMethod]
+        public string GetBetlistHtmlString(
+            string affiliateName,
+            int custId,
+            DateTime fromDate,
+            DateTime toDate,
+            DateTime movebetDate,
+            DateTime balanceupDate)
+        {
+            return "Hello Betlist";
+        }
+
+        [WebMethod]
+        public string GetResultsHtmlString()
+        {
+            return "Hello Results";
+        }
+
+        [WebMethod]
+        public string GetTest(BetListCriteria criteria)
+        {
+            return "Hello Betlist";
+        }
+
+        #endregion
     }
 }
