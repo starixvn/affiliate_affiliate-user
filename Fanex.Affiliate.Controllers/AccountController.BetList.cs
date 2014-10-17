@@ -61,8 +61,7 @@ namespace Fanex.Affiliate.Controllers
                 BalanceUpDay = balanceUpMoveBetCriteria.BalanceUpDay,
                 CustId = customerInfoBetList.CustId
             };
-
-
+            
             ViewBetListByProduct(criteria, product);
             var ticketResults = BetListService.GetBetList(criteria);
             var exchangeCriteria = new ExchangeRateCriteria

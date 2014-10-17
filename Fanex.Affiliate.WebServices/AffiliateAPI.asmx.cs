@@ -285,6 +285,11 @@ namespace Fanex.Affiliate.WebServices
 
         #region Affiliate's Betlist - Web Methods
 
+        /// <summary>
+        /// Get Bet list View Model.
+        /// </summary>
+        /// <param name="betlistSOAP">Bet list SOAP object.</param>
+        /// <returns>Bet list View Model.</returns>
         [WebMethod]
         public BetListViewModel GetBetlistViewModel(BetlistSOAP betlistSOAP)
         {
@@ -303,6 +308,12 @@ namespace Fanex.Affiliate.WebServices
             return viewModel;
         }
 
+        /// <summary>
+        /// Get Bet list Parlay.
+        /// </summary>
+        /// <param name="affiliateName">Affiliate Name.</param>
+        /// <param name="transactionId">Transaction ID.</param>
+        /// <returns>Ticket Result.</returns>
         [WebMethod]
         public TicketResult GetBetlistParlay(string affiliateName, string transactionId)
         {
@@ -316,6 +327,12 @@ namespace Fanex.Affiliate.WebServices
             return _betlistService.GetBetListParlay(criteria);
         }
 
+        /// <summary>
+        /// Get Bet list System Parlay.
+        /// </summary>
+        /// <param name="affiliateName">Affiliate Name.</param>
+        /// <param name="criteria">Bet List System Parlay Detail Criteria.</param>
+        /// <returns>System Parlay Data.</returns>
         [WebMethod]
         public SystemParlayData GetBetlistSystemParlay(string affiliateName, BetListSystemParlayDetailCriteria criteria)
         {
