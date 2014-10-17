@@ -62,6 +62,7 @@ namespace Fanex.Affiliate.Controllers
                 CustId = customerInfoBetList.CustId
             };
 
+
             ViewBetListByProduct(criteria, product);
             var ticketResults = BetListService.GetBetList(criteria);
             var exchangeCriteria = new ExchangeRateCriteria

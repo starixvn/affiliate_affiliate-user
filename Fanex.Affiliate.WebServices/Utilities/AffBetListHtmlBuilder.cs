@@ -31,8 +31,6 @@ namespace Fanex.Affiliate.WebServices.Utilities
         /// <param name="ticketHelper">Ticket helper.</param>
         /// <param name="ticketData">List of ticket data.</param>
         /// <param name="criteria">Meta model.</param>
-        /// <param name="currencyID">Currency ID.</param>
-        /// <param name="currencyName">Currency Name.</param>
         /// <param name="username">User Name.</param>
         /// <returns>Ticket status text.</returns>
         [SuppressMessage("Microsoft.Design", "CA1002:DoNotExposeGenericLists", Justification = "Since Betlist.dll used that data-structure.")]
@@ -42,8 +40,6 @@ namespace Fanex.Affiliate.WebServices.Utilities
             ITicketHelper ticketHelper,
             List<ITicketData> ticketData,
             BetListCriteria criteria,
-            int currencyID,
-            string currencyName,
             string username)
         {
             const string StatusTemp = "<div class='status'>{0}</div>";
@@ -58,7 +54,7 @@ namespace Fanex.Affiliate.WebServices.Utilities
                     return statusNormalText + string.Format(
                         casinoHandTemplate,
                         ticket.RefNo,
-                        GetCasinoHandHistoryParam(ticket, criteria, currencyID, currencyName, username),
+                        GetCasinoHandHistoryParam(ticket, criteria, username),
                         "Results");
                 case 72:
                 case 73:
@@ -74,15 +70,11 @@ namespace Fanex.Affiliate.WebServices.Utilities
         /// </summary>
         /// <param name="ticket">LRF Ticket object.</param>
         /// <param name="criteria">Meta model object.</param>
-        /// <param name="currencyID">Currency ID.</param>
-        /// <param name="currencyName">Currency Name.</param>
         /// <param name="username">User's Name.</param>
         /// <returns>Parameter for Casino Hand History.</returns>
         private static string GetCasinoHandHistoryParam(
             AffTicket ticket,
             BetListCriteria criteria,
-            int currencyID,
-            string currencyName,
             string username)
         {
             var param = string.Empty;
@@ -92,8 +84,8 @@ namespace Fanex.Affiliate.WebServices.Utilities
             param += "&SystemId=" + (string.IsNullOrEmpty(ticket.UserName) ? username : ticket.UserName);
             param += "&ExternalId=" + (string.IsNullOrEmpty(ticket.ExternalId) ? string.Empty : ticket.ExternalId);
             param += "&CustId=" + (ticket.CustId == 0 ? criteria.CustId : ticket.CustId);
-            param += "&CurrencyId=" + currencyID.ToString();
-            param += "&CurrencyName=" + currencyName;
+            param += "&CurrencyId=" + criteria.CurrencyId.ToString();
+            param += "&CurrencyName=" + criteria.Currency;
             param += "&BaseCurrency=" + criteria.BaseCurrency;
 
             return param;

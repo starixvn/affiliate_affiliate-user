@@ -1,31 +1,29 @@
 ﻿// ----------------------------------------------------------------------
-// <copyright file="ExchangeRateCriteria.cs" company="Nexcel Solutions Vietnam">
+// <copyright file="BetListNormalCriteria.cs" company="Nexcel Solutions Vietnam">
 //     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
 // </copyright>
 // ------------------------------------------------------------------------
 // <history>
-//   <change who="Long.Luu" date="2013/11/25">Created</change>
+//   <change who="Long.Luu" date="2014/10/17">Created</change>
 //   <change who="" date=""></change>
 // </history>
 
 namespace Fanex.Affiliate.WebServices.Criteria
 {
     using System;
+    using System.ComponentModel;
     using NAP.Framework.Data;
 
     /// <summary>
-    /// Bet List Criteria.
+    /// Bet List Normal Criteria.
     /// </summary>
-    public class ExchangeRateCriteria : CriteriaBase
+    public class BetListNormalCriteria : BetListCriteria
     {
-        public int FromCurrency { get; set; }
+        public BetListNormalCriteria() : base()
+        {
+        }
 
-        public int ToCurrency { get; set; }
-
-        public DateTime Date { get; set; }
-
-        // Output paramaters
-        public float Rate { get; set; }
+        public DateTime MoveBetsDay { get; set; }
 
         /// <summary>
         /// Get SP name.
@@ -33,7 +31,7 @@ namespace Fanex.Affiliate.WebServices.Criteria
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_User_GetExchangeRate";
+            return "Aff_BetList_SelWinLossByDate" + AffiliateGroup;
         }
     }
 }

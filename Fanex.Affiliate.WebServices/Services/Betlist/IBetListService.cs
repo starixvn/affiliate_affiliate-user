@@ -35,24 +35,17 @@ namespace Fanex.Affiliate.WebServices.Services
         /// <summary>
         /// Get Bet List Parlay.
         /// </summary>
-        /// <param name="transId">Input transaction ID.</param>
+        /// <param name="criteria">Bet list parlay.</param>
         /// <returns>Ticket results.</returns>
-        TicketResult GetBetListParlay(long transId);
+        TicketResult GetBetListParlay(BetListParlayCriteria criteria);
 
         /// <summary>
         /// Get System Parlay Detail data.
         /// </summary>
         /// <param name="criteria">The metal model.</param>
         /// <returns>The system parlay.</returns>
-        SystemParlayData GetSystemParlayDetail(SystemParlayDetailCriteria criteria);
-
-        /// <summary>
-        /// Get exchange rate.
-        /// </summary>
-        /// <param name="criteria">Input criteria.</param>
-        /// <returns>Exchange rate.</returns>
-        float GetExchangeRate(ExchangeRateCriteria criteria);
-
+        SystemParlayData GetSystemParlayDetail(BetListSystemParlayDetailCriteria criteria);
+        
         /// <summary>
         /// Get balance up and move bet dates.
         /// </summary>

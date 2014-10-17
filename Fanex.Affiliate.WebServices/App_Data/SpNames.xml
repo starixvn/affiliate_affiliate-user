@@ -25,10 +25,32 @@
   </Function>
 
   <Function Name="Aff-Betlist">
-    <Setting Key="affiliate_aoncash_GetAffiliateInfoa" SpName="Aff_API_GetAffInfoByID" DbName="DBEXT.bodb02.bodbAdminNet.12bet" Plain="0" />
+    <!-- Athena group-->
+    <Setting Key="Aff_BetList_SelWinLossByDate" SpName="Aff_API_GetAffInfoByID" DbName="DBEXT.bodb02.bodbAdminNet.athena" Plain="0" />
+    <Setting Key="Aff_BetList_SelWinLossByDate_Old" SpName="Aff_API_GetAffInfoByID" DbName="DBEXT.bodb02.bodbAdminNet.athena" Plain="0" />
+    <Setting Key="Aff_BetList_SelParlayByTransID" SpName="Aff_BetList_SelParlayByTransID" DbName="DBEXT.bodb02.bodbAdminNet.athena" Plain="0" />
+    <Setting Key="Aff_User_BetListSystemParlayDetail" SpName="Aff_User_BetListSystemParlayDetail" DbName="DBEXT.bodb02.bodbAdminNet.athena" Plain="0" />
+    <Setting Key="Aff_User_SelBalanceUpDay" SpName="Aff_User_SelBalanceUpDay" DbName="DBEXT.bodb02.bodbAdminNet.athena" Plain="0" />
+    <Setting Key="Aff_User_DummyAccID" SpName="Aff_User_DummyAccID" DbName="DBEXT.bodb02.bodbAdminNet.athena" Plain="0" />
+    
+    <!-- 12bet group -->
+    <Setting Key="Aff_BetList_SelWinLossByDate_12bet" SpName="Aff_API_GetAffInfoByID" DbName="DBEXT.bodb02.bodbAdminNet.12bet" Plain="0" />
+    <Setting Key="Aff_BetList_SelWinLossByDate_Old_12bet" SpName="Aff_API_GetAffInfoByID" DbName="DBEXT.bodb02.bodbAdminNet.12bet" Plain="0" />
+    <Setting Key="Aff_BetList_SelParlayByTransID_12bet" SpName="Aff_BetList_SelParlayByTransID" DbName="DBEXT.bodb02.bodbAdminNet.12bet" Plain="0" />
+    <Setting Key="Aff_User_BetListSystemParlayDetail_12bet" SpName="Aff_User_BetListSystemParlayDetail" DbName="DBEXT.bodb02.bodbAdminNet.12bet" Plain="0" />
+    <Setting Key="Aff_User_SelBalanceUpDay_12bet" SpName="Aff_User_SelBalanceUpDay" DbName="DBEXT.bodb02.bodbAdminNet.12bet" Plain="0" />
+    <Setting Key="Aff_User_DummyAccID_12bet" SpName="Aff_User_DummyAccID" DbName="DBEXT.bodb02.bodbAdminNet.12bet" Plain="0" />
   </Function>
 
   <Function Name="Aff-Betlist-Results">
-    <Setting Key="affiliate_aoncash_GetAffiliateInfoa" SpName="Aff_API_GetAffInfoByID" DbName="DBEXT.bodb02.bodbAdminNet.Athena" Plain="0" />
+    <!-- Athena group-->
+    <Setting Key="Aff_User_BetListResult_SelMatch" SpName="Aff_User_BetListResult_SelMatch" DbName="DBEXT.bodb02.bodbAdminNet.athena" Plain="0" />
+    <Setting Key="Aff_User_BetListResult_SelMatchParlay" SpName="Aff_User_BetListResult_SelMatchParlay" DbName="DBEXT.bodb02.bodbAdminNet.athena" Plain="0" />
+    <Setting Key="Aff_User_BetListResult_SelMatchNumberGame" SpName="Aff_User_BetListResult_SelMatchNumberGame" DbName="DBEXT.bodb02.bodbAdminNet.athena" Plain="0" />
+
+    <!-- 12bet group -->
+    <Setting Key="Aff_User_BetListResult_SelMatch_12bet" SpName="Aff_User_BetListResult_SelMatch" DbName="DBEXT.bodb02.bodbAdminNet.12bet" Plain="0" />
+    <Setting Key="Aff_User_BetListResult_SelMatchParlay_12bet" SpName="Aff_User_BetListResult_SelMatchParlay" DbName="DBEXT.bodb02.bodbAdminNet.12bet" Plain="0" />
+    <Setting Key="Aff_User_BetListResult_SelMatchNumberGame_12bet" SpName="Aff_User_BetListResult_SelMatchNumberGame" DbName="DBEXT.bodb02.bodbAdminNet.12bet" Plain="0" />
   </Function>
 </Functions>

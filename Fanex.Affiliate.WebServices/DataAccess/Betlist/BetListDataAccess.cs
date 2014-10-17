@@ -246,16 +246,16 @@ namespace Fanex.Affiliate.WebServices.DataAccess
         /// <summary>
         /// Get Bet List Parlay.
         /// </summary>
-        /// <param name="transId">Input transaction ID.</param>
+        /// <param name="criteria">Bet list parlay.</param>
         /// <returns>Ticket results.</returns>
-        public TicketResult GetBetListParlay(long transId)
+        public TicketResult GetBetListParlay(BetListParlayCriteria criteria)
         {
             var result = new TicketResult();
 
-            using (var objectDb = new ObjectDb("Aff_User_BetListParlay"))
+            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
             {
-                objectDb.AddInParameter("TransId", DbType.Int64, transId);
-                var ds = objectDb.ExecuteDataSet();
+                var param = criteria.GetSpParams();
+                var ds = objectDb.ExecuteDataSet(param);
 
                 var mainTable = ds.Tables.Count > 0 ? ds.Tables[0] : new DataTable();
                 result.MainTicketList = ReadMainTicketData(mainTable, string.Empty);
@@ -272,7 +272,7 @@ namespace Fanex.Affiliate.WebServices.DataAccess
         /// </summary>
         /// <param name="criteria">The metal model.</param>
         /// <returns>The system parlay.</returns>
-        public SystemParlayData GetSystemParlayDetail(SystemParlayDetailCriteria criteria)
+        public SystemParlayData GetSystemParlayDetail(BetListSystemParlayDetailCriteria criteria)
         {
             using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
             {
@@ -317,24 +317,6 @@ namespace Fanex.Affiliate.WebServices.DataAccess
 
                 systemParlayData.Outstanding = Converter.ToDecimal(param["outstanding"]);
                 return systemParlayData;
-            }
-        }
-
-        /// <summary>
-        /// Get exchange rate.
-        /// </summary>
-        /// <param name="criteria">Input criteria.</param>
-        /// <returns>Exchange rate.</returns>
-        public float GetExchangeRate(ExchangeRateCriteria criteria)
-        {
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
-            {
-                var param = criteria.GetSpParams();
-                objectDb.ExecuteNonQuery(param);
-
-                return string.IsNullOrEmpty(param["rate"].ToString())
-                    ? 1
-                    : float.Parse(param["rate"].ToString());
             }
         }
 

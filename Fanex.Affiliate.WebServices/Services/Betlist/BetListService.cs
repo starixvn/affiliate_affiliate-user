@@ -62,7 +62,7 @@ namespace Fanex.Affiliate.WebServices.Services
         }
 
         #endregion Constructor
-
+        
         #region BetList
 
         /// <summary>
@@ -79,11 +79,12 @@ namespace Fanex.Affiliate.WebServices.Services
         /// <summary>
         /// Get Bet List Parlay.
         /// </summary>
-        /// <param name="transId">Input transaction ID.</param>
+        /// <param name="criteria">Bet list parlay.</param>
         /// <returns>Ticket results.</returns>
-        public TicketResult GetBetListParlay(long transId)
+        public TicketResult GetBetListParlay(BetListParlayCriteria criteria)
         {
-            return _betlistDataAccess.GetBetListParlay(transId);
+            Check.Argument.IsNotNull(criteria, "criteria");
+            return _betlistDataAccess.GetBetListParlay(criteria);
         }
 
         /// <summary>
@@ -91,21 +92,10 @@ namespace Fanex.Affiliate.WebServices.Services
         /// </summary>
         /// <param name="criteria">The metal model.</param>
         /// <returns>The system parlay.</returns>
-        public SystemParlayData GetSystemParlayDetail(SystemParlayDetailCriteria criteria)
+        public SystemParlayData GetSystemParlayDetail(BetListSystemParlayDetailCriteria criteria)
         {
             Check.Argument.IsNotNull(criteria, "criteria");
             return _betlistDataAccess.GetSystemParlayDetail(criteria);
-        }
-
-        /// <summary>
-        /// Get exchange rate.
-        /// </summary>
-        /// <param name="criteria">Input criteria.</param>
-        /// <returns>Exchange rate.</returns>
-        public float GetExchangeRate(ExchangeRateCriteria criteria)
-        {
-            Check.Argument.IsNotNull(criteria, "criteria");
-            return _betlistDataAccess.GetExchangeRate(criteria);
         }
 
         /// <summary>
