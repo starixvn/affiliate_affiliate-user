@@ -402,6 +402,14 @@ namespace Fanex.Affiliate.WebServices
 
         #region Affiliate's Results - Web Methods
 
+        /// <summary>
+        /// Get results html string.
+        /// </summary>
+        /// <param name="affiliateName">Affiliate Name.</param>
+        /// <param name="sessionLanguage">Session Language.</param>
+        /// <param name="licenseeId">Licensee ID.</param>
+        /// <param name="criteria">Input criteria.</param>
+        /// <returns>Result's Html string.</returns>
         [WebMethod]
         public string GetResultsString(string affiliateName, string sessionLanguage, string licenseeId, BetListResultsCriteria criteria)
         {
