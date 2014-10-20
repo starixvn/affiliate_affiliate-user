@@ -12,9 +12,10 @@ namespace Fanex.Affiliate.DataAccess
 {
     using System.Data;
     using BetList.Core.Entities;
-    using Criteria;
     using DTO;
-    using DTO.BetList;
+    using Fanex.Affiliate.Criteria;
+    using Fanex.Affiliate.WebServices.Criteria;
+    using Fanex.Affiliate.WebServices.DTO.BetList;
 
     /// <summary>
     /// Interface Account.
@@ -42,7 +43,7 @@ namespace Fanex.Affiliate.DataAccess
         /// </summary>
         /// <param name="criteria">The metal model.</param>
         /// <returns>The system parlay.</returns>
-        SystemParlayData GetSystemParlayDetail(SystemParlayDetailCriteria criteria);
+        SystemParlayData GetSystemParlayDetail(BetListSystemParlayDetailCriteria criteria);
 
         /// <summary>
         /// Get exchange rate.

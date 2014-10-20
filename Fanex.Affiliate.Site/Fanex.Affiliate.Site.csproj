@@ -412,7 +412,9 @@
     <Content Include="Configurations\SPNames\SpNames.winner99.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.winner99.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.winner99.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.xml" />
+    <Content Include="Configurations\SPNames\SpNames.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Content\betlist\betlist.css" />
     <Content Include="Content\betlist\betlist.core.css" />
     <Content Include="Content\betlist\fanex.result.css" />

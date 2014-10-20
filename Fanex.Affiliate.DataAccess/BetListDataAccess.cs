@@ -16,10 +16,11 @@ namespace Fanex.Affiliate.DataAccess
     using System.Data;
     using System.Diagnostics.CodeAnalysis;
     using System.Globalization;
-    using Criteria;
     using Data;
     using DTO;
-    using DTO.BetList;
+    using Fanex.Affiliate.Criteria;
+    using Fanex.Affiliate.WebServices.Criteria;
+    using Fanex.Affiliate.WebServices.DTO.BetList;
     using Fanex.BetList.Core.Entities;
     using Fanex.Common;
 
@@ -272,7 +273,7 @@ namespace Fanex.Affiliate.DataAccess
         /// </summary>
         /// <param name="criteria">The metal model.</param>
         /// <returns>The system parlay.</returns>
-        public SystemParlayData GetSystemParlayDetail(SystemParlayDetailCriteria criteria)
+        public SystemParlayData GetSystemParlayDetail(BetListSystemParlayDetailCriteria criteria)
         {
             using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
             {

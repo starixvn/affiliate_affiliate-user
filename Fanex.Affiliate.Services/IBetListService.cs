@@ -13,7 +13,8 @@ namespace Fanex.Affiliate.Services
     using System.Collections.Generic;
     using Criteria;
     using DTO;
-    using DTO.BetList;
+    using Fanex.Affiliate.WebServices.Criteria;
+    using Fanex.Affiliate.WebServices.DTO.BetList;
     using Fanex.BetList.Core.Entities;
     using Fanex.Result.Core.DTO;
     using ViewModels;
@@ -44,7 +45,7 @@ namespace Fanex.Affiliate.Services
         /// </summary>
         /// <param name="criteria">The metal model.</param>
         /// <returns>The system parlay.</returns>
-        SystemParlayData GetSystemParlayDetail(SystemParlayDetailCriteria criteria);
+        SystemParlayData GetSystemParlayDetail(BetListSystemParlayDetailCriteria criteria);
 
         /// <summary>
         /// Get exchange rate.

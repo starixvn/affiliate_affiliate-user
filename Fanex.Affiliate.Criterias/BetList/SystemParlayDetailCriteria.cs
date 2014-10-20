@@ -16,9 +16,15 @@ namespace Fanex.Affiliate.Criteria
     /// <summary>
     /// System Parlay Detail Criteria.
     /// </summary>
-    public class SystemParlayDetailCriteria : CriteriaBase
+    public class BetListSystemParlayDetailCriteria : CriteriaBase
     {
-        public int LicenseeId { get; set; }
+        public BetListSystemParlayDetailCriteria()
+        {
+            AffiliateGroup = string.Empty;
+        }
+
+        [SpParam(Ignored = true)]
+        public string AffiliateGroup { get; set; }
 
         public int UserId { get; set; }
 
@@ -43,7 +49,7 @@ namespace Fanex.Affiliate.Criteria
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_User_BetListSystemParlayDetail";
+            return "Aff_BetList_SelCombinationParlayDetail" + AffiliateGroup;
         }
     }
 }

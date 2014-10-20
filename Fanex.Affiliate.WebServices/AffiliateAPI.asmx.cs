@@ -23,12 +23,14 @@ namespace Fanex.Affiliate.WebServices
     using Criteria;
     using DTO.BetList;
     using Enumerations;
+    using Fanex.Affiliate.Criteria;
+    using Fanex.Affiliate.DTO;
     using Fanex.BetList.Core.Builder;
     using Fanex.BetList.Core.Entities;
     using Fanex.BetList.Core.TicketHelper;
     using Fanex.Data.Configuration;
+    using Fanex.Result.Core;
     using Services;
-    using SOAP;
     using Utilities;
     using ViewModels;
 
@@ -48,6 +50,8 @@ namespace Fanex.Affiliate.WebServices
         private readonly IAffiliateService _affiliateService;
 
         private readonly IBetListService _betlistService;
+
+        private List<string> _resultsSupportedLanguages = new List<string>() { "en-US", "zh-TW", "zh-CN", "ja-JP", "th-TH", "ko-KR", "vi-VN" };
 
         #endregion
 
@@ -313,9 +317,10 @@ namespace Fanex.Affiliate.WebServices
         /// </summary>
         /// <param name="affiliateName">Affiliate Name.</param>
         /// <param name="transactionId">Transaction ID.</param>
+        /// <param name="exchangeRate">Exchange Rate.</param>
         /// <returns>Ticket Result.</returns>
         [WebMethod]
-        public TicketResult GetBetlistParlay(string affiliateName, string transactionId)
+        public List<TicketText> GetBetlistParlay(string affiliateName, string transactionId, string exchangeRate)
         {
             var affiliateGroup = affiliateName.Trim() == "12bet" ? "_12bet" : string.Empty;
             var criteria = new BetListParlayCriteria
@@ -324,7 +329,9 @@ namespace Fanex.Affiliate.WebServices
                 TransID = long.Parse(transactionId)
             };
 
-            return _betlistService.GetBetListParlay(criteria);
+            var ticketResults = _betlistService.GetBetListParlay(criteria);
+
+            return Ticket(ticketResults, new BetListCriteria(), string.Empty, decimal.Parse(exchangeRate), 1, true);
         }
 
         /// <summary>
@@ -343,7 +350,110 @@ namespace Fanex.Affiliate.WebServices
 
         #endregion
 
-        #region Web Methods - Affiliate's Results
+        #region Affiliate's Results - Utilities
+
+        /// <summary>
+        /// Get normal pop up data.
+        /// </summary>
+        /// <param name="criteria">The metal model.</param>
+        /// <param name="sportType">The sport type.</param>
+        /// <param name="userId">The user id.</param>
+        /// <param name="licenseeId">The licensee id.</param>
+        /// <param name="setting">The setting result.</param>
+        /// <returns>HTML formatted of data.</returns>
+        public string GetNormalPopUpData(BetListResultsCriteria criteria, SportType sportType, int userId, int licenseeId, ResultSetting setting)
+        {
+            switch (sportType)
+            {
+                case SportType.HorseRacing:
+                case SportType.Greyhound:
+                case SportType.Harness:
+                case SportType.VirtualHorseRacing:
+                    if (criteria.RaceNo == null)
+                    {
+                        return string.Empty;
+                    }
+
+                    var dataRc = _betlistService.GetPopUpRacingMatch(
+                        criteria.MatchId,
+                        criteria.RaceNo.Value,
+                        licenseeId,
+                        userId);
+                    return dataRc != null ? ResultEngine.HtmlParser(dataRc, setting) : string.Empty;
+
+                case SportType.LiveCasino:
+                    var dataLc = _betlistService.GetPopUpLiveCasinoMatch(
+                        criteria.MatchId,
+                        licenseeId,
+                        userId);
+                    return dataLc != null ? ResultEngine.HtmlParser(dataLc, setting) : string.Empty;
+
+                case SportType.NumberGame:
+                    var dataNg = _betlistService.GetPopUpNumberGameMatchs(criteria.MatchId);
+                    return dataNg != null ? ResultEngine.HtmlParser(dataNg, setting) : string.Empty;
+
+                default:
+                    var data = _betlistService.GetPopUpMatch(criteria.MatchId, licenseeId, userId);
+                    return data != null ? ResultEngine.HtmlParser(data, setting) : string.Empty;
+            }
+        }
+
+        #endregion
+
+        #region Affiliate's Results - Web Methods
+
+        [WebMethod]
+        public string GetResultsString(string affiliateName, string sessionLanguage, string licenseeId, BetListResultsCriteria criteria)
+        {
+            var sportType = (SportType)criteria.SportType;
+            var customerInfoBetList = _betlistService.GetPlayerIbcInfo(affiliateName + "$" + criteria.UserName);
+            var displaySettings = new ResultSetting
+            {
+                SportType = sportType,
+                IsOutRight = criteria.IsOutRight.HasValue && criteria.IsOutRight.Value > 0,
+                IsParlayPopUp = criteria.Bettype == (int)BetType.MixParlay || criteria.Bettype == (int)BetType.CombinationMixParlay,
+                IsPopUp = true,
+                LanguageCode = _resultsSupportedLanguages.Exists(i => i.Equals(sessionLanguage)) ? sessionLanguage : "en-US"
+            };
+
+            if (displaySettings.IsParlayPopUp && criteria.RefNo != null)
+            {
+                var parlayData = _betlistService.GetPopUpParlayMatch(criteria.RefNo.Value);
+                return ResultEngine.HtmlParser(parlayData, displaySettings);
+            }
+
+            return GetNormalPopUpData(criteria, sportType, customerInfoBetList.CustId, int.Parse(licenseeId), displaySettings);
+        }
+
+        #endregion
+
+        #region Affiliate's Results - RNG Casino - Utilities
+        #endregion
+
+        #region Affiliate's Results - RNG Casino - Web Methods
+        
+        [WebMethod]
+        public List<RNGCasinoResult> GetRNGCasino(string affiliateName, BetListResultsRNGCasinoCriteria criteria)
+        {
+            var customerInfoBetList = _betlistService.GetPlayerIbcInfo(affiliateName + "$" + criteria.UserName);
+            criteria.BaseCurrency = criteria.BaseCurrency ?? string.Empty;
+            criteria.ExternalId = customerInfoBetList.Username;
+            criteria.CurrencyId = customerInfoBetList.CurrencyId;
+            
+            return criteria.IsValid()
+                ? _betlistService.GetRNGCasinoResult(criteria)
+                : new List<RNGCasinoResult>();
+        }
+
+        [WebMethod]
+        public BetListResultsRNGCasinoDetailViewModel GetRNGCasinoDetail(BetListResultsRNGCasinoDetailCriteria criteria)
+        {
+            criteria.CurrencyName = criteria.CurrencyName.ToUpper();
+            
+            return criteria.IsValid()
+                ? _betlistService.GetRNGCasinoResultDetail(criteria)
+                : new BetListResultsRNGCasinoDetailViewModel();
+        }
 
         #endregion
     }

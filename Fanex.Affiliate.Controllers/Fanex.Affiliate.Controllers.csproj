@@ -183,6 +183,10 @@
       <Project>{C47B10A7-DA2E-4619-A7E4-FDA66B098688}</Project>
       <Name>Fanex.Affiliate.ViewModels</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Fanex.Affiliate.WebServices\Fanex.Affiliate.WebServices.csproj">
+      <Project>{FD2CD90C-AA9D-4E09-9600-5CB6564045E1}</Project>
+      <Name>Fanex.Affiliate.WebServices</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Fanex.Affiliate.Web\Fanex.Affiliate.Web.csproj">
       <Project>{E48F3A91-0A49-4528-8973-77ADE02C3D84}</Project>
       <Name>Fanex.Affiliate.Web</Name>
@@ -237,7 +241,9 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>

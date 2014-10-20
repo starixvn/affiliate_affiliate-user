@@ -10,7 +10,7 @@
 
 namespace Fanex.Affiliate.ViewModels
 {
-    using Criteria;
+    using Fanex.Affiliate.WebServices.Criteria;
 
     /// <summary>
     /// System Parlay Detail View Model.
@@ -19,6 +19,6 @@ namespace Fanex.Affiliate.ViewModels
     {
         public string DetailText { get; set; }
 
-        public SystemParlayDetailCriteria Param { get; set; }
+        public BetListSystemParlayDetailCriteria Param { get; set; }
     }
 }

@@ -19,10 +19,10 @@ namespace Fanex.Affiliate.WebServices.Services
     using BetList.Core.Entities;
     using Common;
     using Common.Helper;
-    using Criteria;
     using DataAccess;
     using DTO;
     using DTO.BetList;
+    using Fanex.Affiliate.WebServices.Criteria;
     using Result.Core.DTO;
     using ViewModels;
 

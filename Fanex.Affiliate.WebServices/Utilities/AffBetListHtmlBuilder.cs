@@ -12,8 +12,8 @@ namespace Fanex.Affiliate.WebServices.Utilities
 {
     using System.Collections.Generic;
     using System.Diagnostics.CodeAnalysis;
-    using Fanex.Affiliate.WebServices.Criteria;
-    using Fanex.Affiliate.WebServices.DTO.BetList;
+    using Criteria;
+    using DTO.BetList;
     using Fanex.BetList.Core.App_GlobalResources;
     using Fanex.BetList.Core.Builder;
     using Fanex.BetList.Core.Entities;

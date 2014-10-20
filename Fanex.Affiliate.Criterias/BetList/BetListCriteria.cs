@@ -22,65 +22,58 @@ namespace Fanex.Affiliate.Criteria
     {
         public BetListCriteria()
         {
+            AffiliateGroup = string.Empty;
             BaseCurrency = "EUR";
-            DrawFilter = 1;
+            Language = "E";
             ShowSB = false;
+            ShowCasino = false;
             ShowRB = false;
             ShowNG = false;
-            ShowBA = false;
-            ShowLC = false;
+            ShowLiveCasino = false;
             ShowVS = false;
-            ShowCS = false;
-            ShowBG = false;
+            ShowProgressiveBonus = false;
+            ShowKeno = false;
         }
 
-        public int LicenseeId { get; set; }
+        [SpParam(Ignored = true)]
+        public string AffiliateGroup { get; set; }
 
         [SpParam(Ignored = true)]
         public string BaseCurrency { get; set; }
 
-        [Range(1, 3)]
-        [DefaultValue(1)]
-        public int DrawFilter { get; set; }
+        [SpParam(Ignored = true)]
+        public string Currency { get; set; }
 
+        [SpParam(Ignored = true)]
+        public int CurrencyId { get; set; }
+
+        public int CustId { get; set; }
+        
         public DateTime FromDate { get; set; }
 
         public DateTime ToDate { get; set; }
-        
-        public int UserId { get; set; }
 
-        public int CustId { get; set; }
-
-        public DateTime MoveBetsDay { get; set; }
-
-        public DateTime BalanceUpDay { get; set; }
+        public string Language { get; set; }
 
         public bool ShowSB { get; set; }
+
+        public bool ShowCasino { get; set; }
 
         public bool ShowRB { get; set; }
 
         public bool ShowNG { get; set; }
 
-        public bool ShowBA { get; set; }
-
-        public bool ShowLC { get; set; }
+        public bool ShowLiveCasino { get; set; }
 
         public bool ShowVS { get; set; }
 
-        public bool ShowCS { get; set; }
+        public bool ShowProgressiveBonus { get; set; }
 
-        public bool ShowBG { get; set; }
+        public bool ShowKeno { get; set; }
         
         // Output parameters
-        public decimal TotalRows { get; set; }
+        public int Error { get; set; }
 
-        /// <summary>
-        /// Get SP name.
-        /// </summary>
-        /// <returns>Setting key.</returns>
-        public override string GetSettingKey()
-        {
-            return "Aff_User_BetList";
-        }
+        public int Duration { get; set; }
     }
 }

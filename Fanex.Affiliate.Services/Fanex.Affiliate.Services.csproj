@@ -219,6 +219,10 @@
       <Project>{C47B10A7-DA2E-4619-A7E4-FDA66B098688}</Project>
       <Name>Fanex.Affiliate.ViewModels</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Fanex.Affiliate.WebServices\Fanex.Affiliate.WebServices.csproj">
+      <Project>{FD2CD90C-AA9D-4E09-9600-5CB6564045E1}</Project>
+      <Name>Fanex.Affiliate.WebServices</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Fanex.Affiliate\Fanex.Affiliate.csproj">
       <Project>{ED4E400D-0509-4CEC-A2B7-1B8C71A380BA}</Project>
       <Name>Fanex.Affiliate</Name>
@@ -291,7 +295,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2014/3/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
+      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/3/28" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

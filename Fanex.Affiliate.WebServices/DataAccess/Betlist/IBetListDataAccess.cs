@@ -12,9 +12,9 @@ namespace Fanex.Affiliate.WebServices.DataAccess
 {
     using System.Data;
     using BetList.Core.Entities;
-    using Criteria;
     using DTO;
     using DTO.BetList;
+    using Fanex.Affiliate.WebServices.Criteria;
 
     /// <summary>
     /// Interface Account.

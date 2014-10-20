@@ -22,7 +22,8 @@ namespace Fanex.Affiliate.Services
     using Criteria;
     using DataAccess;
     using DTO;
-    using DTO.BetList;
+    using Fanex.Affiliate.WebServices.Criteria;
+    using Fanex.Affiliate.WebServices.DTO.BetList;
     using Result.Core.DTO;
     using ViewModels;
 
@@ -91,7 +92,7 @@ namespace Fanex.Affiliate.Services
         /// </summary>
         /// <param name="criteria">The metal model.</param>
         /// <returns>The system parlay.</returns>
-        public SystemParlayData GetSystemParlayDetail(SystemParlayDetailCriteria criteria)
+        public SystemParlayData GetSystemParlayDetail(BetListSystemParlayDetailCriteria criteria)
         {
             Check.Argument.IsNotNull(criteria, "criteria");
             return _betlistDataAccess.GetSystemParlayDetail(criteria);

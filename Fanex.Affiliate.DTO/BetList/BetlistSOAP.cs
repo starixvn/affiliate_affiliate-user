@@ -8,7 +8,7 @@
 //   <change who="" date=""></change>
 // </history>
 
-namespace Fanex.Affiliate.WebServices.SOAP
+namespace Fanex.Affiliate.DTO.BetList
 {
     using System;
     using System.Collections.Generic;
