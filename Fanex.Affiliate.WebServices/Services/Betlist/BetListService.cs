@@ -122,24 +122,25 @@ namespace Fanex.Affiliate.WebServices.Services
 
         #region BetList.Results
 
-        public IList<Sportbook> GetPopUpMatch(int matchId, int licenseeId, int userId)
+        public IList<Sportbook> GetPopUpMatch(string affiliateGroup, int matchId, int licenseeId, int userId)
         {
-            var data = _betlistDataAccess.GetPopUpMatch(matchId, -1, licenseeId, userId);
+            var data = _betlistDataAccess.GetPopUpMatch(affiliateGroup, matchId, -1, licenseeId, userId);
             return BindSportsbook(data);
         }
 
         /// <summary>
         /// Get parlay match for pop up page.
         /// </summary>
+        /// <param name="affiliateGroup">Affiliate Group.</param>
         /// <param name="refNo">The reference no.</param>
         /// <returns>The parlay data list.</returns>
         [SuppressMessage(
            "StyleCop.CSharp.Nexcel.NexcelCustomRules",
            "SP2101:MethodMustNotContainMoreLinesThan",
            Justification = "Reviewed. Suppression is OK here.")]
-        public IList<Parlay> GetPopUpParlayMatch(long refNo)
+        public IList<Parlay> GetPopUpParlayMatch(string affiliateGroup, long refNo)
         {
-            var data = _betlistDataAccess.GetPopUpParalayMatch(refNo);
+            var data = _betlistDataAccess.GetPopUpParalayMatch(affiliateGroup, refNo);
             if (data != null && data.Rows.Count > 0)
             {
                 var dataList = data.AsEnumerable();
@@ -212,29 +213,30 @@ namespace Fanex.Affiliate.WebServices.Services
             return new List<Parlay>();
         }
 
-        public IList<NumberGame> GetPopUpNumberGameMatchs(int matchId)
+        public IList<NumberGame> GetPopUpNumberGameMatchs(string affiliateGroup, int matchId)
         {
-            var data = _betlistDataAccess.GetPopUpNumberGameMatch(matchId);
+            var data = _betlistDataAccess.GetPopUpNumberGameMatch(affiliateGroup, matchId);
             return BindingNumberGame(data);
         }
 
-        public IList<LiveCasino> GetPopUpLiveCasinoMatch(int matchId, int licenseeId, int userId)
+        public IList<LiveCasino> GetPopUpLiveCasinoMatch(string affiliateGroup, int matchId, int licenseeId, int userId)
         {
-            var dataLc = _betlistDataAccess.GetPopUpMatch(matchId, -1, licenseeId, userId);
+            var dataLc = _betlistDataAccess.GetPopUpMatch(affiliateGroup, matchId, -1, licenseeId, userId);
             return BindingLiveCasino(dataLc);
         }
 
         /// <summary>
         /// Get racing data for popup page.
         /// </summary>
+        /// <param name="affiliateGroup">Affiliate Group.</param>
         /// <param name="matchId">The match id.</param>
         /// <param name="raceNo">The reference number.</param>
         /// <param name="licenseeId">The licensee id.</param>
         /// <param name="userId">The user id.</param>
         /// <returns>The racing data list.</returns>
-        public IList<Racing> GetPopUpRacingMatch(int matchId, int raceNo, int licenseeId, int userId)
+        public IList<Racing> GetPopUpRacingMatch(string affiliateGroup, int matchId, int raceNo, int licenseeId, int userId)
         {
-            var dataRc = _betlistDataAccess.GetPopUpMatch(matchId, raceNo, licenseeId, userId);
+            var dataRc = _betlistDataAccess.GetPopUpMatch(affiliateGroup, matchId, raceNo, licenseeId, userId);
             return BindingRacing(dataRc);
         }
 

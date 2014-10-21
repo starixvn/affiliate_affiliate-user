@@ -64,26 +64,29 @@ namespace Fanex.Affiliate.WebServices.DataAccess
         /// <summary>
         /// Get Popup Match.
         /// </summary>
+        /// <param name="affiliateGroup">Affiliate Group.</param>
         /// <param name="matchId">Match ID value.</param>
         /// <param name="raceNo">Race Number value.</param>
         /// <param name="licenseeId">Licensee ID value.</param>
         /// <param name="userId">User ID value.</param>
         /// <returns>The result value.</returns>
-        DataTable GetPopUpMatch(int matchId, int raceNo, int licenseeId, int userId);
+        DataTable GetPopUpMatch(string affiliateGroup, int matchId, int raceNo, int licenseeId, int userId);
 
         /// <summary>
         /// Get Popup Parlay Match.
         /// </summary>
+        /// <param name="affiliateGroup">Affiliate Group.</param>
         /// <param name="refNo">Reference Number value.</param>
         /// <returns>The result value.</returns>
-        DataTable GetPopUpParalayMatch(long refNo);
+        DataTable GetPopUpParalayMatch(string affiliateGroup, long refNo);
 
         /// <summary>
         /// Get Popup Number game match.
         /// </summary>
+        /// <param name="affiliateGroup">Affiliate Group.</param>
         /// <param name="matchId">Match ID value.</param>
         /// <returns>The result value.</returns>
-        DataTable GetPopUpNumberGameMatch(int matchId);
+        DataTable GetPopUpNumberGameMatch(string affiliateGroup, int matchId);
 
         #endregion
     }
