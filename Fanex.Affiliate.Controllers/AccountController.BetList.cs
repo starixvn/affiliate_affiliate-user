@@ -141,7 +141,7 @@ namespace Fanex.Affiliate.Controllers
         /// Get supported products.
         /// </summary>
         /// <returns>List of Product.</returns>
-        public IEnumerable<Product> GetSupportedProducts()
+        public List<Product> GetSupportedProducts()
         {
             var productCriteria = new ProductCriteria
             {

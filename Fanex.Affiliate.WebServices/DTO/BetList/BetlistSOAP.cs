@@ -38,6 +38,6 @@ namespace Fanex.Affiliate.WebServices.DTO.BetList
 
         public decimal ExchangeRate { get; set; }
 
-        public IEnumerable<Product> SupportedProducts { get; set; }
+        public List<Product> SupportedProducts { get; set; }
     }
 }

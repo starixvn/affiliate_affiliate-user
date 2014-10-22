@@ -33,6 +33,7 @@ namespace Fanex.Affiliate.WebServices
     using Services;
     using Utilities;
     using ViewModels;
+    using System.Runtime.Serialization.Formatters.Binary;
 
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
     // [System.Web.Script.Services.ScriptService]
@@ -285,6 +286,24 @@ namespace Fanex.Affiliate.WebServices
             return ticketTextList;
         }
 
+        /// <summary>
+        /// Serializes the given object to byte stream.
+        /// </summary>
+        /// <param name="objectToSeralize">Object to be serialized.</param>
+        /// <returns>byte array of searialize object.</returns>
+        public static byte[] Serialize(object objectToSeralize)
+        {
+            byte[] objectBytes;
+            using (MemoryStream stream = new MemoryStream())
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
+
+                formatter.Serialize(stream, objectToSeralize);
+                objectBytes = stream.ToArray();
+            }
+            return objectBytes;
+        }
+
         #endregion
 
         #region Affiliate's Betlist - Web Methods
@@ -295,11 +314,27 @@ namespace Fanex.Affiliate.WebServices
         /// <param name="betlistSOAP">Bet list SOAP object.</param>
         /// <returns>Bet list View Model.</returns>
         [WebMethod]
-        public BetListViewModel GetBetlistViewModel(BetlistSOAP betlistSOAP)
+        public byte[] GetBetlist(BetlistSOAP betlistSOAP)
         {
+            List<Product> products = new List<Product>();
+            products.Add(new Product { ProductId = 1, ProductName = "Sportsbook" });
+
+            // Hard code for testing Service
+            betlistSOAP.AffiliateName = "Athena000";
+            betlistSOAP.Username = "AFF1001";
+            betlistSOAP.Product = "Sportsbook";
+            betlistSOAP.FromDate = new DateTime();
+            betlistSOAP.FromDate = new DateTime();
+            betlistSOAP.CurrencyName = "UUS";
+            betlistSOAP.CurrencyId = 9999;
+            betlistSOAP.TargetCurrencyId = 9999;
+            betlistSOAP.ExchangeRate = 1;
+            betlistSOAP.SupportedProducts = products;
+
             var criteria = GenerateBetlistCriteria(betlistSOAP);
             var ticketResults = _betlistService.GetBetList(criteria);
 
+            
             var viewModel = new BetListViewModel()
             {
                 TicketTextList = Ticket(ticketResults, criteria, betlistSOAP.Username, betlistSOAP.ExchangeRate),
@@ -309,7 +344,7 @@ namespace Fanex.Affiliate.WebServices
                 ExchangeRate = betlistSOAP.ExchangeRate
             };
 
-            return viewModel;
+            return Serialize(viewModel);
         }
 
         /// <summary>
@@ -320,7 +355,7 @@ namespace Fanex.Affiliate.WebServices
         /// <param name="exchangeRate">Exchange Rate.</param>
         /// <returns>Ticket Result.</returns>
         [WebMethod]
-        public List<TicketText> GetBetlistParlay(string affiliateName, string transactionId, string exchangeRate)
+        public byte[] GetBetlistParlay(string affiliateName, string transactionId, string exchangeRate)
         {
             var affiliateGroup = affiliateName.Trim() == "12bet" ? "_12bet" : string.Empty;
             var criteria = new BetListParlayCriteria
@@ -331,7 +366,7 @@ namespace Fanex.Affiliate.WebServices
 
             var ticketResults = _betlistService.GetBetListParlay(criteria);
 
-            return Ticket(ticketResults, new BetListCriteria(), string.Empty, decimal.Parse(exchangeRate), 1, true);
+            return Serialize(Ticket(ticketResults, new BetListCriteria(), string.Empty, decimal.Parse(exchangeRate), 1, true));
         }
 
         /// <summary>
@@ -341,11 +376,11 @@ namespace Fanex.Affiliate.WebServices
         /// <param name="criteria">Bet List System Parlay Detail Criteria.</param>
         /// <returns>System Parlay Data.</returns>
         [WebMethod]
-        public SystemParlayData GetBetlistSystemParlay(string affiliateName, BetListSystemParlayDetailCriteria criteria)
+        public byte[] GetBetlistSystemParlay(string affiliateName, BetListSystemParlayDetailCriteria criteria)
         {
             criteria.AffiliateGroup = affiliateName.Trim() == "12bet" ? "_12bet" : string.Empty;
 
-            return _betlistService.GetSystemParlayDetail(criteria);
+            return Serialize(_betlistService.GetSystemParlayDetail(criteria));
         }
 
         #endregion
@@ -420,7 +455,7 @@ namespace Fanex.Affiliate.WebServices
         /// <param name="criteria">Input criteria.</param>
         /// <returns>Result's Html string.</returns>
         [WebMethod]
-        public string GetResultsString(string affiliateName, string sessionLanguage, string licenseeId, BetListResultsCriteria criteria)
+        public string GetBetlistResults(string affiliateName, string sessionLanguage, string licenseeId, BetListResultsCriteria criteria)
         {
             var sportType = (SportType)criteria.SportType;
             var customerInfoBetList = _betlistService.GetPlayerIbcInfo(affiliateName + "$" + criteria.UserName);
@@ -451,26 +486,30 @@ namespace Fanex.Affiliate.WebServices
         #region Affiliate's Results - RNG Casino - Web Methods
         
         [WebMethod]
-        public List<RNGCasinoResult> GetRNGCasino(string affiliateName, BetListResultsRNGCasinoCriteria criteria)
+        public byte[] GetBetlistResultsRNGCasino(string affiliateName, BetListResultsRNGCasinoCriteria criteria)
         {
             var customerInfoBetList = _betlistService.GetPlayerIbcInfo(affiliateName + "$" + criteria.UserName);
             criteria.BaseCurrency = criteria.BaseCurrency ?? string.Empty;
             criteria.ExternalId = customerInfoBetList.Username;
             criteria.CurrencyId = customerInfoBetList.CurrencyId;
             
-            return criteria.IsValid()
+            var rngCasinoResults = criteria.IsValid()
                 ? _betlistService.GetRNGCasinoResult(criteria)
                 : new List<RNGCasinoResult>();
+
+            return Serialize(rngCasinoResults);
         }
 
         [WebMethod]
-        public BetListResultsRNGCasinoDetailViewModel GetRNGCasinoDetail(BetListResultsRNGCasinoDetailCriteria criteria)
+        public byte[] GetBetlistResultsRNGCasinoDetail(BetListResultsRNGCasinoDetailCriteria criteria)
         {
             criteria.CurrencyName = criteria.CurrencyName.ToUpper();
-            
-            return criteria.IsValid()
+
+            var rngCasinoResultsDetail = criteria.IsValid()
                 ? _betlistService.GetRNGCasinoResultDetail(criteria)
                 : new BetListResultsRNGCasinoDetailViewModel();
+
+            return Serialize(rngCasinoResultsDetail);
         }
 
         #endregion

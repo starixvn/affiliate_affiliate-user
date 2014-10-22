@@ -25,6 +25,8 @@ namespace Fanex.Affiliate.WebServices.ViewModels
 
         public TicketResult TicketResult { get; set; }
 
+        public byte[] TicketResultBytes { get; set; }
+
         public bool IsShowSystemIdAndExternalId { get; set; }
 
         public bool IsShowWinLoss { get; set; }
