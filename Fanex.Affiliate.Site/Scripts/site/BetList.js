@@ -1,5 +1,4 @@
-﻿/// <reference path="/@JSense.js" />
-/* global AFFILIATE, QueryString */
+﻿/* global AFFILIATE, QueryString */
 /* exported showCombMP, showCombMPDetail, showMP, ViewResult */
 "use strict";
 
