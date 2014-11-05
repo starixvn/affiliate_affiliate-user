@@ -542,6 +542,51 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
     <Content Include="App_Code\RazorHelper.cshtml" />
+    <Content Include="Content\themes\theme26\images\banner.en-US.jpg" />
+    <Content Include="Content\themes\theme26\images\banner.id-ID.jpg" />
+    <Content Include="Content\themes\theme26\images\banner.ko-KR.jpg" />
+    <Content Include="Content\themes\theme26\images\banner.th-TH.jpg" />
+    <Content Include="Content\themes\theme26\images\banner.vi-VN.jpg" />
+    <Content Include="Content\themes\theme26\images\banner.zh-CN.jpg" />
+    <Content Include="Content\themes\theme26\images\banner.zh-TW.jpg" />
+    <Content Include="Content\themes\theme26\images\banner_top.png" />
+    <Content Include="Content\themes\theme26\images\bar-loader.gif" />
+    <Content Include="Content\themes\theme26\images\bgheader.png" />
+    <Content Include="Content\themes\theme26\images\bghotNewsContent.png" />
+    <Content Include="Content\themes\theme26\images\bgLanguage-Content.png" />
+    <Content Include="Content\themes\theme26\images\bgLanguage.png" />
+    <Content Include="Content\themes\theme26\images\bgLanguage_Content.png" />
+    <Content Include="Content\themes\theme26\images\bgMainMenu.png" />
+    <Content Include="Content\themes\theme26\images\bgTableHeader.png" />
+    <Content Include="Content\themes\theme26\images\bg_buttonsite.png" />
+    <Content Include="Content\themes\theme26\images\bg_center.jpg" />
+    <Content Include="Content\themes\theme26\images\bg_center2.jpg" />
+    <Content Include="Content\themes\theme26\images\bg_footer.jpg" />
+    <Content Include="Content\themes\theme26\images\bg_footer.png" />
+    <Content Include="Content\themes\theme26\images\bg_header03.jpg" />
+    <Content Include="Content\themes\theme26\images\deco.jpg" />
+    <Content Include="Content\themes\theme26\images\emailBanner.jpg" />
+    <Content Include="Content\themes\theme26\images\emailBg.jpg" />
+    <Content Include="Content\themes\theme26\images\error_icons.png" />
+    <Content Include="Content\themes\theme26\images\favicon.jpg" />
+    <Content Include="Content\themes\theme26\images\firstGoal.gif" />
+    <Content Include="Content\themes\theme26\images\glyphicons-halflings-gray-lighter.png" />
+    <Content Include="Content\themes\theme26\images\glyphicons-halflings-gray.png" />
+    <Content Include="Content\themes\theme26\images\glyphicons-halflings.png" />
+    <Content Include="Content\themes\theme26\images\header_gradient.png" />
+    <Content Include="Content\themes\theme26\images\help.txt" />
+    <Content Include="Content\themes\theme26\images\in_top.png" />
+    <Content Include="Content\themes\theme26\images\lastGoal.gif" />
+    <Content Include="Content\themes\theme26\images\link_14x14.png" />
+    <Content Include="Content\themes\theme26\images\loader.gif" />
+    <Content Include="Content\themes\theme26\images\note.png" />
+    <Content Include="Content\themes\theme26\images\plus.png" />
+    <Content Include="Content\themes\theme26\images\signup.png" />
+    <Content Include="Content\themes\theme26\images\sprite.png" />
+    <Content Include="Content\themes\theme26\images\tab_topbg.gif" />
+    <Content Include="Content\themes\theme26\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\theme26\images\undo.png" />
+    <Content Include="Content\themes\theme26\images\up.png" />
     <Content Include="Content\themes\theme13\images\banner.id-ID.jpg" />
     <Content Include="Content\themes\theme13\images\banner.th-TH.jpg" />
     <Content Include="Content\themes\theme13\images\banner_top.png" />
@@ -3609,6 +3654,9 @@
     <Content Include="Configurations\AppSettings\Web.AppSettings.winner99.production.config" />
     <Content Include="Configurations\AppSettings\Web.AppSettings.winner99.sandbox.config" />
     <Content Include="Configurations\AppSettings\Web.AppSettings.winner99.uat.config" />
+    <Content Include="Content\themes\theme26\index.less" />
+    <Content Include="Content\themes\theme26\mixins.less" />
+    <Content Include="Content\themes\theme26\variables.less" />
     <None Include="img\Slot\S0007\icon_20x20_doubleWild.jpg.exclude" />
     <None Include="img\Slot\S0007\icon_40x40_doubleWild.jpg.exclude" />
   </ItemGroup>
@@ -3941,7 +3989,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
