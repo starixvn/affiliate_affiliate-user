@@ -53,9 +53,10 @@ namespace Fanex.Affiliate.WebServices.DataAccess
         /// <summary>
         /// Get player's username.
         /// </summary>
+        /// <param name="affiliateGroup">Affiliate group.</param>
         /// <param name="playerUsername">Affiliate username.</param>
         /// <returns>Return player's Info.</returns>
-        CustomerInfoBetList GetPlayerIbcInfo(string playerUsername);
+        CustomerInfoBetList GetPlayerIbcInfo(string affiliateGroup, string playerUsername);
 
         #endregion
 
@@ -67,10 +68,8 @@ namespace Fanex.Affiliate.WebServices.DataAccess
         /// <param name="affiliateGroup">Affiliate Group.</param>
         /// <param name="matchId">Match ID value.</param>
         /// <param name="raceNo">Race Number value.</param>
-        /// <param name="licenseeId">Licensee ID value.</param>
-        /// <param name="userId">User ID value.</param>
         /// <returns>The result value.</returns>
-        DataTable GetPopUpMatch(string affiliateGroup, int matchId, int raceNo, int licenseeId, int userId);
+        DataTable GetPopUpMatch(string affiliateGroup, int matchId, int raceNo);
 
         /// <summary>
         /// Get Popup Parlay Match.

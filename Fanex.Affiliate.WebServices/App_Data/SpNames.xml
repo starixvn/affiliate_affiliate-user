@@ -27,7 +27,7 @@
   <Function Name="Aff-Betlist">
     <!-- Athena group-->
     <Setting Key="Aff_BetList_SelWinLossByDate" SpName="Aff_BetList_SelWinLossByDate" DbName="DBEXT.bodb02.bodbAdminNet.athena" Plain="0" />
-    <Setting Key="Aff_BetList_SelWinLossByDate_Old" SpName="Aff_BetList_SelWinLossByDate_Old" DbName="DBEXT.bodb02.bodbAdminNet.athena" Plain="0" />
+    <Setting Key="Aff_BetList_SelWinLossByDate_Old" SpName="Aff_BetList_SelWinLossByDate_Old" DbName="DBEXT.bodb_Archive.bodbAdminNet.athena" Plain="0" />
     <Setting Key="Aff_BetList_SelParlayByTransID" SpName="Aff_BetList_SelParlayByTransID" DbName="DBEXT.bodb02.bodbAdminNet.athena" Plain="0" />
     <Setting Key="Aff_BetList_SelCombinationParlayDetail" SpName="Aff_BetList_SelCombinationParlayDetail" DbName="DBEXT.bodb02.bodbAdminNet.athena" Plain="0" />
     <Setting Key="Aff_BetList_SelBalanceUpDay" SpName="Aff_BetList_SelBalanceUpDay" DbName="DBEXT.bodb02.bodbAdminNet.athena" Plain="0" />
@@ -35,7 +35,7 @@
     
     <!-- 12bet group -->
     <Setting Key="Aff_BetList_SelWinLossByDate_12bet" SpName="Aff_BetList_SelWinLossByDate" DbName="DBEXT.bodb02.bodbAdminNet.12bet" Plain="0" />
-    <Setting Key="Aff_BetList_SelWinLossByDate_Old_12bet" SpName="Aff_BetList_SelWinLossByDate_Old" DbName="DBEXT.bodb02.bodbAdminNet.12bet" Plain="0" />
+    <Setting Key="Aff_BetList_SelWinLossByDate_Old_12bet" SpName="Aff_BetList_SelWinLossByDate_Old" DbName="DBEXT.bodb_Archive.bodbAdminNet.12bet" Plain="0" />
     <Setting Key="Aff_BetList_SelParlayByTransID_12bet" SpName="Aff_BetList_SelParlayByTransID" DbName="DBEXT.bodb02.bodbAdminNet.12bet" Plain="0" />
     <Setting Key="Aff_BetList_SelCombinationParlayDetail_12bet" SpName="Aff_BetList_SelCombinationParlayDetail" DbName="DBEXT.bodb02.bodbAdminNet.12bet" Plain="0" />
     <Setting Key="Aff_BetList_SelBalanceUpDay_12bet" SpName="Aff_BetList_SelBalanceUpDay" DbName="DBEXT.bodb02.bodbAdminNet.12bet" Plain="0" />

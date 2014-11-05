@@ -133,7 +133,7 @@ namespace Fanex.Affiliate.Services
 
         #region BetList.Results
 
-        public IList<Sportbook> GetPopUpMatch(int matchId, int licenseeId, int userId)
+        public IList<Sportsbook> GetPopUpMatch(int matchId, int licenseeId, int userId)
         {
             var data = _betlistDataAccess.GetPopUpMatch(matchId, -1, licenseeId, userId);
             return BindSportsbook(data);
@@ -170,7 +170,7 @@ namespace Fanex.Affiliate.Services
                                     dataList.Where(i => i["LeagueID"].ToString() == leagueId.ToString(CultureInfo.InvariantCulture))
                                         .Select(
                                             i =>
-                                                new Sportbook
+                                                new Sportsbook
                                                 {
                                                     AwayId = int.Parse(i["awayID"].ToString()),
                                                     HomeId = int.Parse(i["homeID"].ToString()),
@@ -207,7 +207,6 @@ namespace Fanex.Affiliate.Services
                                                     KickOffTime = DateTime.Parse(i["kickofftime"].ToString()),
                                                     MatchCode = i["matchcode"].ToString(),
                                                     GoalRecord = i["goalrecord"].ToString(),
-                                                    ResultValue = "6-1 *30-40 40-30* *40-0 40-0* *40-0 40-0* *40-0",
                                                     IsHTCal = Convert.ToBoolean(i["IsHTCal"]),
                                                     Calculate = Convert.ToBoolean(i["Calculate"]),
                                                     RefNo = refNo.ToString(CultureInfo.InvariantCulture),
@@ -320,7 +319,7 @@ namespace Fanex.Affiliate.Services
         /// </summary>
         /// <param name="data">The data table.</param>
         /// <returns>The sports-book data list.</returns>
-        private static IList<Sportbook> BindSportsbook(DataTable data)
+        private static IList<Sportsbook> BindSportsbook(DataTable data)
         {
             if (data != null && data.Rows.Count > 0)
             {
@@ -328,7 +327,7 @@ namespace Fanex.Affiliate.Services
                     data.AsEnumerable()
                         .Select(
                             i =>
-                                new Sportbook
+                                new Sportsbook
                                 {
                                     AwayId = int.Parse(i["awayID"].ToString()),
                                     HomeId = int.Parse(i["homeID"].ToString()),
@@ -358,7 +357,6 @@ namespace Fanex.Affiliate.Services
                                     KickOffTime = DateTime.Parse(i["kickofftime"].ToString()),
                                     MatchCode = i["matchcode"].ToString(),
                                     GoalRecord = i["goalrecord"].ToString(),
-                                    ResultValue = "6-1 *30-40 40-30* *40-0 40-0* *40-0 40-0* *40-0",
                                     IsHTCal = Convert.ToBoolean(i["IsHTCal"]),
                                     Calculate = Convert.ToBoolean(i["Calculate"]),
                                     RefNo = "12"
@@ -366,7 +364,7 @@ namespace Fanex.Affiliate.Services
                         .ToList();
             }
 
-            return new List<Sportbook>();
+            return new List<Sportsbook>();
         }
 
         /// <summary>

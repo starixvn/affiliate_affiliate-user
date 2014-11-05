@@ -10,6 +10,7 @@
 
 namespace Fanex.Affiliate.WebServices.DTO.BetList
 {
+    using System;
     using System.Diagnostics.CodeAnalysis;
     using System.Linq;
 
@@ -17,6 +18,7 @@ namespace Fanex.Affiliate.WebServices.DTO.BetList
     /// RNGCasinoResult class.
     /// </summary>
     [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed.")]
+    [Serializable]
     public class RNGCasinoResult
     {
         public static readonly string[] _SPECIALGAME = { "S0001", "S0004", "S0003", "S0007", "S0005" };

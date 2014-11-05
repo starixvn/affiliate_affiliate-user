@@ -13,6 +13,7 @@ namespace Fanex.Affiliate.Controllers
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Runtime.InteropServices;
     using System.Web.Mvc;
     using System.Web.Script.Serialization;
     using Configurations;
@@ -21,6 +22,7 @@ namespace Fanex.Affiliate.Controllers
     using Fanex.Affiliate.DTO;
     using Fanex.Affiliate.WebServices.Criteria;
     using Fanex.Affiliate.WebServices.DTO.BetList;
+    using Fanex.Affiliate.WebServices.ViewModels;
     using Fanex.BetList.Core.Builder;
     using Fanex.BetList.Core.Entities;
     using Fanex.BetList.Core.TicketHelper;
@@ -50,16 +52,12 @@ namespace Fanex.Affiliate.Controllers
         {
             DateTime winlostDate;
             DateTime.TryParse(winlostdate, out winlostDate);
-            
-            var balanceUpMoveBetCriteria = new BalanceUpMoveBetCriteria();
-            BetListService.GetBalanceUpMoveBetDate(balanceUpMoveBetCriteria);
-
             var customerInfoBetList = BetListService.GetPlayerIbcInfo(AppSettings.AffiliateName + "$" + username);
             var exchangeRate = GetExchangeRate(currency, winlostDate);
             CurrentSession.ExchangeRate = exchangeRate;
-            var supportedProducts = GetSupportedProducts();
-            
-            var betlistSOAP = new BetlistSOAP
+            var supportedProducts = GetSupportedProductsForWebService();
+
+            var betlistSOAP = new AffBetlistService.BetlistSOAP
             {
                 AffiliateName = AppSettings.AffiliateName.ToLower(),
                 Username = CurrentSession.Username,
@@ -73,11 +71,13 @@ namespace Fanex.Affiliate.Controllers
                 SupportedProducts = supportedProducts
             };
 
-            var model = new BetListViewModel();
+            var affBetlistService = new AffBetlistService.AffiliateAPI();
+            var modelByteArray = affBetlistService.GetBetlist(betlistSOAP);
+            var viewModel = Common.ByteArrayToObject<BetListViewModel>(modelByteArray);
 
-            return View(model);
+            return View(viewModel);
         }
-
+        
         /// <summary>
         /// Get data for running mix parlay bet list.
         /// </summary>
@@ -86,12 +86,15 @@ namespace Fanex.Affiliate.Controllers
         [HttpGet]
         public dynamic BetListParlay(long transId)
         {
-            // var ticketResult = BetListService.GetBetListParlay(transId);
-            // var exchangeRate = CurrentSession.ExchangeRate == -1 ? 1 : CurrentSession.ExchangeRate;
-            var ticket = new List<TicketText>(); // Ticket(ticketResult, new BetListCriteria(), string.Empty, exchangeRate, 1, true);
+            var affBetlistService = new AffBetlistService.AffiliateAPI();
+            var ticket = affBetlistService.GetBetlistParlay(
+                AppSettings.AffiliateName,
+                transId.ToString(),
+                CurrentSession.ExchangeRate.ToString());
+            var ticketsText = Common.ByteArrayToListObjects<TicketText>(ticket);
             var jsonSerialiser = new JavaScriptSerializer();
 
-            return jsonSerialiser.Serialize(ticket);
+            return jsonSerialiser.Serialize(ticketsText);
         }
 
         /// <summary>
@@ -100,41 +103,29 @@ namespace Fanex.Affiliate.Controllers
         /// <param name="criteria">The metal model.</param>
         /// <returns>The action result.</returns>
         [HttpGet]
-        public ActionResult SystemParlayDetail(BetListSystemParlayDetailCriteria criteria)
+        public ActionResult SystemParlayDetail(AffBetlistService.BetListSystemParlayDetailCriteria criteria)
         {
-            var balanceUpMoveBetCriteria = new BalanceUpMoveBetCriteria();
-            BetListService.GetBalanceUpMoveBetDate(balanceUpMoveBetCriteria);
-            criteria.BalanceUpDay = balanceUpMoveBetCriteria.BalanceUpDay;
-            criteria.MoveBetsDay = balanceUpMoveBetCriteria.MoveBetsDay;
-            criteria.UserId = AppSettings.LicenseeID;
-
-            var systemParlayData = BetListService.GetSystemParlayDetail(criteria);
-            ExchangeSystemParlayTickets(systemParlayData);
-            var builder = new BetListHTMLBuilder();
-            var systemParlayText = builder.BuildSystemParlayDetail(new TicketHelper(), systemParlayData);
+            var affBetlistService = new AffBetlistService.AffiliateAPI();
+            var systemParlayDataText = affBetlistService.GetBetlistSystemParlay(
+                AppSettings.AffiliateName,
+                CurrentSession.ExchangeRate.ToString(),
+                criteria);
             var viewModel = new SystemParlayDetailViewModel
             {
-                DetailText = systemParlayText,
-                Param = criteria
+                DetailText = systemParlayDataText,
+                Param = new BetListSystemParlayDetailCriteria
+                {
+                    AffiliateGroup = criteria.AffiliateGroup,
+                    UserId = criteria.UserId,
+                    TransId = criteria.TransId,
+                    RefNo = criteria.RefNo,
+                    BetId = criteria.BetId,
+                    CustId = criteria.CustId,
+                    Outstanding = criteria.Outstanding
+                }
             };
 
             return View(viewModel);
-        }
-
-        /// <summary>
-        /// Exchange system parlay ticket from user's currency to affiliate's currency.
-        /// </summary>
-        /// <param name="systemParlayData">Original system parlay data object.</param>
-        public void ExchangeSystemParlayTickets(SystemParlayData systemParlayData)
-        {
-            systemParlayData.Outstanding *= CurrentSession.ExchangeRate;
-            foreach (var ticket in systemParlayData.TicketList)
-            {
-                ticket.Comm *= CurrentSession.ExchangeRate;
-                ticket.PlayerComm *= CurrentSession.ExchangeRate;
-                ticket.Stake *= CurrentSession.ExchangeRate;
-                ticket.WinLost *= CurrentSession.ExchangeRate;
-            }
         }
 
         /// <summary>
@@ -151,6 +142,29 @@ namespace Fanex.Affiliate.Controllers
             };
 
             return ProductService.GetProductList(productCriteria).ToList();
+        }
+
+        /// <summary>
+        /// Get supported products.
+        /// </summary>
+        /// <returns>An array of supported products.</returns>
+        public AffBetlistService.Product[] GetSupportedProductsForWebService()
+        {
+            var products = GetSupportedProducts();
+            List<AffBetlistService.Product> supportedProducts = new List<AffBetlistService.Product>();
+            
+            foreach (var product in products)
+            {
+                supportedProducts.Add(new AffBetlistService.Product
+                {
+                    ProductId = product.ProductId,
+                    ProductName = product.ProductName,
+                    OriginalProductName = product.OriginalProductName,
+                    TotalQualifiedMembers = product.TotalQualifiedMembers
+                });
+            }
+
+            return supportedProducts.ToArray();
         }
 
         /// <summary>

@@ -15,6 +15,7 @@ namespace Fanex.Affiliate.WebServices
     using System.Diagnostics.CodeAnalysis;
     using System.IO;
     using System.Linq;
+    using System.Runtime.Serialization.Formatters.Binary;
     using System.Text;
     using System.Web;
     using System.Web.Services;
@@ -33,7 +34,6 @@ namespace Fanex.Affiliate.WebServices
     using Services;
     using Utilities;
     using ViewModels;
-    using System.Runtime.Serialization.Formatters.Binary;
 
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
     // [System.Web.Script.Services.ScriptService]
@@ -125,10 +125,10 @@ namespace Fanex.Affiliate.WebServices
         /// <returns>BetListCriteria object.</returns>
         public BetListCriteria GenerateBetlistCriteria(BetlistSOAP betlistSOAP)
         {
-            var balanceUpMoveBetCriteria = new BalanceUpMoveBetCriteria();
-            _betlistService.GetBalanceUpMoveBetDate(balanceUpMoveBetCriteria);
-            var customerInfoBetList = _betlistService.GetPlayerIbcInfo(betlistSOAP.AffiliateName + "$" + betlistSOAP.Username);
             var affiliateGroup = betlistSOAP.AffiliateName.Trim() == "12bet" ? "_12bet" : string.Empty;
+            var balanceUpMoveBetCriteria = new BalanceUpMoveBetCriteria { AffiliateGroup = affiliateGroup };
+            _betlistService.GetBalanceUpMoveBetDate(balanceUpMoveBetCriteria);
+            var customerInfoBetList = _betlistService.GetPlayerIbcInfo(affiliateGroup, betlistSOAP.AffiliateName + "$" + betlistSOAP.Username);
 
             BetListCriteria criteria;
             if (betlistSOAP.FromDate < balanceUpMoveBetCriteria.BalanceUpDay)
@@ -287,11 +287,28 @@ namespace Fanex.Affiliate.WebServices
         }
 
         /// <summary>
+        /// Exchange system parlay ticket from user's currency to affiliate's currency.
+        /// </summary>
+        /// <param name="systemParlayData">Original system parlay data object.</param>
+        /// <param name="exchangeRate">Exchange rate.</param>
+        public void ExchangeSystemParlayTickets(SystemParlayData systemParlayData, decimal exchangeRate)
+        {
+            systemParlayData.Outstanding *= exchangeRate;
+            foreach (var ticket in systemParlayData.TicketList)
+            {
+                ticket.Comm *= exchangeRate;
+                ticket.PlayerComm *= exchangeRate;
+                ticket.Stake *= exchangeRate;
+                ticket.WinLost *= exchangeRate;
+            }
+        }
+
+        /// <summary>
         /// Serializes the given object to byte stream.
         /// </summary>
         /// <param name="objectToSeralize">Object to be serialized.</param>
-        /// <returns>byte array of searialize object.</returns>
-        public static byte[] Serialize(object objectToSeralize)
+        /// <returns>Byte array of serialize object.</returns>
+        public byte[] Serialize(object objectToSeralize)
         {
             byte[] objectBytes;
             using (MemoryStream stream = new MemoryStream())
@@ -301,6 +318,7 @@ namespace Fanex.Affiliate.WebServices
                 formatter.Serialize(stream, objectToSeralize);
                 objectBytes = stream.ToArray();
             }
+
             return objectBytes;
         }
 
@@ -318,13 +336,18 @@ namespace Fanex.Affiliate.WebServices
         {
             List<Product> products = new List<Product>();
             products.Add(new Product { ProductId = 1, ProductName = "Sportsbook" });
+            products.Add(new Product { ProductId = 2, ProductName = "RNG Casino" });
+            products.Add(new Product { ProductId = 3, ProductName = "Number Game" });
+            products.Add(new Product { ProductId = 4, ProductName = "Live Casino" });
+            products.Add(new Product { ProductId = 5, ProductName = "Playtech Casino" });
+            products.Add(new Product { ProductId = 6, ProductName = "Virtual Sports" });
 
             // Hard code for testing Service
             betlistSOAP.AffiliateName = "Athena000";
             betlistSOAP.Username = "AFF1001";
-            betlistSOAP.Product = "Sportsbook";
-            betlistSOAP.FromDate = new DateTime();
-            betlistSOAP.FromDate = new DateTime();
+            betlistSOAP.Product = "All";
+            betlistSOAP.FromDate = DateTime.Now;
+            betlistSOAP.ToDate = DateTime.Now;
             betlistSOAP.CurrencyName = "UUS";
             betlistSOAP.CurrencyId = 9999;
             betlistSOAP.TargetCurrencyId = 9999;
@@ -333,7 +356,6 @@ namespace Fanex.Affiliate.WebServices
 
             var criteria = GenerateBetlistCriteria(betlistSOAP);
             var ticketResults = _betlistService.GetBetList(criteria);
-
             
             var viewModel = new BetListViewModel()
             {
@@ -373,14 +395,23 @@ namespace Fanex.Affiliate.WebServices
         /// Get Bet list System Parlay.
         /// </summary>
         /// <param name="affiliateName">Affiliate Name.</param>
+        /// <param name="exchangeRate">Exchange Rate.</param>
         /// <param name="criteria">Bet List System Parlay Detail Criteria.</param>
         /// <returns>System Parlay Data.</returns>
         [WebMethod]
-        public byte[] GetBetlistSystemParlay(string affiliateName, BetListSystemParlayDetailCriteria criteria)
+        public string GetBetlistSystemParlay(string affiliateName, string exchangeRate, BetListSystemParlayDetailCriteria criteria)
         {
             criteria.AffiliateGroup = affiliateName.Trim() == "12bet" ? "_12bet" : string.Empty;
+            var balanceUpMoveBetCriteria = new BalanceUpMoveBetCriteria { AffiliateGroup = criteria.AffiliateGroup };
+            _betlistService.GetBalanceUpMoveBetDate(balanceUpMoveBetCriteria);
+            criteria.MoveBetsDay = DateTime.Parse("2014-10-20 00:00:00.000"); // balanceUpMoveBetCriteria.MoveBetsDay;
+            criteria.BalanceUpDay = DateTime.Parse("2014-10-18 00:00:00.000"); // balanceUpMoveBetCriteria.BalanceUpDay;
 
-            return Serialize(_betlistService.GetSystemParlayDetail(criteria));
+            var systemParlayData = _betlistService.GetSystemParlayDetail(criteria);
+            ExchangeSystemParlayTickets(systemParlayData, decimal.Parse(exchangeRate));
+            var builder = new BetListHTMLBuilder();
+
+            return builder.BuildSystemParlayDetail(new TicketHelper(), systemParlayData);
         }
 
         #endregion
@@ -393,16 +424,12 @@ namespace Fanex.Affiliate.WebServices
         /// <param name="affiliateGroup">Affiliate Group.</param>
         /// <param name="criteria">The metal model.</param>
         /// <param name="sportType">The sport type.</param>
-        /// <param name="userId">The user id.</param>
-        /// <param name="licenseeId">The licensee id.</param>
         /// <param name="setting">The setting result.</param>
         /// <returns>HTML formatted of data.</returns>
         public string GetNormalPopUpData(
             string affiliateGroup,
             BetListResultsCriteria criteria,
             SportType sportType,
-            int userId,
-            int licenseeId,
             ResultSetting setting)
         {
             switch (sportType)
@@ -419,17 +446,13 @@ namespace Fanex.Affiliate.WebServices
                     var dataRc = _betlistService.GetPopUpRacingMatch(
                         affiliateGroup,
                         criteria.MatchId,
-                        criteria.RaceNo.Value,
-                        licenseeId,
-                        userId);
+                        criteria.RaceNo.Value);
                     return dataRc != null ? ResultEngine.HtmlParser(dataRc, setting) : string.Empty;
 
                 case SportType.LiveCasino:
                     var dataLc = _betlistService.GetPopUpLiveCasinoMatch(
                         affiliateGroup,
-                        criteria.MatchId,
-                        licenseeId,
-                        userId);
+                        criteria.MatchId);
                     return dataLc != null ? ResultEngine.HtmlParser(dataLc, setting) : string.Empty;
 
                 case SportType.NumberGame:
@@ -437,7 +460,7 @@ namespace Fanex.Affiliate.WebServices
                     return dataNg != null ? ResultEngine.HtmlParser(dataNg, setting) : string.Empty;
 
                 default:
-                    var data = _betlistService.GetPopUpMatch(affiliateGroup, criteria.MatchId, licenseeId, userId);
+                    var data = _betlistService.GetPopUpMatch(affiliateGroup, criteria.MatchId);
                     return data != null ? ResultEngine.HtmlParser(data, setting) : string.Empty;
             }
         }
@@ -451,15 +474,14 @@ namespace Fanex.Affiliate.WebServices
         /// </summary>
         /// <param name="affiliateName">Affiliate Name.</param>
         /// <param name="sessionLanguage">Session Language.</param>
-        /// <param name="licenseeId">Licensee ID.</param>
         /// <param name="criteria">Input criteria.</param>
         /// <returns>Result's Html string.</returns>
         [WebMethod]
-        public string GetBetlistResults(string affiliateName, string sessionLanguage, string licenseeId, BetListResultsCriteria criteria)
+        public string GetBetlistResults(string affiliateName, string sessionLanguage, BetListResultsCriteria criteria)
         {
             var sportType = (SportType)criteria.SportType;
-            var customerInfoBetList = _betlistService.GetPlayerIbcInfo(affiliateName + "$" + criteria.UserName);
             var affiliateGroup = affiliateName.Trim() == "12bet" ? "_12bet" : string.Empty;
+            var customerInfoBetList = _betlistService.GetPlayerIbcInfo(affiliateGroup, affiliateName + "$" + criteria.UserName);
             var displaySettings = new ResultSetting
             {
                 SportType = sportType,
@@ -475,7 +497,7 @@ namespace Fanex.Affiliate.WebServices
                 return ResultEngine.HtmlParser(parlayData, displaySettings);
             }
 
-            return GetNormalPopUpData(affiliateGroup, criteria, sportType, customerInfoBetList.CustId, int.Parse(licenseeId), displaySettings);
+            return GetNormalPopUpData(affiliateGroup, criteria, sportType, displaySettings);
         }
 
         #endregion
@@ -488,7 +510,8 @@ namespace Fanex.Affiliate.WebServices
         [WebMethod]
         public byte[] GetBetlistResultsRNGCasino(string affiliateName, BetListResultsRNGCasinoCriteria criteria)
         {
-            var customerInfoBetList = _betlistService.GetPlayerIbcInfo(affiliateName + "$" + criteria.UserName);
+            var affiliateGroup = affiliateName.Trim() == "12bet" ? "_12bet" : string.Empty;
+            var customerInfoBetList = _betlistService.GetPlayerIbcInfo(affiliateGroup, affiliateName + "$" + criteria.UserName);
             criteria.BaseCurrency = criteria.BaseCurrency ?? string.Empty;
             criteria.ExternalId = customerInfoBetList.Username;
             criteria.CurrencyId = customerInfoBetList.CurrencyId;

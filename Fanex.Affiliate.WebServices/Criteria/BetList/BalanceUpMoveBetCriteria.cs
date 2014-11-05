@@ -25,13 +25,16 @@ namespace Fanex.Affiliate.WebServices.Criteria
         [SpParam(Ignored = true)]
         public DateTime BalanceUpDay { get; set; }
 
+        [SpParam(Ignored = true)]
+        public string AffiliateGroup { get; set; }
+
         /// <summary>
         /// Get SP name.
         /// </summary>
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_User_SelBalanceUpDay";
+            return "Aff_BetList_SelBalanceUpDay" + AffiliateGroup;
         }
     }
 }

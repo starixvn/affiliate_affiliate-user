@@ -10,6 +10,7 @@
 
 namespace Fanex.Affiliate.WebServices.DTO.BetList
 {
+    using System;
     using System.Collections.Generic;
     using System.Diagnostics.CodeAnalysis;
     using System.Xml.Serialization;
@@ -19,6 +20,7 @@ namespace Fanex.Affiliate.WebServices.DTO.BetList
     /// TODO: Update summary.
     /// </summary>
     [SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", Justification = "Reviewed. Suppression is OK here")]
+    [Serializable]
     public class TicketResult
     {
         public TicketResult()

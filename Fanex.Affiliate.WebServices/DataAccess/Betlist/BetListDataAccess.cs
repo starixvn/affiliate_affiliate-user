@@ -338,9 +338,10 @@ namespace Fanex.Affiliate.WebServices.DataAccess
         /// <summary>
         /// Get player's username.
         /// </summary>
+        /// <param name="affiliateGroup">Affiliate group.</param>
         /// <param name="playerUsername">Affiliate username.</param>
         /// <returns>Return player's Info.</returns>
-        public CustomerInfoBetList GetPlayerIbcInfo(string playerUsername)
+        public CustomerInfoBetList GetPlayerIbcInfo(string affiliateGroup, string playerUsername)
         {
             var hashParam = new Hashtable
             { 
@@ -349,7 +350,7 @@ namespace Fanex.Affiliate.WebServices.DataAccess
                 { "ibcusername", string.Empty },
                 { "currencyid", 0 }
             };
-            var objectDb = new ObjectDb("Aff_User_DummyAccID");
+            var objectDb = new ObjectDb("Aff_BetList_SelDummyAccID" + affiliateGroup);
             objectDb.ExecuteNonQuery(hashParam);
 
             return new CustomerInfoBetList
@@ -371,20 +372,16 @@ namespace Fanex.Affiliate.WebServices.DataAccess
         /// <param name="affiliateGroup">Affiliate Group.</param>
         /// <param name="matchId">Match ID value.</param>
         /// <param name="raceNo">Race Number value.</param>
-        /// <param name="licenseeId">Licensee ID value.</param>
-        /// <param name="userId">User ID value.</param>
         /// <returns>The result value.</returns>
-        public DataTable GetPopUpMatch(string affiliateGroup, int matchId, int raceNo, int licenseeId, int userId)
+        public DataTable GetPopUpMatch(string affiliateGroup, int matchId, int raceNo)
         {
             var param = new
             {
                 matchid = matchId,
-                raceno = raceNo > -1 ? raceNo.ToString(CultureInfo.InvariantCulture) : null,
-                licenseeid = licenseeId,
-                userid = userId
+                raceno = raceNo > -1 ? raceNo.ToString(CultureInfo.InvariantCulture) : null
             };
 
-            using (var objectDb = new ObjectDb("Aff_User_BetListResult_SelMatch" + affiliateGroup))
+            using (var objectDb = new ObjectDb("Aff_BetList_SelMatchResult" + affiliateGroup))
             {
                 var dataset = objectDb.ExecuteDataSet(param);
                 return dataset.Tables[0];
@@ -399,7 +396,7 @@ namespace Fanex.Affiliate.WebServices.DataAccess
         /// <returns>The result value.</returns>
         public DataTable GetPopUpParalayMatch(string affiliateGroup, long refNo)
         {
-            using (var objectDb = new ObjectDb("Aff_User_BetListResult_SelMatchParlay" + affiliateGroup))
+            using (var objectDb = new ObjectDb("Aff_BetList_SelMatchResultParlay" + affiliateGroup))
             {
                 var dataset = objectDb.ExecuteDataSet(new { refno = refNo });
                 return dataset.Tables[0];
@@ -414,7 +411,7 @@ namespace Fanex.Affiliate.WebServices.DataAccess
         /// <returns>The result value.</returns>
         public DataTable GetPopUpNumberGameMatch(string affiliateGroup, int matchId)
         {
-            using (var objectDb = new ObjectDb("Aff_User_BetListResult_SelMatchNumberGame" + affiliateGroup))
+            using (var objectDb = new ObjectDb("Aff_BetList_SelMatchResultNumberGame" + affiliateGroup))
             {
                 var dataset = objectDb.ExecuteDataSet(new { matchid = matchId });
                 return dataset.Tables[0];

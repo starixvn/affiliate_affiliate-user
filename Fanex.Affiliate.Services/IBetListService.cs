@@ -79,7 +79,7 @@ namespace Fanex.Affiliate.Services
         /// <param name="licenseeId">The licensee id.</param>
         /// <param name="userId">The user id.</param>
         /// <returns>The match info.</returns>
-        IList<Sportbook> GetPopUpMatch(int matchId, int licenseeId, int userId);
+        IList<Sportsbook> GetPopUpMatch(int matchId, int licenseeId, int userId);
 
         /// <summary>
         /// Get live casino match for pop up page.

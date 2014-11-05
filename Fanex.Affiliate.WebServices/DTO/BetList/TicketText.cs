@@ -10,9 +10,12 @@
 
 namespace Fanex.Affiliate.WebServices.DTO.BetList
 {
+    using System;
+
     /// <summary>
     /// Ticket text.
     /// </summary>
+    [Serializable]
     public class TicketText
     {
         public int Index { get; set; }

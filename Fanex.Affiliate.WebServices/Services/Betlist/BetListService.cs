@@ -111,20 +111,21 @@ namespace Fanex.Affiliate.WebServices.Services
         /// <summary>
         /// Get player's username.
         /// </summary>
+        /// <param name="affiliateGroup">Affiliate group.</param>
         /// <param name="playerUsername">Affiliate username.</param>
         /// <returns>Return player's Info.</returns>
-        public CustomerInfoBetList GetPlayerIbcInfo(string playerUsername)
+        public CustomerInfoBetList GetPlayerIbcInfo(string affiliateGroup, string playerUsername)
         {
-            return _betlistDataAccess.GetPlayerIbcInfo(playerUsername);
+            return _betlistDataAccess.GetPlayerIbcInfo(affiliateGroup, playerUsername);
         }
 
         #endregion
 
         #region BetList.Results
 
-        public IList<Sportbook> GetPopUpMatch(string affiliateGroup, int matchId, int licenseeId, int userId)
+        public IList<Sportsbook> GetPopUpMatch(string affiliateGroup, int matchId)
         {
-            var data = _betlistDataAccess.GetPopUpMatch(affiliateGroup, matchId, -1, licenseeId, userId);
+            var data = _betlistDataAccess.GetPopUpMatch(affiliateGroup, matchId, -1);
             return BindSportsbook(data);
         }
 
@@ -160,7 +161,7 @@ namespace Fanex.Affiliate.WebServices.Services
                                     dataList.Where(i => i["LeagueID"].ToString() == leagueId.ToString(CultureInfo.InvariantCulture))
                                         .Select(
                                             i =>
-                                                new Sportbook
+                                                new Sportsbook
                                                 {
                                                     AwayId = int.Parse(i["awayID"].ToString()),
                                                     HomeId = int.Parse(i["homeID"].ToString()),
@@ -197,7 +198,6 @@ namespace Fanex.Affiliate.WebServices.Services
                                                     KickOffTime = DateTime.Parse(i["kickofftime"].ToString()),
                                                     MatchCode = i["matchcode"].ToString(),
                                                     GoalRecord = i["goalrecord"].ToString(),
-                                                    ResultValue = "6-1 *30-40 40-30* *40-0 40-0* *40-0 40-0* *40-0",
                                                     IsHTCal = Convert.ToBoolean(i["IsHTCal"]),
                                                     Calculate = Convert.ToBoolean(i["Calculate"]),
                                                     RefNo = refNo.ToString(CultureInfo.InvariantCulture),
@@ -219,9 +219,9 @@ namespace Fanex.Affiliate.WebServices.Services
             return BindingNumberGame(data);
         }
 
-        public IList<LiveCasino> GetPopUpLiveCasinoMatch(string affiliateGroup, int matchId, int licenseeId, int userId)
+        public IList<LiveCasino> GetPopUpLiveCasinoMatch(string affiliateGroup, int matchId)
         {
-            var dataLc = _betlistDataAccess.GetPopUpMatch(affiliateGroup, matchId, -1, licenseeId, userId);
+            var dataLc = _betlistDataAccess.GetPopUpMatch(affiliateGroup, matchId, -1);
             return BindingLiveCasino(dataLc);
         }
 
@@ -231,12 +231,10 @@ namespace Fanex.Affiliate.WebServices.Services
         /// <param name="affiliateGroup">Affiliate Group.</param>
         /// <param name="matchId">The match id.</param>
         /// <param name="raceNo">The reference number.</param>
-        /// <param name="licenseeId">The licensee id.</param>
-        /// <param name="userId">The user id.</param>
         /// <returns>The racing data list.</returns>
-        public IList<Racing> GetPopUpRacingMatch(string affiliateGroup, int matchId, int raceNo, int licenseeId, int userId)
+        public IList<Racing> GetPopUpRacingMatch(string affiliateGroup, int matchId, int raceNo)
         {
-            var dataRc = _betlistDataAccess.GetPopUpMatch(affiliateGroup, matchId, raceNo, licenseeId, userId);
+            var dataRc = _betlistDataAccess.GetPopUpMatch(affiliateGroup, matchId, raceNo);
             return BindingRacing(dataRc);
         }
 
@@ -311,7 +309,7 @@ namespace Fanex.Affiliate.WebServices.Services
         /// </summary>
         /// <param name="data">The data table.</param>
         /// <returns>The sports-book data list.</returns>
-        private static IList<Sportbook> BindSportsbook(DataTable data)
+        private static IList<Sportsbook> BindSportsbook(DataTable data)
         {
             if (data != null && data.Rows.Count > 0)
             {
@@ -319,7 +317,7 @@ namespace Fanex.Affiliate.WebServices.Services
                     data.AsEnumerable()
                         .Select(
                             i =>
-                                new Sportbook
+                                new Sportsbook
                                 {
                                     AwayId = int.Parse(i["awayID"].ToString()),
                                     HomeId = int.Parse(i["homeID"].ToString()),
@@ -349,7 +347,6 @@ namespace Fanex.Affiliate.WebServices.Services
                                     KickOffTime = DateTime.Parse(i["kickofftime"].ToString()),
                                     MatchCode = i["matchcode"].ToString(),
                                     GoalRecord = i["goalrecord"].ToString(),
-                                    ResultValue = "6-1 *30-40 40-30* *40-0 40-0* *40-0 40-0* *40-0",
                                     IsHTCal = Convert.ToBoolean(i["IsHTCal"]),
                                     Calculate = Convert.ToBoolean(i["Calculate"]),
                                     RefNo = "12"
@@ -357,7 +354,7 @@ namespace Fanex.Affiliate.WebServices.Services
                         .ToList();
             }
 
-            return new List<Sportbook>();
+            return new List<Sportsbook>();
         }
 
         /// <summary>
@@ -432,7 +429,7 @@ namespace Fanex.Affiliate.WebServices.Services
                                     IsHTCal = Convert.ToBoolean(i["IsHTCal"]),
                                     Calculate = Convert.ToBoolean(i["Calculate"]),
                                     BetStatus = i["betstatus"] != DBNull.Value ? i["betstatus"].ToString() : string.Empty,
-                                    Bettype = int.Parse(i["homeid2"].ToString())
+                                    Bettype = int.Parse(i["homeid"].ToString())
                                 })
                         .ToList();
             }
