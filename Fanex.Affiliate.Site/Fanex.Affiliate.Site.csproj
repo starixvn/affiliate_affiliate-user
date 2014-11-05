@@ -388,6 +388,10 @@
     <Content Include="Configurations\SPNames\SpNames.mymbet.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.mymbet.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.mymbet.uat.xml" />
+    <Content Include="Configurations\SPNames\SpNames.nbcbet.local.xml" />
+    <Content Include="Configurations\SPNames\SpNames.nbcbet.production.xml" />
+    <Content Include="Configurations\SPNames\SpNames.nbcbet.sandbox.xml" />
+    <Content Include="Configurations\SPNames\SpNames.nbcbet.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.q8bola.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.q8bola.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.q8bola.sandbox.xml" />
@@ -3657,6 +3661,18 @@
     <Content Include="Content\themes\theme26\index.less" />
     <Content Include="Content\themes\theme26\mixins.less" />
     <Content Include="Content\themes\theme26\variables.less" />
+    <Content Include="Configurations\WebConfigs\Web.nbcbet.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.nbcbet.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.nbcbet.sandbox.config" />
+    <Content Include="Configurations\WebConfigs\Web.nbcbet.uat.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.nbcbet.local.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.nbcbet.production.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.nbcbet.sandbox.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.nbcbet.uat.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSettings.nbcbet.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSettings.nbcbet.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSettings.nbcbet.sandbox.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSettings.nbcbet.uat.config" />
     <None Include="img\Slot\S0007\icon_20x20_doubleWild.jpg.exclude" />
     <None Include="img\Slot\S0007\icon_40x40_doubleWild.jpg.exclude" />
   </ItemGroup>
