@@ -78,8 +78,7 @@
       <HintPath>..\packages\Fanex.NAP.Framework.1.0.0.3\lib\net40\Fanex.NAP.Framework.dll</HintPath>
     </Reference>
     <Reference Include="Fanex.Result.Core, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Fanex.Result.Core-NPOI.2.0.6.1.6.0.0-theta-2\lib\net40\Fanex.Result.Core.dll</HintPath>
+      <HintPath>..\packages\Fanex.Result.Core-NPOI.2.0.6.1.6.0.0-theta-7\lib\net40\Fanex.Result.Core.dll</HintPath>
     </Reference>
     <Reference Include="Glimpse.AspNet, Version=1.3.1.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Glimpse.Core, Version=1.4.2.0, Culture=neutral, processorArchitecture=MSIL">
@@ -3680,6 +3679,9 @@
     <Content Include="Configurations\AppSettings\Web.AppSettings.winner99.sandbox.config" />
     <Content Include="Configurations\AppSettings\Web.AppSettings.winner99.uat.config" />
     <Content Include="Content\themes\theme26\index.less" />
+    <None Include="App_Data\Fanex.Result\Other.xls" />
+    <None Include="App_Data\Fanex.Result\Racing.xls" />
+    <None Include="App_Data\Fanex.Result\VSSpeedWay.xls" />
     <None Include="Content\Fanex.Result\fanex.result.less" />
     <Content Include="Content\themes\theme26\mixins.less" />
     <Content Include="Content\themes\theme26\variables.less" />
