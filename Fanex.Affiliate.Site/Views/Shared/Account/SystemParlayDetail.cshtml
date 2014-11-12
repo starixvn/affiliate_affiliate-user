@@ -3,14 +3,12 @@
 }
 @using Fanex.Affiliate.ViewModels
 
-@model SystemParlayDetailViewModel
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>@string.Format("Affiliate - System Parlay")</title>
     @Styles.Render("~/css/systemparlaydetails")
 </head>
 <body>
-    @Html.Raw(Model.DetailText)
+    @Html.Raw(ViewBag.Data)
 </body>
 </html>

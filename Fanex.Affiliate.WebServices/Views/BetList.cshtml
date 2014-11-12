@@ -36,7 +36,7 @@
     <tbody>
         @foreach (var ticket in Model.TicketTextList)
         {
-            <tr><td class="w-order calign">@Raw(ticket.Index)</td>
+            <tr><td class="w-order calign">@Raw(ticket.Index.ToString())</td>
                 @if (Model.IsShowSystemIdAndExternalId)
                 {
                     <td class="w-order calign">@Raw(ticket.SystemId)</td>

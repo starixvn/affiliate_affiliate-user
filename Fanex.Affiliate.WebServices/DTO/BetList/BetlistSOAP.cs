@@ -30,12 +30,6 @@ namespace Fanex.Affiliate.WebServices.DTO.BetList
 
         public DateTime ToDate { get; set; }
 
-        //public string CurrencyName { get; set; }
-
-        //public int CurrencyId { get; set; }
-
-        //public int TargetCurrencyId { get; set; }
-
         public decimal ExchangeRate { get; set; }
 
         public List<Product> SupportedProducts { get; set; }

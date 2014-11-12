@@ -40,10 +40,6 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         
         private System.Threading.SendOrPostCallback GetBetlistResultsOperationCompleted;
         
-        private System.Threading.SendOrPostCallback GetBetlistResultsRNGCasinoOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetBetlistResultsRNGCasinoDetailOperationCompleted;
-        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -96,12 +92,6 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         
         /// <remarks/>
         public event GetBetlistResultsCompletedEventHandler GetBetlistResultsCompleted;
-        
-        /// <remarks/>
-        public event GetBetlistResultsRNGCasinoCompletedEventHandler GetBetlistResultsRNGCasinoCompleted;
-        
-        /// <remarks/>
-        public event GetBetlistResultsRNGCasinoDetailCompletedEventHandler GetBetlistResultsRNGCasinoDetailCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GetAffiliateEmail", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -259,68 +249,6 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
             if ((this.GetBetlistResultsCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.GetBetlistResultsCompleted(this, new GetBetlistResultsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GetBetlistResultsRNGCasino", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
-        public byte[] GetBetlistResultsRNGCasino(string affiliateName, BetListResultsRNGCasinoCriteria criteria) {
-            object[] results = this.Invoke("GetBetlistResultsRNGCasino", new object[] {
-                        affiliateName,
-                        criteria});
-            return ((byte[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetBetlistResultsRNGCasinoAsync(string affiliateName, BetListResultsRNGCasinoCriteria criteria) {
-            this.GetBetlistResultsRNGCasinoAsync(affiliateName, criteria, null);
-        }
-        
-        /// <remarks/>
-        public void GetBetlistResultsRNGCasinoAsync(string affiliateName, BetListResultsRNGCasinoCriteria criteria, object userState) {
-            if ((this.GetBetlistResultsRNGCasinoOperationCompleted == null)) {
-                this.GetBetlistResultsRNGCasinoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetBetlistResultsRNGCasinoOperationCompleted);
-            }
-            this.InvokeAsync("GetBetlistResultsRNGCasino", new object[] {
-                        affiliateName,
-                        criteria}, this.GetBetlistResultsRNGCasinoOperationCompleted, userState);
-        }
-        
-        private void OnGetBetlistResultsRNGCasinoOperationCompleted(object arg) {
-            if ((this.GetBetlistResultsRNGCasinoCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetBetlistResultsRNGCasinoCompleted(this, new GetBetlistResultsRNGCasinoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GetBetlistResultsRNGCasinoDetail", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
-        public byte[] GetBetlistResultsRNGCasinoDetail(BetListResultsRNGCasinoDetailCriteria criteria) {
-            object[] results = this.Invoke("GetBetlistResultsRNGCasinoDetail", new object[] {
-                        criteria});
-            return ((byte[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetBetlistResultsRNGCasinoDetailAsync(BetListResultsRNGCasinoDetailCriteria criteria) {
-            this.GetBetlistResultsRNGCasinoDetailAsync(criteria, null);
-        }
-        
-        /// <remarks/>
-        public void GetBetlistResultsRNGCasinoDetailAsync(BetListResultsRNGCasinoDetailCriteria criteria, object userState) {
-            if ((this.GetBetlistResultsRNGCasinoDetailOperationCompleted == null)) {
-                this.GetBetlistResultsRNGCasinoDetailOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetBetlistResultsRNGCasinoDetailOperationCompleted);
-            }
-            this.InvokeAsync("GetBetlistResultsRNGCasinoDetail", new object[] {
-                        criteria}, this.GetBetlistResultsRNGCasinoDetailOperationCompleted, userState);
-        }
-        
-        private void OnGetBetlistResultsRNGCasinoDetailOperationCompleted(object arg) {
-            if ((this.GetBetlistResultsRNGCasinoDetailCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetBetlistResultsRNGCasinoDetailCompleted(this, new GetBetlistResultsRNGCasinoDetailCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -494,8 +422,6 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BetListResultsRNGCasinoDetailCriteria))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BetListResultsRNGCasinoCriteria))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BetListResultsCriteria))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BetListSystemParlayDetailCriteria))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.225")]
@@ -504,216 +430,6 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public abstract partial class CriteriaBase {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.225")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class BetListResultsRNGCasinoDetailCriteria : CriteriaBase {
-        
-        private int userBetIdField;
-        
-        private int gameTypeIdField;
-        
-        private string gameTypeNameField;
-        
-        private int currencyIdField;
-        
-        private string currencyNameField;
-        
-        private string playerHistoryNoField;
-        
-        /// <remarks/>
-        public int UserBetId {
-            get {
-                return this.userBetIdField;
-            }
-            set {
-                this.userBetIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int GameTypeId {
-            get {
-                return this.gameTypeIdField;
-            }
-            set {
-                this.gameTypeIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string GameTypeName {
-            get {
-                return this.gameTypeNameField;
-            }
-            set {
-                this.gameTypeNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int CurrencyId {
-            get {
-                return this.currencyIdField;
-            }
-            set {
-                this.currencyIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string CurrencyName {
-            get {
-                return this.currencyNameField;
-            }
-            set {
-                this.currencyNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string PlayerHistoryNo {
-            get {
-                return this.playerHistoryNoField;
-            }
-            set {
-                this.playerHistoryNoField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.225")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class BetListResultsRNGCasinoCriteria : CriteriaBase {
-        
-        private long refNoField;
-        
-        private bool isShowPicField;
-        
-        private System.DateTime fromDateField;
-        
-        private System.DateTime toDateField;
-        
-        private string externalIdField;
-        
-        private string systemIdField;
-        
-        private int custIdField;
-        
-        private int currencyIdField;
-        
-        private string currencyNameField;
-        
-        private string baseCurrencyField;
-        
-        /// <remarks/>
-        public long RefNo {
-            get {
-                return this.refNoField;
-            }
-            set {
-                this.refNoField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool IsShowPic {
-            get {
-                return this.isShowPicField;
-            }
-            set {
-                this.isShowPicField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public System.DateTime FromDate {
-            get {
-                return this.fromDateField;
-            }
-            set {
-                this.fromDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public System.DateTime ToDate {
-            get {
-                return this.toDateField;
-            }
-            set {
-                this.toDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string ExternalId {
-            get {
-                return this.externalIdField;
-            }
-            set {
-                this.externalIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string SystemId {
-            get {
-                return this.systemIdField;
-            }
-            set {
-                this.systemIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int CustId {
-            get {
-                return this.custIdField;
-            }
-            set {
-                this.custIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int CurrencyId {
-            get {
-                return this.currencyIdField;
-            }
-            set {
-                this.currencyIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string CurrencyName {
-            get {
-                return this.currencyNameField;
-            }
-            set {
-                this.currencyNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string BaseCurrency {
-            get {
-                return this.baseCurrencyField;
-            }
-            set {
-                this.baseCurrencyField = value;
-            }
-        }
     }
     
     /// <remarks/>
@@ -1068,58 +784,6 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.0.30319.1")]
-    public delegate void GetBetlistResultsRNGCasinoCompletedEventHandler(object sender, GetBetlistResultsRNGCasinoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.0.30319.1")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetBetlistResultsRNGCasinoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetBetlistResultsRNGCasinoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public byte[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((byte[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.0.30319.1")]
-    public delegate void GetBetlistResultsRNGCasinoDetailCompletedEventHandler(object sender, GetBetlistResultsRNGCasinoDetailCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.0.30319.1")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetBetlistResultsRNGCasinoDetailCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetBetlistResultsRNGCasinoDetailCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public byte[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((byte[])(this.results[0]));
             }
         }
     }

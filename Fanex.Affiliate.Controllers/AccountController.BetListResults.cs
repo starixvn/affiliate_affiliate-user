@@ -18,9 +18,8 @@ namespace Fanex.Affiliate.Controllers
     using Configurations;
     using Criteria;
     using Enumerations;
+    using Fanex.Affiliate.DTO.BetList;
     using Fanex.Affiliate.Web;
-    using Fanex.Affiliate.WebServices.Criteria;
-    using Fanex.Affiliate.WebServices.DTO.BetList;
     using Fanex.Common;
     using Fanex.Result.Core;
     using Utilities;
@@ -71,51 +70,6 @@ namespace Fanex.Affiliate.Controllers
                 criteria);
         }
 
-        /// <summary>
-        /// Get normal pop up data.
-        /// </summary>
-        /// <param name="criteria">The metal model.</param>
-        /// <param name="sportType">The sport type.</param>
-        /// <param name="userId">The user id.</param>
-        /// <param name="setting">The setting result.</param>
-        /// <returns>HTML formatted of data.</returns>
-        public string GetNormalPopUpData(BetListResultsCriteria criteria, SportType sportType, int userId, ResultSetting setting)
-        {
-            switch (sportType)
-            {
-                case SportType.HorseRacing:
-                case SportType.Greyhound:
-                case SportType.Harness:
-                case SportType.VirtualHorseRacing:
-                    if (criteria.RaceNo == null)
-                    {
-                        return string.Empty;
-                    }
-
-                    var dataRc = BetListService.GetPopUpRacingMatch(
-                        criteria.MatchId,
-                        criteria.RaceNo.Value,
-                        AppSettings.LicenseeID,
-                        userId);
-                    return dataRc != null ? ResultEngine.HtmlParser(dataRc, setting) : string.Empty;
-
-                case SportType.LiveCasino:
-                    var dataLc = BetListService.GetPopUpLiveCasinoMatch(
-                        criteria.MatchId,
-                        AppSettings.LicenseeID,
-                        userId);
-                    return dataLc != null ? ResultEngine.HtmlParser(dataLc, setting) : string.Empty;
-
-                case SportType.NumberGame:
-                    var dataNg = BetListService.GetPopUpNumberGameMatchs(criteria.MatchId);
-                    return dataNg != null ? ResultEngine.HtmlParser(dataNg, setting) : string.Empty;
-
-                default:
-                    var data = BetListService.GetPopUpMatch(criteria.MatchId, AppSettings.LicenseeID, userId);
-                    return data != null ? ResultEngine.HtmlParser(data, setting) : string.Empty;
-            }
-        }
-
         #endregion
 
         #region BetList.Results.RNGCasino
@@ -126,39 +80,30 @@ namespace Fanex.Affiliate.Controllers
         /// <param name="criteria">The meta model.</param>
         /// <returns>The data string.</returns>
         [HttpGet]
-        public ActionResult RNGCasinoData(AffBetlistService.BetListResultsRNGCasinoCriteria criteria)
+        public ActionResult RNGCasinoData(BetListResultsRNGCasinoCriteria criteria)
         {
-            var affBetlistService = new AffBetlistService.AffiliateAPI();
-            var data = affBetlistService.GetBetlistResultsRNGCasino(AppSettings.AffiliateName, criteria);
-            var structuredData = Common.ByteArrayToListObjects<RNGCasinoResult>(data);
-            ExchangeRNGCasinoValues(structuredData);
+            var customerInfoBetList = BetListService.GetPlayerIbcInfo(AppSettings.AffiliateName + "$" + criteria.UserName);
+            criteria.BaseCurrency = criteria.BaseCurrency ?? string.Empty;
+            criteria.ExternalId = customerInfoBetList.Username;
+            criteria.CurrencyId = customerInfoBetList.CurrencyId;
+            var data = criteria.IsValid()
+                ? BetListService.GetRNGCasinoResult(criteria)
+                : new List<RNGCasinoResult>();
+
+            ExchangeRNGCasinoValues(data);
             var totalAmount = new List<RNGCasinoResult>();
-            if (structuredData != null)
+            if (data != null)
             {
                 totalAmount.Add(new RNGCasinoResult
                 {
-                    Stake = structuredData.Sum(x => x.Stake),
-                    Bet = structuredData.Sum(x => x.Bet),
-                    WinLoss = structuredData.Sum(x => x.WinLoss),
+                    Stake = data.Sum(x => x.Stake),
+                    Bet = data.Sum(x => x.Bet),
+                    WinLoss = data.Sum(x => x.WinLoss),
                     Result = string.Empty
                 });
             }
 
-            var serviceCriteriaWrapper = new BetListResultsRNGCasinoCriteria
-            {
-                BaseCurrency = criteria.BaseCurrency,
-                CurrencyId = criteria.CurrencyId,
-                CurrencyName = criteria.CurrencyName,
-                CustId = criteria.CustId,
-                ExternalId = criteria.ExternalId,
-                FromDate = criteria.FromDate,
-                IsShowPic = criteria.IsShowPic,
-                RefNo = criteria.RefNo,
-                SystemId = criteria.SystemId,
-                ToDate = criteria.ToDate
-            };
-
-            var model = new BetListResultsRNGCasinoViewModel(structuredData, totalAmount, serviceCriteriaWrapper);
+            var model = new BetListResultsRNGCasinoViewModel(data, totalAmount, criteria);
             model.Currency = CurrentSession.Currency;
 
             return View("~/Views/Shared/Account/BetListResults_RNGCasino.cshtml", model);
@@ -187,9 +132,9 @@ namespace Fanex.Affiliate.Controllers
         /// <param name="criteria">The meta model.</param>
         /// <returns>The action result.</returns>
         [HttpGet]
-        public ViewResult RNGCasinoDetail(AffBetlistService.BetListResultsRNGCasinoDetailCriteria criteria)
+        public ViewResult RNGCasinoDetail(BetListResultsRNGCasinoDetailCriteria criteria)
         {
-            var affBetlistService = new AffBetlistService.AffiliateAPI();
+            criteria.CurrencyName = criteria.CurrencyName.ToUpper();
             const string ViewPathTemplate = "~/Views/Shared/Account/RNGCasinoDetail/Group{0}.cshtml";
             var group = GetGroupByGameTypeId(criteria.GameTypeId);
             if (string.IsNullOrEmpty(group))
@@ -197,21 +142,15 @@ namespace Fanex.Affiliate.Controllers
                 return View("~/Views/Shared/Account/RNGCasinoDetail/NoGameErr.cshtml");
             }
 
-            var data = affBetlistService.GetBetlistResultsRNGCasinoDetail(criteria);
-            var structuredData = Common.ByteArrayToObject<BetListResultsRNGCasinoDetailViewModel>(data);
-            structuredData.Param = new BetListResultsRNGCasinoDetailCriteria
-            {
-                CurrencyId = criteria.CurrencyId,
-                CurrencyName = criteria.CurrencyName,
-                GameTypeId = criteria.GameTypeId,
-                GameTypeName = criteria.GameTypeName,
-                PlayerHistoryNo = criteria.PlayerHistoryNo,
-                UserBetId = criteria.UserBetId
-            };
-            ExchangeRNGCasinoDetailValues(structuredData);
+            var viewModel = criteria.IsValid()
+                ? BetListService.GetRNGCasinoResultDetail(criteria)
+                : new BetListResultsRNGCasinoDetailViewModel();
 
-            return (structuredData.CasinoDetailHeaderList != null && structuredData.CasinoDetailHeaderList.Count > 0)
-                ? View(string.Format(ViewPathTemplate, group), structuredData)
+            viewModel.Param = criteria;
+            ExchangeRNGCasinoDetailValues(viewModel);
+
+            return (viewModel.CasinoDetailHeaderList != null && viewModel.CasinoDetailHeaderList.Count > 0)
+                ? View(string.Format(ViewPathTemplate, group), viewModel)
                 : View("~/Views/Shared/Account/RNGCasinoDetail/Noinfo.cshtml");
         }
 

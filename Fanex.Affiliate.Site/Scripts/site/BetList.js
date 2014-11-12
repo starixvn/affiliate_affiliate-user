@@ -45,7 +45,7 @@ var BetList = (function ($) {
                 $.ajax({
                     type: "GET",
                     contentType: 'application/json',
-                    dataType: "json",
+                    dataType: "text",
                     cache: false,
                     url: url,
                     error: function () {

@@ -20,9 +20,6 @@ namespace Fanex.Affiliate.Controllers
     using Criteria;
     using Enumerations;
     using Fanex.Affiliate.DTO;
-    using Fanex.Affiliate.WebServices.Criteria;
-    using Fanex.Affiliate.WebServices.DTO.BetList;
-    using Fanex.Affiliate.WebServices.ViewModels;
     using Fanex.BetList.Core.Builder;
     using Fanex.BetList.Core.Entities;
     using Fanex.BetList.Core.TicketHelper;
@@ -104,22 +101,9 @@ namespace Fanex.Affiliate.Controllers
                 AppSettings.AffiliateName,
                 CurrentSession.ExchangeRate.ToString(),
                 criteria);
-            var viewModel = new SystemParlayDetailViewModel
-            {
-                DetailText = systemParlayDataText,
-                /*Param = new BetListSystemParlayDetailCriteria
-                {
-                    AffiliateGroup = criteria.AffiliateGroup,
-                    UserId = criteria.UserId,
-                    TransId = criteria.TransId,
-                    RefNo = criteria.RefNo,
-                    BetId = criteria.BetId,
-                    CustId = criteria.CustId,
-                    Outstanding = criteria.Outstanding
-                }*/
-            };
+            ViewBag.Data = systemParlayDataText;
 
-            return View(viewModel);
+            return View();
         }
 
         /// <summary>

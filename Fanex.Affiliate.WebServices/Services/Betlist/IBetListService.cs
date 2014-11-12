@@ -111,10 +111,6 @@ namespace Fanex.Affiliate.WebServices.Services
 
         #region BetList.Results.RNGCasino
 
-        List<RNGCasinoResult> GetRNGCasinoResult(BetListResultsRNGCasinoCriteria criteria);
-
-        BetListResultsRNGCasinoDetailViewModel GetRNGCasinoResultDetail(BetListResultsRNGCasinoDetailCriteria criteria);
-
         #endregion
     }
 }

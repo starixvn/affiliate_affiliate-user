@@ -137,67 +137,6 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="GetBetlistResultsRNGCasino">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="affiliateName" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="criteria" type="tns:BetListResultsRNGCasinoCriteria" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:complexType name="BetListResultsRNGCasinoCriteria">
-        <s:complexContent mixed="false">
-          <s:extension base="tns:CriteriaBase">
-            <s:sequence>
-              <s:element minOccurs="1" maxOccurs="1" name="RefNo" type="s:long" />
-              <s:element minOccurs="1" maxOccurs="1" name="IsShowPic" type="s:boolean" />
-              <s:element minOccurs="1" maxOccurs="1" name="FromDate" type="s:dateTime" />
-              <s:element minOccurs="1" maxOccurs="1" name="ToDate" type="s:dateTime" />
-              <s:element minOccurs="0" maxOccurs="1" name="ExternalId" type="s:string" />
-              <s:element minOccurs="0" maxOccurs="1" name="SystemId" type="s:string" />
-              <s:element minOccurs="1" maxOccurs="1" name="CustId" type="s:int" />
-              <s:element minOccurs="1" maxOccurs="1" name="CurrencyId" type="s:int" />
-              <s:element minOccurs="0" maxOccurs="1" name="CurrencyName" type="s:string" />
-              <s:element minOccurs="0" maxOccurs="1" name="BaseCurrency" type="s:string" />
-            </s:sequence>
-          </s:extension>
-        </s:complexContent>
-      </s:complexType>
-      <s:element name="GetBetlistResultsRNGCasinoResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="GetBetlistResultsRNGCasinoResult" type="s:base64Binary" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="GetBetlistResultsRNGCasinoDetail">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="criteria" type="tns:BetListResultsRNGCasinoDetailCriteria" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:complexType name="BetListResultsRNGCasinoDetailCriteria">
-        <s:complexContent mixed="false">
-          <s:extension base="tns:CriteriaBase">
-            <s:sequence>
-              <s:element minOccurs="1" maxOccurs="1" name="UserBetId" type="s:int" />
-              <s:element minOccurs="1" maxOccurs="1" name="GameTypeId" type="s:int" />
-              <s:element minOccurs="0" maxOccurs="1" name="GameTypeName" type="s:string" />
-              <s:element minOccurs="1" maxOccurs="1" name="CurrencyId" type="s:int" />
-              <s:element minOccurs="0" maxOccurs="1" name="CurrencyName" type="s:string" />
-              <s:element minOccurs="0" maxOccurs="1" name="PlayerHistoryNo" type="s:string" />
-            </s:sequence>
-          </s:extension>
-        </s:complexContent>
-      </s:complexType>
-      <s:element name="GetBetlistResultsRNGCasinoDetailResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="GetBetlistResultsRNGCasinoDetailResult" type="s:base64Binary" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="GetAffiliateEmailSoapIn">
@@ -230,18 +169,6 @@
   <wsdl:message name="GetBetlistResultsSoapOut">
     <wsdl:part name="parameters" element="tns:GetBetlistResultsResponse" />
   </wsdl:message>
-  <wsdl:message name="GetBetlistResultsRNGCasinoSoapIn">
-    <wsdl:part name="parameters" element="tns:GetBetlistResultsRNGCasino" />
-  </wsdl:message>
-  <wsdl:message name="GetBetlistResultsRNGCasinoSoapOut">
-    <wsdl:part name="parameters" element="tns:GetBetlistResultsRNGCasinoResponse" />
-  </wsdl:message>
-  <wsdl:message name="GetBetlistResultsRNGCasinoDetailSoapIn">
-    <wsdl:part name="parameters" element="tns:GetBetlistResultsRNGCasinoDetail" />
-  </wsdl:message>
-  <wsdl:message name="GetBetlistResultsRNGCasinoDetailSoapOut">
-    <wsdl:part name="parameters" element="tns:GetBetlistResultsRNGCasinoDetailResponse" />
-  </wsdl:message>
   <wsdl:portType name="AffiliateAPISoap">
     <wsdl:operation name="GetAffiliateEmail">
       <wsdl:input message="tns:GetAffiliateEmailSoapIn" />
@@ -262,14 +189,6 @@
     <wsdl:operation name="GetBetlistResults">
       <wsdl:input message="tns:GetBetlistResultsSoapIn" />
       <wsdl:output message="tns:GetBetlistResultsSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="GetBetlistResultsRNGCasino">
-      <wsdl:input message="tns:GetBetlistResultsRNGCasinoSoapIn" />
-      <wsdl:output message="tns:GetBetlistResultsRNGCasinoSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="GetBetlistResultsRNGCasinoDetail">
-      <wsdl:input message="tns:GetBetlistResultsRNGCasinoDetailSoapIn" />
-      <wsdl:output message="tns:GetBetlistResultsRNGCasinoDetailSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="AffiliateAPISoap" type="tns:AffiliateAPISoap">
@@ -319,24 +238,6 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetBetlistResultsRNGCasino">
-      <soap:operation soapAction="http://tempuri.org/GetBetlistResultsRNGCasino" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetBetlistResultsRNGCasinoDetail">
-      <soap:operation soapAction="http://tempuri.org/GetBetlistResultsRNGCasinoDetail" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="AffiliateAPISoap12" type="tns:AffiliateAPISoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -378,24 +279,6 @@
     </wsdl:operation>
     <wsdl:operation name="GetBetlistResults">
       <soap12:operation soapAction="http://tempuri.org/GetBetlistResults" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetBetlistResultsRNGCasino">
-      <soap12:operation soapAction="http://tempuri.org/GetBetlistResultsRNGCasino" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetBetlistResultsRNGCasinoDetail">
-      <soap12:operation soapAction="http://tempuri.org/GetBetlistResultsRNGCasinoDetail" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

@@ -12,8 +12,8 @@ namespace Fanex.Affiliate.ViewModels
 {
     using System.Collections.Generic;
     using System.Diagnostics.CodeAnalysis;
-    using Fanex.Affiliate.WebServices.Criteria;
-    using Fanex.Affiliate.WebServices.DTO.BetList;
+    using Fanex.Affiliate.Criteria;
+    using Fanex.Affiliate.DTO.BetList;
 
     /// <summary>
     /// RNG Casino Result class.

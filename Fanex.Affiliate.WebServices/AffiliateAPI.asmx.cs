@@ -24,7 +24,6 @@ namespace Fanex.Affiliate.WebServices
     using Criteria;
     using DTO.BetList;
     using Enumerations;
-    using Fanex.Affiliate.Criteria;
     using Fanex.Affiliate.DTO;
     using Fanex.BetList.Core.Builder;
     using Fanex.BetList.Core.Entities;
@@ -73,6 +72,22 @@ namespace Fanex.Affiliate.WebServices
 
         #region Common
 
+        /// <summary>
+        /// Convert an object into XML format.
+        /// </summary>
+        /// <param name="inputObject">Input object.</param>
+        /// <returns>XML String.</returns>
+        public static string ToXml(object inputObject)
+        {
+            XmlSerializer serializer = new XmlSerializer(inputObject.GetType());
+
+            using (StringWriter textWriter = new StringWriter())
+            {
+                serializer.Serialize(textWriter, inputObject);
+                return textWriter.ToString();
+            }
+        }
+
         public string BindDataToTemplate(string templatePath, dynamic model)
         {
             try
@@ -89,22 +104,6 @@ namespace Fanex.Affiliate.WebServices
         #endregion
 
         #region Affiliate's Email - Utilities
-
-        /// <summary>
-        /// Convert an object into XML format.
-        /// </summary>
-        /// <param name="inputObject">Input object.</param>
-        /// <returns>XML String.</returns>
-        public static string ToXml(object inputObject)
-        {
-            XmlSerializer serializer = new XmlSerializer(inputObject.GetType());
-
-            using (StringWriter textWriter = new StringWriter())
-            {
-                serializer.Serialize(textWriter, inputObject);
-                return textWriter.ToString();
-            }
-        }
 
         #endregion
 
@@ -402,15 +401,15 @@ namespace Fanex.Affiliate.WebServices
             var ticketsToTexts = Ticket(tickets, new BetListCriteria(), string.Empty, decimal.Parse(exchangeRate), 1, true);
             var betlistParlayHtmlString = string.Empty;
             var counter = 0;
-            foreach(var ticket in ticketsToTexts)
+            foreach (var ticket in ticketsToTexts)
             {
                 betlistParlayHtmlString += ticket.Choice;
-                if(counter != ticketsToTexts.Count - 1)
+                if (counter != ticketsToTexts.Count - 1)
                 {
                     betlistParlayHtmlString += "<div class='line'></div>";
                 }
 
-                counter ++;
+                counter++;
             }
 
             return betlistParlayHtmlString;
@@ -528,37 +527,10 @@ namespace Fanex.Affiliate.WebServices
         #endregion
 
         #region Affiliate's Results - RNG Casino - Utilities
+        
         #endregion
 
         #region Affiliate's Results - RNG Casino - Web Methods
-        
-        [WebMethod]
-        public byte[] GetBetlistResultsRNGCasino(string affiliateName, BetListResultsRNGCasinoCriteria criteria)
-        {
-            var affiliateGroup = affiliateName.Trim() == "12bet" ? "_12bet" : string.Empty;
-            var customerInfoBetList = _betlistService.GetPlayerIbcInfo(affiliateGroup, affiliateName + "$" + criteria.UserName);
-            criteria.BaseCurrency = criteria.BaseCurrency ?? string.Empty;
-            criteria.ExternalId = customerInfoBetList.Username;
-            criteria.CurrencyId = customerInfoBetList.CurrencyId;
-            
-            var rngCasinoResults = criteria.IsValid()
-                ? _betlistService.GetRNGCasinoResult(criteria)
-                : new List<RNGCasinoResult>();
-
-            return Serialize(rngCasinoResults);
-        }
-
-        [WebMethod]
-        public byte[] GetBetlistResultsRNGCasinoDetail(BetListResultsRNGCasinoDetailCriteria criteria)
-        {
-            criteria.CurrencyName = criteria.CurrencyName.ToUpper();
-
-            var rngCasinoResultsDetail = criteria.IsValid()
-                ? _betlistService.GetRNGCasinoResultDetail(criteria)
-                : new BetListResultsRNGCasinoDetailViewModel();
-
-            return Serialize(rngCasinoResultsDetail);
-        }
 
         #endregion
     }

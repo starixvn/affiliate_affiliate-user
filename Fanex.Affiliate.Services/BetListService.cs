@@ -22,8 +22,7 @@ namespace Fanex.Affiliate.Services
     using Criteria;
     using DataAccess;
     using DTO;
-    using Fanex.Affiliate.WebServices.Criteria;
-    using Fanex.Affiliate.WebServices.DTO.BetList;
+    using Fanex.Affiliate.DTO.BetList;
     using Result.Core.DTO;
     using ViewModels;
 
@@ -67,38 +66,6 @@ namespace Fanex.Affiliate.Services
         #region BetList
 
         /// <summary>
-        /// Get Bet List.
-        /// </summary>
-        /// <param name="criteria">Input criteria.</param>
-        /// <returns>Ticket results.</returns>
-        public TicketResult GetBetList(BetListCriteria criteria)
-        {
-            Check.Argument.IsNotNull(criteria, "criteria");
-            return _betlistDataAccess.GetBetList(criteria);
-        }
-
-        /// <summary>
-        /// Get Bet List Parlay.
-        /// </summary>
-        /// <param name="transId">Input transaction ID.</param>
-        /// <returns>Ticket results.</returns>
-        public TicketResult GetBetListParlay(long transId)
-        {
-            return _betlistDataAccess.GetBetListParlay(transId);
-        }
-
-        /// <summary>
-        /// Get System Parlay Detail data.
-        /// </summary>
-        /// <param name="criteria">The metal model.</param>
-        /// <returns>The system parlay.</returns>
-        public SystemParlayData GetSystemParlayDetail(BetListSystemParlayDetailCriteria criteria)
-        {
-            Check.Argument.IsNotNull(criteria, "criteria");
-            return _betlistDataAccess.GetSystemParlayDetail(criteria);
-        }
-
-        /// <summary>
         /// Get exchange rate.
         /// </summary>
         /// <param name="criteria">Input criteria.</param>
@@ -107,16 +74,6 @@ namespace Fanex.Affiliate.Services
         {
             Check.Argument.IsNotNull(criteria, "criteria");
             return _betlistDataAccess.GetExchangeRate(criteria);
-        }
-
-        /// <summary>
-        /// Get balance up and move bet dates.
-        /// </summary>
-        /// <param name="criteria">Balance up and move bet criteria.</param>
-        public void GetBalanceUpMoveBetDate(BalanceUpMoveBetCriteria criteria)
-        {
-            Check.Argument.IsNotNull(criteria, "criteria");
-            _betlistDataAccess.GetBalanceUpMoveBetDate(criteria);
         }
 
         /// <summary>
@@ -132,121 +89,6 @@ namespace Fanex.Affiliate.Services
         #endregion
 
         #region BetList.Results
-
-        public IList<Sportsbook> GetPopUpMatch(int matchId, int licenseeId, int userId)
-        {
-            var data = _betlistDataAccess.GetPopUpMatch(matchId, -1, licenseeId, userId);
-            return BindSportsbook(data);
-        }
-
-        /// <summary>
-        /// Get parlay match for pop up page.
-        /// </summary>
-        /// <param name="refNo">The reference no.</param>
-        /// <returns>The parlay data list.</returns>
-        [SuppressMessage(
-           "StyleCop.CSharp.Nexcel.NexcelCustomRules",
-           "SP2101:MethodMustNotContainMoreLinesThan",
-           Justification = "Reviewed. Suppression is OK here.")]
-        public IList<Parlay> GetPopUpParlayMatch(long refNo)
-        {
-            var data = _betlistDataAccess.GetPopUpParalayMatch(refNo);
-            if (data != null && data.Rows.Count > 0)
-            {
-                var dataList = data.AsEnumerable();
-                var dataParlay = new List<Parlay>();
-
-                foreach (var row in dataList)
-                {
-                    var leagueId = int.Parse(row["LeagueID"].ToString());
-                    if (dataParlay.All(i => i.LeagueId != leagueId))
-                    {
-                        dataParlay.Add(
-                            new Parlay
-                            {
-                                LeagueId = leagueId,
-                                SportId = int.Parse(row["sporttype"].ToString()),
-                                Sportbook =
-                                    dataList.Where(i => i["LeagueID"].ToString() == leagueId.ToString(CultureInfo.InvariantCulture))
-                                        .Select(
-                                            i =>
-                                                new Sportsbook
-                                                {
-                                                    AwayId = int.Parse(i["awayID"].ToString()),
-                                                    HomeId = int.Parse(i["homeID"].ToString()),
-                                                    BetStatus =
-                                                        i["betstatus"] != DBNull.Value
-                                                            ? i["betstatus"].ToString()
-                                                            : string.Empty,
-                                                    LeagueId = leagueId,
-                                                    MatchId = int.Parse(i["matchid"].ToString()),
-                                                    EventStatus = i["eventstatus"].ToString(),
-                                                    FinalAwayScore =
-                                                        i["finalawayscore"] != DBNull.Value
-                                                            ? int.Parse(i["finalawayscore"].ToString())
-                                                            : new int?(),
-                                                    HtAwayScore =
-                                                        i["htawayscore"] != DBNull.Value
-                                                            ? int.Parse(i["htawayscore"].ToString())
-                                                            : new int?(),
-                                                    Color = i.Table.Columns.Contains("lcolor") &&
-                                                        i["lcolor"] != DBNull.Value
-                                                            ? i["lcolor"].ToString()
-                                                            : string.Empty,
-                                                    FinalHomeScore =
-                                                        i["finalhomescore"] != DBNull.Value
-                                                            ? int.Parse(i["finalhomescore"].ToString())
-                                                            : new int?(),
-                                                    HtHomeScore =
-                                                        i["finalhomescore"] != DBNull.Value
-                                                            ? int.Parse(i["hthomescore"].ToString())
-                                                            : new int?(),
-                                                    EventDate = DateTime.Parse(i["eventdate"].ToString()),
-                                                    IsNeutral = bool.Parse(i["IsNeutral"].ToString()),
-                                                    IsPending = bool.Parse(i["IsPending"].ToString()),
-                                                    KickOffTime = DateTime.Parse(i["kickofftime"].ToString()),
-                                                    MatchCode = i["matchcode"].ToString(),
-                                                    GoalRecord = i["goalrecord"].ToString(),
-                                                    IsHTCal = Convert.ToBoolean(i["IsHTCal"]),
-                                                    Calculate = Convert.ToBoolean(i["Calculate"]),
-                                                    RefNo = refNo.ToString(CultureInfo.InvariantCulture),
-                                                })
-                                        .ToList()
-                            });
-                    }
-                }
-
-                return dataParlay;
-            }
-
-            return new List<Parlay>();
-        }
-
-        public IList<NumberGame> GetPopUpNumberGameMatchs(int matchId)
-        {
-            var data = _betlistDataAccess.GetPopUpNumberGameMatch(matchId);
-            return BindingNumberGame(data);
-        }
-
-        public IList<LiveCasino> GetPopUpLiveCasinoMatch(int matchId, int licenseeId, int userId)
-        {
-            var dataLc = _betlistDataAccess.GetPopUpMatch(matchId, -1, licenseeId, userId);
-            return BindingLiveCasino(dataLc);
-        }
-
-        /// <summary>
-        /// Get racing data for popup page.
-        /// </summary>
-        /// <param name="matchId">The match id.</param>
-        /// <param name="raceNo">The reference number.</param>
-        /// <param name="licenseeId">The licensee id.</param>
-        /// <param name="userId">The user id.</param>
-        /// <returns>The racing data list.</returns>
-        public IList<Racing> GetPopUpRacingMatch(int matchId, int raceNo, int licenseeId, int userId)
-        {
-            var dataRc = _betlistDataAccess.GetPopUpMatch(matchId, raceNo, licenseeId, userId);
-            return BindingRacing(dataRc);
-        }
 
         #endregion
 
