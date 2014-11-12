@@ -31,6 +31,7 @@ namespace Fanex.Affiliate.WebServices
     using Fanex.BetList.Core.TicketHelper;
     using Fanex.Data.Configuration;
     using Fanex.Result.Core;
+    using RazorEngine;
     using Services;
     using Utilities;
     using ViewModels;
@@ -66,6 +67,23 @@ namespace Fanex.Affiliate.WebServices
             DbSettingProviderManager.Current.Start();
             _affiliateService = new AffiliateService();
             _betlistService = new BetListService();
+        }
+
+        #endregion
+
+        #region Common
+
+        public string BindDataToTemplate(string templatePath, dynamic model)
+        {
+            try
+            {
+                var template = File.ReadAllText(templatePath);
+                return Razor.Parse(template, model);
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         #endregion
@@ -200,19 +218,6 @@ namespace Fanex.Affiliate.WebServices
                 case "Live Casino":
                     criteria.ShowLiveCasino = true;
                     break;
-
-                case "a":
-                    criteria.ShowSB = true;
-                    break;
-                case "RNG b":
-                    criteria.ShowCasino = true;
-                    break;
-                case "b Game":
-                    criteria.ShowNG = true;
-                    break;
-                case "d Casino":
-                    criteria.ShowLiveCasino = true;
-                    break;
                 default:
                     criteria.ShowSB = true;
                     break;
@@ -332,7 +337,7 @@ namespace Fanex.Affiliate.WebServices
         /// <param name="betlistSOAP">Bet list SOAP object.</param>
         /// <returns>Bet list View Model.</returns>
         [WebMethod]
-        public byte[] GetBetlist(BetlistSOAP betlistSOAP)
+        public string GetBetlist(BetlistSOAP betlistSOAP)
         {
             List<Product> products = new List<Product>();
             products.Add(new Product { ProductId = 1, ProductName = "Sportsbook" });
@@ -348,25 +353,32 @@ namespace Fanex.Affiliate.WebServices
             betlistSOAP.Product = "All";
             betlistSOAP.FromDate = DateTime.Now;
             betlistSOAP.ToDate = DateTime.Now;
-            betlistSOAP.CurrencyName = "UUS";
-            betlistSOAP.CurrencyId = 9999;
-            betlistSOAP.TargetCurrencyId = 9999;
             betlistSOAP.ExchangeRate = 1;
             betlistSOAP.SupportedProducts = products;
 
             var criteria = GenerateBetlistCriteria(betlistSOAP);
             var ticketResults = _betlistService.GetBetList(criteria);
+            var templatePath = Server.MapPath("~/Views/BetList.cshtml");
+            var ticketTextList = Ticket(ticketResults, criteria, betlistSOAP.Username, betlistSOAP.ExchangeRate);
             
-            var viewModel = new BetListViewModel()
+            foreach (var ticket in ticketTextList)
             {
-                TicketTextList = Ticket(ticketResults, criteria, betlistSOAP.Username, betlistSOAP.ExchangeRate),
+                ticket.Stake = FormaterCurrency.Format(ticket.Stake);
+                ticket.WinLoss = FormaterCurrency.Format(ticket.WinLoss);
+            }
+
+            dynamic content = new
+            {
                 IsShowSystemIdAndExternalId = false,
                 IsShowWinLoss = true,
-                TicketResult = ticketResults,
-                ExchangeRate = betlistSOAP.ExchangeRate
+                ExchangeRate = betlistSOAP.ExchangeRate,
+                TicketTextList = ticketTextList,
+                SumWinLoss = FormaterCurrency.Format(ticketResults.SumWinLoss * betlistSOAP.ExchangeRate)
             };
 
-            return Serialize(viewModel);
+            var betlistHtmlString = BindDataToTemplate(templatePath, content);
+
+            return betlistHtmlString;
         }
 
         /// <summary>
@@ -377,7 +389,7 @@ namespace Fanex.Affiliate.WebServices
         /// <param name="exchangeRate">Exchange Rate.</param>
         /// <returns>Ticket Result.</returns>
         [WebMethod]
-        public byte[] GetBetlistParlay(string affiliateName, string transactionId, string exchangeRate)
+        public string GetBetlistParlay(string affiliateName, string transactionId, string exchangeRate)
         {
             var affiliateGroup = affiliateName.Trim() == "12bet" ? "_12bet" : string.Empty;
             var criteria = new BetListParlayCriteria
@@ -386,9 +398,22 @@ namespace Fanex.Affiliate.WebServices
                 TransID = long.Parse(transactionId)
             };
 
-            var ticketResults = _betlistService.GetBetListParlay(criteria);
+            var tickets = _betlistService.GetBetListParlay(criteria);
+            var ticketsToTexts = Ticket(tickets, new BetListCriteria(), string.Empty, decimal.Parse(exchangeRate), 1, true);
+            var betlistParlayHtmlString = string.Empty;
+            var counter = 0;
+            foreach(var ticket in ticketsToTexts)
+            {
+                betlistParlayHtmlString += ticket.Choice;
+                if(counter != ticketsToTexts.Count - 1)
+                {
+                    betlistParlayHtmlString += "<div class='line'></div>";
+                }
 
-            return Serialize(Ticket(ticketResults, new BetListCriteria(), string.Empty, decimal.Parse(exchangeRate), 1, true));
+                counter ++;
+            }
+
+            return betlistParlayHtmlString;
         }
 
         /// <summary>

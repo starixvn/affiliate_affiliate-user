@@ -1,0 +1,68 @@
+﻿<table cellspacing="0" cellpadding="0" class="tblBetList">
+    <thead>
+        <tr>
+            <th style="width: 20px">
+                #
+            </th>
+            @if (Model.IsShowSystemIdAndExternalId)
+            {
+            <th style="width: 120px">
+                System ID
+            </th>
+            <th style="width: 120px">
+                External ID
+            </th>
+            }
+            <th style="width: 140px">
+                Trans.Time
+            </th>
+            <th style="width: 470px">
+                Choice
+            </th>
+            <th style="width: 80px">
+                Odds
+            </th>
+            <th style="width: 70px">
+                Stake
+            </th>
+            <th style="width: 90px">
+                Win/Loss
+            </th>
+            <th style="width: 90px">
+                Status
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ticket in Model.TicketTextList)
+        {
+            <tr><td class="w-order calign">@Raw(ticket.Index)</td>
+                @if (Model.IsShowSystemIdAndExternalId)
+                {
+                    <td class="w-order calign">@Raw(ticket.SystemId)</td>
+                    <td class="w-order calign">@Raw(ticket.ExternalId)</td>
+                }
+                <td class="c">@Raw(ticket.TransTime)
+                </td><td>@Raw(ticket.Choice)
+                </td><td class="bl_underdog">@Raw(ticket.Odds)
+                </td><td class="bl_underdog">@Raw(ticket.Stake)
+                </td><td class="r bl_underdog">@Raw(ticket.WinLoss)
+                </td><td class="c">@Raw(ticket.Status)
+                </td>
+            </tr>
+        }
+        @if (Model.IsShowWinLoss)
+        {        
+            <tr id="tr_footer" class="bl_footertotal footer">
+                <td colspan=@(Model.IsShowSystemIdAndExternalId ? "7" : " 5") class="r">
+                    Total
+                </td>
+                <td class="r">
+                    @Raw(Model.SumWinLoss)
+                </td>
+                <td>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

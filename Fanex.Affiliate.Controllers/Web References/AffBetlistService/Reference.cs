@@ -136,11 +136,10 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GetBetlist", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
-        public byte[] GetBetlist(BetlistSOAP betlistSOAP) {
+        public string GetBetlist(BetlistSOAP betlistSOAP) {
             object[] results = this.Invoke("GetBetlist", new object[] {
                         betlistSOAP});
-            return ((byte[])(results[0]));
+            return ((string)(results[0]));
         }
         
         /// <remarks/>
@@ -166,13 +165,12 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GetBetlistParlay", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
-        public byte[] GetBetlistParlay(string affiliateName, string transactionId, string exchangeRate) {
+        public string GetBetlistParlay(string affiliateName, string transactionId, string exchangeRate) {
             object[] results = this.Invoke("GetBetlistParlay", new object[] {
                         affiliateName,
                         transactionId,
                         exchangeRate});
-            return ((byte[])(results[0]));
+            return ((string)(results[0]));
         }
         
         /// <remarks/>
@@ -363,12 +361,6 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         
         private System.DateTime toDateField;
         
-        private string currencyNameField;
-        
-        private int currencyIdField;
-        
-        private int targetCurrencyIdField;
-        
         private decimal exchangeRateField;
         
         private Product[] supportedProductsField;
@@ -420,36 +412,6 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
             }
             set {
                 this.toDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string CurrencyName {
-            get {
-                return this.currencyNameField;
-            }
-            set {
-                this.currencyNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int CurrencyId {
-            get {
-                return this.currencyIdField;
-            }
-            set {
-                this.currencyIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int TargetCurrencyId {
-            get {
-                return this.targetCurrencyIdField;
-            }
-            set {
-                this.targetCurrencyIdField = value;
             }
         }
         
@@ -1024,10 +986,10 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         }
         
         /// <remarks/>
-        public byte[] Result {
+        public string Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((byte[])(this.results[0]));
+                return ((string)(this.results[0]));
             }
         }
     }
@@ -1050,10 +1012,10 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         }
         
         /// <remarks/>
-        public byte[] Result {
+        public string Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((byte[])(this.results[0]));
+                return ((string)(this.results[0]));
             }
         }
     }

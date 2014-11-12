@@ -64,18 +64,14 @@ namespace Fanex.Affiliate.Controllers
                 Product = product,
                 FromDate = winlostDate,
                 ToDate = winlostDate,
-                CurrencyName = CurrentSession.Currency,
-                CurrencyId = int.Parse(currency.Trim()),
-                TargetCurrencyId = CurrentSession.CurrencyID,
                 ExchangeRate = exchangeRate,
                 SupportedProducts = supportedProducts
             };
 
             var affBetlistService = new AffBetlistService.AffiliateAPI();
-            var modelByteArray = affBetlistService.GetBetlist(betlistSOAP);
-            var viewModel = Common.ByteArrayToObject<BetListViewModel>(modelByteArray);
+            ViewBag.Data = affBetlistService.GetBetlist(betlistSOAP);
 
-            return View(viewModel);
+            return View();
         }
         
         /// <summary>
@@ -87,14 +83,12 @@ namespace Fanex.Affiliate.Controllers
         public dynamic BetListParlay(long transId)
         {
             var affBetlistService = new AffBetlistService.AffiliateAPI();
-            var ticket = affBetlistService.GetBetlistParlay(
+            var tickets = affBetlistService.GetBetlistParlay(
                 AppSettings.AffiliateName,
                 transId.ToString(),
                 CurrentSession.ExchangeRate.ToString());
-            var ticketsText = Common.ByteArrayToListObjects<TicketText>(ticket);
-            var jsonSerialiser = new JavaScriptSerializer();
 
-            return jsonSerialiser.Serialize(ticketsText);
+            return tickets;
         }
 
         /// <summary>
@@ -113,7 +107,7 @@ namespace Fanex.Affiliate.Controllers
             var viewModel = new SystemParlayDetailViewModel
             {
                 DetailText = systemParlayDataText,
-                Param = new BetListSystemParlayDetailCriteria
+                /*Param = new BetListSystemParlayDetailCriteria
                 {
                     AffiliateGroup = criteria.AffiliateGroup,
                     UserId = criteria.UserId,
@@ -122,7 +116,7 @@ namespace Fanex.Affiliate.Controllers
                     BetId = criteria.BetId,
                     CustId = criteria.CustId,
                     Outstanding = criteria.Outstanding
-                }
+                }*/
             };
 
             return View(viewModel);

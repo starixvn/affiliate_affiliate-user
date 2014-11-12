@@ -96,6 +96,7 @@
     <Reference Include="Microsoft.ApplicationBlocks.Data">
       <HintPath>..\packages\HandHistoryLibrary.2014.5.29.957\lib\net40\Microsoft.ApplicationBlocks.Data.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\EnterpriseLibrary.Common.5.0.414.0\lib\net40\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
     </Reference>
@@ -258,6 +259,7 @@
     <Compile Include="Services\Common\QueryService.cs" />
     <Compile Include="Services\Common\ServiceBase.cs" />
     <Compile Include="Utilities\AffBetListHtmlBuilder.cs" />
+    <Compile Include="Utilities\FormaterCurrency.cs" />
     <Compile Include="ViewModels\Betlist\BetListResultsRNGCasinoDetailViewModel.cs" />
     <Compile Include="ViewModels\Betlist\BetListResultsRNGCasinoViewModel.cs" />
     <Compile Include="ViewModels\Betlist\BetListViewModel.cs" />
@@ -313,6 +315,8 @@
     <None Include="App_Data\Fanex.Result\VSSpeedWay.xls" />
     <None Include="App_Data\Fanex.Result\VSTennis.xls" />
     <None Include="Content\Fanex.Result\fanex.result.less" />
+    <Content Include="Views\BetList.cshtml" />
+    <Content Include="Views\BetListResults_RNGCasino.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

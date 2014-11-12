@@ -19,6 +19,6 @@ namespace Fanex.Affiliate.ViewModels
     {
         public string DetailText { get; set; }
 
-        public BetListSystemParlayDetailCriteria Param { get; set; }
+        //public BetListSystemParlayDetailCriteria Param { get; set; }
     }
 }
