@@ -13,7 +13,6 @@ namespace Fanex.Affiliate.WebServices.DTO.BetList
     using System;
     using System.Collections.Generic;
     using System.Diagnostics.CodeAnalysis;
-    using System.Xml.Serialization;
     using Fanex.BetList.Core.Entities;
 
     /// <summary>

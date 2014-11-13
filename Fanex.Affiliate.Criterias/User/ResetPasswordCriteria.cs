@@ -11,8 +11,8 @@
 namespace Fanex.Affiliate.Criteria
 {
     using System.ComponentModel.DataAnnotations;
-    using Fanex.Affiliate.Resources;
     using NAP.Framework.Data;
+    using Resources;
 
     /// <summary>
     /// Criteria for changing the password.

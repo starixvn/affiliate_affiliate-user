@@ -11,8 +11,6 @@
 namespace Fanex.Affiliate.WebServices.Criteria
 {
     using System;
-    using System.ComponentModel;
-    using System.ComponentModel.DataAnnotations;
     using NAP.Framework.Data;
 
     /// <summary>

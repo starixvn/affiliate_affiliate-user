@@ -17,14 +17,11 @@ namespace Fanex.Affiliate.WebServices.Services
     using System.Globalization;
     using System.Linq;
     using BetList.Core.Entities;
-    using Common;
     using Common.Helper;
+    using Criteria;
     using DataAccess;
-    using DTO;
     using DTO.BetList;
-    using Fanex.Affiliate.WebServices.Criteria;
     using Result.Core.DTO;
-    using ViewModels;
 
     /// <summary>
     /// Account Service.
@@ -141,7 +138,7 @@ namespace Fanex.Affiliate.WebServices.Services
            Justification = "Reviewed. Suppression is OK here.")]
         public IList<Parlay> GetPopUpParlayMatch(string affiliateGroup, long refNo)
         {
-            var data = _betlistDataAccess.GetPopUpParalayMatch(affiliateGroup, refNo);
+            var data = _betlistDataAccess.GetPopUpParlayMatch(affiliateGroup, refNo);
             if (data != null && data.Rows.Count > 0)
             {
                 var dataList = data.AsEnumerable();

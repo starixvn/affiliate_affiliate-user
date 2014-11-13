@@ -15,13 +15,11 @@ namespace Fanex.Affiliate.Controllers
     using System.Linq;
     using System.Text.RegularExpressions;
     using System.Web.Mvc;
+    using Common;
     using Configurations;
     using Criteria;
+    using DTO.BetList;
     using Enumerations;
-    using Fanex.Affiliate.DTO.BetList;
-    using Fanex.Affiliate.Web;
-    using Fanex.Common;
-    using Fanex.Result.Core;
     using Utilities;
     using ViewModels;
     using Web.Filter;
@@ -59,10 +57,6 @@ namespace Fanex.Affiliate.Controllers
         public string GetPopUpData(AffBetlistService.BetListResultsCriteria criteria)
         {
             var affBetlistService = new AffBetlistService.AffiliateAPI();
-            var a = affBetlistService.GetBetlistResults(
-                AppSettings.AffiliateName,
-                CurrentSession.Language,
-                criteria);
 
             return affBetlistService.GetBetlistResults(
                 AppSettings.AffiliateName,

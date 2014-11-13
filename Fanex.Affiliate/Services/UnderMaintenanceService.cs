@@ -12,7 +12,7 @@ namespace Fanex.Affiliate.Services
 {
     using System;
     using System.Runtime.Caching;
-    using Fanex.Affiliate.Configurations;
+    using Configurations;
     using Sunplus.UMControllerLibrary;
 
     /// <summary>

@@ -11,7 +11,6 @@
 namespace Fanex.Affiliate.Services
 {
     using System.Collections.Generic;
-    using Common;
     using Common.Helper;
     using Criteria;
     using DataAccess;

@@ -10,20 +10,11 @@
 
 namespace Fanex.Affiliate.WebServices.Criteria
 {
-    using System;
-    using System.ComponentModel;
-    using System.ComponentModel.DataAnnotations;
-    using NAP.Framework.Data;
-
     /// <summary>
     /// Bet List Archive Criteria.
     /// </summary>
     public class BetListArchiveCriteria : BetListCriteria
     {
-        public BetListArchiveCriteria() : base()
-        {
-        }
-
         /// <summary>
         /// Get SP name.
         /// </summary>

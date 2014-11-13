@@ -12,11 +12,11 @@ namespace Fanex.Affiliate.WebServices.Utilities
 {
     using System.Collections.Generic;
     using System.Diagnostics.CodeAnalysis;
+    using BetList.Core.App_GlobalResources;
+    using BetList.Core.Builder;
+    using BetList.Core.Entities;
     using Criteria;
     using DTO.BetList;
-    using Fanex.BetList.Core.App_GlobalResources;
-    using Fanex.BetList.Core.Builder;
-    using Fanex.BetList.Core.Entities;
 
     /// <summary>
     /// Affiliate BetList HTML Builder.

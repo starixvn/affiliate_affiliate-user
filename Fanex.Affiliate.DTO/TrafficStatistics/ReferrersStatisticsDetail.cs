@@ -10,8 +10,6 @@
 
 namespace Fanex.Affiliate.DTO
 {
-    using System;
-
     /// <summary>
     /// Referrers Statistics Detail.
     /// </summary>

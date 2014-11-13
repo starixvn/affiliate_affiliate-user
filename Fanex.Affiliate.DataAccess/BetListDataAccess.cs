@@ -12,15 +12,11 @@ namespace Fanex.Affiliate.DataAccess
 {
     using System;
     using System.Collections;
-    using System.Collections.Generic;
     using System.Data;
-    using System.Diagnostics.CodeAnalysis;
     using System.Globalization;
+    using Criteria;
     using Data;
     using DTO;
-    using Fanex.Affiliate.Criteria;
-    using Fanex.BetList.Core.Entities;
-    using Fanex.Common;
 
     /// <summary>
     /// Account data access.

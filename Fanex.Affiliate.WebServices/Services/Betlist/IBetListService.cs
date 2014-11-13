@@ -11,12 +11,10 @@
 namespace Fanex.Affiliate.WebServices.Services
 {
     using System.Collections.Generic;
+    using BetList.Core.Entities;
     using Criteria;
-    using DTO;
     using DTO.BetList;
-    using Fanex.BetList.Core.Entities;
-    using Fanex.Result.Core.DTO;
-    using ViewModels;
+    using Result.Core.DTO;
 
     /// <summary>
     /// Interface Account service.

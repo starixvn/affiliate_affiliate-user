@@ -10,7 +10,6 @@
 
 namespace Fanex.Affiliate.Criteria
 {
-    using System.Web.Mvc;
     using NAP.Framework.Data;
 
     /// <summary>

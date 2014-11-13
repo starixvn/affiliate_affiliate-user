@@ -11,7 +11,7 @@
 namespace Fanex.Affiliate.WebServices.Criteria
 {
     using System.Diagnostics.CodeAnalysis;
-    using Fanex.NAP.Framework.Data;
+    using NAP.Framework.Data;
 
     /// <summary>
     /// Affiliate Information.

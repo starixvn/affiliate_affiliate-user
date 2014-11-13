@@ -16,12 +16,11 @@ namespace Fanex.Affiliate.WebServices.DataAccess
     using System.Data;
     using System.Diagnostics.CodeAnalysis;
     using System.Globalization;
+    using BetList.Core.Entities;
+    using Common;
     using Criteria;
     using Data;
-    using DTO;
     using DTO.BetList;
-    using Fanex.BetList.Core.Entities;
-    using Fanex.Common;
 
     /// <summary>
     /// Account data access.
@@ -394,7 +393,7 @@ namespace Fanex.Affiliate.WebServices.DataAccess
         /// <param name="affiliateGroup">Affiliate Group.</param>
         /// <param name="refNo">Reference Number value.</param>
         /// <returns>The result value.</returns>
-        public DataTable GetPopUpParalayMatch(string affiliateGroup, long refNo)
+        public DataTable GetPopUpParlayMatch(string affiliateGroup, long refNo)
         {
             using (var objectDb = new ObjectDb("Aff_BetList_SelMatchResultParlay" + affiliateGroup))
             {

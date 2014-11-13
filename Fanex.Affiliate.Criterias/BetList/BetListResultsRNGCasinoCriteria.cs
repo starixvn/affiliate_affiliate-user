@@ -11,7 +11,6 @@
 namespace Fanex.Affiliate.Criteria
 {
     using System;
-    using System.Diagnostics.CodeAnalysis;
     using NAP.Framework.Data;
 
     /// <summary>

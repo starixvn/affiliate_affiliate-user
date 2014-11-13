@@ -14,26 +14,21 @@ namespace Fanex.Affiliate.WebServices
     using System.Collections.Generic;
     using System.Diagnostics.CodeAnalysis;
     using System.IO;
-    using System.Linq;
     using System.Runtime.Serialization.Formatters.Binary;
-    using System.Text;
-    using System.Web;
     using System.Web.Services;
-    using System.Xml;
     using System.Xml.Serialization;
+    using Affiliate.DTO;
+    using BetList.Core.Builder;
+    using BetList.Core.Entities;
+    using BetList.Core.TicketHelper;
     using Criteria;
+    using Data.Configuration;
     using DTO.BetList;
     using Enumerations;
-    using Fanex.Affiliate.DTO;
-    using Fanex.BetList.Core.Builder;
-    using Fanex.BetList.Core.Entities;
-    using Fanex.BetList.Core.TicketHelper;
-    using Fanex.Data.Configuration;
-    using Fanex.Result.Core;
     using RazorEngine;
+    using Result.Core;
     using Services;
     using Utilities;
-    using ViewModels;
 
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
     // [System.Web.Script.Services.ScriptService]
@@ -44,7 +39,7 @@ namespace Fanex.Affiliate.WebServices
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
-    public class AffiliateAPI : System.Web.Services.WebService
+    public class AffiliateAPI : WebService
     {
         #region Properties
 
@@ -183,7 +178,7 @@ namespace Fanex.Affiliate.WebServices
         /// <param name="supportedProducts">List of supported products.</param>
         public void ViewBetListByProduct(BetListCriteria criteria, string product, IEnumerable<Product> supportedProducts)
         {
-            if (product == "All")
+            if (product.Trim() == "All")
             {
                 foreach (var item in supportedProducts)
                 {
@@ -200,26 +195,33 @@ namespace Fanex.Affiliate.WebServices
         /// View Bet List By Specific Product.
         /// </summary>
         /// <param name="criteria">Bet List Criteria.</param>
-        /// <param name="product">Selected product.</param>
-        public void ViewBetListBySpecificProduct(BetListCriteria criteria, string product)
+        /// <param name="products">Selected product.</param>
+        public void ViewBetListBySpecificProduct(BetListCriteria criteria, string products)
         {
-            switch (product)
+            var productlist = products.Split(',');
+            foreach (var product in productlist)
             {
-                case "Sportsbook":
-                    criteria.ShowSB = true;
-                    break;
-                case "RNG Casino":
-                    criteria.ShowCasino = true;
-                    break;
-                case "Number Game":
-                    criteria.ShowNG = true;
-                    break;
-                case "Live Casino":
-                    criteria.ShowLiveCasino = true;
-                    break;
-                default:
-                    criteria.ShowSB = true;
-                    break;
+                switch (product.Trim())
+                {
+                    case "Sportsbook":
+                        criteria.ShowSB = true;
+                        break;
+                    case "RNG Casino":
+                        criteria.ShowCasino = true;
+                        break;
+                    case "Number Game":
+                        criteria.ShowNG = true;
+                        break;
+                    case "Live Casino":
+                        criteria.ShowLiveCasino = true;
+                        break;
+                    case "Virtual Sports":
+                        criteria.ShowVS = true;
+                        break;
+                    default:
+                        criteria.ShowSB = true;
+                        break;
+                }
             }
         }
         
@@ -505,7 +507,6 @@ namespace Fanex.Affiliate.WebServices
         {
             var sportType = (SportType)criteria.SportType;
             var affiliateGroup = affiliateName.Trim() == "12bet" ? "_12bet" : string.Empty;
-            var customerInfoBetList = _betlistService.GetPlayerIbcInfo(affiliateGroup, affiliateName + "$" + criteria.UserName);
             var displaySettings = new ResultSetting
             {
                 SportType = sportType,

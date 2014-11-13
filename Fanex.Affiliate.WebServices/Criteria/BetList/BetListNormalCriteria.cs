@@ -11,18 +11,12 @@
 namespace Fanex.Affiliate.WebServices.Criteria
 {
     using System;
-    using System.ComponentModel;
-    using NAP.Framework.Data;
 
     /// <summary>
     /// Bet List Normal Criteria.
     /// </summary>
     public class BetListNormalCriteria : BetListCriteria
     {
-        public BetListNormalCriteria() : base()
-        {
-        }
-
         public DateTime MoveBetsDay { get; set; }
 
         /// <summary>

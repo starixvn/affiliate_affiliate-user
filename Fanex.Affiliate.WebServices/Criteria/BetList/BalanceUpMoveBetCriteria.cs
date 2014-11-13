@@ -11,7 +11,7 @@
 namespace Fanex.Affiliate.WebServices.Criteria
 {
     using System;
-    using Fanex.NAP.Framework.Data;
+    using NAP.Framework.Data;
 
     /// <summary>
     /// Criteria to get Balance-Up and Move-Bet dates.

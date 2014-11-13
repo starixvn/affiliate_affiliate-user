@@ -13,18 +13,10 @@ namespace Fanex.Affiliate.Controllers
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Runtime.InteropServices;
     using System.Web.Mvc;
-    using System.Web.Script.Serialization;
     using Configurations;
     using Criteria;
-    using Enumerations;
-    using Fanex.Affiliate.DTO;
-    using Fanex.BetList.Core.Builder;
-    using Fanex.BetList.Core.Entities;
-    using Fanex.BetList.Core.TicketHelper;
-    using Utilities;
-    using ViewModels;
+    using DTO;
     using Web;
     using Web.Filter;
 
@@ -49,7 +41,6 @@ namespace Fanex.Affiliate.Controllers
         {
             DateTime winlostDate;
             DateTime.TryParse(winlostdate, out winlostDate);
-            var customerInfoBetList = BetListService.GetPlayerIbcInfo(AppSettings.AffiliateName + "$" + username);
             var exchangeRate = GetExchangeRate(currency, winlostDate);
             CurrentSession.ExchangeRate = exchangeRate;
             var supportedProducts = GetSupportedProductsForWebService();

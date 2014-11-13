@@ -13,7 +13,6 @@ namespace Fanex.Affiliate.Web
     using System.Globalization;
     using System.Resources;
     using System.Threading;
-    using Configurations;
     using Resources;
 
     /// <summary>

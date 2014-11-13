@@ -14,7 +14,7 @@ namespace Fanex.Affiliate.ViewModels
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using DTO;
-    using Fanex.Affiliate.Resources;
+    using Resources;
 
     /// <summary>
     /// Payment view model.

@@ -12,8 +12,7 @@ namespace Fanex.Affiliate.WebServices.DTO.BetList
 {
     using System;
     using System.Collections.Generic;
-    using DTO.BetList;
-    using Fanex.Affiliate.DTO;
+    using Affiliate.DTO;
 
     /// <summary>
     /// Bet list SOAP class.

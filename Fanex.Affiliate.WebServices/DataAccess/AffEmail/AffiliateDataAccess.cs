@@ -10,9 +10,8 @@
 
 namespace Fanex.Affiliate.WebServices.DataAccess
 {
-    using System;
     using Criteria;
-    using Fanex.Data;
+    using Data;
 
     /// <summary>
     /// Account data access.

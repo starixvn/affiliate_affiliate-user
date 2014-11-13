@@ -15,11 +15,9 @@ namespace Fanex.Affiliate.Controllers
     using System.Drawing.Imaging;
     using System.Drawing.Text;
     using System.IO;
-    using System.Text.RegularExpressions;
     using System.Web;
     using System.Web.Mvc;
     using System.Web.Security;
-    using Configurations;
     using DTO;
     using Utilities;
     using Web;

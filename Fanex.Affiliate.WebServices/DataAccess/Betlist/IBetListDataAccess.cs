@@ -12,9 +12,8 @@ namespace Fanex.Affiliate.WebServices.DataAccess
 {
     using System.Data;
     using BetList.Core.Entities;
-    using DTO;
+    using Criteria;
     using DTO.BetList;
-    using Fanex.Affiliate.WebServices.Criteria;
 
     /// <summary>
     /// Interface Account.
@@ -77,7 +76,7 @@ namespace Fanex.Affiliate.WebServices.DataAccess
         /// <param name="affiliateGroup">Affiliate Group.</param>
         /// <param name="refNo">Reference Number value.</param>
         /// <returns>The result value.</returns>
-        DataTable GetPopUpParalayMatch(string affiliateGroup, long refNo);
+        DataTable GetPopUpParlayMatch(string affiliateGroup, long refNo);
 
         /// <summary>
         /// Get Popup Number game match.

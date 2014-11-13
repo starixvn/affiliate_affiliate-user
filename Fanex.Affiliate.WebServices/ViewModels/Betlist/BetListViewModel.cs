@@ -13,7 +13,7 @@ namespace Fanex.Affiliate.WebServices.ViewModels
     using System;
     using System.Collections.Generic;
     using System.Diagnostics.CodeAnalysis;
-    using Fanex.Affiliate.WebServices.DTO.BetList;
+    using DTO.BetList;
 
     /// <summary>
     /// Bet List View Model.

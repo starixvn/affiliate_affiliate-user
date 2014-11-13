@@ -14,15 +14,13 @@ namespace Fanex.Affiliate.Services
     using System.Collections.Generic;
     using System.Data;
     using System.Diagnostics.CodeAnalysis;
-    using System.Globalization;
     using System.Linq;
-    using BetList.Core.Entities;
     using Common;
     using Common.Helper;
     using Criteria;
     using DataAccess;
     using DTO;
-    using Fanex.Affiliate.DTO.BetList;
+    using DTO.BetList;
     using Result.Core.DTO;
     using ViewModels;
 

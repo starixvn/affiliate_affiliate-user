@@ -18,11 +18,6 @@ namespace Fanex.Affiliate.WebServices
     [XmlRoot("AffiliateInformation")]
     public class AffiliateEmailInfo : AffiliateInfo
     {
-        public AffiliateEmailInfo()
-            : base()
-        {
-        }
-
         [XmlElement("FullName")]
         public string Fullname { get; set; }
 

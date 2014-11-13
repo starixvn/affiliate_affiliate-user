@@ -9,8 +9,6 @@
 
 namespace Fanex.Affiliate.DTO
 {
-    using System;
-
     /// <summary>
     /// Clicks Landing Pages Detail.
     /// </summary>

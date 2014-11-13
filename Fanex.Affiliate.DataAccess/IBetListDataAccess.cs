@@ -11,9 +11,8 @@
 namespace Fanex.Affiliate.DataAccess
 {
     using System.Data;
-    using BetList.Core.Entities;
+    using Criteria;
     using DTO;
-    using Fanex.Affiliate.Criteria;
 
     /// <summary>
     /// Interface Account.

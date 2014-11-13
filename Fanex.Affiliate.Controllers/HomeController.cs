@@ -10,11 +10,10 @@
 namespace Fanex.Affiliate.Controllers
 {
     using System.Web.Mvc;
-    using System.Xml;
     using Configurations;
     using Criteria;
-    using Fanex.Affiliate.Web;
     using Services;
+    using Web;
 
     /// <summary>
     /// Home Controller.

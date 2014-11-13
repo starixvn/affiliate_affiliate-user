@@ -13,9 +13,7 @@ namespace Fanex.Affiliate.Services
     using System.Collections.Generic;
     using Criteria;
     using DTO;
-    using Fanex.Affiliate.DTO.BetList;
-    using Fanex.BetList.Core.Entities;
-    using Fanex.Result.Core.DTO;
+    using DTO.BetList;
     using ViewModels;
 
     /// <summary>
