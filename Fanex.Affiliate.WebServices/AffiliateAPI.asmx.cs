@@ -83,6 +83,12 @@ namespace Fanex.Affiliate.WebServices
             }
         }
 
+        /// <summary>
+        /// Bind betlist data to template.
+        /// </summary>
+        /// <param name="templatePath">Template path.</param>
+        /// <param name="model">Binding model.</param>
+        /// <returns>Betlist's Html string.</returns>
         public string BindDataToTemplate(string templatePath, dynamic model)
         {
             try
