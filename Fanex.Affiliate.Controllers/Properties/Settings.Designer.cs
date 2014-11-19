@@ -22,15 +22,5 @@ namespace Fanex.Affiliate.Controllers.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:8082/AffiliateAPI.asmx")]
-        public string Fanex_Affiliate_Controllers_AffBetlistService_AffiliateAPI {
-            get {
-                return ((string)(this["Fanex_Affiliate_Controllers_AffBetlistService_AffiliateAPI"]));
-            }
-        }
     }
 }

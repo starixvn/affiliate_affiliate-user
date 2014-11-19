@@ -34,7 +34,7 @@ namespace Fanex.Affiliate.WebServices.Criteria
         /// <returns>Setting key.</returns>
         public override string GetSettingKey()
         {
-            return "Aff_BetList_SelBalanceUpDay" + AffiliateGroup;
+            return "Aff_BetList_SelBalanceUpDay";
         }
     }
 }

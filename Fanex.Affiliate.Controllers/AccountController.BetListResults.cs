@@ -56,7 +56,7 @@ namespace Fanex.Affiliate.Controllers
         /// <returns>HTML formatted of data.</returns>
         public string GetPopUpData(AffBetlistService.BetListResultsCriteria criteria)
         {
-            var affBetlistService = new AffBetlistService.AffiliateAPI();
+            var affBetlistService = new AffBetlistService.AffiliateAPISoapClient();
 
             return affBetlistService.GetBetlistResults(
                 AppSettings.AffiliateName,

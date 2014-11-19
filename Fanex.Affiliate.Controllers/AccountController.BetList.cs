@@ -56,7 +56,7 @@ namespace Fanex.Affiliate.Controllers
                 SupportedProducts = supportedProducts
             };
 
-            var affBetlistService = new AffBetlistService.AffiliateAPI();
+            var affBetlistService = new AffBetlistService.AffiliateAPISoapClient();
             ViewBag.Data = affBetlistService.GetBetlist(betlistSOAP);
 
             return View();
@@ -70,7 +70,7 @@ namespace Fanex.Affiliate.Controllers
         [HttpGet]
         public dynamic BetListParlay(long transId)
         {
-            var affBetlistService = new AffBetlistService.AffiliateAPI();
+            var affBetlistService = new AffBetlistService.AffiliateAPISoapClient();
             var tickets = affBetlistService.GetBetlistParlay(
                 AppSettings.AffiliateName,
                 transId.ToString(),
@@ -87,7 +87,7 @@ namespace Fanex.Affiliate.Controllers
         [HttpGet]
         public ActionResult SystemParlayDetail(AffBetlistService.BetListSystemParlayDetailCriteria criteria)
         {
-            var affBetlistService = new AffBetlistService.AffiliateAPI();
+            var affBetlistService = new AffBetlistService.AffiliateAPISoapClient();
             var systemParlayDataText = affBetlistService.GetBetlistSystemParlay(
                 AppSettings.AffiliateName,
                 CurrentSession.ExchangeRate.ToString(),

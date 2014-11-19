@@ -84,11 +84,11 @@ namespace Fanex.Affiliate.WebServices
         }
 
         /// <summary>
-        /// Bind betlist data to template.
+        /// Bind bet list data to template.
         /// </summary>
         /// <param name="templatePath">Template path.</param>
         /// <param name="model">Binding model.</param>
-        /// <returns>Betlist's Html string.</returns>
+        /// <returns>Bet list's Html string.</returns>
         public string BindDataToTemplate(string templatePath, dynamic model)
         {
             try
@@ -346,7 +346,7 @@ namespace Fanex.Affiliate.WebServices
         [WebMethod]
         public string GetBetlist(BetlistSOAP betlistSOAP)
         {
-            List<Product> products = new List<Product>();
+            /* List<Product> products = new List<Product>();
             products.Add(new Product { ProductId = 1, ProductName = "Sportsbook" });
             products.Add(new Product { ProductId = 2, ProductName = "RNG Casino" });
             products.Add(new Product { ProductId = 3, ProductName = "Number Game" });
@@ -361,7 +361,7 @@ namespace Fanex.Affiliate.WebServices
             betlistSOAP.FromDate = DateTime.Now;
             betlistSOAP.ToDate = DateTime.Now;
             betlistSOAP.ExchangeRate = 1;
-            betlistSOAP.SupportedProducts = products;
+            betlistSOAP.SupportedProducts = products;*/
 
             var criteria = GenerateBetlistCriteria(betlistSOAP);
             var ticketResults = _betlistService.GetBetList(criteria);
@@ -436,8 +436,8 @@ namespace Fanex.Affiliate.WebServices
             criteria.AffiliateGroup = affiliateName.Trim() == "12bet" ? "_12bet" : string.Empty;
             var balanceUpMoveBetCriteria = new BalanceUpMoveBetCriteria { AffiliateGroup = criteria.AffiliateGroup };
             _betlistService.GetBalanceUpMoveBetDate(balanceUpMoveBetCriteria);
-            criteria.MoveBetsDay = DateTime.Parse("2014-10-20 00:00:00.000"); // balanceUpMoveBetCriteria.MoveBetsDay;
-            criteria.BalanceUpDay = DateTime.Parse("2014-10-18 00:00:00.000"); // balanceUpMoveBetCriteria.BalanceUpDay;
+            criteria.MoveBetsDay = balanceUpMoveBetCriteria.MoveBetsDay;
+            criteria.BalanceUpDay = balanceUpMoveBetCriteria.BalanceUpDay;
 
             var systemParlayData = _betlistService.GetSystemParlayDetail(criteria);
             ExchangeSystemParlayTickets(systemParlayData, decimal.Parse(exchangeRate));
