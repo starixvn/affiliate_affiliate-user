@@ -104,7 +104,7 @@ namespace Fanex.Affiliate.Link.Controllers
                     LanguageCode = lang,
                     IP = Common.GetIPAddressOfClient(),
                     Browser = Request.Browser.Browser,
-                    URLReferrer = new Uri(urlReferrer),
+                    URLReferrer = urlReferrer,
                     DomainReferrer = domainReferrer,
                     OS = Common.GetOsName(Request.UserAgent),
                     Device = Common.GetDeviceName(Request.UserAgent),
