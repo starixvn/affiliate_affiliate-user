@@ -435,6 +435,8 @@
     <Content Include="Content\betlist\betlist.css" />
     <Content Include="Content\betlist\betlist.core.css" />
     <Content Include="Content\betlist\fanex.result.css" />
+    <Content Include="Content\betlist\images\1F.gif" />
+    <Content Include="Content\betlist\images\1L.gif" />
     <Content Include="Content\betlist\images\note.png" />
     <Content Include="Content\betlist\images\q_Icon2_1.png" />
     <Content Include="Content\betlist\images\q_Icon_2.png" />
@@ -4040,7 +4042,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

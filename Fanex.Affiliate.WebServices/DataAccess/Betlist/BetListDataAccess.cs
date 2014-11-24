@@ -349,7 +349,7 @@ namespace Fanex.Affiliate.WebServices.DataAccess
                 { "ibcusername", string.Empty },
                 { "currencyid", 0 }
             };
-            var objectDb = new ObjectDb("Aff_BetList_SelDummyAccID" + affiliateGroup);
+            var objectDb = new ObjectDb("Aff_BetList_SelDummyAccID");
             objectDb.ExecuteNonQuery(hashParam);
 
             return new CustomerInfoBetList
