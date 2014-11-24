@@ -4,16 +4,17 @@
 
 var ChangePassword = (function ($) {
     return {
-        init: function() {
+        init: function () {
             $("#NewPassword").tooltip();
             $("#ConfirmPassword").tooltip();
 
             // Event click login
             $("#btnSubmit").click(function () {
                 ChangePassword.submitForm();
+                return false;
             });
         },
-        validate: function(obj) {
+        validate: function (obj) {
             var validator = $("#" + obj.id + "_validator");
             validator.show();
             var pass = obj.value;
@@ -31,7 +32,7 @@ var ChangePassword = (function ($) {
                 }
             }
         },
-        check: function(str) {
+        check: function (str) {
             var numbers = "0123456789";
             var i = 0;
             var nCount = 0;
