@@ -10,8 +10,14 @@ var ChangePassword = (function ($) {
 
             // Event click login
             $("#btnSubmit").click(function () {
-                ChangePassword.submitForm();
-                return false;
+                var oldPassword = $("#OldPassword").val(),
+                newPassword = $("#NewPassword").val(),
+                confirmPassword = $("#ConfirmPassword").val(),
+                secureToken = $("#SecureToken").val();
+
+                $("#OldPassword").val(ChangePassword.hashPassword(oldPassword, secureToken, "OldPassword"));
+                $("#NewPassword").val(ChangePassword.encryptPassword(newPassword, "NewPassword"));
+                $("#ConfirmPassword").val(ChangePassword.encryptPassword(confirmPassword, "ConfirmPassword"));
             });
         },
         validate: function (obj) {
@@ -60,9 +66,10 @@ var ChangePassword = (function ($) {
                 type: "POST",
                 url: AFFILIATE.getAbsoluteUrl("Account/ChangePassword"),
                 contentType: "application/json",
-                dataType: "json",
+                dataType: "text",
                 data: JSON.stringify(param),
-                success: function () {
+                success: function (response) {
+                    console.log(response);
                 },
                 error: function () {
                 },
