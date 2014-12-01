@@ -8,8 +8,6 @@
 //   <change who="" date=""></change>
 // </history>
 
-using System.Linq;
-
 namespace Fanex.Affiliate.WebServices.DataAccess
 {
     using System;
@@ -17,8 +15,8 @@ namespace Fanex.Affiliate.WebServices.DataAccess
     using System.Collections.Generic;
     using System.Data;
     using System.Diagnostics.CodeAnalysis;
-    using System.Linq;
     using System.Globalization;
+    using System.Linq;
     using BetList.Core.Entities;
     using Common;
     using Criteria;
@@ -370,10 +368,10 @@ namespace Fanex.Affiliate.WebServices.DataAccess
         #region Betlist.Results
 
         /// <summary>
-        /// Get Sportsbook's results.
+        /// Get Sports-book results.
         /// </summary>
         /// <param name="criteria">Bet List Results Criteria.</param>
-        /// <returns>The Sportsbook's results.</returns>
+        /// <returns>The Sports-book results.</returns>
         public IList<Sportsbook> GetSportsbookResults(BetListResultsCriteria criteria)
         {
             var results = new List<Sportsbook>();

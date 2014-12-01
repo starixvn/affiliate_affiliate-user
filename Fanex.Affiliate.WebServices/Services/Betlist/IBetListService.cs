@@ -63,10 +63,10 @@ namespace Fanex.Affiliate.WebServices.Services
         #region BetList.Results
 
         /// <summary>
-        /// Get Sportsbook's results.
+        /// Get Sports-book results.
         /// </summary>
         /// <param name="criteria">Bet List Results Criteria.</param>
-        /// <returns>The Sportsbook's results.</returns>
+        /// <returns>The Sports-book results.</returns>
         IList<Sportsbook> GetSportsbookResults(BetListResultsCriteria criteria);
 
         /// <summary>
