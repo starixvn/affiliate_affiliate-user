@@ -10,10 +10,12 @@
 
 namespace Fanex.Affiliate.WebServices.DataAccess
 {
+    using System.Collections.Generic;
     using System.Data;
     using BetList.Core.Entities;
     using Criteria;
     using DTO.BetList;
+    using Result.Core.DTO;
 
     /// <summary>
     /// Interface Account.
@@ -62,29 +64,39 @@ namespace Fanex.Affiliate.WebServices.DataAccess
         #region BetList.Results
 
         /// <summary>
-        /// Get Popup Match.
+        /// Get Sportsbook's results.
         /// </summary>
-        /// <param name="affiliateGroup">Affiliate Group.</param>
+        /// <param name="criteria">Bet List Results Criteria.</param>
+        /// <returns>The Sportsbook's results.</returns>
+        IList<Sportsbook> GetSportsbookResults(BetListResultsCriteria criteria);
+
+        /// <summary>
+        /// Get LiveCasino's results.
+        /// </summary>
         /// <param name="matchId">Match ID value.</param>
+        /// <returns>The LiveCasino's results.</returns>
+        IEnumerable<LiveCasino> GetLiveCasinoResults(int matchId);
+
+        /// <summary>
+        /// Get NumberGame's results.
+        /// </summary>
+        /// <param name="matchId">Match ID value.</param>
+        /// <returns>The NumberGame's results.</returns>
+        IEnumerable<NumberGame> GetNumberGameResults(int matchId);
+
+        /// <summary>
+        /// Get Racing's results.
+        /// </summary>
         /// <param name="raceNo">Race Number value.</param>
-        /// <returns>The result value.</returns>
-        DataTable GetPopUpMatch(string affiliateGroup, int matchId, int raceNo);
+        /// <returns>The Racing's results.</returns>
+        IEnumerable<Racing> GetRacingResults(int raceNo);
 
         /// <summary>
-        /// Get Popup Parlay Match.
+        /// Get Parlay's results.
         /// </summary>
-        /// <param name="affiliateGroup">Affiliate Group.</param>
         /// <param name="refNo">Reference Number value.</param>
-        /// <returns>The result value.</returns>
-        DataTable GetPopUpParlayMatch(string affiliateGroup, long refNo);
-
-        /// <summary>
-        /// Get Popup Number game match.
-        /// </summary>
-        /// <param name="affiliateGroup">Affiliate Group.</param>
-        /// <param name="matchId">Match ID value.</param>
-        /// <returns>The result value.</returns>
-        DataTable GetPopUpNumberGameMatch(string affiliateGroup, int matchId);
+        /// <returns>The Parlay's results.</returns>
+        IEnumerable<Parlay> GetParlayResults(long refNo);
 
         #endregion
     }

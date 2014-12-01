@@ -27,6 +27,7 @@ namespace Fanex.Affiliate.WebServices
     using Enumerations;
     using RazorEngine;
     using Result.Core;
+    using Result.Core.DTO;
     using Services;
     using Utilities;
 
@@ -453,13 +454,11 @@ namespace Fanex.Affiliate.WebServices
         /// <summary>
         /// Get normal pop up data.
         /// </summary>
-        /// <param name="affiliateGroup">Affiliate Group.</param>
         /// <param name="criteria">The metal model.</param>
         /// <param name="sportType">The sport type.</param>
         /// <param name="setting">The setting result.</param>
         /// <returns>HTML formatted of data.</returns>
-        public string GetNormalPopUpData(
-            string affiliateGroup,
+        public string GetResultsData(
             BetListResultsCriteria criteria,
             SportType sportType,
             ResultSetting setting)
@@ -475,25 +474,20 @@ namespace Fanex.Affiliate.WebServices
                         return string.Empty;
                     }
 
-                    var dataRc = _betlistService.GetPopUpRacingMatch(
-                        affiliateGroup,
-                        criteria.MatchId,
-                        criteria.RaceNo.Value);
+                    var dataRc = _betlistService.GetRacingResults(criteria.RaceNo.Value);
                     return dataRc != null ? ResultEngine.HtmlParser(dataRc, setting) : string.Empty;
 
                 case SportType.LiveCasino:
-                    var dataLc = _betlistService.GetPopUpLiveCasinoMatch(
-                        affiliateGroup,
-                        criteria.MatchId);
+                    var dataLc = _betlistService.GetLiveCasinoResults(criteria.MatchId);
                     return dataLc != null ? ResultEngine.HtmlParser(dataLc, setting) : string.Empty;
 
                 case SportType.NumberGame:
-                    var dataNg = _betlistService.GetPopUpNumberGameMatchs(affiliateGroup, criteria.MatchId);
+                    var dataNg = _betlistService.GetNumberGameResults(criteria.MatchId);
                     return dataNg != null ? ResultEngine.HtmlParser(dataNg, setting) : string.Empty;
 
                 default:
-                    var data = _betlistService.GetPopUpMatch(affiliateGroup, criteria.MatchId);
-                    return data != null ? ResultEngine.HtmlParser(data, setting) : string.Empty;
+                    var dataSb = _betlistService.GetSportsbookResults(criteria);
+                    return dataSb != null ? ResultEngine.HtmlParser(dataSb, setting) : string.Empty;
             }
         }
 
@@ -512,7 +506,6 @@ namespace Fanex.Affiliate.WebServices
         public string GetBetlistResults(string affiliateName, string sessionLanguage, BetListResultsCriteria criteria)
         {
             var sportType = (SportType)criteria.SportType;
-            var affiliateGroup = affiliateName.Trim() == "12bet" ? "_12bet" : string.Empty;
             var displaySettings = new ResultSetting
             {
                 SportType = sportType,
@@ -524,11 +517,11 @@ namespace Fanex.Affiliate.WebServices
 
             if (displaySettings.IsParlayPopUp && criteria.RefNo != null)
             {
-                var parlayData = _betlistService.GetPopUpParlayMatch(affiliateGroup, criteria.RefNo.Value);
+                var parlayData = _betlistService.GetParlayResults(criteria.RefNo.Value);
                 return ResultEngine.HtmlParser(parlayData, displaySettings);
             }
 
-            return GetNormalPopUpData(affiliateGroup, criteria, sportType, displaySettings);
+            return GetResultsData(criteria, sportType, displaySettings);
         }
 
         #endregion

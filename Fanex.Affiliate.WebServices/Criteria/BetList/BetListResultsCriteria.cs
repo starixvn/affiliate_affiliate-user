@@ -25,6 +25,9 @@ namespace Fanex.Affiliate.WebServices.Criteria
         [Required]
         public int Bettype { get; set; }
 
+        [Required]
+        public string BetId { get; set; }
+
         public int? RaceNo { get; set; }
 
         [Required]

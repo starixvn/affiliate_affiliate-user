@@ -63,47 +63,39 @@ namespace Fanex.Affiliate.WebServices.Services
         #region BetList.Results
 
         /// <summary>
-        /// Get match for pop up pages.
-        /// Only used for sport-book and racing.
+        /// Get Sportsbook's results.
         /// </summary>
-        /// <param name="affiliateGroup">Affiliate Group.</param>
-        /// <param name="matchId">The match id.</param>
-        /// <returns>The match info.</returns>
-        IList<Sportsbook> GetPopUpMatch(string affiliateGroup, int matchId);
+        /// <param name="criteria">Bet List Results Criteria.</param>
+        /// <returns>The Sportsbook's results.</returns>
+        IList<Sportsbook> GetSportsbookResults(BetListResultsCriteria criteria);
 
         /// <summary>
-        /// Get live casino match for pop up page.
+        /// Get LiveCasino's results.
         /// </summary>
-        /// <param name="affiliateGroup">Affiliate Group.</param>
-        /// <param name="matchId">The match id.</param>
-        /// <returns>The match info.</returns>
-        IList<LiveCasino> GetPopUpLiveCasinoMatch(string affiliateGroup, int matchId);
+        /// <param name="matchId">Match ID value.</param>
+        /// <returns>The LiveCasino's results.</returns>
+        IList<LiveCasino> GetLiveCasinoResults(int matchId);
 
         /// <summary>
-        /// Get the racing match for pop up page.
+        /// Get NumberGame's results.
         /// </summary>
-        /// <param name="affiliateGroup">Affiliate Group.</param>
-        /// <param name="matchId">The match id.</param>
-        /// <param name="raceNo">The race no.</param>
-        /// <returns>The match info.</returns>
-        IList<Racing> GetPopUpRacingMatch(string affiliateGroup, int matchId, int raceNo);
+        /// <param name="matchId">Match ID value.</param>
+        /// <returns>The NumberGame's results.</returns>
+        IList<NumberGame> GetNumberGameResults(int matchId);
 
         /// <summary>
-        /// Select matches from BetTransM by reference no.
-        /// For view MixParlay result.
+        /// Get Racing's results.
         /// </summary>
-        /// <param name="affiliateGroup">Affiliate Group.</param>
-        /// <param name="refNo">The reference no.</param>
-        /// <returns>The parlay list.</returns>
-        IList<Parlay> GetPopUpParlayMatch(string affiliateGroup, long refNo);
+        /// <param name="raceNo">Race Number value.</param>
+        /// <returns>The Racing's results.</returns>
+        IList<Racing> GetRacingResults(int raceNo);
 
         /// <summary>
-        ///  Get match result of number game.
+        /// Get Parlay's results.
         /// </summary>
-        /// <param name="affiliateGroup">Affiliate Group.</param>
-        /// <param name="matchId">The match id.</param>
-        /// <returns>The match info.</returns>
-        IList<NumberGame> GetPopUpNumberGameMatchs(string affiliateGroup, int matchId);
+        /// <param name="refNo">Reference Number value.</param>
+        /// <returns>The Parlay's results.</returns>
+        IList<Parlay> GetParlayResults(long refNo);
 
         #endregion
 
