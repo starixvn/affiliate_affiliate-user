@@ -262,6 +262,8 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         
         private int bettypeField;
         
+        private string betIdField;
+        
         private System.Nullable<int> raceNoField;
         
         private int sportTypeField;
@@ -299,7 +301,19 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string BetId {
+            get {
+                return this.betIdField;
+            }
+            set {
+                this.betIdField = value;
+                this.RaisePropertyChanged("BetId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
         public System.Nullable<int> RaceNo {
             get {
                 return this.raceNoField;
@@ -311,7 +325,7 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         public int SportType {
             get {
                 return this.sportTypeField;
@@ -323,7 +337,7 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
         public System.Nullable<int> IsOutRight {
             get {
                 return this.isOutRightField;
@@ -335,7 +349,7 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
         public System.Nullable<long> RefNo {
             get {
                 return this.refNoField;
@@ -347,7 +361,7 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
         public System.Nullable<System.DateTime> WinLossDate {
             get {
                 return this.winLossDateField;
@@ -359,7 +373,7 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
         public string UserName {
             get {
                 return this.userNameField;
