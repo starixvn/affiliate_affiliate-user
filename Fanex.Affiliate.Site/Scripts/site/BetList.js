@@ -63,8 +63,6 @@ var BetList = (function ($) {
                         });
                         divEvent.html(choice);
                         divEvent.css("display", "");
-
-                        BetList.resetContentHeight();
                     },
                     beforeSend: function () {
 
@@ -76,7 +74,6 @@ var BetList = (function ($) {
             else {
                 divEvent.css("display", "none");
                 divEvent.html("");
-                BetList.resetContentHeight();
             }
         },
 
