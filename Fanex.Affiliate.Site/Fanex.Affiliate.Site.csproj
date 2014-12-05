@@ -3437,7 +3437,9 @@
     <Content Include="Configurations\WebConfigs\Web.be7.sandbox.config" />
     <Content Include="Configurations\WebConfigs\Web.be7.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.bwinning.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.bwinning.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.bwinning.production.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Configurations\WebConfigs\Web.bwinning.sandbox.config" />
     <Content Include="Configurations\WebConfigs\Web.bwinning.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.goobet.local.config" />
@@ -4058,7 +4060,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
