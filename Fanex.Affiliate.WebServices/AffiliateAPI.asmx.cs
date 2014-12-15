@@ -346,12 +346,15 @@ namespace Fanex.Affiliate.WebServices
         [WebMethod]
         public string GetBetlist(BetlistSOAP betlistSOAP)
         {
+            string temp = string.Empty;
             try
             {
                 var criteria = GenerateBetlistCriteria(betlistSOAP);
                 var ticketResults = _betlistService.GetBetList(criteria);
+                temp += "_betlistService.GetBetList(criteria)#";
                 var templatePath = Server.MapPath("~/Views/BetList.cshtml");
                 var ticketTextList = Ticket(ticketResults, criteria, betlistSOAP.Username, betlistSOAP.ExchangeRate);
+                temp += "Ticket(ticketResults, criteria, betlistSOAP.Username, betlistSOAP.ExchangeRate)#";
 
                 foreach (var ticket in ticketTextList)
                 {
@@ -370,11 +373,12 @@ namespace Fanex.Affiliate.WebServices
 
                 var betlistHtmlString = BindDataToTemplate(templatePath, content);
 
+                temp += "BindDataToTemplate(templatePath, content)#";
                 return betlistHtmlString;
             }
             catch (Exception exception)
             {
-                return exception.Message;
+                return temp + exception.Message;
             }
         }
 
