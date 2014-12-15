@@ -27,7 +27,6 @@ namespace Fanex.Affiliate.WebServices
     using Enumerations;
     using RazorEngine;
     using Result.Core;
-    using Result.Core.DTO;
     using Services;
     using Utilities;
 
@@ -231,7 +230,7 @@ namespace Fanex.Affiliate.WebServices
                 }
             }
         }
-        
+
         /// <summary>
         /// Generate ticket text.
         /// </summary>
@@ -347,46 +346,36 @@ namespace Fanex.Affiliate.WebServices
         [WebMethod]
         public string GetBetlist(BetlistSOAP betlistSOAP)
         {
-            /* List<Product> products = new List<Product>();
-            products.Add(new Product { ProductId = 1, ProductName = "Sportsbook" });
-            products.Add(new Product { ProductId = 2, ProductName = "RNG Casino" });
-            products.Add(new Product { ProductId = 3, ProductName = "Number Game" });
-            products.Add(new Product { ProductId = 4, ProductName = "Live Casino" });
-            products.Add(new Product { ProductId = 5, ProductName = "Playtech Casino" });
-            products.Add(new Product { ProductId = 6, ProductName = "Virtual Sports" });
-
-            // Hard code for testing Service
-            betlistSOAP.AffiliateName = "Athena000";
-            betlistSOAP.Username = "AFF1001";
-            betlistSOAP.Product = "All";
-            betlistSOAP.FromDate = DateTime.Now;
-            betlistSOAP.ToDate = DateTime.Now;
-            betlistSOAP.ExchangeRate = 1;
-            betlistSOAP.SupportedProducts = products;*/
-
-            var criteria = GenerateBetlistCriteria(betlistSOAP);
-            var ticketResults = _betlistService.GetBetList(criteria);
-            var templatePath = Server.MapPath("~/Views/BetList.cshtml");
-            var ticketTextList = Ticket(ticketResults, criteria, betlistSOAP.Username, betlistSOAP.ExchangeRate);
-            
-            foreach (var ticket in ticketTextList)
+            try
             {
-                ticket.Stake = FormaterCurrency.Format(ticket.Stake);
-                ticket.WinLoss = FormaterCurrency.Format(ticket.WinLoss);
+                var criteria = GenerateBetlistCriteria(betlistSOAP);
+                var ticketResults = _betlistService.GetBetList(criteria);
+                var templatePath = Server.MapPath("~/Views/BetList.cshtml");
+                var ticketTextList = Ticket(ticketResults, criteria, betlistSOAP.Username, betlistSOAP.ExchangeRate);
+
+                foreach (var ticket in ticketTextList)
+                {
+                    ticket.Stake = FormaterCurrency.Format(ticket.Stake);
+                    ticket.WinLoss = FormaterCurrency.Format(ticket.WinLoss);
+                }
+
+                dynamic content = new
+                {
+                    IsShowSystemIdAndExternalId = false,
+                    IsShowWinLoss = true,
+                    ExchangeRate = betlistSOAP.ExchangeRate,
+                    TicketTextList = ticketTextList,
+                    SumWinLoss = FormaterCurrency.Format(ticketResults.SumWinLoss * betlistSOAP.ExchangeRate)
+                };
+
+                var betlistHtmlString = BindDataToTemplate(templatePath, content);
+
+                return betlistHtmlString;
             }
-
-            dynamic content = new
+            catch (Exception exception)
             {
-                IsShowSystemIdAndExternalId = false,
-                IsShowWinLoss = true,
-                ExchangeRate = betlistSOAP.ExchangeRate,
-                TicketTextList = ticketTextList,
-                SumWinLoss = FormaterCurrency.Format(ticketResults.SumWinLoss * betlistSOAP.ExchangeRate)
-            };
-
-            var betlistHtmlString = BindDataToTemplate(templatePath, content);
-
-            return betlistHtmlString;
+                return exception.Message;
+            }
         }
 
         /// <summary>
@@ -527,7 +516,7 @@ namespace Fanex.Affiliate.WebServices
         #endregion
 
         #region Affiliate's Results - RNG Casino - Utilities
-        
+
         #endregion
 
         #region Affiliate's Results - RNG Casino - Web Methods
