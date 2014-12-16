@@ -346,40 +346,29 @@ namespace Fanex.Affiliate.WebServices
         [WebMethod]
         public string GetBetlist(BetlistSOAP betlistSOAP)
         {
-            string temp = string.Empty;
-            try
+            var criteria = GenerateBetlistCriteria(betlistSOAP);
+            var ticketResults = _betlistService.GetBetList(criteria);
+            var templatePath = Server.MapPath("~/Views/BetList.cshtml");
+            var ticketTextList = Ticket(ticketResults, criteria, betlistSOAP.Username, betlistSOAP.ExchangeRate);
+
+            foreach (var ticket in ticketTextList)
             {
-                var criteria = GenerateBetlistCriteria(betlistSOAP);
-                var ticketResults = _betlistService.GetBetList(criteria);
-                temp += "_betlistService.GetBetList(criteria)#";
-                var templatePath = Server.MapPath("~/Views/BetList.cshtml");
-                var ticketTextList = Ticket(ticketResults, criteria, betlistSOAP.Username, betlistSOAP.ExchangeRate);
-                temp += "Ticket(ticketResults, criteria, betlistSOAP.Username, betlistSOAP.ExchangeRate)#";
-
-                foreach (var ticket in ticketTextList)
-                {
-                    ticket.Stake = FormaterCurrency.Format(ticket.Stake);
-                    ticket.WinLoss = FormaterCurrency.Format(ticket.WinLoss);
-                }
-
-                dynamic content = new
-                {
-                    IsShowSystemIdAndExternalId = false,
-                    IsShowWinLoss = true,
-                    ExchangeRate = betlistSOAP.ExchangeRate,
-                    TicketTextList = ticketTextList,
-                    SumWinLoss = FormaterCurrency.Format(ticketResults.SumWinLoss * betlistSOAP.ExchangeRate)
-                };
-
-                var betlistHtmlString = BindDataToTemplate(templatePath, content);
-
-                temp += "BindDataToTemplate(templatePath, content)#";
-                return betlistHtmlString;
+                ticket.Stake = FormaterCurrency.Format(ticket.Stake);
+                ticket.WinLoss = FormaterCurrency.Format(ticket.WinLoss);
             }
-            catch (Exception exception)
+
+            dynamic content = new
             {
-                return temp + exception.Message;
-            }
+                IsShowSystemIdAndExternalId = false,
+                IsShowWinLoss = true,
+                ExchangeRate = betlistSOAP.ExchangeRate,
+                TicketTextList = ticketTextList,
+                SumWinLoss = FormaterCurrency.Format(ticketResults.SumWinLoss * betlistSOAP.ExchangeRate)
+            };
+
+            var betlistHtmlString = BindDataToTemplate(templatePath, content);
+
+            return betlistHtmlString;
         }
 
         /// <summary>
