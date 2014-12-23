@@ -442,6 +442,7 @@
     <Content Include="Content\betlist\fanex.result.css" />
     <Content Include="Content\betlist\images\1F.gif" />
     <Content Include="Content\betlist\images\1L.gif" />
+    <Content Include="Content\betlist\images\goal-icon.png" />
     <Content Include="Content\betlist\images\note.png" />
     <Content Include="Content\betlist\images\q_Icon2_1.png" />
     <Content Include="Content\betlist\images\q_Icon_2.png" />
