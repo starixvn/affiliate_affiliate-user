@@ -3453,7 +3453,9 @@
     <Content Include="Configurations\WebConfigs\Web.i668bet.local.config" />
     <Content Include="Configurations\WebConfigs\Web.i668bet.production.config" />
     <Content Include="Configurations\WebConfigs\Web.i668bet.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.i668bet.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.i668bet.uat.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Configurations\WebConfigs\Web.idlivebet365.local.config" />
     <Content Include="Configurations\WebConfigs\Web.idlivebet365.production.config" />
     <Content Include="Configurations\WebConfigs\Web.idlivebet365.sandbox.config" />
@@ -3722,6 +3724,7 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Service References\AffBetlistService\AffiliateAPI.wsdl" />
+    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
@@ -3848,9 +3851,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\Email\ForgetPassword\ForgetPassword.en-US.cshtml" />
     <Content Include="Views\Shared\Email\RecoverPassword\RecoverPassword.en-US.cshtml" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Views\Shared\_LayoutPopup.cshtml" />
     <Content Include="Views\Shared\Email\PaymentCancel\PaymentCancel.en-US.cshtml" />
     <Content Include="Views\Shared\Email\PaymentRequest\PaymentRequest.en-US.cshtml" />
@@ -4025,10 +4025,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
+    <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferences Include="Web References\" />
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\AffBetlistService\" />

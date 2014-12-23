@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="78a09a53-665d-44f5-806d-4b9fada589ef" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fdd5341d-b5a8-46e1-9e95-d32e0d504d12" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -21,8 +21,8 @@
     <MetadataSource Address="http://10.18.200.209:5001/WebService/AffiliateAPI.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="AffiliateAPI.wsdl" MetadataType="Wsdl" ID="5a91a0cd-d1ff-49c1-b428-8b6945d3aa74" SourceId="1" SourceUrl="http://10.18.200.209:5001/WebService/AffiliateAPI.asmx?wsdl" />
-    <MetadataFile FileName="AffiliateAPI.disco" MetadataType="Disco" ID="30b81ff5-824b-476d-afbb-87adf291a094" SourceId="1" SourceUrl="http://10.18.200.209:5001/WebService/AffiliateAPI.asmx?disco" />
+    <MetadataFile FileName="AffiliateAPI.wsdl" MetadataType="Wsdl" ID="117f38a3-3e4c-4c33-8638-44f0d611e24a" SourceId="1" SourceUrl="http://10.18.200.209:5001/WebService/AffiliateAPI.asmx?wsdl" />
+    <MetadataFile FileName="AffiliateAPI.disco" MetadataType="Disco" ID="b4329b7a-8933-4f4f-9884-3a5b91d050a4" SourceId="1" SourceUrl="http://10.18.200.209:5001/WebService/AffiliateAPI.asmx?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
