@@ -8,6 +8,8 @@
 //   <change who="" date=""></change>
 // </history>
 
+using System.Configuration;
+
 namespace Fanex.Affiliate.Services
 {
     using System;
@@ -36,7 +38,7 @@ namespace Fanex.Affiliate.Services
         /// </summary>
         private readonly IBetListDataAccess _betlistDataAccess;
 
-        private readonly string _subDomainPath = string.Empty;
+        private readonly string _subDomainPath = ConfigurationManager.AppSettings["subDomainPath"];
 
         #endregion Fields
 
