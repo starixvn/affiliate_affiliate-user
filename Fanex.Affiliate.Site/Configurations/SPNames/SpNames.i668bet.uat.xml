@@ -20,8 +20,8 @@
 
   <Function Name="Aff-Statement">
     <Setting Key="Aff_User_AffiliateStatementHistorySel" SpName="Aff_User_AffiliateStatementHistorySel" DbName="DBAFFI668BET.Affiliate_I668Bet.bodbDownlineNet" Plain="0" />
-    <Setting Key="Aff_User_EarningSelDaily" SpName="Aff_User_EarningSelDaily" DbName="DBAFFI668BET.Affiliate_I668Bet.bodbDownlineNet" Plain="0" />
-    <Setting Key="Aff_User_EarningSelDetail" SpName="Aff_User_EarningSelDetail" DbName="DBAFFI668BET.Affiliate_I668Bet.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_User_EarningSelDaily" SpName="Aff_User_EarningSelDaily_xtest" DbName="DBAFFI668BET.Affiliate_I668Bet.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_User_EarningSelDetail" SpName="Aff_User_EarningSelDetail_xtest" DbName="DBAFFI668BET.Affiliate_I668Bet.bodbDownlineNet" Plain="0" />
     <Setting Key="Aff_User_GetExchangeRate" SpName="Aff_User_GetExchangeRate" DbName="DBAFFI668BET.Affiliate_I668Bet.bodbDownlineNet" Plain="0" />
     <Setting Key="Aff_User_BetList" SpName="Aff_User_BetList" DbName="DBEXT.bodb02.bodbAdminNet" Plain="0" />
     <Setting Key="Aff_User_BetListParlay" SpName="Aff_User_BetListParlay" DbName="DBEXT.bodb02.bodbAdminNet" Plain="0" />
