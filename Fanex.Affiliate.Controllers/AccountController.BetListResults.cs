@@ -80,6 +80,8 @@ namespace Fanex.Affiliate.Controllers
             criteria.BaseCurrency = criteria.BaseCurrency ?? string.Empty;
             criteria.ExternalId = customerInfoBetList.Username;
             criteria.CurrencyId = customerInfoBetList.CurrencyId;
+            criteria.BaseUrl = UrlUtil.GetBaseUrl(this);
+
             var data = criteria.IsValid()
                 ? BetListService.GetRNGCasinoResult(criteria)
                 : new List<RNGCasinoResult>();

@@ -54,6 +54,8 @@ namespace Fanex.Affiliate.Criteria
 
         public string BaseCurrency { get; set; }
 
+        public Uri BaseUrl { get; set; }
+
         public override bool IsValid()
         {
             return RefNo > 0
