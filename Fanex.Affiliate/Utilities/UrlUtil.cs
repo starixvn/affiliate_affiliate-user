@@ -7,6 +7,8 @@
 //   <change who="Brian.Dinh" date="2014.12.25">Created</change>
 // </history>
 
+using Fanex.Affiliate.Configurations;
+
 namespace Fanex.Affiliate.Utilities
 {
     using System;
@@ -31,8 +33,9 @@ namespace Fanex.Affiliate.Utilities
                 subDomainPath = subDomainPath.Remove(subDomainPath.Length - 1);
             }
 
-            return new Uri(request.Url.Scheme + Uri.SchemeDelimiter + request.Url.Host 
-                + (request.Url.IsDefaultPort ? "" : ":" + request.Url.Port) + subDomainPath);
+            return new Uri(request.Url.Scheme + Uri.SchemeDelimiter + request.Url.Host
+                + ((request.Url.IsDefaultPort || AppSettings.Environment.Equals("Production", StringComparison.OrdinalIgnoreCase))
+                ? string.Empty : ":" + request.Url.Port) + subDomainPath);
         }
     }
 }
