@@ -85,6 +85,11 @@
     <Compile Include="Account\AccountStatisticInfoCriteria.cs" />
     <Compile Include="Account\ChangePasswordInfoCriteria.cs" />
     <Compile Include="AffBanner\BannerInfoCriteria.cs" />
+    <Compile Include="BetList\BetListResultsRNGCasinoCriteria.cs" />
+    <Compile Include="BetList\BetListResultsRNGCasinoDetailCriteria.cs" />
+    <Compile Include="BetList\ExchangeRateCriteria.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Common\SystemSettingsByTypeCriteria.cs" />
     <Compile Include="TrafficStatistics\TrafficStatisticDetailCriteria.cs" />
     <Compile Include="User\AffiliateLoginResultCriteria.cs" />
@@ -97,16 +102,9 @@
     <Compile Include="MarketingTools\BannerTypeCriteria.cs" />
     <Compile Include="Account\ChangePasswordCriteria.cs" />
     <Compile Include="AffBanner\BannerUpdateStatisticCriteria.cs" />
-    <Compile Include="BetList\BetListCriteria.cs" />
-    <Compile Include="BetList\BalanceUpMoveBetCriteria.cs" />
-    <Compile Include="BetList\BetListResultsCriteria.cs" />
-    <Compile Include="BetList\BetListResultsRNGCasinoDetailCriteria.cs" />
-    <Compile Include="BetList\BetListResultsRNGCasinoCriteria.cs" />
-    <Compile Include="BetList\ExchangeRateCriteria.cs" />
     <Compile Include="Account\CustomerInfoCriteria.cs" />
     <Compile Include="DailyEarnings\DailyEarningsDetailCriteria.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
-    <Compile Include="BetList\SystemParlayDetailCriteria.cs" />
     <Compile Include="AffLink\TrackingSystemCriteria.cs" />
     <Compile Include="Common\SystemSettingsCriteria.cs" />
     <Compile Include="User\ResetPasswordCriteria.cs" />

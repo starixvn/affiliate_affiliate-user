@@ -11,7 +11,7 @@ namespace Fanex.Affiliate.Services
 {
     using System;
     using System.Xml.Linq;
-    using Fanex.Affiliate.Core.MemberSiteService;
+    using Core.MemberSiteService;
 
     /// <summary>
     /// Service for getting info from Taiwan side's APIs.

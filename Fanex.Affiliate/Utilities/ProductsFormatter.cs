@@ -11,7 +11,7 @@
 namespace Fanex.Affiliate.Utilities
 {
     using System.Resources;
-    using Fanex.Affiliate.Resources;
+    using Resources;
 
     /// <summary>
     /// Format products.

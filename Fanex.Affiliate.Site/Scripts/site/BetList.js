@@ -45,23 +45,13 @@ var BetList = (function ($) {
                 $.ajax({
                     type: "GET",
                     contentType: 'application/json',
-                    dataType: "json",
+                    dataType: "text",
                     cache: false,
                     url: url,
                     error: function () {
                     },
                     success: function (response) {
-                        var choice = "";
-                        var len = response.length;
-                        $.each(response, function (index, item) {
-                            if (index === len - 1) {
-                                choice += item.Choice;
-                            }
-                            else {
-                                choice += item.Choice + "<div class='line'></div>";
-                            }
-                        });
-                        divEvent.html(choice);
+                        divEvent.html(response);
                         divEvent.css("display", "");
                     },
                     beforeSend: function () {

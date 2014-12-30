@@ -77,9 +77,8 @@
     <Reference Include="Fanex.NAP.Framework, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.NAP.Framework.1.0.0.3\lib\net40\Fanex.NAP.Framework.dll</HintPath>
     </Reference>
-    <Reference Include="Fanex.Result.Core, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Fanex.Result.Core-NPOI.2.0.6.1.5.3.0\lib\net40\Fanex.Result.Core.dll</HintPath>
+    <Reference Include="Fanex.Result.Core, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Result.Core-NPOI.2.0.6.1.6.0.0-theta-7\lib\net40\Fanex.Result.Core.dll</HintPath>
     </Reference>
     <Reference Include="Glimpse.AspNet, Version=1.3.1.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Glimpse.Core, Version=1.4.2.0, Culture=neutral, processorArchitecture=MSIL">
@@ -149,6 +148,10 @@
     <Reference Include="NetUtility, Version=1.0.4199.22106, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\HandHistoryLibrary.2014.5.29.957\lib\net40\NetUtility.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.5\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Nini, Version=1.1.0.0, Culture=neutral, PublicKeyToken=691faec150a7fa7b, processorArchitecture=MSIL">
       <HintPath>..\packages\Trove.Nini.1.1.0.0\lib\net20\Nini.dll</HintPath>
     </Reference>
@@ -186,6 +189,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
@@ -200,6 +204,7 @@
     <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
@@ -207,9 +212,6 @@
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Configuration" />
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
@@ -225,6 +227,7 @@
     <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Xml" />
     <Reference Include="TplCore, Version=1.0.4694.29951, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\TplCore.1.0.4694.29951\lib\net40\TplCore.dll</HintPath>
     </Reference>
@@ -309,10 +312,27 @@
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AffBetlistService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Content Include="App_Data\Fanex.Result.Resource\en-US.xml" />
+    <Content Include="App_Data\Fanex.Result.Resource\ja-JP.xml" />
+    <Content Include="App_Data\Fanex.Result.Resource\ko-KR.xml" />
+    <Content Include="App_Data\Fanex.Result.Resource\th-TH.xml" />
+    <Content Include="App_Data\Fanex.Result.Resource\vi-VN.xml" />
+    <Content Include="App_Data\Fanex.Result.Resource\zh-CN.xml" />
+    <Content Include="App_Data\Fanex.Result.Resource\zh-TW.xml" />
     <Content Include="App_Data\SpNames.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -336,7 +356,9 @@
     <Content Include="Configurations\SPNames\SpNames.be7.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.be7.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.be7.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.bwinning.local.xml" />
+    <Content Include="Configurations\SPNames\SpNames.bwinning.local.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Configurations\SPNames\SpNames.bwinning.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.bwinning.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.bwinning.uat.xml" />
@@ -351,7 +373,9 @@
     <Content Include="Configurations\SPNames\SpNames.i668bet.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.i668bet.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.i668bet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.i668bet.uat.xml" />
+    <Content Include="Configurations\SPNames\SpNames.i668bet.uat.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Configurations\SPNames\SpNames.idlivebet365.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.idlivebet365.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.idlivebet365.sandbox.xml" />
@@ -412,10 +436,15 @@
     <Content Include="Configurations\SPNames\SpNames.winner99.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.winner99.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.winner99.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.xml" />
+    <Content Include="Configurations\SPNames\SpNames.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Content\betlist\betlist.css" />
     <Content Include="Content\betlist\betlist.core.css" />
     <Content Include="Content\betlist\fanex.result.css" />
+    <Content Include="Content\betlist\images\1F.gif" />
+    <Content Include="Content\betlist\images\1L.gif" />
+    <Content Include="Content\betlist\images\goal-icon.png" />
     <Content Include="Content\betlist\images\note.png" />
     <Content Include="Content\betlist\images\q_Icon2_1.png" />
     <Content Include="Content\betlist\images\q_Icon_2.png" />
@@ -481,6 +510,7 @@
     <Content Include="Content\Fanex.Result\images\1L.gif" />
     <Content Include="Content\Fanex.Result\images\bg_header03.jpg" />
     <Content Include="Content\Fanex.Result\images\first-goal.gif" />
+    <Content Include="Content\Fanex.Result\images\goal-icon.png" />
     <Content Include="Content\Fanex.Result\images\last-goal.gif" />
     <Content Include="Content\Fanex.Result\images\tab_topbg.gif" />
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
@@ -3309,6 +3339,13 @@
     <Content Include="App_Data\Fanex.Result\Tennis.xls" />
     <Content Include="App_Data\Fanex.Result\VSHRacing.xls" />
     <Content Include="App_Data\Fanex.Result\VSTennis.xls" />
+    <None Include="Service References\AffBetlistService\AffiliateAPI.disco" />
+    <None Include="Service References\AffBetlistService\configuration91.svcinfo" />
+    <None Include="Service References\AffBetlistService\configuration.svcinfo" />
+    <None Include="Service References\AffBetlistService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Views\itcbet\Account\Overview.cshtml" />
     <Content Include="Views\itcbet\Layout\Layout1\_Layout.cshtml" />
     <Content Include="Views\itcbet\Layout\Layout1\_Layout_Notify.cshtml" />
@@ -3381,7 +3418,9 @@
     <Content Include="GameData\VideoPoker\RV009\Settings.ini" />
     <Content Include="GameData\VideoPoker\RV010\Settings.ini" />
     <Content Include="Configurations\WebConfigs\Web.28bet.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.28bet.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.28bet.production.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Configurations\WebConfigs\Web.28bet.sandbox.config" />
     <Content Include="Configurations\WebConfigs\Web.28bet.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.allbetclubs.local.config" />
@@ -3401,7 +3440,9 @@
     <Content Include="Configurations\WebConfigs\Web.be7.sandbox.config" />
     <Content Include="Configurations\WebConfigs\Web.be7.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.bwinning.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.bwinning.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.bwinning.production.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Configurations\WebConfigs\Web.bwinning.sandbox.config" />
     <Content Include="Configurations\WebConfigs\Web.bwinning.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.goobet.local.config" />
@@ -3415,7 +3456,9 @@
     <Content Include="Configurations\WebConfigs\Web.i668bet.local.config" />
     <Content Include="Configurations\WebConfigs\Web.i668bet.production.config" />
     <Content Include="Configurations\WebConfigs\Web.i668bet.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.i668bet.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.i668bet.uat.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Configurations\WebConfigs\Web.idlivebet365.local.config" />
     <Content Include="Configurations\WebConfigs\Web.idlivebet365.production.config" />
     <Content Include="Configurations\WebConfigs\Web.idlivebet365.sandbox.config" />
@@ -3659,6 +3702,10 @@
     <Content Include="Configurations\AppSettings\Web.AppSettings.winner99.sandbox.config" />
     <Content Include="Configurations\AppSettings\Web.AppSettings.winner99.uat.config" />
     <Content Include="Content\themes\theme26\index.less" />
+    <Content Include="App_Data\Fanex.Result\Other.xls" />
+    <Content Include="App_Data\Fanex.Result\Racing.xls" />
+    <Content Include="App_Data\Fanex.Result\VSSpeedWay.xls" />
+    <None Include="Content\Fanex.Result\fanex.result.less" />
     <Content Include="Content\themes\theme26\mixins.less" />
     <Content Include="Content\themes\theme26\variables.less" />
     <Content Include="Configurations\WebConfigs\Web.nbcbet.local.config" />
@@ -3675,6 +3722,12 @@
     <Content Include="Configurations\AppSettings\Web.AppSettings.nbcbet.uat.config" />
     <None Include="img\Slot\S0007\icon_20x20_doubleWild.jpg.exclude" />
     <None Include="img\Slot\S0007\icon_40x40_doubleWild.jpg.exclude" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AffBetlistService\AffiliateAPI.wsdl" />
+    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
@@ -3801,9 +3854,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\Email\ForgetPassword\ForgetPassword.en-US.cshtml" />
     <Content Include="Views\Shared\Email\RecoverPassword\RecoverPassword.en-US.cshtml" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Views\Shared\_LayoutPopup.cshtml" />
     <Content Include="Views\Shared\Email\PaymentCancel\PaymentCancel.en-US.cshtml" />
     <Content Include="Views\Shared\Email\PaymentRequest\PaymentRequest.en-US.cshtml" />
@@ -3977,7 +4027,15 @@
       <Name>Fanex.Affiliate</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AffBetlistService\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

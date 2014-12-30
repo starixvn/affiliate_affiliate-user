@@ -14,16 +14,9 @@ namespace Fanex.Affiliate.Controllers
     using System.Collections.Generic;
     using System.Linq;
     using System.Web.Mvc;
-    using System.Web.Script.Serialization;
     using Configurations;
     using Criteria;
-    using DTO.BetList;
-    using Enumerations;
-    using Fanex.BetList.Core.Builder;
-    using Fanex.BetList.Core.Entities;
-    using Fanex.BetList.Core.TicketHelper;
-    using Utilities;
-    using ViewModels;
+    using DTO;
     using Web;
     using Web.Filter;
 
@@ -48,43 +41,27 @@ namespace Fanex.Affiliate.Controllers
         {
             DateTime winlostDate;
             DateTime.TryParse(winlostdate, out winlostDate);
-            var balanceUpMoveBetCriteria = new BalanceUpMoveBetCriteria();
-            BetListService.GetBalanceUpMoveBetDate(balanceUpMoveBetCriteria);
-            var customerInfoBetList = BetListService.GetPlayerIbcInfo(AppSettings.AffiliateName + "$" + username);
-            var criteria = new BetListCriteria
+            var exchangeRate = GetExchangeRate(currency, winlostDate);
+            CurrentSession.ExchangeRate = exchangeRate;
+            var supportedProducts = GetSupportedProductsForWebService();
+
+            var betlistSOAP = new AffBetlistService.BetlistSOAP
             {
-                LicenseeId = AppSettings.LicenseeID,
-                UserId = AppSettings.LicenseeID,
+                AffiliateName = AppSettings.AffiliateName.ToLower(),
+                Username = username, 
+                Product = product,
                 FromDate = winlostDate,
                 ToDate = winlostDate,
-                MoveBetsDay = balanceUpMoveBetCriteria.MoveBetsDay,
-                BalanceUpDay = balanceUpMoveBetCriteria.BalanceUpDay,
-                CustId = customerInfoBetList.CustId
+                ExchangeRate = exchangeRate,
+                SupportedProducts = supportedProducts
             };
 
-            ViewBetListByProduct(criteria, product);
-            var ticketResults = BetListService.GetBetList(criteria);
-            var exchangeCriteria = new ExchangeRateCriteria
-            {
-                FromCurrency = int.Parse(currency.Trim()),
-                ToCurrency = CurrentSession.CurrencyID,
-                Date = winlostDate
-            };
-            var exchangeRate = (decimal)BetListService.GetExchangeRate(exchangeCriteria);
-            CurrentSession.ExchangeRate = exchangeRate;
+            var affBetlistService = new AffBetlistService.AffiliateAPISoapClient();
+            ViewBag.Data = affBetlistService.GetBetlist(betlistSOAP);
 
-            var model = new BetListViewModel()
-            {
-                TicketTextList = Ticket(ticketResults, criteria, username, exchangeRate),
-                IsShowSystemIdAndExternalId = false,
-                IsShowWinLoss = true,
-                TicketResult = ticketResults,
-                ExchangeRate = exchangeRate
-            };
-
-            return View(model);
+            return View();
         }
-
+        
         /// <summary>
         /// Get data for running mix parlay bet list.
         /// </summary>
@@ -93,12 +70,13 @@ namespace Fanex.Affiliate.Controllers
         [HttpGet]
         public dynamic BetListParlay(long transId)
         {
-            var ticketResult = BetListService.GetBetListParlay(transId);
-            var exchangeRate = CurrentSession.ExchangeRate == -1 ? 1 : CurrentSession.ExchangeRate;
-            var ticket = Ticket(ticketResult, new BetListCriteria(), string.Empty, exchangeRate, 1, true);
-            var jsonSerialiser = new JavaScriptSerializer();
+            var affBetlistService = new AffBetlistService.AffiliateAPISoapClient();
+            var tickets = affBetlistService.GetBetlistParlay(
+                AppSettings.AffiliateName,
+                transId.ToString(),
+                CurrentSession.ExchangeRate.ToString());
 
-            return jsonSerialiser.Serialize(ticket);
+            return tickets;
         }
 
         /// <summary>
@@ -107,161 +85,23 @@ namespace Fanex.Affiliate.Controllers
         /// <param name="criteria">The metal model.</param>
         /// <returns>The action result.</returns>
         [HttpGet]
-        public ActionResult SystemParlayDetail(SystemParlayDetailCriteria criteria)
+        public ActionResult SystemParlayDetail(AffBetlistService.BetListSystemParlayDetailCriteria criteria)
         {
-            var balanceUpMoveBetCriteria = new BalanceUpMoveBetCriteria();
-            BetListService.GetBalanceUpMoveBetDate(balanceUpMoveBetCriteria);
-            criteria.BalanceUpDay = balanceUpMoveBetCriteria.BalanceUpDay;
-            criteria.MoveBetsDay = balanceUpMoveBetCriteria.MoveBetsDay;
-            criteria.LicenseeId = AppSettings.LicenseeID;
-            criteria.UserId = AppSettings.LicenseeID;
+            var affBetlistService = new AffBetlistService.AffiliateAPISoapClient();
+            var systemParlayDataText = affBetlistService.GetBetlistSystemParlay(
+                AppSettings.AffiliateName,
+                CurrentSession.ExchangeRate.ToString(),
+                criteria);
+            ViewBag.Data = systemParlayDataText;
 
-            var systemParlayData = BetListService.GetSystemParlayDetail(criteria);
-            ExchangeSystemParlayTickets(systemParlayData);
-            var builder = new BetListHTMLBuilder();
-            var systemParlayText = builder.BuildSystemParlayDetail(new TicketHelper(), systemParlayData);
-            var viewModel = new SystemParlayDetailViewModel
-            {
-                DetailText = systemParlayText,
-                Param = criteria
-            };
-
-            return View(viewModel);
+            return View();
         }
 
         /// <summary>
-        /// Exchange system parlay ticket from user's currency to affiliate's currency.
+        /// Get supported products.
         /// </summary>
-        /// <param name="systemParlayData">Original system parlay data object.</param>
-        public void ExchangeSystemParlayTickets(SystemParlayData systemParlayData)
-        {
-            systemParlayData.Outstanding *= CurrentSession.ExchangeRate;
-            foreach (var ticket in systemParlayData.TicketList)
-            {
-                ticket.Comm *= CurrentSession.ExchangeRate;
-                ticket.PlayerComm *= CurrentSession.ExchangeRate;
-                ticket.Stake *= CurrentSession.ExchangeRate;
-                ticket.WinLost *= CurrentSession.ExchangeRate;
-            }
-        }
-
-        /// <summary>
-        /// Generate ticket text.
-        /// </summary>
-        /// <param name="ticketResult">Ticket result Parameter value.</param>
-        /// <param name="criteria"> Parameter value.</param>
-        /// <param name="username">User's Name.</param>
-        /// <param name="exchangeRate">Exchange rate value.</param>
-        /// <param name="startIndex">Start index Parameter value.</param>
-        /// <param name="showOdds">Show Odds or not.</param>
-        /// <returns>Result value.</returns>
-        [NonAction]
-        public List<TicketText> Ticket(
-            TicketResult ticketResult,
-            BetListCriteria criteria,
-            string username,
-            decimal exchangeRate = 1,
-            int startIndex = 1,
-            bool showOdds = false)
-        {
-            var builder = new BetListHTMLBuilder();
-            var ticketTextList = new List<TicketText>();
-            var ticketHelper = new TicketHelper();
-            var baseCurrency = criteria == null ? string.Empty : criteria.BaseCurrency;
-            decimal sumWinloss = 0;
-
-            foreach (var ticket in ticketResult.MainTicketList)
-            {
-                if (ticket.BetTypeId == (int)BetType.CombinationMixParlay)
-                {
-                    var custid = ticket.CustId != 0 ? ticket.CustId : criteria.CustId;
-                    var formatDetail = @"showCombMPDetail({0},{1},{2},{3},&quot;{4}&quot;,&quot;{5}&quot;)";
-                    var betTeam = ticketHelper.GetBetTypeNameById(ticket.BetTypeId) + " - " + ticketHelper.GetCombinationMPOfferName(ticket.BetTeam);
-                    ticketHelper.ClientDetailSystemParlayFunction = string.Format(
-                        formatDetail,
-                        ticket.TransId,
-                        ticket.RefNo,
-                        ticket.BetId,
-                        custid,
-                        betTeam,
-                        baseCurrency);
-                }
-
-                ticketHelper.IsShowOddsWithChoice = showOdds;
-                ticket.Stake *= exchangeRate;
-                ticket.ActualStake *= exchangeRate;
-                var ticketText = new TicketText
-                {
-                    Index = startIndex++,
-                    ExternalId = ticket.ExternalId,
-                    SystemId = ticket.UserName,
-                    TransTime = builder.BuildTrans(ticket),
-                    Status = builder.BuildAffBetListResultStatus(
-                        ticket, ticketHelper, ticketResult.TicketDataList, criteria, CurrentSession.CurrencyID, CurrentSession.Currency, username),
-                    Choice = builder.BuildChoice(ticket, ticketHelper, ticketResult.TicketDataList, false),
-                    Odds = builder.BuildOdds(ticket, ticketResult.TicketDataList, CacheRef.GetOddsTypeName),
-                    Stake = builder.BuildStake(ticket),
-                    WinLoss = string.Format("{0:#,##0.00}", ticket.Winlost * exchangeRate)
-                };
-
-                sumWinloss += ticket.Winlost;
-                ticketTextList.Add(ticketText);
-            }
-
-            ticketResult.SumWinLoss = sumWinloss;
-
-            return ticketTextList;
-        }
-
-        /// <summary>
-        /// View bet list by product.
-        /// </summary>
-        /// <param name="criteria">Bet list criteria.</param>
-        /// <param name="product">Product parameter.</param>
-        public void ViewBetListByProduct(BetListCriteria criteria, string product)
-        {
-            if (product == "All")
-            {
-                ViewBetListByAllProducts(criteria);
-            }
-            else
-            {
-                ViewBetListBySpecificProduct(criteria, product);
-            }
-        }
-
-        /// <summary>
-        /// View Bet List By Specific Product.
-        /// </summary>
-        /// <param name="criteria">Bet List Criteria.</param>
-        /// <param name="product">Selected product.</param>
-        public void ViewBetListBySpecificProduct(BetListCriteria criteria, string product)
-        {
-            switch (product)
-            {
-                case "Sportsbook":
-                    criteria.ShowSB = true;
-                    break;
-                case "RNG Casino":
-                    criteria.ShowCS = true;
-                    break;
-                case "Number Game":
-                    criteria.ShowNG = true;
-                    break;
-                case "Live Casino":
-                    criteria.ShowLC = true;
-                    break;
-                default:
-                    criteria.ShowSB = true;
-                    break;
-            }
-        }
-
-        /// <summary>
-        /// View Bet List By All Products.
-        /// </summary>
-        /// <param name="criteria">Bet List Criteria.</param>
-        public void ViewBetListByAllProducts(BetListCriteria criteria)
+        /// <returns>List of Product.</returns>
+        public List<Product> GetSupportedProducts()
         {
             var productCriteria = new ProductCriteria
             {
@@ -270,12 +110,48 @@ namespace Fanex.Affiliate.Controllers
                 MonthDate = null
             };
 
-            var listProduct = ProductService.GetProductList(productCriteria).ToList();
+            return ProductService.GetProductList(productCriteria).ToList();
+        }
 
-            foreach (var item in listProduct)
+        /// <summary>
+        /// Get supported products.
+        /// </summary>
+        /// <returns>An array of supported products.</returns>
+        public AffBetlistService.Product[] GetSupportedProductsForWebService()
+        {
+            var products = GetSupportedProducts();
+            List<AffBetlistService.Product> supportedProducts = new List<AffBetlistService.Product>();
+            
+            foreach (var product in products)
             {
-                ViewBetListBySpecificProduct(criteria, item.ProductName);
+                supportedProducts.Add(new AffBetlistService.Product
+                {
+                    ProductId = product.ProductId,
+                    ProductName = product.ProductName,
+                    OriginalProductName = product.OriginalProductName,
+                    TotalQualifiedMembers = product.TotalQualifiedMembers
+                });
             }
+
+            return supportedProducts.ToArray();
+        }
+
+        /// <summary>
+        /// Get Exchange rate.
+        /// </summary>
+        /// <param name="fromCurrency">From currency.</param>
+        /// <param name="winlostDate">Win loss date.</param>
+        /// <returns>Exchange rate.</returns>
+        public decimal GetExchangeRate(string fromCurrency, DateTime winlostDate)
+        {
+            var exchangeCriteria = new ExchangeRateCriteria
+            {
+                FromCurrency = int.Parse(fromCurrency.Trim()),
+                ToCurrency = CurrentSession.CurrencyID,
+                Date = winlostDate
+            };
+
+            return (decimal)BetListService.GetExchangeRate(exchangeCriteria);
         }
 
         #endregion

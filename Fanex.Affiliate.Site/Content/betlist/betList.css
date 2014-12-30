@@ -143,6 +143,38 @@
     width: 14px;
 }
 
+.fhFirstGoal {
+    background: url(images/1F.gif) no-repeat scroll center center transparent;
+    display: inline;
+    height: 10px;
+    padding: 0 4px;
+    width: 14px;
+}
+
+.fhLastGoal {
+    background: url(images/1L.gif) no-repeat scroll center center transparent;
+    display: inline;
+    height: 10px;
+    padding: 0 4px;
+    width: 14px;
+}
+
+.first-half-first-goal {
+    background: url(images/1F.gif) no-repeat scroll center center transparent;
+    display: inline;
+    height: 10px;
+    /*padding: 0 4px;*/
+    width: 14px;
+}
+
+.first-half-last-goal{
+    background: url(images/1L.gif) no-repeat scroll center center transparent;
+    display: inline;
+    height: 10px;
+    /*padding: 0 4px;*/
+    width: 14px;
+}
+
 .bl_match {
     color: #000000;
     font-weight: normal;
@@ -385,5 +417,23 @@ Format styles
 .tblBetList tr td a
 {
     color: #0000FF;
+}
+
+/*to make line-through for void-parlay-ticket*/
+div.mx-parlay div.refund span, div.mx-parlay div.refund div,
+{
+    text-decoration: line-through;
+}
+div.mx-parlay div.refund > div.match, div.mx-parlay div.refund div.firstGoal, div.mx-parlay div.refund div.lastGoal
+{
+    text-decoration: none;
+}
+div.mx-parlay div.reject span, div.mx-parlay div.reject div,
+{
+    text-decoration: line-through;
+}
+div.mx-parlay div.reject > div.match, div.mx-parlay div.reject div.firstGoal, div.mx-parlay div.reject div.lastGoal
+{
+    text-decoration: none;
 }
 /********** ------------------ **************/

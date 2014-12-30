@@ -13,8 +13,8 @@ namespace Fanex.Affiliate.Web.Filter
     using System;
     using System.Linq;
     using System.Web.Mvc;
-    using Fanex.Affiliate.Configurations;
-    using Fanex.Affiliate.DTO;
+    using Configurations;
+    using DTO;
     using Logging;
 
     /// <summary>

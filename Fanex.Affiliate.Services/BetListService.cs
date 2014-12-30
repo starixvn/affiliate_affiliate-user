@@ -8,15 +8,15 @@
 //   <change who="" date=""></change>
 // </history>
 
+using System.Configuration;
+
 namespace Fanex.Affiliate.Services
 {
     using System;
     using System.Collections.Generic;
     using System.Data;
     using System.Diagnostics.CodeAnalysis;
-    using System.Globalization;
     using System.Linq;
-    using BetList.Core.Entities;
     using Common;
     using Common.Helper;
     using Criteria;
@@ -37,8 +37,6 @@ namespace Fanex.Affiliate.Services
         /// Define Account DataAccess.
         /// </summary>
         private readonly IBetListDataAccess _betlistDataAccess;
-
-        private readonly string _subDomainPath = string.Empty;
 
         #endregion Fields
 
@@ -66,38 +64,6 @@ namespace Fanex.Affiliate.Services
         #region BetList
 
         /// <summary>
-        /// Get Bet List.
-        /// </summary>
-        /// <param name="criteria">Input criteria.</param>
-        /// <returns>Ticket results.</returns>
-        public TicketResult GetBetList(BetListCriteria criteria)
-        {
-            Check.Argument.IsNotNull(criteria, "criteria");
-            return _betlistDataAccess.GetBetList(criteria);
-        }
-
-        /// <summary>
-        /// Get Bet List Parlay.
-        /// </summary>
-        /// <param name="transId">Input transaction ID.</param>
-        /// <returns>Ticket results.</returns>
-        public TicketResult GetBetListParlay(long transId)
-        {
-            return _betlistDataAccess.GetBetListParlay(transId);
-        }
-
-        /// <summary>
-        /// Get System Parlay Detail data.
-        /// </summary>
-        /// <param name="criteria">The metal model.</param>
-        /// <returns>The system parlay.</returns>
-        public SystemParlayData GetSystemParlayDetail(SystemParlayDetailCriteria criteria)
-        {
-            Check.Argument.IsNotNull(criteria, "criteria");
-            return _betlistDataAccess.GetSystemParlayDetail(criteria);
-        }
-
-        /// <summary>
         /// Get exchange rate.
         /// </summary>
         /// <param name="criteria">Input criteria.</param>
@@ -106,16 +72,6 @@ namespace Fanex.Affiliate.Services
         {
             Check.Argument.IsNotNull(criteria, "criteria");
             return _betlistDataAccess.GetExchangeRate(criteria);
-        }
-
-        /// <summary>
-        /// Get balance up and move bet dates.
-        /// </summary>
-        /// <param name="criteria">Balance up and move bet criteria.</param>
-        public void GetBalanceUpMoveBetDate(BalanceUpMoveBetCriteria criteria)
-        {
-            Check.Argument.IsNotNull(criteria, "criteria");
-            _betlistDataAccess.GetBalanceUpMoveBetDate(criteria);
         }
 
         /// <summary>
@@ -132,122 +88,6 @@ namespace Fanex.Affiliate.Services
 
         #region BetList.Results
 
-        public IList<Sportbook> GetPopUpMatch(int matchId, int licenseeId, int userId)
-        {
-            var data = _betlistDataAccess.GetPopUpMatch(matchId, -1, licenseeId, userId);
-            return BindSportsbook(data);
-        }
-
-        /// <summary>
-        /// Get parlay match for pop up page.
-        /// </summary>
-        /// <param name="refNo">The reference no.</param>
-        /// <returns>The parlay data list.</returns>
-        [SuppressMessage(
-           "StyleCop.CSharp.Nexcel.NexcelCustomRules",
-           "SP2101:MethodMustNotContainMoreLinesThan",
-           Justification = "Reviewed. Suppression is OK here.")]
-        public IList<Parlay> GetPopUpParlayMatch(long refNo)
-        {
-            var data = _betlistDataAccess.GetPopUpParalayMatch(refNo);
-            if (data != null && data.Rows.Count > 0)
-            {
-                var dataList = data.AsEnumerable();
-                var dataParlay = new List<Parlay>();
-
-                foreach (var row in dataList)
-                {
-                    var leagueId = int.Parse(row["LeagueID"].ToString());
-                    if (dataParlay.All(i => i.LeagueId != leagueId))
-                    {
-                        dataParlay.Add(
-                            new Parlay
-                            {
-                                LeagueId = leagueId,
-                                SportId = int.Parse(row["sporttype"].ToString()),
-                                Sportbook =
-                                    dataList.Where(i => i["LeagueID"].ToString() == leagueId.ToString(CultureInfo.InvariantCulture))
-                                        .Select(
-                                            i =>
-                                                new Sportbook
-                                                {
-                                                    AwayId = int.Parse(i["awayID"].ToString()),
-                                                    HomeId = int.Parse(i["homeID"].ToString()),
-                                                    BetStatus =
-                                                        i["betstatus"] != DBNull.Value
-                                                            ? i["betstatus"].ToString()
-                                                            : string.Empty,
-                                                    LeagueId = leagueId,
-                                                    MatchId = int.Parse(i["matchid"].ToString()),
-                                                    EventStatus = i["eventstatus"].ToString(),
-                                                    FinalAwayScore =
-                                                        i["finalawayscore"] != DBNull.Value
-                                                            ? int.Parse(i["finalawayscore"].ToString())
-                                                            : new int?(),
-                                                    HtAwayScore =
-                                                        i["htawayscore"] != DBNull.Value
-                                                            ? int.Parse(i["htawayscore"].ToString())
-                                                            : new int?(),
-                                                    Color = i.Table.Columns.Contains("lcolor") &&
-                                                        i["lcolor"] != DBNull.Value
-                                                            ? i["lcolor"].ToString()
-                                                            : string.Empty,
-                                                    FinalHomeScore =
-                                                        i["finalhomescore"] != DBNull.Value
-                                                            ? int.Parse(i["finalhomescore"].ToString())
-                                                            : new int?(),
-                                                    HtHomeScore =
-                                                        i["finalhomescore"] != DBNull.Value
-                                                            ? int.Parse(i["hthomescore"].ToString())
-                                                            : new int?(),
-                                                    EventDate = DateTime.Parse(i["eventdate"].ToString()),
-                                                    IsNeutral = bool.Parse(i["IsNeutral"].ToString()),
-                                                    IsPending = bool.Parse(i["IsPending"].ToString()),
-                                                    KickOffTime = DateTime.Parse(i["kickofftime"].ToString()),
-                                                    MatchCode = i["matchcode"].ToString(),
-                                                    GoalRecord = i["goalrecord"].ToString(),
-                                                    ResultValue = "6-1 *30-40 40-30* *40-0 40-0* *40-0 40-0* *40-0",
-                                                    IsHTCal = Convert.ToBoolean(i["IsHTCal"]),
-                                                    Calculate = Convert.ToBoolean(i["Calculate"]),
-                                                    RefNo = refNo.ToString(CultureInfo.InvariantCulture),
-                                                })
-                                        .ToList()
-                            });
-                    }
-                }
-
-                return dataParlay;
-            }
-
-            return new List<Parlay>();
-        }
-
-        public IList<NumberGame> GetPopUpNumberGameMatchs(int matchId)
-        {
-            var data = _betlistDataAccess.GetPopUpNumberGameMatch(matchId);
-            return BindingNumberGame(data);
-        }
-
-        public IList<LiveCasino> GetPopUpLiveCasinoMatch(int matchId, int licenseeId, int userId)
-        {
-            var dataLc = _betlistDataAccess.GetPopUpMatch(matchId, -1, licenseeId, userId);
-            return BindingLiveCasino(dataLc);
-        }
-
-        /// <summary>
-        /// Get racing data for popup page.
-        /// </summary>
-        /// <param name="matchId">The match id.</param>
-        /// <param name="raceNo">The reference number.</param>
-        /// <param name="licenseeId">The licensee id.</param>
-        /// <param name="userId">The user id.</param>
-        /// <returns>The racing data list.</returns>
-        public IList<Racing> GetPopUpRacingMatch(int matchId, int raceNo, int licenseeId, int userId)
-        {
-            var dataRc = _betlistDataAccess.GetPopUpMatch(matchId, raceNo, licenseeId, userId);
-            return BindingRacing(dataRc);
-        }
-
         #endregion
 
         #region BetList.Results.RNGCasino
@@ -263,6 +103,8 @@ namespace Fanex.Affiliate.Services
             var casinoList = new List<RNGCasinoResult>();
             DataTable dataTable;
             GetResultFromAPI(criteria, out dataTable);
+            var site = criteria.BaseUrl == null ? string.Empty : criteria.BaseUrl.ToString();
+
             if (dataTable != null && dataTable.Rows.Count > 0)
             {
                 for (int i = 0; i < dataTable.Rows.Count; i++)
@@ -271,8 +113,8 @@ namespace Fanex.Affiliate.Services
                     var casino = MapDataToCasinoItem(dataRow);
 
                     casino.Index = i + 1;
-                    casino.Result = casino.Result.Replace("/Form", this._subDomainPath + "/Form");
-                    casino.Result = casino.Result.Replace("/img", this._subDomainPath + "/img");
+                    casino.Result = casino.Result.Replace("/Form", site + "/Form");
+                    casino.Result = casino.Result.Replace("/img", site + "/img");
                     if (criteria.IsShowPic)
                     {
                         casino.Result = casino.Result.Replace("<img", "<br /><img");
@@ -319,7 +161,7 @@ namespace Fanex.Affiliate.Services
         /// </summary>
         /// <param name="data">The data table.</param>
         /// <returns>The sports-book data list.</returns>
-        private static IList<Sportbook> BindSportsbook(DataTable data)
+        private static IList<Sportsbook> BindSportsbook(DataTable data)
         {
             if (data != null && data.Rows.Count > 0)
             {
@@ -327,7 +169,7 @@ namespace Fanex.Affiliate.Services
                     data.AsEnumerable()
                         .Select(
                             i =>
-                                new Sportbook
+                                new Sportsbook
                                 {
                                     AwayId = int.Parse(i["awayID"].ToString()),
                                     HomeId = int.Parse(i["homeID"].ToString()),
@@ -357,7 +199,6 @@ namespace Fanex.Affiliate.Services
                                     KickOffTime = DateTime.Parse(i["kickofftime"].ToString()),
                                     MatchCode = i["matchcode"].ToString(),
                                     GoalRecord = i["goalrecord"].ToString(),
-                                    ResultValue = "6-1 *30-40 40-30* *40-0 40-0* *40-0 40-0* *40-0",
                                     IsHTCal = Convert.ToBoolean(i["IsHTCal"]),
                                     Calculate = Convert.ToBoolean(i["Calculate"]),
                                     RefNo = "12"
@@ -365,7 +206,7 @@ namespace Fanex.Affiliate.Services
                         .ToList();
             }
 
-            return new List<Sportbook>();
+            return new List<Sportsbook>();
         }
 
         /// <summary>

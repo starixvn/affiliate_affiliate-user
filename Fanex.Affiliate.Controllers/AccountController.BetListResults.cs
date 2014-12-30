@@ -15,13 +15,11 @@ namespace Fanex.Affiliate.Controllers
     using System.Linq;
     using System.Text.RegularExpressions;
     using System.Web.Mvc;
+    using Common;
     using Configurations;
     using Criteria;
     using DTO.BetList;
     using Enumerations;
-    using Fanex.Affiliate.Web;
-    using Fanex.Common;
-    using Fanex.Result.Core;
     using Utilities;
     using ViewModels;
     using Web.Filter;
@@ -45,7 +43,7 @@ namespace Fanex.Affiliate.Controllers
         /// <param name="criteria">The metal model.</param>
         /// <returns>The action result.</returns>
         [HttpGet]
-        public ActionResult BetListResults(BetListResultsCriteria criteria)
+        public ActionResult BetListResults(AffBetlistService.BetListResultsCriteria criteria)
         {
             ViewBag.Data = GetPopUpData(criteria);
             return View();
@@ -56,71 +54,14 @@ namespace Fanex.Affiliate.Controllers
         /// </summary>
         /// <param name="criteria">The metal model.</param>
         /// <returns>HTML formatted of data.</returns>
-        public string GetPopUpData(BetListResultsCriteria criteria)
+        public string GetPopUpData(AffBetlistService.BetListResultsCriteria criteria)
         {
-            var sportType = (SportType)criteria.SportType;
-            var customerInfoBetList = BetListService.GetPlayerIbcInfo(AppSettings.AffiliateName + "$" + criteria.UserName);
-            var displaySettings = new ResultSetting
-            {
-                SportType = sportType,
-                IsOutRight = criteria.IsOutRight.HasValue && criteria.IsOutRight.Value > 0,
-                IsParlayPopUp = criteria.Bettype == (int)BetType.MixParlay || criteria.Bettype == (int)BetType.CombinationMixParlay,
-                IsPopUp = true,
-                LanguageCode = _resultsSupportedLanguages.Exists(i => i.Equals(AppSession.Language)) ? AppSession.Language : "en-US"
-            };
+            var affBetlistService = new AffBetlistService.AffiliateAPISoapClient();
 
-            if (displaySettings.IsParlayPopUp && criteria.RefNo != null)
-            {
-                var parlayData = BetListService.GetPopUpParlayMatch(criteria.RefNo.Value);
-                return ResultEngine.HtmlParser(parlayData, displaySettings);
-            }
-
-            return GetNormalPopUpData(criteria, sportType, customerInfoBetList.CustId, displaySettings);
-        }
-
-        /// <summary>
-        /// Get normal pop up data.
-        /// </summary>
-        /// <param name="criteria">The metal model.</param>
-        /// <param name="sportType">The sport type.</param>
-        /// <param name="userId">The user id.</param>
-        /// <param name="setting">The setting result.</param>
-        /// <returns>HTML formatted of data.</returns>
-        public string GetNormalPopUpData(BetListResultsCriteria criteria, SportType sportType, int userId, ResultSetting setting)
-        {
-            switch (sportType)
-            {
-                case SportType.HorseRacing:
-                case SportType.Greyhound:
-                case SportType.Harness:
-                case SportType.VirtualHorseRacing:
-                    if (criteria.RaceNo == null)
-                    {
-                        return string.Empty;
-                    }
-
-                    var dataRc = BetListService.GetPopUpRacingMatch(
-                        criteria.MatchId,
-                        criteria.RaceNo.Value,
-                        AppSettings.LicenseeID,
-                        userId);
-                    return dataRc != null ? ResultEngine.HtmlParser(dataRc, setting) : string.Empty;
-
-                case SportType.LiveCasino:
-                    var dataLc = BetListService.GetPopUpLiveCasinoMatch(
-                        criteria.MatchId,
-                        AppSettings.LicenseeID,
-                        userId);
-                    return dataLc != null ? ResultEngine.HtmlParser(dataLc, setting) : string.Empty;
-
-                case SportType.NumberGame:
-                    var dataNg = BetListService.GetPopUpNumberGameMatchs(criteria.MatchId);
-                    return dataNg != null ? ResultEngine.HtmlParser(dataNg, setting) : string.Empty;
-
-                default:
-                    var data = BetListService.GetPopUpMatch(criteria.MatchId, AppSettings.LicenseeID, userId);
-                    return data != null ? ResultEngine.HtmlParser(data, setting) : string.Empty;
-            }
+            return affBetlistService.GetBetlistResults(
+                AppSettings.AffiliateName,
+                CurrentSession.Language,
+                criteria);
         }
 
         #endregion
@@ -139,10 +80,12 @@ namespace Fanex.Affiliate.Controllers
             criteria.BaseCurrency = criteria.BaseCurrency ?? string.Empty;
             criteria.ExternalId = customerInfoBetList.Username;
             criteria.CurrencyId = customerInfoBetList.CurrencyId;
+            criteria.BaseUrl = UrlUtil.GetBaseUrl(this);
+
             var data = criteria.IsValid()
                 ? BetListService.GetRNGCasinoResult(criteria)
                 : new List<RNGCasinoResult>();
-            
+
             ExchangeRNGCasinoValues(data);
             var totalAmount = new List<RNGCasinoResult>();
             if (data != null)
@@ -194,7 +137,7 @@ namespace Fanex.Affiliate.Controllers
             {
                 return View("~/Views/Shared/Account/RNGCasinoDetail/NoGameErr.cshtml");
             }
-            
+
             var viewModel = criteria.IsValid()
                 ? BetListService.GetRNGCasinoResultDetail(criteria)
                 : new BetListResultsRNGCasinoDetailViewModel();

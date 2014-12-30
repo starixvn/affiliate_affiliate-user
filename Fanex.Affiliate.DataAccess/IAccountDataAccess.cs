@@ -14,7 +14,6 @@ namespace Fanex.Affiliate.DataAccess
     using System.Collections.Generic;
     using Criteria;
     using DTO;
-    using DTO.BetList;
     using Fanex.BetList.Core.Entities;
     using ViewModels;
 

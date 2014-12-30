@@ -12,9 +12,9 @@ namespace Fanex.Affiliate.Web.Filter
     using System;
     using System.Net;
     using System.Web.Mvc;
-    using System.Web.Security;  
-    using Fanex.Affiliate.Resources;
+    using System.Web.Security;
     using Logging;
+    using Resources;
 
     /// <summary>
     /// Authorization attribute.

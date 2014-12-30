@@ -11,7 +11,6 @@
 namespace Fanex.Affiliate.Criteria
 {
     using System;
-    using System.Diagnostics.CodeAnalysis;
     using NAP.Framework.Data;
 
     /// <summary>
@@ -54,6 +53,8 @@ namespace Fanex.Affiliate.Criteria
         public string CurrencyName { get; set; }
 
         public string BaseCurrency { get; set; }
+
+        public Uri BaseUrl { get; set; }
 
         public override bool IsValid()
         {

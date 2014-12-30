@@ -26,6 +26,9 @@ namespace Fanex.Affiliate.WebServices
         protected void Application_Start(object sender, EventArgs e)
         {
             DbSettingProviderManager.Current.Start();
+
+            log4net.Config.XmlConfigurator.Configure();
+            log4net.LogManager.GetLogger("GeneralLog").Info("Start");
         }
     }
 }

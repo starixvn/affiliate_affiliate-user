@@ -10,8 +10,6 @@
 
 namespace Fanex.Affiliate.Banner.Controllers
 {
-    using System;
-    using System.Web;
     using System.Web.Mvc;
 
     /// <summary>

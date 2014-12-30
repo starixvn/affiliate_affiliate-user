@@ -13,7 +13,6 @@ namespace Fanex.Affiliate.Services
     using Common.Helper;
     using Criteria;
     using DTO;
-    using Services;
 
     /// <summary>
     /// Marketing service.

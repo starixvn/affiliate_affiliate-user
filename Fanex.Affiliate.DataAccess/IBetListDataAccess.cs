@@ -11,10 +11,8 @@
 namespace Fanex.Affiliate.DataAccess
 {
     using System.Data;
-    using BetList.Core.Entities;
     using Criteria;
     using DTO;
-    using DTO.BetList;
 
     /// <summary>
     /// Interface Account.
@@ -24,38 +22,11 @@ namespace Fanex.Affiliate.DataAccess
         #region BetList
 
         /// <summary>
-        /// Get Bet List.
-        /// </summary>
-        /// <param name="criteria">Input criteria.</param>
-        /// <returns>Ticket results.</returns>
-        TicketResult GetBetList(BetListCriteria criteria);
-
-        /// <summary>
-        /// Get Bet List Parlay.
-        /// </summary>
-        /// <param name="transId">Input transaction ID.</param>
-        /// <returns>Ticket results.</returns>
-        TicketResult GetBetListParlay(long transId);
-
-        /// <summary>
-        /// Get System Parlay Detail data.
-        /// </summary>
-        /// <param name="criteria">The metal model.</param>
-        /// <returns>The system parlay.</returns>
-        SystemParlayData GetSystemParlayDetail(SystemParlayDetailCriteria criteria);
-
-        /// <summary>
         /// Get exchange rate.
         /// </summary>
         /// <param name="criteria">Input criteria.</param>
         /// <returns>Exchange rate.</returns>
         float GetExchangeRate(ExchangeRateCriteria criteria);
-
-        /// <summary>
-        /// Get balance up and move bet dates.
-        /// </summary>
-        /// <param name="criteria">Input criteria.</param>
-        void GetBalanceUpMoveBetDate(BalanceUpMoveBetCriteria criteria);
 
         /// <summary>
         /// Get player's username.

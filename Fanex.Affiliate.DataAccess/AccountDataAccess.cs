@@ -18,7 +18,6 @@ namespace Fanex.Affiliate.DataAccess
     using Criteria;
     using Data;
     using DTO;
-    using Fanex.NAP.Framework.Command;
     using ViewModels;
 
     /// <summary>

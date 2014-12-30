@@ -14,8 +14,10 @@ namespace Fanex.Affiliate.Utilities
     using System.Collections.Generic;
     using System.Drawing;
     using System.Globalization;
+    using System.IO;
     using System.Linq;
     using System.Resources;
+    using System.Runtime.Serialization.Formatters.Binary;
     using System.Security.Cryptography;
     using System.Text;
     using System.Web;
@@ -264,6 +266,28 @@ namespace Fanex.Affiliate.Utilities
             var hashData = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(inputString));
 
             return BitConverter.ToString(hashData).Replace("-", string.Empty).ToLower();
+        }
+
+        public static T ByteArrayToObject<T>(byte[] arrBytes)
+        {
+            MemoryStream memStream = new MemoryStream();
+            BinaryFormatter binForm = new BinaryFormatter();
+            memStream.Write(arrBytes, 0, arrBytes.Length);
+            memStream.Seek(0, SeekOrigin.Begin);
+            var structuredObject = (T)binForm.Deserialize(memStream);
+
+            return structuredObject;
+        }
+
+        public static List<T> ByteArrayToListObjects<T>(byte[] arrBytes)
+        {
+            MemoryStream memStream = new MemoryStream();
+            BinaryFormatter binForm = new BinaryFormatter();
+            memStream.Write(arrBytes, 0, arrBytes.Length);
+            memStream.Seek(0, SeekOrigin.Begin);
+            var listStructuredObjects = (List<T>)binForm.Deserialize(memStream);
+
+            return listStructuredObjects;
         }
     }
 }

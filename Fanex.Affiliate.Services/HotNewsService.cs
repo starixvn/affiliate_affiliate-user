@@ -11,11 +11,11 @@
 namespace Fanex.Affiliate.Services
 {
     using Caching;
+    using Common.Helper;
     using Configurations;
     using Criteria;
     using DataAccess;
     using DTO;
-    using Fanex.Common.Helper;
     using ViewModels;
 
     /// <summary>
