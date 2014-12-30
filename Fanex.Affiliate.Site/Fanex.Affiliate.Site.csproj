@@ -373,7 +373,9 @@
     <Content Include="Configurations\SPNames\SpNames.i668bet.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.i668bet.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.i668bet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.i668bet.uat.xml" />
+    <Content Include="Configurations\SPNames\SpNames.i668bet.uat.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Configurations\SPNames\SpNames.idlivebet365.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.idlivebet365.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.idlivebet365.sandbox.xml" />
@@ -4061,7 +4063,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
