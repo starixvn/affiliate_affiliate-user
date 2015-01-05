@@ -43,7 +43,7 @@ namespace Fanex.Affiliate.Controllers
             DateTime.TryParse(winlostdate, out winlostDate);
             var exchangeRate = GetExchangeRate(currency, winlostDate);
             CurrentSession.ExchangeRate = exchangeRate;
-            var supportedProducts = GetSupportedProductsForWebService();
+            var supportedProducts = GetSupportedProductsForWebService(winlostDate);
 
             var betlistSOAP = new AffBetlistService.BetlistSOAP
             {
@@ -100,14 +100,15 @@ namespace Fanex.Affiliate.Controllers
         /// <summary>
         /// Get supported products.
         /// </summary>
+        /// <param name="winlostDate">Win lost date.</param>
         /// <returns>List of Product.</returns>
-        public List<Product> GetSupportedProducts()
+        public List<Product> GetSupportedProducts(DateTime? winlostDate)
         {
             var productCriteria = new ProductCriteria
             {
                 Language = AppSession.Language,
                 AffId = CurrentSession.AffId,
-                MonthDate = null
+                MonthDate = winlostDate
             };
 
             return ProductService.GetProductList(productCriteria).ToList();
@@ -116,10 +117,11 @@ namespace Fanex.Affiliate.Controllers
         /// <summary>
         /// Get supported products.
         /// </summary>
+        /// <param name="winlostDate">Win lost date.</param>
         /// <returns>An array of supported products.</returns>
-        public AffBetlistService.Product[] GetSupportedProductsForWebService()
+        public AffBetlistService.Product[] GetSupportedProductsForWebService(DateTime? winlostDate)
         {
-            var products = GetSupportedProducts();
+            var products = GetSupportedProducts(winlostDate);
             List<AffBetlistService.Product> supportedProducts = new List<AffBetlistService.Product>();
             
             foreach (var product in products)
