@@ -7,24 +7,30 @@
 //   <change who="Brian.Dinh" date="2014.12.25">Created</change>
 // </history>
 
-using Fanex.Affiliate.Configurations;
-
 namespace Fanex.Affiliate.Utilities
 {
     using System;
     using System.Web.Mvc;
+    using Fanex.Affiliate.Configurations;
 
     /// <summary>
     /// TODO: Update summary.
     /// </summary>
     public class UrlUtil
     {
+        /// <summary>
+        /// Gets the base URL.
+        /// </summary>
+        /// <param name="controller">The controller.</param>
+        /// <returns>Return URI.</returns>
         public static Uri GetBaseUrl(Controller controller)
         {
             var request = controller.Request;
 
             if (request == null || request.Url == null)
+            {
                 return null;
+            }
             
             var subDomainPath = controller.Url.Content("~/");
 

@@ -8,12 +8,11 @@
 //   <change who="" date=""></change>
 // </history>
 
-using System.Configuration;
-
 namespace Fanex.Affiliate.Services
 {
     using System;
     using System.Collections.Generic;
+    using System.Configuration;
     using System.Data;
     using System.Diagnostics.CodeAnalysis;
     using System.Linq;
