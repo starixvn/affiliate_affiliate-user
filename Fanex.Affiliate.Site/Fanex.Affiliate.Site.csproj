@@ -576,6 +576,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
     <Content Include="App_Code\RazorHelper.cshtml" />
+    <Content Include="Content\themes\theme14\images\signup.png" />
     <Content Include="Content\themes\theme26\images\banner.en-US.jpg" />
     <Content Include="Content\themes\theme26\images\banner.id-ID.jpg" />
     <Content Include="Content\themes\theme26\images\banner.ko-KR.jpg" />
@@ -628,7 +629,6 @@
     <Content Include="Content\themes\theme13\images\bg_footer.png" />
     <Content Include="Content\themes\theme13\images\favicon.png" />
     <Content Include="Content\themes\theme13\images\logo-afterlogin.png" />
-    <Content Include="Content\themes\theme14\images\signup-btn.png" />
     <Content Include="Content\themes\theme15\images\banner.en-US.jpg" />
     <Content Include="Content\themes\theme15\images\banner.id-ID.jpg" />
     <Content Include="Content\themes\theme15\images\banner.th-TH.jpg" />
@@ -4066,7 +4066,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
+      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
