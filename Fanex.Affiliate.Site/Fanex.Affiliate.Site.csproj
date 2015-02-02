@@ -336,6 +336,10 @@
     <Content Include="App_Data\SpNames.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Configurations\SPNames\SpNames.yhy1980.local.xml" />
+    <Content Include="Configurations\SPNames\SpNames.yhy1980.production.xml" />
+    <Content Include="Configurations\SPNames\SpNames.yhy1980.sandbox.xml" />
+    <Content Include="Configurations\SPNames\SpNames.yhy1980.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.28bet.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.28bet.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.28bet.sandbox.xml" />
@@ -577,6 +581,51 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
     <Content Include="App_Code\RazorHelper.cshtml" />
     <Content Include="Content\themes\theme14\images\signup.png" />
+    <Content Include="Content\themes\theme27\images\banner.en-US.jpg" />
+    <Content Include="Content\themes\theme27\images\banner.zh-CN.jpg" />
+    <Content Include="Content\themes\theme27\images\banner_top.png" />
+    <Content Include="Content\themes\theme27\images\bar-loader.gif" />
+    <Content Include="Content\themes\theme27\images\bg-contentLanguage.png" />
+    <Content Include="Content\themes\theme27\images\bgheader.png" />
+    <Content Include="Content\themes\theme27\images\bghotNewsContent.png" />
+    <Content Include="Content\themes\theme27\images\bgLanguage-Content.png" />
+    <Content Include="Content\themes\theme27\images\bgLanguage.png" />
+    <Content Include="Content\themes\theme27\images\bgLanguage_Content.png" />
+    <Content Include="Content\themes\theme27\images\bgMainMenu.png" />
+    <Content Include="Content\themes\theme27\images\bgTableHeader.png" />
+    <Content Include="Content\themes\theme27\images\bg_buttonsite.png" />
+    <Content Include="Content\themes\theme27\images\bg_center.jpg" />
+    <Content Include="Content\themes\theme27\images\bg_center2.jpg" />
+    <Content Include="Content\themes\theme27\images\bg_footer.jpg" />
+    <Content Include="Content\themes\theme27\images\bg_footer.png" />
+    <Content Include="Content\themes\theme27\images\bg_header03.jpg" />
+    <Content Include="Content\themes\theme27\images\deco.jpg" />
+    <Content Include="Content\themes\theme27\images\emailBanner.jpg" />
+    <Content Include="Content\themes\theme27\images\emailBg.jpg" />
+    <Content Include="Content\themes\theme27\images\error_icons.png" />
+    <Content Include="Content\themes\theme27\images\favicon.jpg" />
+    <Content Include="Content\themes\theme27\images\firstGoal.gif" />
+    <Content Include="Content\themes\theme27\images\glyphicons-halflings-gray-lighter.png" />
+    <Content Include="Content\themes\theme27\images\glyphicons-halflings-gray.png" />
+    <Content Include="Content\themes\theme27\images\glyphicons-halflings.png" />
+    <Content Include="Content\themes\theme27\images\header_gradient.png" />
+    <Content Include="Content\themes\theme27\images\help.txt" />
+    <Content Include="Content\themes\theme27\images\in_top.png" />
+    <Content Include="Content\themes\theme27\images\lastGoal.gif" />
+    <Content Include="Content\themes\theme27\images\link_14x14.png" />
+    <Content Include="Content\themes\theme27\images\loader.gif" />
+    <Content Include="Content\themes\theme27\images\logo-afterlogin.png" />
+    <Content Include="Content\themes\theme27\images\note.png" />
+    <Content Include="Content\themes\theme27\images\plus.png" />
+    <Content Include="Content\themes\theme27\images\signup.png" />
+    <Content Include="Content\themes\theme27\images\sprite.png" />
+    <Content Include="Content\themes\theme27\images\tab_topbg.gif" />
+    <Content Include="Content\themes\theme27\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\theme27\images\undo.png" />
+    <Content Include="Content\themes\theme27\images\up.png" />
+    <Content Include="Content\themes\theme27\index.less" />
+    <Content Include="Content\themes\theme27\mixins.less" />
+    <Content Include="Content\themes\theme27\variables.less" />
     <Content Include="Content\themes\theme26\images\banner.en-US.jpg" />
     <Content Include="Content\themes\theme26\images\banner.id-ID.jpg" />
     <Content Include="Content\themes\theme26\images\banner.ko-KR.jpg" />
@@ -3340,6 +3389,18 @@
     <Content Include="App_Data\Fanex.Result\VSHRacing.xls" />
     <Content Include="App_Data\Fanex.Result\VSTennis.xls" />
     <Content Include="Configurations\AppSettings\Web.AppSettings.nbcbet.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSettings.yhy1980.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSettings.yhy1980.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSettings.yhy1980.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSettings.yhy1980.uat.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.yhy1980.local.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.yhy1980.master.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.yhy1980.production.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.yhy1980.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.yhy1980.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.yhy1980.master.config" />
+    <Content Include="Configurations\WebConfigs\Web.yhy1980.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.yhy1980.uat.config" />
     <None Include="Service References\AffBetlistService\AffiliateAPI.disco" />
     <None Include="Service References\AffBetlistService\configuration91.svcinfo" />
     <None Include="Service References\AffBetlistService\configuration.svcinfo" />
@@ -3730,7 +3791,9 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Service References\AffBetlistService\AffiliateAPI.wsdl" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
