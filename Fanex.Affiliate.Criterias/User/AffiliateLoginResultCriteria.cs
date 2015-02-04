@@ -11,7 +11,7 @@
 namespace Fanex.Affiliate.Criteria
 {
     using System.Web.Mvc;
-    using NAP.Framework.Data;
+    using Fanex.Data.Repository;
 
     /// <summary>
     /// Authenticate User Criteria.

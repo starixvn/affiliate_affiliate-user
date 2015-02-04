@@ -11,7 +11,7 @@
 namespace Fanex.Affiliate.Criteria
 {
     using System;
-    using NAP.Framework.Data;
+    using Fanex.Data.Repository;
 
     /// <summary>
     /// Criteria for cancelling the payment request.
