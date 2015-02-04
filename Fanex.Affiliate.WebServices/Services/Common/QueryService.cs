@@ -13,7 +13,7 @@ namespace Fanex.Affiliate.WebServices.Services
     using System;
     using System.Collections.Generic;
     using Data;
-    using NAP.Framework.Data;
+    using Fanex.Data.Repository;
 
     /// <summary>
     /// Query service.

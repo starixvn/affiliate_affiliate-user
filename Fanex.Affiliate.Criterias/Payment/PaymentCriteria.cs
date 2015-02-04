@@ -10,7 +10,7 @@
 
 namespace Fanex.Affiliate.Criteria
 {
-    using NAP.Framework.Data;
+    using Fanex.Data.Repository;
 
     /// <summary>
     /// Criteria for getting the player's info.
