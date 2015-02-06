@@ -12,7 +12,7 @@ namespace Fanex.Affiliate.WebServices.Criteria
 {
     using System;
     using System.ComponentModel.DataAnnotations;
-    using NAP.Framework.Data;
+    using Fanex.Data.Repository;
 
     /// <summary>
     /// Bet List Criteria.

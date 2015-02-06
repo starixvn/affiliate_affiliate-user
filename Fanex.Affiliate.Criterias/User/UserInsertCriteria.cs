@@ -12,7 +12,7 @@ namespace Fanex.Affiliate.Criteria
 {
     using System.Diagnostics.CodeAnalysis;
     using System.Web.Mvc;
-    using NAP.Framework.Data;
+    using Fanex.Data.Repository;
 
     /// <summary>
     /// User Insert Criteria.

@@ -12,13 +12,13 @@ namespace Fanex.Affiliate.DataAccess
 {
     using Criteria;
     using DTO;
-    using NAP.Framework.Data;
+    using Fanex.Data.Repository;
     using ViewModels;
 
     /// <summary>
     /// Interface User DataAccess.
     /// </summary>
-    public interface IUserDataAccess : IRepository<User>
+    public interface IUserDataAccess : IReadonlyRepository<User>
     {
         /// <summary>
         /// Authenticate User.

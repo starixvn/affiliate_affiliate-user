@@ -34,3 +34,11 @@ Dependencies/Fanex.Age.UI.TotalBets.dll
 
 /Website/Views/Reports/AgentOutstanding.cshtml
 /Fanex.Affiliate.DB/*.dbmdl
+
+/cireport
+*.StyleCop.violations.xml
+*.StyleCop.xml
+*.FxCop.xml
+MsBuild.xml
+MSBUILD.SUMMARY.email
+SUMMARY.DISPLAY.xml

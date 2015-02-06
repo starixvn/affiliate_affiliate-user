@@ -13,7 +13,7 @@ namespace Fanex.Affiliate.Criteria
     using System.ComponentModel.DataAnnotations;
     using System.Web.Mvc;
     using Fanex.Affiliate.Resources;
-    using NAP.Framework.Data;
+    using Fanex.Data.Repository;
 
     /// <summary>
     /// Contact Us Criteria.

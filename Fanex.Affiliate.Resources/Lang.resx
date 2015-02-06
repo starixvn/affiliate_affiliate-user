@@ -1121,4 +1121,7 @@
   <data name="PlaytechCasinoPWin" xml:space="preserve">
     <value>P.Win</value>
   </data>
+  <data name="VirtualSports" xml:space="preserve">
+    <value>Virtual Sports</value>
+  </data>
 </root>

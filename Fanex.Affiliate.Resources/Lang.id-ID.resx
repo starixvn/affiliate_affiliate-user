@@ -1122,4 +1122,7 @@ Tim Dukungan Afiliasi {0}</value>
   <data name="PlaytechCasinoPWin" xml:space="preserve">
     <value>P.Win</value>
   </data>
+  <data name="VirtualSports" xml:space="preserve">
+    <value>Virtual Sports</value>
+  </data>
 </root>

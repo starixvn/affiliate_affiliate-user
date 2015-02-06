@@ -18,8 +18,7 @@ namespace Fanex.Affiliate.DataAccess
     using Criteria;
     using Data;
     using DTO;
-    using NAP.Framework.Command;
-    using NAP.Framework.Data;
+    using Fanex.Data.Repository;
     using ViewModels;
 
     /// <summary>
@@ -224,36 +223,6 @@ namespace Fanex.Affiliate.DataAccess
             }
 
             return user;
-        }
-
-        /// <summary>
-        /// Delete entity.
-        /// </summary>
-        /// <param name="entity">User entity.</param>
-        /// <returns>Command result.</returns>
-        public ICommandResult Delete(User entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Insert entity.
-        /// </summary>
-        /// <param name="entity">User entity.</param>
-        /// <returns>Command result.</returns>
-        public ICommandResult Insert(User entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Update entity.
-        /// </summary>
-        /// <param name="entity">User entity.</param>
-        /// <returns>Command result.</returns>
-        public ICommandResult Update(User entity)
-        {
-            throw new NotImplementedException();
         }
 
         #region Admin Process Login

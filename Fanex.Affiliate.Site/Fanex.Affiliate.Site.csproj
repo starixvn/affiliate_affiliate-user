@@ -48,51 +48,32 @@
     <Reference Include="BundleTransformer.Less">
       <HintPath>..\packages\BundleTransformer.Less.1.6.26\lib\net40\BundleTransformer.Less.dll</HintPath>
     </Reference>
-    <Reference Include="CasinoLibrary, Version=1.0.2.2, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CasinoLibrary.1.0.2.2\lib\net40\CasinoLibrary.dll</HintPath>
+    <Reference Include="CasinoLibrary">
+      <HintPath>..\packages\CasinoLibrary.1.0.2.6\lib\net40\CasinoLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="CasinoSetting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="CasinoSetting">
       <HintPath>..\packages\CasinoSetting.1.0.0.0\lib\net40\CasinoSetting.dll</HintPath>
     </Reference>
-    <Reference Include="CasinoUtility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="CasinoUtility">
       <HintPath>..\packages\CasinoUtility.1.2.9.0\lib\net40\CasinoUtility.dll</HintPath>
     </Reference>
     <Reference Include="dotless.Core">
       <HintPath>..\packages\dotless.1.3.1.0\lib\dotless.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Fanex.BetList.Core, Version=2.0.4.5, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Fanex.BetList.Core.2.0.4.5\lib\net40\Fanex.BetList.Core.dll</HintPath>
-    </Reference>
     <Reference Include="Fanex.Common, Version=1.0.404.97, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.Common.1.0.404.97\lib\net40\Fanex.Common.dll</HintPath>
     </Reference>
     <Reference Include="Fanex.Data, Version=0.5.404.63, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Fanex.Data.0.5.404.63\lib\net40\Fanex.Data.dll</HintPath>
     </Reference>
     <Reference Include="Fanex.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.Logging.1.0.0.0\lib\net40\Fanex.Logging.dll</HintPath>
     </Reference>
-    <Reference Include="Fanex.NAP.Framework, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.NAP.Framework.1.0.0.3\lib\net40\Fanex.NAP.Framework.dll</HintPath>
-    </Reference>
     <Reference Include="Fanex.Result.Core, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.Result.Core-NPOI.2.0.6.1.6.0.0-theta-7\lib\net40\Fanex.Result.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Glimpse.AspNet, Version=1.3.1.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="Glimpse.Core, Version=1.4.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\Dependencies\Glimpse.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Glimpse.Mvc4, Version=1.3.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Glimpse.Mvc4.1.3.2\lib\net40\Glimpse.Mvc4.dll</HintPath>
-    </Reference>
-    <Reference Include="GotDotNet.ApplicationBlocks.Data, Version=3.1.0.0, Culture=neutral">
-      <HintPath>..\packages\HandHistoryLibrary.2014.5.29.957\lib\net40\GotDotNet.ApplicationBlocks.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="HandHistoryLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\HandHistoryLibrary.2014.5.29.957\lib\net40\HandHistoryLibrary.dll</HintPath>
+    <Reference Include="HandHistoryLibrary">
+      <HintPath>..\packages\HandHistoryLibrary.1.0.0.43\lib\net40\HandHistoryLibrary.dll</HintPath>
     </Reference>
     <Reference Include="IBCCrypt, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.Crypt.1.1.0.0\lib\net40\IBCCrypt.dll</HintPath>
@@ -101,23 +82,22 @@
       <HintPath>..\packages\Fanex.DBLibrary.1.0.0.0\lib\net40\IBCDBLibrary.dll</HintPath>
     </Reference>
     <Reference Include="IBCFile, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\IBCFile.1.0.0\lib\net40\IBCFile.dll</HintPath>
+      <HintPath>..\packages\Fanex.File.1.0.0\lib\net40\IBCFile.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>..\packages\NPOI.2.0.6\lib\net40\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
-    <Reference Include="ILogger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ILogger.1.0.0.0\lib\net40\ILogger.dll</HintPath>
+    <Reference Include="ILogger">
+      <HintPath>..\packages\HandHistoryLibrary.1.0.0.43\lib\net40\ILogger.dll</HintPath>
     </Reference>
     <Reference Include="LiveCasinoLibrary">
       <HintPath>..\packages\LiveCasinoLibrary.1.0.0.15\lib\net40\LiveCasinoLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="log4net, Version=1.2.9.0, Culture=neutral, PublicKeyToken=b32731d11ce58905">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>ThirdParties\log4net.dll</HintPath>
+    <Reference Include="log4net">
+      <HintPath>..\packages\HandHistoryLibrary.1.0.0.43\lib\net40\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=3.1.0.0, Culture=neutral">
-      <HintPath>..\packages\HandHistoryLibrary.2014.5.29.957\lib\net40\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    <Reference Include="Microsoft.ApplicationBlocks.Data">
+      <HintPath>..\packages\HandHistoryLibrary.1.0.0.43\lib\net40\Microsoft.ApplicationBlocks.Data.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -146,14 +126,14 @@
       <HintPath>..\packages\MiniProfiler.2.1.0\lib\net40\MiniProfiler.dll</HintPath>
     </Reference>
     <Reference Include="NetUtility, Version=1.0.4199.22106, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\HandHistoryLibrary.2014.5.29.957\lib\net40\NetUtility.dll</HintPath>
+      <HintPath>..\packages\CasinoLibrary.1.0.2.6\lib\net40\NetUtility.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.6.0.5\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Nini, Version=1.1.0.0, Culture=neutral, PublicKeyToken=691faec150a7fa7b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Trove.Nini.1.1.0.0\lib\net20\Nini.dll</HintPath>
+    <Reference Include="Nini">
+      <HintPath>..\packages\HandHistoryLibrary.1.0.0.43\lib\net40\Nini.dll</HintPath>
     </Reference>
     <Reference Include="NPOI, Version=2.0.6.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -180,11 +160,8 @@
     <Reference Include="SPSRemoting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\SPSRemoting.1.0.0\lib\net40\SPSRemoting.dll</HintPath>
     </Reference>
-    <Reference Include="Sunplus.Core.Common, Version=1.1.4505.19054, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sunplus.Core.Common.1.1.4505.19054\lib\net40\Sunplus.Core.Common.dll</HintPath>
-    </Reference>
     <Reference Include="Sunplus.Libraries.AOP, Version=1.0.4218.28561, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sunplus.Libraries.AOP.1.0.4218.28561\lib\net40\Sunplus.Libraries.AOP.dll</HintPath>
+      <HintPath>..\packages\CasinoLibrary.1.0.2.6\lib\net40\Sunplus.Libraries.AOP.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -336,6 +313,10 @@
     <Content Include="App_Data\SpNames.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Configurations\SPNames\SpNames.yhy1980.local.xml" />
+    <Content Include="Configurations\SPNames\SpNames.yhy1980.production.xml" />
+    <Content Include="Configurations\SPNames\SpNames.yhy1980.sandbox.xml" />
+    <Content Include="Configurations\SPNames\SpNames.yhy1980.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.28bet.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.28bet.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.28bet.sandbox.xml" />
@@ -577,6 +558,51 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
     <Content Include="App_Code\RazorHelper.cshtml" />
     <Content Include="Content\themes\theme14\images\signup.png" />
+    <Content Include="Content\themes\theme27\images\banner.en-US.jpg" />
+    <Content Include="Content\themes\theme27\images\banner.zh-CN.jpg" />
+    <Content Include="Content\themes\theme27\images\banner_top.png" />
+    <Content Include="Content\themes\theme27\images\bar-loader.gif" />
+    <Content Include="Content\themes\theme27\images\bg-contentLanguage.png" />
+    <Content Include="Content\themes\theme27\images\bgheader.png" />
+    <Content Include="Content\themes\theme27\images\bghotNewsContent.png" />
+    <Content Include="Content\themes\theme27\images\bgLanguage-Content.png" />
+    <Content Include="Content\themes\theme27\images\bgLanguage.png" />
+    <Content Include="Content\themes\theme27\images\bgLanguage_Content.png" />
+    <Content Include="Content\themes\theme27\images\bgMainMenu.png" />
+    <Content Include="Content\themes\theme27\images\bgTableHeader.png" />
+    <Content Include="Content\themes\theme27\images\bg_buttonsite.png" />
+    <Content Include="Content\themes\theme27\images\bg_center.jpg" />
+    <Content Include="Content\themes\theme27\images\bg_center2.jpg" />
+    <Content Include="Content\themes\theme27\images\bg_footer.jpg" />
+    <Content Include="Content\themes\theme27\images\bg_footer.png" />
+    <Content Include="Content\themes\theme27\images\bg_header03.jpg" />
+    <Content Include="Content\themes\theme27\images\deco.jpg" />
+    <Content Include="Content\themes\theme27\images\emailBanner.jpg" />
+    <Content Include="Content\themes\theme27\images\emailBg.jpg" />
+    <Content Include="Content\themes\theme27\images\error_icons.png" />
+    <Content Include="Content\themes\theme27\images\favicon.jpg" />
+    <Content Include="Content\themes\theme27\images\firstGoal.gif" />
+    <Content Include="Content\themes\theme27\images\glyphicons-halflings-gray-lighter.png" />
+    <Content Include="Content\themes\theme27\images\glyphicons-halflings-gray.png" />
+    <Content Include="Content\themes\theme27\images\glyphicons-halflings.png" />
+    <Content Include="Content\themes\theme27\images\header_gradient.png" />
+    <Content Include="Content\themes\theme27\images\help.txt" />
+    <Content Include="Content\themes\theme27\images\in_top.png" />
+    <Content Include="Content\themes\theme27\images\lastGoal.gif" />
+    <Content Include="Content\themes\theme27\images\link_14x14.png" />
+    <Content Include="Content\themes\theme27\images\loader.gif" />
+    <Content Include="Content\themes\theme27\images\logo-afterlogin.png" />
+    <Content Include="Content\themes\theme27\images\note.png" />
+    <Content Include="Content\themes\theme27\images\plus.png" />
+    <Content Include="Content\themes\theme27\images\signup.png" />
+    <Content Include="Content\themes\theme27\images\sprite.png" />
+    <Content Include="Content\themes\theme27\images\tab_topbg.gif" />
+    <Content Include="Content\themes\theme27\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\theme27\images\undo.png" />
+    <Content Include="Content\themes\theme27\images\up.png" />
+    <Content Include="Content\themes\theme27\index.less" />
+    <Content Include="Content\themes\theme27\mixins.less" />
+    <Content Include="Content\themes\theme27\variables.less" />
     <Content Include="Content\themes\theme26\images\banner.en-US.jpg" />
     <Content Include="Content\themes\theme26\images\banner.id-ID.jpg" />
     <Content Include="Content\themes\theme26\images\banner.ko-KR.jpg" />
@@ -3340,6 +3366,18 @@
     <Content Include="App_Data\Fanex.Result\VSHRacing.xls" />
     <Content Include="App_Data\Fanex.Result\VSTennis.xls" />
     <Content Include="Configurations\AppSettings\Web.AppSettings.nbcbet.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSettings.yhy1980.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSettings.yhy1980.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSettings.yhy1980.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSettings.yhy1980.uat.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.yhy1980.local.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.yhy1980.master.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.yhy1980.production.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.yhy1980.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.yhy1980.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.yhy1980.master.config" />
+    <Content Include="Configurations\WebConfigs\Web.yhy1980.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.yhy1980.uat.config" />
     <None Include="Service References\AffBetlistService\AffiliateAPI.disco" />
     <None Include="Service References\AffBetlistService\configuration91.svcinfo" />
     <None Include="Service References\AffBetlistService\configuration.svcinfo" />
@@ -3364,16 +3402,6 @@
     <Content Include="Content\themes\theme17\index.less" />
     <Content Include="Content\themes\theme17\mixins.less" />
     <Content Include="Content\themes\theme17\variables.less" />
-    <Content Include="ThirdParties\Glimpse.AspNet.dll" />
-    <Content Include="ThirdParties\Glimpse.Core.dll" />
-    <Content Include="ThirdParties\NetUtility.dll" />
-    <Content Include="ThirdParties\Newtonsoft.Json.dll" />
-    <Content Include="ThirdParties\Sunplus.Libraries.AOP.dll" />
-    <Content Include="ThirdParties\System.Net.Http.dll" />
-    <Content Include="ThirdParties\System.Web.Helpers.dll" />
-    <Content Include="ThirdParties\System.Web.Optimization.dll" />
-    <Content Include="ThirdParties\System.Web.Razor.dll" />
-    <Content Include="ThirdParties\System.Web.WebPages.Razor.dll" />
     <Content Include="Views\Shared\Email\ContactUs\ContactUs.txt" />
     <Content Include="Views\Shared\Email\ForgetPassword\ForgetPassword.ko-KR.txt" />
     <Content Include="Views\Shared\Email\ForgetPassword\ForgetPassword.vi-VN.txt" />
@@ -3730,7 +3758,9 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Service References\AffBetlistService\AffiliateAPI.wsdl" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
@@ -4066,7 +4096,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

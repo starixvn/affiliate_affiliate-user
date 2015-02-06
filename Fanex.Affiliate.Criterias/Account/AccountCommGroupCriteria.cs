@@ -10,7 +10,7 @@
 
 namespace Fanex.Affiliate.Criteria
 {
-    using NAP.Framework.Data;
+    using Fanex.Data.Repository;
 
     /// <summary>
     /// Overview Criteria.
