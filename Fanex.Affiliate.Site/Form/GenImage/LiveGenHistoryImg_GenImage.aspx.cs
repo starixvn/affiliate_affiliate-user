@@ -1,25 +1,17 @@
 ﻿using System;
-using System.Collections;
-using System.Configuration;
-using System.Data;
-using System.Web;
-using System.Web.Security;
-using System.Web.UI;
-using System.Web.UI.HtmlControls;
-using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
 using JSoft.Utility;
 using LiveCasinoLibrary.SBAgent;
 
 /// <summary>
 /// Live Generate History Images.
 /// </summary>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("T4", "1.0.0.0")]
 public partial class LiveGenHistoryImg_GenImage : System.Web.UI.Page
 {
     /// <summary>
     /// Page load.
     /// </summary>
-    /// <param name="sender">Object sender.</param>
+    /// <param name="sender">Object ssender.</param>
     /// <param name="e">Event arguments.</param>
     protected void Page_Load(object sender, EventArgs e)
     {
