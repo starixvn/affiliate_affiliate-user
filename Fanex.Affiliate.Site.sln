@@ -26,8 +26,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{0C6C5E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanex.Affiliate.ViewModels", "Fanex.Affiliate.ViewModels\Fanex.Affiliate.ViewModels.csproj", "{C47B10A7-DA2E-4619-A7E4-FDA66B098688}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanex.Affiliate.Link", "Fanex.Affiliate.Link\Fanex.Affiliate.Link.csproj", "{6CE25B47-449E-4282-A956-BAADC31CB372}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanex.Affiliate.Banner", "Fanex.Affiliate.Banner\Fanex.Affiliate.Banner.csproj", "{DC64F5C6-2585-4B73-B8B7-19A6C7216325}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CodeAnalysis", "CodeAnalysis", "{5B02195A-2693-457F-9869-2011100C8240}"
@@ -38,6 +36,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CodeAnalysis", "CodeAnalysi
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanex.Affiliate.WebServices", "Fanex.Affiliate.WebServices\Fanex.Affiliate.WebServices.csproj", "{FD2CD90C-AA9D-4E09-9600-5CB6564045E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanex.Affiliate.Link", "Fanex.Affiliate.Link\Fanex.Affiliate.Link.csproj", "{6CE25B47-449E-4282-A956-BAADC31CB372}"
 EndProject
 Global
 	GlobalSection(JSLint) = preSolution
@@ -152,16 +152,6 @@ Global
 		{C47B10A7-DA2E-4619-A7E4-FDA66B098688}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{C47B10A7-DA2E-4619-A7E4-FDA66B098688}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{C47B10A7-DA2E-4619-A7E4-FDA66B098688}.Release|x86.ActiveCfg = Release|Any CPU
-		{6CE25B47-449E-4282-A956-BAADC31CB372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6CE25B47-449E-4282-A956-BAADC31CB372}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6CE25B47-449E-4282-A956-BAADC31CB372}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{6CE25B47-449E-4282-A956-BAADC31CB372}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{6CE25B47-449E-4282-A956-BAADC31CB372}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{6CE25B47-449E-4282-A956-BAADC31CB372}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6CE25B47-449E-4282-A956-BAADC31CB372}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6CE25B47-449E-4282-A956-BAADC31CB372}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{6CE25B47-449E-4282-A956-BAADC31CB372}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{6CE25B47-449E-4282-A956-BAADC31CB372}.Release|x86.ActiveCfg = Release|Any CPU
 		{DC64F5C6-2585-4B73-B8B7-19A6C7216325}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DC64F5C6-2585-4B73-B8B7-19A6C7216325}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC64F5C6-2585-4B73-B8B7-19A6C7216325}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -182,6 +172,16 @@ Global
 		{FD2CD90C-AA9D-4E09-9600-5CB6564045E1}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{FD2CD90C-AA9D-4E09-9600-5CB6564045E1}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{FD2CD90C-AA9D-4E09-9600-5CB6564045E1}.Release|x86.ActiveCfg = Release|Any CPU
+		{6CE25B47-449E-4282-A956-BAADC31CB372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CE25B47-449E-4282-A956-BAADC31CB372}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CE25B47-449E-4282-A956-BAADC31CB372}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6CE25B47-449E-4282-A956-BAADC31CB372}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6CE25B47-449E-4282-A956-BAADC31CB372}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6CE25B47-449E-4282-A956-BAADC31CB372}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CE25B47-449E-4282-A956-BAADC31CB372}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CE25B47-449E-4282-A956-BAADC31CB372}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6CE25B47-449E-4282-A956-BAADC31CB372}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6CE25B47-449E-4282-A956-BAADC31CB372}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
