@@ -4,12 +4,12 @@
     <file relUrl="img/Slot/S0012/02.jpg" publishTime="02/09/2015 13:25:50" />
     <file relUrl="Content/themes/theme9/images/bg-bottomLanguage.png" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Slot/S0015/Line5.png" publishTime="02/09/2015 13:25:51" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.royalebet.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.royalebet.uat.config" publishTime="02/12/2015 12:58:33" />
     <file relUrl="img/Slot/S0024/Line25.png" publishTime="02/09/2015 13:25:54" />
     <file relUrl="bin/Newtonsoft.Json.xml" publishTime="01/07/2015 16:33:35" />
     <file relUrl="Content/themes/theme21/images/bghotNewsContent.png" publishTime="08/26/2014 10:13:16" />
     <file relUrl="Content/themes/theme13/images/error_icons.png" publishTime="08/26/2014 10:13:15" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.mgm88.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.mgm88.uat.config" publishTime="02/12/2015 12:58:28" />
     <file relUrl="img/Poker/blank_7_H.jpg" publishTime="02/09/2015 13:25:40" />
     <file relUrl="Content/themes/theme26/images/bg_footer.png" publishTime="01/07/2015 16:33:28" />
     <file relUrl="Views/Shared/Email/ForgetPassword/ForgetPassword.zh-CN.txt" publishTime="08/26/2014 10:13:16" />
@@ -34,13 +34,13 @@
     <file relUrl="img/Bingo/Ball/33.jpg" publishTime="02/09/2015 13:25:39" />
     <file relUrl="Content/themes/theme20/images/loader.gif" publishTime="08/26/2014 10:13:16" />
     <file relUrl="Content/themes/theme26/mixins.less" publishTime="01/07/2015 16:33:28" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.i668bet.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.i668bet.production.config" publishTime="02/12/2015 12:58:21" />
     <file relUrl="Views/Shared/Account/BetListResults.cshtml" publishTime="01/07/2015 16:33:29" />
     <file relUrl="Content/themes/theme25/images/bgTableHeader.png" publishTime="08/26/2014 10:13:16" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.macaubet.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.macaubet.local.config" publishTime="02/12/2015 12:58:26" />
     <file relUrl="img/Slot/S0001/Taizen_W2.jpg" publishTime="02/09/2015 13:25:43" />
     <file relUrl="Content/themes/theme6/images/bg_center.jpg" publishTime="08/26/2014 10:13:16" />
-    <file relUrl="Configurations/WebConfigs/Web.mymbet.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.mymbet.uat.config" publishTime="02/12/2015 13:12:56" />
     <file relUrl="img/Slot/S0002/32.jpg" publishTime="02/09/2015 13:25:43" />
     <file relUrl="bin/Fanex.Affiliate.Site.pdb" publishTime="02/12/2015 12:42:43" />
     <file relUrl="Content/bootstrap/less/type.less" publishTime="08/26/2014 10:13:15" />
@@ -97,14 +97,14 @@
     <file relUrl="img/Scratch/RH012/3.jpg" publishTime="02/09/2015 13:25:42" />
     <file relUrl="Content/themes/theme17/images/in_top.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Poker2/DA.jpg" publishTime="02/09/2015 13:25:40" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.allbetclubs.uat.config" publishTime="01/07/2015 16:33:28" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.aoncash.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.allbetclubs.uat.config" publishTime="02/12/2015 12:58:12" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.aoncash.local.config" publishTime="02/12/2015 12:58:13" />
     <file relUrl="bin/ILogger.dll" publishTime="02/06/2015 13:35:49" />
     <file relUrl="Content/themes/theme18/images/emailBg.jpg" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Mahjong/GR.jpg" publishTime="02/09/2015 13:25:39" />
     <file relUrl="Content/themes/base/minified/images/ui-bg_glass_65_ffffff_1x400.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="Content/themes/base/minified/jquery.ui.accordion.min.css" publishTime="08/26/2014 10:13:15" />
-    <file relUrl="Configurations/WebConfigs/Web.hbobet.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.hbobet.local.config" publishTime="02/12/2015 13:12:50" />
     <file relUrl="Views/Shared/Email/RecoverPassword/RecoverPassword.zh-CN.cshtml" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Slot/S0008/JourneyWest_V.jpg" publishTime="02/09/2015 13:25:48" />
     <file relUrl="Content/bootstrap/less/pagination.less" publishTime="08/26/2014 10:13:15" />
@@ -115,7 +115,7 @@
     <file relUrl="Content/bootstrap/less/responsive-navbar.less" publishTime="08/26/2014 10:13:15" />
     <file relUrl="Content/themes/theme24/images/in_top.png" publishTime="08/26/2014 10:13:16" />
     <file relUrl="Content/themes/theme5/images/link_14x14.png" publishTime="08/26/2014 10:13:16" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.nbcbet.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.nbcbet.production.config" publishTime="02/12/2015 12:58:41" />
     <file relUrl="img/Slot/S0017/N.jpg" publishTime="02/09/2015 13:25:52" />
     <file relUrl="img/Slot/S0010/Line2.png" publishTime="02/09/2015 13:25:49" />
     <file relUrl="Views/Shared/Home/Index.zh-TW.cshtml" publishTime="01/07/2015 16:33:29" />
@@ -128,7 +128,7 @@
     <file relUrl="Content/themes/theme15/images/note.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot8/Slot8/S8003/blank.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="img/Slot8/S8001/Line4.jpg" publishTime="02/09/2015 13:25:56" />
-    <file relUrl="Configurations/WebConfigs/Web.winner99.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.winner99.local.config" publishTime="02/12/2015 13:13:01" />
     <file relUrl="img/Slot/S0005/Fruit_11.jpg" publishTime="02/09/2015 13:25:46" />
     <file relUrl="img/Slot/S0005/D2.jpg" publishTime="02/09/2015 13:25:45" />
     <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.28bet.sandbox.config" publishTime="01/07/2015 16:33:28" />
@@ -199,7 +199,7 @@
     <file relUrl="Content/themes/base/images/ui-icons_454545_256x240.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Poker/C1.jpg" publishTime="02/09/2015 13:25:40" />
     <file relUrl="Content/themes/theme7/images/bgheader.png" publishTime="08/26/2014 10:13:16" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.itcbet.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.itcbet.production.config" publishTime="02/12/2015 12:58:23" />
     <file relUrl="img/Slot8/Slot8/S8004/B1.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="Content/themes/theme17/images/up.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="Views/Shared/User/ForgetPasswordResults.cshtml" publishTime="08/26/2014 10:13:16" />
@@ -236,13 +236,13 @@
     <file relUrl="img/Slot/Line7.png" publishTime="02/09/2015 13:25:42" />
     <file relUrl="Configurations/WebConfigs/Web.idlivebet365kiosk.local.config" publishTime="01/07/2015 16:33:28" />
     <file relUrl="Content/betlist/images/tab_topbg.gif" publishTime="01/07/2015 16:33:28" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.goobet.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.goobet.local.config" publishTime="02/12/2015 12:58:07" />
     <file relUrl="Views/Shared/Account/QCPreTest.cshtml" publishTime="01/07/2015 16:33:29" />
     <file relUrl="Content/bootstrap/less/tests/navbar.html" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot3/S0013/02.jpg" publishTime="02/09/2015 13:25:55" />
     <file relUrl="Configurations/SPNames/SpNames.mymbet.sandbox.xml" publishTime="01/07/2015 16:33:28" />
     <file relUrl="Content/themes/theme16/images/glyphicons-halflings-gray-lighter.png" publishTime="08/26/2014 10:13:15" />
-    <file relUrl="Configurations/WebConfigs/Web.m8bola.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.m8bola.production.config" publishTime="02/12/2015 13:12:54" />
     <file relUrl="img/Slot/S0022/06.jpg" publishTime="02/09/2015 13:25:53" />
     <file relUrl="img/Slot/S0002/21.jpg" publishTime="02/09/2015 13:25:43" />
     <file relUrl="img/Slot8/S8006/01.jpg" publishTime="02/09/2015 13:25:56" />
@@ -268,7 +268,7 @@
     <file relUrl="Views/Shared/Email/RecoverPassword/RecoverPassword.th-TH.txt" publishTime="08/26/2014 10:13:16" />
     <file relUrl="Content/themes/theme15/images/bg-topLanguage.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot/bak/Taizen_03.jpg" publishTime="02/09/2015 13:25:42" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.aoncash.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.aoncash.uat.config" publishTime="02/12/2015 12:58:13" />
     <file relUrl="Web.config" publishTime="02/12/2015 12:45:40" />
     <file relUrl="Content/themes/theme27/images/bgLanguage-Content.png" publishTime="02/06/2015 13:35:48" />
     <file relUrl="img/Slot/S0010/J.jpg" publishTime="02/09/2015 13:25:49" />
@@ -376,7 +376,7 @@
     <file relUrl="img/Slot/bak/Chess_F.jpg" publishTime="02/09/2015 13:25:42" />
     <file relUrl="img/Slot8/Slot8/S8001/Dragon_05.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="bin/RazorEngine.dll" publishTime="08/26/2014 10:13:18" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.athena000.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.athena000.uat.config" publishTime="02/12/2015 12:58:06" />
     <file relUrl="Content/themes/theme23/images/banner_top.png" publishTime="08/26/2014 10:13:16" />
     <file relUrl="Content/themes/theme26/index.less" publishTime="02/03/2015 11:27:46" />
     <file relUrl="img/Slot/S0024/Line16.png" publishTime="02/09/2015 13:25:54" />
@@ -527,9 +527,9 @@
     <file relUrl="Content/themes/theme13/images/favicon.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Live/B0001/04.jpg" publishTime="02/09/2015 13:25:39" />
     <file relUrl="Configurations/SPNames/SpNames.itcbet.local.xml" publishTime="01/07/2015 16:33:28" />
-    <file relUrl="Configurations/WebConfigs/Web.aoncash.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.aoncash.production.config" publishTime="02/12/2015 13:12:48" />
     <file relUrl="img/Slot/S0008/JourneyWest_W.jpg" publishTime="02/09/2015 13:25:48" />
-    <file relUrl="Configurations/WebConfigs/Web.28bet.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.28bet.production.config" publishTime="02/12/2015 13:12:46" />
     <file relUrl="Form/GenImage/HistoryImage_MultiWheelRoulette.aspx.cs" publishTime="02/09/2015 13:25:38" />
     <file relUrl="img/Live/B0001/49.jpg" publishTime="02/09/2015 13:25:39" />
     <file relUrl="Content/themes/theme1/images/firefox.jpg" publishTime="08/26/2014 10:13:15" />
@@ -642,7 +642,7 @@
     <file relUrl="Content/themes/theme19/images/tab_topbg.gif" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/MultiWheelRoulette/0.jpg" publishTime="02/09/2015 13:25:40" />
     <file relUrl="Content/themes/theme7/images/favicon.jpg" publishTime="08/26/2014 10:13:16" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.mgm88.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.mgm88.production.config" publishTime="02/12/2015 12:58:28" />
     <file relUrl="img/Slot/S0023/08.jpg" publishTime="02/09/2015 13:25:53" />
     <file relUrl="Content/themes/theme2/images/bg-contentLanguage.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Roulette/R31.jpg" publishTime="02/09/2015 13:25:41" />
@@ -650,7 +650,7 @@
     <file relUrl="img/Slot/S0017/F.jpg" publishTime="02/09/2015 13:25:52" />
     <file relUrl="Content/themes/theme14/images/bgTableHeader.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="Content/themes/theme15/images/link_14x14.png" publishTime="08/26/2014 10:13:15" />
-    <file relUrl="Configurations/WebConfigs/Web.yhy1980.uat.config" publishTime="02/06/2015 13:35:48" />
+    <file relUrl="Configurations/WebConfigs/Web.yhy1980.uat.config" publishTime="02/12/2015 13:13:03" />
     <file relUrl="img/Slot/S0009/Line16.png" publishTime="02/09/2015 13:25:48" />
     <file relUrl="Content/themes/base/minified/jquery.ui.autocomplete.min.css" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot8/Slot8/S8004/04.jpg" publishTime="02/09/2015 13:25:56" />
@@ -665,7 +665,7 @@
     <file relUrl="img/Poker2/C9.jpg" publishTime="02/09/2015 13:25:40" />
     <file relUrl="img/Slot/S0010/L.jpg" publishTime="02/09/2015 13:25:49" />
     <file relUrl="img/Slot/S0019/01.jpg" publishTime="02/09/2015 13:25:53" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.q8bola.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.q8bola.local.config" publishTime="02/12/2015 12:58:31" />
     <file relUrl="img/Slot/S0008/Line2.png" publishTime="02/09/2015 13:25:48" />
     <file relUrl="img/Slot/S0005/S8.jpg" publishTime="02/09/2015 13:25:46" />
     <file relUrl="img/Bingo/Ball/42.jpg" publishTime="02/09/2015 13:25:39" />
@@ -720,7 +720,7 @@
     <file relUrl="img/Slot/S0023/Line8.png" publishTime="02/09/2015 13:25:53" />
     <file relUrl="img/Slot/S0003/Chess_W.jpg" publishTime="02/09/2015 13:25:43" />
     <file relUrl="img/Slot8/S8006/06.jpg" publishTime="02/09/2015 13:25:56" />
-    <file relUrl="Configurations/WebConfigs/Web.bwinning.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.bwinning.local.config" publishTime="02/12/2015 13:12:49" />
     <file relUrl="img/Slot/S0009/Winter_N.jpg" publishTime="02/09/2015 13:25:48" />
     <file relUrl="Content/themes/theme1/images/arrUpDown.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="Content/themes/theme27/variables.less" publishTime="02/06/2015 13:35:49" />
@@ -730,7 +730,7 @@
     <file relUrl="Content/themes/theme23/images/glyphicons-halflings-gray-lighter.png" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Slot8/S8006/B_02.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="img/Slot/S0001/Taizen_M.jpg" publishTime="02/09/2015 13:25:43" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.itcbet.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.itcbet.uat.config" publishTime="02/12/2015 12:58:23" />
     <file relUrl="Content/themes/theme24/images/sprite.png" publishTime="08/26/2014 10:13:16" />
     <file relUrl="Content/themes/theme20/images/emailBanner.jpg" publishTime="08/26/2014 10:13:16" />
     <file relUrl="Content/themes/theme22/images/bg_header03.jpg" publishTime="08/26/2014 10:13:16" />
@@ -787,15 +787,15 @@
     <file relUrl="Content/themes/theme9/images/signup.png" publishTime="08/26/2014 10:13:16" />
     <file relUrl="Content/themes/theme17/images/note.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot/S0018/A.jpg" publishTime="02/09/2015 13:25:53" />
-    <file relUrl="Configurations/WebConfigs/Web.aoncash.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.aoncash.uat.config" publishTime="02/12/2015 13:12:48" />
     <file relUrl="Scripts/libraries/cryptoJS.js" publishTime="01/07/2015 16:33:28" />
     <file relUrl="bin/HandHistoryLibrary.dll" publishTime="02/06/2015 13:35:49" />
     <file relUrl="Content/themes/theme17/images/bg_footer.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="Content/betlist/images/note.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot/S0005/S4.jpg" publishTime="02/09/2015 13:25:46" />
     <file relUrl="img/Slot8/S8004/09.jpg" publishTime="02/09/2015 13:25:56" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.be7.local.config" publishTime="01/07/2015 16:33:28" />
-    <file relUrl="Configurations/WebConfigs/Web.hbobet.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.be7.local.config" publishTime="02/12/2015 12:58:15" />
+    <file relUrl="Configurations/WebConfigs/Web.hbobet.uat.config" publishTime="02/12/2015 13:12:51" />
     <file relUrl="img/Slot/bak/Taizen_C.jpg" publishTime="02/09/2015 13:25:42" />
     <file relUrl="Content/themes/theme22/images/error_icons.png" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Slot/S0023/Line13.png" publishTime="02/09/2015 13:25:53" />
@@ -900,7 +900,7 @@
     <file relUrl="Content/themes/base/minified/jquery.ui.dialog.min.css" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot/S0017/Line12.png" publishTime="02/09/2015 13:25:52" />
     <file relUrl="img/Slot8/S8006/B_03.jpg" publishTime="02/09/2015 13:25:56" />
-    <file relUrl="Configurations/WebConfigs/Web.royalebet.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.royalebet.production.config" publishTime="02/12/2015 13:12:58" />
     <file relUrl="img/Slot8/Slot8/S8005/01.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="img/Slot/S0022/blank.jpg" publishTime="02/09/2015 13:25:53" />
     <file relUrl="img/PokerWheel/D3.jpg" publishTime="02/09/2015 13:25:40" />
@@ -911,7 +911,7 @@
     <file relUrl="img/Slot/S0014/Line11.png" publishTime="02/09/2015 13:25:51" />
     <file relUrl="Content/themes/theme11/images/emailBg.jpg" publishTime="08/26/2014 10:13:15" />
     <file relUrl="Configurations/AppSettings/Web.AppSettings.nbcbet.local.config" publishTime="02/03/2015 11:27:46" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.athena000.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.athena000.local.config" publishTime="02/12/2015 12:58:05" />
     <file relUrl="Content/bootstrap/less/tests/css-tests.html" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot/bak/Line2.png" publishTime="02/09/2015 13:25:42" />
     <file relUrl="App_Data/Fanex.Result/OtherSport.xls" publishTime="08/26/2014 10:13:15" />
@@ -1049,7 +1049,7 @@
     <file relUrl="img/Slot/S0005/Fruit_B_05.jpg" publishTime="02/09/2015 13:25:46" />
     <file relUrl="img/Slot/S0005/H3.jpg" publishTime="02/09/2015 13:25:46" />
     <file relUrl="img/Bingo/Ball/50.jpg" publishTime="02/09/2015 13:25:39" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.bwinning.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.bwinning.uat.config" publishTime="02/12/2015 12:58:17" />
     <file relUrl="img/Slot/S0005/Fruit_02_03.jpg" publishTime="02/09/2015 13:25:45" />
     <file relUrl="Content/themes/theme22/images/lastGoal.gif" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/MultiWheelRoulette/19.jpg" publishTime="02/09/2015 13:25:40" />
@@ -1131,7 +1131,7 @@
     <file relUrl="img/Slot/S0003/Payline_old/Line11.png" publishTime="02/09/2015 13:25:44" />
     <file relUrl="img/Poker/CK.jpg" publishTime="02/09/2015 13:25:40" />
     <file relUrl="img/Slot/S0003/ChessBonus_05.jpg" publishTime="02/09/2015 13:25:43" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.allbetclubs.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.allbetclubs.production.config" publishTime="02/12/2015 12:58:12" />
     <file relUrl="Views/Shared/Layout/Layout3/_Layout_Notify.cshtml" publishTime="01/07/2015 16:33:29" />
     <file relUrl="img/Slot/S0031/T.jpg" publishTime="02/09/2015 13:25:54" />
     <file relUrl="img/PokerWheel/CJ.jpg" publishTime="02/09/2015 13:25:40" />
@@ -1166,7 +1166,7 @@
     <file relUrl="Content/themes/theme13/images/ui-icons_454545_256x240.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot/S0005/Fruit_B_09.jpg" publishTime="02/09/2015 13:25:46" />
     <file relUrl="img/Slot/S0007/old image backup/40x40/FiveFox_W1.jpg" publishTime="02/09/2015 13:25:47" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.mymbet.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.mymbet.production.config" publishTime="02/12/2015 12:58:30" />
     <file relUrl="img/Slot/S0018/M.jpg" publishTime="02/09/2015 13:25:53" />
     <file relUrl="img/Slot/S0015/Line11.png" publishTime="02/09/2015 13:25:51" />
     <file relUrl="Configurations/WebConfigs/Web.livebet365.local.config" publishTime="01/07/2015 16:33:28" />
@@ -1204,19 +1204,19 @@
     <file relUrl="Content/themes/theme25/variables.less" publishTime="08/26/2014 10:13:16" />
     <file relUrl="Content/themes/theme23/images/bgLanguage.png" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Poker2/H1.jpg" publishTime="02/09/2015 13:25:40" />
-    <file relUrl="Configurations/WebConfigs/Web.yhy1980.local.config" publishTime="02/06/2015 13:35:48" />
+    <file relUrl="Configurations/WebConfigs/Web.yhy1980.local.config" publishTime="02/12/2015 13:13:02" />
     <file relUrl="img/Slot/S0024/Line7.png" publishTime="02/09/2015 13:25:54" />
-    <file relUrl="Configurations/WebConfigs/Web.be7.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.be7.production.config" publishTime="02/12/2015 13:12:49" />
     <file relUrl="bin/BundleTransformer.Core.dll" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Scratch/RAN.jpg" publishTime="02/09/2015 13:25:41" />
     <file relUrl="img/Slot/bak/Line3.png" publishTime="02/09/2015 13:25:42" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.aoncash.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.aoncash.production.config" publishTime="02/12/2015 12:58:14" />
     <file relUrl="Content/themes/theme20/images/bg_footer.jpg" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Scratch/20.jpg" publishTime="02/09/2015 13:25:41" />
     <file relUrl="img/Slot/bak/Chess_S.jpg" publishTime="02/09/2015 13:25:42" />
     <file relUrl="img/Roulette/R29.jpg" publishTime="02/09/2015 13:25:41" />
-    <file relUrl="Configurations/WebConfigs/Web.athena000.local.config" publishTime="01/07/2015 16:33:28" />
-    <file relUrl="Configurations/WebConfigs/Web.thbet.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.athena000.local.config" publishTime="02/12/2015 13:12:44" />
+    <file relUrl="Configurations/WebConfigs/Web.thbet.local.config" publishTime="02/12/2015 13:12:59" />
     <file relUrl="img/Slot/S0018/B1.jpg" publishTime="02/09/2015 13:25:53" />
     <file relUrl="Content/themes/theme23/images/bg_footer.jpg" publishTime="08/26/2014 10:13:16" />
     <file relUrl="Configurations/AppSettings/Web.AppSettings.idlivebet365.local.config" publishTime="01/07/2015 16:33:28" />
@@ -1225,7 +1225,7 @@
     <file relUrl="img/Slot8/Slot8/S8001/Line1.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.livebet365kiosk.local.config" publishTime="01/07/2015 16:33:28" />
     <file relUrl="img/Slot/S0031/07.jpg" publishTime="02/09/2015 13:25:54" />
-    <file relUrl="Configurations/WebConfigs/Web.allbetclubs.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.allbetclubs.local.config" publishTime="02/12/2015 13:12:46" />
     <file relUrl="Content/themes/theme12/images/bgMainMenu_02.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Scratch/RH005/1.jpg" publishTime="02/09/2015 13:25:41" />
     <file relUrl="img/Slot/S0024/N.jpg" publishTime="02/09/2015 13:25:54" />
@@ -1249,7 +1249,7 @@
     <file relUrl="Content/themes/theme5/variables.less" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Slot/S0011/Z.jpg" publishTime="02/09/2015 13:25:50" />
     <file relUrl="img/Slot/S0026/01.jpg" publishTime="02/09/2015 13:25:54" />
-    <file relUrl="Configurations/WebConfigs/Web.wawabet.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.wawabet.production.config" publishTime="02/12/2015 13:13:00" />
     <file relUrl="Content/themes/theme21/mixins.less" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Poker/D2.jpg" publishTime="02/09/2015 13:25:40" />
     <file relUrl="img/Live/B0001/64.jpg" publishTime="02/09/2015 13:25:39" />
@@ -1288,7 +1288,7 @@
     <file relUrl="Configurations/AppSettings/Web.AppSettings.winner99.uat.config" publishTime="01/07/2015 16:33:28" />
     <file relUrl="img/Slot/S0007/FiveFox_O.jpg" publishTime="02/09/2015 13:25:47" />
     <file relUrl="img/PokerWheel/DQ.jpg" publishTime="02/09/2015 13:25:40" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.itcbet.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.itcbet.local.config" publishTime="02/12/2015 12:58:22" />
     <file relUrl="Configurations/WebConfigs/Web.livebet365kiosk.uat.config" publishTime="01/07/2015 16:33:28" />
     <file relUrl="Content/themes/theme3/images/icon-lock.png" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Slot/S0007/Line20.png" publishTime="02/09/2015 13:25:47" />
@@ -1330,7 +1330,7 @@
     <file relUrl="img/Slot/S0026/Line14.png" publishTime="02/09/2015 13:25:54" />
     <file relUrl="Content/themes/theme3/images/bg-topAfterLoginMenu.png" publishTime="08/26/2014 10:13:16" />
     <file relUrl="Content/themes/theme25/images/glyphicons-halflings.png" publishTime="08/26/2014 10:13:16" />
-    <file relUrl="Configurations/WebConfigs/Web.mymbet.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.mymbet.production.config" publishTime="02/12/2015 13:12:57" />
     <file relUrl="Content/themes/theme25/images/banner.en-US.jpg" publishTime="08/26/2014 10:13:16" />
     <file relUrl="Content/themes/theme25/images/bghotNewsContent.png" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Slot8/Slot8/S8004/Line5.jpg" publishTime="02/09/2015 13:25:56" />
@@ -1352,7 +1352,7 @@
     <file relUrl="img/Slot/S0017/B1.jpg" publishTime="02/09/2015 13:25:52" />
     <file relUrl="img/Slot/S0009/Line3.png" publishTime="02/09/2015 13:25:48" />
     <file relUrl="img/Scratch/RH007/10.jpg" publishTime="02/09/2015 13:25:41" />
-    <file relUrl="Configurations/WebConfigs/Web.winner99.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.winner99.uat.config" publishTime="02/12/2015 13:13:01" />
     <file relUrl="img/Slot/S0003/Chess_06.jpg" publishTime="02/09/2015 13:25:43" />
     <file relUrl="Content/betlist/images/link_16x16.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot/S0005/Fruit_08.jpg" publishTime="02/09/2015 13:25:46" />
@@ -1366,12 +1366,12 @@
     <file relUrl="Form/GenHistoryImg.aspx" publishTime="02/09/2015 13:25:38" />
     <file relUrl="img/Slot/S0007/old image backup/20x20/FiveFox_P.jpg" publishTime="02/09/2015 13:25:47" />
     <file relUrl="img/Roulette/R27.jpg" publishTime="02/09/2015 13:25:41" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.allbetclubs.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.allbetclubs.local.config" publishTime="02/12/2015 12:58:11" />
     <file relUrl="Content/themes/theme22/images/bg_center2.jpg" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Slot3/S0013/Line3.png" publishTime="02/09/2015 13:25:55" />
     <file relUrl="img/Slot8/Slot8/S8001/02.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="img/Scratch/RH005/0.jpg" publishTime="02/09/2015 13:25:41" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.mgm88.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.mgm88.local.config" publishTime="02/12/2015 12:58:27" />
     <file relUrl="img/MultiWheelRoulette/20.jpg" publishTime="02/09/2015 13:25:40" />
     <file relUrl="img/Slot/Line24.png" publishTime="02/09/2015 13:25:42" />
     <file relUrl="App_Data/Fanex.Result.Resource/th-TH.xml" publishTime="01/07/2015 16:33:28" />
@@ -1399,7 +1399,7 @@
     <file relUrl="img/Slot/S0009/Line14.png" publishTime="02/09/2015 13:25:48" />
     <file relUrl="img/Bingo/Ball/43.jpg" publishTime="02/09/2015 13:25:39" />
     <file relUrl="img/Slot/S0010/06.jpg" publishTime="02/09/2015 13:25:49" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.q8bola.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.q8bola.uat.config" publishTime="02/12/2015 12:58:32" />
     <file relUrl="img/Slot/S0012/06.jpg" publishTime="02/09/2015 13:25:50" />
     <file relUrl="img/Slot/S0024/E.jpg" publishTime="02/09/2015 13:25:53" />
     <file relUrl="Configurations/SPNames/SpNames.aoncash.production.xml" publishTime="01/07/2015 16:33:28" />
@@ -1426,22 +1426,22 @@
     <file relUrl="bin/Nini.dll" publishTime="02/06/2015 13:35:49" />
     <file relUrl="img/Slot/S0004/God_W1.jpg" publishTime="02/09/2015 13:25:45" />
     <file relUrl="img/Slot/bak/Taizen_F.jpg" publishTime="02/09/2015 13:25:42" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.mymbet.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.mymbet.local.config" publishTime="02/12/2015 12:58:29" />
     <file relUrl="img/Slot8/Slot8/S8004/B_08.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="img/Slot8/S8003/blank.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="App_Data/Fanex.Result/Hockey.xls" publishTime="08/26/2014 10:13:15" />
     <file relUrl="Content/themes/theme18/images/help.txt" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot/S0004/Line10.png" publishTime="02/09/2015 13:25:45" />
     <file relUrl="Content/themes/theme19/images/header_gradient.png" publishTime="02/12/2015 10:31:02" />
-    <file relUrl="Configurations/WebConfigs/Web.goobet.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.goobet.production.config" publishTime="02/12/2015 13:12:45" />
     <file relUrl="img/Mahjong/C5.jpg" publishTime="02/09/2015 13:25:39" />
     <file relUrl="img/Slot8/Slot8/S8006/MamakCorner_B1.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="img/Slot8/Slot8/S8004/05.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="Content/bootstrap/js/bootstrap-modal.js" publishTime="08/26/2014 10:13:15" />
-    <file relUrl="Configurations/WebConfigs/Web.q8bola.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.q8bola.uat.config" publishTime="02/12/2015 13:12:57" />
     <file relUrl="Content/themes/base/minified/jquery.ui.slider.min.css" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Live/B0001/Pattern/0.jpg" publishTime="02/09/2015 13:25:39" />
-    <file relUrl="Configurations/WebConfigs/Web.mymbet.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.mymbet.local.config" publishTime="02/12/2015 13:12:56" />
     <file relUrl="img/Scratch/RH013/10.jpg" publishTime="02/09/2015 13:25:42" />
     <file relUrl="Content/themes/theme22/variables.less" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Slot/S0024/P.jpg" publishTime="02/09/2015 13:25:54" />
@@ -1549,7 +1549,7 @@
     <file relUrl="Content/themes/theme1/images/fThai.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot8/Slot8/S8006/MamakCorner_02.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="img/Slot/S0012/11.jpg" publishTime="02/09/2015 13:25:50" />
-    <file relUrl="Configurations/WebConfigs/Web.goobet.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.goobet.uat.config" publishTime="02/12/2015 13:12:45" />
     <file relUrl="img/Slot/S0023/Line23.png" publishTime="02/09/2015 13:25:53" />
     <file relUrl="Content/themes/theme17/images/banner.en-US.jpg" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot/S0012/07.jpg" publishTime="02/09/2015 13:25:50" />
@@ -1606,7 +1606,7 @@
     <file relUrl="Content/themes/theme5/images/tab_topbg.gif" publishTime="08/26/2014 10:13:16" />
     <file relUrl="Content/themes/theme24/images/favicon.jpg" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Slot/S0006/Classic_B_05.jpg" publishTime="02/09/2015 13:25:46" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.i668bet.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.i668bet.local.config" publishTime="02/12/2015 12:58:20" />
     <file relUrl="img/Slot/S0011/12.jpg" publishTime="02/09/2015 13:25:49" />
     <file relUrl="img/Slot/S0025/L.jpg" publishTime="02/09/2015 13:25:54" />
     <file relUrl="Content/themes/theme6/images/bghotNewsContent.png" publishTime="08/26/2014 10:13:16" />
@@ -1733,7 +1733,7 @@
     <file relUrl="Configurations/WebConfigs/Web.winner99.sandbox.config" publishTime="01/07/2015 16:33:28" />
     <file relUrl="Content/themes/theme1/images/bgMain.jpg" publishTime="08/26/2014 10:13:15" />
     <file relUrl="Views/Shared/Home/Original_Index.cshtml" publishTime="01/07/2015 16:33:29" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.q8bola.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.q8bola.production.config" publishTime="02/12/2015 12:58:32" />
     <file relUrl="img/Slot/S0022/Line17.png" publishTime="02/09/2015 13:25:53" />
     <file relUrl="Content/themes/theme20/images/error_icons.png" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Scratch/RH012/200.jpg" publishTime="02/09/2015 13:25:42" />
@@ -1744,7 +1744,7 @@
     <file relUrl="img/Slot/S0002/S11.jpg" publishTime="02/09/2015 13:25:43" />
     <file relUrl="Content/themes/theme15/images/error_icons.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/PokerWheel/D2.jpg" publishTime="02/09/2015 13:25:40" />
-    <file relUrl="Configurations/WebConfigs/Web.m8bola.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.m8bola.local.config" publishTime="02/12/2015 13:12:53" />
     <file relUrl="img/Slot/S0025/C.jpg" publishTime="02/09/2015 13:25:54" />
     <file relUrl="Configurations/SPNames/SpNames.wawabet.production.xml" publishTime="01/07/2015 16:33:28" />
     <file relUrl="img/Slot/S0017/08.jpg" publishTime="02/09/2015 13:25:52" />
@@ -1753,7 +1753,7 @@
     <file relUrl="Content/themes/theme22/images/bar-loader.gif" publishTime="08/26/2014 10:13:16" />
     <file relUrl="Configurations/AppSettings/Web.AppSettings.mgm88.uat.config" publishTime="01/07/2015 16:33:28" />
     <file relUrl="img/Live/B0001/07.jpg" publishTime="02/09/2015 13:25:39" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.royalebet.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.royalebet.local.config" publishTime="02/12/2015 12:58:33" />
     <file relUrl="img/Slot/S0016/Line24.png" publishTime="02/09/2015 13:25:52" />
     <file relUrl="Views/Shared/_Layout.cshtml" publishTime="01/07/2015 16:33:29" />
     <file relUrl="img/Slot3/S0013/Champions_06.jpg" publishTime="02/09/2015 13:25:55" />
@@ -1784,7 +1784,7 @@
     <file relUrl="img/Slot/S0019/A.jpg" publishTime="02/09/2015 13:25:53" />
     <file relUrl="img/Slot/S0002/36.jpg" publishTime="02/09/2015 13:25:43" />
     <file relUrl="img/Slot/S0008/JourneyWest_S1.jpg" publishTime="02/09/2015 13:25:48" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.thbet.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.thbet.uat.config" publishTime="02/12/2015 12:58:35" />
     <file relUrl="Content/themes/theme13/images/up.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="Content/themes/theme1/images/maintenance.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot/S0019/Y.jpg" publishTime="02/09/2015 13:25:53" />
@@ -1832,7 +1832,7 @@
     <file relUrl="Content/themes/theme26/images/help.txt" publishTime="01/07/2015 16:33:28" />
     <file relUrl="Content/themes/theme12/images/bghotNewsContent.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/PokerWheel/CK.jpg" publishTime="02/09/2015 13:25:40" />
-    <file relUrl="Configurations/WebConfigs/Web.yhy1980.production.config" publishTime="02/06/2015 13:35:48" />
+    <file relUrl="Configurations/WebConfigs/Web.yhy1980.production.config" publishTime="02/12/2015 13:13:03" />
     <file relUrl="Content/themes/theme22/images/banner.vi-VN.jpg" publishTime="08/26/2014 10:13:16" />
     <file relUrl="Views/Shared/User/ForgetPassword.cshtml" publishTime="01/07/2015 16:33:29" />
     <file relUrl="img/Slot8/Slot8/S8005/Line6.jpg" publishTime="02/09/2015 13:25:56" />
@@ -1848,7 +1848,7 @@
     <file relUrl="img/Slot/S0003/Line23.png" publishTime="02/09/2015 13:25:44" />
     <file relUrl="img/MiniRoulette/1.jpg" publishTime="02/09/2015 13:25:40" />
     <file relUrl="img/Slot/S0024/B.jpg" publishTime="02/09/2015 13:25:53" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.yhy1980.production.config" publishTime="02/06/2015 13:35:48" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.yhy1980.production.config" publishTime="02/12/2015 12:58:43" />
     <file relUrl="img/Slot/S0022/01.jpg" publishTime="02/09/2015 13:25:53" />
     <file relUrl="img/Slot8/S8006/MamakCorner_05.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="Content/bootstrap/js/bootstrap-typeahead.js" publishTime="08/26/2014 10:13:15" />
@@ -1909,7 +1909,7 @@
     <file relUrl="Content/bootstrap/less/modals.less" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot/S0025/M.jpg" publishTime="02/09/2015 13:25:54" />
     <file relUrl="img/Slot8/Slot8/S8006/03.jpg" publishTime="02/09/2015 13:25:56" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.bwinning.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.bwinning.local.config" publishTime="02/12/2015 12:58:16" />
     <file relUrl="img/Slot/bak/Taizen_09.jpg" publishTime="02/09/2015 13:25:42" />
     <file relUrl="Content/themes/theme18/images/glyphicons-halflings-gray-lighter.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Live/B0001/09.jpg" publishTime="02/09/2015 13:25:39" />
@@ -2012,7 +2012,7 @@
     <file relUrl="Content/bootstrap/less/tests/navbar-static-top.html" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot/S0023/03.jpg" publishTime="02/09/2015 13:25:53" />
     <file relUrl="img/Live/B0001/41.jpg" publishTime="02/09/2015 13:25:39" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.macaubet.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.macaubet.uat.config" publishTime="02/12/2015 12:58:26" />
     <file relUrl="Configurations/AppSettings/Web.AppSettings.i668bet.production.config" publishTime="01/07/2015 16:33:28" />
     <file relUrl="img/Slot/S0008/Line14.png" publishTime="02/09/2015 13:25:48" />
     <file relUrl="img/Slot/S0001/Taizen_P.jpg" publishTime="02/09/2015 13:25:43" />
@@ -2131,12 +2131,12 @@
     <file relUrl="Views/Shared/Account/TextBox.cshtml" publishTime="01/07/2015 16:33:29" />
     <file relUrl="img/Slot/bak/Taizen_A.jpg" publishTime="02/09/2015 13:25:42" />
     <file relUrl="img/Slot/bak/Chess_E1.jpg" publishTime="02/09/2015 13:25:42" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.28bet.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.28bet.local.config" publishTime="02/12/2015 12:58:09" />
     <file relUrl="img/Slot/S0015/F.jpg" publishTime="02/09/2015 13:25:51" />
     <file relUrl="Views/Shared/Email/RecoverPassword/RecoverPassword.zh-CN.txt" publishTime="08/26/2014 10:13:16" />
     <file relUrl="Content/themes/theme8/images/glyphicons-halflings-gray.png" publishTime="08/26/2014 10:13:16" />
     <file relUrl="Content/themes/base/jquery.ui.base.css" publishTime="08/26/2014 10:13:15" />
-    <file relUrl="Configurations/WebConfigs/Web.be7.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.be7.local.config" publishTime="02/12/2015 13:12:48" />
     <file relUrl="img/Slot/bak/Line1.png" publishTime="02/09/2015 13:25:42" />
     <file relUrl="img/Slot/S0024/K.jpg" publishTime="02/09/2015 13:25:53" />
     <file relUrl="img/Slot/S0009/Winter_I.jpg" publishTime="02/09/2015 13:25:48" />
@@ -2149,9 +2149,9 @@
     <file relUrl="img/Slot/S0012/H.jpg" publishTime="02/09/2015 13:25:50" />
     <file relUrl="img/Scratch/RH008/1.jpg" publishTime="02/09/2015 13:25:41" />
     <file relUrl="img/Slot/S0005/S2.jpg" publishTime="02/09/2015 13:25:46" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.goobet.production.config" publishTime="01/07/2015 16:33:28" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.wawabet.production.config" publishTime="01/07/2015 16:33:28" />
-    <file relUrl="Configurations/WebConfigs/Web.itcbet.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.goobet.production.config" publishTime="02/12/2015 12:58:08" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.wawabet.production.config" publishTime="02/12/2015 12:58:38" />
+    <file relUrl="Configurations/WebConfigs/Web.itcbet.production.config" publishTime="02/12/2015 13:12:53" />
     <file relUrl="img/Slot/S0023/L.jpg" publishTime="02/09/2015 13:25:53" />
     <file relUrl="Content/themes/theme15/images/in_top.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot/S0015/Line23.png" publishTime="02/09/2015 13:25:51" />
@@ -2185,7 +2185,7 @@
     <file relUrl="img/Slot/S0004/Line16.png" publishTime="02/09/2015 13:25:45" />
     <file relUrl="img/Slot/S0008/JourneyWestKidnapping_02.jpg" publishTime="02/09/2015 13:25:47" />
     <file relUrl="Content/themes/theme7/images/header_gradient.png" publishTime="08/26/2014 10:13:16" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.hbobet.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.hbobet.local.config" publishTime="02/12/2015 12:58:18" />
     <file relUrl="img/Slot/S0012/E.jpg" publishTime="02/09/2015 13:25:50" />
     <file relUrl="img/Slot/S0005/HK.jpg" publishTime="02/09/2015 13:25:46" />
     <file relUrl="img/Slot/S0007/Line1.png" publishTime="02/09/2015 13:25:47" />
@@ -2206,7 +2206,7 @@
     <file relUrl="Content/bootstrap/less/tests/css-tests.css" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot/S0012/Line25.png" publishTime="02/09/2015 13:25:50" />
     <file relUrl="Content/betlist/global.content.css" publishTime="08/26/2014 10:13:15" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.nbcbet.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.nbcbet.uat.config" publishTime="02/12/2015 12:58:41" />
     <file relUrl="img/MiniRoulette/10.jpg" publishTime="02/09/2015 13:25:40" />
     <file relUrl="img/Slot/S0031/Line14.png" publishTime="02/09/2015 13:25:54" />
     <file relUrl="Content/themes/theme23/images/bg_center2.jpg" publishTime="08/26/2014 10:13:16" />
@@ -2244,7 +2244,7 @@
     <file relUrl="img/Bingo/Ball/11.jpg" publishTime="02/09/2015 13:25:39" />
     <file relUrl="img/Slot8/S8006/B_07.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="img/PokerWheel/SJ.jpg" publishTime="02/09/2015 13:25:41" />
-    <file relUrl="Configurations/WebConfigs/Web.yhy1980.master.config" publishTime="02/06/2015 13:35:48" />
+    <file relUrl="Configurations/WebConfigs/Web.yhy1980.master.config" publishTime="02/12/2015 13:13:03" />
     <file relUrl="img/Slot/S0018/03.jpg" publishTime="02/09/2015 13:25:52" />
     <file relUrl="Content/themes/theme21/variables.less" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Slot/S0004/Line8.png" publishTime="02/09/2015 13:25:45" />
@@ -2257,7 +2257,7 @@
     <file relUrl="Content/themes/theme2/images/bgMainMenu_02.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Poker2/H4.jpg" publishTime="02/09/2015 13:25:40" />
     <file relUrl="img/Slot/S0016/Line12.png" publishTime="02/09/2015 13:25:52" />
-    <file relUrl="Configurations/WebConfigs/Web.bwinning.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.bwinning.uat.config" publishTime="02/12/2015 13:12:50" />
     <file relUrl="Content/themes/theme20/images/bgMainMenu.png" publishTime="08/26/2014 10:13:16" />
     <file relUrl="Content/betlist/images/plus.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="Content/themes/theme19/images/note.png" publishTime="08/26/2014 10:13:15" />
@@ -2306,7 +2306,7 @@
     <file relUrl="img/Slot/S0017/M.jpg" publishTime="02/09/2015 13:25:52" />
     <file relUrl="img/Poker/S8.jpg" publishTime="02/09/2015 13:25:40" />
     <file relUrl="img/Live/B0001/40.jpg" publishTime="02/09/2015 13:25:39" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.wawabet.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.wawabet.uat.config" publishTime="02/12/2015 12:58:37" />
     <file relUrl="img/Slot/S0003/Payline_old/Line24.png" publishTime="02/09/2015 13:25:44" />
     <file relUrl="img/Slot/Taizen_B.jpg" publishTime="02/09/2015 13:25:54" />
     <file relUrl="img/Slot/S0011/A.jpg" publishTime="02/09/2015 13:25:49" />
@@ -2367,7 +2367,7 @@
     <file relUrl="img/Slot8/Slot8/S8001/07.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="bin/System.Web.Mvc.dll" publishTime="08/26/2014 10:13:17" />
     <file relUrl="img/Slot/S0003/Line1.png" publishTime="02/09/2015 13:25:43" />
-    <file relUrl="Configurations/WebConfigs/Web.nbcbet.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.nbcbet.local.config" publishTime="02/12/2015 13:13:01" />
     <file relUrl="img/Bingo/Ball/39.jpg" publishTime="02/09/2015 13:25:39" />
     <file relUrl="Content/themes/theme26/images/banner.th-TH.jpg" publishTime="01/07/2015 16:33:28" />
     <file relUrl="img/Slot/S0015/Line18.png" publishTime="02/09/2015 13:25:51" />
@@ -2382,7 +2382,7 @@
     <file relUrl="img/Poker2/SQ.jpg" publishTime="02/09/2015 13:25:40" />
     <file relUrl="img/Slot/S0001/Line5.png" publishTime="02/09/2015 13:25:42" />
     <file relUrl="img/Slot8/S8001/Line1.jpg" publishTime="02/09/2015 13:25:56" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.nbcbet.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.nbcbet.local.config" publishTime="02/12/2015 12:58:40" />
     <file relUrl="Views/Shared/Account/RNGCasinoDetail/Group7-2.cshtml" publishTime="01/07/2015 16:33:29" />
     <file relUrl="Content/themes/theme23/images/bgLanguage_Content.png" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Slot/S0019/Line8.png" publishTime="02/09/2015 13:25:53" />
@@ -2520,7 +2520,7 @@
     <file relUrl="Content/themes/theme15/images/loader.gif" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot/S0024/Line6.png" publishTime="02/09/2015 13:25:54" />
     <file relUrl="img/Slot/S0010/I.jpg" publishTime="02/09/2015 13:25:49" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.yhy1980.master.config" publishTime="02/06/2015 13:35:48" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.yhy1980.master.config" publishTime="02/12/2015 12:58:42" />
     <file relUrl="Content/themes/theme21/images/emailBg.jpg" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/MultiWheelRoulette/11.jpg" publishTime="02/09/2015 13:25:40" />
     <file relUrl="Content/themes/theme21/images/bg_header03.jpg" publishTime="08/26/2014 10:13:16" />
@@ -2557,13 +2557,13 @@
     <file relUrl="img/Slot8/S8001/Dragon_B1.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="img/Slot/S0018/PayLine_bak/Line20.png" publishTime="02/09/2015 13:25:53" />
     <file relUrl="Content/bootstrap/js/tests/unit/bootstrap-carousel.js" publishTime="08/26/2014 10:13:15" />
-    <file relUrl="Configurations/WebConfigs/Web.wawabet.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.wawabet.uat.config" publishTime="02/12/2015 13:13:00" />
     <file relUrl="img/Poker2/S8.jpg" publishTime="02/09/2015 13:25:40" />
     <file relUrl="Form/GenImage/HistoryImage_MultiWheelRoulette.aspx" publishTime="02/09/2015 13:25:38" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.28bet.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.28bet.production.config" publishTime="02/12/2015 12:58:10" />
     <file relUrl="img/Slot/S0005/HA.jpg" publishTime="02/09/2015 13:25:46" />
     <file relUrl="img/Slot8/S8003/B_04.jpg" publishTime="02/09/2015 13:25:56" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.yhy1980.uat.config" publishTime="02/06/2015 13:35:48" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.yhy1980.uat.config" publishTime="02/12/2015 12:58:43" />
     <file relUrl="img/Slot/S0024/Line24.png" publishTime="02/09/2015 13:25:54" />
     <file relUrl="bin/Fanex.Affiliate.Resources.pdb" publishTime="02/12/2015 12:42:10" />
     <file relUrl="img/Roulette/R0.jpg" publishTime="02/09/2015 13:25:41" />
@@ -2633,7 +2633,7 @@
     <file relUrl="Content/themes/theme2/images/bg-bottomLanguage.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot/S0014/Line23.png" publishTime="02/09/2015 13:25:51" />
     <file relUrl="Content/themes/theme4/images/banner.ko-KR.jpg" publishTime="08/26/2014 10:13:16" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.m8bola.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.m8bola.local.config" publishTime="02/12/2015 12:58:24" />
     <file relUrl="img/Poker2/CK.jpg" publishTime="02/09/2015 13:25:40" />
     <file relUrl="img/Scratch/10.jpg" publishTime="02/09/2015 13:25:41" />
     <file relUrl="Content/themes/theme12/images/emailBg.jpg" publishTime="08/26/2014 10:13:15" />
@@ -2658,7 +2658,7 @@
     <file relUrl="img/Slot8/Slot8/S8005/03.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="Configurations/AppSettings/Web.AppSettings.mymbet.sandbox.config" publishTime="01/07/2015 16:33:28" />
     <file relUrl="Content/themes/theme18/images/bg-topLanguage.png" publishTime="08/26/2014 10:13:15" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.royalebet.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.royalebet.production.config" publishTime="02/12/2015 12:58:34" />
     <file relUrl="img/Slot/S0015/Line15.png" publishTime="02/09/2015 13:25:51" />
     <file relUrl="Content/themes/theme22/images/undo.png" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Mahjong/C6.jpg" publishTime="02/09/2015 13:25:39" />
@@ -2689,7 +2689,7 @@
     <file relUrl="Configurations/SPNames/SpNames.bwinning.uat.xml" publishTime="01/07/2015 16:33:28" />
     <file relUrl="img/Slot/S0031/D.jpg" publishTime="02/09/2015 13:25:54" />
     <file relUrl="img/Slot/S0005/Fruit_07.jpg" publishTime="02/09/2015 13:25:46" />
-    <file relUrl="Configurations/WebConfigs/Web.royalebet.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.royalebet.local.config" publishTime="02/12/2015 13:12:58" />
     <file relUrl="Content/themes/theme21/images/bgLanguage_Content.png" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Slot/S0004/God_06.jpg" publishTime="02/09/2015 13:25:44" />
     <file relUrl="img/Roulette/R28.jpg" publishTime="02/09/2015 13:25:41" />
@@ -2735,7 +2735,7 @@
     <file relUrl="Form/GenImage/HistoryImage_TattooArt.aspx" publishTime="02/09/2015 13:25:38" />
     <file relUrl="Content/themes/theme1/images/bg_center.jpg" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot8/Slot8/S8003/Line2.jpg" publishTime="02/09/2015 13:25:56" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.hbobet.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.hbobet.production.config" publishTime="02/12/2015 12:58:19" />
     <file relUrl="Content/themes/theme9/images/bgheader.png" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Roulette/R23.jpg" publishTime="02/09/2015 13:25:41" />
     <file relUrl="img/PokerWheel/S3.jpg" publishTime="02/09/2015 13:25:41" />
@@ -2761,7 +2761,7 @@
     <file relUrl="Content/themes/theme5/images/blank.gif" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Slot/S0019/Line10.png" publishTime="02/09/2015 13:25:53" />
     <file relUrl="img/Slot/S0003/Chess_C.jpg" publishTime="02/09/2015 13:25:43" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.bwinning.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.bwinning.production.config" publishTime="02/12/2015 12:58:17" />
     <file relUrl="Configurations/SPNames/SpNames.mgm88.local.xml" publishTime="01/07/2015 16:33:28" />
     <file relUrl="img/Slot/S0010/12.jpg" publishTime="02/09/2015 13:25:49" />
     <file relUrl="Content/themes/theme16/mixins.less" publishTime="08/26/2014 10:13:15" />
@@ -2784,7 +2784,7 @@
     <file relUrl="img/Slot/S0001/Line7.png" publishTime="02/09/2015 13:25:42" />
     <file relUrl="img/Slot/S0015/J.jpg" publishTime="02/09/2015 13:25:51" />
     <file relUrl="img/Slot/S0001/Taizen_10.jpg" publishTime="02/09/2015 13:25:43" />
-    <file relUrl="Configurations/WebConfigs/Web.aoncash.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.aoncash.local.config" publishTime="02/12/2015 13:12:47" />
     <file relUrl="img/Slot/S0007/Line24.png" publishTime="02/09/2015 13:25:47" />
     <file relUrl="img/Slot/S0017/H.jpg" publishTime="02/09/2015 13:25:52" />
     <file relUrl="img/Slot8/S8003/B_07.jpg" publishTime="02/09/2015 13:25:56" />
@@ -2801,7 +2801,7 @@
     <file relUrl="Content/themes/theme27/images/bg-contentLanguage.png" publishTime="02/06/2015 13:35:48" />
     <file relUrl="img/Slot/Line15.png" publishTime="02/09/2015 13:25:42" />
     <file relUrl="img/Slot/S0014/Line22.png" publishTime="02/09/2015 13:25:51" />
-    <file relUrl="Configurations/WebConfigs/Web.nbcbet.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.nbcbet.uat.config" publishTime="02/12/2015 13:13:02" />
     <file relUrl="img/Slot/S0015/E.jpg" publishTime="02/09/2015 13:25:51" />
     <file relUrl="Content/themes/theme16/images/in_top.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="Content/themes/theme17/images/banner.th-TH.jpg" publishTime="08/26/2014 10:13:15" />
@@ -2939,7 +2939,7 @@
     <file relUrl="Views/Shared/Email/PaymentRequest/PaymentRequest.ko-KR.txt" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Slot/S0018/Line25.png" publishTime="02/09/2015 13:25:53" />
     <file relUrl="Content/themes/theme9/mixins.less" publishTime="08/26/2014 10:13:16" />
-    <file relUrl="Configurations/WebConfigs/Web.athena000.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.athena000.production.config" publishTime="02/12/2015 13:12:44" />
     <file relUrl="Configurations/SPNames/SpNames.yhy1980.sandbox.xml" publishTime="02/06/2015 13:35:48" />
     <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.livebet365.local.config" publishTime="01/07/2015 16:33:28" />
     <file relUrl="Configurations/SPNames/SpNames.be7.production.xml" publishTime="01/07/2015 16:33:28" />
@@ -2959,7 +2959,7 @@
     <file relUrl="Content/themes/theme16/images/bg-contentLanguage.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot/bak/Taizen_D.jpg" publishTime="02/09/2015 13:25:42" />
     <file relUrl="img/Slot/S0005/blank.jpg" publishTime="02/09/2015 13:25:45" />
-    <file relUrl="Content/themes/theme19/variables.less" publishTime="08/26/2014 10:13:15" />
+    <file relUrl="Content/themes/theme19/variables.less" publishTime="02/12/2015 13:51:37" />
     <file relUrl="img/Slot8/Slot8/S8004/02.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="img/Slot/S0007/Line3.png" publishTime="02/09/2015 13:25:47" />
     <file relUrl="img/Slot8/S8005/TattooArt_06.jpg" publishTime="02/09/2015 13:25:56" />
@@ -3009,7 +3009,7 @@
     <file relUrl="Content/themes/theme5/mixins.less" publishTime="08/26/2014 10:13:16" />
     <file relUrl="Content/themes/theme12/images/emailBanner.jpg" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot/S0031/Line_bak/Line13.png" publishTime="02/09/2015 13:25:54" />
-    <file relUrl="Configurations/WebConfigs/Web.athena000.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.athena000.uat.config" publishTime="02/12/2015 13:12:44" />
     <file relUrl="bin/ru-ru/BundleTransformer.Core.resources.dll" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Slot8/Slot8/S8005/TattooArt_06.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="img/Slot/S0002/13.jpg" publishTime="02/09/2015 13:25:43" />
@@ -3049,7 +3049,7 @@
     <file relUrl="Content/themes/theme6/images/help.txt" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Slot8/S8003/03.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="Content/themes/theme19/images/glyphicons-halflings-gray.png" publishTime="02/12/2015 10:31:02" />
-    <file relUrl="Configurations/WebConfigs/Web.macaubet.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.macaubet.uat.config" publishTime="02/12/2015 13:12:54" />
     <file relUrl="Content/themes/theme3/images/banner.png" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/PokerWheel/D4.jpg" publishTime="02/09/2015 13:25:40" />
     <file relUrl="Configurations/SPNames/SpNames.hbobet.local.xml" publishTime="01/07/2015 16:33:28" />
@@ -3065,7 +3065,7 @@
     <file relUrl="Content/themes/theme6/images/signup.png" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/PokerWheel/H5.jpg" publishTime="02/09/2015 13:25:40" />
     <file relUrl="Content/themes/base/jquery.ui.menu.css" publishTime="08/26/2014 10:13:15" />
-    <file relUrl="Configurations/WebConfigs/Web.i668bet.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.i668bet.local.config" publishTime="02/12/2015 13:12:51" />
     <file relUrl="img/Poker/SQ.jpg" publishTime="02/09/2015 13:25:40" />
     <file relUrl="img/Slot/S0019/Line11.png" publishTime="02/09/2015 13:25:53" />
     <file relUrl="img/Slot8/Slot8/S8005/02.jpg" publishTime="02/09/2015 13:25:56" />
@@ -3082,9 +3082,9 @@
     <file relUrl="Configurations/AppSettings/Web.AppSettings.yhy1980.uat.config" publishTime="02/06/2015 13:35:48" />
     <file relUrl="img/Slot/S0023/Line19.png" publishTime="02/09/2015 13:25:53" />
     <file relUrl="Content/themes/theme21/images/bg-contentLanguage.png" publishTime="08/26/2014 10:13:16" />
-    <file relUrl="Configurations/WebConfigs/Web.macaubet.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.macaubet.local.config" publishTime="02/12/2015 13:12:54" />
     <file relUrl="Content/themes/theme14/images/loader.gif" publishTime="08/26/2014 10:13:15" />
-    <file relUrl="Configurations/WebConfigs/Web.royalebet.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.royalebet.uat.config" publishTime="02/12/2015 13:12:58" />
     <file relUrl="Views/Shared/Email/PaymentRequest/PaymentRequest.zh-CN.cshtml" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Scratch/RH013/1.jpg" publishTime="02/09/2015 13:25:42" />
     <file relUrl="img/Slot/S0024/Line4.png" publishTime="02/09/2015 13:25:54" />
@@ -3112,7 +3112,7 @@
     <file relUrl="img/Slot8/S8006/Line2.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="Content/bootstrap/js/tests/phantom.js" publishTime="08/26/2014 10:13:15" />
     <file relUrl="Views/Shared/Email/PaymentRequest/PaymentRequest.th-TH.txt" publishTime="08/26/2014 10:13:16" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.yhy1980.local.config" publishTime="02/06/2015 13:35:48" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.yhy1980.local.config" publishTime="02/12/2015 12:58:42" />
     <file relUrl="Content/themes/theme3/images/bg-afterLoginMenu.jpg" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Slot/S0022/S1.jpg" publishTime="02/09/2015 13:25:53" />
     <file relUrl="Content/themes/theme3/images/bg-subTitle.png" publishTime="08/26/2014 10:13:16" />
@@ -3203,7 +3203,7 @@
     <file relUrl="img/Slot/S0012/S1.jpg" publishTime="02/09/2015 13:25:50" />
     <file relUrl="img/Slot/S0010/Line6.png" publishTime="02/09/2015 13:25:49" />
     <file relUrl="img/MiniRoulette/8.jpg" publishTime="02/09/2015 13:25:40" />
-    <file relUrl="Configurations/WebConfigs/Web.allbetclubs.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.allbetclubs.uat.config" publishTime="02/12/2015 13:12:47" />
     <file relUrl="Content/themes/theme20/images/bgLanguage.png" publishTime="08/26/2014 10:13:16" />
     <file relUrl="Configurations/AppSettings/Web.AppSettings.livebet365kiosk.local.config" publishTime="01/07/2015 16:33:28" />
     <file relUrl="Content/themes/theme19/images/bghotNewsContent.png" publishTime="02/12/2015 10:31:02" />
@@ -3294,7 +3294,7 @@
     <file relUrl="Configurations/SPNames/SpNames.bwinning.sandbox.xml" publishTime="01/07/2015 16:33:28" />
     <file relUrl="img/Bingo/Ball/62.jpg" publishTime="02/09/2015 13:25:39" />
     <file relUrl="img/Slot8/Slot8/S8004/B_02.jpg" publishTime="02/09/2015 13:25:56" />
-    <file relUrl="Configurations/WebConfigs/Web.wawabet.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.wawabet.local.config" publishTime="02/12/2015 13:13:00" />
     <file relUrl="Content/themes/theme1/images/ie.jpg" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot/S0005/S3.jpg" publishTime="02/09/2015 13:25:46" />
     <file relUrl="img/Slot/S0014/Line18.png" publishTime="02/09/2015 13:25:51" />
@@ -3306,7 +3306,7 @@
     <file relUrl="img/Slot/S0011/11.jpg" publishTime="02/09/2015 13:25:49" />
     <file relUrl="img/Bingo/Ball/24.jpg" publishTime="02/09/2015 13:25:39" />
     <file relUrl="Scripts/site/referrersstatistics.js" publishTime="01/07/2015 16:33:29" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.be7.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.be7.uat.config" publishTime="02/12/2015 12:58:15" />
     <file relUrl="Views/itcbet/Home/Index.th-TH.cshtml" publishTime="12/03/2014 10:21:12" />
     <file relUrl="img/Slot8/RH001/3.jpg" publishTime="02/09/2015 13:25:55" />
     <file relUrl="Scripts/libraries/jquery.validate.unobtrusive.js" publishTime="08/26/2014 10:13:16" />
@@ -3350,7 +3350,7 @@
     <file relUrl="img/Scratch/RH001/50.jpg" publishTime="02/09/2015 13:25:41" />
     <file relUrl="Content/themes/theme27/index.less" publishTime="02/06/2015 13:35:49" />
     <file relUrl="Configurations/SPNames/SpNames.q8bola.uat.xml" publishTime="01/07/2015 16:33:28" />
-    <file relUrl="Configurations/WebConfigs/Web.q8bola.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.q8bola.production.config" publishTime="02/12/2015 13:12:57" />
     <file relUrl="Content/themes/theme2/images/glyphicons-halflings-gray-lighter.png" publishTime="08/26/2014 10:13:16" />
     <file relUrl="Content/themes/theme11/images/glyphicons-halflings-gray-lighter.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Roulette/R1.jpg" publishTime="02/09/2015 13:25:41" />
@@ -3397,7 +3397,7 @@
     <file relUrl="Views/Shared/Account/CustomerInfoKiosk.cshtml" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Slot/S0025/06.jpg" publishTime="02/09/2015 13:25:54" />
     <file relUrl="Content/themes/theme3/images/icon-IE.png" publishTime="08/26/2014 10:13:16" />
-    <file relUrl="Configurations/WebConfigs/Web.bwinning.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.bwinning.production.config" publishTime="02/12/2015 13:12:50" />
     <file relUrl="img/Slot8/S8001/Dragon_07.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="img/Slot/S0005/Fruit_04_05.jpg" publishTime="02/09/2015 13:25:46" />
     <file relUrl="Views/Shared/Email/RecoverPassword/RecoverPassword.en-US.cshtml" publishTime="08/26/2014 10:13:16" />
@@ -3422,7 +3422,7 @@
     <file relUrl="bin/LiveCasinoLibrary.dll" publishTime="02/04/2015 13:21:14" />
     <file relUrl="Content/themes/theme21/images/banner.vi-VN.jpg" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Slot/Taizen_E.jpg" publishTime="02/09/2015 13:25:54" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.winner99.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.winner99.uat.config" publishTime="02/12/2015 12:58:39" />
     <file relUrl="img/MultiWheelRoulette/1.jpg" publishTime="02/09/2015 13:25:40" />
     <file relUrl="img/Slot/S0015/09.jpg" publishTime="02/09/2015 13:25:51" />
     <file relUrl="img/PokerWheel/CA.jpg" publishTime="02/09/2015 13:25:40" />
@@ -3469,7 +3469,7 @@
     <file relUrl="Configurations/SPNames/SpNames.idlivebet365kiosk.local.xml" publishTime="01/07/2015 16:33:28" />
     <file relUrl="img/Slot8/Slot8/S8001/Dragon_07.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="Content/themes/theme26/images/bgheader.png" publishTime="01/07/2015 16:33:28" />
-    <file relUrl="Configurations/WebConfigs/Web.nbcbet.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.nbcbet.production.config" publishTime="02/12/2015 13:13:02" />
     <file relUrl="Content/bootstrap/js/tests/unit/bootstrap-phantom.js" publishTime="08/26/2014 10:13:15" />
     <file relUrl="bin/NPOI.dll" publishTime="01/07/2015 16:33:34" />
     <file relUrl="img/Slot/S0018/PayLine_bak/Line24.png" publishTime="02/09/2015 13:25:53" />
@@ -3490,7 +3490,7 @@
     <file relUrl="Content/themes/theme1/images/icon04.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot/S0018/Line11.png" publishTime="02/09/2015 13:25:53" />
     <file relUrl="Content/themes/theme15/images/last-goal.gif" publishTime="08/26/2014 10:13:15" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.m8bola.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.m8bola.production.config" publishTime="02/12/2015 12:58:25" />
     <file relUrl="Views/Shared/Email/SignUp/SignUp.id-ID.txt" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/MultiWheelRoulette/30.jpg" publishTime="02/09/2015 13:25:40" />
     <file relUrl="img/Slot/S0031/Line_bak/Line10.png" publishTime="02/09/2015 13:25:54" />
@@ -3525,7 +3525,7 @@
     <file relUrl="Content/themes/theme12/images/sprite.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="Configurations/AppSettings/Web.AppSettings.idlivebet365.sandbox.config" publishTime="01/07/2015 16:33:28" />
     <file relUrl="img/Slot/S0008/JourneyWest_04.jpg" publishTime="02/09/2015 13:25:47" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.winner99.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.winner99.local.config" publishTime="02/12/2015 12:58:38" />
     <file relUrl="img/Slot/bak/Line9.png" publishTime="02/09/2015 13:25:42" />
     <file relUrl="img/Slot8/S8005/F.jpg" publishTime="02/09/2015 13:25:55" />
     <file relUrl="Content/themes/theme18/images/in_top.png" publishTime="08/26/2014 10:13:15" />
@@ -3541,7 +3541,7 @@
     <file relUrl="Content/themes/theme5/images/banner.vi-VN.jpg" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Slot/S0026/Line1.png" publishTime="02/09/2015 13:25:54" />
     <file relUrl="Configurations/AppSettings/Web.AppSettings.wawabet.uat.config" publishTime="01/07/2015 16:33:28" />
-    <file relUrl="Configurations/WebConfigs/Web.mgm88.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.mgm88.production.config" publishTime="02/12/2015 13:12:56" />
     <file relUrl="img/Slot/S0003/Line19.png" publishTime="02/09/2015 13:25:44" />
     <file relUrl="img/Slot/S0018/D.jpg" publishTime="02/09/2015 13:25:53" />
     <file relUrl="img/Scratch/RH013/100.jpg" publishTime="02/09/2015 13:25:42" />
@@ -3577,13 +3577,13 @@
     <file relUrl="Content/themes/theme27/images/sprite.png" publishTime="02/06/2015 13:35:49" />
     <file relUrl="Content/themes/theme16/index.less" publishTime="01/07/2015 16:33:28" />
     <file relUrl="img/Slot8/Slot8/S8004/06.jpg" publishTime="02/09/2015 13:25:56" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.thbet.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.thbet.production.config" publishTime="02/12/2015 12:58:36" />
     <file relUrl="img/Slot8/Slot8/S8001/04.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="img/Slot8/S8004/B_05.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="img/Slot/S0012/L.jpg" publishTime="02/09/2015 13:25:50" />
     <file relUrl="img/Scratch/RH001/30.jpg" publishTime="02/09/2015 13:25:41" />
     <file relUrl="Content/themes/theme6/images/error_icons.png" publishTime="08/26/2014 10:13:16" />
-    <file relUrl="Configurations/WebConfigs/Web.mgm88.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.mgm88.local.config" publishTime="02/12/2015 13:12:55" />
     <file relUrl="img/Slot/S0022/Line25.png" publishTime="02/09/2015 13:25:53" />
     <file relUrl="img/Slot/S0016/Line4.png" publishTime="02/09/2015 13:25:52" />
     <file relUrl="Content/themes/theme13/images/bar-loader.gif" publishTime="08/26/2014 10:13:15" />
@@ -3615,7 +3615,7 @@
     <file relUrl="img/Bingo/Ball/00.jpg" publishTime="02/09/2015 13:25:38" />
     <file relUrl="img/Slot/S0003/Line22.png" publishTime="02/09/2015 13:25:44" />
     <file relUrl="Content/themes/theme19/images/signup.png" publishTime="02/12/2015 10:31:02" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.28bet.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.28bet.uat.config" publishTime="02/12/2015 12:58:10" />
     <file relUrl="img/Slot/S0012/Line20.png" publishTime="02/09/2015 13:25:50" />
     <file relUrl="img/MultiWheelRoulette/2.jpg" publishTime="02/09/2015 13:25:40" />
     <file relUrl="Content/themes/theme24/images/bghotNewsContent.png" publishTime="08/26/2014 10:13:16" />
@@ -3634,7 +3634,7 @@
     <file relUrl="Configurations/SPNames/SpNames.winner99.local.xml" publishTime="01/07/2015 16:33:28" />
     <file relUrl="Configurations/AppSettings/Web.AppSettings.nbcbet.master.config" publishTime="02/03/2015 11:27:46" />
     <file relUrl="img/Slot/S0001/Line12.png" publishTime="02/09/2015 13:25:42" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.hbobet.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.hbobet.uat.config" publishTime="02/12/2015 12:58:19" />
     <file relUrl="img/Slot/S0006/Classic_B_08.jpg" publishTime="02/09/2015 13:25:47" />
     <file relUrl="Content/themes/theme1/images/zh-TW.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot/S0026/Line12.png" publishTime="02/09/2015 13:25:54" />
@@ -3667,7 +3667,7 @@
     <file relUrl="img/Slot/S0018/PayLine_bak/Line17.png" publishTime="02/09/2015 13:25:53" />
     <file relUrl="img/Slot/S0009/Winter_H.jpg" publishTime="02/09/2015 13:25:48" />
     <file relUrl="img/Slot/S0011/06.jpg" publishTime="02/09/2015 13:25:49" />
-    <file relUrl="Configurations/WebConfigs/Web.winner99.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.winner99.production.config" publishTime="02/12/2015 13:13:01" />
     <file relUrl="Content/themes/theme1/images/ads2_e.jpg" publishTime="08/26/2014 10:13:15" />
     <file relUrl="Content/themes/theme4/images/logout.png" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Bingo/Ball/38.jpg" publishTime="02/09/2015 13:25:39" />
@@ -3693,7 +3693,7 @@
     <file relUrl="Content/themes/theme12/images/signup.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="Scripts/site/query.string.js" publishTime="01/07/2015 16:33:29" />
     <file relUrl="img/Slot/S0007/Line25.png" publishTime="02/09/2015 13:25:47" />
-    <file relUrl="Configurations/WebConfigs/Web.macaubet.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.macaubet.production.config" publishTime="02/12/2015 13:12:55" />
     <file relUrl="img/Slot/S0026/A.jpg" publishTime="02/09/2015 13:25:54" />
     <file relUrl="img/Slot/S0001/Line3.png" publishTime="02/09/2015 13:25:42" />
     <file relUrl="img/Slot/bak/Line5.png" publishTime="02/09/2015 13:25:42" />
@@ -3751,7 +3751,7 @@
     <file relUrl="App_Data/Fanex.Result.Resource/zh-TW.xml" publishTime="01/07/2015 16:33:28" />
     <file relUrl="Content/themes/theme26/images/header_gradient.png" publishTime="01/07/2015 16:33:28" />
     <file relUrl="Content/themes/theme7/images/banner.en-US.jpg" publishTime="08/26/2014 10:13:16" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.i668bet.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.i668bet.uat.config" publishTime="02/12/2015 12:58:21" />
     <file relUrl="Content/themes/base/images/ui-bg_glass_65_ffffff_1x400.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot3/S0013/05.jpg" publishTime="02/09/2015 13:25:55" />
     <file relUrl="Content/themes/theme11/images/bgMainMenu_01.png" publishTime="08/26/2014 10:13:15" />
@@ -3760,14 +3760,14 @@
     <file relUrl="Content/themes/theme1/images/calendar_10.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Live/B0001/00.jpg" publishTime="02/09/2015 13:25:39" />
     <file relUrl="img/Live/B0001/27.jpg" publishTime="02/09/2015 13:25:39" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.be7.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.be7.production.config" publishTime="02/12/2015 12:58:15" />
     <file relUrl="Configurations/SPNames/SpNames.athena000.uat.xml" publishTime="01/07/2015 16:33:28" />
     <file relUrl="img/Slot/S0008/JourneyWest_S.jpg" publishTime="02/09/2015 13:25:48" />
     <file relUrl="Content/themes/theme24/images/banner_top.png" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Slot/S0008/Line6.png" publishTime="02/09/2015 13:25:48" />
     <file relUrl="img/Slot/S0024/Line18.png" publishTime="02/09/2015 13:25:54" />
     <file relUrl="img/PokerWheel/S7.jpg" publishTime="02/09/2015 13:25:41" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.winner99.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.winner99.production.config" publishTime="02/12/2015 12:58:39" />
     <file relUrl="Configurations/SPNames/SpNames.macaubet.local.xml" publishTime="01/07/2015 16:33:28" />
     <file relUrl="img/Slot/S0019/03.jpg" publishTime="02/09/2015 13:25:53" />
     <file relUrl="img/Slot/S0008/JourneyWest_01.jpg" publishTime="02/09/2015 13:25:47" />
@@ -3838,7 +3838,7 @@
     <file relUrl="Configurations/WebConfigs/Web.idlivebet365kiosk.sandbox.config" publishTime="01/07/2015 16:33:28" />
     <file relUrl="img/Slot/S0016/Line16.png" publishTime="02/09/2015 13:25:52" />
     <file relUrl="img/Slot/bak/Taizen_I.jpg" publishTime="02/09/2015 13:25:42" />
-    <file relUrl="Configurations/WebConfigs/Web.itcbet.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.itcbet.local.config" publishTime="02/12/2015 13:12:52" />
     <file relUrl="Content/themes/theme6/images/banner.zh-TW.jpg" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Slot/S0022/H.jpg" publishTime="02/09/2015 13:25:53" />
     <file relUrl="img/Slot/S0007/FiveFox_N.jpg" publishTime="02/09/2015 13:25:47" />
@@ -3855,7 +3855,7 @@
     <file relUrl="Form/GenImage/HistoryImage_TattooArt.aspx.cs" publishTime="02/09/2015 13:25:38" />
     <file relUrl="Content/themes/theme21/images/deco.jpg" publishTime="08/26/2014 10:13:16" />
     <file relUrl="Content/themes/theme10/images/bg_center.jpg" publishTime="08/26/2014 10:13:15" />
-    <file relUrl="Configurations/WebConfigs/Web.28bet.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.28bet.local.config" publishTime="02/12/2015 13:12:46" />
     <file relUrl="img/Slot/S0017/E.jpg" publishTime="02/09/2015 13:25:52" />
     <file relUrl="Configurations/WebConfigs/Web.goobet.sandbox.config" publishTime="01/07/2015 16:33:28" />
     <file relUrl="Content/Fanex.Result/images/bg_header03.jpg" publishTime="08/26/2014 10:13:15" />
@@ -3894,7 +3894,7 @@
     <file relUrl="img/Slot/S0007/old image backup/20x20/FiveFox_N.jpg" publishTime="02/09/2015 13:25:47" />
     <file relUrl="Content/themes/theme19/images/bgMainMenu.png" publishTime="02/12/2015 10:31:02" />
     <file relUrl="Views/itcbet/Home/Index.id-ID.cshtml" publishTime="12/03/2014 10:21:12" />
-    <file relUrl="Configurations/WebConfigs/Web.thbet.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.thbet.production.config" publishTime="02/12/2015 13:12:59" />
     <file relUrl="img/Slot/bak/Taizen_P.jpg" publishTime="02/09/2015 13:25:42" />
     <file relUrl="img/Slot/S0022/Line22.png" publishTime="02/09/2015 13:25:53" />
     <file relUrl="img/Slot/S0014/E.jpg" publishTime="02/09/2015 13:25:51" />
@@ -3929,7 +3929,7 @@
     <file relUrl="img/Slot/S0011/K.jpg" publishTime="02/09/2015 13:25:49" />
     <file relUrl="Content/themes/theme27/images/plus.png" publishTime="02/06/2015 13:35:49" />
     <file relUrl="img/Slot/S0007/Line13.png" publishTime="02/09/2015 13:25:47" />
-    <file relUrl="Configurations/WebConfigs/Web.goobet.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.goobet.local.config" publishTime="02/12/2015 13:12:45" />
     <file relUrl="img/Slot/bak/ChessBonus_05.jpg" publishTime="02/09/2015 13:25:42" />
     <file relUrl="Content/themes/theme24/index.less" publishTime="01/07/2015 16:33:28" />
     <file relUrl="img/Slot/S0003/Payline_old/Line22.png" publishTime="02/09/2015 13:25:44" />
@@ -3963,7 +3963,7 @@
     <file relUrl="Content/themes/theme7/images/bghotNewsContent.png" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Slot8/S8001/07.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="img/Slot/S0023/Line24.png" publishTime="02/09/2015 13:25:53" />
-    <file relUrl="Configurations/WebConfigs/Web.i668bet.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.i668bet.production.config" publishTime="02/12/2015 13:12:52" />
     <file relUrl="img/Slot/S0031/P.jpg" publishTime="02/09/2015 13:25:54" />
     <file relUrl="Content/themes/theme18/images/signup.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot/S0010/M.jpg" publishTime="02/09/2015 13:25:49" />
@@ -3981,7 +3981,7 @@
     <file relUrl="img/Slot/S0025/Line16.png" publishTime="02/09/2015 13:25:54" />
     <file relUrl="img/Slot/S0003/Chess_W1.jpg" publishTime="02/09/2015 13:25:43" />
     <file relUrl="Configurations/AppSettings/Web.AppSettings.q8bola.uat.config" publishTime="01/07/2015 16:33:28" />
-    <file relUrl="Configurations/WebConfigs/Web.hbobet.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.hbobet.production.config" publishTime="02/12/2015 13:12:51" />
     <file relUrl="img/Bingo/Ball/74.jpg" publishTime="02/09/2015 13:25:39" />
     <file relUrl="img/Poker/blank_10_F.jpg" publishTime="02/09/2015 13:25:40" />
     <file relUrl="Content/themes/theme10/mixins.less" publishTime="08/26/2014 10:13:15" />
@@ -4026,7 +4026,7 @@
     <file relUrl="img/Slot/S0031/Line_bak/Line11.png" publishTime="02/09/2015 13:25:54" />
     <file relUrl="img/Scratch/RH001/10.jpg" publishTime="02/09/2015 13:25:41" />
     <file relUrl="Content/themes/theme8/images/banner.en-US.jpg" publishTime="08/26/2014 10:13:16" />
-    <file relUrl="Content/themes/theme19/index.less" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Content/themes/theme19/index.less" publishTime="02/12/2015 13:48:54" />
     <file relUrl="img/Slot/S0003/Line24.png" publishTime="02/09/2015 13:25:44" />
     <file relUrl="Content/themes/theme10/images/loader.gif" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot/S0026/K.jpg" publishTime="02/09/2015 13:25:54" />
@@ -4061,7 +4061,7 @@
     <file relUrl="img/Slot/S0003/ChessBonus_03.jpg" publishTime="02/09/2015 13:25:43" />
     <file relUrl="img/Bingo/Ball/21.jpg" publishTime="02/09/2015 13:25:39" />
     <file relUrl="img/Slot/S0018/Line7.png" publishTime="02/09/2015 13:25:53" />
-    <file relUrl="Configurations/WebConfigs/Web.q8bola.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.q8bola.local.config" publishTime="02/12/2015 13:12:57" />
     <file relUrl="img/Slot8/S8001/Dragon_08.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="Content/themes/theme9/images/glyphicons-halflings.png" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Slot8/Slot8/S8005/04.jpg" publishTime="02/09/2015 13:25:56" />
@@ -4090,7 +4090,7 @@
     <file relUrl="img/Slot/S0016/P.jpg" publishTime="02/09/2015 13:25:52" />
     <file relUrl="img/Slot8/Slot8/S8006/Line6.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="img/Scratch/50.jpg" publishTime="02/09/2015 13:25:41" />
-    <file relUrl="Configurations/WebConfigs/Web.mgm88.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.mgm88.uat.config" publishTime="02/12/2015 13:12:55" />
     <file relUrl="img/Slot/S0019/ChessBonus_05.jpg" publishTime="02/09/2015 13:25:53" />
     <file relUrl="img/Slot/S0010/A.jpg" publishTime="02/09/2015 13:25:49" />
     <file relUrl="img/Poker2/C4.jpg" publishTime="02/09/2015 13:25:40" />
@@ -4128,7 +4128,7 @@
     <file relUrl="Content/themes/theme26/images/bg_buttonsite.png" publishTime="01/07/2015 16:33:28" />
     <file relUrl="Content/themes/theme1/images/iconExpand.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot/S0025/Line6.png" publishTime="02/09/2015 13:25:54" />
-    <file relUrl="Configurations/WebConfigs/Web.28bet.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.28bet.uat.config" publishTime="02/12/2015 13:12:46" />
     <file relUrl="img/PokerWheel/D7.jpg" publishTime="02/09/2015 13:25:40" />
     <file relUrl="img/Slot/S0005/Fruit_03.jpg" publishTime="02/09/2015 13:25:45" />
     <file relUrl="img/Slot/S0031/Line_bak/Line5.png" publishTime="02/09/2015 13:25:54" />
@@ -4194,7 +4194,7 @@
     <file relUrl="img/Slot/S0014/Line21.png" publishTime="02/09/2015 13:25:51" />
     <file relUrl="img/Slot/S0018/PayLine_bak/Line18.png" publishTime="02/09/2015 13:25:53" />
     <file relUrl="img/Live/B0001/67.jpg" publishTime="02/09/2015 13:25:39" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.mymbet.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.mymbet.uat.config" publishTime="02/12/2015 12:58:30" />
     <file relUrl="img/FishPrawnCrab/blank.jpg" publishTime="02/09/2015 13:25:39" />
     <file relUrl="img/Slot/S0012/Line11.png" publishTime="02/09/2015 13:25:50" />
     <file relUrl="Content/Fanex.Result/fanex.result.css" publishTime="08/26/2014 10:13:15" />
@@ -4226,7 +4226,7 @@
     <file relUrl="img/Slot/S0031/Line20.png" publishTime="02/09/2015 13:25:54" />
     <file relUrl="img/FishPrawnCrab/FPC6.jpg" publishTime="02/09/2015 13:25:39" />
     <file relUrl="Views/Shared/Email/ContactUs/ContactUs.txt" publishTime="08/26/2014 10:13:16" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.athena000.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.athena000.production.config" publishTime="02/12/2015 12:58:06" />
     <file relUrl="Views/Shared/Account/LandingPagesDetail.cshtml" publishTime="01/07/2015 16:33:29" />
     <file relUrl="Content/themes/theme11/images/bg_center.jpg" publishTime="08/26/2014 10:13:15" />
     <file relUrl="Content/themes/theme15/images/bg-bottomLanguage.png" publishTime="08/26/2014 10:13:15" />
@@ -4235,7 +4235,7 @@
     <file relUrl="Content/themes/theme12/images/ui-icons_454545_256x240.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot/S0007/FiveFox_05.jpg" publishTime="02/09/2015 13:25:47" />
     <file relUrl="Content/themes/theme1/images/error.png" publishTime="08/26/2014 10:13:15" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.m8bola.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.m8bola.uat.config" publishTime="02/12/2015 12:58:24" />
     <file relUrl="Content/themes/theme7/images/banner.zh-CN.jpg" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Bingo/Ball/07.jpg" publishTime="02/09/2015 13:25:39" />
     <file relUrl="Content/themes/theme18/images/bg_center2.jpg" publishTime="08/26/2014 10:13:15" />
@@ -4324,7 +4324,7 @@
     <file relUrl="img/Slot/S0015/02.jpg" publishTime="02/09/2015 13:25:51" />
     <file relUrl="img/Slot/S0024/W1.jpg" publishTime="02/09/2015 13:25:54" />
     <file relUrl="img/Slot/bak/Line7.png" publishTime="02/09/2015 13:25:42" />
-    <file relUrl="Configurations/WebConfigs/Web.i668bet.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.i668bet.uat.config" publishTime="02/12/2015 13:12:52" />
     <file relUrl="img/Slot/S0026/Line7.png" publishTime="02/09/2015 13:25:54" />
     <file relUrl="img/Slot8/Slot8/S8005/Line5.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="img/Slot/S0024/I.jpg" publishTime="02/09/2015 13:25:53" />
@@ -4357,7 +4357,7 @@
     <file relUrl="Views/Shared/FAQs/Index.th-TH.cshtml" publishTime="08/26/2014 10:13:16" />
     <file relUrl="img/Slot/S0007/FiveFox_E.jpg" publishTime="02/09/2015 13:25:47" />
     <file relUrl="img/Live/B0001/17.jpg" publishTime="02/09/2015 13:25:39" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.thbet.local.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.thbet.local.config" publishTime="02/12/2015 12:58:35" />
     <file relUrl="img/Slot8/S8003/Line6.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="Content/themes/theme17/images/bg_center.jpg" publishTime="08/26/2014 10:13:15" />
     <file relUrl="Form/HistoryImage_ePoker.aspx.cs" publishTime="02/09/2015 13:25:38" />
@@ -4439,7 +4439,7 @@
     <file relUrl="img/Slot/S0008/Line5.png" publishTime="02/09/2015 13:25:48" />
     <file relUrl="Content/themes/theme12/images/glyphicons-halflings-gray.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="Content/themes/theme27/images/bg_center.jpg" publishTime="02/06/2015 13:35:48" />
-    <file relUrl="Configurations/WebConfigs/Web.be7.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.be7.uat.config" publishTime="02/12/2015 13:12:49" />
     <file relUrl="Configurations/AppSettings/Web.AppSettings.nbcbet.uat.config" publishTime="02/03/2015 11:27:46" />
     <file relUrl="img/Slot/S0002/4.jpg" publishTime="02/09/2015 13:25:43" />
     <file relUrl="Views/Shared/Home/Index.th-TH.cshtml" publishTime="01/07/2015 16:33:29" />
@@ -4492,7 +4492,7 @@
     <file relUrl="img/Slot8/Slot8/S8005/Line8.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="img/Slot/S0003/Chess_04.jpg" publishTime="02/09/2015 13:25:43" />
     <file relUrl="Content/themes/theme1/images/emailBanner.zh-TW.jpg" publishTime="08/26/2014 10:13:15" />
-    <file relUrl="Configurations/WebConfigs/Web.thbet.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.thbet.uat.config" publishTime="02/12/2015 13:12:59" />
     <file relUrl="Content/themes/theme11/images/help.txt" publishTime="08/26/2014 10:13:15" />
     <file relUrl="Content/themes/theme15/images/favicon.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="img/Slot/S0014/05.jpg" publishTime="02/09/2015 13:25:50" />
@@ -4524,7 +4524,7 @@
     <file relUrl="img/Slot3/S0013/Champions_10.jpg" publishTime="02/09/2015 13:25:55" />
     <file relUrl="Content/bootstrap/less/pager.less" publishTime="08/26/2014 10:13:15" />
     <file relUrl="bin/Fanex.Affiliate.Models.pdb" publishTime="02/12/2015 12:42:19" />
-    <file relUrl="Configurations/WebConfigs/Web.itcbet.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.itcbet.uat.config" publishTime="02/12/2015 13:12:53" />
     <file relUrl="img/Slot/S0004/Line25.png" publishTime="02/09/2015 13:25:45" />
     <file relUrl="Content/themes/theme1/images/bg-bottomLanguage.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="Content/themes/theme5/images/bgMainMenu_02.png" publishTime="08/26/2014 10:13:16" />
@@ -4540,7 +4540,7 @@
     <file relUrl="img/Bingo/Ball/53.jpg" publishTime="02/09/2015 13:25:39" />
     <file relUrl="img/Roulette/R26.jpg" publishTime="02/09/2015 13:25:41" />
     <file relUrl="img/Slot/S0018/Line21.png" publishTime="02/09/2015 13:25:53" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.goobet.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.goobet.uat.config" publishTime="02/12/2015 12:58:08" />
     <file relUrl="img/Slot/S0023/blank.jpg" publishTime="02/09/2015 13:25:53" />
     <file relUrl="Content/themes/theme6/images/glyphicons-halflings.png" publishTime="08/26/2014 10:13:16" />
     <file relUrl="Configurations/AppSettings/Web.AppSettings.bwinning.sandbox.config" publishTime="01/07/2015 16:33:28" />
@@ -4604,7 +4604,7 @@
     <file relUrl="Configurations/SPNames/SpNames.mgm88.production.xml" publishTime="01/07/2015 16:33:28" />
     <file relUrl="img/Slot/S0017/Line16.png" publishTime="02/09/2015 13:25:52" />
     <file relUrl="Content/bootstrap/less/responsive-1200px-min.less" publishTime="08/26/2014 10:13:15" />
-    <file relUrl="Configurations/WebConfigs/Web.allbetclubs.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.allbetclubs.production.config" publishTime="02/12/2015 13:12:47" />
     <file relUrl="Content/themes/theme12/images/bg-topLanguage.png" publishTime="08/26/2014 10:13:15" />
     <file relUrl="Content/themes/theme17/index.less" publishTime="01/07/2015 16:33:28" />
     <file relUrl="img/Slot8/RH001/100.jpg" publishTime="02/09/2015 13:25:55" />
@@ -4644,10 +4644,10 @@
     <file relUrl="img/Slot/bak/Taizen_06.jpg" publishTime="02/09/2015 13:25:42" />
     <file relUrl="img/Slot8/Slot8/S8003/07.jpg" publishTime="02/09/2015 13:25:56" />
     <file relUrl="Content/themes/theme10/images/logout.png" publishTime="08/26/2014 10:13:15" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.wawabet.local.config" publishTime="01/07/2015 16:33:28" />
-    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.macaubet.production.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.wawabet.local.config" publishTime="02/12/2015 12:58:36" />
+    <file relUrl="Configurations/ConnectionStrings/Web.ConnectionString.macaubet.production.config" publishTime="02/12/2015 12:58:27" />
     <file relUrl="img/Wheel/C50.jpg" publishTime="02/09/2015 13:25:57" />
-    <file relUrl="Configurations/WebConfigs/Web.m8bola.uat.config" publishTime="01/07/2015 16:33:28" />
+    <file relUrl="Configurations/WebConfigs/Web.m8bola.uat.config" publishTime="02/12/2015 13:12:53" />
     <file relUrl="Configurations/SPNames/SpNames.mymbet.local.xml" publishTime="01/07/2015 16:33:28" />
     <file relUrl="img/Slot/S0016/S1.jpg" publishTime="02/09/2015 13:25:52" />
     <file relUrl="Content/themes/theme5/images/glyphicons-halflings-gray-lighter.png" publishTime="08/26/2014 10:13:16" />
