@@ -506,9 +506,9 @@ namespace Fanex.Affiliate.Configurations
             {
                 return commonSetting.First(x => x.SName == key).SValue;
             }
-            catch (Exception exception)
+            catch
             {
-                throw new Exception("Invalidvn key " + key, exception);
+                return string.Empty;
             }
         }
 
@@ -576,7 +576,9 @@ namespace Fanex.Affiliate.Configurations
             affiliateSettings.SystemStartDate = GetCommonAffiliateSettingDate(commonSetting, "SystemStartDate");
             affiliateSettings.BannerDomain = GetCommonAffiliateSettingString(commonSetting, "BannerDomain");
             affiliateSettings.LicenseeID = GetCommonAffiliateSettingInteger(commonSetting, "LicenseeID");
-            affiliateSettings.SystemName = GetCommonAffiliateSettingString(commonSetting, "SystemName");
+            affiliateSettings.SystemName = string.IsNullOrEmpty(GetCommonAffiliateSettingString(commonSetting, "SystemDisplayName"))
+                                            ? GetCommonAffiliateSettingString(commonSetting, "SystemName")
+                                            : GetCommonAffiliateSettingString(commonSetting, "SystemDisplayName");
             affiliateSettings.BannerScriptUrl = new Uri(GetCommonAffiliateSettingString(commonSetting, "BannerScriptUrl"));
             affiliateSettings.BannerDirectory = GetCommonAffiliateSettingString(commonSetting, "BannerDirectory");
             affiliateSettings.AffiliateSupportedLanguages = GetCommonAffiliateSettingString(commonSetting, "AFF_AffiliateSupportedLanguages");

@@ -235,8 +235,8 @@ select {
 
 			/* TOPMENU */
 			.top-menu {
-				margin-left: 2px;
-				margin-top: -20px;
+				position: absolute;
+				bottom: -6px;
 
 				ul {
 					float: right;
@@ -246,30 +246,32 @@ select {
 					padding-right: 20px;
 						
 					li {
-						display: inline;
+						display: inline-block;
 						line-height:24px;
+						overflow: auto;
+
 						a {
 							background: url(images/bgMainMenu.png) no-repeat left -28px;
-							float: left;
 							margin: 0 3px 0 0;
-							padding-left: 14px;
+							padding-left: 13px;
 							text-decoration: none;
+							display: inline-block;
 
 							span {
 								white-space: nowrap;
 								background: url(images/bgMainMenu.png) no-repeat right -81px;
 								color: @mainMenuColor;
-								display: block;
-								float: left;
+								display: inline-block;
 								font-weight: bold;
 								padding: 0 14px 0 0;
 								text-transform: uppercase;
+							
 							}
 						}
 
 						&.current a, a:hover {
 							background-position: 0 -4px;
-							
+
 							span {
 								white-space: nowrap;
 								background-position: 100% -57px;
@@ -282,16 +284,17 @@ select {
 				/* DATETIME */
 				#datetime {
 					color: @dateTimeColor;
-                    float: right;
 					font-size: 11px;
 					font-weight: bold;
 					line-height: 26px;
-					position: absolute;
 					right: 44px;
 					text-align: right;
 					top: 31px;
 					width: auto;
 					white-space: nowrap;
+					position: absolute;
+					top: -28px;
+
 
 					.clock {
 						background: url(images/sprite.png) -143px -415px;
