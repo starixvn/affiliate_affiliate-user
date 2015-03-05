@@ -225,6 +225,12 @@
     <Content Include="Configurations\SPNames\SpNames.banner.yhy1980.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.yhy1980.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.yhy1980.uat.xml" />
+    <Content Include="Configurations\SPNames\SpNames.unobet.local.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Configurations\SPNames\SpNames.unobet.master.xml" />
+    <Content Include="Configurations\SPNames\SpNames.unobet.production.xml" />
+    <Content Include="Configurations\SPNames\SpNames.unobet.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.xml" />
     <Content Include="Content\Banners\KIOSK\Casino\Baccarat\521.swf" />
     <Content Include="Content\Banners\Normal\Casino\Sic bo\Banner_indonesian.jpg" />
@@ -471,6 +477,12 @@
     <Content Include="Configurations\WebConfigs\Web.banner.yhy1980.sandbox.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.yhy1980.production.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.yhy1980.uat.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configurations\WebConfigs\Web.banner.unobet.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.unobet.master.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.unobet.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.unobet.uat.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
