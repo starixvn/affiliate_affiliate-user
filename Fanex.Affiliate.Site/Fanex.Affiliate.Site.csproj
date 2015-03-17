@@ -221,6 +221,10 @@
     <Compile Include="App_Start\SimpleInjectorInitializer.cs" />
     <Compile Include="App_Start\StyleImagePathBundle.cs" />
     <Compile Include="App_Start\StyleRelativePathTransform.cs" />
+    <Content Include="Configurations\SPNames\SpNames.unobet.local.xml" />
+    <Content Include="Configurations\SPNames\SpNames.unobet.production.xml" />
+    <Content Include="Configurations\SPNames\SpNames.unobet.sandbox.xml" />
+    <Content Include="Configurations\SPNames\SpNames.unobet.uat.xml" />
     <Content Include="Content\themes\theme28\images\banner.en-US.jpg" />
     <Content Include="Content\themes\theme28\images\banner.id-ID.jpg" />
     <Content Include="Content\themes\theme28\images\banner.ko-KR.jpg" />
@@ -5088,7 +5092,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
