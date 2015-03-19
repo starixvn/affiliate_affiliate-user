@@ -181,7 +181,7 @@ namespace Fanex.Affiliate.Controllers
             var siteDomainInfo = GetSiteDomainInfo();
             dynamic emailContent = new
             {
-                AppSettings.AffiliateName,
+                AppSettings.SystemDisplayName,
                 CurrentMemberSiteDomain = siteDomainInfo.MemberSiteDomain,
                 siteDomainInfo.MemberSiteDomainEmail,
                 criteria.FirstName,
@@ -201,7 +201,7 @@ namespace Fanex.Affiliate.Controllers
             };
             var affiliateEmailBody = (new EmailTemplateResolverService()).GetEmailBody(templatePath, emailContent);
 
-            var affiliateSubject = string.Format(Lang.SignUpMailSubject, AppSettings.AffiliateName);
+            var affiliateSubject = string.Format(Lang.SignUpMailSubject, AppSettings.SystemDisplayName);
             Common.SendEmail(affiliateEmailBody, criteria.Email, affiliateSubject, AppSettings.BccMail);
 
             SendSignUpEmailToCsd(criteria, currentLanguage);
@@ -218,7 +218,7 @@ namespace Fanex.Affiliate.Controllers
             var csdPath = Server.MapPath("~/Views/Shared/Email/SignUp/CsdMail.txt");
             dynamic emailContent = new
             {
-                AppSettings.AffiliateName,
+                AppSettings.SystemDisplayName,
                 criteria.FirstName,
                 criteria.LastName,
                 UserName = criteria.Player_Username,
@@ -228,7 +228,7 @@ namespace Fanex.Affiliate.Controllers
             };
             var csdEmailBody = (new EmailTemplateResolverService()).GetEmailBody(csdPath, emailContent);
 
-            var csdSubject = string.Format("{0} Affiliates - New account ({1}) awaiting approval", AppSettings.AffiliateName, criteria.Player_Username);
+            var csdSubject = string.Format("{0} Affiliates - New account ({1}) awaiting approval", AppSettings.SystemDisplayName, criteria.Player_Username);
             Common.SendEmail(csdEmailBody, AppSettings.MailContact, csdSubject, AppSettings.BccMail);
 
             AppSession.Language = currentLanguage;
@@ -585,7 +585,7 @@ namespace Fanex.Affiliate.Controllers
             var recoverPasswordUrl = string.Format("{0}User/RecoverPassword", siteDomainInfo.AffiliateDomain);
             dynamic emailContent = new
             {
-                AppSettings.AffiliateName,
+                AppSettings.SystemDisplayName,
                 CurrentMemberSiteDomain = siteDomainInfo.MemberSiteDomain,
                 siteDomainInfo.MemberSiteDomainEmail,
                 user.FirstName,
@@ -608,7 +608,7 @@ namespace Fanex.Affiliate.Controllers
                 FooterFontColor = AppSettings.EmailFooterFontColor
             };
             var emailBody = (new EmailTemplateResolverService()).GetEmailBody(templatePath, emailContent);
-            Common.SendEmail(emailBody, criteria.Email, string.Format(Lang.ForgetPasswordEmailTitle, AppSettings.AffiliateName), AppSettings.BccMail);
+            Common.SendEmail(emailBody, criteria.Email, string.Format(Lang.ForgetPasswordEmailTitle, AppSettings.SystemDisplayName), AppSettings.BccMail);
 
             AppSession.Language = currentLanguage;
             ChangeSystemLanguage();
@@ -681,7 +681,7 @@ namespace Fanex.Affiliate.Controllers
             changePasswordUrl = regex.Replace(changePasswordUrl, string.Empty);
             dynamic emailContent = new
             {
-                AppSettings.AffiliateName,
+                AppSettings.SystemDisplayName,
                 CurrentMemberSiteDomain = siteDomainInfo.MemberSiteDomain,
                 siteDomainInfo.MemberSiteDomainEmail,
                 user.FirstName,
@@ -704,7 +704,7 @@ namespace Fanex.Affiliate.Controllers
                 FooterFontColor = AppSettings.EmailFooterFontColor
             };
             var emailBody = (new EmailTemplateResolverService()).GetEmailBody(templatePath, emailContent);
-            Common.SendEmail(emailBody, user.Email, string.Format(Lang.ChangePasswordEmailTitle, AppSettings.AffiliateName), AppSettings.BccMail);
+            Common.SendEmail(emailBody, user.Email, string.Format(Lang.ChangePasswordEmailTitle, AppSettings.SystemDisplayName), AppSettings.BccMail);
 
             AppSession.Language = currentLanguage;
             ChangeSystemLanguage();

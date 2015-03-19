@@ -60,6 +60,10 @@
     <Reference Include="dotless.Core">
       <HintPath>..\packages\dotless.1.3.1.0\lib\dotless.Core.dll</HintPath>
     </Reference>
+    <Reference Include="Fanex.BetList.Core, Version=2.0.5.11, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Fanex.BetList.Core.2.0.5.11\lib\net40\Fanex.BetList.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Fanex.Common, Version=1.0.404.97, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.Common.1.0.404.97\lib\net40\Fanex.Common.dll</HintPath>
     </Reference>
@@ -69,8 +73,9 @@
     <Reference Include="Fanex.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.Logging.1.0.0.0\lib\net40\Fanex.Logging.dll</HintPath>
     </Reference>
-    <Reference Include="Fanex.Result.Core, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Result.Core-NPOI.2.0.6.1.6.0.0-theta-7\lib\net40\Fanex.Result.Core.dll</HintPath>
+    <Reference Include="Fanex.Result.Core, Version=1.6.2.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Fanex.Result.Core-NPOI.2.0.6.1.6.2.6\lib\net40\Fanex.Result.Core.dll</HintPath>
     </Reference>
     <Reference Include="HandHistoryLibrary">
       <HintPath>..\packages\HandHistoryLibrary.1.0.0.43\lib\net40\HandHistoryLibrary.dll</HintPath>
@@ -160,6 +165,9 @@
     <Reference Include="SPSRemoting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\SPSRemoting.1.0.0\lib\net40\SPSRemoting.dll</HintPath>
     </Reference>
+    <Reference Include="Sunplus.Core.Common, Version=1.1.4505.19054, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sunplus.Core.Common.1.1.4505.19054\lib\net40\Sunplus.Core.Common.dll</HintPath>
+    </Reference>
     <Reference Include="Sunplus.Libraries.AOP, Version=1.0.4218.28561, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\CasinoLibrary.1.0.2.6\lib\net40\Sunplus.Libraries.AOP.dll</HintPath>
     </Reference>
@@ -221,10 +229,104 @@
     <Compile Include="App_Start\SimpleInjectorInitializer.cs" />
     <Compile Include="App_Start\StyleImagePathBundle.cs" />
     <Compile Include="App_Start\StyleRelativePathTransform.cs" />
-    <Content Include="Configurations\SPNames\SpNames.unobet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.unobet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.unobet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.unobet.uat.xml" />
+    <Compile Include="Service References\AffBetlistService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Content Include="Configurations\SPNames\SpName.28bet.local.xml" />
+    <Content Include="Configurations\SPNames\SpName.28bet.master.xml" />
+    <Content Include="Configurations\SPNames\SpName.28bet.production.xml" />
+    <Content Include="Configurations\SPNames\SpName.28bet.uat.xml" />
+    <Content Include="Configurations\SPNames\SpName.allbetclubs.local.xml" />
+    <Content Include="Configurations\SPNames\SpName.allbetclubs.master.xml" />
+    <Content Include="Configurations\SPNames\SpName.allbetclubs.production.xml" />
+    <Content Include="Configurations\SPNames\SpName.allbetclubs.uat.xml" />
+    <Content Include="Configurations\SPNames\SpName.aoncash.local.xml" />
+    <Content Include="Configurations\SPNames\SpName.aoncash.master.xml" />
+    <Content Include="Configurations\SPNames\SpName.aoncash.production.xml" />
+    <Content Include="Configurations\SPNames\SpName.aoncash.uat.xml" />
+    <Content Include="Configurations\SPNames\SpName.athena000.local.xml" />
+    <Content Include="Configurations\SPNames\SpName.athena000.master.xml" />
+    <Content Include="Configurations\SPNames\SpName.athena000.production.xml" />
+    <Content Include="Configurations\SPNames\SpName.athena000.uat.xml" />
+    <Content Include="Configurations\SPNames\SpName.be7.local.xml" />
+    <Content Include="Configurations\SPNames\SpName.be7.master.xml" />
+    <Content Include="Configurations\SPNames\SpName.be7.production.xml" />
+    <Content Include="Configurations\SPNames\SpName.be7.uat.xml" />
+    <Content Include="Configurations\SPNames\SpName.bwinning.local.xml" />
+    <Content Include="Configurations\SPNames\SpName.bwinning.master.xml" />
+    <Content Include="Configurations\SPNames\SpName.bwinning.production.xml" />
+    <Content Include="Configurations\SPNames\SpName.bwinning.uat.xml" />
+    <Content Include="Configurations\SPNames\SpName.goobet.local.xml" />
+    <Content Include="Configurations\SPNames\SpName.goobet.master.xml" />
+    <Content Include="Configurations\SPNames\SpName.goobet.production.xml" />
+    <Content Include="Configurations\SPNames\SpName.goobet.uat.xml" />
+    <Content Include="Configurations\SPNames\SpName.hbobet.local.xml" />
+    <Content Include="Configurations\SPNames\SpName.hbobet.master.xml" />
+    <Content Include="Configurations\SPNames\SpName.hbobet.production.xml" />
+    <Content Include="Configurations\SPNames\SpName.hbobet.uat.xml" />
+    <Content Include="Configurations\SPNames\SpName.i668bet.local.xml" />
+    <Content Include="Configurations\SPNames\SpName.i668bet.master.xml" />
+    <Content Include="Configurations\SPNames\SpName.i668bet.production.xml" />
+    <Content Include="Configurations\SPNames\SpName.i668bet.uat.xml" />
+    <Content Include="Configurations\SPNames\SpName.itcbet.local.xml" />
+    <Content Include="Configurations\SPNames\SpName.itcbet.master.xml" />
+    <Content Include="Configurations\SPNames\SpName.itcbet.production.xml" />
+    <Content Include="Configurations\SPNames\SpName.itcbet.uat.xml" />
+    <Content Include="Configurations\SPNames\SpName.m8bola.local.xml" />
+    <Content Include="Configurations\SPNames\SpName.m8bola.master.xml" />
+    <Content Include="Configurations\SPNames\SpName.m8bola.production.xml" />
+    <Content Include="Configurations\SPNames\SpName.m8bola.uat.xml" />
+    <Content Include="Configurations\SPNames\SpName.macaubet.local.xml" />
+    <Content Include="Configurations\SPNames\SpName.macaubet.master.xml" />
+    <Content Include="Configurations\SPNames\SpName.macaubet.production.xml" />
+    <Content Include="Configurations\SPNames\SpName.macaubet.uat.xml" />
+    <Content Include="Configurations\SPNames\SpName.mgm88.local.xml" />
+    <Content Include="Configurations\SPNames\SpName.mgm88.master.xml" />
+    <Content Include="Configurations\SPNames\SpName.mgm88.production.xml" />
+    <Content Include="Configurations\SPNames\SpName.mgm88.uat.xml" />
+    <Content Include="Configurations\SPNames\SpName.mymbet.local.xml" />
+    <Content Include="Configurations\SPNames\SpName.mymbet.master.xml" />
+    <Content Include="Configurations\SPNames\SpName.mymbet.production.xml" />
+    <Content Include="Configurations\SPNames\SpName.mymbet.uat.xml" />
+    <Content Include="Configurations\SPNames\SpName.nbcbet.local.xml" />
+    <Content Include="Configurations\SPNames\SpName.nbcbet.master.xml" />
+    <Content Include="Configurations\SPNames\SpName.nbcbet.production.xml" />
+    <Content Include="Configurations\SPNames\SpName.nbcbet.uat.xml" />
+    <Content Include="Configurations\SPNames\SpName.q8bola.local.xml" />
+    <Content Include="Configurations\SPNames\SpName.q8bola.master.xml" />
+    <Content Include="Configurations\SPNames\SpName.q8bola.production.xml" />
+    <Content Include="Configurations\SPNames\SpName.q8bola.uat.xml" />
+    <Content Include="Configurations\SPNames\SpName.royalebet.local.xml" />
+    <Content Include="Configurations\SPNames\SpName.royalebet.master.xml" />
+    <Content Include="Configurations\SPNames\SpName.royalebet.production.xml" />
+    <Content Include="Configurations\SPNames\SpName.royalebet.uat.xml" />
+    <Content Include="Configurations\SPNames\SpName.thbet.local.xml" />
+    <Content Include="Configurations\SPNames\SpName.thbet.master.xml" />
+    <Content Include="Configurations\SPNames\SpName.thbet.production.xml" />
+    <Content Include="Configurations\SPNames\SpName.thbet.uat.xml" />
+    <Content Include="Configurations\SPNames\SpName.unobet.local.xml" />
+    <Content Include="Configurations\SPNames\SpName.unobet.production.xml" />
+    <Content Include="Configurations\SPNames\SpName.unobet.sandbox.xml" />
+    <Content Include="Configurations\SPNames\SpName.unobet.uat.xml" />
+    <Content Include="Configurations\SPNames\SpName.wawabet.local.xml" />
+    <Content Include="Configurations\SPNames\SpName.wawabet.master.xml" />
+    <Content Include="Configurations\SPNames\SpName.wawabet.production.xml" />
+    <Content Include="Configurations\SPNames\SpName.wawabet.uat.xml" />
+    <Content Include="Configurations\SPNames\SpName.winner99.local.xml" />
+    <Content Include="Configurations\SPNames\SpName.winner99.master.xml" />
+    <Content Include="Configurations\SPNames\SpName.winner99.production.xml" />
+    <Content Include="Configurations\SPNames\SpName.winner99.uat.xml" />
+    <Content Include="Configurations\SPNames\SpName.xml" />
+    <Content Include="Configurations\SPNames\SpName.yhy1980.local.xml" />
+    <Content Include="Configurations\SPNames\SpName.yhy1980.master.xml" />
+    <Content Include="Configurations\SPNames\SpName.yhy1980.production.xml" />
+    <Content Include="Configurations\SPNames\SpName.yhy1980.uat.xml" />
+    <Content Include="Content\betlist\custom-betlist.css" />
+    <Content Include="Content\themes\theme19\images\banner_top.png" />
+    <Content Include="Content\themes\theme19\images\bg-contentLanguage.png" />
+    <Content Include="Content\themes\theme19\images\logo-afterlogin.png" />
     <Content Include="Content\themes\theme28\images\banner.en-US.jpg" />
     <Content Include="Content\themes\theme28\images\banner.id-ID.jpg" />
     <Content Include="Content\themes\theme28\images\banner.ko-KR.jpg" />
@@ -274,12 +376,8 @@
     <Content Include="Content\themes\theme28\images\ui-icons_454545_256x240.png" />
     <Content Include="Content\themes\theme28\images\undo.png" />
     <Content Include="Content\themes\theme28\images\up.png" />
-    <Content Include="Content\themes\theme28\index.less" />
-    <Content Include="Content\themes\theme28\mixins.less" />
-    <Content Include="Content\themes\theme28\variables.less" />
-    <Content Include="Content\themes\theme19\images\banner_top.png" />
-    <Content Include="Content\themes\theme19\images\bg-contentLanguage.png" />
-    <Content Include="Content\themes\theme19\images\logo-afterlogin.png" />
+    <Content Include="Content\tipsy\custom-tipsy.css" />
+    <Content Include="Content\tipsy\tipsy.css" />
     <Content Include="Form\GenHistoryImg.aspx.cs">
       <DependentUpon>GenHistoryImg.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -365,132 +463,10 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Service References\AffBetlistService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Content Include="App_Data\Fanex.Result.Resource\en-US.xml" />
-    <Content Include="App_Data\Fanex.Result.Resource\ja-JP.xml" />
-    <Content Include="App_Data\Fanex.Result.Resource\ko-KR.xml" />
-    <Content Include="App_Data\Fanex.Result.Resource\th-TH.xml" />
-    <Content Include="App_Data\Fanex.Result.Resource\vi-VN.xml" />
-    <Content Include="App_Data\Fanex.Result.Resource\zh-CN.xml" />
-    <Content Include="App_Data\Fanex.Result.Resource\zh-TW.xml" />
-    <Content Include="App_Data\SpNames.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Configurations\SPNames\SpNames.yhy1980.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.yhy1980.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.yhy1980.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.yhy1980.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.28bet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.28bet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.28bet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.28bet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.allbetclubs.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.allbetclubs.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.allbetclubs.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.allbetclubs.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.aoncash.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.aoncash.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.aoncash.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.aoncash.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.athena000.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.athena000.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.athena000.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.athena000.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.be7.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.be7.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.be7.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.be7.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.bwinning.local.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Configurations\SPNames\SpNames.bwinning.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.bwinning.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.bwinning.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.goobet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.goobet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.goobet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.goobet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.hbobet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.hbobet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.hbobet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.hbobet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.i668bet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.i668bet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.i668bet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.i668bet.uat.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Configurations\SPNames\SpNames.idlivebet365.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.idlivebet365.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.idlivebet365.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.idlivebet365.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.idlivebet365kiosk.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.idlivebet365kiosk.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.idlivebet365kiosk.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.idlivebet365kiosk.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.itcbet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.itcbet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.itcbet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.itcbet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.livebet365.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.livebet365.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.livebet365.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.livebet365.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.livebet365kiosk.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.livebet365kiosk.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.livebet365kiosk.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.livebet365kiosk.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.m8bola.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.m8bola.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.m8bola.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.m8bola.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.macaubet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.macaubet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.macaubet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.macaubet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.mgm88.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.mgm88.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.mgm88.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.mgm88.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.mymbet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.mymbet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.mymbet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.mymbet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.nbcbet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.nbcbet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.nbcbet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.nbcbet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.q8bola.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.q8bola.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.q8bola.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.q8bola.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.royalebet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.royalebet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.royalebet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.royalebet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.thbet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.thbet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.thbet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.thbet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.wawabet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.wawabet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.wawabet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.wawabet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.winner99.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.winner99.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.winner99.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.winner99.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Content\betlist\betlist.css" />
     <Content Include="Content\betlist\betlist.core.css" />
     <Content Include="Content\betlist\fanex.result.css" />
@@ -562,7 +538,6 @@
     <Content Include="Content\Fanex.Result\images\1L.gif" />
     <Content Include="Content\Fanex.Result\images\bg_header03.jpg" />
     <Content Include="Content\Fanex.Result\images\first-goal.gif" />
-    <Content Include="Content\Fanex.Result\images\goal-icon.png" />
     <Content Include="Content\Fanex.Result\images\last-goal.gif" />
     <Content Include="Content\Fanex.Result\images\tab_topbg.gif" />
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
@@ -2791,6 +2766,116 @@
     <Content Include="img\Slot\bak\Taizen_W2.jpg" />
     <Content Include="img\Slot\bak\Taizen_WI.jpg" />
     <Content Include="img\Slot\blank.jpg" />
+    <Content Include="img\Slot\H0005\01.jpg" />
+    <Content Include="img\Slot\H0005\02.jpg" />
+    <Content Include="img\Slot\H0005\03.jpg" />
+    <Content Include="img\Slot\H0005\04.jpg" />
+    <Content Include="img\Slot\H0005\05.jpg" />
+    <Content Include="img\Slot\H0005\06.jpg" />
+    <Content Include="img\Slot\H0005\07.jpg" />
+    <Content Include="img\Slot\H0005\08.jpg" />
+    <Content Include="img\Slot\H0005\09.jpg" />
+    <Content Include="img\Slot\H0005\10.jpg" />
+    <Content Include="img\Slot\H0005\11.jpg" />
+    <Content Include="img\Slot\H0005\A.jpg" />
+    <Content Include="img\Slot\H0005\B.jpg" />
+    <Content Include="img\Slot\H0005\blank.jpg" />
+    <Content Include="img\Slot\H0005\C.jpg" />
+    <Content Include="img\Slot\H0005\D.jpg" />
+    <Content Include="img\Slot\H0005\E.jpg" />
+    <Content Include="img\Slot\H0005\F.jpg" />
+    <Content Include="img\Slot\H0005\F1.jpg" />
+    <Content Include="img\Slot\H0005\G.jpg" />
+    <Content Include="img\Slot\H0005\H.jpg" />
+    <Content Include="img\Slot\H0005\I.jpg" />
+    <Content Include="img\Slot\H0005\J.jpg" />
+    <Content Include="img\Slot\H0005\K.jpg" />
+    <Content Include="img\Slot\H0005\L.jpg" />
+    <Content Include="img\Slot\H0005\LD.jpg" />
+    <Content Include="img\Slot\H0005\Line1.png" />
+    <Content Include="img\Slot\H0005\Line10.png" />
+    <Content Include="img\Slot\H0005\Line11.png" />
+    <Content Include="img\Slot\H0005\Line12.png" />
+    <Content Include="img\Slot\H0005\Line13.png" />
+    <Content Include="img\Slot\H0005\Line14.png" />
+    <Content Include="img\Slot\H0005\Line15.png" />
+    <Content Include="img\Slot\H0005\Line16.png" />
+    <Content Include="img\Slot\H0005\Line17.png" />
+    <Content Include="img\Slot\H0005\Line18.png" />
+    <Content Include="img\Slot\H0005\Line19.png" />
+    <Content Include="img\Slot\H0005\Line2.png" />
+    <Content Include="img\Slot\H0005\Line20.png" />
+    <Content Include="img\Slot\H0005\Line21.png" />
+    <Content Include="img\Slot\H0005\Line22.png" />
+    <Content Include="img\Slot\H0005\Line23.png" />
+    <Content Include="img\Slot\H0005\Line24.png" />
+    <Content Include="img\Slot\H0005\Line25.png" />
+    <Content Include="img\Slot\H0005\Line3.png" />
+    <Content Include="img\Slot\H0005\Line4.png" />
+    <Content Include="img\Slot\H0005\Line5.png" />
+    <Content Include="img\Slot\H0005\Line6.png" />
+    <Content Include="img\Slot\H0005\Line7.png" />
+    <Content Include="img\Slot\H0005\Line8.png" />
+    <Content Include="img\Slot\H0005\Line9.png" />
+    <Content Include="img\Slot\H0005\M.jpg" />
+    <Content Include="img\Slot\H0005\N.jpg" />
+    <Content Include="img\Slot\H0005\O.jpg" />
+    <Content Include="img\Slot\H0005\P.jpg" />
+    <Content Include="img\Slot\H0005\S1.jpg" />
+    <Content Include="img\Slot\H0005\W1.jpg" />
+    <Content Include="img\Slot\H0005\W2.jpg" />
+    <Content Include="img\Slot\H0005\WI.jpg" />
+    <Content Include="img\Slot\H0006\01.jpg" />
+    <Content Include="img\Slot\H0006\02.jpg" />
+    <Content Include="img\Slot\H0006\03.jpg" />
+    <Content Include="img\Slot\H0006\04.jpg" />
+    <Content Include="img\Slot\H0006\05.jpg" />
+    <Content Include="img\Slot\H0006\06.jpg" />
+    <Content Include="img\Slot\H0006\07.jpg" />
+    <Content Include="img\Slot\H0006\08.jpg" />
+    <Content Include="img\Slot\H0006\09.jpg" />
+    <Content Include="img\Slot\H0006\A.jpg" />
+    <Content Include="img\Slot\H0006\B.jpg" />
+    <Content Include="img\Slot\H0006\blank.jpg" />
+    <Content Include="img\Slot\H0006\C.jpg" />
+    <Content Include="img\Slot\H0006\D.jpg" />
+    <Content Include="img\Slot\H0006\E.jpg" />
+    <Content Include="img\Slot\H0006\F.jpg" />
+    <Content Include="img\Slot\H0006\F1.jpg" />
+    <Content Include="img\Slot\H0006\G.jpg" />
+    <Content Include="img\Slot\H0006\H.jpg" />
+    <Content Include="img\Slot\H0006\I.jpg" />
+    <Content Include="img\Slot\H0006\J.jpg" />
+    <Content Include="img\Slot\H0006\Line1.png" />
+    <Content Include="img\Slot\H0006\Line10.png" />
+    <Content Include="img\Slot\H0006\Line11.png" />
+    <Content Include="img\Slot\H0006\Line12.png" />
+    <Content Include="img\Slot\H0006\Line13.png" />
+    <Content Include="img\Slot\H0006\Line14.png" />
+    <Content Include="img\Slot\H0006\Line15.png" />
+    <Content Include="img\Slot\H0006\Line16.png" />
+    <Content Include="img\Slot\H0006\Line17.png" />
+    <Content Include="img\Slot\H0006\Line18.png" />
+    <Content Include="img\Slot\H0006\Line19.png" />
+    <Content Include="img\Slot\H0006\Line2.png" />
+    <Content Include="img\Slot\H0006\Line20.png" />
+    <Content Include="img\Slot\H0006\Line21.png" />
+    <Content Include="img\Slot\H0006\Line22.png" />
+    <Content Include="img\Slot\H0006\Line23.png" />
+    <Content Include="img\Slot\H0006\Line24.png" />
+    <Content Include="img\Slot\H0006\Line25.png" />
+    <Content Include="img\Slot\H0006\Line3.png" />
+    <Content Include="img\Slot\H0006\Line4.png" />
+    <Content Include="img\Slot\H0006\Line5.png" />
+    <Content Include="img\Slot\H0006\Line6.png" />
+    <Content Include="img\Slot\H0006\Line7.png" />
+    <Content Include="img\Slot\H0006\Line8.png" />
+    <Content Include="img\Slot\H0006\Line9.png" />
+    <Content Include="img\Slot\H0006\P.jpg" />
+    <Content Include="img\Slot\H0006\S.jpg" />
+    <Content Include="img\Slot\H0006\S1.jpg" />
+    <Content Include="img\Slot\H0006\T.jpg" />
+    <Content Include="img\Slot\H0006\W1.jpg" />
     <Content Include="img\Slot\Line1.png" />
     <Content Include="img\Slot\Line10.png" />
     <Content Include="img\Slot\Line11.png" />
@@ -4258,6 +4343,56 @@
     <Content Include="img\Slot\S0031\T.old.jpg" />
     <Content Include="img\Slot\S0031\W1.jpg" />
     <Content Include="img\Slot\S0031\W1.old.jpg" />
+    <Content Include="img\Slot\S0032\01.jpg" />
+    <Content Include="img\Slot\S0032\02.jpg" />
+    <Content Include="img\Slot\S0032\03.jpg" />
+    <Content Include="img\Slot\S0032\04.jpg" />
+    <Content Include="img\Slot\S0032\05.jpg" />
+    <Content Include="img\Slot\S0032\06.jpg" />
+    <Content Include="img\Slot\S0032\07.jpg" />
+    <Content Include="img\Slot\S0032\08.jpg" />
+    <Content Include="img\Slot\S0032\A.jpg" />
+    <Content Include="img\Slot\S0032\B.jpg" />
+    <Content Include="img\Slot\S0032\B1.jpg" />
+    <Content Include="img\Slot\S0032\blank.jpg" />
+    <Content Include="img\Slot\S0032\C.jpg" />
+    <Content Include="img\Slot\S0032\D.jpg" />
+    <Content Include="img\Slot\S0032\E.jpg" />
+    <Content Include="img\Slot\S0032\F.jpg" />
+    <Content Include="img\Slot\S0032\F1.jpg" />
+    <Content Include="img\Slot\S0032\G.jpg" />
+    <Content Include="img\Slot\S0032\H.jpg" />
+    <Content Include="img\Slot\S0032\I.jpg" />
+    <Content Include="img\Slot\S0032\J.jpg" />
+    <Content Include="img\Slot\S0032\K.jpg" />
+    <Content Include="img\Slot\S0032\L.jpg" />
+    <Content Include="img\Slot\S0032\Line1.png" />
+    <Content Include="img\Slot\S0032\Line10.png" />
+    <Content Include="img\Slot\S0032\Line11.png" />
+    <Content Include="img\Slot\S0032\Line12.png" />
+    <Content Include="img\Slot\S0032\Line13.png" />
+    <Content Include="img\Slot\S0032\Line14.png" />
+    <Content Include="img\Slot\S0032\Line15.png" />
+    <Content Include="img\Slot\S0032\Line16.png" />
+    <Content Include="img\Slot\S0032\Line17.png" />
+    <Content Include="img\Slot\S0032\Line18.png" />
+    <Content Include="img\Slot\S0032\Line19.png" />
+    <Content Include="img\Slot\S0032\Line2.png" />
+    <Content Include="img\Slot\S0032\Line20.png" />
+    <Content Include="img\Slot\S0032\Line21.png" />
+    <Content Include="img\Slot\S0032\Line22.png" />
+    <Content Include="img\Slot\S0032\Line23.png" />
+    <Content Include="img\Slot\S0032\Line24.png" />
+    <Content Include="img\Slot\S0032\Line25.png" />
+    <Content Include="img\Slot\S0032\Line3.png" />
+    <Content Include="img\Slot\S0032\Line4.png" />
+    <Content Include="img\Slot\S0032\Line5.png" />
+    <Content Include="img\Slot\S0032\Line6.png" />
+    <Content Include="img\Slot\S0032\Line7.png" />
+    <Content Include="img\Slot\S0032\Line8.png" />
+    <Content Include="img\Slot\S0032\Line9.png" />
+    <Content Include="img\Slot\S0032\S1.jpg" />
+    <Content Include="img\Slot\S0032\W1.jpg" />
     <Content Include="img\Slot\Taizen_01.jpg" />
     <Content Include="img\Slot\Taizen_02.jpg" />
     <Content Include="img\Slot\Taizen_03.jpg" />
@@ -4304,6 +4439,7 @@
     <Content Include="Scripts\libraries\jquery-1.10.1.min.js" />
     <Content Include="Scripts\libraries\jquery-ui-languages.js" />
     <Content Include="Scripts\libraries\jquery.formattyping.js" />
+    <Content Include="Scripts\libraries\jquery.tipsy.js" />
     <Content Include="Scripts\libraries\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\libraries\jquery.validate.js" />
     <Content Include="Scripts\libraries\head.js" />
@@ -4347,33 +4483,199 @@
     <Content Include="App_Data\Fanex.Result\Tennis.xls" />
     <Content Include="App_Data\Fanex.Result\VSHRacing.xls" />
     <Content Include="App_Data\Fanex.Result\VSTennis.xls" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.nbcbet.master.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.yhy1980.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.yhy1980.master.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.yhy1980.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.yhy1980.uat.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.yhy1980.local.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.yhy1980.master.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.yhy1980.production.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.yhy1980.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.28bet.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.28bet.master.config" />
+    <Content Include="Configurations\WebConfigs\Web.28bet.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.28bet.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.allbetclubs.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.allbetclubs.master.config" />
+    <Content Include="Configurations\WebConfigs\Web.allbetclubs.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.allbetclubs.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.aoncash.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.aoncash.master.config" />
+    <Content Include="Configurations\WebConfigs\Web.aoncash.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.aoncash.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.athena000.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.athena000.master.config" />
+    <Content Include="Configurations\WebConfigs\Web.athena000.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.athena000.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.be7.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.be7.master.config" />
+    <Content Include="Configurations\WebConfigs\Web.be7.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.be7.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.bwinning.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.bwinning.master.config" />
+    <Content Include="Configurations\WebConfigs\Web.bwinning.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.bwinning.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.goobet.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.goobet.master.config" />
+    <Content Include="Configurations\WebConfigs\Web.goobet.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.goobet.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.hbobet.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.hbobet.master.config" />
+    <Content Include="Configurations\WebConfigs\Web.hbobet.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.hbobet.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.i668bet.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.i668bet.master.config" />
+    <Content Include="Configurations\WebConfigs\Web.i668bet.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.i668bet.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.itcbet.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.itcbet.master.config" />
+    <Content Include="Configurations\WebConfigs\Web.itcbet.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.itcbet.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.m8bola.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.m8bola.master.config" />
+    <Content Include="Configurations\WebConfigs\Web.m8bola.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.m8bola.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.macaubet.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.macaubet.master.config" />
+    <Content Include="Configurations\WebConfigs\Web.macaubet.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.macaubet.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.mgm88.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.mgm88.master.config" />
+    <Content Include="Configurations\WebConfigs\Web.mgm88.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.mgm88.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.mymbet.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.mymbet.master.config" />
+    <Content Include="Configurations\WebConfigs\Web.mymbet.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.mymbet.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.nbcbet.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.nbcbet.master.config" />
+    <Content Include="Configurations\WebConfigs\Web.nbcbet.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.nbcbet.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.q8bola.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.q8bola.master.config" />
+    <Content Include="Configurations\WebConfigs\Web.q8bola.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.q8bola.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.royalebet.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.royalebet.master.config" />
+    <Content Include="Configurations\WebConfigs\Web.royalebet.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.royalebet.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.thbet.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.thbet.master.config" />
+    <Content Include="Configurations\WebConfigs\Web.thbet.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.thbet.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.wawabet.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.wawabet.master.config" />
+    <Content Include="Configurations\WebConfigs\Web.wawabet.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.wawabet.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.winner99.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.winner99.master.config" />
+    <Content Include="Configurations\WebConfigs\Web.winner99.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.winner99.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.yhy1980.local.config" />
     <Content Include="Configurations\WebConfigs\Web.yhy1980.master.config" />
     <Content Include="Configurations\WebConfigs\Web.yhy1980.production.config" />
     <Content Include="Configurations\WebConfigs\Web.yhy1980.uat.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.unobet.local.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.unobet.master.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.unobet.production.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.unobet.uat.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.28bet.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.28bet.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.28bet.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.28bet.uat.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.allbetclubs.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.allbetclubs.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.allbetclubs.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.allbetclubs.uat.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.uat.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.athena000.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.athena000.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.athena000.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.athena000.uat.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.be7.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.be7.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.be7.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.be7.uat.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.bwinning.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.bwinning.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.bwinning.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.bwinning.uat.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.goobet.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.goobet.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.goobet.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.goobet.uat.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.hbobet.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.hbobet.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.hbobet.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.hbobet.uat.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.i668bet.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.i668bet.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.i668bet.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.i668bet.uat.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.itcbet.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.itcbet.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.itcbet.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.itcbet.uat.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.m8bola.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.m8bola.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.m8bola.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.m8bola.uat.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.macaubet.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.macaubet.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.macaubet.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.macaubet.uat.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.mgm88.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.mgm88.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.mgm88.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.mgm88.uat.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.mymbet.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.mymbet.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.mymbet.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.mymbet.uat.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.nbcbet.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.nbcbet.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.nbcbet.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.nbcbet.uat.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.q8bola.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.q8bola.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.q8bola.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.q8bola.uat.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.royalebet.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.royalebet.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.royalebet.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.royalebet.uat.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.thbet.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.thbet.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.thbet.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.thbet.uat.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.wawabet.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.wawabet.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.wawabet.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.wawabet.uat.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.winner99.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.winner99.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.winner99.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.winner99.uat.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.yhy1980.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.yhy1980.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.yhy1980.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.yhy1980.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.unobet.local.config" />
     <Content Include="Configurations\WebConfigs\Web.unobet.master.config" />
     <Content Include="Configurations\WebConfigs\Web.unobet.production.config" />
     <Content Include="Configurations\WebConfigs\Web.unobet.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.unobet.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.unobet.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.unobet.master.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.unobet.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.unobet.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.unobet.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.unobet.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.unobet.uat.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.unobet.local.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.unobet.master.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.unobet.production.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.unobet.uat.config" />
+    <Content Include="Content\themes\theme28\index.less" />
+    <Content Include="Content\themes\theme28\mixins.less" />
+    <Content Include="Content\themes\theme28\variables.less" />
+    <None Include="Deployment.ignore" />
+    <None Include="img\Slot\H0005\Thumbs.db" />
+    <None Include="img\Slot\H0006\Thumbs.db" />
     <None Include="img\Slot\S0007\old image backup\20x20\icon_20x20_doubleWild.jpg.exclude" />
     <None Include="img\Slot\S0007\old image backup\40x40\icon_40x40_doubleWild.jpg.exclude" />
+    <None Include="img\Slot\S0032\Thumbs.db" />
     <None Include="Service References\AffBetlistService\AffiliateAPI.disco" />
     <None Include="Service References\AffBetlistService\configuration91.svcinfo" />
     <None Include="Service References\AffBetlistService\configuration.svcinfo" />
@@ -4442,106 +4744,6 @@
     <Content Include="GameData\GlobalSetting.ini" />
     <Content Include="GameData\VideoPoker\RV009\Settings.ini" />
     <Content Include="GameData\VideoPoker\RV010\Settings.ini" />
-    <Content Include="Configurations\WebConfigs\Web.28bet.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.28bet.production.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Configurations\WebConfigs\Web.28bet.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.28bet.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.allbetclubs.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.allbetclubs.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.allbetclubs.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.allbetclubs.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.aoncash.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.aoncash.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.aoncash.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.aoncash.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.athena000.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.athena000.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.athena000.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.athena000.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.be7.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.be7.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.be7.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.be7.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.bwinning.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.bwinning.production.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Configurations\WebConfigs\Web.bwinning.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.bwinning.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.goobet.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.goobet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.goobet.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.goobet.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.hbobet.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.hbobet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.hbobet.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.hbobet.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.i668bet.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.i668bet.production.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Configurations\WebConfigs\Web.i668bet.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.i668bet.uat.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Configurations\WebConfigs\Web.idlivebet365.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.idlivebet365.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.idlivebet365.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.idlivebet365.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.idlivebet365kiosk.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.idlivebet365kiosk.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.idlivebet365kiosk.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.idlivebet365kiosk.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.itcbet.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.itcbet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.itcbet.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.itcbet.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.livebet365.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.livebet365.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.livebet365.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.livebet365.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.livebet365kiosk.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.livebet365kiosk.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.livebet365kiosk.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.livebet365kiosk.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.m8bola.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.m8bola.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.m8bola.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.m8bola.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.macaubet.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.macaubet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.macaubet.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.macaubet.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.mgm88.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.mgm88.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.mgm88.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.mgm88.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.mymbet.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.mymbet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.mymbet.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.mymbet.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.q8bola.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.q8bola.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.q8bola.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.q8bola.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.royalebet.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.royalebet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.royalebet.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.royalebet.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.thbet.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.thbet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.thbet.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.thbet.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.wawabet.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.wawabet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.wawabet.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.wawabet.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.winner99.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.winner99.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.winner99.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.winner99.uat.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.28bet.local.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.28bet.production.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.28bet.sandbox.config" />
@@ -4636,117 +4838,13 @@
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.winner99.production.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.winner99.sandbox.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.winner99.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.28bet.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.28bet.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.28bet.sandbox.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.28bet.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.allbetclubs.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.allbetclubs.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.allbetclubs.sandbox.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.allbetclubs.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.aoncash.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.aoncash.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.aoncash.sandbox.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.aoncash.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.athena000.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.athena000.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.athena000.sandbox.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.athena000.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.be7.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.be7.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.be7.sandbox.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.be7.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.bwinning.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.bwinning.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.bwinning.sandbox.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.bwinning.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.goobet.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.goobet.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.goobet.sandbox.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.goobet.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.hbobet.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.hbobet.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.hbobet.sandbox.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.hbobet.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.i668bet.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.i668bet.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.i668bet.sandbox.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.i668bet.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.idlivebet365.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.idlivebet365.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.idlivebet365.sandbox.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.idlivebet365.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.idlivebet365kiosk.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.idlivebet365kiosk.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.idlivebet365kiosk.sandbox.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.idlivebet365kiosk.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.itcbet.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.itcbet.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.itcbet.sandbox.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.itcbet.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.livebet365.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.livebet365.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.livebet365.sandbox.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.livebet365.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.livebet365kiosk.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.livebet365kiosk.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.livebet365kiosk.sandbox.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.livebet365kiosk.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.m8bola.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.m8bola.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.m8bola.sandbox.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.m8bola.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.macaubet.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.macaubet.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.macaubet.sandbox.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.macaubet.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.mgm88.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.mgm88.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.mgm88.sandbox.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.mgm88.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.mymbet.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.mymbet.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.mymbet.sandbox.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.mymbet.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.q8bola.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.q8bola.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.q8bola.sandbox.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.q8bola.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.royalebet.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.royalebet.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.royalebet.sandbox.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.royalebet.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.thbet.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.thbet.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.thbet.sandbox.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.thbet.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.wawabet.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.wawabet.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.wawabet.sandbox.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.wawabet.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.winner99.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.winner99.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.winner99.sandbox.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.winner99.uat.config" />
     <Content Include="Content\themes\theme26\index.less" />
-    <Content Include="App_Data\Fanex.Result\Other.xls" />
-    <Content Include="App_Data\Fanex.Result\Racing.xls" />
-    <Content Include="App_Data\Fanex.Result\VSSpeedWay.xls" />
-    <None Include="Content\Fanex.Result\fanex.result.less" />
     <Content Include="Content\themes\theme26\mixins.less" />
     <Content Include="Content\themes\theme26\variables.less" />
-    <Content Include="Configurations\WebConfigs\Web.nbcbet.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.nbcbet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.nbcbet.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.nbcbet.uat.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.nbcbet.local.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.nbcbet.production.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.nbcbet.sandbox.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.nbcbet.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.nbcbet.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.nbcbet.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.nbcbet.sandbox.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSettings.nbcbet.uat.config" />
     <None Include="img\Slot\S0007\icon_20x20_doubleWild.jpg.exclude" />
     <None Include="img\Slot\S0007\icon_40x40_doubleWild.jpg.exclude" />
     <None Include="Properties\Settings.settings">
@@ -4754,22 +4852,15 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Service References\AffBetlistService\AffiliateAPI.wsdl" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
+    <Content Include="Views\Shared\_LayoutSimplePopup.cshtml">
+      <SubType>Code</SubType>
     </Content>
+    <Content Include="Web.config" />
+    <Content Include="Web.ConnectionString.config" />
+    <Content Include="Web.AppSetting.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
-      <SubType>Designer</SubType>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Web.ConnectionString.config">
-      <SubType>Designer</SubType>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Web.AppSettings.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
@@ -5065,6 +5156,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\AffBetlistService\" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

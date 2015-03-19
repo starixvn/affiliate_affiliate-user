@@ -1,24 +1,17 @@
 ﻿@{
     ViewBag.Title = Lang.BetList;
-    Layout = "~/Views/Shared/_LayoutPopup.cshtml";
 }
-
+    
 @Styles.Render("~/css/betlist")
-
-<style type="text/css">
-    .popup .container-fluid
-    {
-        margin: 0 0;
-    }
-    
-    .underdog, span.stake, span.handicap
-    {
-        font-weight: bold;
-    }
-    
-</style>
-
-@Html.Raw(ViewBag.Data)
-
+@if (string.IsNullOrEmpty(ViewBag.Data))
+{
+    Layout = "~/Views/Shared/_LayoutSimplePopup.cshtml";
+    <p style="font-size: 12px; font-weight: bold; text-align: center; margin-top: 7px;">No information is available.</p>
+}
+else
+{
+    Layout = "~/Views/Shared/_LayoutPopup.cshtml";
+    @Html.Raw(ViewBag.Data)
+}
 @Scripts.Render("~/js/jquery")
 @Scripts.Render("~/js/betlist")

@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = string.Format(Lang.AffiliateTitle, AppSettings.AffiliateName);
+    ViewBag.Title = string.Format(Lang.AffiliateTitle, AppSettings.SystemDisplayName);
     Layout = @String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
 }
 @model UserViewModel
@@ -16,7 +16,7 @@
             @Html.ValidationSummary()
             <div class="block">
                 <div class="content-block">
-                    @string.Format(Lang.CompleteForm, AppSettings.AffiliateName)
+                    @string.Format(Lang.CompleteForm, AppSettings.SystemDisplayName)
                     <br />
                     @Html.Raw(HttpUtility.HtmlDecode(Lang.RequireInfo))
                 </div>

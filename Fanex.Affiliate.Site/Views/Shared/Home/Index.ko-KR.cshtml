@@ -31,7 +31,7 @@
     <div class="content">
         <div class="block">
             <div class="content-block">
-                <p>@(AppSettings.AffiliateName)의 가맹자로서, 경기자의 계정 수명동안 @(AppSettings.AffiliateName)에 소개한 매 경기자에 대한 수수료를 받게됩니다. 저희의 온라인 보고 시스템은 일일 24시간, 주간 7일 동안 귀하가 사용할 수 있습니다. </p>
+                <p>@(AppSettings.SystemDisplayName)의 가맹자로서, 경기자의 계정 수명동안 @(AppSettings.SystemDisplayName)에 소개한 매 경기자에 대한 수수료를 받게됩니다. 저희의 온라인 보고 시스템은 일일 24시간, 주간 7일 동안 귀하가 사용할 수 있습니다. </p>
                 <p>얼마나 소득을 올리는지는 귀하의 웹사이트에서 보낸 트래픽 양에 달려있습니다.  경기자를 등록 과정을 통해 안내하고, 첫번째 금액 지급을 하도록하며, 저희의 매력적인 상여금과 제공물로 비즈니스를 영위하도록 하는 것은 저희의 일입니다.</p>
             </div>
         </div>
@@ -179,7 +179,7 @@
                 </div>
                 <div class="content-block">
                     <p>@string.Format("{0}에서 지불을 요청할 수 있습니다. 지불일의 해당 환율이 적용됩니다.", string.Join(", ", AppSettings.PlayerCurrencies.OrderBy(c => c.CurrencyCode).Select(x => x.CurrencyCode).ToArray()))</p>
-                    <p>저희는 귀하의 @AppSettings.AffiliateName 경기자 계좌를 통해서만 인출 방법을 제공합니다. 인출 요청의 최저액수는 각 가맹자의 기본 통화에 따라 달라집니다.</p>
+                    <p>저희는 귀하의 @AppSettings.SystemDisplayName 경기자 계좌를 통해서만 인출 방법을 제공합니다. 인출 요청의 최저액수는 각 가맹자의 기본 통화에 따라 달라집니다.</p>
                 </div>
             </div>
         }

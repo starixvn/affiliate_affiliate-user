@@ -31,13 +31,13 @@
             <div class="line-block">
             </div>
             <div class="content-block">
-                <b id="f1">@string.Format("Apakah Program Afiliasi {0} itu?", AppSettings.AffiliateName)</b>
+                <b id="f1">@string.Format("Apakah Program Afiliasi {0} itu?", AppSettings.SystemDisplayName)</b>
                 <br />
-                @Html.Raw(string.Format("Program Afiliasi {0}  merupakan program kemitraan dimana Anda akan mendapatkan komisi berdasarkan taruhan yang dilakukan oleh para pemain yang Anda rujuk kepada {1} dari Situs Web Anda melalui rujukan online atau offline", AppSettings.AffiliateName, Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                @Html.Raw(string.Format("Program Afiliasi {0}  merupakan program kemitraan dimana Anda akan mendapatkan komisi berdasarkan taruhan yang dilakukan oleh para pemain yang Anda rujuk kepada {1} dari Situs Web Anda melalui rujukan online atau offline", AppSettings.SystemDisplayName, Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
                 <p></p>
-                <b id="f2">@string.Format("Bagaimana cara mendaftar ke Program Afiliasi {0}?", AppSettings.AffiliateName) </b>
+                <b id="f2">@string.Format("Bagaimana cara mendaftar ke Program Afiliasi {0}?", AppSettings.SystemDisplayName) </b>
                 <br />
-                @Html.Raw(string.Format("Anda bebas bergabung dalam Program Afiliasi {0}. Isi saja {1} kami dan Anda akan dihubungi dalam waktu 3 hari kerja mengenai penerimaan dalam program. Jika permohonan Anda dikabulkan, Anda akan menerima email yang berisi ID afiliasi khusus bagi Anda yang dapat digunakan untuk mengakses banner, tautan teks, dan konten lainnya serta alat bantu pemasaran untuk ditambahkan ke situs web Anda.", AppSettings.AffiliateName, linkApplicationForm))
+                @Html.Raw(string.Format("Anda bebas bergabung dalam Program Afiliasi {0}. Isi saja {1} kami dan Anda akan dihubungi dalam waktu 3 hari kerja mengenai penerimaan dalam program. Jika permohonan Anda dikabulkan, Anda akan menerima email yang berisi ID afiliasi khusus bagi Anda yang dapat digunakan untuk mengakses banner, tautan teks, dan konten lainnya serta alat bantu pemasaran untuk ditambahkan ke situs web Anda.", AppSettings.SystemDisplayName, linkApplicationForm))
                 <p></p>
                 <b id="f3">Bagaimana bila saya tidak memiliki Situs Web, apakah saya masih tetap dapat bergabung?</b>
                 <br />
@@ -81,12 +81,12 @@
                 </p>
                 <b id="f6">Bagaimana memeriksa jumlah perolehan saya?</b>
                 <br />
-                @string.Format("Anda dapat login ke rekening afiliasi {0} untuk memeriksa status komisi Anda dalam waktu nyata, yang tersedia bagi Anda selama 24 jam sehari, 7 hari seminggu, dan 365 hari per tahun.", AppSettings.SystemName)
+                @string.Format("Anda dapat login ke rekening afiliasi {0} untuk memeriksa status komisi Anda dalam waktu nyata, yang tersedia bagi Anda selama 24 jam sehari, 7 hari seminggu, dan 365 hari per tahun.", AppSettings.SystemDisplayName)
                 <p>
                 </p>
                 <b>Bagaimanakah kebijakan Anda mengenai spamming?</b>
                 <br />
-                @string.Format("Kami tidak mentolerir spamming jenis apa pun oleh mitra afiliasi Anda. Jika spamming yang dilakukan afiliasi disampaikan kepada kami, kami akan memberikan peringatan kepada afiliasi itu (jika dinilai sebagai kasus ringan). Jika spamming tidak berhenti, mitra afiliasi itu akan selamanya dikeluarkan dari Program Afiliasi {0} kami. ", AppSettings.SystemName)
+                @string.Format("Kami tidak mentolerir spamming jenis apa pun oleh mitra afiliasi Anda. Jika spamming yang dilakukan afiliasi disampaikan kepada kami, kami akan memberikan peringatan kepada afiliasi itu (jika dinilai sebagai kasus ringan). Jika spamming tidak berhenti, mitra afiliasi itu akan selamanya dikeluarkan dari Program Afiliasi {0} kami. ", AppSettings.SystemDisplayName)
             </div>
         </div>
         <div class="block">
@@ -98,7 +98,7 @@
             <div class="content-block">
                 <b id="f7">Metode penarikan apa sajakah yang tersedia bagi saya?</b>
                 <br />
-                @string.Format("Anda dapat meminta penarikan langsung dari akun pemain {0} Anda.", AppSettings.SystemName)
+                @string.Format("Anda dapat meminta penarikan langsung dari akun pemain {0} Anda.", AppSettings.SystemDisplayName)
                 <p>
                 </p>
                 <b>Mata uang apa saja yang dapat digunakan untuk penarikan?</b>
@@ -124,7 +124,7 @@
             {
                 <br />
                 <div class="joinUsButton">
-                    <a class="signup" href="~/User/Index"><span>@string.Format("Bergabung dalam Program Afiliasi {0}", AppSettings.SystemName).ToUpper()</span></a>
+                    <a class="signup" href="~/User/Index"><span>@string.Format("Bergabung dalam Program Afiliasi {0}", AppSettings.SystemDisplayName).ToUpper()</span></a>
                 </div>
             }
         </div>

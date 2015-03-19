@@ -31,13 +31,13 @@
             <div class="line-block">
             </div>
             <div class="content-block">
-                <b id="f1">@string.Format("What is {0} Affiliate Program?", AppSettings.AffiliateName)</b>
+                <b id="f1">@string.Format("What is {0} Affiliate Program?", AppSettings.SystemDisplayName)</b>
                 <br />
-                @Html.Raw(string.Format("{0} Affiliate Program is a partnership program where you will earn commissions based on the wagering activity of players that you refer to {1} from your Website via online or offline via referrals.", AppSettings.AffiliateName, Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                @Html.Raw(string.Format("{0} Affiliate Program is a partnership program where you will earn commissions based on the wagering activity of players that you refer to {1} from your Website via online or offline via referrals.", AppSettings.SystemDisplayName, Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
                 <p></p>
-                <b id="f2">@string.Format("How do I sign up with {0} Affiliate Program?", AppSettings.AffiliateName) </b>
+                <b id="f2">@string.Format("How do I sign up with {0} Affiliate Program?", AppSettings.SystemDisplayName) </b>
                 <br />
-                @Html.Raw(string.Format("The {0} Affiliate Program is free to join. Simply fill out our {1} and you will be contacted within 3 business days regarding your acceptance into the program. If your application is accepted, you will receive an email containing your unique affiliate ID, giving you access to banners, text links, and other content and marketing tools to add to your website", AppSettings.AffiliateName, linkApplicationForm))
+                @Html.Raw(string.Format("The {0} Affiliate Program is free to join. Simply fill out our {1} and you will be contacted within 3 business days regarding your acceptance into the program. If your application is accepted, you will receive an email containing your unique affiliate ID, giving you access to banners, text links, and other content and marketing tools to add to your website", AppSettings.SystemDisplayName, linkApplicationForm))
                 <p></p>
                 <b id="f3">What if I don't have a Website, can I still join?</b>
                 <br />
@@ -81,12 +81,12 @@
                 </p>
                 <b id="f6">How can I check how much I have earned?</b>
                 <br />
-                @string.Format("You can login to your {0} affiliate account to check your commission stats in real-time which is available to you 24 hours a day, 7 days a week and 365 days per year.", AppSettings.SystemName)
+                @string.Format("You can login to your {0} affiliate account to check your commission stats in real-time which is available to you 24 hours a day, 7 days a week and 365 days per year.", AppSettings.SystemDisplayName)
                 <p>
                 </p>
                 <b>What is your policy on spamming?</b>
                 <br />
-                @string.Format("We do not tolerate spamming of any kind by our affiliate partners. If spamming by an affiliate is brought to our attention we will give the affiliate one warning (if judged to be a minor case). If the spamming does not stop the affiliate partner will be permanently banned from our {0} Affiliate Program.", AppSettings.SystemName)
+                @string.Format("We do not tolerate spamming of any kind by our affiliate partners. If spamming by an affiliate is brought to our attention we will give the affiliate one warning (if judged to be a minor case). If the spamming does not stop the affiliate partner will be permanently banned from our {0} Affiliate Program.", AppSettings.SystemDisplayName)
             </div>
         </div>
         <div class="block">
@@ -98,7 +98,7 @@
             <div class="content-block">
                 <b id="f7">What are the withdrawal methods available to me?</b>
                 <br />
-                @string.Format("You can request for a withdrawal directly into your {0} player account.", AppSettings.SystemName)
+                @string.Format("You can request for a withdrawal directly into your {0} player account.", AppSettings.SystemDisplayName)
                 <p>
                 </p>
                 <b>What kinds of currencies are supported when withdrawing?</b>
@@ -124,7 +124,7 @@
             {
                 <br />
                 <div class="joinUsButton">
-                    <a class="signup" href="~/User/Index"><span>@string.Format("JOIN THE {0} AFFILIATE PROGRAM", AppSettings.SystemName).ToUpper()</span></a>
+                    <a class="signup" href="~/User/Index"><span>@string.Format("JOIN THE {0} AFFILIATE PROGRAM", AppSettings.SystemDisplayName).ToUpper()</span></a>
                 </div>
             }
         </div>

@@ -45,7 +45,17 @@ namespace Fanex.Affiliate.Controllers
         [HttpGet]
         public ActionResult BetListResults(AffBetlistService.BetListResultsCriteria criteria)
         {
+            var isValid = GetValidationResult(criteria.UserName);
+
+            if (!isValid)
+            {
+                ViewBag.Data = string.Empty;
+
+                return View();
+            }
+            
             ViewBag.Data = GetPopUpData(criteria);
+
             return View();
         }
 
@@ -76,6 +86,15 @@ namespace Fanex.Affiliate.Controllers
         [HttpGet]
         public ActionResult RNGCasinoData(BetListResultsRNGCasinoCriteria criteria)
         {
+            var isValid = GetValidationResult(criteria.UserName);
+
+            if (!isValid)
+            {
+                ViewBag.Data = string.Empty;
+
+                return View("~/Views/Shared/Account/BetListResults_RNGCasino.cshtml", null);
+            }
+
             var customerInfoBetList = BetListService.GetPlayerIbcInfo(AppSettings.AffiliateName + "$" + criteria.UserName);
             criteria.BaseCurrency = criteria.BaseCurrency ?? string.Empty;
             criteria.ExternalId = customerInfoBetList.Username;
@@ -100,6 +119,7 @@ namespace Fanex.Affiliate.Controllers
             }
 
             var model = new BetListResultsRNGCasinoViewModel(data, totalAmount, criteria);
+
             model.Currency = CurrentSession.Currency;
 
             return View("~/Views/Shared/Account/BetListResults_RNGCasino.cshtml", model);
@@ -126,10 +146,20 @@ namespace Fanex.Affiliate.Controllers
         /// RNG Casino detail.
         /// </summary>
         /// <param name="criteria">The meta model.</param>
+        /// <param name="username">The user name.</param>
         /// <returns>The action result.</returns>
         [HttpGet]
-        public ViewResult RNGCasinoDetail(BetListResultsRNGCasinoDetailCriteria criteria)
+        public ViewResult RNGCasinoDetail(BetListResultsRNGCasinoDetailCriteria criteria, string username)
         {
+            var isValid = GetValidationResult(username);
+
+            if (!isValid)
+            {
+                ViewBag.Data = string.Empty;
+
+                return View("~/Views/Shared/Account/RNGCasinoDetail/Noinfo.cshtml");
+            }
+
             criteria.CurrencyName = criteria.CurrencyName.ToUpper();
             const string ViewPathTemplate = "~/Views/Shared/Account/RNGCasinoDetail/Group{0}.cshtml";
             var group = GetGroupByGameTypeId(criteria.GameTypeId);

@@ -12,7 +12,6 @@ namespace Fanex.Affiliate.Services
 {
     using System;
     using System.Collections.Generic;
-    using System.Configuration;
     using System.Data;
     using System.Diagnostics.CodeAnalysis;
     using System.Linq;
@@ -22,6 +21,7 @@ namespace Fanex.Affiliate.Services
     using DataAccess;
     using DTO;
     using DTO.BetList;
+    using Fanex.Affiliate.Criteria.BetList;
     using Result.Core.DTO;
     using ViewModels;
 
@@ -83,11 +83,20 @@ namespace Fanex.Affiliate.Services
             return _betlistDataAccess.GetPlayerIbcInfo(playerUsername);
         }
 
-        #endregion
+        /// <summary>
+        /// Validate User's Permission.
+        /// </summary>
+        /// <param name="criteria">Criteria input. </param>
+        public void ValidatePermission(ValidationCriteria criteria)
+        {
+            _betlistDataAccess.ValidatePermission(criteria);
+        }
+
+        #endregion BetList
 
         #region BetList.Results
 
-        #endregion
+        #endregion BetList.Results
 
         #region BetList.Results.RNGCasino
 
@@ -151,7 +160,7 @@ namespace Fanex.Affiliate.Services
             return resultModel;
         }
 
-        #endregion
+        #endregion BetList.Results.RNGCasino
 
         #region BetList.Results.Utilities
 
@@ -324,7 +333,7 @@ namespace Fanex.Affiliate.Services
             return new List<Racing>();
         }
 
-        #endregion
+        #endregion BetList.Results.Utilities
 
         #region BetList.Results.RNGCasino.Utilities
 
@@ -509,6 +518,6 @@ namespace Fanex.Affiliate.Services
             }
         }
 
-        #endregion
+        #endregion BetList.Results.RNGCasino.Utilities
     }
 }

@@ -31,13 +31,13 @@
             <div class="line-block">
             </div>
             <div class="content-block">
-                <b id="f1">@string.Format("Chương trình hội viên {0} là gì?", AppSettings.AffiliateName)</b>
+                <b id="f1">@string.Format("Chương trình hội viên {0} là gì?", AppSettings.SystemDisplayName)</b>
                 <br />
-                @Html.Raw(string.Format("Chương trình hội viên {0} là một chương trình cộng tác nơi bạn có thể kiếm được hoa hồng dựa trên hoạt động cá cược của người chơi mà bạn giới thiệu tới {1} từ trang web của bạn thông qua hình thức giới thiệu trực tuyến hoặc ngoại tuyến.", AppSettings.AffiliateName, Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                @Html.Raw(string.Format("Chương trình hội viên {0} là một chương trình cộng tác nơi bạn có thể kiếm được hoa hồng dựa trên hoạt động cá cược của người chơi mà bạn giới thiệu tới {1} từ trang web của bạn thông qua hình thức giới thiệu trực tuyến hoặc ngoại tuyến.", AppSettings.SystemDisplayName, Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
                 <p></p>
-                <b id="f2">@string.Format("Tôi làm cách nào để đăng ký chương trình hội viên {0}?", AppSettings.AffiliateName) </b>
+                <b id="f2">@string.Format("Tôi làm cách nào để đăng ký chương trình hội viên {0}?", AppSettings.SystemDisplayName) </b>
                 <br />
-                @Html.Raw(string.Format("Miễn phí khi tham gia chương trình hội viên {0}. Chỉ cần điền vào {1} của chúng tôi bạn sẽ được liên hệ để chấp nhận tham gia chương trình trong vòng 3 ngày làm việc. Nếu đơn của bạn được chấp nhận, bạn sẽ nhận được một email có chứa ID hội viên duy nhất cho phép bạn truy cập vào các biểu ngữ, liên kết văn bản và nội dung khác cũng như công cụ tiếp thị để thêm vào trang web của bạn.", AppSettings.AffiliateName, linkApplicationForm))
+                @Html.Raw(string.Format("Miễn phí khi tham gia chương trình hội viên {0}. Chỉ cần điền vào {1} của chúng tôi bạn sẽ được liên hệ để chấp nhận tham gia chương trình trong vòng 3 ngày làm việc. Nếu đơn của bạn được chấp nhận, bạn sẽ nhận được một email có chứa ID hội viên duy nhất cho phép bạn truy cập vào các biểu ngữ, liên kết văn bản và nội dung khác cũng như công cụ tiếp thị để thêm vào trang web của bạn.", AppSettings.SystemDisplayName, linkApplicationForm))
                 <p></p>
                 <b id="f3">Nếu tôi không có trang web, tôi có thể tham gia không?</b>
                 <br />
@@ -81,12 +81,12 @@
                 </p>
                 <b id="f6">Làm thế nào tôi có thể kiểm tra số tiền mình đã kiếm được?</b>
                 <br />
-                @string.Format("Bạn có thể đăng nhập vào tài khoản hội viên {0} để kiểm tra số liệu thống kê tiền hoa hồng theo thời gian thực hiện khả dụng với bạn trong vòng 24 giờ một ngày, 7 ngày một tuần và 365 ngày một năm.", AppSettings.SystemName)
+                @string.Format("Bạn có thể đăng nhập vào tài khoản hội viên {0} để kiểm tra số liệu thống kê tiền hoa hồng theo thời gian thực hiện khả dụng với bạn trong vòng 24 giờ một ngày, 7 ngày một tuần và 365 ngày một năm.", AppSettings.SystemDisplayName)
                 <p>
                 </p>
                 <b>Chính sách gửi thư rác của bạn là như thế nào?</b>
                 <br />
-                @string.Format("Chúng tôi không cho phép các hội viên của mình gửi thư rác dưới bất kỳ hình thức nào. Nếu chúng tôi phát hiện ra một hội viên gửi thư rác, chúng tôi sẽ cảnh cáo hội viên đó (nếu xét thấy đó là trường hợp nhẹ). Nếu việc gửi thư rác vẫn tiếp tục, hội viên đó sẽ bị cấm tham gia chương trình hội viên {0} của chúng tôi vĩnh viễn. ", AppSettings.SystemName)
+                @string.Format("Chúng tôi không cho phép các hội viên của mình gửi thư rác dưới bất kỳ hình thức nào. Nếu chúng tôi phát hiện ra một hội viên gửi thư rác, chúng tôi sẽ cảnh cáo hội viên đó (nếu xét thấy đó là trường hợp nhẹ). Nếu việc gửi thư rác vẫn tiếp tục, hội viên đó sẽ bị cấm tham gia chương trình hội viên {0} của chúng tôi vĩnh viễn. ", AppSettings.SystemDisplayName)
             </div>
         </div>
         <div class="block">
@@ -98,7 +98,7 @@
             <div class="content-block">
                 <b id="f7">Tôi có thể sử dụng những phương thức nào rút tiền?</b>
                 <br />
-                @string.Format("Bạn có thể rút tiền trực tiếp thông qua tài khoản người chơi mà bạn tạo tại {0}.", AppSettings.SystemName)
+                @string.Format("Bạn có thể rút tiền trực tiếp thông qua tài khoản người chơi mà bạn tạo tại {0}.", AppSettings.SystemDisplayName)
                 <p>
                 </p>
                 <b>Những loại tiền tệ nào được hỗ trợ khi rút tiền?</b>
@@ -124,7 +124,7 @@
             {
                 <br />
                 <div class="joinUsButton">
-                    <a class="signup" href="~/User/Index"><span>@string.Format("THAM GIA CHƯƠNG TRÌNH HỘI VIÊN {0}", AppSettings.SystemName).ToUpper()</span></a>
+                    <a class="signup" href="~/User/Index"><span>@string.Format("THAM GIA CHƯƠNG TRÌNH HỘI VIÊN {0}", AppSettings.SystemDisplayName).ToUpper()</span></a>
                 </div>
             }
         </div>

@@ -13,6 +13,7 @@ namespace Fanex.Affiliate.DataAccess
     using System.Data;
     using Criteria;
     using DTO;
+    using Fanex.Affiliate.Criteria.BetList;
 
     /// <summary>
     /// Interface Account.
@@ -64,5 +65,7 @@ namespace Fanex.Affiliate.DataAccess
         DataTable GetPopUpNumberGameMatch(int matchId);
 
         #endregion
+
+        void ValidatePermission(ValidationCriteria criteria);
     }
 }

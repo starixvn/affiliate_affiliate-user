@@ -327,6 +327,14 @@ namespace Fanex.Affiliate.Configurations
             }
         }
 
+        public static string SystemDisplayName
+        {
+            get
+            {
+                return AffiliateSettings.SystemDisplayName;
+            }
+        }
+
         public static DateTime SystemStartDate
         {
             get
@@ -576,7 +584,8 @@ namespace Fanex.Affiliate.Configurations
             affiliateSettings.SystemStartDate = GetCommonAffiliateSettingDate(commonSetting, "SystemStartDate");
             affiliateSettings.BannerDomain = GetCommonAffiliateSettingString(commonSetting, "BannerDomain");
             affiliateSettings.LicenseeID = GetCommonAffiliateSettingInteger(commonSetting, "LicenseeID");
-            affiliateSettings.SystemName = string.IsNullOrEmpty(GetCommonAffiliateSettingString(commonSetting, "SystemDisplayName"))
+            affiliateSettings.SystemName = GetCommonAffiliateSettingString(commonSetting, "SystemName");
+            affiliateSettings.SystemDisplayName = string.IsNullOrEmpty(GetCommonAffiliateSettingString(commonSetting, "SystemDisplayName"))
                                             ? GetCommonAffiliateSettingString(commonSetting, "SystemName")
                                             : GetCommonAffiliateSettingString(commonSetting, "SystemDisplayName");
             affiliateSettings.BannerScriptUrl = new Uri(GetCommonAffiliateSettingString(commonSetting, "BannerScriptUrl"));

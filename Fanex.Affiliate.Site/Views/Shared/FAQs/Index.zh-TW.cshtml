@@ -31,13 +31,13 @@
             <div class="line-block">
             </div>
             <div class="content-block">
-                <b id="f1">@string.Format("{0}合作夥伴計劃是甚麼？", AppSettings.AffiliateName)</b>
+                <b id="f1">@string.Format("{0}合作夥伴計劃是甚麼？", AppSettings.SystemDisplayName)</b>
                 <br />
-                @Html.Raw(string.Format("{0} 加盟計畫是一項合作夥伴計畫，您可以憑這份計畫賺取傭金，傭金的計算依據是您通過線上或離線介紹的方式從您的網站介紹到{1}的玩家的投注活動。", AppSettings.AffiliateName, Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                @Html.Raw(string.Format("{0} 加盟計畫是一項合作夥伴計畫，您可以憑這份計畫賺取傭金，傭金的計算依據是您通過線上或離線介紹的方式從您的網站介紹到{1}的玩家的投注活動。", AppSettings.SystemDisplayName, Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
                 <p></p>
-                <b id="f2">@string.Format("我如何登記{0}合作夥伴計劃？", AppSettings.AffiliateName) </b>
+                <b id="f2">@string.Format("我如何登記{0}合作夥伴計劃？", AppSettings.SystemDisplayName) </b>
                 <br />
-                @Html.Raw(string.Format("{0}合作夥伴計劃是免費參加的。簡單來說只要填好{1}，我們將會在三個工作天內審核您的申請。若你的申請被接納的話，您會收到電郵通知包括您的獨有的合作夥伴號碼，令您可以在您的網站上加上廣告橫額、文字連接及其他內容與及市場推廣工具等。", AppSettings.AffiliateName, linkApplicationForm))
+                @Html.Raw(string.Format("{0}合作夥伴計劃是免費參加的。簡單來說只要填好{1}，我們將會在三個工作天內審核您的申請。若你的申請被接納的話，您會收到電郵通知包括您的獨有的合作夥伴號碼，令您可以在您的網站上加上廣告橫額、文字連接及其他內容與及市場推廣工具等。", AppSettings.SystemDisplayName, linkApplicationForm))
                 <p></p>
                 <b id="f3">我沒有自己的網站，還能加盟嗎？</b>
                 <br />
@@ -81,12 +81,12 @@
                 </p>
                 <b id="f6">我如何得知自己賺取了多少獎額？</b>
                 <br />
-                @string.Format("你可以登入你在{0}的合作夥伴會員戶口，查核你所賺取所得的回佣金額。{0}為您提供全年7X24小時查核服務。", AppSettings.SystemName)
+                @string.Format("你可以登入你在{0}的合作夥伴會員戶口，查核你所賺取所得的回佣金額。{0}為您提供全年7X24小時查核服務。", AppSettings.SystemDisplayName)
                 <p>
                 </p>
                 <b>你們的濫發廣告政策定義是甚麼？</b>
                 <br />
-                @string.Format("我們不容忍會員介紹合伙人作出任何形式的濫發廣告行為。如果有關合伙人的濫發行為被我們發現到，我們會向該合伙人發出一次警告(如果只是較小型問題的話)；如果合伙人仍然不停止有關濫發行為，{0}的會員介紹系統會立即封停該合伙人的會員介紹合伙關係。", AppSettings.SystemName)
+                @string.Format("我們不容忍會員介紹合伙人作出任何形式的濫發廣告行為。如果有關合伙人的濫發行為被我們發現到，我們會向該合伙人發出一次警告(如果只是較小型問題的話)；如果合伙人仍然不停止有關濫發行為，{0}的會員介紹系統會立即封停該合伙人的會員介紹合伙關係。", AppSettings.SystemDisplayName)
             </div>
         </div>
         <div class="block">
@@ -98,7 +98,7 @@
             <div class="content-block">
                 <b id="f7">有哪些可行的提款方式？</b>
                 <br />
-                @string.Format("您可以直接在{0}中您的玩家帳戶中要求提款。", AppSettings.SystemName)
+                @string.Format("您可以直接在{0}中您的玩家帳戶中要求提款。", AppSettings.SystemDisplayName)
                 <p>
                 </p>
                 <b>提款支持哪些貨幣？</b>
@@ -124,7 +124,7 @@
             {
                 <br />
                 <div class="joinUsButton">
-                    <a class="signup" href="~/User/Index"><span>@string.Format("加入{0}會員介紹合作計劃", AppSettings.SystemName).ToUpper()</span></a>
+                    <a class="signup" href="~/User/Index"><span>@string.Format("加入{0}會員介紹合作計劃", AppSettings.SystemDisplayName).ToUpper()</span></a>
                 </div>
             }
         </div>

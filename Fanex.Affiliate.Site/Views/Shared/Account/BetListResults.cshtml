@@ -1,9 +1,9 @@
 ﻿@{
     ViewBag.Title = Lang.BetListResults;
-    Layout = "~/Views/Shared/_LayoutPopup.cshtml";
 }
 
 @Styles.Render("~/css/betlist")
+@Styles.Render("~/css/tooltip")
 
 <style type="text/css">
     .popup .container-fluid
@@ -18,7 +18,25 @@
     
 </style>
 
-@Html.Raw(ViewBag.Data)
+@if (string.IsNullOrEmpty(ViewBag.Data))
+{
+    Layout = "~/Views/Shared/_LayoutSimplePopup.cshtml";
+    <p style="font-size: 12px; font-weight: bold; text-align: center; margin-top: 7px;">No information is available.</p>
+}
+else
+{
+    Layout = "~/Views/Shared/_LayoutPopup.cshtml";
+    @Html.Raw(ViewBag.Data)
+}
 
-@Scripts.Render("~/js/jquery")
-@Scripts.Render("~/js/betlist")
+
+@section scripts {
+    @Scripts.Render("~/js/betlist")
+    @Scripts.Render("~/js/tooltip")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.penalty-result').tipsy({ opacity: 1.0 });
+        });
+    </script>
+}

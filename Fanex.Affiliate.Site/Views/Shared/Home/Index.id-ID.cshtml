@@ -31,7 +31,7 @@
     <div class="content">
         <div class="block">
             <div class="content-block">
-                <p>@Html.Raw(string.Format("Sebagai Afiliasi {0}, Anda akan memperoleh komisi atas setiap pemain yang Anda rujukkan ke {0} selama masa berlaku rekening pemain itu. Sistem pelaporan online kami akan tersedia selama 24 jam sehari, 7 hari seminggu untuk Anda gunakan.", AppSettings.AffiliateName))</p>
+                <p>@Html.Raw(string.Format("Sebagai Afiliasi {0}, Anda akan memperoleh komisi atas setiap pemain yang Anda rujukkan ke {0} selama masa berlaku rekening pemain itu. Sistem pelaporan online kami akan tersedia selama 24 jam sehari, 7 hari seminggu untuk Anda gunakan.", AppSettings.SystemDisplayName))</p>
                 <p>Perolehan Anda akan bergantung pada jumlah trafik yang dapat Anda kirim melalui situs web Anda. Tugas kami adalah memandu mereka menjalani proses pendaftaran, meminta mereka untuk membayarkan setoran pertama, dan menjaga bisnis mereka dengan berbagai bonus dan penawaran kami yang menarik. </p>
             </div>
         </div>
@@ -179,7 +179,7 @@
                 </div>
                 <div class="content-block">
                     <p>@string.Format("Anda dapat meminta pembayaran dalam mata uang {0}. Pada tanggal pembayaran akan digunakan masing-2 kurs jual beli yang berlaku.", string.Join(", ", AppSettings.PlayerCurrencies.OrderBy(c => c.CurrencyCode).Select(x => x.CurrencyCode).ToArray()))</p>
-                    <p>@string.Format("Kami menawarkan metode penarikan hanya melalui akun pemain {0} Anda. Jumlah minimum dari permintaan penarikan tergantung pada setiap mata uang dasar afiliasi.", AppSettings.AffiliateName)</p>
+                    <p>@string.Format("Kami menawarkan metode penarikan hanya melalui akun pemain {0} Anda. Jumlah minimum dari permintaan penarikan tergantung pada setiap mata uang dasar afiliasi.", AppSettings.SystemDisplayName)</p>
                 </div>
             </div>
         }

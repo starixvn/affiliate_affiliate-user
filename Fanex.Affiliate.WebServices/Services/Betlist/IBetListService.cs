@@ -86,9 +86,10 @@ namespace Fanex.Affiliate.WebServices.Services
         /// <summary>
         /// Get Racing's results.
         /// </summary>
+        /// <param name="matchId">Match ID value.</param>
         /// <param name="raceNo">Race Number value.</param>
         /// <returns>The Racing's results.</returns>
-        IList<Racing> GetRacingResults(int raceNo);
+        IList<Racing> GetRacingResults(int matchId, int raceNo);
 
         /// <summary>
         /// Get Parlay's results.
@@ -100,6 +101,12 @@ namespace Fanex.Affiliate.WebServices.Services
         #endregion
 
         #region BetList.Results.RNGCasino
+
+        #endregion
+
+        #region Constraint Permission
+
+        void ValidatePermission(ValidationCriteria criteria);
 
         #endregion
     }

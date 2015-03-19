@@ -257,12 +257,33 @@ namespace Fanex.Affiliate.Controllers
             criteria.AffId = CurrentSession.AffId;
             model.ProductId = criteria.ProductId;
             model.ListDailyEarningDetail = AccountService.GetDailyEarningsDetail(criteria).ToList();
-            model.ShowPlaytechCasinoData = (model.ProductId == 0 && model.ListProduct.Count(l => l.OriginalProductName == "Casino") > 0)
-                || (model.ProductId != 0 && model.ListProduct.Where(i => i.ProductId == model.ProductId).First().OriginalProductName == "Casino");
+            model.ShowPlaytechCasinoData = HasShowPlaytechCasino(model);
             FormaterCurrency.SetDefaultCurrency(criteria.AffCurrency);
             ViewBag.AffiliateCurrency = CurrentSession.Currency;
 
             return View(model);
+        }
+
+        /// <summary>
+        /// Has Show Play Tech Casino.
+        /// </summary>
+        /// <param name="model">Model input.</param>
+        /// <returns>Show or don't show play tech.</returns>
+        public bool HasShowPlaytechCasino(DailyEarningsKioskDetailViewModel model)
+        {
+            if (model.ProductId == 0 && model.ListProduct.Count(l => l.OriginalProductName == "Casino") > 0)
+            {
+                return true;
+            }
+
+            var firstProduct = model.ListProduct.FirstOrDefault(i => i.ProductId == model.ProductId);
+
+            if (firstProduct == null)
+            {
+                return false;
+            }
+
+            return model.ProductId != 0 && firstProduct.OriginalProductName == "Casino";
         }
 
         #endregion Daily Earnings
@@ -514,13 +535,13 @@ namespace Fanex.Affiliate.Controllers
 
             var emailTitle = string.Format(
                 "{0} Affiliates - {1} - {2}",
-                AppSettings.AffiliateName,
+                AppSettings.SystemDisplayName,
                 paymentRequest.TransID,
                 Lang.RequestPaymentEmailTitle);
             var siteDomainInfo = GetSiteDomainInfo();
             dynamic emailContent = new
             {
-                AffiliateName = AppSettings.AffiliateName,
+                AffiliateName = AppSettings.SystemDisplayName,
                 CurrentMemberSiteDomain = siteDomainInfo.MemberSiteDomain,
                 MemberSiteDomainEmail = siteDomainInfo.MemberSiteDomainEmail,
                 FirstName = CurrentSession.FirstName,
@@ -617,11 +638,11 @@ namespace Fanex.Affiliate.Controllers
             AppSession.Language = paymentCancel.PreferredLanguage;
             ChangeSystemLanguage();
 
-            var emailTitle = string.Format("{0} Affiliates - {1} - {2}", AppSettings.AffiliateName, transId, Lang.RequestPaymentEmailTitle);
+            var emailTitle = string.Format("{0} Affiliates - {1} - {2}", AppSettings.SystemDisplayName, transId, Lang.RequestPaymentEmailTitle);
             var siteDomainInfo = GetSiteDomainInfo();
             dynamic emailContent = new
             {
-                AffiliateName = AppSettings.AffiliateName,
+                AffiliateName = AppSettings.SystemDisplayName,
                 CurrentMemberSiteDomain = siteDomainInfo.MemberSiteDomain,
                 MemberSiteDomainEmail = siteDomainInfo.MemberSiteDomainEmail,
                 FirstName = CurrentSession.FirstName,
@@ -913,7 +934,7 @@ namespace Fanex.Affiliate.Controllers
             var siteDomainInfo = GetSiteDomainInfo();
             dynamic emailContent = new
             {
-                AffiliateName = AppSettings.AffiliateName,
+                AffiliateName = AppSettings.SystemDisplayName,
                 CurrentMemberSiteDomain = siteDomainInfo.MemberSiteDomain,
                 MemberSiteDomainEmail = siteDomainInfo.MemberSiteDomainEmail,
                 FirstName = "Mai Ngao Suong",
@@ -933,7 +954,7 @@ namespace Fanex.Affiliate.Controllers
             };
             var affiliateEmailBody = (new EmailTemplateResolverService()).GetEmailBody(templatePath, emailContent);
 
-            var affiliateSubject = string.Format(Lang.SignUpMailSubject, AppSettings.AffiliateName);
+            var affiliateSubject = string.Format(Lang.SignUpMailSubject, AppSettings.SystemDisplayName);
             Common.SendEmail(affiliateEmailBody, email, affiliateSubject, AppSettings.BccMail);
 
             // Send mail to CSD
@@ -953,7 +974,7 @@ namespace Fanex.Affiliate.Controllers
 
             dynamic emailContent = new
                                     {
-                                        AffiliateName = AppSettings.AffiliateName,
+                                        AffiliateName = AppSettings.SystemDisplayName,
                                         FirstName = "Suong",
                                         LastName = "Mai Ngao",
                                         UserName = "MaiNgaoSuong",
@@ -962,7 +983,7 @@ namespace Fanex.Affiliate.Controllers
                                         MailContact = AppSettings.MailContact
                                     };
 
-            var emailTitle = string.Format(Lang.CsdMailSubject, AppSettings.AffiliateName, "MaiNgaoSuong");
+            var emailTitle = string.Format(Lang.CsdMailSubject, AppSettings.SystemDisplayName, "MaiNgaoSuong");
             var emailBody = (new EmailTemplateResolverService()).GetEmailBody(templatePath, emailContent);
             Common.SendEmail(emailBody, email, emailTitle, AppSettings.BccMail);
         }
@@ -986,7 +1007,7 @@ namespace Fanex.Affiliate.Controllers
             var recoverPasswordUrl = string.Format("{0}User/RecoverPassword", siteDomainInfo.AffiliateDomain);
             dynamic emailContent = new
             {
-                AffiliateName = AppSettings.AffiliateName,
+                AffiliateName = AppSettings.SystemDisplayName,
                 CurrentMemberSiteDomain = siteDomainInfo.MemberSiteDomain,
                 MemberSiteDomainEmail = siteDomainInfo.MemberSiteDomainEmail,
                 FirstName = "Suong",
@@ -1009,7 +1030,7 @@ namespace Fanex.Affiliate.Controllers
                 FooterFontColor = AppSettings.EmailFooterFontColor
             };
             var emailBody = (new EmailTemplateResolverService()).GetEmailBody(templatePath, emailContent);
-            Common.SendEmail(emailBody, email, string.Format(Lang.ForgetPasswordEmailTitle, AppSettings.AffiliateName), AppSettings.BccMail);
+            Common.SendEmail(emailBody, email, string.Format(Lang.ForgetPasswordEmailTitle, AppSettings.SystemDisplayName), AppSettings.BccMail);
 
             AppSession.Language = currentLanguage;
             ChangeSystemLanguage();
@@ -1035,7 +1056,7 @@ namespace Fanex.Affiliate.Controllers
             changePasswordUrl = regex.Replace(changePasswordUrl, string.Empty);
             dynamic emailContent = new
             {
-                AffiliateName = AppSettings.AffiliateName,
+                AffiliateName = AppSettings.SystemDisplayName,
                 CurrentMemberSiteDomain = siteDomainInfo.MemberSiteDomain,
                 MemberSiteDomainEmail = siteDomainInfo.MemberSiteDomainEmail,
                 FirstName = "Suong",
@@ -1060,7 +1081,7 @@ namespace Fanex.Affiliate.Controllers
 
             var emailBody = (new EmailTemplateResolverService()).GetEmailBody(templatePath, emailContent);
 
-            Common.SendEmail(emailBody, email, string.Format(Lang.ChangePasswordEmailTitle, AppSettings.AffiliateName), AppSettings.BccMail);
+            Common.SendEmail(emailBody, email, string.Format(Lang.ChangePasswordEmailTitle, AppSettings.SystemDisplayName), AppSettings.BccMail);
 
             AppSession.Language = currentLanguage;
             ChangeSystemLanguage();

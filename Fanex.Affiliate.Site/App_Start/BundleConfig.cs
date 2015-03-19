@@ -119,6 +119,7 @@ namespace Fanex.Affiliate.Site
             RegisterFunctionUser(bundles);
             RegisterFunctionAccount(bundles);
             RegisterFunctionBetList(bundles);
+            RegisterFunctionToolTips(bundles);
         }
 
         /// <summary>
@@ -200,7 +201,8 @@ namespace Fanex.Affiliate.Site
             .Include("~/Content/betlist/betlist.core.css")
             .Include("~/Content/betlist/systemparlay.detail.css")
             .Include("~/Content/betlist/rngcasino.handhistory.css")
-            .Include("~/Content/betlist/fanex.result.css"));
+            .Include("~/Content/betlist/fanex.result.css")
+            .Include("~/Content/betlist/custom-betlist.css"));
 
             bundles.Add(new ScriptBundle("~/js/betlist")
                 .Include("~/Scripts/site/betlist.js"));
@@ -215,6 +217,24 @@ namespace Fanex.Affiliate.Site
             }
             .Include("~/Content/betlist/global.content.css")
             .Include("~/Content/betlist/systemparlay.detail.css"));
+        }
+
+        /// <summary>
+        /// Register Function Tool Tips.
+        /// </summary>
+        /// <param name="bundles">Bundle Collection.</param>
+        private static void RegisterFunctionToolTips(BundleCollection bundles)
+        {
+            bundles.Add(new Bundle("~/css/tooltip")
+                        {
+                            Transforms = { new CssTransformer(), new CssMinify() },
+                            Orderer = new NullOrderer()
+                        }
+                        .Include("~/Content/tipsy/tipsy.css")
+                        .Include("~/Content/tipsy/custom-tipsy.css"));
+
+            bundles.Add(new ScriptBundle("~/js/tooltip")
+                .Include("~/Scripts/libraries/jquery.tipsy.js"));
         }
 
         #endregion Functions

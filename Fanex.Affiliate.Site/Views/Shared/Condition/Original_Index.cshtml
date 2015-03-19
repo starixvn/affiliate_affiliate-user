@@ -17,15 +17,15 @@
     <div class="content">
         <div class="block">
             <div class="content-block">
-                @string.Format(Terms.TC_BecomeAffiliate, AppSettings.SystemName)
+                @string.Format(Terms.TC_BecomeAffiliate, AppSettings.SystemDisplayName)
                 <p></p>
-                @string.Format(Terms.TC_IfYouDecide, AppSettings.SystemName)
+                @string.Format(Terms.TC_IfYouDecide, AppSettings.SystemDisplayName)
                 <p></p>
                 @Terms.TC_WeReserveTheRight
                 <p></p>
-                @string.Format(Terms.TC_AsPolicy, AppSettings.SystemName)
+                @string.Format(Terms.TC_AsPolicy, AppSettings.SystemDisplayName)
                 <p></p>
-                @string.Format(Terms.TC_ThisAgreementDetails, AppSettings.SystemName)
+                @string.Format(Terms.TC_ThisAgreementDetails, AppSettings.SystemDisplayName)
             </div>
         </div>
         <div class="block">
@@ -34,9 +34,9 @@
             </div>
             <div class="line-block"></div>
             <ol class="content-block">
-                <li>@string.Format(Terms.TC_YouAreResponsible, AppSettings.SystemName)</li> 
-                <li>@string.Format(Terms.TC_YouWillAgree, AppSettings.SystemName)</li>
-                <li>@string.Format(Terms.TC_YouWillPresent, AppSettings.SystemName)</li>
+                <li>@string.Format(Terms.TC_YouAreResponsible, AppSettings.SystemDisplayName)</li> 
+                <li>@string.Format(Terms.TC_YouWillAgree, AppSettings.SystemDisplayName)</li>
+                <li>@string.Format(Terms.TC_YouWillPresent, AppSettings.SystemDisplayName)</li>
                 <li>@string.Format(Terms.TC_YouWillBeResponsible)</li>
             </ol>
         </div>
@@ -46,16 +46,16 @@
             </div>
             <div class="line-block"></div>
             <ol class="content-block">
-                <li>@string.Format(Terms.TC_OnlyApprovedAndProperlyTagged, AppSettings.SystemName)</li>
-                <li>@string.Format(Terms.TC_YouMayNotModifyOrUse, AppSettings.SystemName)</li>
-                <li>@string.Format(Terms.TC_ByAgreeingToParticipate, AppSettings.SystemName)</li>
+                <li>@string.Format(Terms.TC_OnlyApprovedAndProperlyTagged, AppSettings.SystemDisplayName)</li>
+                <li>@string.Format(Terms.TC_YouMayNotModifyOrUse, AppSettings.SystemDisplayName)</li>
+                <li>@string.Format(Terms.TC_ByAgreeingToParticipate, AppSettings.SystemDisplayName)</li>
                 <li>@Terms.TC_BannersAndLinksMayNotBePlaced</li>
-                <li>@string.Format(Terms.TC_WeWillTerminate, AppSettings.SystemName)</li>
-                <li>@string.Format(Terms.TC_YouShallNotMakeAnyClaims, AppSettings.SystemName)</li>
-                <li>@string.Format(Terms.TC_WithoutOrPriorWrittenApproval, AppSettings.SystemName)</li>
-                <li>@string.Format(Terms.TC_YouWillNotKnowinglyBenefit, AppSettings.SystemName)</li>
-                <li>@string.Format(Terms.TC_AffiliatesAreProhibited, AppSettings.SystemName)</li>
-                <li>@string.Format(Terms.TC_YouAreNotAllowed, AppSettings.SystemName)
+                <li>@string.Format(Terms.TC_WeWillTerminate, AppSettings.SystemDisplayName)</li>
+                <li>@string.Format(Terms.TC_YouShallNotMakeAnyClaims, AppSettings.SystemDisplayName)</li>
+                <li>@string.Format(Terms.TC_WithoutOrPriorWrittenApproval, AppSettings.SystemDisplayName)</li>
+                <li>@string.Format(Terms.TC_YouWillNotKnowinglyBenefit, AppSettings.SystemDisplayName)</li>
+                <li>@string.Format(Terms.TC_AffiliatesAreProhibited, AppSettings.SystemDisplayName)</li>
+                <li>@string.Format(Terms.TC_YouAreNotAllowed, AppSettings.SystemDisplayName)
                     
                 </li>
             </ol>
@@ -66,8 +66,8 @@
             </div>
             <div class="line-block"></div>
             <ol class="content-block">
-                <li>@string.Format(Terms.TC_YouAreResponsibleForDirecting, AppSettings.SystemName)</li>
-                <li>@string.Format(Terms.TC_OnlyTaggedCustermor, AppSettings.SystemName)</li>
+                <li>@string.Format(Terms.TC_YouAreResponsibleForDirecting, AppSettings.SystemDisplayName)</li>
+                <li>@string.Format(Terms.TC_OnlyTaggedCustermor, AppSettings.SystemDisplayName)</li>
             </ol>
         </div>
         <div class="block">
@@ -76,21 +76,21 @@
             </div>
             <div class="line-block"></div>
             <ol class="content-block">
-                <li>@Html.Raw(string.Format(Terms.TC_WillPayoutRevenueShare, AppSettings.SystemName, string.Format("<a href=mailto:{0}>{0}</a>", AppSettings.MailContact)))</li>
+                <li>@Html.Raw(string.Format(Terms.TC_WillPayoutRevenueShare, AppSettings.SystemDisplayName, string.Format("<a href=mailto:{0}>{0}</a>", AppSettings.MailContact)))</li>
                 <li>@Html.Raw(string.Format(Terms.TC_ActiveWageringMembers, AppSettings.DefaultCurrencySymbol, AppSettings.MinimumWithdrawalAmount,
                     string.Format("<a href=mailto:{0}>{0}</a>", AppSettings.MailContact)))</li>
-                <li>@string.Format(Terms.TC_CommissionableEarnings, AppSettings.SystemName)</li>
+                <li>@string.Format(Terms.TC_CommissionableEarnings, AppSettings.SystemDisplayName)</li>
                 <li>@Terms.TC_ChargebackCreditCard</li>
-                <li>@string.Format(Terms.TC_GrossWinIsTotalOfAllAmount, AppSettings.SystemName)</li>
+                <li>@string.Format(Terms.TC_GrossWinIsTotalOfAllAmount, AppSettings.SystemDisplayName)</li>
                 <li>@Terms.TC_ChargebacksAreAmounts</li>
                 <li>@Terms.TC_ShouldPlayerProcess</li>
-                <li>@string.Format(Terms.TC_ChargebackWillStayDue, AppSettings.SystemName)</li>
-                <li>@string.Format(Terms.TC_BonusesInclucdeComplimentaryMoney, AppSettings.SystemName)</li>
-                <li>@string.Format(Terms.TC_ShouldYouFailToBeEntitled, AppSettings.SystemName)</li>
-                <li>@string.Format(Terms.TC_CommissionableEarningsWillBeSubject, AppSettings.SystemName)</li>
+                <li>@string.Format(Terms.TC_ChargebackWillStayDue, AppSettings.SystemDisplayName)</li>
+                <li>@string.Format(Terms.TC_BonusesInclucdeComplimentaryMoney, AppSettings.SystemDisplayName)</li>
+                <li>@string.Format(Terms.TC_ShouldYouFailToBeEntitled, AppSettings.SystemDisplayName)</li>
+                <li>@string.Format(Terms.TC_CommissionableEarningsWillBeSubject, AppSettings.SystemDisplayName)</li>
                 <li>@Terms.TC_NegativeEarningAreCarried</li>
                 <li>@Terms.TC_CommissionableEarningsOfAffiliate</li>
-                <li>@string.Format(Terms.TC_AffiliatesWillNotEarn, AppSettings.SystemName)</li>
+                <li>@string.Format(Terms.TC_AffiliatesWillNotEarn, AppSettings.SystemDisplayName)</li>
             </ol>
         </div>
         <div class="block">
@@ -99,7 +99,7 @@
             </div>
             <div class="line-block"></div>
             <ol class="content-block">
-                <li>@string.Format(Terms.TC_AssumeOwnershipOfCustomer, AppSettings.SystemName)</li>
+                <li>@string.Format(Terms.TC_AssumeOwnershipOfCustomer, AppSettings.SystemDisplayName)</li>
                 <li>@Terms.TC_ByOpeningAccountWithCustomer</li>
                 <li>@Terms.TC_DuringTheTermsOfAgreement</li>
             </ol>
@@ -131,7 +131,7 @@
                 <li>@Terms.TC_WeMayModifyAnyTerm</li>
                 <li>@Terms.TC_WeDontCondoneSpam
                     <ol type="a">
-                        <li>@string.Format(Terms.TC_AnyFormOfSpam, AppSettings.SystemName)</li>
+                        <li>@string.Format(Terms.TC_AnyFormOfSpam, AppSettings.SystemDisplayName)</li>
                         <li>@Terms.TC_ShouldTheseExpenses</li>
                         <li>@Terms.TC_WeAreIndependentContractors</li>
                     </ol>
@@ -173,7 +173,7 @@
                 </li>
                 <li>@Terms.TC_EventOfTermination: 
                     <ol type="a">
-                        <li>@string.Format(Terms.TC_YouMustRemoveBanners, AppSettings.SystemName)</li>
+                        <li>@string.Format(Terms.TC_YouMustRemoveBanners, AppSettings.SystemDisplayName)</li>
                         <li>@Terms.TC_AllRightsAndLicenses</li>
                         <li>@Terms.TC_YouWillBeEntitled</li>
                         <li>@Terms.TC_IfYouHaveFailedToFulfill</li>
@@ -201,7 +201,7 @@
             </div>
             <div class="line-block"></div>
             <div class="content-block">
-                @string.Format(Terms.TC_YouAgreeToIndemnify, AppSettings.SystemName):
+                @string.Format(Terms.TC_YouAgreeToIndemnify, AppSettings.SystemDisplayName):
                 <ol>
                     <li>@Terms.TC_AnyClaimThat</li>
                     <li>@Terms.TC_AnyMisrepresentation</li>
@@ -252,7 +252,7 @@
             </div>
             <div class="line-block"></div>
             <div class="content-block">
-                @string.Format(Terms.TC_ByHavingRead, AppSettings.SystemName)
+                @string.Format(Terms.TC_ByHavingRead, AppSettings.SystemDisplayName)
             </div>
         </div>
     </div>

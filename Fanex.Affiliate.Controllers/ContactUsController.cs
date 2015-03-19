@@ -151,7 +151,7 @@ namespace Fanex.Affiliate.Controllers
 
             dynamic emailContent = new
                                     {
-                                        AffiliateName = AppSettings.AffiliateName,
+                                        AffiliateName = AppSettings.SystemDisplayName,
                                         Name = criteria.Sender,
                                         AffID = CurrentSession != null ? CurrentSession.AffId.ToString() : string.Empty,
                                         Email = criteria.Email,
@@ -160,7 +160,7 @@ namespace Fanex.Affiliate.Controllers
                                         MailContact = AppSettings.MailContact
                                     };
 
-            var emailTitle = string.Format("{0} Affiliates - Contact Us – {1}", AppSettings.AffiliateName, criteria.Subject);
+            var emailTitle = string.Format("{0} Affiliates - Contact Us – {1}", AppSettings.SystemDisplayName, criteria.Subject);
             var emailBody = (new EmailTemplateResolverService()).GetEmailBody(templatePath, emailContent);
             Common.SendEmail(emailBody, AppSettings.MailContact, emailTitle, AppSettings.BccMail);
         }

@@ -87,9 +87,10 @@ namespace Fanex.Affiliate.WebServices.DataAccess
         /// <summary>
         /// Get Racing's results.
         /// </summary>
+        /// <param name="matchId">Match ID value.</param>
         /// <param name="raceNo">Race Number value.</param>
         /// <returns>The Racing's results.</returns>
-        IEnumerable<Racing> GetRacingResults(int raceNo);
+        IEnumerable<Racing> GetRacingResults(int matchId, int raceNo);
 
         /// <summary>
         /// Get Parlay's results.
@@ -99,5 +100,7 @@ namespace Fanex.Affiliate.WebServices.DataAccess
         IEnumerable<Parlay> GetParlayResults(long refNo);
 
         #endregion
+
+        void ValidatePermission(ValidationCriteria criteria);
     }
 }

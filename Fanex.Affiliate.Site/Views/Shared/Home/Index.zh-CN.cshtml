@@ -31,7 +31,7 @@
     <div class="content">
         <div class="block">
             <div class="content-block">
-                <p>@Html.Raw(string.Format("成为{0}合作伙件后，由您推荐到{0}的每位玩家只要使用账户就可以为您带来即时的佣金。我们的线上汇报系统会7×24小时供您查阅。", AppSettings.AffiliateName))</p>
+                <p>@Html.Raw(string.Format("成为{0}合作伙件后，由您推荐到{0}的每位玩家只要使用账户就可以为您带来即时的佣金。我们的线上汇报系统会7×24小时供您查阅。", AppSettings.SystemDisplayName))</p>
                 <p>您赚取的利润多少取决于您的网站引导带来的顾客浏览量，我们的任务是指导他们完成注册和首存，并用我们诱人的红利和水位留住他们。</p>
             </div>
         </div>
@@ -179,7 +179,7 @@
                 </div>
                 <div class="content-block">
                     <p>@string.Format("您可以要求按{0}付款。 付款适用支付日相应的汇率。", string.Join(", ", AppSettings.PlayerCurrencies.OrderBy(c => c.CurrencyCode).Select(x => x.CurrencyCode).ToArray()))</p>
-                    <p>@string.Format("我们的提款方式仅通过您的{0}玩家账户提供给您。 提款请求的最低额度由每种加盟基础货币决定。", AppSettings.AffiliateName)</p>
+                    <p>@string.Format("我们的提款方式仅通过您的{0}玩家账户提供给您。 提款请求的最低额度由每种加盟基础货币决定。", AppSettings.SystemDisplayName)</p>
                 </div>
             </div>
         }
