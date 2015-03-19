@@ -31,7 +31,7 @@
     <div class="content">
         <div class="block">
             <div class="content-block">
-                <p>@Html.Raw(string.Format("As an affiliate of {0}, you will be paid commission on every player you referred to {0} over the course of the player's account life. Our online reporting system will be available 24 hours a day 7 days a week for your usage.", AppSettings.AffiliateName))</p>
+                <p>@Html.Raw(string.Format("As an affiliate of {0}, you will be paid commission on every player you referred to {0} over the course of the player's account life. Our online reporting system will be available 24 hours a day 7 days a week for your usage.", AppSettings.SystemDisplayName))</p>
                 <p>How much you earn will depend on how much traffic you can send over from your website. It is our job to guide them through the registration process, having them make their first deposit, and retain their business with our attractive bonuses and offerings.</p>
             </div>
         </div>
@@ -178,7 +178,7 @@
                 </div>
                 <div class="content-block">
                     <p>@string.Format("You can request payout in {0}. Respective exchange rate on the payout date will be applied.", string.Join(", ", AppSettings.PlayerCurrencies.OrderBy(c => c.CurrencyCode).Select(x => x.CurrencyCode).ToArray()))</p>
-                    <p>@string.Format("We offer withdrawal method via your {0} player account only. The minimum amount of withdrawal request depends on each affiliate base currency.", AppSettings.AffiliateName)</p>
+                    <p>@string.Format("We offer withdrawal method via your {0} player account only. The minimum amount of withdrawal request depends on each affiliate base currency.", AppSettings.SystemDisplayName)</p>
                 </div>
             </div>
         }

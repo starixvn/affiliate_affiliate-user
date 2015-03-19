@@ -38,8 +38,8 @@ namespace Fanex.Affiliate.Controllers
             ViewBag.AffCustomerServiceUrl = AppSettings.AffCustomerServiceUrl;
             ViewBag.ContactEmail = string.Format(
                 "mailto:{0}?subject=Enquiries%20sent%20from%20{1}%20website", 
-                AppSettings.MailContact, 
-                AppSettings.AffiliateName);
+                AppSettings.MailContact,
+                AppSettings.SystemDisplayName);
 
             return View();
         }

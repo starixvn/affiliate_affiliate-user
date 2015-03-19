@@ -176,8 +176,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Service References\AffBetlistService\Reference.cs" />
-    <Compile Include="Service References\AffBetlistService\Reference1.cs">
+    <Compile Include="Service References\AffBetlistService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -252,12 +251,14 @@
     <Content Include="CodeAnalysis\CodeAnalysisConfiguration.xml" />
     <Content Include="Content\Fanex.Result\fanex.result.css" />
     <Content Include="Content\Fanex.Result\images\goal-icon.png" />
-    <Content Include="Service References\AffBetlistService\configuration.svcinfo" />
-    <Content Include="Service References\AffBetlistService\configuration91.svcinfo" />
-    <Content Include="Service References\AffBetlistService\Reference.svcmap">
+    <None Include="Service References\AffBetlistService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference1.cs</LastGenOutput>
-    </Content>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AffBetlistService\configuration.svcinfo" />
+    <None Include="Service References\AffBetlistService\configuration91.svcinfo" />
+    <None Include="Service References\AffBetlistService\AffiliateAPI.disco" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
@@ -286,6 +287,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AffBetlistService\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>

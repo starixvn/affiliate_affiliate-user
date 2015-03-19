@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/css/jquery")
+    @Styles.Render("~/css/core")
+</head>
+<body class="popup">
+    @RenderBody()
+</body>
+</html>
+
+@Scripts.Render("~/js/jquery")
+@Scripts.Render("~/js/core")
+<script type="text/ecmascript">
+    $.unblockUI();
+    AFFILIATE.getAbsoluteUrl = function (relativeUrl) {
+        return '@Url.Content("~/")' + relativeUrl;
+    };
+</script>
+@RenderSection("scripts", required: false)

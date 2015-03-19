@@ -153,11 +153,12 @@ namespace Fanex.Affiliate.WebServices.Services
         /// <summary>
         /// Get Racing's results.
         /// </summary>
+        /// <param name="matchId">Match ID value.</param>
         /// <param name="raceNo">Race Number value.</param>
         /// <returns>The Racing's results.</returns>
-        public IList<Racing> GetRacingResults(int raceNo)
+        public IList<Racing> GetRacingResults(int matchId, int raceNo)
         {
-            return _betlistDataAccess.GetRacingResults(raceNo).ToList();
+            return _betlistDataAccess.GetRacingResults(matchId, raceNo).ToList();
         }
 
         /// <summary>
@@ -168,6 +169,11 @@ namespace Fanex.Affiliate.WebServices.Services
         public IList<Parlay> GetParlayResults(long refNo)
         {
             return _betlistDataAccess.GetParlayResults(refNo).ToList();
+        }
+
+        public void ValidatePermission(ValidationCriteria criteria)
+        {
+            _betlistDataAccess.ValidatePermission(criteria);
         }
 
         #endregion

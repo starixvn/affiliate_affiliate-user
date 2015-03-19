@@ -31,7 +31,7 @@
     <div class="content">
         <div class="block">
             <div class="content-block">
-                <p>@Html.Raw(string.Format("Là hội viên của {0}, bạn sẽ được thanh toán tiền hoa hồng cho mỗi người chơi mà bạn giới thiệu tới {0} trong thời gian tồn tại tài khoản của người chơi. Hệ thống báo cáo trực tuyến của chúng tôi sẽ hoạt động 24 giờ/ngày, 7 ngày/tuần để bạn có thể sử dụng.", AppSettings.AffiliateName))</p>
+                <p>@Html.Raw(string.Format("Là hội viên của {0}, bạn sẽ được thanh toán tiền hoa hồng cho mỗi người chơi mà bạn giới thiệu tới {0} trong thời gian tồn tại tài khoản của người chơi. Hệ thống báo cáo trực tuyến của chúng tôi sẽ hoạt động 24 giờ/ngày, 7 ngày/tuần để bạn có thể sử dụng.", AppSettings.SystemDisplayName))</p>
                 <p>Số tiền bạn kiếm được tùy thuộc vào lượng lưu lượng bạn có thể gửi tới từ trang web của mình. Công việc của chúng tôi là hướng dẫn họ qua quá trình đăng ký, để họ thực hiện lần gửi tiền đầu tiên và duy trì việc hợp tác của họ với những khoản tiền thưởng và tiền tặng hấp dẫn. </p>
             </div>
         </div>
@@ -179,7 +179,7 @@
                 </div>
                 <div class="content-block">
                     <p>@string.Format("Bạn có thể yêu cầu rút tiền bằng đơn vị tiền tệ như {0}. Tỷ lệ ngoại tệ sẽ được đổi dựa vào tỷ lệ ngày rút tiền hôm đó. ", string.Join(", ", AppSettings.PlayerCurrencies.OrderBy(c => c.CurrencyCode).Select(x => x.CurrencyCode).ToArray()))</p>
-                    <p>@string.Format("Chúng tôi cung cấp phương thức rút tiền thông qua tài khoản người chơi tại {0}. Số tiền tối thiểu cho mỗi đợt rút tiền được qui định cụ thể tùy theo loại tiền tệ mà bạn chọn.", AppSettings.AffiliateName)</p>
+                    <p>@string.Format("Chúng tôi cung cấp phương thức rút tiền thông qua tài khoản người chơi tại {0}. Số tiền tối thiểu cho mỗi đợt rút tiền được qui định cụ thể tùy theo loại tiền tệ mà bạn chọn.", AppSettings.SystemDisplayName)</p>
                 </div>
             </div>
         }

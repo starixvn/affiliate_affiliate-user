@@ -458,12 +458,14 @@ namespace Fanex.Affiliate.WebServices.DataAccess
         /// <summary>
         /// Get Racing's results.
         /// </summary>
+        /// <param name="matchId">Match ID value.</param>
         /// <param name="raceNo">Race Number value.</param>
         /// <returns>The Racing's results.</returns>
-        public IEnumerable<Racing> GetRacingResults(int raceNo)
+        public IEnumerable<Racing> GetRacingResults(int matchId, int raceNo)
         {
             var param = new
             {
+                matchId = matchId,
                 raceno = raceNo > -1 ? raceNo.ToString(CultureInfo.InvariantCulture) : null
             };
 
@@ -552,6 +554,32 @@ namespace Fanex.Affiliate.WebServices.DataAccess
             }
 
             return results;
+        }
+
+        /// <summary>
+        /// Validate Permission.
+        /// </summary>
+        /// <param name="criteria">Criteria Input.</param>
+        public void ValidatePermission(ValidationCriteria criteria)
+        {
+            using (var db = new ObjectDb(criteria.GetSettingKey()))
+            {
+                var param = criteria.GetSpParams();
+                db.ExecuteNonQuery(param);
+
+                var outputParams = db.GetOuputParams();
+                var properties = criteria.GetType().GetProperties();
+                foreach (string outputParam in outputParams.Keys)
+                {
+                    foreach (var property in properties)
+                    {
+                        if (property.CanWrite && property.Name.ToLower() == outputParam)
+                        {
+                            property.SetValue(criteria, param[outputParam] == DBNull.Value ? null : param[outputParam], null);
+                        }
+                    }
+                }
+            }
         }
 
         #endregion

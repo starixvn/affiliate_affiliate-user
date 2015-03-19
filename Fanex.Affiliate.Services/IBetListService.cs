@@ -14,6 +14,7 @@ namespace Fanex.Affiliate.Services
     using Criteria;
     using DTO;
     using DTO.BetList;
+    using Fanex.Affiliate.Criteria.BetList;
     using ViewModels;
 
     /// <summary>
@@ -37,11 +38,11 @@ namespace Fanex.Affiliate.Services
         /// <returns>Return player's Info.</returns>
         CustomerInfoBetList GetPlayerIbcInfo(string playerUsername);
 
-        #endregion
+        #endregion BetList
 
         #region BetList.Results
 
-        #endregion
+        #endregion BetList.Results
 
         #region BetList.Results.RNGCasino
 
@@ -49,6 +50,12 @@ namespace Fanex.Affiliate.Services
 
         BetListResultsRNGCasinoDetailViewModel GetRNGCasinoResultDetail(BetListResultsRNGCasinoDetailCriteria criteria);
 
-        #endregion
+        #endregion BetList.Results.RNGCasino
+
+        #region Constraint Permission
+
+        void ValidatePermission(ValidationCriteria criteria);
+
+        #endregion Constraint Permission
     }
 }

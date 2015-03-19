@@ -45,7 +45,8 @@ namespace Fanex.Affiliate.WebServices.Utilities
             const string StatusTemp = "<div class='status'>{0}</div>";
             var statusText = GetStatusText(ticket);
             var statusNormalText = string.Format(StatusTemp, statusText);
-                        
+            ticket.UserName = username;
+
             switch (ticket.BetTypeId)
             {
                 case 71:

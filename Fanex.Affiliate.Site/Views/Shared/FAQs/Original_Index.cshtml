@@ -31,13 +31,13 @@
             <div class="line-block">
             </div>
             <div class="content-block">
-                <b id="f1">@string.Format(Terms.FAQ_WhatIsAffiliateProgram, AppSettings.AffiliateName)</b>
+                <b id="f1">@string.Format(Terms.FAQ_WhatIsAffiliateProgram, AppSettings.SystemDisplayName)</b>
                 <br />
-                @Html.Raw(string.Format(Terms.FAQ_AffiliateProgramIsPartershipProgram, AppSettings.AffiliateName, Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                @Html.Raw(string.Format(Terms.FAQ_AffiliateProgramIsPartershipProgram, AppSettings.SystemDisplayName, Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
                 <p></p>
-                <b id="f2">@string.Format(Terms.FAQ_HowDoSignUp, AppSettings.AffiliateName) </b>
+                <b id="f2">@string.Format(Terms.FAQ_HowDoSignUp, AppSettings.SystemDisplayName) </b>
                 <br />
-                @Html.Raw(string.Format(Terms.FAQ_AffiliateProgramIsFreeToJoin, AppSettings.AffiliateName, linkApplicationForm))
+                @Html.Raw(string.Format(Terms.FAQ_AffiliateProgramIsFreeToJoin, AppSettings.SystemDisplayName, linkApplicationForm))
                 <p></p>
                 <b id="f3">@Terms.FAQ_WhatIfDontHaveWebsite</b>
                 <br />
@@ -81,12 +81,12 @@
                 </p>
                 <b id="f6">@Terms.FAQ_HowCanCheck</b>
                 <br />
-                @string.Format(Terms.FAQ_YouCanLogin, AppSettings.SystemName)
+                @string.Format(Terms.FAQ_YouCanLogin, AppSettings.SystemDisplayName)
                 <p>
                 </p>
                 <b>@Terms.FAQ_WhatYourPolicy</b>
                 <br />
-                @string.Format(Terms.FAQ_WeDontTolerateSpamming, AppSettings.SystemName)
+                @string.Format(Terms.FAQ_WeDontTolerateSpamming, AppSettings.SystemDisplayName)
             </div>
         </div>
         <div class="block">
@@ -98,7 +98,7 @@
             <div class="content-block">
                 <b id="f7">@Terms.FAQ_WhatAreWithdrawalMethods</b>
                 <br />
-                @string.Format(Terms.FAQ_YouCanRequest, AppSettings.SystemName)
+                @string.Format(Terms.FAQ_YouCanRequest, AppSettings.SystemDisplayName)
                 <p>
                 </p>
                 <b>@Terms.FAQ_WhatKindsOfCurrencies</b>
@@ -124,7 +124,7 @@
             {
                 <br />
                 <div class="joinUsButton">
-                    <a class="signup" href="~/User/Index"><span>@string.Format(Terms.FAQ_JoinOurAffProgram, AppSettings.SystemName).ToUpper()</span></a>
+                    <a class="signup" href="~/User/Index"><span>@string.Format(Terms.FAQ_JoinOurAffProgram, AppSettings.SystemDisplayName).ToUpper()</span></a>
                 </div>
             }
         </div>

@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanex.Affiliate", "Fanex.Affiliate\Fanex.Affiliate.csproj", "{ED4E400D-0509-4CEC-A2B7-1B8C71A380BA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanex.Affiliate.Controllers", "Fanex.Affiliate.Controllers\Fanex.Affiliate.Controllers.csproj", "{4F075C0D-F1A9-4603-A62D-D30AC4454C96}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FD2CD90C-AA9D-4E09-9600-5CB6564045E1} = {FD2CD90C-AA9D-4E09-9600-5CB6564045E1}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanex.Affiliate.Web", "Fanex.Affiliate.Web\Fanex.Affiliate.Web.csproj", "{E48F3A91-0A49-4528-8973-77ADE02C3D84}"
 EndProject
@@ -14,6 +17,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanex.Affiliate.Resources", "Fanex.Affiliate.Resources\Fanex.Affiliate.Resources.csproj", "{7F4AF1BE-6FCF-49AF-8A3B-FE946CD89CA6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanex.Affiliate.Site", "Fanex.Affiliate.Site\Fanex.Affiliate.Site.csproj", "{FA9EC601-E548-4477-B01B-186637ED2A34}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FD2CD90C-AA9D-4E09-9600-5CB6564045E1} = {FD2CD90C-AA9D-4E09-9600-5CB6564045E1}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanex.Affiliate.Criteria", "Fanex.Affiliate.Criterias\Fanex.Affiliate.Criteria.csproj", "{F514AD89-3B07-486D-A0AF-1CF5569BCF0E}"
 EndProject

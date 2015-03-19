@@ -27,6 +27,7 @@ namespace Fanex.Affiliate.DTO
             BannerDomain = string.Empty;
             LicenseeID = 0;
             SystemName = string.Empty;
+            SystemDisplayName = string.Empty;
             BannerDirectory = string.Empty;
             AffiliateSupportedLanguages = string.Empty;
             AffiliateBaseCurrencyList = string.Empty;
@@ -43,6 +44,8 @@ namespace Fanex.Affiliate.DTO
         public int LicenseeID { get; set; }
 
         public string SystemName { get; set; }
+
+        public string SystemDisplayName { get; set; }
 
         public Uri BannerScriptUrl { get; set; }
 

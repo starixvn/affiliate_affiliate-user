@@ -31,13 +31,13 @@
             <div class="line-block">
             </div>
             <div class="content-block">
-                <b id="f1">@AppSettings.AffiliateName 협력프로그램이란 무엇인가요?</b>
+                <b id="f1">@AppSettings.SystemDisplayName 협력프로그램이란 무엇인가요?</b>
                 <br />
-                @Html.Raw(string.Format("{0} 협력프로그램은 귀하의 온라인이나 오프라인 웹사이트에서 {1}을 소개하여 경기자의 내기 행위에 근거하여 수수료를 벌게되는 파트너쉽 프로그램입니다.", AppSettings.AffiliateName, Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                @Html.Raw(string.Format("{0} 협력프로그램은 귀하의 온라인이나 오프라인 웹사이트에서 {1}을 소개하여 경기자의 내기 행위에 근거하여 수수료를 벌게되는 파트너쉽 프로그램입니다.", AppSettings.SystemDisplayName, Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
                 <p></p>
-                <b id="f2">어떻게 @AppSettings.AffiliateName 협력프로그램에 가입할 수 있나요? </b>
+                <b id="f2">어떻게 @AppSettings.SystemDisplayName 협력프로그램에 가입할 수 있나요? </b>
                 <br />
-                @Html.Raw(string.Format("{0} 협력프로그램의 가입은 무료입니다. 저희의 {1}를 작성하기만 하면 프로그램에 대한 귀하의 수락에 관련하여 평일 3일 이내에 연락을 취해드립니다. 귀하의 신청이 수락되면, 현수막, 텍스트 링크, 그리고 기타의 컨텐츠와 영업도구들을 귀하의 웹사이트에 추가하도록 접근할 수 있는 귀하의 고유의 협력 아이디가 포함된 메일을 받게됩니다.", AppSettings.AffiliateName, linkApplicationForm))
+                @Html.Raw(string.Format("{0} 협력프로그램의 가입은 무료입니다. 저희의 {1}를 작성하기만 하면 프로그램에 대한 귀하의 수락에 관련하여 평일 3일 이내에 연락을 취해드립니다. 귀하의 신청이 수락되면, 현수막, 텍스트 링크, 그리고 기타의 컨텐츠와 영업도구들을 귀하의 웹사이트에 추가하도록 접근할 수 있는 귀하의 고유의 협력 아이디가 포함된 메일을 받게됩니다.", AppSettings.SystemDisplayName, linkApplicationForm))
                 <p></p>
                 <b id="f3">제가 웹사이트를 가지고 있지 않은 경우에도 가입할 수 있습니까?</b>
                 <br />
@@ -81,12 +81,12 @@
                 </p>
                 <b id="f6">얼마나 소득을 획득하였는지 어떻게 확인할 수 있습니까?</b>
                 <br />
-                @string.Format("{0} 협력 계정에 로그인하여 1일 24시간, 주중 7일 및 연간 365일 동안 귀하의 수수료 내역을 확인할 수 있습니다.", AppSettings.SystemName)
+                @string.Format("{0} 협력 계정에 로그인하여 1일 24시간, 주중 7일 및 연간 365일 동안 귀하의 수수료 내역을 확인할 수 있습니다.", AppSettings.SystemDisplayName)
                 <p>
                 </p>
                 <b>스팸에 대한 귀사의 정책은 어떠합니까?</b>
                 <br />
-                @string.Format("저희는 가맹 파트너에 의한 어떤 종류의 스팸도 인내하지 않습니다. 가맹자에 의한 스팸이 발견되면 가맹자에게 경고(심각하지 않은 경우라고 판정되면)를 보냅니다. 스팸이 중지되지 않으면 가맹파트너는 저희의 {0} 협력 프로그램에서 영구히 금지될 것입니다.", AppSettings.SystemName)
+                @string.Format("저희는 가맹 파트너에 의한 어떤 종류의 스팸도 인내하지 않습니다. 가맹자에 의한 스팸이 발견되면 가맹자에게 경고(심각하지 않은 경우라고 판정되면)를 보냅니다. 스팸이 중지되지 않으면 가맹파트너는 저희의 {0} 협력 프로그램에서 영구히 금지될 것입니다.", AppSettings.SystemDisplayName)
             </div>
         </div>
         <div class="block">
@@ -98,7 +98,7 @@
             <div class="content-block">
                 <b id="f7">저에게 주어진 금액을 인출하는 방법은 무엇입니까?</b>
                 <br />
-                @string.Format("{0} 경기자 계좌로 직접 인출을 요청할 수 있습니다.", AppSettings.SystemName)
+                @string.Format("{0} 경기자 계좌로 직접 인출을 요청할 수 있습니다.", AppSettings.SystemDisplayName)
                 <p>
                 </p>
                 <b>인출 시 지원되는 통화의 종류는 무엇인가요?</b>
@@ -124,7 +124,7 @@
             {
                 <br />
                 <div class="joinUsButton">
-                    <a class="signup" href="~/User/Index"><span>@string.Format("{0} 협력프로그램에 가입하세요", AppSettings.SystemName).ToUpper()</span></a>
+                    <a class="signup" href="~/User/Index"><span>@string.Format("{0} 협력프로그램에 가입하세요", AppSettings.SystemDisplayName).ToUpper()</span></a>
                 </div>
             }
         </div>

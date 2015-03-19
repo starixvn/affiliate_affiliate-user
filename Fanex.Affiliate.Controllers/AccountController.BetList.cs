@@ -17,6 +17,7 @@ namespace Fanex.Affiliate.Controllers
     using Configurations;
     using Criteria;
     using DTO;
+    using Fanex.Affiliate.Criteria.BetList;
     using Web;
     using Web.Filter;
 
@@ -39,6 +40,15 @@ namespace Fanex.Affiliate.Controllers
         [HttpGet]
         public ActionResult BetList(string username, string product, string winlostdate, string currency)
         {
+            var isValid = GetValidationResult(username);
+
+            if (!isValid)
+            {
+                ViewBag.Data = string.Empty;
+
+                return View();
+            }
+
             DateTime winlostDate;
             DateTime.TryParse(winlostdate, out winlostDate);
             var exchangeRate = GetExchangeRate(currency, winlostDate);
@@ -48,7 +58,7 @@ namespace Fanex.Affiliate.Controllers
             var betlistSOAP = new AffBetlistService.BetlistSOAP
             {
                 AffiliateName = AppSettings.AffiliateName.ToLower(),
-                Username = username, 
+                Username = username,
                 Product = product,
                 FromDate = winlostDate,
                 ToDate = winlostDate,
@@ -57,11 +67,12 @@ namespace Fanex.Affiliate.Controllers
             };
 
             var affBetlistService = new AffBetlistService.AffiliateAPISoapClient();
+
             ViewBag.Data = affBetlistService.GetBetlist(betlistSOAP);
 
             return View();
         }
-        
+
         /// <summary>
         /// Get data for running mix parlay bet list.
         /// </summary>
@@ -123,7 +134,7 @@ namespace Fanex.Affiliate.Controllers
         {
             var products = GetSupportedProducts(winlostDate);
             List<AffBetlistService.Product> supportedProducts = new List<AffBetlistService.Product>();
-            
+
             foreach (var product in products)
             {
                 supportedProducts.Add(new AffBetlistService.Product
@@ -156,6 +167,24 @@ namespace Fanex.Affiliate.Controllers
             return (decimal)BetListService.GetExchangeRate(exchangeCriteria);
         }
 
-        #endregion
+        #endregion BetList
+
+        /// <summary>
+        /// Get Validation Result.
+        /// </summary>
+        /// <param name="username">User Name.</param>
+        /// <returns>Validation Result.</returns>
+        private bool GetValidationResult(string username)
+        {
+            var criteria = new ValidationCriteria
+            {
+                AffId = CurrentSession.AffId,
+                MemberName = username ?? string.Empty
+            };
+
+            BetListService.ValidatePermission(criteria);
+
+            return criteria.BelongLevel2;
+        }
     }
 }

@@ -17,6 +17,7 @@ namespace Fanex.Affiliate.DataAccess
     using Criteria;
     using Data;
     using DTO;
+    using Fanex.Affiliate.Criteria.BetList;
 
     /// <summary>
     /// Account data access.
@@ -76,7 +77,7 @@ namespace Fanex.Affiliate.DataAccess
         public CustomerInfoBetList GetPlayerIbcInfo(string playerUsername)
         {
             var hashParam = new Hashtable
-            { 
+            {
                 { "username", playerUsername },
                 { "custid", 0 },
                 { "ibcusername", string.Empty },
@@ -94,7 +95,7 @@ namespace Fanex.Affiliate.DataAccess
             };
         }
 
-        #endregion
+        #endregion BetList
 
         #region BetList.Results
 
@@ -151,6 +152,32 @@ namespace Fanex.Affiliate.DataAccess
             }
         }
 
-        #endregion
+        /// <summary>
+        /// Validate User's Permission.
+        /// </summary>
+        /// <param name="criteria">Criteria input. </param>
+        public void ValidatePermission(ValidationCriteria criteria)
+        {
+            using (var db = new ObjectDb(criteria.GetSettingKey()))
+            {
+                var param = criteria.GetSpParams();
+                db.ExecuteNonQuery(param);
+
+                var outputParams = db.GetOuputParams();
+                var properties = criteria.GetType().GetProperties();
+                foreach (string outputParam in outputParams.Keys)
+                {
+                    foreach (var property in properties)
+                    {
+                        if (property.CanWrite && property.Name.ToLower() == outputParam)
+                        {
+                            property.SetValue(criteria, param[outputParam] == DBNull.Value ? null : param[outputParam], null);
+                        }
+                    }
+                }
+            }
+        }
+
+        #endregion BetList.Results
     }
 }

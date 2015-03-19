@@ -31,13 +31,13 @@
             <div class="line-block">
             </div>
             <div class="content-block">
-                <b id="f1">@string.Format("โปรแกรม{0} พันธมิตรคืออะไร ?", AppSettings.AffiliateName)</b>
+                <b id="f1">@string.Format("โปรแกรม{0} พันธมิตรคืออะไร ?", AppSettings.SystemDisplayName)</b>
                 <br />
-                @Html.Raw(string.Format("{0} โปรแกรมที่เกี่ยวข้อง คือโปรแกรมหุ้นส่วนซึ่งคุณจะได้รับค่านายหน้าจากการวางเดิมพันของผู้เล่นที่คุณแนะนำให้แก่ {1} จากเว็บไซต์ของคุณผ่านทางผู้แนะนำออนไลน์หรือออฟไลน์", AppSettings.AffiliateName, Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
+                @Html.Raw(string.Format("{0} โปรแกรมที่เกี่ยวข้อง คือโปรแกรมหุ้นส่วนซึ่งคุณจะได้รับค่านายหน้าจากการวางเดิมพันของผู้เล่นที่คุณแนะนำให้แก่ {1} จากเว็บไซต์ของคุณผ่านทางผู้แนะนำออนไลน์หรือออฟไลน์", AppSettings.SystemDisplayName, Html.Hyperlink(Model.MemberSiteDomain, Model.MemberSiteDomainWithoutProtocolnPort)))
                 <p></p>
-                <b id="f2">@string.Format("ฉันจะสมัครเข้ามาในโปรแกรม {0} พันธมิตรได้อย่างไร ?", AppSettings.AffiliateName) </b>
+                <b id="f2">@string.Format("ฉันจะสมัครเข้ามาในโปรแกรม {0} พันธมิตรได้อย่างไร ?", AppSettings.SystemDisplayName) </b>
                 <br />
-                @Html.Raw(string.Format("การเป็นพันธมิตรกับ {0} สมัครฟรีไม่เสียค่าใช้จ่าย เพียงแค่คุณกรอก{1} คุณจะได้รับการติดต่อกลับภายในเวลา 3 วันทำการเกี่ยวกับการเป็นสมาชิก ถ้าใบสมัครของคุณได้รับการอนุมัติ คุณจะได้รับอีเมลล์แจ้งระบุ ไอดีในการเป็นพันธมิตร และรหัสในการใช้แบนเนอร์  ลิ้งค์ที่เป็นข้อความและรายละเอียดอื่นในการทำการตลาด เพื่อที่จะนำไปวางในตัวเวบไซค์ของคุณ", AppSettings.AffiliateName, linkApplicationForm))
+                @Html.Raw(string.Format("การเป็นพันธมิตรกับ {0} สมัครฟรีไม่เสียค่าใช้จ่าย เพียงแค่คุณกรอก{1} คุณจะได้รับการติดต่อกลับภายในเวลา 3 วันทำการเกี่ยวกับการเป็นสมาชิก ถ้าใบสมัครของคุณได้รับการอนุมัติ คุณจะได้รับอีเมลล์แจ้งระบุ ไอดีในการเป็นพันธมิตร และรหัสในการใช้แบนเนอร์  ลิ้งค์ที่เป็นข้อความและรายละเอียดอื่นในการทำการตลาด เพื่อที่จะนำไปวางในตัวเวบไซค์ของคุณ", AppSettings.SystemDisplayName, linkApplicationForm))
                 <p></p>
                 <b id="f3">แล้วถ้าฉันไม่มีเว็บไซต์ล่ะ ยังสามารถเข้าร่วมได้หรือไม่?</b>
                 <br />
@@ -81,12 +81,12 @@
                 </p>
                 <b id="f6">ฉันจะสามารถตรวจสอบได้หรือไม่ว่าฉันได้รับรายได้เท่าไหร่ ?</b>
                 <br />
-                @string.Format("คุณสามารถล๊อคอินเข้าในบัญชี {0} เพื่อตรวจสอบยอดรายได้คอมมิชชั่นของคุณออนไลน์ได้ทันทีซึ่งสามารถทำได้ตลอด 24 ชั่วโมงทุกวัน 7 วันต่อหนึ่งสัปดาห์ และ 365 วันต่อปี", AppSettings.SystemName)
+                @string.Format("คุณสามารถล๊อคอินเข้าในบัญชี {0} เพื่อตรวจสอบยอดรายได้คอมมิชชั่นของคุณออนไลน์ได้ทันทีซึ่งสามารถทำได้ตลอด 24 ชั่วโมงทุกวัน 7 วันต่อหนึ่งสัปดาห์ และ 365 วันต่อปี", AppSettings.SystemDisplayName)
                 <p>
                 </p>
                 <b>คุณมีนโยบายในการกำจัดขณะทางอีเมลล์ได้อย่างไร ?</b>
                 <br />
-                @string.Format("ไม่อนุญาติให้มีการส่งจดหมายในลักษณะ spam mail โดยจะมีการเตือนในครั้งแรก หากยังคงมีการจัดส่ง จะระงับรหัสผู้ใช้งานอย่างถาวรจาก {0} โปรแกรมที่เกี่ยวข้อง", AppSettings.SystemName)
+                @string.Format("ไม่อนุญาติให้มีการส่งจดหมายในลักษณะ spam mail โดยจะมีการเตือนในครั้งแรก หากยังคงมีการจัดส่ง จะระงับรหัสผู้ใช้งานอย่างถาวรจาก {0} โปรแกรมที่เกี่ยวข้อง", AppSettings.SystemDisplayName)
             </div>
         </div>
         <div class="block">
@@ -98,7 +98,7 @@
             <div class="content-block">
                 <b id="f7">มีวิธีให้ฉันถอนเงินได้อย่างไรบ้าง?</b>
                 <br />
-                @string.Format("คุณสามารถขอถอนเงินได้โดยตรงในบัญชีผู้ใช้งาน {0} ของคุณ", AppSettings.SystemName)
+                @string.Format("คุณสามารถขอถอนเงินได้โดยตรงในบัญชีผู้ใช้งาน {0} ของคุณ", AppSettings.SystemDisplayName)
                 <p>
                 </p>
                 <b>เวลาถอนเงินใช้สกุลเงินใดได้บ้าง?</b>
@@ -124,7 +124,7 @@
             {
                 <br />
                 <div class="joinUsButton">
-                    <a class="signup" href="~/User/Index"><span>@string.Format("ร่วมเป็นส่วนหนึ่งในโปรแกรมพันธมิตร {0}", AppSettings.SystemName).ToUpper()</span></a>
+                    <a class="signup" href="~/User/Index"><span>@string.Format("ร่วมเป็นส่วนหนึ่งในโปรแกรมพันธมิตร {0}", AppSettings.SystemDisplayName).ToUpper()</span></a>
                 </div>
             }
         </div>
