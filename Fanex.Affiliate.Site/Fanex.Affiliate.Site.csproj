@@ -4658,7 +4658,9 @@
     <Content Include="Configurations\WebConfigs\Web.unobet.local.config" />
     <Content Include="Configurations\WebConfigs\Web.unobet.master.config" />
     <Content Include="Configurations\WebConfigs\Web.unobet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.unobet.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.unobet.uat.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Configurations\AppSettings\Web.AppSetting.unobet.local.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.unobet.master.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.unobet.production.config" />
@@ -5184,7 +5186,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
+      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
