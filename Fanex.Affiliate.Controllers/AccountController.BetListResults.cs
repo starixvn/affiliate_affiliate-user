@@ -10,12 +10,12 @@
 
 namespace Fanex.Affiliate.Controllers
 {
+    using System;
     using System.Collections.Generic;
     using System.Diagnostics.CodeAnalysis;
     using System.Linq;
     using System.Text.RegularExpressions;
     using System.Web.Mvc;
-    using Common;
     using Configurations;
     using Criteria;
     using DTO.BetList;
@@ -33,10 +33,11 @@ namespace Fanex.Affiliate.Controllers
         #region Variables
 
         private List<string> _resultsSupportedLanguages = new List<string>() { "en-US", "zh-TW", "zh-CN", "ja-JP", "th-TH", "ko-KR", "vi-VN" };
-        
-        #endregion
+
+        #endregion Variables
 
         #region BetList.Results
+
         /// <summary>
         /// The pop up result page.
         /// </summary>
@@ -53,7 +54,7 @@ namespace Fanex.Affiliate.Controllers
 
                 return View();
             }
-            
+
             ViewBag.Data = GetPopUpData(criteria);
 
             return View();
@@ -74,7 +75,7 @@ namespace Fanex.Affiliate.Controllers
                 criteria);
         }
 
-        #endregion
+        #endregion BetList.Results
 
         #region BetList.Results.RNGCasino
 
@@ -86,9 +87,10 @@ namespace Fanex.Affiliate.Controllers
         [HttpGet]
         public ActionResult RNGCasinoData(BetListResultsRNGCasinoCriteria criteria)
         {
+            var isOffered = IsOfferedRNGCasino(criteria.FromDate);
             var isValid = GetValidationResult(criteria.UserName);
 
-            if (!isValid)
+            if (!(isValid & isOffered))
             {
                 ViewBag.Data = string.Empty;
 
@@ -192,7 +194,7 @@ namespace Fanex.Affiliate.Controllers
                 detailItem.Win *= CurrentSession.ExchangeRate;
                 detailItem.WinLoss *= CurrentSession.ExchangeRate;
             }
-            
+
             foreach (var detailHeaderItem in originalData.CasinoDetailHeaderList)
             {
                 detailHeaderItem.Win = ExchangeValueIncludingCurrency(detailHeaderItem.Win);
@@ -229,44 +231,6 @@ namespace Fanex.Affiliate.Controllers
             return string.IsNullOrEmpty(originalValue.Trim())
                 ? "0.00"
                 : (decimal.Parse(regexRemoveLetters.Replace(originalValue, string.Empty)) * CurrentSession.ExchangeRate).ToString();
-        }
-
-        /// <summary>
-        /// Get value by base currency.
-        /// </summary>
-        /// <param name="originVal">The original value.</param>
-        /// <returns>The converted value.</returns>
-        private decimal ExchangeBaseCurrencyValue(string originVal)
-        {
-            if (!string.IsNullOrEmpty(originVal))
-            {
-                var arr = originVal.Split(' ').ToList();
-                if (arr.Any())
-                {
-                    return Converter.ToDecimal(arr.LastOrDefault()) * CurrentSession.ExchangeRate;
-                }
-            }
-
-            return 0;
-        }
-
-        /// <summary>
-        /// Get coin size value by currency.
-        /// </summary>
-        /// <param name="originVal">The original value.</param>
-        /// <returns>The converted value.</returns>
-        private string ExchangeCoinSizeValue(string originVal)
-        {
-            if (!string.IsNullOrEmpty(originVal))
-            {
-                var arr = originVal.Split(' ');
-                if (arr.Count() > 3)
-                {
-                    return (Converter.ToDecimal(arr[1]) * CurrentSession.ExchangeRate) + " " + arr[2] + arr[3];
-                }
-            }
-
-            return string.Empty;
         }
 
         /// <summary>
@@ -368,6 +332,13 @@ namespace Fanex.Affiliate.Controllers
             }
         }
 
-        #endregion
+        private bool IsOfferedRNGCasino(DateTime winlostDate)
+        {
+            const string RngCasino = "RNG Casino";
+            var offeredProducts = GetSupportedProducts(winlostDate);
+
+            return offeredProducts.Any(t => t.ProductName.Equals(RngCasino));
+        }
+        #endregion BetList.Results.RNGCasino
     }
 }
