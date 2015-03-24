@@ -181,7 +181,7 @@ namespace Fanex.Affiliate.Controllers
             var siteDomainInfo = GetSiteDomainInfo();
             dynamic emailContent = new
             {
-                AppSettings.SystemDisplayName,
+                AffiliateName = AppSettings.SystemDisplayName,
                 CurrentMemberSiteDomain = siteDomainInfo.MemberSiteDomain,
                 siteDomainInfo.MemberSiteDomainEmail,
                 criteria.FirstName,
@@ -218,7 +218,7 @@ namespace Fanex.Affiliate.Controllers
             var csdPath = Server.MapPath("~/Views/Shared/Email/SignUp/CsdMail.txt");
             dynamic emailContent = new
             {
-                AppSettings.SystemDisplayName,
+                AffiliateName = AppSettings.SystemDisplayName,
                 criteria.FirstName,
                 criteria.LastName,
                 UserName = criteria.Player_Username,
@@ -585,7 +585,7 @@ namespace Fanex.Affiliate.Controllers
             var recoverPasswordUrl = string.Format("{0}User/RecoverPassword", siteDomainInfo.AffiliateDomain);
             dynamic emailContent = new
             {
-                AppSettings.SystemDisplayName,
+                AffiliateName = AppSettings.SystemDisplayName,
                 CurrentMemberSiteDomain = siteDomainInfo.MemberSiteDomain,
                 siteDomainInfo.MemberSiteDomainEmail,
                 user.FirstName,
@@ -681,7 +681,7 @@ namespace Fanex.Affiliate.Controllers
             changePasswordUrl = regex.Replace(changePasswordUrl, string.Empty);
             dynamic emailContent = new
             {
-                AppSettings.SystemDisplayName,
+                AffiliateName = AppSettings.SystemDisplayName,
                 CurrentMemberSiteDomain = siteDomainInfo.MemberSiteDomain,
                 siteDomainInfo.MemberSiteDomainEmail,
                 user.FirstName,

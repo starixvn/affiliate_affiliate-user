@@ -327,6 +327,9 @@
     <Content Include="Content\themes\theme19\images\banner_top.png" />
     <Content Include="Content\themes\theme19\images\bg-contentLanguage.png" />
     <Content Include="Content\themes\theme19\images\logo-afterlogin.png" />
+    <Content Include="Content\themes\theme25\images\bg-contentLanguage.png" />
+    <Content Include="Content\themes\theme25\images\favicon.jpg" />
+    <Content Include="Content\themes\theme25\images\logo-afterlogin.png" />
     <Content Include="Content\themes\theme28\images\banner.en-US.jpg" />
     <Content Include="Content\themes\theme28\images\banner.id-ID.jpg" />
     <Content Include="Content\themes\theme28\images\banner.ko-KR.jpg" />
@@ -1375,7 +1378,6 @@
     <Content Include="Content\themes\theme25\images\emailBanner.jpg" />
     <Content Include="Content\themes\theme25\images\emailBg.jpg" />
     <Content Include="Content\themes\theme25\images\error_icons.png" />
-    <Content Include="Content\themes\theme25\images\favicon.jpg" />
     <Content Include="Content\themes\theme25\images\firstGoal.gif" />
     <Content Include="Content\themes\theme25\images\glyphicons-halflings-gray-lighter.png" />
     <Content Include="Content\themes\theme25\images\glyphicons-halflings-gray.png" />
@@ -5244,7 +5246,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
+      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
