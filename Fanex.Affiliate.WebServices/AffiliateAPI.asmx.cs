@@ -50,6 +50,8 @@ namespace Fanex.Affiliate.WebServices
 
         private List<string> _resultsSupportedLanguages = new List<string>() { "en-US", "zh-TW", "zh-CN", "ja-JP", "th-TH", "ko-KR", "vi-VN" };
 
+        private LanguageManager _langManager = new LanguageManager();
+
         #endregion
 
         #region Constructor
@@ -189,7 +191,7 @@ namespace Fanex.Affiliate.WebServices
             {
                 products = string.Join(",", supportedProducts.Select(t => t.ProductName));
             }
-            
+
             var productList = products.Split(',');
 
             foreach (var pro in productList)
@@ -346,6 +348,7 @@ namespace Fanex.Affiliate.WebServices
         [WebMethod]
         public string GetBetlist(BetlistSOAP betlistSOAP)
         {
+            _langManager.SetCulture(betlistSOAP.Language);
             var betlistCriteria = GenerateBetlistCriteria(betlistSOAP);
             var ticketResults = _betlistService.GetBetList(betlistCriteria);
 
@@ -353,7 +356,7 @@ namespace Fanex.Affiliate.WebServices
             {
                 return string.Empty;
             }
-            
+
             var templatePath = Server.MapPath("~/Views/BetList.cshtml");
             var ticketTextList = Ticket(ticketResults, betlistCriteria, betlistSOAP.Username, betlistSOAP.ExchangeRate);
 
@@ -383,10 +386,12 @@ namespace Fanex.Affiliate.WebServices
         /// <param name="affiliateName">Affiliate Name.</param>
         /// <param name="transactionId">Transaction ID.</param>
         /// <param name="exchangeRate">Exchange Rate.</param>
+        /// <param name="language">Language Input.</param>
         /// <returns>Ticket Result.</returns>
         [WebMethod]
-        public string GetBetlistParlay(string affiliateName, string transactionId, string exchangeRate)
+        public string GetBetlistParlay(string affiliateName, string transactionId, string exchangeRate, string language = "en-US")
         {
+            _langManager.SetCulture(language);
             var affiliateGroup = affiliateName.Trim() == "12bet" ? "_12bet" : string.Empty;
             var criteria = new BetListParlayCriteria
             {
@@ -418,10 +423,12 @@ namespace Fanex.Affiliate.WebServices
         /// <param name="affiliateName">Affiliate Name.</param>
         /// <param name="exchangeRate">Exchange Rate.</param>
         /// <param name="criteria">Bet List System Parlay Detail Criteria.</param>
+        /// <param name="language">Language Input.</param>
         /// <returns>System Parlay Data.</returns>
         [WebMethod]
-        public string GetBetlistSystemParlay(string affiliateName, string exchangeRate, BetListSystemParlayDetailCriteria criteria)
+        public string GetBetlistSystemParlay(string affiliateName, string exchangeRate, BetListSystemParlayDetailCriteria criteria, string language = "en-US")
         {
+            _langManager.SetCulture(language);
             criteria.AffiliateGroup = affiliateName.Trim() == "12bet" ? "_12bet" : string.Empty;
             var balanceUpMoveBetCriteria = new BalanceUpMoveBetCriteria { AffiliateGroup = criteria.AffiliateGroup };
             _betlistService.GetBalanceUpMoveBetDate(balanceUpMoveBetCriteria);
@@ -495,8 +502,9 @@ namespace Fanex.Affiliate.WebServices
         /// <param name="criteria">Input criteria.</param>
         /// <returns>Result's Html string.</returns>
         [WebMethod]
-        public string GetBetlistResults(string affiliateName, string sessionLanguage, BetListResultsCriteria criteria)
+        public string GetBetlistResults(string affiliateName, string sessionLanguage, BetListResultsCriteria criteria, string language="en-US")
         {
+            _langManager.SetCulture(language);
             var sportType = (SportType)criteria.SportType;
             var displaySettings = new ResultSetting
             {
@@ -515,14 +523,6 @@ namespace Fanex.Affiliate.WebServices
 
             return GetResultsData(criteria, sportType, displaySettings);
         }
-
-        #endregion
-
-        #region Affiliate's Results - RNG Casino - Utilities
-
-        #endregion
-
-        #region Affiliate's Results - RNG Casino - Web Methods
 
         #endregion
     }

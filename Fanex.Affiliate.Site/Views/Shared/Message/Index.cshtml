@@ -44,7 +44,7 @@
                                 </div>
                             </div>
                             <div class="cell">
-                                <div class="label">@Lang.To:</div>
+                                <div class="label">@Lang.ToDate:</div>
                                 <div class="editor">
                                     @(Model.ToDate.HasValue ? Html.TextBox("ToDate", Common.ConvertDateTime(Model.ToDate, "/", true, false), new {@class = "datepicker"}) : Html.TextBox("ToDate", Common.ConvertDateTime(today, "/", true, false), new {@class = "datepicker", disabled = "disabled"}))
                                     <div class="icon-calendar">
@@ -91,7 +91,7 @@
                                     &nbsp;
                                 </th>
                                 <th style="width: 30px;">
-                                    @Lang.ID
+                                    @Lang.IDKey
                                 </th>
                                 <th style="width: 125px;" class="text-center">
                                     @Lang.PostDate

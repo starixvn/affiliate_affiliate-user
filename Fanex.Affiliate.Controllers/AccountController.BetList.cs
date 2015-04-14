@@ -63,7 +63,8 @@ namespace Fanex.Affiliate.Controllers
                 FromDate = winlostDate,
                 ToDate = winlostDate,
                 ExchangeRate = exchangeRate,
-                SupportedProducts = supportedProducts
+                SupportedProducts = supportedProducts,
+                Language = CurrentSession.Language
             };
 
             var affBetlistService = new AffBetlistService.AffiliateAPISoapClient();
@@ -85,7 +86,8 @@ namespace Fanex.Affiliate.Controllers
             var tickets = affBetlistService.GetBetlistParlay(
                 AppSettings.AffiliateName,
                 transId.ToString(),
-                CurrentSession.ExchangeRate.ToString());
+                CurrentSession.ExchangeRate.ToString(),
+                CurrentSession.Language);
 
             return tickets;
         }
@@ -102,7 +104,8 @@ namespace Fanex.Affiliate.Controllers
             var systemParlayDataText = affBetlistService.GetBetlistSystemParlay(
                 AppSettings.AffiliateName,
                 CurrentSession.ExchangeRate.ToString(),
-                criteria);
+                criteria,
+                CurrentSession.Language);
             ViewBag.Data = systemParlayDataText;
 
             return View();

@@ -17,6 +17,7 @@ namespace Fanex.Affiliate.Services
     using Criteria;
     using Data;
     using DTO;
+    using Fanex.Affiliate.Resources;
 
     /// <summary>
     /// System Setting Service.
@@ -28,9 +29,9 @@ namespace Fanex.Affiliate.Services
         #endregion Fields
 
         #region Constructor
-        
+
         #endregion Constructor
-        
+
         /// <summary>
         /// Get list setting.
         /// </summary>
@@ -39,7 +40,17 @@ namespace Fanex.Affiliate.Services
         public IEnumerable<SystemSetting> ListSystemSetting(SystemSettingsByTypeCriteria criteria)
         {
             Check.Argument.IsNotNull(criteria, "criteria");
-            return GetData<SystemSetting>(criteria);
+            var result = GetData<SystemSetting>(criteria);
+
+            foreach (var item in result)
+            {
+                item.DisplayText = item.SValue;
+
+                var translated = Lang.ResourceManager.GetString(item.DisplayText.Replace(" ", string.Empty));
+                item.DisplayText = string.IsNullOrEmpty(translated) ? item.DisplayText : translated;
+            }
+
+            return result;
         }
 
         /// <summary>

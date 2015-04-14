@@ -72,7 +72,8 @@ namespace Fanex.Affiliate.Controllers
             return affBetlistService.GetBetlistResults(
                 AppSettings.AffiliateName,
                 CurrentSession.Language,
-                criteria);
+                criteria, 
+                CurrentSession.Language);
         }
 
         #endregion BetList.Results

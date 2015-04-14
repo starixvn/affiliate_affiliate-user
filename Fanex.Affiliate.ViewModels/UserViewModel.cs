@@ -135,13 +135,12 @@ namespace Fanex.Affiliate.ViewModels
         {
             get
             {
-                CountryList.Insert(0, new Country { CountryId = string.Empty, CountryName = Lang.SelectOne });
                 var selectItemList = CountryList.Select(country => new SelectListItem
                 {
                     Value = country.CountryId,
-                    Text = country.CountryName
+                    Text = country.CountryId == "-" ? Lang.Others : Lang.ResourceManager.GetString(country.CountryId)
                 }).ToList<SelectListItem>();
-
+                selectItemList.Insert(0, new SelectListItem { Value = string.Empty, Text = Lang.SelectOne });
                 return selectItemList;
             }
         }
