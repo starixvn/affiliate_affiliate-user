@@ -547,6 +547,15 @@ namespace Fanex.Affiliate.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bet List {0} - {1} - View in {2}.
+        /// </summary>
+        public static string BetListTitle {
+            get {
+                return ResourceManager.GetString("BetListTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Burkina Faso.
         /// </summary>
         public static string BF {
@@ -898,6 +907,15 @@ namespace Fanex.Affiliate.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Close.
+        /// </summary>
+        public static string Close {
+            get {
+                return ResourceManager.GetString("Close", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cameroon.
         /// </summary>
         public static string CM {
@@ -1142,6 +1160,15 @@ namespace Fanex.Affiliate.Resources {
         public static string CurrentCommissionSetting {
             get {
                 return ResourceManager.GetString("CurrentCommissionSetting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current Month Statistics.
+        /// </summary>
+        public static string CurrentMonthStatistics {
+            get {
+                return ResourceManager.GetString("CurrentMonthStatistics", resourceCulture);
             }
         }
         
@@ -2838,6 +2865,15 @@ namespace Fanex.Affiliate.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Monthly Earning.
+        /// </summary>
+        public static string MonthlyEarning {
+            get {
+                return ResourceManager.GetString("MonthlyEarning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Monthly Winlost.
         /// </summary>
         public static string MonthlyWinlost {
@@ -4262,9 +4298,9 @@ namespace Fanex.Affiliate.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Request Payout.
         /// </summary>
-        public static string RequestPayout {
+        public static string Requestpayout {
             get {
-                return ResourceManager.GetString("RequestPayout", resourceCulture);
+                return ResourceManager.GetString("Requestpayout", resourceCulture);
             }
         }
         
@@ -5259,11 +5295,65 @@ namespace Fanex.Affiliate.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Virtual Cycling.
+        /// </summary>
+        public static string VirtualCycling {
+            get {
+                return ResourceManager.GetString("VirtualCycling", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Virtual Greyhounds.
+        /// </summary>
+        public static string VirtualGreyhounds {
+            get {
+                return ResourceManager.GetString("VirtualGreyhounds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Virtual Horse Racing.
+        /// </summary>
+        public static string VirtualHorseRacing {
+            get {
+                return ResourceManager.GetString("VirtualHorseRacing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Virtual Soccer.
+        /// </summary>
+        public static string VirtualSoccer {
+            get {
+                return ResourceManager.GetString("VirtualSoccer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Virtual Speedway.
+        /// </summary>
+        public static string VirtualSpeedway {
+            get {
+                return ResourceManager.GetString("VirtualSpeedway", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Virtual Sports.
         /// </summary>
         public static string VirtualSports {
             get {
                 return ResourceManager.GetString("VirtualSports", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Virtual Tennis.
+        /// </summary>
+        public static string VirtualTennis {
+            get {
+                return ResourceManager.GetString("VirtualTennis", resourceCulture);
             }
         }
         

@@ -59,7 +59,9 @@ namespace Fanex.Affiliate.Services
         public PaymentViewModel GetPaymentRequest(PaymentCriteria criteria)
         {
             Check.Argument.IsNotNull(criteria, "criteria");
-            return _paymentDataAccess.GetPaymentRequest(criteria);
+            var result = _paymentDataAccess.GetPaymentRequest(criteria);
+
+            return result;
         }
 
         /// <summary>

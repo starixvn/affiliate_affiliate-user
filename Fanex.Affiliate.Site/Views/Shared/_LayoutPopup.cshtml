@@ -26,8 +26,14 @@
 @Scripts.Render("~/js/core")
 <script type="text/ecmascript">
     $.unblockUI();
+
+    var Lang = {
+        Close: "@Lang.Close"
+    };
+
     AFFILIATE.getAbsoluteUrl = function (relativeUrl) {
         return '@Url.Content("~/")' + relativeUrl;
     };
+
 </script>
 @RenderSection("scripts", required: false)

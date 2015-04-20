@@ -20,6 +20,7 @@ namespace Fanex.Affiliate.Controllers
     using Criteria;
     using DTO.BetList;
     using Enumerations;
+    using Fanex.Affiliate.Web;
     using Utilities;
     using ViewModels;
     using Web.Filter;
@@ -30,12 +31,6 @@ namespace Fanex.Affiliate.Controllers
     [Authorization]
     public partial class AccountController
     {
-        #region Variables
-
-        private List<string> _resultsSupportedLanguages = new List<string>() { "en-US", "zh-TW", "zh-CN", "ja-JP", "th-TH", "ko-KR", "vi-VN" };
-
-        #endregion Variables
-
         #region BetList.Results
 
         /// <summary>
@@ -71,9 +66,9 @@ namespace Fanex.Affiliate.Controllers
 
             return affBetlistService.GetBetlistResults(
                 AppSettings.AffiliateName,
-                CurrentSession.Language,
-                criteria, 
-                CurrentSession.Language);
+                AppSession.Language,
+                criteria,
+                AppSession.Language);
         }
 
         #endregion BetList.Results
@@ -340,6 +335,7 @@ namespace Fanex.Affiliate.Controllers
 
             return offeredProducts.Any(t => t.ProductName.Equals(RngCasino));
         }
+
         #endregion BetList.Results.RNGCasino
     }
 }

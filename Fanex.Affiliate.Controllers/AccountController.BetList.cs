@@ -64,7 +64,7 @@ namespace Fanex.Affiliate.Controllers
                 ToDate = winlostDate,
                 ExchangeRate = exchangeRate,
                 SupportedProducts = supportedProducts,
-                Language = CurrentSession.Language
+                Language = AppSession.Language
             };
 
             var affBetlistService = new AffBetlistService.AffiliateAPISoapClient();
@@ -87,7 +87,7 @@ namespace Fanex.Affiliate.Controllers
                 AppSettings.AffiliateName,
                 transId.ToString(),
                 CurrentSession.ExchangeRate.ToString(),
-                CurrentSession.Language);
+                AppSession.Language);
 
             return tickets;
         }
@@ -105,7 +105,7 @@ namespace Fanex.Affiliate.Controllers
                 AppSettings.AffiliateName,
                 CurrentSession.ExchangeRate.ToString(),
                 criteria,
-                CurrentSession.Language);
+                AppSession.Language);
             ViewBag.Data = systemParlayDataText;
 
             return View();

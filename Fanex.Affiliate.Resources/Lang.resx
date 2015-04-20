@@ -729,7 +729,7 @@
   <data name="RequestPaymentEmailTitle" xml:space="preserve">
     <value>Payment Request Notification</value>
   </data>
-  <data name="RequestPayout" xml:space="preserve">
+  <data name="Requestpayout" xml:space="preserve">
     <value>Request Payout</value>
   </data>
   <data name="RequireInfo" xml:space="preserve">
@@ -1897,5 +1897,35 @@
   </data>
   <data name="Results" xml:space="preserve">
     <value>Results</value>
+  </data>
+  <data name="MonthlyEarning" xml:space="preserve">
+    <value>Monthly Earning</value>
+  </data>
+  <data name="CurrentMonthStatistics" xml:space="preserve">
+    <value>Current Month Statistics</value>
+  </data>
+  <data name="BetListTitle" xml:space="preserve">
+    <value>Bet List {0} - {1} - View in {2}</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="VirtualCycling" xml:space="preserve">
+    <value>Virtual Cycling</value>
+  </data>
+  <data name="VirtualGreyhounds" xml:space="preserve">
+    <value>Virtual Greyhounds</value>
+  </data>
+  <data name="VirtualHorseRacing" xml:space="preserve">
+    <value>Virtual Horse Racing</value>
+  </data>
+  <data name="VirtualSoccer" xml:space="preserve">
+    <value>Virtual Soccer</value>
+  </data>
+  <data name="VirtualSpeedway" xml:space="preserve">
+    <value>Virtual Speedway</value>
+  </data>
+  <data name="VirtualTennis" xml:space="preserve">
+    <value>Virtual Tennis</value>
   </data>
 </root>

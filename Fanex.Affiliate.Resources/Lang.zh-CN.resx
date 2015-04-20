@@ -729,8 +729,8 @@
   <data name="RequestPaymentEmailTitle" xml:space="preserve">
     <value>支付申请通知 </value>
   </data>
-  <data name="RequestPayout" xml:space="preserve">
-    <value>要求提款 </value>
+  <data name="Requestpayout" xml:space="preserve">
+    <value>要求支付</value>
   </data>
   <data name="RequireInfo" xml:space="preserve">
     <value>有&lt;span class="txtRequire"&gt;*&lt;/span&gt;标记的栏目为必填选项</value>
@@ -1899,9 +1899,39 @@
     <value>阿富汗</value>
   </data>
   <data name="HandHistoryDetails" xml:space="preserve">
-    <value>Hand History Details</value>
+    <value>每局历史资料</value>
   </data>
   <data name="Results" xml:space="preserve">
     <value>赛果</value>
+  </data>
+  <data name="MonthlyEarning" xml:space="preserve">
+    <value>每月盈利</value>
+  </data>
+  <data name="CurrentMonthStatistics" xml:space="preserve">
+    <value>本月统计资料</value>
+  </data>
+  <data name="BetListTitle" xml:space="preserve">
+    <value>下注清单 {0} - {1} - 查看 {2}</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>关</value>
+  </data>
+  <data name="VirtualCycling" xml:space="preserve">
+    <value>虛擬自行車</value>
+  </data>
+  <data name="VirtualGreyhounds" xml:space="preserve">
+    <value>虚拟赛狗</value>
+  </data>
+  <data name="VirtualHorseRacing" xml:space="preserve">
+    <value>虚拟赛马</value>
+  </data>
+  <data name="VirtualSoccer" xml:space="preserve">
+    <value>虚拟足球</value>
+  </data>
+  <data name="VirtualSpeedway" xml:space="preserve">
+    <value>虛擬沙地摩托車</value>
+  </data>
+  <data name="VirtualTennis" xml:space="preserve">
+    <value>虚拟网球</value>
   </data>
 </root>
