@@ -1919,6 +1919,9 @@
   <data name="VirtualHorseRacing" xml:space="preserve">
     <value>Virtual Horse Racing</value>
   </data>
+  <data name="VirtualMotorsports" xml:space="preserve">
+    <value>Virtual Motorsports</value>
+  </data>
   <data name="VirtualSoccer" xml:space="preserve">
     <value>Virtual Soccer</value>
   </data>

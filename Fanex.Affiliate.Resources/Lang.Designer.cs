@@ -5322,6 +5322,15 @@ namespace Fanex.Affiliate.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Virtual Motorsports.
+        /// </summary>
+        public static string VirtualMotorsports {
+            get {
+                return ResourceManager.GetString("VirtualMotorsports", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Virtual Soccer.
         /// </summary>
         public static string VirtualSoccer {

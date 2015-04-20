@@ -1927,6 +1927,9 @@
   <data name="VirtualHorseRacing" xml:space="preserve">
     <value>虛擬賽馬</value>
   </data>
+  <data name="VirtualMotorsports" xml:space="preserve">
+    <value>虛擬賽車</value>
+  </data>
   <data name="VirtualSoccer" xml:space="preserve">
     <value>虚拟足球</value>
   </data>
