@@ -788,10 +788,9 @@ namespace Fanex.Affiliate.Controllers
         [HttpPost]
         public ActionResult ChangePassword(ChangePasswordCriteria criteria)
         {
-            CheckPasswordFormat(criteria);
-
             if (ModelState.IsValid)
             {
+                CheckPasswordFormat(criteria);
                 var passwordFromDB = AccountService.GetChangePasswordInfo(new ChangePasswordInfoCriteria
                 {
                     AffId = CurrentSession.AffId

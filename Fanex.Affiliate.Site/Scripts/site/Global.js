@@ -370,9 +370,9 @@ $(function () {
 });
 
 // First, checks if it isn't implemented yet.
+/*jshint -W121 */
 if (!String.prototype.format) {
     String.prototype.format = function () {
-        "use strict";
         var args = arguments;
         return this.replace(/{(\d+)}/g, function (match, number) {
             return typeof args[number] !== 'undefined'

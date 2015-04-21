@@ -14,10 +14,16 @@ var ChangePassword = (function ($) {
                 newPassword = $("#NewPassword").val(),
                 confirmPassword = $("#ConfirmPassword").val(),
                 secureToken = $("#SecureToken").val();
+                var oldPasswordToken = !$.trim($('#OldPassword').val()) ? oldPassword
+                                    : ChangePassword.hashPassword(oldPassword, secureToken, "OldPassword");
+                var newPasswordToken = !$.trim($('#NewPassword').val()) ? newPassword
+                                    : ChangePassword.encryptPassword(newPassword, "NewPassword");
+                var confirmPasswordToken = !$.trim($('#ConfirmPassword').val()) ? confirmPassword
+                                    : ChangePassword.encryptPassword(confirmPassword, "ConfirmPassword");
 
-                $("#OldPassword").val(ChangePassword.hashPassword(oldPassword, secureToken, "OldPassword"));
-                $("#NewPassword").val(ChangePassword.encryptPassword(newPassword, "NewPassword"));
-                $("#ConfirmPassword").val(ChangePassword.encryptPassword(confirmPassword, "ConfirmPassword"));
+                $("#OldPassword").val(oldPasswordToken);
+                $("#NewPassword").val(newPasswordToken);
+                $("#ConfirmPassword").val(confirmPasswordToken);
             });
         },
         validate: function (obj) {
