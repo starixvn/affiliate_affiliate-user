@@ -13,6 +13,7 @@ namespace Fanex.Affiliate.Services
     using Common.Helper;
     using Criteria;
     using DTO;
+    using Fanex.Affiliate.Resources;
 
     /// <summary>
     /// Marketing service.
@@ -27,7 +28,18 @@ namespace Fanex.Affiliate.Services
         public IEnumerable<BannerType> GetBannerTypeList(BannerTypeCriteria criteria)
         {
             Check.Argument.IsNotNull(criteria, "criteria");
-            return GetData<BannerType>(criteria);
+            var result = GetData<BannerType>(criteria);
+
+            foreach (var item in result)
+            {
+                if (!string.IsNullOrEmpty(item.Value))
+                {
+                    var value = Lang.ResourceManager.GetString(item.Value.Replace(" ", string.Empty));
+                    item.Value = string.IsNullOrEmpty(value) ? item.Value : value;
+                }
+            }
+
+            return result;
         }
 
         /// <summary>
