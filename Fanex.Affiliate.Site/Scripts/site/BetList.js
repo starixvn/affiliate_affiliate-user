@@ -35,7 +35,7 @@ var BetList = (function ($) {
                     ? BetList.getMixParlayResultUrl(refnoMixParlay, winlostdate, bettype, username)
                     : BetList.getSportBookResultUrl(matchid, bettype, raceNo, sporttype, league, isOutright, username);
 
-            var title = "Results";
+            var title = window.MSG.Results;
             AFFILIATE.openDialogFrame(url, title, { width: 720, height: 500 });
         },
 
@@ -98,7 +98,7 @@ var BetList = (function ($) {
             var urlParam = $("#casino-hand-history-" + refNo).attr('url-param');
 
             url += urlParam;
-            var title = "Results";
+            var title = window.MSG.Results;
             AFFILIATE.openDialogFrame(url, title, { width: 950, height: 500 });
         }
     };

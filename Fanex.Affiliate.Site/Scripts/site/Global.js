@@ -19,16 +19,14 @@ var AFFILIATE = (function ($) {
                     var year = parseInt(parts[2], 10);
 
                     // Check the ranges of month and year
-                    if (year < 1000 || year > 3000 || month === 0 || month > 12)
-                    {
+                    if (year < 1000 || year > 3000 || month === 0 || month > 12) {
                         return false;
                     }
 
                     var monthLength = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
                     // Adjust for leap years
-                    if (year % 400 === 0 || (year % 100 !== 0 && year % 4 === 0))
-                    {
+                    if (year % 400 === 0 || (year % 100 !== 0 && year % 4 === 0)) {
                         monthLength[1] = 29;
                     }
 
@@ -152,13 +150,13 @@ var AFFILIATE = (function ($) {
         currentOpenDialog: null,
         openDialog: function (target, title, options) {
             options = options || {};
-            if (title)
-            {
+            options.closeText = window.Lang.Close;
+
+            if (title) {
                 options.title = title;
             }
 
-            if (target instanceof jQuery === false)
-            {
+            if (target instanceof jQuery === false) {
                 target = $(target);
             }
 
@@ -202,7 +200,7 @@ var AFFILIATE = (function ($) {
         showErrorMsg: function (msg) {
             var msgWrp = $('.validation-summary-valid');
             msgWrp.show();
-            if(msgWrp.hasClass('success')) {
+            if (msgWrp.hasClass('success')) {
                 msgWrp.removeClass('success');
             }
             msgWrp.addClass('validation-summary-errors')
@@ -214,28 +212,24 @@ var AFFILIATE = (function ($) {
             msgWrp.addClass('success')
                     .find('li:first').html(msg).show();
         },
-        hideMessageRegion: function() {
+        hideMessageRegion: function () {
             var msgWrp = $('.validation-summary-errors');
             msgWrp.hide();
         },
         isValidDate: function (year, month, day) {
             var beginDate = new Date(parseFloat(year) + "/" + month + "/" + day);
             var begYear;
-            if (beginDate.getYear() < 200)
-            {
+            if (beginDate.getYear() < 200) {
                 begYear = beginDate.getYear() + 1900;
             }
-            else
-            {
+            else {
                 begYear = beginDate.getYear();
             }
 
-            if (begYear !== parseFloat(year) || beginDate.getMonth() + 1 !== parseFloat(month) || beginDate.getDate() !== parseFloat(day))
-            {
+            if (begYear !== parseFloat(year) || beginDate.getMonth() + 1 !== parseFloat(month) || beginDate.getDate() !== parseFloat(day)) {
                 return false;
             }
-            else
-            {
+            else {
                 return true;
             }
         },
@@ -374,3 +368,16 @@ $(function () {
 
     $.datepicker.setDefaults($.datepicker.regional[$('#selectedLang').attr('class')]);
 });
+
+// First, checks if it isn't implemented yet.
+/*jshint -W121 */
+if (!String.prototype.format) {
+    String.prototype.format = function () {
+        var args = arguments;
+        return this.replace(/{(\d+)}/g, function (match, number) {
+            return typeof args[number] !== 'undefined'
+        ? args[number]
+        : match;
+        });
+    };
+}

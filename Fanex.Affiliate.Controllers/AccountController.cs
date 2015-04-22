@@ -359,8 +359,8 @@ namespace Fanex.Affiliate.Controllers
             model.Year = criteria.Year;
             model.Statistics = statistics;
             model.ListProduct = listProduct;
-            model.FirstListProduct = listProduct.Count > 0 ? listProduct[0].ProductName : Lang.NA;
-            model.TotalqualifedMembers = listProduct.Count > 0 ? listProduct[0].TotalQualifiedMembers.ToString() : Lang.NA;
+            model.FirstListProduct = listProduct.Count > 0 ? listProduct[0].ProductName : Lang.NAKey;
+            model.TotalqualifedMembers = listProduct.Count > 0 ? listProduct[0].TotalQualifiedMembers.ToString() : Lang.NAKey;
 
             return View(model);
         }
@@ -788,10 +788,9 @@ namespace Fanex.Affiliate.Controllers
         [HttpPost]
         public ActionResult ChangePassword(ChangePasswordCriteria criteria)
         {
-            CheckPasswordFormat(criteria);
-
             if (ModelState.IsValid)
             {
+                CheckPasswordFormat(criteria);
                 var passwordFromDB = AccountService.GetChangePasswordInfo(new ChangePasswordInfoCriteria
                 {
                     AffId = CurrentSession.AffId

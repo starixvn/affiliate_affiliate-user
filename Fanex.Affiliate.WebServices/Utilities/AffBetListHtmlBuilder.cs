@@ -17,6 +17,7 @@ namespace Fanex.Affiliate.WebServices.Utilities
     using BetList.Core.Entities;
     using Criteria;
     using DTO.BetList;
+    using Fanex.Affiliate.WebServices.Resources;
 
     /// <summary>
     /// Affiliate BetList HTML Builder.
@@ -56,7 +57,7 @@ namespace Fanex.Affiliate.WebServices.Utilities
                         casinoHandTemplate,
                         ticket.RefNo,
                         GetCasinoHandHistoryParam(ticket, criteria, username),
-                        "Results");
+                        Lang.Results);
                 case 72:
                 case 73:
                     return statusNormalText;

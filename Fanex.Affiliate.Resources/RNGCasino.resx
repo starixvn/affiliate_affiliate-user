@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -139,7 +139,7 @@
     <value>Combination</value>
   </data>
   <data name="Detail" xml:space="preserve">
-    <value>Detail</value>
+    <value>Details</value>
   </data>
   <data name="EndBalance" xml:space="preserve">
     <value>End Balance</value>
@@ -164,6 +164,9 @@
   </data>
   <data name="GameType" xml:space="preserve">
     <value>Game Type</value>
+  </data>
+  <data name="GameTypeNotSupported" xml:space="preserve">
+    <value>This game type has not been supported yet!</value>
   </data>
   <data name="HandNo" xml:space="preserve">
     <value>Hand No</value>
@@ -253,12 +256,12 @@
     <value>Type</value>
   </data>
   <data name="Viewin" xml:space="preserve">
-    <value>View in </value>
+    <value>View in {0}</value>
   </data>
   <data name="Win" xml:space="preserve">
     <value>Win</value>
   </data>
   <data name="WinLoss" xml:space="preserve">
-    <value>Win/Loss</value>
+    <value>Win Loss</value>
   </data>
 </root>

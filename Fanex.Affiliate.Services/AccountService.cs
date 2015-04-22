@@ -15,6 +15,7 @@ namespace Fanex.Affiliate.Services
     using Criteria;
     using DataAccess;
     using DTO;
+    using Fanex.Affiliate.Resources;
     using ViewModels;
 
     /// <summary>
@@ -53,6 +54,7 @@ namespace Fanex.Affiliate.Services
         #endregion Constructor
 
         #region Account Overview
+
         /// <summary>
         /// Get statistics for Affiliate.
         /// </summary>
@@ -76,7 +78,7 @@ namespace Fanex.Affiliate.Services
             return _accountDataAccess.GetCommissionSetting(criteria);
         }
 
-        #endregion
+        #endregion Account Overview
 
         /// <summary>
         /// Get statement history.
@@ -87,7 +89,18 @@ namespace Fanex.Affiliate.Services
         public IEnumerable<Statement> GetStatementHistory(StatementCriteria criteria, ref int totalPage)
         {
             Check.Argument.IsNotNull(criteria, "criteria");
-            return GetData<Statement>(criteria, ref totalPage);
+            var result = GetData<Statement>(criteria, ref totalPage);
+
+            foreach (var payment in result)
+            {
+                if (!string.IsNullOrEmpty(payment.Description))
+                {
+                    var value = Lang.ResourceManager.GetString(payment.Description.Replace(" ", string.Empty));
+                    payment.Description = string.IsNullOrEmpty(value) ? payment.Description : value;
+                }
+            }
+
+            return result;
         }
 
         /// <summary>

@@ -9,15 +9,35 @@ var ChangePassword = (function ($) {
             $("#ConfirmPassword").tooltip();
 
             // Event click login
-            $("#btnSubmit").click(function () {
+            $("#btnSubmit").click(function (e) {
                 var oldPassword = $("#OldPassword").val(),
                 newPassword = $("#NewPassword").val(),
                 confirmPassword = $("#ConfirmPassword").val(),
                 secureToken = $("#SecureToken").val();
 
-                $("#OldPassword").val(ChangePassword.hashPassword(oldPassword, secureToken, "OldPassword"));
-                $("#NewPassword").val(ChangePassword.encryptPassword(newPassword, "NewPassword"));
-                $("#ConfirmPassword").val(ChangePassword.encryptPassword(confirmPassword, "ConfirmPassword"));
+                if (!ChangePassword.validate(document.getElementById('NewPassword'))) {
+                    $('#NewPassword').focus();
+                    e.preventDefault();
+                    return;
+                }
+
+                if (!ChangePassword.validate(document.getElementById('ConfirmPassword'))) {
+                    $('#ConfirmPassword').focus();
+                    e.preventDefault();
+                    return;
+                }
+
+                var oldPasswordToken = !$.trim($('#OldPassword').val()) ? oldPassword
+                                    : ChangePassword.hashPassword(oldPassword, secureToken, "OldPassword");
+                var newPasswordToken = !$.trim($('#NewPassword').val()) ? newPassword
+                                    : ChangePassword.encryptPassword(newPassword, "NewPassword");
+                var confirmPasswordToken = !$.trim($('#ConfirmPassword').val()) ? confirmPassword
+                                    : ChangePassword.encryptPassword(confirmPassword, "ConfirmPassword");
+
+
+                $("#OldPassword").val(oldPasswordToken);
+                $("#NewPassword").val(newPasswordToken);
+                $("#ConfirmPassword").val(confirmPasswordToken);
             });
         },
         validate: function (obj) {
@@ -27,6 +47,7 @@ var ChangePassword = (function ($) {
             if (pass.length < 6) {
                 validator.removeClass('validate-pass');
                 validator.addClass('validate-fail');
+                return false;
             } else {
                 var bol = ChangePassword.check(pass);
                 if (bol) {
@@ -36,6 +57,7 @@ var ChangePassword = (function ($) {
                     validator.removeClass('validate-pass');
                     validator.addClass('validate-fail');
                 }
+                return bol;
             }
         },
         check: function (str) {

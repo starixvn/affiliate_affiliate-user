@@ -19,18 +19,25 @@ namespace Fanex.Affiliate.WebServices.DTO.BetList
     /// </summary>
     public class BetlistSOAP
     {
+        public BetlistSOAP()
+        {
+            Language = "en-US";
+        }
+
         public string AffiliateName { get; set; }
-
-        public string Username { get; set; }
-
-        public string Product { get; set; }
-
-        public DateTime FromDate { get; set; }
-
-        public DateTime ToDate { get; set; }
 
         public decimal ExchangeRate { get; set; }
 
+        public DateTime FromDate { get; set; }
+
+        public string Language { get; set; }
+
+        public string Product { get; set; }
+
         public List<Product> SupportedProducts { get; set; }
+
+        public DateTime ToDate { get; set; }
+
+        public string Username { get; set; }
     }
 }

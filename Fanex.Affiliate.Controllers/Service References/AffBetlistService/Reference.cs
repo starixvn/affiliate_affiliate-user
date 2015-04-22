@@ -27,17 +27,17 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBetlistParlay", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CriteriaBase))]
-        string GetBetlistParlay(string affiliateName, string transactionId, string exchangeRate);
+        string GetBetlistParlay(string affiliateName, string transactionId, string exchangeRate, string language);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBetlistSystemParlay", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CriteriaBase))]
-        string GetBetlistSystemParlay(string affiliateName, string exchangeRate, Fanex.Affiliate.Controllers.AffBetlistService.BetListSystemParlayDetailCriteria criteria);
+        string GetBetlistSystemParlay(string affiliateName, string exchangeRate, Fanex.Affiliate.Controllers.AffBetlistService.BetListSystemParlayDetailCriteria criteria, string language);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBetlistResults", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CriteriaBase))]
-        string GetBetlistResults(string affiliateName, string sessionLanguage, Fanex.Affiliate.Controllers.AffBetlistService.BetListResultsCriteria criteria);
+        string GetBetlistResults(string affiliateName, string sessionLanguage, Fanex.Affiliate.Controllers.AffBetlistService.BetListResultsCriteria criteria, string language);
     }
     
     /// <remarks/>
@@ -50,10 +50,6 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         
         private string affiliateNameField;
         
-        private string adminNameField;
-        
-        private int affIdField;
-        
         private string usernameField;
         
         private string productField;
@@ -65,6 +61,8 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         private decimal exchangeRateField;
         
         private Product[] supportedProductsField;
+        
+        private string languageField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -80,30 +78,6 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string AdminName {
-            get {
-                return this.adminNameField;
-            }
-            set {
-                this.adminNameField = value;
-                this.RaisePropertyChanged("AdminName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public int AffId {
-            get {
-                return this.affIdField;
-            }
-            set {
-                this.affIdField = value;
-                this.RaisePropertyChanged("AffId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         public string Username {
             get {
                 return this.usernameField;
@@ -115,7 +89,7 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         public string Product {
             get {
                 return this.productField;
@@ -127,7 +101,7 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         public System.DateTime FromDate {
             get {
                 return this.fromDateField;
@@ -139,7 +113,7 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         public System.DateTime ToDate {
             get {
                 return this.toDateField;
@@ -151,7 +125,7 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         public decimal ExchangeRate {
             get {
                 return this.exchangeRateField;
@@ -163,7 +137,7 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=8)]
+        [System.Xml.Serialization.XmlArrayAttribute(Order=6)]
         public Product[] SupportedProducts {
             get {
                 return this.supportedProductsField;
@@ -171,6 +145,18 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
             set {
                 this.supportedProductsField = value;
                 this.RaisePropertyChanged("SupportedProducts");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public string Language {
+            get {
+                return this.languageField;
+            }
+            set {
+                this.languageField = value;
+                this.RaisePropertyChanged("Language");
             }
         }
         
@@ -583,16 +569,16 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
             return base.Channel.GetBetlist(betlistSOAP);
         }
         
-        public string GetBetlistParlay(string affiliateName, string transactionId, string exchangeRate) {
-            return base.Channel.GetBetlistParlay(affiliateName, transactionId, exchangeRate);
+        public string GetBetlistParlay(string affiliateName, string transactionId, string exchangeRate, string language) {
+            return base.Channel.GetBetlistParlay(affiliateName, transactionId, exchangeRate, language);
         }
         
-        public string GetBetlistSystemParlay(string affiliateName, string exchangeRate, Fanex.Affiliate.Controllers.AffBetlistService.BetListSystemParlayDetailCriteria criteria) {
-            return base.Channel.GetBetlistSystemParlay(affiliateName, exchangeRate, criteria);
+        public string GetBetlistSystemParlay(string affiliateName, string exchangeRate, Fanex.Affiliate.Controllers.AffBetlistService.BetListSystemParlayDetailCriteria criteria, string language) {
+            return base.Channel.GetBetlistSystemParlay(affiliateName, exchangeRate, criteria, language);
         }
         
-        public string GetBetlistResults(string affiliateName, string sessionLanguage, Fanex.Affiliate.Controllers.AffBetlistService.BetListResultsCriteria criteria) {
-            return base.Channel.GetBetlistResults(affiliateName, sessionLanguage, criteria);
+        public string GetBetlistResults(string affiliateName, string sessionLanguage, Fanex.Affiliate.Controllers.AffBetlistService.BetListResultsCriteria criteria, string language) {
+            return base.Channel.GetBetlistResults(affiliateName, sessionLanguage, criteria, language);
         }
     }
 }

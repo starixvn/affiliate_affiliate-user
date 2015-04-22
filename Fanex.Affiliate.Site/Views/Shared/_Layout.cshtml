@@ -17,8 +17,9 @@
 
     @Scripts.Render("~/js/jquery")
     @Scripts.Render("~/js/core")
-     <script type="text/ecmascript">
-         $.unblockUI();
+    <script type="text/ecmascript">
+        $.unblockUI();
+
          AFFILIATE.getAbsoluteUrl = function (relativeUrl) {
              return '@Url.Content("~/")' + relativeUrl;
          };
