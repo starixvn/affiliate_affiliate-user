@@ -1,0 +1,2016 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="AccountInformation" xml:space="preserve">
+    <value>帐户资料</value>
+  </data>
+	<data name="AccountOverview" xml:space="preserve">
+    <value>帐户概要</value>
+  </data>
+	<data name="Address" xml:space="preserve">
+    <value>地址</value>
+  </data>
+	<data name="AddressIsRequired" xml:space="preserve">
+    <value>请填写地址</value>
+  </data>
+<<<<<<< HEAD
+  <data name="AddUrl" xml:space="preserve">
+    <value>添加Url</value>
+=======
+	<data name="AddUrl" xml:space="preserve">
+    <value>Url 添加</value>
+>>>>>>> #34490 - Update dll Fanex.BetList
+  </data>
+	<data name="Adjustment" xml:space="preserve">
+    <value>调整</value>
+  </data>
+	<data name="Affiliate" xml:space="preserve">
+    <value>合作伙伴</value>
+  </data>
+	<data name="AffiliateLogin" xml:space="preserve">
+    <value>合作伙伴登入</value>
+  </data>
+	<data name="AffiliateTitle" xml:space="preserve">
+    <value>{0} 加盟计划</value>
+  </data>
+	<data name="AgreeTermNCondition" xml:space="preserve">
+    <value>我同意 {0} 合作伙伴的规则与条款</value>
+  </data>
+	<data name="All" xml:space="preserve">
+    <value>全部</value>
+  </data>
+	<data name="Amount" xml:space="preserve">
+    <value>金额</value>
+  </data>
+	<data name="Answer" xml:space="preserve">
+    <value>答案</value>
+  </data>
+	<data name="AnswerIsRequired" xml:space="preserve">
+    <value>答案 未输入请确认!</value>
+  </data>
+	<data name="Approved" xml:space="preserve">
+    <value>核准</value>
+  </data>
+	<data name="Apr" xml:space="preserve">
+    <value>四月</value>
+  </data>
+	<data name="Aug" xml:space="preserve">
+    <value>八月</value>
+  </data>
+	<data name="AvailableDomains" xml:space="preserve">
+    <value>可用網址</value>
+  </data>
+	<data name="BalanceBroughtForward" xml:space="preserve">
+    <value>转入下月余额</value>
+  </data>
+	<data name="BalanceIsZero" xml:space="preserve">
+    <value>您的帐户余额不足，不能要求提款</value>
+  </data>
+	<data name="BankTransfer" xml:space="preserve">
+    <value>银行转帐</value>
+  </data>
+	<data name="Banner" xml:space="preserve">
+    <value>用您的瀏覽量賺錢!</value>
+  </data>
+	<data name="Bonus" xml:space="preserve">
+    <value>红利</value>
+  </data>
+	<data name="Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+	<data name="Cancelled" xml:space="preserve">
+    <value>取消</value>
+  </data>
+	<data name="CancelRequest" xml:space="preserve">
+    <value>取消申请</value>
+  </data>
+	<data name="Category" xml:space="preserve">
+    <value>种类</value>
+  </data>
+	<data name="Change" xml:space="preserve">
+    <value>变更</value>
+  </data>
+	<data name="ChangePassErr" xml:space="preserve">
+    <value>更改密码出错</value>
+  </data>
+	<data name="ChangePassword" xml:space="preserve">
+    <value>更改密码</value>
+  </data>
+	<data name="ChangePasswordEmailTitle" xml:space="preserve">
+    <value>{0} 合作伙伴 — 您的新密码</value>
+  </data>
+	<data name="ChangePasswordInstruction" xml:space="preserve">
+    <value>使用这个表格来更改您的密码。一旦更改，您需要使用新密码来登陆您的帐户。</value>
+  </data>
+	<data name="City" xml:space="preserve">
+    <value>城市</value>
+  </data>
+	<data name="CityIsRequired" xml:space="preserve">
+    <value>请填写城市</value>
+  </data>
+	<data name="Comment" xml:space="preserve">
+    <value>意见</value>
+  </data>
+	<data name="CommentIsRequired" xml:space="preserve">
+    <value>意见填写无效</value>
+  </data>
+	<data name="Commission" xml:space="preserve">
+    <value>佣金比例</value>
+  </data>
+	<data name="ComNetWin" xml:space="preserve">
+    <value>每月盈亏总额 ({0})</value>
+  </data>
+	<data name="CompletedDate" xml:space="preserve">
+    <value>完成日期</value>
+  </data>
+	<data name="CompleteForm" xml:space="preserve">
+    <value>请完整填写此页注册表，以确保成功注册 {0} 合作伙伴账号</value>
+  </data>
+	<data name="ConfirmPasswordRequired" xml:space="preserve">
+    <value>需要输入确认密码</value>
+  </data>
+	<data name="ContactInfo" xml:space="preserve">
+    <value>联络方式</value>
+  </data>
+	<data name="ContactNumber" xml:space="preserve">
+    <value>联络电话号码</value>
+  </data>
+	<data name="ContactNumberIsRequired" xml:space="preserve">
+    <value>聯絡電話號碼 未输入请确认!</value>
+  </data>
+	<data name="ContactUs" xml:space="preserve">
+    <value>联络我们</value>
+  </data>
+	<data name="Country" xml:space="preserve">
+    <value>国家</value>
+  </data>
+	<data name="CountryIsRequired" xml:space="preserve">
+    <value>请选择国家</value>
+  </data>
+	<data name="CsdMailSubject" xml:space="preserve">
+    <value>{0} 加盟会员 - 新账户({1})等待审批</value>
+  </data>
+	<data name="Currency" xml:space="preserve">
+    <value>外匯</value>
+  </data>
+	<data name="CurrencyIsRequired" xml:space="preserve">
+    <value>请选择货币</value>
+  </data>
+	<data name="Current" xml:space="preserve">
+    <value>当前的</value>
+  </data>
+	<data name="CurrentCommissionSetting" xml:space="preserve">
+    <value>目前佣金设定</value>
+  </data>
+	<data name="DailyEarnings" xml:space="preserve">
+    <value>日收入</value>
+  </data>
+	<data name="Date" xml:space="preserve">
+    <value>日期</value>
+  </data>
+	<data name="Dec" xml:space="preserve">
+    <value>十二月</value>
+  </data>
+	<data name="Deposit" xml:space="preserve">
+    <value>存款</value>
+  </data>
+	<data name="Description" xml:space="preserve">
+    <value>描述</value>
+  </data>
+	<data name="Email" xml:space="preserve">
+    <value>电邮地址</value>
+  </data>
+	<data name="EmailFormat" xml:space="preserve">
+    <value>邮件格式</value>
+  </data>
+	<data name="EmailIsRequire" xml:space="preserve">
+    <value>请填写电子邮件地址</value>
+  </data>
+	<data name="EmailMatch" xml:space="preserve">
+    <value>您输入的电子邮件地址不符。</value>
+  </data>
+	<data name="EmptyEmail" xml:space="preserve">
+    <value>请输入电子邮箱地址</value>
+  </data>
+	<data name="ErrGender" xml:space="preserve">
+    <value>性別 未输入请确认!</value>
+  </data>
+	<data name="FAQs" xml:space="preserve">
+    <value>常见问题</value>
+  </data>
+<<<<<<< HEAD
+  <data name="FDM" xml:space="preserve">
+    <value>会员第一次存款</value>
+=======
+	<data name="FDM" xml:space="preserve">
+    <value>FDM</value>
+>>>>>>> #34490 - Update dll Fanex.BetList
+  </data>
+	<data name="Feb" xml:space="preserve">
+    <value>二月</value>
+  </data>
+	<data name="Female" xml:space="preserve">
+    <value>女</value>
+  </data>
+	<data name="FirstName" xml:space="preserve">
+    <value>名字</value>
+  </data>
+	<data name="FirstNameIsRequired" xml:space="preserve">
+    <value>请填写您的名</value>
+  </data>
+	<data name="ForgetPassword" xml:space="preserve">
+    <value>忘记密码？</value>
+  </data>
+	<data name="ForgetPasswordEmailTitle" xml:space="preserve">
+    <value>{0} 合作伙伴 — 您的登录详情</value>
+  </data>
+	<data name="ForgetPasswordInstruction" xml:space="preserve">
+    <value>新的密码会发到您提供的注册邮箱。&lt;br /&gt; 若您遇到任何困难，请 {0}.</value>
+  </data>
+	<data name="ForgetPasswordSuccess" xml:space="preserve">
+    <value>您的登入资料已送出&lt;br/&gt;请登录您的电子邮箱查找您的用户名以及密码等信息。&lt;br/&gt;如果您没有收到电邮，无论原因如何，{0}，我们很乐意为您提供协助。</value>
+  </data>
+	<data name="From" xml:space="preserve">
+    <value>从</value>
+  </data>
+	<data name="Gender" xml:space="preserve">
+    <value>性別</value>
+  </data>
+	<data name="GenerateLink" xml:space="preserve">
+    <value>啟用新鏈接</value>
+  </data>
+	<data name="Hobby" xml:space="preserve">
+    <value>您的爱好是？</value>
+  </data>
+	<data name="Home" xml:space="preserve">
+    <value>主页</value>
+  </data>
+	<data name="HomeDetailed" xml:space="preserve">
+    <value>详细的数据统计追踪系统</value>
+  </data>
+	<data name="HomeEarn" xml:space="preserve">
+    <value>永久赚取玩家净输金额的40%</value>
+  </data>
+	<data name="HomeNegative" xml:space="preserve">
+    <value>负余额</value>
+  </data>
+	<data name="HomeOnline" xml:space="preserve">
+    <value>为您和您的玩家提供7*24小时在线服务</value>
+  </data>
+	<data name="HomePrompt" xml:space="preserve">
+    <value>提示每月付款</value>
+  </data>
+	<data name="HomeWide" xml:space="preserve">
+    <value>多种付费途径</value>
+  </data>
+	<data name="HtmlFormat" xml:space="preserve">
+    <value>Html格式</value>
+  </data>
+<<<<<<< HEAD
+  <data name="IDKey" xml:space="preserve">
+=======
+	<data name="ID" xml:space="preserve">
+>>>>>>> #34490 - Update dll Fanex.BetList
+    <value>代码</value>
+  </data>
+	<data name="Important" xml:space="preserve">
+    <value>重要</value>
+  </data>
+	<data name="InputRequestAmount" xml:space="preserve">
+    <value>输入要求的金额</value>
+  </data>
+	<data name="Jan" xml:space="preserve">
+    <value>一月</value>
+  </data>
+	<data name="Jul" xml:space="preserve">
+    <value>七月</value>
+  </data>
+	<data name="Jun" xml:space="preserve">
+    <value>六月</value>
+  </data>
+	<data name="LandingPages" xml:space="preserve">
+    <value>登陸頁面</value>
+  </data>
+	<data name="LandingPagesStatistics" xml:space="preserve">
+    <value>登陆页面统计数据</value>
+  </data>
+	<data name="LandingPagesStatisticsDetail" xml:space="preserve">
+    <value>登陆页面详细统计数据</value>
+  </data>
+	<data name="Language" xml:space="preserve">
+    <value>语言</value>
+  </data>
+	<data name="LanguageIsRequired" xml:space="preserve">
+    <value>请选择语言</value>
+  </data>
+	<data name="LastName" xml:space="preserve">
+    <value>姓氏</value>
+  </data>
+	<data name="LastNameIsRequired" xml:space="preserve">
+    <value>请填写您的姓</value>
+  </data>
+	<data name="LinkDefault" xml:space="preserve">
+    <value>默认</value>
+  </data>
+	<data name="LinkTo" xml:space="preserve">
+    <value>链接</value>
+  </data>
+	<data name="Login" xml:space="preserve">
+    <value>登入</value>
+  </data>
+	<data name="Logout" xml:space="preserve">
+    <value>登出</value>
+  </data>
+	<data name="MailingInfor" xml:space="preserve">
+    <value>邮递资料</value>
+  </data>
+	<data name="Male" xml:space="preserve">
+    <value>男</value>
+  </data>
+	<data name="Mar" xml:space="preserve">
+    <value>三月</value>
+  </data>
+	<data name="MarketingTools" xml:space="preserve">
+    <value>营销工具</value>
+  </data>
+	<data name="May" xml:space="preserve">
+    <value>五月</value>
+  </data>
+	<data name="MediaGallery" xml:space="preserve">
+    <value>媒体册</value>
+  </data>
+	<data name="Message" xml:space="preserve">
+    <value>讯息</value>
+  </data>
+	<data name="MessageHistory" xml:space="preserve">
+    <value>最新消息</value>
+  </data>
+	<data name="MinimumWithdrawalAmount" xml:space="preserve">
+    <value>最低提款金额为</value>
+  </data>
+	<data name="Mobile" xml:space="preserve">
+    <value>手机号码</value>
+  </data>
+	<data name="MobileNumberIsRequired" xml:space="preserve">
+    <value>手機號碼 未输入请确认!</value>
+  </data>
+	<data name="Month" xml:space="preserve">
+    <value>月</value>
+  </data>
+	<data name="MonthlyWinlost" xml:space="preserve">
+    <value>每月盈利</value>
+  </data>
+	<data name="More" xml:space="preserve">
+    <value>更多</value>
+  </data>
+	<data name="MotherName" xml:space="preserve">
+    <value>母亲的名字？</value>
+  </data>
+	<data name="Movie" xml:space="preserve">
+    <value>您最喜欢的电影是？</value>
+  </data>
+	<data name="Msg101" xml:space="preserve">
+    <value>用户名或密码错误.</value>
+  </data>
+	<data name="Msg102" xml:space="preserve">
+    <value>账号关闭，请联络管理员</value>
+  </data>
+	<data name="Msg103" xml:space="preserve">
+    <value>因为连续5次登陆失败，您的账户被暂时锁定。请10分钟以后再尝试登陆或者联系管理员！</value>
+  </data>
+	<data name="Msg104" xml:space="preserve">
+    <value>您所輸入的電子郵箱地址無法識別，請重新輸入或者 {0}</value>
+  </data>
+	<data name="Msg105" xml:space="preserve">
+    <value>账号未核准，请联络管理员</value>
+  </data>
+	<data name="Msg106" xml:space="preserve">
+    <value>用于请求新密码的地址无效</value>
+  </data>
+	<data name="Msg107" xml:space="preserve">
+    <value>糟糕，您的账户不存在或被关闭。请联系管理员。</value>
+  </data>
+	<data name="Msg119" xml:space="preserve">
+    <value>电子邮件地址无效</value>
+  </data>
+	<data name="Msg120" xml:space="preserve">
+    <value>请填写电子邮件地址</value>
+  </data>
+	<data name="Msg121" xml:space="preserve">
+    <value>此邮箱地址已被使用，请选用其他邮箱地址。</value>
+  </data>
+	<data name="Msg122" xml:space="preserve">
+    <value>无效合作信息</value>
+  </data>
+	<data name="Msg123" xml:space="preserve">
+    <value>客户设立失败。请重试</value>
+  </data>
+	<data name="Msg130" xml:space="preserve">
+    <value>你有一项申请在“待处理”状态，要设置一项新要求，请先取消这暂停而未完成的操作，或等待这次操作完成为止。</value>
+  </data>
+	<data name="Msg131" xml:space="preserve">
+    <value>非常抱歉，此代理人没有足够金额进行提款。</value>
+  </data>
+	<data name="Msg132" xml:space="preserve">
+    <value>无效Role ID。</value>
+  </data>
+	<data name="Msg133" xml:space="preserve">
+    <value>账号余额无效或者不支持此币种或支付方式。</value>
+  </data>
+	<data name="Msg134" xml:space="preserve">
+    <value>插入交易失败</value>
+  </data>
+	<data name="Msg135" xml:space="preserve">
+    <value>非常抱歉，金额无效</value>
+  </data>
+	<data name="Msg136" xml:space="preserve">
+    <value>申请金额必须大于最小提款金额</value>
+  </data>
+<<<<<<< HEAD
+  <data name="Msg137" xml:space="preserve">
+    <value>抱歉! [Neteller,银行转账,... - 合作伙伴所选] 付款方式目前不可用. 目前只支持会员账号方式. 请点击这里更变.</value>
+=======
+	<data name="Msg137" xml:space="preserve">
+    <value>Sorry! The [Neteller, Bank Transfer,.. - affiliate's chosen one] payment method is not available. At the moment, only "Player Account" method is supported. Please click here to make a change.</value>
+>>>>>>> #34490 - Update dll Fanex.BetList
+  </data>
+	<data name="Msg138" xml:space="preserve">
+    <value>我们不支持此种货币。请联系管理员。</value>
+  </data>
+	<data name="Msg139" xml:space="preserve">
+    <value>糟糕，您未被获准更新此次交易。</value>
+  </data>
+	<data name="Msg140" xml:space="preserve">
+    <value>此交易非提款操作。</value>
+  </data>
+	<data name="Msg141" xml:space="preserve">
+    <value>您無權進行此操作</value>
+  </data>
+	<data name="Msg142" xml:space="preserve">
+    <value>用户不存在</value>
+  </data>
+	<data name="Msg143" xml:space="preserve">
+    <value>需要输入付款金额。</value>
+  </data>
+	<data name="Msg150" xml:space="preserve">
+    <value>旧密码错误</value>
+  </data>
+	<data name="MsgEmptyCaptcha" xml:space="preserve">
+    <value>必须输入验证码</value>
+  </data>
+	<data name="MsgEmptyUsernamePassword" xml:space="preserve">
+    <value>请输入用户名和密码</value>
+  </data>
+	<data name="MsgIncorrectCaptchaMsg" xml:space="preserve">
+    <value>验证码无效！</value>
+  </data>
+	<data name="MsgKickout" xml:space="preserve">
+    <value>您的帐户已在别处登录或此次登录已超时，被迫登出！</value>
+  </data>
+<<<<<<< HEAD
+  <data name="NAKey" xml:space="preserve">
+=======
+	<data name="NA" xml:space="preserve">
+>>>>>>> #34490 - Update dll Fanex.BetList
+    <value>不适用</value>
+  </data>
+	<data name="Name" xml:space="preserve">
+    <value>名字</value>
+  </data>
+	<data name="NameIsRequired" xml:space="preserve">
+    <value>姓名无效</value>
+  </data>
+	<data name="NameOfBook" xml:space="preserve">
+    <value>您最喜欢的书是？</value>
+  </data>
+	<data name="NewPassword" xml:space="preserve">
+    <value>新密码</value>
+  </data>
+	<data name="NewPasswordRequired" xml:space="preserve">
+    <value>请填写新密码</value>
+  </data>
+	<data name="NewSignups" xml:space="preserve">
+    <value>新的注册</value>
+  </data>
+	<data name="NoInformation" xml:space="preserve">
+    <value>没有任何资料</value>
+  </data>
+	<data name="Normal" xml:space="preserve">
+    <value>普通</value>
+  </data>
+	<data name="Nov" xml:space="preserve">
+    <value>十一月</value>
+  </data>
+	<data name="Oct" xml:space="preserve">
+    <value>十月</value>
+  </data>
+	<data name="OldPassErr" xml:space="preserve">
+    <value>旧密码错误</value>
+  </data>
+	<data name="OldPassword" xml:space="preserve">
+    <value>旧密码</value>
+  </data>
+	<data name="OldPasswordRequired" xml:space="preserve">
+    <value>请填写旧密码</value>
+  </data>
+	<data name="Page" xml:space="preserve">
+    <value>页</value>
+  </data>
+	<data name="PageSize" xml:space="preserve">
+    <value>页面尺寸</value>
+  </data>
+	<data name="Paging" xml:space="preserve">
+    <value>第{0}页，共{1}页</value>
+  </data>
+	<data name="Password" xml:space="preserve">
+    <value>密码</value>
+  </data>
+	<data name="PasswordNotMatched" xml:space="preserve">
+    <value>确认密码与新密码不符</value>
+  </data>
+	<data name="PaymentInfo" xml:space="preserve">
+    <value>付款资料</value>
+  </data>
+	<data name="PaymentMethod" xml:space="preserve">
+    <value>付款方式 </value>
+  </data>
+	<data name="PaymentRequest" xml:space="preserve">
+    <value>提款要求</value>
+  </data>
+	<data name="PaymentRequestCancel" xml:space="preserve">
+    <value>您的支付申请已经被取消！</value>
+  </data>
+	<data name="PaymentRequestSuccess" xml:space="preserve">
+    <value>您的支付申请已经成功提交！</value>
+  </data>
+	<data name="PaymentTime" xml:space="preserve">
+    <value>每月8号至15号为申请提款时间.</value>
+  </data>
+	<data name="PendingRequest" xml:space="preserve">
+    <value>待处理申请</value>
+  </data>
+	<data name="PetName" xml:space="preserve">
+    <value>您最喜欢的宠物名字是？</value>
+  </data>
+	<data name="PlainText" xml:space="preserve">
+    <value>纯文本</value>
+  </data>
+	<data name="PlayerAcc" xml:space="preserve">
+    <value>玩家账号</value>
+  </data>
+	<data name="PlayerUsername" xml:space="preserve">
+    <value>玩家用户名</value>
+  </data>
+	<data name="PlayerUsernameIsRequired" xml:space="preserve">
+    <value>请填写 用户名</value>
+  </data>
+	<data name="Postal" xml:space="preserve">
+    <value>邮编</value>
+  </data>
+	<data name="PostcodeZiIsRequired" xml:space="preserve">
+    <value>请填写邮编</value>
+  </data>
+	<data name="PostDate" xml:space="preserve">
+    <value>增加日期</value>
+  </data>
+	<data name="Preference" xml:space="preserve">
+    <value>首选</value>
+  </data>
+	<data name="Proccessing" xml:space="preserve">
+    <value>处理中</value>
+  </data>
+	<data name="Product" xml:space="preserve">
+    <value>体育</value>
+  </data>
+	<data name="ProgramDetails" xml:space="preserve">
+    <value>计划详情</value>
+  </data>
+	<data name="PwdChanged" xml:space="preserve">
+    <value>更改密码成功</value>
+  </data>
+	<data name="QualifyingMembers" xml:space="preserve">
+    <value>合格会员数</value>
+  </data>
+	<data name="Question" xml:space="preserve">
+    <value>安全提问</value>
+  </data>
+	<data name="QuestionIsRequired" xml:space="preserve">
+    <value>安全提问 未输入请确认!</value>
+  </data>
+	<data name="RecentPayment" xml:space="preserve">
+    <value>最近付款</value>
+  </data>
+	<data name="RecoverPasswordFail" xml:space="preserve">
+    <value>用于请求新密码的地址无效</value>
+  </data>
+	<data name="ReenterNewPassword" xml:space="preserve">
+    <value>确认密码</value>
+  </data>
+	<data name="Referrals" xml:space="preserve">
+    <value>参考来源</value>
+  </data>
+	<data name="ReferralsDetail" xml:space="preserve">
+    <value>推荐详情</value>
+  </data>
+	<data name="ReferrersStatistics" xml:space="preserve">
+    <value>推荐统计数据</value>
+  </data>
+	<data name="ReferrersStatisticsDetail" xml:space="preserve">
+    <value>推荐详细统计数据</value>
+  </data>
+	<data name="RefNo" xml:space="preserve">
+    <value>订单号码</value>
+  </data>
+	<data name="RegisForm" xml:space="preserve">
+    <value>申请表格</value>
+  </data>
+	<data name="Rejected" xml:space="preserve">
+    <value>拒绝</value>
+  </data>
+	<data name="RequestAmount" xml:space="preserve">
+    <value>提款金额</value>
+  </data>
+	<data name="RequestDate" xml:space="preserve">
+    <value>提款日期</value>
+  </data>
+	<data name="RequestPaymentEmailTitle" xml:space="preserve">
+    <value>支付申请通知 </value>
+  </data>
+<<<<<<< HEAD
+  <data name="Requestpayout" xml:space="preserve">
+=======
+	<data name="Requestpayout" xml:space="preserve">
+>>>>>>> #34490 - Update dll Fanex.BetList
+    <value>要求支付</value>
+  </data>
+	<data name="RequireInfo" xml:space="preserve">
+    <value>有&lt;span class="txtRequire"&gt;*&lt;/span&gt;标记的栏目为必填选项</value>
+  </data>
+	<data name="Reset" xml:space="preserve">
+    <value>重设</value>
+  </data>
+	<data name="Search" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+	<data name="SecretCode" xml:space="preserve">
+    <value>您的秘密号码是？</value>
+  </data>
+	<data name="SelectOne" xml:space="preserve">
+    <value>请选择</value>
+  </data>
+	<data name="Sep" xml:space="preserve">
+    <value>九月</value>
+  </data>
+	<data name="SignUp" xml:space="preserve">
+    <value>注册</value>
+  </data>
+	<data name="SignUpMailSubject" xml:space="preserve">
+    <value>{0} 合作伙伴 – 您的加盟申请</value>
+  </data>
+	<data name="SiteInfo" xml:space="preserve">
+    <value>网站资料</value>
+  </data>
+	<data name="SiteURL" xml:space="preserve">
+    <value>网站链接</value>
+  </data>
+	<data name="SiteURLIsRequired" xml:space="preserve">
+    <value>请填写网站链接地址</value>
+  </data>
+	<data name="Size" xml:space="preserve">
+    <value>尺寸</value>
+  </data>
+	<data name="Sport" xml:space="preserve">
+    <value>体育</value>
+  </data>
+	<data name="SportTeam" xml:space="preserve">
+    <value>您喜欢的体育队伍是？</value>
+  </data>
+	<data name="State" xml:space="preserve">
+    <value>省(州)</value>
+  </data>
+	<data name="StateIsRequired" xml:space="preserve">
+    <value>请填写省/州</value>
+  </data>
+	<data name="StatementHistory" xml:space="preserve">
+    <value>历史账目</value>
+  </data>
+	<data name="StatisticsFor" xml:space="preserve">
+    <value>{1}年{0}月的统计数据</value>
+  </data>
+	<data name="StatisticsUpToNow" xml:space="preserve">
+    <value>截止目前的统计数据</value>
+  </data>
+	<data name="Status" xml:space="preserve">
+    <value>状态</value>
+  </data>
+	<data name="SubCategory" xml:space="preserve">
+    <value>子目录</value>
+  </data>
+	<data name="Subject" xml:space="preserve">
+    <value>主题</value>
+  </data>
+	<data name="SubjectIsRequired" xml:space="preserve">
+    <value>主题无效</value>
+  </data>
+	<data name="Submit" xml:space="preserve">
+    <value>提交</value>
+  </data>
+	<data name="TermsConditions" xml:space="preserve">
+    <value>条款及规则</value>
+  </data>
+	<data name="TextBox" xml:space="preserve">
+    <value>文本冊</value>
+  </data>
+	<data name="TextLink" xml:space="preserve">
+    <value>文本链接</value>
+  </data>
+	<data name="Tier" xml:space="preserve">
+    <value>层</value>
+  </data>
+<<<<<<< HEAD
+  <data name="Top" xml:space="preserve">
+=======
+	<data name="To" xml:space="preserve">
+    <value>到</value>
+  </data>
+	<data name="Top" xml:space="preserve">
+>>>>>>> #34490 - Update dll Fanex.BetList
+    <value>回到最顶</value>
+  </data>
+	<data name="Total" xml:space="preserve">
+    <value>总计</value>
+  </data>
+	<data name="TotalActivePlayers" xml:space="preserve">
+    <value>活跃玩家总数</value>
+  </data>
+	<data name="TotalClicks" xml:space="preserve">
+    <value>總點擊量</value>
+  </data>
+	<data name="TotalDeposits" xml:space="preserve">
+    <value>存款总额</value>
+  </data>
+	<data name="TotalPlayers" xml:space="preserve">
+    <value>玩家总数</value>
+  </data>
+	<data name="TotalQualifiedActive" xml:space="preserve">
+    <value>总计活跃合格会员 ({0})</value>
+  </data>
+	<data name="TrackingCode" xml:space="preserve">
+    <value>追踪代碼</value>
+  </data>
+	<data name="TrackingStatistics" xml:space="preserve">
+    <value>追踪統計</value>
+  </data>
+	<data name="TrafficStatistics" xml:space="preserve">
+    <value>追蹤统计</value>
+  </data>
+	<data name="Transaction" xml:space="preserve">
+    <value>交易</value>
+  </data>
+	<data name="Turnover" xml:space="preserve">
+    <value>投注额</value>
+  </data>
+	<data name="Type" xml:space="preserve">
+    <value>形式</value>
+  </data>
+	<data name="UnauthorizedMsg" xml:space="preserve">
+    <value>您的会话已超时或您的请求未获授权</value>
+  </data>
+	<data name="UniqueClicks" xml:space="preserve">
+    <value>有效點擊量</value>
+  </data>
+	<data name="Username" xml:space="preserve">
+    <value>用户名</value>
+  </data>
+	<data name="Validation" xml:space="preserve">
+    <value>验证码</value>
+  </data>
+	<data name="VerifyEmail" xml:space="preserve">
+    <value>确认电子邮箱地址</value>
+  </data>
+	<data name="Winlost" xml:space="preserve">
+    <value>輸贏</value>
+  </data>
+	<data name="YourEmail" xml:space="preserve">
+    <value>您的电邮</value>
+  </data>
+	<data name="Headlines" xml:space="preserve">
+    <value>标题</value>
+  </data>
+	<data name="ViewMore" xml:space="preserve">
+    <value>了解更多</value>
+  </data>
+	<data name="ErrAuthorized" xml:space="preserve">
+    <value>您無權進行此操作</value>
+  </data>
+	<data name="UpdateAccSuccess" xml:space="preserve">
+    <value>您的帐户资料已成功更新</value>
+  </data>
+	<data name="ContactUsSuccess" xml:space="preserve">
+    <value>&lt;p&gt;感谢您与我们联系.&lt;/p&gt;
+&lt;p&gt;您的信息已经发送。我们将尽快答复您的申请。 &lt;/p&gt;
+&lt;p&gt;祝您好运！ &lt;/p&gt;
+&lt;p&gt;致以敬意，&lt;/p&gt;
+&lt;br /&gt;
+{0}合作伙伴团队</value>
+  </data>
+	<data name="WebsiteUrl" xml:space="preserve">
+    <value>请输入网站链接</value>
+  </data>
+	<data name="Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+	<data name="MoreSiteUrl" xml:space="preserve">
+    <value>网站链接 {0} 被必需的</value>
+  </data>
+	<data name="Msg160" xml:space="preserve">
+    <value>无效的创建者！</value>
+  </data>
+	<data name="Msg161" xml:space="preserve">
+    <value>无效的邮件内容！</value>
+  </data>
+	<data name="Msg162" xml:space="preserve">
+    <value>无效的发送者姓名！</value>
+  </data>
+	<data name="Msg163" xml:space="preserve">
+    <value>无效的电子邮箱地址！</value>
+  </data>
+	<data name="Msg164" xml:space="preserve">
+    <value>无效的邮件主题！</value>
+  </data>
+	<data name="Msg165" xml:space="preserve">
+    <value>无效的发送者IP！</value>
+  </data>
+	<data name="Msg166" xml:space="preserve">
+    <value>无效的浏览器名称！</value>
+  </data>
+	<data name="Msg167" xml:space="preserve">
+    <value>无效的ASP.NET会话ID！</value>
+  </data>
+	<data name="Msg168" xml:space="preserve">
+    <value>每10分钟您最多只能发送20封电子邮件！</value>
+  </data>
+	<data name="Msg169" xml:space="preserve">
+    <value>错误！未能成功插入电子邮件！</value>
+  </data>
+	<data name="Msg170" xml:space="preserve">
+    <value>糟糕，本账户还有一个尚未完成的支付请求，请先更新此次交易！</value>
+  </data>
+	<data name="Msg171" xml:space="preserve">
+    <value>无效的用户信息。更新不成功！</value>
+  </data>
+	<data name="Msg172" xml:space="preserve">
+    <value>错误出现。更新不成功！</value>
+  </data>
+	<data name="ApplicationForm" xml:space="preserve">
+    <value>申请表格</value>
+  </data>
+	<data name="PleaseDirectAnyComment" xml:space="preserve">
+    <value>如有任何意见或问题，请直接发电邮到{0}或填写以下的表格。</value>
+  </data>
+	<data name="Copyright" xml:space="preserve">
+    <value>版权所有</value>
+  </data>
+	<data name="PasswordPattern" xml:space="preserve">
+    <value>密码必须至少有6位，包括至少2个字母和至少2个数字。（例如pass22）</value>
+  </data>
+<<<<<<< HEAD
+  <data name="FromDateIsRequired" xml:space="preserve">
+    <value>开始日期是必须的</value>
+=======
+	<data name="FromDateIsRequired" xml:space="preserve">
+    <value>From date is required</value>
+>>>>>>> #34490 - Update dll Fanex.BetList
+  </data>
+	<data name="ToDateIsRequired" xml:space="preserve">
+    <value>To date is required</value>
+  </data>
+	<data name="BestViewIn" xml:space="preserve">
+    <value>推荐使用</value>
+  </data>
+	<data name="HotNews" xml:space="preserve">
+    <value>热点新闻</value>
+  </data>
+	<data name="CopyrightPacificSeaInvests" xml:space="preserve">
+    <value>版权所有{0} Pacific Sea Invests</value>
+  </data>
+	<data name="DailyEarningsDetail" xml:space="preserve">
+    <value>日常收入详情</value>
+  </data>
+	<data name="CustomizedBanners" xml:space="preserve">
+    <value>广告定制</value>
+  </data>
+	<data name="PromotionalDescriptions" xml:space="preserve">
+    <value>促销说明</value>
+  </data>
+	<data name="Sportsbook" xml:space="preserve">
+    <value>体育博彩</value>
+  </data>
+	<data name="EnglishSupport" xml:space="preserve">
+    <value>英语</value>
+  </data>
+	<data name="ThaiSupport" xml:space="preserve">
+    <value>泰文</value>
+  </data>
+	<data name="VietnameseSupport" xml:space="preserve">
+    <value>越文</value>
+  </data>
+	<data name="Back" xml:space="preserve">
+    <value>返回</value>
+  </data>
+	<data name="RegisSuccess" xml:space="preserve">
+    <value>感谢您提交申请。&lt;br /&gt;&lt;br /&gt;
+我们{0}合作伙伴团队将会就您的网站和申请详情进行审核，以确认相关内容是否适合推广我们的产品。&lt;br /&gt;&lt;br /&gt;
+我们将在5天内回复您的申请。一旦您的申请被核准，您将立即获得全权参与进入我们的合作伙伴项目。&lt;br /&gt;&lt;br /&gt;
+致以敬意，&lt;br /&gt;&lt;br /&gt;
+{0}合作伙伴团队
+	</value>
+  </data>
+	<data name="ApplicationUnde" xml:space="preserve">
+    <value>申请在审核中</value>
+  </data>
+	<data name="January" xml:space="preserve">
+    <value>一月</value>
+  </data>
+	<data name="February" xml:space="preserve">
+    <value>二月</value>
+  </data>
+	<data name="March" xml:space="preserve">
+    <value>三月</value>
+  </data>
+	<data name="April" xml:space="preserve">
+    <value>四月</value>
+  </data>
+	<data name="June" xml:space="preserve">
+    <value>六月</value>
+  </data>
+	<data name="July" xml:space="preserve">
+    <value>七月</value>
+  </data>
+	<data name="August" xml:space="preserve">
+    <value>八月</value>
+  </data>
+	<data name="September" xml:space="preserve">
+    <value>九月</value>
+  </data>
+	<data name="October" xml:space="preserve">
+    <value>十月</value>
+  </data>
+	<data name="November" xml:space="preserve">
+    <value>十一月</value>
+  </data>
+	<data name="December" xml:space="preserve">
+    <value>十二月</value>
+  </data>
+	<data name="FieldMustBeNumeric" xml:space="preserve">
+    <value>该字段必须是数字。</value>
+  </data>
+	<data name="LandingPagesDetail" xml:space="preserve">
+    <value>登陆页面详情</value>
+  </data>
+	<data name="Statistics" xml:space="preserve">
+    <value>统计</value>
+  </data>
+<<<<<<< HEAD
+  <data name="CustomerInfo" xml:space="preserve">
+    <value>会员资料</value>
+=======
+	<data name="CustomerInfo" xml:space="preserve">
+    <value>Customer Information</value>
+>>>>>>> #34490 - Update dll Fanex.BetList
+  </data>
+	<data name="AmountError" xml:space="preserve">
+    <value>无效的申请金额！金额必须在……之间</value>
+  </data>
+	<data name="And" xml:space="preserve">
+    <value>和</value>
+  </data>
+	<data name="FAQ_HowCanCheck" xml:space="preserve">
+    <value>我如何得知自己赚取了多少奖额？</value>
+  </data>
+	<data name="FAQ_HowDoSignUp" xml:space="preserve">
+    <value>我如何登记{0}合作伙伴计划？</value>
+  </data>
+	<data name="FAQ_HowSystemKeepTrack" xml:space="preserve">
+    <value>系统怎样去追踪我的玩家？</value>
+  </data>
+	<data name="FAQ_WhatAreWithdrawalMethods" xml:space="preserve">
+    <value>有哪些可行的提款方式？</value>
+  </data>
+	<data name="FAQ_WhatIfDontHaveWebsite" xml:space="preserve">
+    <value>我没有自己的网站，还能加盟吗？</value>
+  </data>
+	<data name="FAQ_WhatIsAffiliateProgram" xml:space="preserve">
+    <value>{0}合作伙伴计划是甚么？</value>
+  </data>
+	<data name="FAQ_WhatIsMinimumWithdrawalRequest" xml:space="preserve">
+    <value>最低的佣金提取额是多少？</value>
+  </data>
+	<data name="FAQ_WhereGetBanners" xml:space="preserve">
+    <value>我怎样得到广告横额与及内容？</value>
+  </data>
+	<data name="CompanyNegativeNetWin" xml:space="preserve">
+    <value>如果公司净赢是负数，则子公司与该公司每月要承担{0}％（适用于每个产品）</value>
+  </data>
+	<data name="LiveCasino" xml:space="preserve">
+    <value>娱乐厅</value>
+  </data>
+	<data name="NumberGame" xml:space="preserve">
+    <value>百练赛</value>
+  </data>
+	<data name="RNGCasino" xml:space="preserve">
+    <value>娱乐城</value>
+  </data>
+<<<<<<< HEAD
+  <data name="Casino" xml:space="preserve">
+    <value>娱乐厅</value>
+  </data>
+  <data name="Racebook" xml:space="preserve">
+    <value>賽馬</value>
+  </data>
+  <data name="BetList" xml:space="preserve">
+    <value>注单
+</value>
+  </data>
+  <data name="DontShowRunningBetList" xml:space="preserve">
+    <value>我们目前不支持及时下注清单</value>
+  </data>
+  <data name="BetListResults" xml:space="preserve">
+    <value>赛果</value>
+  </data>
+  <data name="PlaytechCasino" xml:space="preserve">
+    <value>娱乐厅</value>
+  </data>
+  <data name="PlayerComm" xml:space="preserve">
+    <value>会员佣金</value>
+=======
+	<data name="Casino" xml:space="preserve">
+    <value>Casino</value>
+  </data>
+	<data name="Racebook" xml:space="preserve">
+    <value>Racebook</value>
+  </data>
+	<data name="BetList" xml:space="preserve">
+    <value>Bet List</value>
+  </data>
+	<data name="DontShowRunningBetList" xml:space="preserve">
+    <value>We don't support running bet list at the moment.</value>
+  </data>
+	<data name="BetListResults" xml:space="preserve">
+    <value>Results</value>
+  </data>
+	<data name="PlaytechCasino" xml:space="preserve">
+    <value>Casino</value>
+  </data>
+	<data name="PlayerComm" xml:space="preserve">
+    <value>Player Comm.</value>
+>>>>>>> #34490 - Update dll Fanex.BetList
+  </data>
+	<data name="PlaytechCasinoNetGaming" xml:space="preserve">
+    <value>Net Gaming</value>
+  </data>
+	<data name="PlaytechCasinoPShare" xml:space="preserve">
+    <value>P.Share</value>
+  </data>
+	<data name="PlaytechCasinoPWin" xml:space="preserve">
+    <value>P.Win</value>
+  </data>
+	<data name="VirtualSports" xml:space="preserve">
+    <value>虚拟运动</value>
+  </data>
+<<<<<<< HEAD
+  <data name="AD" xml:space="preserve">
+    <value>安道尔</value>
+  </data>
+  <data name="AE" xml:space="preserve">
+    <value>阿拉伯联合大公国</value>
+  </data>
+  <data name="AG" xml:space="preserve">
+    <value>安提瓜和巴布达</value>
+  </data>
+  <data name="AI" xml:space="preserve">
+    <value>安奎拉</value>
+  </data>
+  <data name="AL" xml:space="preserve">
+    <value>阿尔巴尼亚</value>
+  </data>
+  <data name="AM" xml:space="preserve">
+    <value>亚美尼亚</value>
+  </data>
+  <data name="AN" xml:space="preserve">
+    <value>荷属安德烈斯群岛</value>
+  </data>
+  <data name="AO" xml:space="preserve">
+    <value>安哥拉</value>
+  </data>
+  <data name="AP" xml:space="preserve">
+    <value>非规范PAS亚洲位置</value>
+  </data>
+  <data name="AQ" xml:space="preserve">
+    <value>南极</value>
+  </data>
+  <data name="AR" xml:space="preserve">
+    <value>阿根廷</value>
+  </data>
+  <data name="AS" xml:space="preserve">
+    <value>美国萨摩亚群岛</value>
+  </data>
+  <data name="AT" xml:space="preserve">
+    <value>奥地利</value>
+  </data>
+  <data name="AU" xml:space="preserve">
+    <value>澳大利亚</value>
+  </data>
+  <data name="AW" xml:space="preserve">
+    <value>荷属阿鲁巴岛</value>
+  </data>
+  <data name="AX" xml:space="preserve">
+    <value>奥兰群岛</value>
+  </data>
+  <data name="AZ" xml:space="preserve">
+    <value>阿塞拜疆</value>
+  </data>
+  <data name="BA" xml:space="preserve">
+    <value>波斯尼亚和黑塞哥维纳</value>
+  </data>
+  <data name="BB" xml:space="preserve">
+    <value>巴巴多斯</value>
+  </data>
+  <data name="BD" xml:space="preserve">
+    <value>孟加拉国国</value>
+  </data>
+  <data name="BE" xml:space="preserve">
+    <value>比利时</value>
+  </data>
+  <data name="BF" xml:space="preserve">
+    <value>布基纳法索</value>
+  </data>
+  <data name="BG" xml:space="preserve">
+    <value>保加利亚</value>
+  </data>
+  <data name="BH" xml:space="preserve">
+    <value>巴林</value>
+  </data>
+  <data name="BI" xml:space="preserve">
+    <value>布隆迪</value>
+  </data>
+  <data name="BJ" xml:space="preserve">
+    <value>贝宁</value>
+  </data>
+  <data name="BL" xml:space="preserve">
+    <value>圣巴泰勒米</value>
+  </data>
+  <data name="BM" xml:space="preserve">
+    <value>百慕达</value>
+  </data>
+  <data name="BN" xml:space="preserve">
+    <value>文莱</value>
+  </data>
+  <data name="BO" xml:space="preserve">
+    <value>玻利维亚</value>
+  </data>
+  <data name="BQ" xml:space="preserve">
+    <value>博内尔, 圣尤斯特歇斯岛和塞巴</value>
+  </data>
+  <data name="BR" xml:space="preserve">
+    <value>巴西</value>
+  </data>
+  <data name="BS" xml:space="preserve">
+    <value>巴哈马</value>
+  </data>
+  <data name="BT" xml:space="preserve">
+    <value>不丹</value>
+  </data>
+  <data name="BV" xml:space="preserve">
+    <value>布维岛</value>
+  </data>
+  <data name="BW" xml:space="preserve">
+    <value>博茨瓦纳</value>
+  </data>
+  <data name="BY" xml:space="preserve">
+    <value>白俄罗斯共和国</value>
+  </data>
+  <data name="BZ" xml:space="preserve">
+    <value>伯利兹</value>
+  </data>
+  <data name="CA" xml:space="preserve">
+    <value>加拿大</value>
+  </data>
+  <data name="CC" xml:space="preserve">
+    <value>科科斯群岛</value>
+  </data>
+  <data name="CD" xml:space="preserve">
+    <value>刚果民主共和国</value>
+  </data>
+  <data name="CF" xml:space="preserve">
+    <value>中非共和国</value>
+  </data>
+  <data name="CG" xml:space="preserve">
+    <value>刚果</value>
+  </data>
+  <data name="CH" xml:space="preserve">
+    <value>瑞士</value>
+  </data>
+  <data name="CI" xml:space="preserve">
+    <value>科特迪瓦</value>
+  </data>
+  <data name="CK" xml:space="preserve">
+    <value>库克群岛</value>
+  </data>
+  <data name="CL" xml:space="preserve">
+    <value>智利</value>
+  </data>
+  <data name="CM" xml:space="preserve">
+    <value>喀麦隆</value>
+  </data>
+  <data name="CN" xml:space="preserve">
+    <value>中国</value>
+  </data>
+  <data name="CO" xml:space="preserve">
+    <value>哥伦比亚</value>
+  </data>
+  <data name="CR" xml:space="preserve">
+    <value>哥斯达黎加</value>
+  </data>
+  <data name="CU" xml:space="preserve">
+    <value>古巴</value>
+  </data>
+  <data name="CV" xml:space="preserve">
+    <value>佛得角</value>
+  </data>
+  <data name="CW" xml:space="preserve">
+    <value>库拉索</value>
+  </data>
+  <data name="CX" xml:space="preserve">
+    <value>圣诞岛</value>
+  </data>
+  <data name="CY" xml:space="preserve">
+    <value>塞浦路斯</value>
+  </data>
+  <data name="CZ" xml:space="preserve">
+    <value>捷克共和国</value>
+  </data>
+  <data name="DE" xml:space="preserve">
+    <value>德国</value>
+  </data>
+  <data name="DJ" xml:space="preserve">
+    <value>吉布提</value>
+  </data>
+  <data name="DK" xml:space="preserve">
+    <value>丹麦</value>
+  </data>
+  <data name="DM" xml:space="preserve">
+    <value>多米尼加</value>
+  </data>
+  <data name="DO" xml:space="preserve">
+    <value>多米尼加共和国</value>
+  </data>
+  <data name="DZ" xml:space="preserve">
+    <value>阿尔及利亚</value>
+  </data>
+  <data name="EC" xml:space="preserve">
+    <value>厄瓜多尔</value>
+  </data>
+  <data name="EE" xml:space="preserve">
+    <value>爱沙尼亚</value>
+  </data>
+  <data name="EG" xml:space="preserve">
+    <value>埃及</value>
+  </data>
+  <data name="EH" xml:space="preserve">
+    <value>西撒哈拉</value>
+  </data>
+  <data name="ER" xml:space="preserve">
+    <value>厄立特里亚</value>
+  </data>
+  <data name="ES" xml:space="preserve">
+    <value>西班牙</value>
+  </data>
+  <data name="ET" xml:space="preserve">
+    <value>埃塞俄比亚</value>
+  </data>
+  <data name="EU" xml:space="preserve">
+    <value>欧洲联盟</value>
+  </data>
+  <data name="FI" xml:space="preserve">
+    <value>芬兰</value>
+  </data>
+  <data name="FJ" xml:space="preserve">
+    <value>斐济</value>
+  </data>
+  <data name="FK" xml:space="preserve">
+    <value>福克兰群岛（马尔维纳斯）</value>
+  </data>
+  <data name="FM" xml:space="preserve">
+    <value>密克罗尼西亚联邦</value>
+  </data>
+  <data name="FO" xml:space="preserve">
+    <value>法罗群岛</value>
+  </data>
+  <data name="FR" xml:space="preserve">
+    <value>法国</value>
+  </data>
+  <data name="GA" xml:space="preserve">
+    <value>加蓬</value>
+  </data>
+  <data name="GB" xml:space="preserve">
+    <value>英国</value>
+  </data>
+  <data name="GD" xml:space="preserve">
+    <value>格林纳达</value>
+  </data>
+  <data name="GE" xml:space="preserve">
+    <value>格鲁吉亚</value>
+  </data>
+  <data name="GF" xml:space="preserve">
+    <value>法属圭亚那</value>
+  </data>
+  <data name="GG" xml:space="preserve">
+    <value>格恩西岛</value>
+  </data>
+  <data name="GH" xml:space="preserve">
+    <value>加纳</value>
+  </data>
+  <data name="GI" xml:space="preserve">
+    <value>直布罗陀</value>
+  </data>
+  <data name="GL" xml:space="preserve">
+    <value>格陵兰</value>
+  </data>
+  <data name="GM" xml:space="preserve">
+    <value>冈比亚</value>
+  </data>
+  <data name="GN" xml:space="preserve">
+    <value>几内亚</value>
+  </data>
+  <data name="GP" xml:space="preserve">
+    <value>瓜德罗普岛</value>
+  </data>
+  <data name="GQ" xml:space="preserve">
+    <value>赤道几内亚</value>
+  </data>
+  <data name="GR" xml:space="preserve">
+    <value>希腊</value>
+  </data>
+  <data name="GS" xml:space="preserve">
+    <value>南乔治亚岛和南桑威奇群岛</value>
+  </data>
+  <data name="GT" xml:space="preserve">
+    <value>危地马拉</value>
+  </data>
+  <data name="GU" xml:space="preserve">
+    <value>关岛</value>
+  </data>
+  <data name="GW" xml:space="preserve">
+    <value>几内亚比绍</value>
+  </data>
+  <data name="GY" xml:space="preserve">
+    <value>圭亚那</value>
+  </data>
+  <data name="HK" xml:space="preserve">
+    <value>香港</value>
+  </data>
+  <data name="HM" xml:space="preserve">
+    <value>赫德岛和麦克唐纳群岛</value>
+  </data>
+  <data name="HN" xml:space="preserve">
+    <value>洪都拉斯</value>
+  </data>
+  <data name="HR" xml:space="preserve">
+    <value>克罗地亚（本地名称：赫尔瓦）</value>
+  </data>
+  <data name="HT" xml:space="preserve">
+    <value>海地</value>
+  </data>
+  <data name="HU" xml:space="preserve">
+    <value>匈牙利</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>印度尼西亚</value>
+  </data>
+  <data name="IE" xml:space="preserve">
+    <value>爱尔兰</value>
+  </data>
+  <data name="IL" xml:space="preserve">
+    <value>以色列</value>
+  </data>
+  <data name="IM" xml:space="preserve">
+    <value>马恩岛</value>
+  </data>
+  <data name="IN" xml:space="preserve">
+    <value>印度</value>
+  </data>
+  <data name="IO" xml:space="preserve">
+    <value>英属印度洋领地</value>
+  </data>
+  <data name="IQ" xml:space="preserve">
+    <value>伊拉克</value>
+  </data>
+  <data name="IR" xml:space="preserve">
+    <value>伊朗（伊斯兰共和国）</value>
+  </data>
+  <data name="IS" xml:space="preserve">
+    <value>冰岛</value>
+  </data>
+  <data name="IT" xml:space="preserve">
+    <value>意大利</value>
+  </data>
+  <data name="JE" xml:space="preserve">
+    <value>泽西岛</value>
+  </data>
+  <data name="JM" xml:space="preserve">
+    <value>牙买加</value>
+  </data>
+  <data name="JO" xml:space="preserve">
+    <value>约旦</value>
+  </data>
+  <data name="JP" xml:space="preserve">
+    <value>日本</value>
+  </data>
+  <data name="KE" xml:space="preserve">
+    <value>肯尼亚</value>
+  </data>
+  <data name="KG" xml:space="preserve">
+    <value>吉尔吉斯斯坦</value>
+  </data>
+  <data name="KH" xml:space="preserve">
+    <value>柬埔寨</value>
+  </data>
+  <data name="KI" xml:space="preserve">
+    <value>基里巴斯</value>
+  </data>
+  <data name="KM" xml:space="preserve">
+    <value>科摩罗</value>
+  </data>
+  <data name="KN" xml:space="preserve">
+    <value>圣基茨和尼维斯</value>
+  </data>
+  <data name="KP" xml:space="preserve">
+    <value>韩国民主人民共和国</value>
+  </data>
+  <data name="KR" xml:space="preserve">
+    <value>韩国共和国</value>
+  </data>
+  <data name="KW" xml:space="preserve">
+    <value>科威特</value>
+  </data>
+  <data name="KY" xml:space="preserve">
+    <value>开曼群岛</value>
+  </data>
+  <data name="KZ" xml:space="preserve">
+    <value>哈萨克斯坦</value>
+  </data>
+  <data name="LA" xml:space="preserve">
+    <value>老挝人民民主共和国</value>
+  </data>
+  <data name="LB" xml:space="preserve">
+    <value>黎巴嫩</value>
+  </data>
+  <data name="LC" xml:space="preserve">
+    <value>圣卢西亚</value>
+  </data>
+  <data name="LI" xml:space="preserve">
+    <value>列支敦士登</value>
+  </data>
+  <data name="LK" xml:space="preserve">
+    <value>斯里兰卡</value>
+  </data>
+  <data name="LR" xml:space="preserve">
+    <value>利比里亚</value>
+  </data>
+  <data name="LS" xml:space="preserve">
+    <value>莱索托</value>
+  </data>
+  <data name="LT" xml:space="preserve">
+    <value>立陶宛</value>
+  </data>
+  <data name="LU" xml:space="preserve">
+    <value>卢森堡</value>
+  </data>
+  <data name="LV" xml:space="preserve">
+    <value>拉脱维亚</value>
+  </data>
+  <data name="LY" xml:space="preserve">
+    <value>阿拉伯利比亚民众国</value>
+  </data>
+  <data name="MA" xml:space="preserve">
+    <value>摩洛哥</value>
+  </data>
+  <data name="MC" xml:space="preserve">
+    <value>摩纳哥</value>
+  </data>
+  <data name="MD" xml:space="preserve">
+    <value>摩尔多瓦共和国</value>
+  </data>
+  <data name="ME" xml:space="preserve">
+    <value>黑山共和国</value>
+  </data>
+  <data name="MF" xml:space="preserve">
+    <value>圣马丁</value>
+  </data>
+  <data name="MG" xml:space="preserve">
+    <value>马达加斯加</value>
+  </data>
+  <data name="MH" xml:space="preserve">
+    <value>马绍尔群岛</value>
+  </data>
+  <data name="MK" xml:space="preserve">
+    <value>马其顿</value>
+  </data>
+  <data name="ML" xml:space="preserve">
+    <value>马里</value>
+  </data>
+  <data name="MM" xml:space="preserve">
+    <value>缅甸</value>
+  </data>
+  <data name="MN" xml:space="preserve">
+    <value>蒙古</value>
+  </data>
+  <data name="MO" xml:space="preserve">
+    <value>澳门</value>
+  </data>
+  <data name="MP" xml:space="preserve">
+    <value>北马里亚纳群岛</value>
+  </data>
+  <data name="MQ" xml:space="preserve">
+    <value>马提尼克</value>
+  </data>
+  <data name="MR" xml:space="preserve">
+    <value>毛里塔尼亚</value>
+  </data>
+  <data name="MS" xml:space="preserve">
+    <value>蒙特塞拉特</value>
+  </data>
+  <data name="MT" xml:space="preserve">
+    <value>马耳他</value>
+  </data>
+  <data name="MU" xml:space="preserve">
+    <value>毛里求斯</value>
+  </data>
+  <data name="MV" xml:space="preserve">
+    <value>马尔代夫</value>
+  </data>
+  <data name="MW" xml:space="preserve">
+    <value>马拉维</value>
+  </data>
+  <data name="MX" xml:space="preserve">
+    <value>墨西哥</value>
+  </data>
+  <data name="MY" xml:space="preserve">
+    <value>马来西亚</value>
+  </data>
+  <data name="MZ" xml:space="preserve">
+    <value>莫桑比克</value>
+  </data>
+  <data name="NA" xml:space="preserve">
+    <value>纳米比亚</value>
+  </data>
+  <data name="NC" xml:space="preserve">
+    <value>新喀里多尼亚</value>
+  </data>
+  <data name="NE" xml:space="preserve">
+    <value>尼日尔</value>
+  </data>
+  <data name="NF" xml:space="preserve">
+    <value>诺福克岛</value>
+  </data>
+  <data name="NG" xml:space="preserve">
+    <value>尼日利亚</value>
+  </data>
+  <data name="NI" xml:space="preserve">
+    <value>尼加拉瓜</value>
+  </data>
+  <data name="NL" xml:space="preserve">
+    <value>荷兰</value>
+  </data>
+  <data name="NO" xml:space="preserve">
+    <value>挪威</value>
+  </data>
+  <data name="NP" xml:space="preserve">
+    <value>尼泊尔</value>
+  </data>
+  <data name="NR" xml:space="preserve">
+    <value>瑙鲁</value>
+  </data>
+  <data name="NU" xml:space="preserve">
+    <value>纽埃</value>
+  </data>
+  <data name="NZ" xml:space="preserve">
+    <value>新西兰</value>
+  </data>
+  <data name="OM" xml:space="preserve">
+    <value>阿曼</value>
+  </data>
+  <data name="Others" xml:space="preserve">
+    <value>其他</value>
+  </data>
+  <data name="PA" xml:space="preserve">
+    <value>巴拿马</value>
+  </data>
+  <data name="PE" xml:space="preserve">
+    <value>秘鲁</value>
+  </data>
+  <data name="PF" xml:space="preserve">
+    <value>法属波利尼西亚</value>
+  </data>
+  <data name="PG" xml:space="preserve">
+    <value>巴布亚新几内亚</value>
+  </data>
+  <data name="PH" xml:space="preserve">
+    <value>菲律宾</value>
+  </data>
+  <data name="PK" xml:space="preserve">
+    <value>巴基斯坦</value>
+  </data>
+  <data name="PL" xml:space="preserve">
+    <value>波兰</value>
+  </data>
+  <data name="PM" xml:space="preserve">
+    <value>圣皮埃尔和密克隆</value>
+  </data>
+  <data name="PN" xml:space="preserve">
+    <value>皮特凯恩</value>
+  </data>
+  <data name="PR" xml:space="preserve">
+    <value>波多黎各</value>
+  </data>
+  <data name="PS" xml:space="preserve">
+    <value>巴勒斯坦占领领土</value>
+  </data>
+  <data name="PT" xml:space="preserve">
+    <value>葡萄牙</value>
+  </data>
+  <data name="PW" xml:space="preserve">
+    <value>帕劳</value>
+  </data>
+  <data name="PY" xml:space="preserve">
+    <value>巴拉圭</value>
+  </data>
+  <data name="QA" xml:space="preserve">
+    <value>卡塔尔</value>
+  </data>
+  <data name="RE" xml:space="preserve">
+    <value>留尼汪</value>
+  </data>
+  <data name="RO" xml:space="preserve">
+    <value>罗马尼亚</value>
+  </data>
+  <data name="RS" xml:space="preserve">
+    <value>塞尔维亚</value>
+  </data>
+  <data name="RU" xml:space="preserve">
+    <value>俄罗斯联邦</value>
+  </data>
+  <data name="RW" xml:space="preserve">
+    <value>卢旺达</value>
+  </data>
+  <data name="SA" xml:space="preserve">
+    <value>沙特阿拉伯</value>
+  </data>
+  <data name="SB" xml:space="preserve">
+    <value>所罗门群岛</value>
+  </data>
+  <data name="SC" xml:space="preserve">
+    <value>塞舌尔</value>
+  </data>
+  <data name="SD" xml:space="preserve">
+    <value>苏丹</value>
+  </data>
+  <data name="SE" xml:space="preserve">
+    <value>瑞典</value>
+  </data>
+  <data name="SG" xml:space="preserve">
+    <value>新加坡</value>
+  </data>
+  <data name="SH" xml:space="preserve">
+    <value>圣赫勒拿岛，阿森松岛和特里斯坦 - 达库尼亚</value>
+  </data>
+  <data name="SI" xml:space="preserve">
+    <value>斯洛文尼亚</value>
+  </data>
+  <data name="SJ" xml:space="preserve">
+    <value>斯瓦尔巴特群岛和扬马延</value>
+  </data>
+  <data name="SK" xml:space="preserve">
+    <value>斯洛伐克（斯洛伐克共和国）</value>
+  </data>
+  <data name="SL" xml:space="preserve">
+    <value>塞拉利昂</value>
+  </data>
+  <data name="SM" xml:space="preserve">
+    <value>圣马力诺</value>
+  </data>
+  <data name="SN" xml:space="preserve">
+    <value>塞内加尔</value>
+  </data>
+  <data name="SO" xml:space="preserve">
+    <value>索马里</value>
+  </data>
+  <data name="SR" xml:space="preserve">
+    <value>苏里南</value>
+  </data>
+  <data name="SS" xml:space="preserve">
+    <value>南苏丹</value>
+  </data>
+  <data name="ST" xml:space="preserve">
+    <value>圣多美和普林西比</value>
+  </data>
+  <data name="SV" xml:space="preserve">
+    <value>萨尔瓦多</value>
+  </data>
+  <data name="SX" xml:space="preserve">
+    <value>圣马丁岛</value>
+  </data>
+  <data name="SY" xml:space="preserve">
+    <value>阿拉伯叙利亚共和国</value>
+  </data>
+  <data name="SZ" xml:space="preserve">
+    <value>斯威士兰</value>
+  </data>
+  <data name="TC" xml:space="preserve">
+    <value>特克斯和凯科斯群岛</value>
+  </data>
+  <data name="TD" xml:space="preserve">
+    <value>乍得</value>
+  </data>
+  <data name="TF" xml:space="preserve">
+    <value>法国南部领土</value>
+  </data>
+  <data name="TG" xml:space="preserve">
+    <value>多哥</value>
+  </data>
+  <data name="TH" xml:space="preserve">
+    <value>泰国</value>
+  </data>
+  <data name="TJ" xml:space="preserve">
+    <value>塔吉克斯坦</value>
+  </data>
+  <data name="TK" xml:space="preserve">
+    <value>托克劳</value>
+  </data>
+  <data name="TL" xml:space="preserve">
+    <value>东帝汶</value>
+  </data>
+  <data name="TM" xml:space="preserve">
+    <value>土库曼斯坦</value>
+  </data>
+  <data name="TN" xml:space="preserve">
+    <value>突尼斯</value>
+  </data>
+  <data name="TO" xml:space="preserve">
+    <value>汤加</value>
+  </data>
+  <data name="TR" xml:space="preserve">
+    <value>土耳其</value>
+  </data>
+  <data name="TT" xml:space="preserve">
+    <value>特立尼达和多巴哥</value>
+  </data>
+  <data name="TV" xml:space="preserve">
+    <value>图瓦卢</value>
+  </data>
+  <data name="TW" xml:space="preserve">
+    <value>台湾</value>
+  </data>
+  <data name="TZ" xml:space="preserve">
+    <value>坦桑尼亚联合共和国</value>
+  </data>
+  <data name="UA" xml:space="preserve">
+    <value>乌克兰</value>
+  </data>
+  <data name="UG" xml:space="preserve">
+    <value>乌干达</value>
+  </data>
+  <data name="UK" xml:space="preserve">
+    <value>英国</value>
+  </data>
+  <data name="UM" xml:space="preserve">
+    <value>美国本土外小岛屿</value>
+  </data>
+  <data name="US" xml:space="preserve">
+    <value>美国</value>
+  </data>
+  <data name="UY" xml:space="preserve">
+    <value>乌拉圭</value>
+  </data>
+  <data name="UZ" xml:space="preserve">
+    <value>乌兹别克斯坦</value>
+  </data>
+  <data name="VA" xml:space="preserve">
+    <value>罗马教廷（梵蒂冈城国）</value>
+  </data>
+  <data name="VC" xml:space="preserve">
+    <value>圣文森特和格林纳丁斯群岛St.Vincent</value>
+  </data>
+  <data name="VE" xml:space="preserve">
+    <value>委内瑞拉</value>
+  </data>
+  <data name="VG" xml:space="preserve">
+    <value>维京群岛（英国）</value>
+  </data>
+  <data name="VI" xml:space="preserve">
+    <value>维京群岛（美国）</value>
+  </data>
+  <data name="VN" xml:space="preserve">
+    <value>越南</value>
+  </data>
+  <data name="VU" xml:space="preserve">
+    <value>瓦努阿图</value>
+  </data>
+  <data name="WF" xml:space="preserve">
+    <value>瓦利斯和富图纳群岛</value>
+  </data>
+  <data name="WS" xml:space="preserve">
+    <value>萨摩亚</value>
+  </data>
+  <data name="XK" xml:space="preserve">
+    <value>科索沃</value>
+  </data>
+  <data name="YE" xml:space="preserve">
+    <value>也门</value>
+  </data>
+  <data name="YT" xml:space="preserve">
+    <value>马约特岛</value>
+  </data>
+  <data name="ZA" xml:space="preserve">
+    <value>南非</value>
+  </data>
+  <data name="ZM" xml:space="preserve">
+    <value>赞比亚</value>
+  </data>
+  <data name="ZW" xml:space="preserve">
+    <value>津巴布韦</value>
+  </data>
+  <data name="ZZ" xml:space="preserve">
+    <value>保留</value>
+  </data>
+  <data name="ToDate" xml:space="preserve">
+    <value>到</value>
+  </data>
+  <data name="AF" xml:space="preserve">
+    <value>阿富汗</value>
+  </data>
+  <data name="HandHistoryDetails" xml:space="preserve">
+    <value>每局历史资料</value>
+  </data>
+  <data name="Results" xml:space="preserve">
+    <value>赛果</value>
+  </data>
+  <data name="MonthlyEarning" xml:space="preserve">
+    <value>每月盈利</value>
+  </data>
+  <data name="CurrentMonthStatistics" xml:space="preserve">
+    <value>本月统计资料</value>
+  </data>
+  <data name="BetListTitle" xml:space="preserve">
+    <value>下注清单 {0} - {1} - 查看 {2}</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>关</value>
+  </data>
+  <data name="VirtualCycling" xml:space="preserve">
+    <value>虛擬自行車</value>
+  </data>
+  <data name="VirtualGreyhounds" xml:space="preserve">
+    <value>虚拟赛狗</value>
+  </data>
+  <data name="VirtualHorseRacing" xml:space="preserve">
+    <value>虚拟赛马</value>
+  </data>
+  <data name="VirtualMotorsports" xml:space="preserve">
+    <value>虚拟赛车</value>
+  </data>
+  <data name="VirtualSoccer" xml:space="preserve">
+    <value>虚拟足球</value>
+  </data>
+  <data name="VirtualSpeedway" xml:space="preserve">
+    <value>虛擬沙地摩托車</value>
+  </data>
+  <data name="VirtualTennis" xml:space="preserve">
+    <value>虚拟网球</value>
+  </data>
+=======
+	<data name="MonthlyEarning" xml:space="preserve">
+		<value>每月盈利</value>
+	</data>
+	<data name="CurrentMonthStatistics" xml:space="preserve">
+		<value>本月统计资料</value>
+	</data>
+>>>>>>> #34490 - Update dll Fanex.BetList
+</root>
