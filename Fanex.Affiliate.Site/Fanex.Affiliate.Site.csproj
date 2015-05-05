@@ -324,6 +324,91 @@
     <Content Include="Configurations\SPNames\SpName.yhy1980.production.xml" />
     <Content Include="Configurations\SPNames\SpName.yhy1980.uat.xml" />
     <Content Include="Content\betlist\custom-betlist.css" />
+    <Content Include="Content\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="Content\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="Content\bootstrap\js\bootstrap-affix.js" />
+    <Content Include="Content\bootstrap\js\bootstrap-alert.js" />
+    <Content Include="Content\bootstrap\js\bootstrap-button.js" />
+    <Content Include="Content\bootstrap\js\bootstrap-carousel.js" />
+    <Content Include="Content\bootstrap\js\bootstrap-collapse.js" />
+    <Content Include="Content\bootstrap\js\bootstrap-dropdown.js" />
+    <Content Include="Content\bootstrap\js\bootstrap-modal.js" />
+    <Content Include="Content\bootstrap\js\bootstrap-popover.js" />
+    <Content Include="Content\bootstrap\js\bootstrap-scrollspy.js" />
+    <Content Include="Content\bootstrap\js\bootstrap-tab.js" />
+    <Content Include="Content\bootstrap\js\bootstrap-tooltip.js" />
+    <Content Include="Content\bootstrap\js\bootstrap-transition.js" />
+    <Content Include="Content\bootstrap\js\bootstrap-typeahead.js" />
+    <Content Include="Content\bootstrap\js\tests\index.html" />
+    <Content Include="Content\bootstrap\js\tests\phantom.js" />
+    <Content Include="Content\bootstrap\js\tests\server.js" />
+    <Content Include="Content\bootstrap\js\tests\unit\bootstrap-affix.js" />
+    <Content Include="Content\bootstrap\js\tests\unit\bootstrap-alert.js" />
+    <Content Include="Content\bootstrap\js\tests\unit\bootstrap-button.js" />
+    <Content Include="Content\bootstrap\js\tests\unit\bootstrap-carousel.js" />
+    <Content Include="Content\bootstrap\js\tests\unit\bootstrap-collapse.js" />
+    <Content Include="Content\bootstrap\js\tests\unit\bootstrap-dropdown.js" />
+    <Content Include="Content\bootstrap\js\tests\unit\bootstrap-modal.js" />
+    <Content Include="Content\bootstrap\js\tests\unit\bootstrap-phantom.js" />
+    <Content Include="Content\bootstrap\js\tests\unit\bootstrap-popover.js" />
+    <Content Include="Content\bootstrap\js\tests\unit\bootstrap-scrollspy.js" />
+    <Content Include="Content\bootstrap\js\tests\unit\bootstrap-tab.js" />
+    <Content Include="Content\bootstrap\js\tests\unit\bootstrap-tooltip.js" />
+    <Content Include="Content\bootstrap\js\tests\unit\bootstrap-transition.js" />
+    <Content Include="Content\bootstrap\js\tests\unit\bootstrap-typeahead.js" />
+    <Content Include="Content\bootstrap\js\tests\vendor\jquery.js" />
+    <Content Include="Content\bootstrap\js\tests\vendor\qunit.css" />
+    <Content Include="Content\bootstrap\js\tests\vendor\qunit.js" />
+    <Content Include="Content\bootstrap\less\accordion.less" />
+    <Content Include="Content\bootstrap\less\alerts.less" />
+    <Content Include="Content\bootstrap\less\bootstrap.less" />
+    <Content Include="Content\bootstrap\less\breadcrumbs.less" />
+    <Content Include="Content\bootstrap\less\button-groups.less" />
+    <Content Include="Content\bootstrap\less\buttons.less" />
+    <Content Include="Content\bootstrap\less\carousel.less" />
+    <Content Include="Content\bootstrap\less\close.less" />
+    <Content Include="Content\bootstrap\less\code.less" />
+    <Content Include="Content\bootstrap\less\component-animations.less" />
+    <Content Include="Content\bootstrap\less\dropdowns.less" />
+    <Content Include="Content\bootstrap\less\forms.less" />
+    <Content Include="Content\bootstrap\less\grid.less" />
+    <Content Include="Content\bootstrap\less\hero-unit.less" />
+    <Content Include="Content\bootstrap\less\labels-badges.less" />
+    <Content Include="Content\bootstrap\less\layouts.less" />
+    <Content Include="Content\bootstrap\less\media.less" />
+    <Content Include="Content\bootstrap\less\mixins.less" />
+    <Content Include="Content\bootstrap\less\modals.less" />
+    <Content Include="Content\bootstrap\less\navbar.less" />
+    <Content Include="Content\bootstrap\less\navs.less" />
+    <Content Include="Content\bootstrap\less\pager.less" />
+    <Content Include="Content\bootstrap\less\pagination.less" />
+    <Content Include="Content\bootstrap\less\popovers.less" />
+    <Content Include="Content\bootstrap\less\progress-bars.less" />
+    <Content Include="Content\bootstrap\less\reset.less" />
+    <Content Include="Content\bootstrap\less\responsive-1200px-min.less" />
+    <Content Include="Content\bootstrap\less\responsive-767px-max.less" />
+    <Content Include="Content\bootstrap\less\responsive-768px-979px.less" />
+    <Content Include="Content\bootstrap\less\responsive-navbar.less" />
+    <Content Include="Content\bootstrap\less\responsive-utilities.less" />
+    <Content Include="Content\bootstrap\less\responsive.less" />
+    <Content Include="Content\bootstrap\less\scaffolding.less" />
+    <Content Include="Content\bootstrap\less\sprites.less" />
+    <Content Include="Content\bootstrap\less\tables.less" />
+    <Content Include="Content\bootstrap\less\tests\buttons.html" />
+    <Content Include="Content\bootstrap\less\tests\css-tests.css" />
+    <Content Include="Content\bootstrap\less\tests\css-tests.html" />
+    <Content Include="Content\bootstrap\less\tests\forms-responsive.html" />
+    <Content Include="Content\bootstrap\less\tests\forms.html" />
+    <Content Include="Content\bootstrap\less\tests\navbar-fixed-top.html" />
+    <Content Include="Content\bootstrap\less\tests\navbar-static-top.html" />
+    <Content Include="Content\bootstrap\less\tests\navbar.html" />
+    <Content Include="Content\bootstrap\less\thumbnails.less" />
+    <Content Include="Content\bootstrap\less\tooltip.less" />
+    <Content Include="Content\bootstrap\less\type.less" />
+    <Content Include="Content\bootstrap\less\utilities.less" />
+    <Content Include="Content\bootstrap\less\variables.less" />
+    <Content Include="Content\bootstrap\less\wells.less" />
+    <Content Include="Content\Fanex.Result\images\goal-icon.png" />
     <Content Include="Content\themes\theme19\images\banner_top.png" />
     <Content Include="Content\themes\theme19\images\bg-contentLanguage.png" />
     <Content Include="Content\themes\theme19\images\logo-afterlogin.png" />
@@ -492,49 +577,6 @@
     <Content Include="Content\betlist\images\plus.png" />
     <Content Include="Content\betlist\images\up.png" />
     <Content Include="Content\betlist\global.content.css" />
-    <Content Include="Content\bootstrap\img\glyphicons-halflings-white.png" />
-    <Content Include="Content\bootstrap\img\glyphicons-halflings.png" />
-    <Content Include="Content\bootstrap\js\bootstrap-affix.js" />
-    <Content Include="Content\bootstrap\js\bootstrap-alert.js" />
-    <Content Include="Content\bootstrap\js\bootstrap-button.js" />
-    <Content Include="Content\bootstrap\js\bootstrap-carousel.js" />
-    <Content Include="Content\bootstrap\js\bootstrap-collapse.js" />
-    <Content Include="Content\bootstrap\js\bootstrap-dropdown.js" />
-    <Content Include="Content\bootstrap\js\bootstrap-modal.js" />
-    <Content Include="Content\bootstrap\js\bootstrap-popover.js" />
-    <Content Include="Content\bootstrap\js\bootstrap-scrollspy.js" />
-    <Content Include="Content\bootstrap\js\bootstrap-tab.js" />
-    <Content Include="Content\bootstrap\js\bootstrap-tooltip.js" />
-    <Content Include="Content\bootstrap\js\bootstrap-transition.js" />
-    <Content Include="Content\bootstrap\js\bootstrap-typeahead.js" />
-    <Content Include="Content\bootstrap\js\tests\index.html" />
-    <Content Include="Content\bootstrap\js\tests\phantom.js" />
-    <Content Include="Content\bootstrap\js\tests\server.js" />
-    <Content Include="Content\bootstrap\js\tests\unit\bootstrap-affix.js" />
-    <Content Include="Content\bootstrap\js\tests\unit\bootstrap-alert.js" />
-    <Content Include="Content\bootstrap\js\tests\unit\bootstrap-button.js" />
-    <Content Include="Content\bootstrap\js\tests\unit\bootstrap-carousel.js" />
-    <Content Include="Content\bootstrap\js\tests\unit\bootstrap-collapse.js" />
-    <Content Include="Content\bootstrap\js\tests\unit\bootstrap-dropdown.js" />
-    <Content Include="Content\bootstrap\js\tests\unit\bootstrap-modal.js" />
-    <Content Include="Content\bootstrap\js\tests\unit\bootstrap-phantom.js" />
-    <Content Include="Content\bootstrap\js\tests\unit\bootstrap-popover.js" />
-    <Content Include="Content\bootstrap\js\tests\unit\bootstrap-scrollspy.js" />
-    <Content Include="Content\bootstrap\js\tests\unit\bootstrap-tab.js" />
-    <Content Include="Content\bootstrap\js\tests\unit\bootstrap-tooltip.js" />
-    <Content Include="Content\bootstrap\js\tests\unit\bootstrap-transition.js" />
-    <Content Include="Content\bootstrap\js\tests\unit\bootstrap-typeahead.js" />
-    <Content Include="Content\bootstrap\js\tests\vendor\jquery.js" />
-    <Content Include="Content\bootstrap\js\tests\vendor\qunit.css" />
-    <Content Include="Content\bootstrap\js\tests\vendor\qunit.js" />
-    <Content Include="Content\bootstrap\less\tests\buttons.html" />
-    <Content Include="Content\bootstrap\less\tests\css-tests.css" />
-    <Content Include="Content\bootstrap\less\tests\css-tests.html" />
-    <Content Include="Content\bootstrap\less\tests\forms-responsive.html" />
-    <Content Include="Content\bootstrap\less\tests\forms.html" />
-    <Content Include="Content\bootstrap\less\tests\navbar-fixed-top.html" />
-    <Content Include="Content\bootstrap\less\tests\navbar-static-top.html" />
-    <Content Include="Content\bootstrap\less\tests\navbar.html" />
     <Content Include="Content\Fanex.Result\fanex.result.css" />
     <Content Include="Content\Fanex.Result\images\1F.gif" />
     <Content Include="Content\Fanex.Result\images\1L.gif" />
@@ -4730,6 +4772,7 @@
     <Content Include="Content\themes\theme28\index.less" />
     <Content Include="Content\themes\theme28\mixins.less" />
     <Content Include="Content\themes\theme28\variables.less" />
+    <None Include="Content\bootstrap\js\.jshintrc" />
     <None Include="Deployment.ignore" />
     <None Include="img\Slot\H0005\Thumbs.db" />
     <None Include="img\Slot\H0006\Thumbs.db" />
@@ -4916,7 +4959,9 @@
     <Content Include="Views\Shared\_LayoutSimplePopup.cshtml">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.ConnectionString.config" />
     <Content Include="Web.AppSetting.config" />
   </ItemGroup>
@@ -4926,48 +4971,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Content\bootstrap\js\.jshintrc" />
-    <Content Include="Content\bootstrap\less\accordion.less" />
-    <Content Include="Content\bootstrap\less\alerts.less" />
-    <Content Include="Content\bootstrap\less\bootstrap.less" />
-    <Content Include="Content\bootstrap\less\breadcrumbs.less" />
-    <Content Include="Content\bootstrap\less\button-groups.less" />
-    <Content Include="Content\bootstrap\less\buttons.less" />
-    <Content Include="Content\bootstrap\less\carousel.less" />
-    <Content Include="Content\bootstrap\less\close.less" />
-    <Content Include="Content\bootstrap\less\code.less" />
-    <Content Include="Content\bootstrap\less\component-animations.less" />
-    <Content Include="Content\bootstrap\less\dropdowns.less" />
-    <Content Include="Content\bootstrap\less\forms.less" />
-    <Content Include="Content\bootstrap\less\grid.less" />
-    <Content Include="Content\bootstrap\less\hero-unit.less" />
-    <Content Include="Content\bootstrap\less\labels-badges.less" />
-    <Content Include="Content\bootstrap\less\layouts.less" />
-    <Content Include="Content\bootstrap\less\media.less" />
-    <Content Include="Content\bootstrap\less\mixins.less" />
-    <Content Include="Content\bootstrap\less\modals.less" />
-    <Content Include="Content\bootstrap\less\navbar.less" />
-    <Content Include="Content\bootstrap\less\navs.less" />
-    <Content Include="Content\bootstrap\less\pager.less" />
-    <Content Include="Content\bootstrap\less\pagination.less" />
-    <Content Include="Content\bootstrap\less\popovers.less" />
-    <Content Include="Content\bootstrap\less\progress-bars.less" />
-    <Content Include="Content\bootstrap\less\reset.less" />
-    <Content Include="Content\bootstrap\less\responsive-1200px-min.less" />
-    <Content Include="Content\bootstrap\less\responsive-767px-max.less" />
-    <Content Include="Content\bootstrap\less\responsive-768px-979px.less" />
-    <Content Include="Content\bootstrap\less\responsive-navbar.less" />
-    <Content Include="Content\bootstrap\less\responsive-utilities.less" />
-    <Content Include="Content\bootstrap\less\responsive.less" />
-    <Content Include="Content\bootstrap\less\scaffolding.less" />
-    <Content Include="Content\bootstrap\less\sprites.less" />
-    <Content Include="Content\bootstrap\less\tables.less" />
-    <Content Include="Content\bootstrap\less\thumbnails.less" />
-    <Content Include="Content\bootstrap\less\tooltip.less" />
-    <Content Include="Content\bootstrap\less\type.less" />
-    <Content Include="Content\bootstrap\less\utilities.less" />
-    <Content Include="Content\bootstrap\less\variables.less" />
-    <Content Include="Content\bootstrap\less\wells.less" />
     <Content Include="Content\themes\common.less" />
     <Content Include="Content\themes\theme1\index.less" />
     <Content Include="Content\themes\theme1\mixins.less" />
@@ -5245,7 +5248,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
+      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -521,7 +521,8 @@ namespace Fanex.Affiliate.WebServices
                 return ResultEngine.HtmlParser(parlayData, displaySettings);
             }
 
-            return GetResultsData(criteria, sportType, displaySettings);
+            var result = GetResultsData(criteria, sportType, displaySettings);
+            return result;
         }
 
         #endregion
