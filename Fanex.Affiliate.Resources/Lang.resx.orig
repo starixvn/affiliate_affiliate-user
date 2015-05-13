@@ -1,0 +1,1972 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="AccountInformation" xml:space="preserve">
+    <value>Account Information</value>
+  </data>
+	<data name="AccountOverview" xml:space="preserve">
+    <value>Account Overview</value>
+  </data>
+	<data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+	<data name="AddressIsRequired" xml:space="preserve">
+    <value>Address is required. </value>
+  </data>
+	<data name="AddUrl" xml:space="preserve">
+    <value>Add Url</value>
+  </data>
+	<data name="Adjustment" xml:space="preserve">
+    <value>Adjustment</value>
+  </data>
+	<data name="Affiliate" xml:space="preserve">
+    <value>Affiliate</value>
+  </data>
+	<data name="AffiliateLogin" xml:space="preserve">
+    <value>Affiliate Login</value>
+  </data>
+	<data name="AffiliateTitle" xml:space="preserve">
+    <value>{0} Affiliate Program</value>
+  </data>
+	<data name="AgreeTermNCondition" xml:space="preserve">
+    <value>I agree to the Terms &amp; Conditions of {0} Affiliate.</value>
+  </data>
+	<data name="All" xml:space="preserve">
+    <value>All</value>
+  </data>
+	<data name="Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+	<data name="Answer" xml:space="preserve">
+    <value>Your Answer</value>
+  </data>
+	<data name="AnswerIsRequired" xml:space="preserve">
+    <value>Your Answer is required. </value>
+  </data>
+	<data name="Approved" xml:space="preserve">
+    <value>Approved</value>
+  </data>
+	<data name="Apr" xml:space="preserve">
+    <value>Apr</value>
+  </data>
+	<data name="Aug" xml:space="preserve">
+    <value>Aug</value>
+  </data>
+	<data name="AvailableDomains" xml:space="preserve">
+    <value>Available domains</value>
+  </data>
+	<data name="BalanceBroughtForward" xml:space="preserve">
+    <value>Balance Brought Forward</value>
+  </data>
+	<data name="BalanceIsZero" xml:space="preserve">
+    <value>You cannot request payout because of insufficient balance.</value>
+  </data>
+	<data name="BankTransfer" xml:space="preserve">
+    <value>Bank Transfer</value>
+  </data>
+	<data name="Banner" xml:space="preserve">
+    <value>Banner</value>
+  </data>
+	<data name="Bonus" xml:space="preserve">
+    <value>Bonus</value>
+  </data>
+	<data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+	<data name="Cancelled" xml:space="preserve">
+    <value>Cancelled</value>
+  </data>
+	<data name="CancelRequest" xml:space="preserve">
+    <value>Cancel Request</value>
+  </data>
+	<data name="Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+	<data name="Change" xml:space="preserve">
+    <value>Change</value>
+  </data>
+	<data name="ChangePassErr" xml:space="preserve">
+    <value>Change password error</value>
+  </data>
+	<data name="ChangePassword" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+	<data name="ChangePasswordEmailTitle" xml:space="preserve">
+    <value>{0} Affiliates - Your new password</value>
+  </data>
+	<data name="ChangePasswordInstruction" xml:space="preserve">
+    <value>Use this form to change your password. Once changed, your new password will be in effect next time you login.</value>
+  </data>
+	<data name="City" xml:space="preserve">
+    <value>City</value>
+  </data>
+	<data name="CityIsRequired" xml:space="preserve">
+    <value>City is required. </value>
+  </data>
+	<data name="Comment" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+	<data name="CommentIsRequired" xml:space="preserve">
+    <value>Comment is invalid.</value>
+  </data>
+	<data name="Commission" xml:space="preserve">
+    <value>Commission</value>
+  </data>
+	<data name="ComNetWin" xml:space="preserve">
+    <value>Company net win for the month ({0})</value>
+  </data>
+	<data name="CompletedDate" xml:space="preserve">
+    <value>Completed Date</value>
+  </data>
+	<data name="CompleteForm" xml:space="preserve">
+    <value>Please complete this form to register for your {0} affiliate account. </value>
+  </data>
+	<data name="ConfirmPasswordRequired" xml:space="preserve">
+    <value>Confirm password is required</value>
+  </data>
+	<data name="ContactInfo" xml:space="preserve">
+    <value>Contact Information</value>
+  </data>
+	<data name="ContactNumber" xml:space="preserve">
+    <value>Contact Number</value>
+  </data>
+	<data name="ContactNumberIsRequired" xml:space="preserve">
+    <value>Contact Number is required. </value>
+  </data>
+	<data name="ContactUs" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+	<data name="Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+	<data name="CountryIsRequired" xml:space="preserve">
+    <value>Please select Country</value>
+  </data>
+	<data name="CsdMailSubject" xml:space="preserve">
+    <value>{0} Affiliates - New account ({1}) awaiting approval</value>
+  </data>
+	<data name="Currency" xml:space="preserve">
+    <value>Currency</value>
+  </data>
+	<data name="CurrencyIsRequired" xml:space="preserve">
+    <value>Please select Currency.</value>
+  </data>
+	<data name="Current" xml:space="preserve">
+    <value>Current</value>
+  </data>
+	<data name="CurrentCommissionSetting" xml:space="preserve">
+    <value>Current Commission Setting</value>
+  </data>
+	<data name="DailyEarnings" xml:space="preserve">
+    <value>Daily Earnings</value>
+  </data>
+	<data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+	<data name="Dec" xml:space="preserve">
+    <value>Dec</value>
+  </data>
+	<data name="Deposit" xml:space="preserve">
+    <value>Deposit</value>
+  </data>
+	<data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+	<data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+	<data name="EmailFormat" xml:space="preserve">
+    <value>Email Format</value>
+  </data>
+	<data name="EmailIsRequire" xml:space="preserve">
+    <value>Email address is required.</value>
+  </data>
+	<data name="EmailMatch" xml:space="preserve">
+    <value>Email addresses that you entered do not match. </value>
+  </data>
+	<data name="EmptyEmail" xml:space="preserve">
+    <value>Please input Email.</value>
+  </data>
+	<data name="ErrGender" xml:space="preserve">
+    <value>Please select Gender! </value>
+  </data>
+	<data name="FAQs" xml:space="preserve">
+    <value>FAQs</value>
+  </data>
+<<<<<<< HEAD
+  <data name="FDM" xml:space="preserve">
+    <value>First Deposit Member</value>
+=======
+	<data name="FDM" xml:space="preserve">
+    <value>FDM</value>
+>>>>>>> #34490 - Update dll Fanex.BetList
+  </data>
+	<data name="Feb" xml:space="preserve">
+    <value>Feb</value>
+  </data>
+	<data name="Female" xml:space="preserve">
+    <value>Female</value>
+  </data>
+	<data name="FirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+	<data name="FirstNameIsRequired" xml:space="preserve">
+    <value>First Name is required</value>
+  </data>
+	<data name="ForgetPassword" xml:space="preserve">
+    <value>Forget your password?</value>
+  </data>
+	<data name="ForgetPasswordEmailTitle" xml:space="preserve">
+    <value> {0} Affiliates - Your login detail</value>
+  </data>
+	<data name="ForgetPasswordInstruction" xml:space="preserve">
+    <value>A new password will be sent to the email address that you provided.&lt;br /&gt; If you are experiencing any further difficulties, please {0}.</value>
+  </data>
+	<data name="ForgetPasswordSuccess" xml:space="preserve">
+    <value>Your login details have been sent. &lt;br/&gt;Please check your email address to find out your username and details about your password. &lt;br/&gt; For any reason you do not receive the email, please {0} and we will be glad to assist you.</value>
+  </data>
+	<data name="From" xml:space="preserve">
+    <value>From</value>
+  </data>
+	<data name="Gender" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+	<data name="GenerateLink" xml:space="preserve">
+    <value>Generate Link</value>
+  </data>
+	<data name="Hobby" xml:space="preserve">
+    <value>Favorite hobby?</value>
+  </data>
+	<data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+	<data name="HomeDetailed" xml:space="preserve">
+    <value>Detailed stats tracking system</value>
+  </data>
+	<data name="HomeEarn" xml:space="preserve">
+    <value>Earn as high as 40% of players net losses for life</value>
+  </data>
+	<data name="HomeNegative" xml:space="preserve">
+    <value>Negative Balance</value>
+  </data>
+	<data name="HomeOnline" xml:space="preserve">
+    <value>24/7 online support for you and your players</value>
+  </data>
+	<data name="HomePrompt" xml:space="preserve">
+    <value>Prompt monthly payouts</value>
+  </data>
+	<data name="HomeWide" xml:space="preserve">
+    <value>Wide range of payment methods</value>
+  </data>
+	<data name="HtmlFormat" xml:space="preserve">
+    <value>Html Format</value>
+  </data>
+<<<<<<< HEAD
+  <data name="IDKey" xml:space="preserve">
+=======
+	<data name="ID" xml:space="preserve">
+>>>>>>> #34490 - Update dll Fanex.BetList
+    <value>ID</value>
+  </data>
+	<data name="Important" xml:space="preserve">
+    <value>Important</value>
+  </data>
+	<data name="InputRequestAmount" xml:space="preserve">
+    <value>Input Request Amount</value>
+  </data>
+	<data name="Jan" xml:space="preserve">
+    <value>Jan</value>
+  </data>
+	<data name="Jul" xml:space="preserve">
+    <value>Jul</value>
+  </data>
+	<data name="Jun" xml:space="preserve">
+    <value>Jun</value>
+  </data>
+	<data name="LandingPages" xml:space="preserve">
+    <value>Landing Pages</value>
+  </data>
+	<data name="LandingPagesStatistics" xml:space="preserve">
+    <value>Landing Pages Statistics</value>
+  </data>
+	<data name="LandingPagesStatisticsDetail" xml:space="preserve">
+    <value>Landing Pages Statistics Detail</value>
+  </data>
+	<data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+	<data name="LanguageIsRequired" xml:space="preserve">
+    <value>Please select preferred Language.</value>
+  </data>
+	<data name="LastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+	<data name="LastNameIsRequired" xml:space="preserve">
+    <value>Last Name is required</value>
+  </data>
+	<data name="LinkDefault" xml:space="preserve">
+    <value>Default</value>
+  </data>
+	<data name="LinkTo" xml:space="preserve">
+    <value>Link to</value>
+  </data>
+	<data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+	<data name="Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+	<data name="MailingInfor" xml:space="preserve">
+    <value>Mailing Information</value>
+  </data>
+	<data name="Male" xml:space="preserve">
+    <value>Male</value>
+  </data>
+	<data name="Mar" xml:space="preserve">
+    <value>Mar</value>
+  </data>
+	<data name="MarketingTools" xml:space="preserve">
+    <value>Marketing Tools</value>
+  </data>
+	<data name="May" xml:space="preserve">
+    <value>May</value>
+  </data>
+	<data name="MediaGallery" xml:space="preserve">
+    <value>Media Gallery</value>
+  </data>
+	<data name="Message" xml:space="preserve">
+    <value>Message</value>
+  </data>
+	<data name="MessageHistory" xml:space="preserve">
+    <value>Message History</value>
+  </data>
+	<data name="MinimumWithdrawalAmount" xml:space="preserve">
+    <value>Minimum Withdrawal Amount</value>
+  </data>
+	<data name="Mobile" xml:space="preserve">
+    <value>Mobile Number</value>
+  </data>
+	<data name="MobileNumberIsRequired" xml:space="preserve">
+    <value>Mobile Number is required.</value>
+  </data>
+	<data name="Month" xml:space="preserve">
+    <value>Month</value>
+  </data>
+	<data name="MonthlyWinlost" xml:space="preserve">
+    <value>Monthly Winlost</value>
+  </data>
+	<data name="More" xml:space="preserve">
+    <value>More...</value>
+  </data>
+	<data name="MotherName" xml:space="preserve">
+    <value>Mother's first name?</value>
+  </data>
+	<data name="Movie" xml:space="preserve">
+    <value>Favorite movie?</value>
+  </data>
+	<data name="Msg101" xml:space="preserve">
+    <value>Wrong username or password.</value>
+  </data>
+	<data name="Msg102" xml:space="preserve">
+    <value>Your account is closed. Please contact your administrator!</value>
+  </data>
+	<data name="Msg103" xml:space="preserve">
+    <value>Your account is locked temporarily due to 5 consecutive failed login attempts. Please try again after 10 minutes or contact your administrator!</value>
+  </data>
+	<data name="Msg104" xml:space="preserve">
+    <value>You have not entered an email address that we recognise. Please try again or {0}.</value>
+  </data>
+	<data name="Msg105" xml:space="preserve">
+    <value>Account is not approved. Please contact your administrator!</value>
+  </data>
+	<data name="Msg106" xml:space="preserve">
+    <value>The address that you have used to request a new password is not valid.</value>
+  </data>
+	<data name="Msg107" xml:space="preserve">
+    <value>Oops, Your account is not existed or closed. Please contact administrator.</value>
+  </data>
+	<data name="Msg119" xml:space="preserve">
+    <value>Email address is invalid.</value>
+  </data>
+	<data name="Msg120" xml:space="preserve">
+    <value>Email address is required.</value>
+  </data>
+	<data name="Msg121" xml:space="preserve">
+    <value>Email Address has been used. Please choose another one!</value>
+  </data>
+	<data name="Msg122" xml:space="preserve">
+    <value>Invalid affiliate information.</value>
+  </data>
+	<data name="Msg123" xml:space="preserve">
+    <value>Create customer failed. Please try again.</value>
+  </data>
+	<data name="Msg130" xml:space="preserve">
+    <value>You have a pending request. In order to create a new request, please cancel the pending one or wait till the processing gets completed.</value>
+  </data>
+	<data name="Msg131" xml:space="preserve">
+    <value>Sorry, this Affiliate does not have enough money to withdraw.</value>
+  </data>
+	<data name="Msg132" xml:space="preserve">
+    <value>Invalid Role ID.</value>
+  </data>
+	<data name="Msg133" xml:space="preserve">
+    <value>Invalid balance account or either the currency or payment method is not supported.</value>
+  </data>
+	<data name="Msg134" xml:space="preserve">
+    <value>Insert transaction failed.</value>
+  </data>
+	<data name="Msg135" xml:space="preserve">
+    <value>Sorry, amount is invalid.</value>
+  </data>
+	<data name="Msg136" xml:space="preserve">
+    <value>Request amount must be greater than or equal to minimum withdrawal amount.</value>
+  </data>
+	<data name="Msg137" xml:space="preserve">
+    <value>Sorry! The [Neteller, Bank Transfer,.. - affiliate's chosen one] payment method is not available. At the moment, only "Player Account" method is supported. Please click here to make a change.</value>
+  </data>
+	<data name="Msg138" xml:space="preserve">
+    <value>We do not support this currency. Please contact administrator.</value>
+  </data>
+	<data name="Msg139" xml:space="preserve">
+    <value>Oops, You do not have permission to update this transaction.</value>
+  </data>
+	<data name="Msg140" xml:space="preserve">
+    <value>This transaction is not a withdrawal.</value>
+  </data>
+	<data name="Msg141" xml:space="preserve">
+    <value>You are not authorized on this function.</value>
+  </data>
+	<data name="Msg142" xml:space="preserve">
+    <value>The user does not exist</value>
+  </data>
+	<data name="Msg143" xml:space="preserve">
+    <value>Payment Amount is required.</value>
+  </data>
+	<data name="Msg150" xml:space="preserve">
+    <value>Old password is incorrect</value>
+  </data>
+	<data name="MsgEmptyCaptcha" xml:space="preserve">
+    <value>You must input validation code.</value>
+  </data>
+	<data name="MsgEmptyUsernamePassword" xml:space="preserve">
+    <value>Please input username and password.</value>
+  </data>
+	<data name="MsgIncorrectCaptchaMsg" xml:space="preserve">
+    <value>You inputted an invalid validation code!</value>
+  </data>
+	<data name="MsgKickout" xml:space="preserve">
+    <value>Another session has logged in or your session is expired. Forced to logout!</value>
+  </data>
+<<<<<<< HEAD
+  <data name="NAKey" xml:space="preserve">
+=======
+	<data name="NA" xml:space="preserve">
+>>>>>>> #34490 - Update dll Fanex.BetList
+    <value>N/A</value>
+  </data>
+	<data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+	<data name="NameIsRequired" xml:space="preserve">
+    <value>Name is invalid.</value>
+  </data>
+	<data name="NameOfBook" xml:space="preserve">
+    <value>Name of favorite book?</value>
+  </data>
+	<data name="NewPassword" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+	<data name="NewPasswordRequired" xml:space="preserve">
+    <value>New password is required</value>
+  </data>
+	<data name="NewSignups" xml:space="preserve">
+    <value>New Signups</value>
+  </data>
+	<data name="NoInformation" xml:space="preserve">
+    <value>No information is available</value>
+  </data>
+	<data name="Normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+	<data name="Nov" xml:space="preserve">
+    <value>Nov</value>
+  </data>
+	<data name="Oct" xml:space="preserve">
+    <value>Oct</value>
+  </data>
+	<data name="OldPassErr" xml:space="preserve">
+    <value>Old password is incorrect</value>
+  </data>
+	<data name="OldPassword" xml:space="preserve">
+    <value>Old Password</value>
+  </data>
+	<data name="OldPasswordRequired" xml:space="preserve">
+    <value>Old password is required</value>
+  </data>
+	<data name="Page" xml:space="preserve">
+    <value>Page</value>
+  </data>
+	<data name="PageSize" xml:space="preserve">
+    <value>Page Size</value>
+  </data>
+	<data name="Paging" xml:space="preserve">
+    <value>Page {0} of {1}</value>
+  </data>
+	<data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+	<data name="PasswordNotMatched" xml:space="preserve">
+    <value>Confirm password does not match the new password</value>
+  </data>
+	<data name="PaymentInfo" xml:space="preserve">
+    <value>Payment Information</value>
+  </data>
+	<data name="PaymentMethod" xml:space="preserve">
+    <value>Payment Method</value>
+  </data>
+	<data name="PaymentRequest" xml:space="preserve">
+    <value>Payment Request</value>
+  </data>
+	<data name="PaymentRequestCancel" xml:space="preserve">
+    <value>Your payment request has been cancelled!</value>
+  </data>
+	<data name="PaymentRequestSuccess" xml:space="preserve">
+    <value>Your payment request has been submitted successfully!</value>
+  </data>
+	<data name="PaymentTime" xml:space="preserve">
+    <value>You can only request payout from 8th to 15th of the month.</value>
+  </data>
+	<data name="PendingRequest" xml:space="preserve">
+    <value>Pending Request</value>
+  </data>
+	<data name="PetName" xml:space="preserve">
+    <value>Favorite pet's name?</value>
+  </data>
+	<data name="PlainText" xml:space="preserve">
+    <value>Plain Text</value>
+  </data>
+	<data name="PlayerAcc" xml:space="preserve">
+    <value>Player Account</value>
+  </data>
+	<data name="PlayerUsername" xml:space="preserve">
+    <value>Player Username</value>
+  </data>
+	<data name="PlayerUsernameIsRequired" xml:space="preserve">
+    <value>Player Username is required</value>
+  </data>
+	<data name="Postal" xml:space="preserve">
+    <value>Postcode/Zip</value>
+  </data>
+	<data name="PostcodeZiIsRequired" xml:space="preserve">
+    <value>Postcode/Zip is required. </value>
+  </data>
+	<data name="PostDate" xml:space="preserve">
+    <value>Posted Date</value>
+  </data>
+	<data name="Preference" xml:space="preserve">
+    <value>Preference</value>
+  </data>
+	<data name="Proccessing" xml:space="preserve">
+    <value>Proccessing</value>
+  </data>
+	<data name="Product" xml:space="preserve">
+    <value>Product</value>
+  </data>
+	<data name="ProgramDetails" xml:space="preserve">
+    <value>Program Details</value>
+  </data>
+	<data name="PwdChanged" xml:space="preserve">
+    <value>Password changed successfully</value>
+  </data>
+	<data name="QualifyingMembers" xml:space="preserve">
+    <value>Qualifying Members</value>
+  </data>
+	<data name="Question" xml:space="preserve">
+    <value>Security Question</value>
+  </data>
+	<data name="QuestionIsRequired" xml:space="preserve">
+    <value>Please select Security Question!</value>
+  </data>
+	<data name="RecentPayment" xml:space="preserve">
+    <value>Recent Payment</value>
+  </data>
+	<data name="RecoverPasswordFail" xml:space="preserve">
+    <value>The address that you have used to request a new password is not valid.</value>
+  </data>
+	<data name="ReenterNewPassword" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+	<data name="Referrals" xml:space="preserve">
+    <value>Referrals</value>
+  </data>
+	<data name="ReferralsDetail" xml:space="preserve">
+    <value>Referrals Detail</value>
+  </data>
+	<data name="ReferrersStatistics" xml:space="preserve">
+    <value>Referrals Statistics</value>
+  </data>
+	<data name="ReferrersStatisticsDetail" xml:space="preserve">
+    <value>Referrers Statistics Detail</value>
+  </data>
+	<data name="RefNo" xml:space="preserve">
+    <value>Ref.No</value>
+  </data>
+	<data name="RegisForm" xml:space="preserve">
+    <value>Application Form</value>
+  </data>
+	<data name="Rejected" xml:space="preserve">
+    <value>Rejected</value>
+  </data>
+	<data name="RequestAmount" xml:space="preserve">
+    <value>Request Amount</value>
+  </data>
+	<data name="RequestDate" xml:space="preserve">
+    <value>Request Date</value>
+  </data>
+	<data name="RequestPaymentEmailTitle" xml:space="preserve">
+    <value>Payment Request Notification</value>
+  </data>
+<<<<<<< HEAD
+  <data name="Requestpayout" xml:space="preserve">
+=======
+	<data name="Requestpayout" xml:space="preserve">
+>>>>>>> #34490 - Update dll Fanex.BetList
+    <value>Request Payout</value>
+  </data>
+	<data name="RequireInfo" xml:space="preserve">
+    <value>Fields marked &lt;span class="txtRequire"&gt;*&lt;/span&gt; must be completed</value>
+  </data>
+	<data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+	<data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+	<data name="SecretCode" xml:space="preserve">
+    <value>My secret code?</value>
+  </data>
+	<data name="SelectOne" xml:space="preserve">
+    <value>Select One</value>
+  </data>
+	<data name="Sep" xml:space="preserve">
+    <value>Sep</value>
+  </data>
+	<data name="SignUp" xml:space="preserve">
+    <value>Sign up</value>
+  </data>
+	<data name="SignUpMailSubject" xml:space="preserve">
+    <value>{0}  Affiliates - Your Application</value>
+  </data>
+	<data name="SiteInfo" xml:space="preserve">
+    <value>Website Information</value>
+  </data>
+	<data name="SiteURL" xml:space="preserve">
+    <value>Website URL</value>
+  </data>
+	<data name="SiteURLIsRequired" xml:space="preserve">
+    <value>Website URL is required</value>
+  </data>
+	<data name="Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+	<data name="Sport" xml:space="preserve">
+    <value>Sport</value>
+  </data>
+	<data name="SportTeam" xml:space="preserve">
+    <value>Favorite sport team?</value>
+  </data>
+	<data name="State" xml:space="preserve">
+    <value>State</value>
+  </data>
+	<data name="StateIsRequired" xml:space="preserve">
+    <value>State is required. </value>
+  </data>
+	<data name="StatementHistory" xml:space="preserve">
+    <value>Statement History</value>
+  </data>
+	<data name="StatisticsFor" xml:space="preserve">
+    <value>Statistics For {0}-{1}</value>
+  </data>
+	<data name="StatisticsUpToNow" xml:space="preserve">
+    <value>Statistics Up To Now</value>
+  </data>
+	<data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+	<data name="SubCategory" xml:space="preserve">
+    <value>Sub Category</value>
+  </data>
+	<data name="Subject" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+	<data name="SubjectIsRequired" xml:space="preserve">
+    <value>Subject is invalid.</value>
+  </data>
+	<data name="Submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+	<data name="TermsConditions" xml:space="preserve">
+    <value>Terms &amp; Conditions</value>
+  </data>
+	<data name="TextBox" xml:space="preserve">
+    <value>Text Box</value>
+  </data>
+	<data name="TextLink" xml:space="preserve">
+    <value>Text Link</value>
+  </data>
+	<data name="Tier" xml:space="preserve">
+    <value>Tier</value>
+  </data>
+<<<<<<< HEAD
+  <data name="Top" xml:space="preserve">
+=======
+	<data name="To" xml:space="preserve">
+    <value>To</value>
+  </data>
+	<data name="Top" xml:space="preserve">
+>>>>>>> #34490 - Update dll Fanex.BetList
+    <value>Top</value>
+  </data>
+	<data name="Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+	<data name="TotalActivePlayers" xml:space="preserve">
+    <value>Total Active Players</value>
+  </data>
+	<data name="TotalClicks" xml:space="preserve">
+    <value>Total Clicks</value>
+  </data>
+	<data name="TotalDeposits" xml:space="preserve">
+    <value>Total Deposits</value>
+  </data>
+	<data name="TotalPlayers" xml:space="preserve">
+    <value>Total Players</value>
+  </data>
+	<data name="TotalQualifiedActive" xml:space="preserve">
+    <value>Total Qualified Active Players ({0})</value>
+  </data>
+	<data name="TrackingCode" xml:space="preserve">
+    <value>Tracking Code</value>
+  </data>
+	<data name="TrackingStatistics" xml:space="preserve">
+    <value>Tracking Statistics</value>
+  </data>
+	<data name="TrafficStatistics" xml:space="preserve">
+    <value>Traffic Statistics</value>
+  </data>
+	<data name="Transaction" xml:space="preserve">
+    <value>Transaction</value>
+  </data>
+	<data name="Turnover" xml:space="preserve">
+    <value>Turnover</value>
+  </data>
+	<data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+	<data name="UnauthorizedMsg" xml:space="preserve">
+    <value>Your session has timed out or your request is not authorized</value>
+  </data>
+	<data name="UniqueClicks" xml:space="preserve">
+    <value>Unique Clicks</value>
+  </data>
+	<data name="Username" xml:space="preserve">
+    <value>Username</value>
+  </data>
+	<data name="Validation" xml:space="preserve">
+    <value>Validation</value>
+  </data>
+	<data name="VerifyEmail" xml:space="preserve">
+    <value>Verify Email Address</value>
+  </data>
+	<data name="Winlost" xml:space="preserve">
+    <value>Winlost</value>
+  </data>
+	<data name="YourEmail" xml:space="preserve">
+    <value>Your Email</value>
+  </data>
+	<data name="Headlines" xml:space="preserve">
+    <value>Headlines</value>
+  </data>
+	<data name="ViewMore" xml:space="preserve">
+    <value>View More</value>
+  </data>
+	<data name="HotNews" xml:space="preserve">
+    <value>Hot News</value>
+  </data>
+	<data name="ContactUsSuccess" xml:space="preserve">
+    <value>&lt;p&gt;Thank you for contacting us.&lt;/p&gt;
+&lt;p&gt;Your message has been sent. We will respond to your request as soon as possible. &lt;/p&gt;
+&lt;p&gt;Have a great day!&lt;/p&gt;
+&lt;p&gt;Best regards, &lt;/p&gt;
+&lt;br /&gt;
+{0} Affiliate Support Team</value>
+  </data>
+	<data name="PasswordPattern" xml:space="preserve">
+    <value>Password must have at least 6 charecters, including at least 2 letters and at least 2 digits. (e.g:pass22)</value>
+  </data>
+	<data name="ErrAuthorized" xml:space="preserve">
+    <value>You are not authorized on this function</value>
+  </data>
+	<data name="FromDateIsRequired" xml:space="preserve">
+    <value>From date is required</value>
+  </data>
+	<data name="ToDateIsRequired" xml:space="preserve">
+    <value>To date is required</value>
+  </data>
+	<data name="UpdateAccSuccess" xml:space="preserve">
+    <value>Your account information has been updated successfully.</value>
+  </data>
+	<data name="Msg160" xml:space="preserve">
+    <value>Invalid creator!</value>
+  </data>
+	<data name="Msg161" xml:space="preserve">
+    <value>Invalid mail content!</value>
+  </data>
+	<data name="Msg162" xml:space="preserve">
+    <value>Invalid sender name!</value>
+  </data>
+	<data name="Msg163" xml:space="preserve">
+    <value>Invalid  email address!</value>
+  </data>
+	<data name="Msg164" xml:space="preserve">
+    <value>Invalid  mail subject!</value>
+  </data>
+	<data name="Msg165" xml:space="preserve">
+    <value>Invalid sender ip!</value>
+  </data>
+	<data name="Msg166" xml:space="preserve">
+    <value>Invalid browser name!</value>
+  </data>
+	<data name="Msg167" xml:space="preserve">
+    <value>Invalid ASP.NET session id!</value>
+  </data>
+	<data name="Msg168" xml:space="preserve">
+    <value>You are just allowed to send maximum of  20 emails per 10 minutes!</value>
+  </data>
+	<data name="Msg169" xml:space="preserve">
+    <value>Error! Insert email unsuccessfully!</value>
+  </data>
+	<data name="Msg170" xml:space="preserve">
+    <value>Oops, this account is having 1 pending pay out request , please update this transaction first!</value>
+  </data>
+	<data name="Msg171" xml:space="preserve">
+    <value>Invalid user information. Update process is unsuccessful!</value>
+  </data>
+	<data name="Msg172" xml:space="preserve">
+    <value>Error occurs. Update process is unsuccessful!</value>
+  </data>
+	<data name="WebsiteUrl" xml:space="preserve">
+    <value>Please input Website URL</value>
+  </data>
+	<data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+	<data name="MoreSiteUrl" xml:space="preserve">
+    <value>Website URL {0} is required.</value>
+  </data>
+	<data name="DailyEarningsDetail" xml:space="preserve">
+    <value>Daily Earnings Detail</value>
+  </data>
+	<data name="ApplicationForm" xml:space="preserve">
+    <value>application form</value>
+  </data>
+	<data name="Copyright" xml:space="preserve">
+    <value>Copyright</value>
+  </data>
+	<data name="PleaseDirectAnyComment" xml:space="preserve">
+    <value>Please direct any comments or questions to {0}, or using the form below.</value>
+  </data>
+	<data name="BestViewIn" xml:space="preserve">
+    <value>Best view in</value>
+  </data>
+	<data name="CopyrightPacificSeaInvests" xml:space="preserve">
+    <value>Copyright {0} Pacific Sea Invests</value>
+  </data>
+	<data name="CustomizedBanners" xml:space="preserve">
+    <value>Customized Banners</value>
+  </data>
+	<data name="PromotionalDescriptions" xml:space="preserve">
+    <value>Promotional Descriptions</value>
+  </data>
+	<data name="Sportsbook" xml:space="preserve">
+    <value>Sportsbook</value>
+  </data>
+	<data name="EnglishSupport" xml:space="preserve">
+    <value>English Support</value>
+  </data>
+	<data name="ThaiSupport" xml:space="preserve">
+    <value>Thai Support</value>
+  </data>
+	<data name="VietnameseSupport" xml:space="preserve">
+    <value>Vietnamese Support</value>
+  </data>
+	<data name="ApplicationUnde" xml:space="preserve">
+    <value>Application Under Review</value>
+  </data>
+	<data name="Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+	<data name="RegisSuccess" xml:space="preserve">
+    <value>Thank you for submitting your application.&lt;br/&gt;&lt;br/&gt;Your websites and application details will be reviewed by the team at {0} Affiliates to ensure that content is suitable for promoting our products.&lt;br/&gt;&lt;br/&gt;Within 5 days we should be able to provide you with a decision in regard to your application. If you are approved, you will be able to enjoy full access to our affiliate program.&lt;br /&gt;&lt;br /&gt;Best Regards,&lt;br /&gt;&lt;br /&gt;The team at {0} Affiliates</value>
+  </data>
+	<data name="April" xml:space="preserve">
+    <value>April</value>
+  </data>
+	<data name="August" xml:space="preserve">
+    <value>August</value>
+  </data>
+	<data name="December" xml:space="preserve">
+    <value>December</value>
+  </data>
+	<data name="February" xml:space="preserve">
+    <value>February</value>
+  </data>
+	<data name="January" xml:space="preserve">
+    <value>January</value>
+  </data>
+	<data name="July" xml:space="preserve">
+    <value>July</value>
+  </data>
+	<data name="June" xml:space="preserve">
+    <value>June</value>
+  </data>
+	<data name="March" xml:space="preserve">
+    <value>March</value>
+  </data>
+	<data name="November" xml:space="preserve">
+    <value>November</value>
+  </data>
+	<data name="October" xml:space="preserve">
+    <value>October</value>
+  </data>
+	<data name="September" xml:space="preserve">
+    <value>September</value>
+  </data>
+	<data name="FieldMustBeNumeric" xml:space="preserve">
+    <value>The field must be a number.</value>
+  </data>
+	<data name="LandingPagesDetail" xml:space="preserve">
+    <value>Landing Pages Detail</value>
+  </data>
+	<data name="CustomerInfo" xml:space="preserve">
+    <value>Customer Information</value>
+  </data>
+	<data name="Statistics" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+	<data name="AmountError" xml:space="preserve">
+    <value>Invalid request amount! Amount must be between </value>
+  </data>
+	<data name="And" xml:space="preserve">
+    <value>and</value>
+  </data>
+	<data name="FAQ_HowCanCheck" xml:space="preserve">
+    <value>How can I check how much I have earned?</value>
+  </data>
+	<data name="FAQ_HowDoSignUp" xml:space="preserve">
+    <value>How do I sign up with {0} Affiliate Program?</value>
+  </data>
+	<data name="FAQ_HowSystemKeepTrack" xml:space="preserve">
+    <value>How does the system keep track of my players?</value>
+  </data>
+	<data name="FAQ_WhatAreWithdrawalMethods" xml:space="preserve">
+    <value>What are the withdrawal methods available to me?</value>
+  </data>
+	<data name="FAQ_WhatIfDontHaveWebsite" xml:space="preserve">
+    <value>What if I don't have a Website, can I still join?</value>
+  </data>
+	<data name="FAQ_WhatIsAffiliateProgram" xml:space="preserve">
+    <value>What is {0} Affiliate Program?</value>
+  </data>
+	<data name="FAQ_WhatIsMinimumWithdrawalRequest" xml:space="preserve">
+    <value>What is the minimum withdrawal request amount?</value>
+  </data>
+	<data name="FAQ_WhereGetBanners" xml:space="preserve">
+    <value>Where do I get banners and content?</value>
+  </data>
+	<data name="CompanyNegativeNetWin" xml:space="preserve">
+    <value>If the Company Net Win is negative, then affiliate has to bear {0}% with the company that month (apply for each product).</value>
+  </data>
+	<data name="LiveCasino" xml:space="preserve">
+    <value>Live Casino</value>
+  </data>
+	<data name="NumberGame" xml:space="preserve">
+    <value>Number Game</value>
+  </data>
+	<data name="RNGCasino" xml:space="preserve">
+    <value>RNG Casino</value>
+  </data>
+	<data name="Casino" xml:space="preserve">
+    <value>Casino</value>
+  </data>
+	<data name="Racebook" xml:space="preserve">
+    <value>Racebook</value>
+  </data>
+	<data name="BetList" xml:space="preserve">
+    <value>Bet List</value>
+  </data>
+	<data name="DontShowRunningBetList" xml:space="preserve">
+    <value>We don't support running bet list at the moment.</value>
+  </data>
+	<data name="BetListResults" xml:space="preserve">
+    <value>Results</value>
+  </data>
+	<data name="PlaytechCasino" xml:space="preserve">
+    <value>Casino</value>
+  </data>
+<<<<<<< HEAD
+  <data name="PlayerComm" xml:space="preserve">
+    <value>Member Comm.</value>
+=======
+	<data name="PlayerComm" xml:space="preserve">
+    <value>Player Comm.</value>
+>>>>>>> #34490 - Update dll Fanex.BetList
+  </data>
+	<data name="PlaytechCasinoNetGaming" xml:space="preserve">
+    <value>Net Gaming</value>
+  </data>
+	<data name="PlaytechCasinoPShare" xml:space="preserve">
+    <value>P.Share</value>
+  </data>
+	<data name="PlaytechCasinoPWin" xml:space="preserve">
+    <value>P.Win</value>
+  </data>
+	<data name="VirtualSports" xml:space="preserve">
+    <value>Virtual Sports</value>
+  </data>
+<<<<<<< HEAD
+  <data name="AD" xml:space="preserve">
+    <value>Andorra</value>
+  </data>
+  <data name="AE" xml:space="preserve">
+    <value>United Arab Emirates</value>
+  </data>
+  <data name="AG" xml:space="preserve">
+    <value>Antigua and Barbuda</value>
+  </data>
+  <data name="AI" xml:space="preserve">
+    <value>Anguilla</value>
+  </data>
+  <data name="AL" xml:space="preserve">
+    <value>Albania</value>
+  </data>
+  <data name="AM" xml:space="preserve">
+    <value>Armenia</value>
+  </data>
+  <data name="AN" xml:space="preserve">
+    <value>Netherlands Antilles</value>
+  </data>
+  <data name="AO" xml:space="preserve">
+    <value>Angola</value>
+  </data>
+  <data name="AP" xml:space="preserve">
+    <value>Non-spec Asia Pas Location</value>
+  </data>
+  <data name="AQ" xml:space="preserve">
+    <value>Antarctica</value>
+  </data>
+  <data name="AR" xml:space="preserve">
+    <value>Argentina</value>
+  </data>
+  <data name="AS" xml:space="preserve">
+    <value>American Samoa</value>
+  </data>
+  <data name="AT" xml:space="preserve">
+    <value>Austria</value>
+  </data>
+  <data name="AU" xml:space="preserve">
+    <value>Australia</value>
+  </data>
+  <data name="AW" xml:space="preserve">
+    <value>Aruba</value>
+  </data>
+  <data name="AX" xml:space="preserve">
+    <value>Aland Islands</value>
+  </data>
+  <data name="AZ" xml:space="preserve">
+    <value>Azerbaijan</value>
+  </data>
+  <data name="BA" xml:space="preserve">
+    <value>Bosnia and Herzegowina</value>
+  </data>
+  <data name="BB" xml:space="preserve">
+    <value>Barbados</value>
+  </data>
+  <data name="BD" xml:space="preserve">
+    <value>Bangladesh</value>
+  </data>
+  <data name="BE" xml:space="preserve">
+    <value>Belgium</value>
+  </data>
+  <data name="BF" xml:space="preserve">
+    <value>Burkina Faso</value>
+  </data>
+  <data name="BG" xml:space="preserve">
+    <value>Bulgaria</value>
+  </data>
+  <data name="BH" xml:space="preserve">
+    <value>Bahrain</value>
+  </data>
+  <data name="BI" xml:space="preserve">
+    <value>Burundi</value>
+  </data>
+  <data name="BJ" xml:space="preserve">
+    <value>Benin</value>
+  </data>
+  <data name="BL" xml:space="preserve">
+    <value>Saint Barthelemy</value>
+  </data>
+  <data name="BM" xml:space="preserve">
+    <value>Bermuda</value>
+  </data>
+  <data name="BN" xml:space="preserve">
+    <value>Brunei Darussalam</value>
+  </data>
+  <data name="BO" xml:space="preserve">
+    <value>Bolivia</value>
+  </data>
+  <data name="BQ" xml:space="preserve">
+    <value>Bonaire, Sint Eustatius And Saba</value>
+  </data>
+  <data name="BR" xml:space="preserve">
+    <value>Brazil</value>
+  </data>
+  <data name="BS" xml:space="preserve">
+    <value>Bahamas</value>
+  </data>
+  <data name="BT" xml:space="preserve">
+    <value>Bhutan</value>
+  </data>
+  <data name="BV" xml:space="preserve">
+    <value>Bouvet Island</value>
+  </data>
+  <data name="BW" xml:space="preserve">
+    <value>Botswana</value>
+  </data>
+  <data name="BY" xml:space="preserve">
+    <value>Belarus</value>
+  </data>
+  <data name="BZ" xml:space="preserve">
+    <value>Belize</value>
+  </data>
+  <data name="CA" xml:space="preserve">
+    <value>Canada</value>
+  </data>
+  <data name="CC" xml:space="preserve">
+    <value>Cocos (Keeling) Islands</value>
+  </data>
+  <data name="CD" xml:space="preserve">
+    <value>Congo The Democratic Republic of The</value>
+  </data>
+  <data name="CF" xml:space="preserve">
+    <value>Central African Republic</value>
+  </data>
+  <data name="CG" xml:space="preserve">
+    <value>Congo</value>
+  </data>
+  <data name="CH" xml:space="preserve">
+    <value>Switzerland</value>
+  </data>
+  <data name="CI" xml:space="preserve">
+    <value>Cote D'ivoire</value>
+  </data>
+  <data name="CK" xml:space="preserve">
+    <value>Cook Islands</value>
+  </data>
+  <data name="CL" xml:space="preserve">
+    <value>Chile</value>
+  </data>
+  <data name="CM" xml:space="preserve">
+    <value>Cameroon</value>
+  </data>
+  <data name="CN" xml:space="preserve">
+    <value>China</value>
+  </data>
+  <data name="CO" xml:space="preserve">
+    <value>Colombia</value>
+  </data>
+  <data name="CR" xml:space="preserve">
+    <value>Costa Rica</value>
+  </data>
+  <data name="CU" xml:space="preserve">
+    <value>Cuba</value>
+  </data>
+  <data name="CV" xml:space="preserve">
+    <value>Cape Verde</value>
+  </data>
+  <data name="CW" xml:space="preserve">
+    <value>Curaçao</value>
+  </data>
+  <data name="CX" xml:space="preserve">
+    <value>Christmas Island</value>
+  </data>
+  <data name="CY" xml:space="preserve">
+    <value>Cyprus</value>
+  </data>
+  <data name="CZ" xml:space="preserve">
+    <value>Czech Republic</value>
+  </data>
+  <data name="DE" xml:space="preserve">
+    <value>Germany</value>
+  </data>
+  <data name="DJ" xml:space="preserve">
+    <value>Djibouti</value>
+  </data>
+  <data name="DK" xml:space="preserve">
+    <value>Denmark</value>
+  </data>
+  <data name="DM" xml:space="preserve">
+    <value>Dominica</value>
+  </data>
+  <data name="DO" xml:space="preserve">
+    <value>Dominican Republic</value>
+  </data>
+  <data name="DZ" xml:space="preserve">
+    <value>Algeria</value>
+  </data>
+  <data name="EC" xml:space="preserve">
+    <value>Ecuador</value>
+  </data>
+  <data name="EE" xml:space="preserve">
+    <value>Estonia</value>
+  </data>
+  <data name="EG" xml:space="preserve">
+    <value>Egypt</value>
+  </data>
+  <data name="EH" xml:space="preserve">
+    <value>Western Sahara</value>
+  </data>
+  <data name="ER" xml:space="preserve">
+    <value>Eritrea</value>
+  </data>
+  <data name="ES" xml:space="preserve">
+    <value>Spain</value>
+  </data>
+  <data name="ET" xml:space="preserve">
+    <value>Ethiopia</value>
+  </data>
+  <data name="EU" xml:space="preserve">
+    <value>European Union</value>
+  </data>
+  <data name="FI" xml:space="preserve">
+    <value>Finland</value>
+  </data>
+  <data name="FJ" xml:space="preserve">
+    <value>Fiji</value>
+  </data>
+  <data name="FK" xml:space="preserve">
+    <value>Falkland Islands (Malvinas)</value>
+  </data>
+  <data name="FM" xml:space="preserve">
+    <value>Micronesia Federated States of</value>
+  </data>
+  <data name="FO" xml:space="preserve">
+    <value>Faroe Islands</value>
+  </data>
+  <data name="FR" xml:space="preserve">
+    <value>France</value>
+  </data>
+  <data name="GA" xml:space="preserve">
+    <value>Gabon</value>
+  </data>
+  <data name="GB" xml:space="preserve">
+    <value>England</value>
+  </data>
+  <data name="GD" xml:space="preserve">
+    <value>Grenada</value>
+  </data>
+  <data name="GE" xml:space="preserve">
+    <value>Georgia</value>
+  </data>
+  <data name="GF" xml:space="preserve">
+    <value>French Guiana</value>
+  </data>
+  <data name="GG" xml:space="preserve">
+    <value>Guernsey</value>
+  </data>
+  <data name="GH" xml:space="preserve">
+    <value>Ghana</value>
+  </data>
+  <data name="GI" xml:space="preserve">
+    <value>Gibraltar</value>
+  </data>
+  <data name="GL" xml:space="preserve">
+    <value>Greenland</value>
+  </data>
+  <data name="GM" xml:space="preserve">
+    <value>Gambia</value>
+  </data>
+  <data name="GN" xml:space="preserve">
+    <value>Guinea</value>
+  </data>
+  <data name="GP" xml:space="preserve">
+    <value>Guadeloupe</value>
+  </data>
+  <data name="GQ" xml:space="preserve">
+    <value>Equatorial Guinea</value>
+  </data>
+  <data name="GR" xml:space="preserve">
+    <value>Greece</value>
+  </data>
+  <data name="GS" xml:space="preserve">
+    <value>South Georgia And The South Sandwich Islands</value>
+  </data>
+  <data name="GT" xml:space="preserve">
+    <value>Guatemala</value>
+  </data>
+  <data name="GU" xml:space="preserve">
+    <value>Guam</value>
+  </data>
+  <data name="GW" xml:space="preserve">
+    <value>Guinea-bissau</value>
+  </data>
+  <data name="GY" xml:space="preserve">
+    <value>Guyana</value>
+  </data>
+  <data name="HK" xml:space="preserve">
+    <value>Hong Kong</value>
+  </data>
+  <data name="HM" xml:space="preserve">
+    <value>Heard Island And Mcdonald Islands</value>
+  </data>
+  <data name="HN" xml:space="preserve">
+    <value>Honduras</value>
+  </data>
+  <data name="HR" xml:space="preserve">
+    <value>Croatia (LOCAL Name: Hrvatska)</value>
+  </data>
+  <data name="HT" xml:space="preserve">
+    <value>Haiti</value>
+  </data>
+  <data name="HU" xml:space="preserve">
+    <value>Hungary</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>Indonesia</value>
+  </data>
+  <data name="IE" xml:space="preserve">
+    <value>Ireland</value>
+  </data>
+  <data name="IL" xml:space="preserve">
+    <value>Israel</value>
+  </data>
+  <data name="IM" xml:space="preserve">
+    <value>Isle of Man</value>
+  </data>
+  <data name="IN" xml:space="preserve">
+    <value>India</value>
+  </data>
+  <data name="IO" xml:space="preserve">
+    <value>British Indian Ocean Territory</value>
+  </data>
+  <data name="IQ" xml:space="preserve">
+    <value>Iraq</value>
+  </data>
+  <data name="IR" xml:space="preserve">
+    <value>Iran (ISLAMIC Republic Of)</value>
+  </data>
+  <data name="IS" xml:space="preserve">
+    <value>Iceland</value>
+  </data>
+  <data name="IT" xml:space="preserve">
+    <value>Italy</value>
+  </data>
+  <data name="JE" xml:space="preserve">
+    <value>Jersey</value>
+  </data>
+  <data name="JM" xml:space="preserve">
+    <value>Jamaica</value>
+  </data>
+  <data name="JO" xml:space="preserve">
+    <value>Jordan</value>
+  </data>
+  <data name="JP" xml:space="preserve">
+    <value>Japan</value>
+  </data>
+  <data name="KE" xml:space="preserve">
+    <value>Kenya</value>
+  </data>
+  <data name="KG" xml:space="preserve">
+    <value>Kyrgyzstan</value>
+  </data>
+  <data name="KH" xml:space="preserve">
+    <value>Cambodia</value>
+  </data>
+  <data name="KI" xml:space="preserve">
+    <value>Kiribati</value>
+  </data>
+  <data name="KM" xml:space="preserve">
+    <value>Comoros</value>
+  </data>
+  <data name="KN" xml:space="preserve">
+    <value>Saint Kitts and Nevis</value>
+  </data>
+  <data name="KP" xml:space="preserve">
+    <value>Korea Democratic People's Republic of</value>
+  </data>
+  <data name="KR" xml:space="preserve">
+    <value>Korea Republic of</value>
+  </data>
+  <data name="KW" xml:space="preserve">
+    <value>Kuwait</value>
+  </data>
+  <data name="KY" xml:space="preserve">
+    <value>Cayman Islands</value>
+  </data>
+  <data name="KZ" xml:space="preserve">
+    <value>Kazakhstan</value>
+  </data>
+  <data name="LA" xml:space="preserve">
+    <value>Lao People's Democratic Republic</value>
+  </data>
+  <data name="LB" xml:space="preserve">
+    <value>Lebanon</value>
+  </data>
+  <data name="LC" xml:space="preserve">
+    <value>Saint Lucia</value>
+  </data>
+  <data name="LI" xml:space="preserve">
+    <value>Liechtenstein</value>
+  </data>
+  <data name="LK" xml:space="preserve">
+    <value>Sri Lanka</value>
+  </data>
+  <data name="LR" xml:space="preserve">
+    <value>Liberia</value>
+  </data>
+  <data name="LS" xml:space="preserve">
+    <value>Lesotho</value>
+  </data>
+  <data name="LT" xml:space="preserve">
+    <value>Lithuania</value>
+  </data>
+  <data name="LU" xml:space="preserve">
+    <value>Luxembourg</value>
+  </data>
+  <data name="LV" xml:space="preserve">
+    <value>Latvia</value>
+  </data>
+  <data name="LY" xml:space="preserve">
+    <value>Libyan Arab Jamahiriya</value>
+  </data>
+  <data name="MA" xml:space="preserve">
+    <value>Morocco</value>
+  </data>
+  <data name="MC" xml:space="preserve">
+    <value>Monaco</value>
+  </data>
+  <data name="MD" xml:space="preserve">
+    <value>Moldova Republic of</value>
+  </data>
+  <data name="ME" xml:space="preserve">
+    <value>Montenegro</value>
+  </data>
+  <data name="MF" xml:space="preserve">
+    <value>Saint Martin</value>
+  </data>
+  <data name="MG" xml:space="preserve">
+    <value>Madagascar</value>
+  </data>
+  <data name="MH" xml:space="preserve">
+    <value>Marshall Islands</value>
+  </data>
+  <data name="MK" xml:space="preserve">
+    <value>Macedonia</value>
+  </data>
+  <data name="ML" xml:space="preserve">
+    <value>Mali</value>
+  </data>
+  <data name="MM" xml:space="preserve">
+    <value>Myanmar</value>
+  </data>
+  <data name="MN" xml:space="preserve">
+    <value>Mongolia</value>
+  </data>
+  <data name="MO" xml:space="preserve">
+    <value>Macau</value>
+  </data>
+  <data name="MP" xml:space="preserve">
+    <value>Northern Mariana Islands</value>
+  </data>
+  <data name="MQ" xml:space="preserve">
+    <value>Martinique</value>
+  </data>
+  <data name="MR" xml:space="preserve">
+    <value>Mauritania</value>
+  </data>
+  <data name="MS" xml:space="preserve">
+    <value>Montserrat</value>
+  </data>
+  <data name="MT" xml:space="preserve">
+    <value>Malta</value>
+  </data>
+  <data name="MU" xml:space="preserve">
+    <value>Mauritius</value>
+  </data>
+  <data name="MV" xml:space="preserve">
+    <value>Maldives</value>
+  </data>
+  <data name="MW" xml:space="preserve">
+    <value>Malawi</value>
+  </data>
+  <data name="MX" xml:space="preserve">
+    <value>Mexico</value>
+  </data>
+  <data name="MY" xml:space="preserve">
+    <value>Malaysia</value>
+  </data>
+  <data name="MZ" xml:space="preserve">
+    <value>Mozambique</value>
+  </data>
+  <data name="NA" xml:space="preserve">
+    <value>Namibia</value>
+  </data>
+  <data name="NC" xml:space="preserve">
+    <value>New Caledonia</value>
+  </data>
+  <data name="NE" xml:space="preserve">
+    <value>Niger</value>
+  </data>
+  <data name="NF" xml:space="preserve">
+    <value>Norfolk Island</value>
+  </data>
+  <data name="NG" xml:space="preserve">
+    <value>Nigeria</value>
+  </data>
+  <data name="NI" xml:space="preserve">
+    <value>Nicaragua</value>
+  </data>
+  <data name="NL" xml:space="preserve">
+    <value>Netherlands</value>
+  </data>
+  <data name="NO" xml:space="preserve">
+    <value>Norway</value>
+  </data>
+  <data name="NP" xml:space="preserve">
+    <value>Nepal</value>
+  </data>
+  <data name="NR" xml:space="preserve">
+    <value>Nauru</value>
+  </data>
+  <data name="NU" xml:space="preserve">
+    <value>Niue</value>
+  </data>
+  <data name="NZ" xml:space="preserve">
+    <value>New Zealand</value>
+  </data>
+  <data name="OM" xml:space="preserve">
+    <value>Oman</value>
+  </data>
+  <data name="Others" xml:space="preserve">
+    <value>Others</value>
+  </data>
+  <data name="PA" xml:space="preserve">
+    <value>Panama</value>
+  </data>
+  <data name="PE" xml:space="preserve">
+    <value>Peru</value>
+  </data>
+  <data name="PF" xml:space="preserve">
+    <value>French Polynesia</value>
+  </data>
+  <data name="PG" xml:space="preserve">
+    <value>Papua New Guinea</value>
+  </data>
+  <data name="PH" xml:space="preserve">
+    <value>Philippines</value>
+  </data>
+  <data name="PK" xml:space="preserve">
+    <value>Pakistan</value>
+  </data>
+  <data name="PL" xml:space="preserve">
+    <value>Poland</value>
+  </data>
+  <data name="PM" xml:space="preserve">
+    <value>St. Pierre and Miquelon</value>
+  </data>
+  <data name="PN" xml:space="preserve">
+    <value>Pitcairn</value>
+  </data>
+  <data name="PR" xml:space="preserve">
+    <value>Puerto Rico</value>
+  </data>
+  <data name="PS" xml:space="preserve">
+    <value>Palestinian Territory Occupied</value>
+  </data>
+  <data name="PT" xml:space="preserve">
+    <value>Portugal</value>
+  </data>
+  <data name="PW" xml:space="preserve">
+    <value>Palau</value>
+  </data>
+  <data name="PY" xml:space="preserve">
+    <value>Paraguay</value>
+  </data>
+  <data name="QA" xml:space="preserve">
+    <value>Qatar</value>
+  </data>
+  <data name="RE" xml:space="preserve">
+    <value>Reunion</value>
+  </data>
+  <data name="RO" xml:space="preserve">
+    <value>Romania</value>
+  </data>
+  <data name="RS" xml:space="preserve">
+    <value>Serbia</value>
+  </data>
+  <data name="RU" xml:space="preserve">
+    <value>Russian Federation</value>
+  </data>
+  <data name="RW" xml:space="preserve">
+    <value>Rwanda</value>
+  </data>
+  <data name="SA" xml:space="preserve">
+    <value>Saudi Arabia</value>
+  </data>
+  <data name="SB" xml:space="preserve">
+    <value>Solomon Islands</value>
+  </data>
+  <data name="SC" xml:space="preserve">
+    <value>Seychelles</value>
+  </data>
+  <data name="SD" xml:space="preserve">
+    <value>Sudan</value>
+  </data>
+  <data name="SE" xml:space="preserve">
+    <value>Sweden</value>
+  </data>
+  <data name="SG" xml:space="preserve">
+    <value>Singapore</value>
+  </data>
+  <data name="SH" xml:space="preserve">
+    <value>Saint Helena, Ascension And Tristan Da Cunha</value>
+  </data>
+  <data name="SI" xml:space="preserve">
+    <value>Slovenia</value>
+  </data>
+  <data name="SJ" xml:space="preserve">
+    <value>Svalbard And Jan Mayen</value>
+  </data>
+  <data name="SK" xml:space="preserve">
+    <value>Slovakia (SLOVAK Republic)</value>
+  </data>
+  <data name="SL" xml:space="preserve">
+    <value>Sierra Leone</value>
+  </data>
+  <data name="SM" xml:space="preserve">
+    <value>San Marino</value>
+  </data>
+  <data name="SN" xml:space="preserve">
+    <value>Senegal</value>
+  </data>
+  <data name="SO" xml:space="preserve">
+    <value>Somalia</value>
+  </data>
+  <data name="SR" xml:space="preserve">
+    <value>Suriname</value>
+  </data>
+  <data name="SS" xml:space="preserve">
+    <value>South Sudan</value>
+  </data>
+  <data name="ST" xml:space="preserve">
+    <value>Sao Tome and Principe</value>
+  </data>
+  <data name="SV" xml:space="preserve">
+    <value>El Salvador</value>
+  </data>
+  <data name="SX" xml:space="preserve">
+    <value>Sint Maarten</value>
+  </data>
+  <data name="SY" xml:space="preserve">
+    <value>Syrian Arab Republic</value>
+  </data>
+  <data name="SZ" xml:space="preserve">
+    <value>Swaziland</value>
+  </data>
+  <data name="TC" xml:space="preserve">
+    <value>Turks and Caicos Islands</value>
+  </data>
+  <data name="TD" xml:space="preserve">
+    <value>Chad</value>
+  </data>
+  <data name="TF" xml:space="preserve">
+    <value>French Southern Territories</value>
+  </data>
+  <data name="TG" xml:space="preserve">
+    <value>Togo</value>
+  </data>
+  <data name="TH" xml:space="preserve">
+    <value>Thailand</value>
+  </data>
+  <data name="TJ" xml:space="preserve">
+    <value>Tajikistan</value>
+  </data>
+  <data name="TK" xml:space="preserve">
+    <value>Tokelau</value>
+  </data>
+  <data name="TL" xml:space="preserve">
+    <value>Timor-leste</value>
+  </data>
+  <data name="TM" xml:space="preserve">
+    <value>Turkmenistan</value>
+  </data>
+  <data name="TN" xml:space="preserve">
+    <value>Tunisia</value>
+  </data>
+  <data name="TO" xml:space="preserve">
+    <value>Tonga</value>
+  </data>
+  <data name="TR" xml:space="preserve">
+    <value>Turkey</value>
+  </data>
+  <data name="TT" xml:space="preserve">
+    <value>Trinidad and Tobago</value>
+  </data>
+  <data name="TV" xml:space="preserve">
+    <value>Tuvalu</value>
+  </data>
+  <data name="TW" xml:space="preserve">
+    <value>Taiwan; Republic of China (ROC)</value>
+  </data>
+  <data name="TZ" xml:space="preserve">
+    <value>Tanzania United Republic of</value>
+  </data>
+  <data name="UA" xml:space="preserve">
+    <value>Ukraine</value>
+  </data>
+  <data name="UG" xml:space="preserve">
+    <value>Uganda</value>
+  </data>
+  <data name="UK" xml:space="preserve">
+    <value>United Kingdom</value>
+  </data>
+  <data name="UM" xml:space="preserve">
+    <value>United States Minor Outlying Islands</value>
+  </data>
+  <data name="US" xml:space="preserve">
+    <value>United States</value>
+  </data>
+  <data name="UY" xml:space="preserve">
+    <value>Uruguay</value>
+  </data>
+  <data name="UZ" xml:space="preserve">
+    <value>Uzbekistan</value>
+  </data>
+  <data name="VA" xml:space="preserve">
+    <value>Holy See (VATICAN City State)</value>
+  </data>
+  <data name="VC" xml:space="preserve">
+    <value>Saint Vincent and The Grenadines</value>
+  </data>
+  <data name="VE" xml:space="preserve">
+    <value>Venezuela</value>
+  </data>
+  <data name="VG" xml:space="preserve">
+    <value>Virgin Islands (BRITISH)</value>
+  </data>
+  <data name="VI" xml:space="preserve">
+    <value>Virgin Islands (U.S.)</value>
+  </data>
+  <data name="VN" xml:space="preserve">
+    <value>Viet Nam</value>
+  </data>
+  <data name="VU" xml:space="preserve">
+    <value>Vanuatu</value>
+  </data>
+  <data name="WF" xml:space="preserve">
+    <value>Wallis and Futuna Islands</value>
+  </data>
+  <data name="WS" xml:space="preserve">
+    <value>Samoa</value>
+  </data>
+  <data name="XK" xml:space="preserve">
+    <value>Kosovo</value>
+  </data>
+  <data name="YE" xml:space="preserve">
+    <value>Yemen</value>
+  </data>
+  <data name="YT" xml:space="preserve">
+    <value>Mayotte</value>
+  </data>
+  <data name="ZA" xml:space="preserve">
+    <value>South Africa</value>
+  </data>
+  <data name="ZM" xml:space="preserve">
+    <value>Zambia</value>
+  </data>
+  <data name="ZW" xml:space="preserve">
+    <value>Zimbabwe</value>
+  </data>
+  <data name="ZZ" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="ToDate" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="AF" xml:space="preserve">
+    <value>Afghanistan</value>
+  </data>
+  <data name="HandHistoryDetails" xml:space="preserve">
+    <value>Hand History Details</value>
+  </data>
+  <data name="Results" xml:space="preserve">
+    <value>Results</value>
+  </data>
+  <data name="MonthlyEarning" xml:space="preserve">
+    <value>Monthly Earning</value>
+  </data>
+  <data name="CurrentMonthStatistics" xml:space="preserve">
+    <value>Current Month Statistics</value>
+  </data>
+  <data name="BetListTitle" xml:space="preserve">
+    <value>Bet List {0} - {1} - View in {2}</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="VirtualCycling" xml:space="preserve">
+    <value>Virtual Cycling</value>
+  </data>
+  <data name="VirtualGreyhounds" xml:space="preserve">
+    <value>Virtual Greyhounds</value>
+  </data>
+  <data name="VirtualHorseRacing" xml:space="preserve">
+    <value>Virtual Horse Racing</value>
+  </data>
+  <data name="VirtualMotorsports" xml:space="preserve">
+    <value>Virtual Motorsports</value>
+  </data>
+  <data name="VirtualSoccer" xml:space="preserve">
+    <value>Virtual Soccer</value>
+  </data>
+  <data name="VirtualSpeedway" xml:space="preserve">
+    <value>Virtual Speedway</value>
+  </data>
+  <data name="VirtualTennis" xml:space="preserve">
+    <value>Virtual Tennis</value>
+  </data>
+=======
+	<data name="CurrentMonthStatistics" xml:space="preserve">
+		<value>Current Month Statistics</value>
+	</data>
+	<data name="MonthlyEarning" xml:space="preserve">
+		<value>Monthly Earning</value>
+	</data>
+>>>>>>> #34490 - Update dll Fanex.BetList
+</root>
