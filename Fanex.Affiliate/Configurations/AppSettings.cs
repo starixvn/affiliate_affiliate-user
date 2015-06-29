@@ -37,9 +37,7 @@ namespace Fanex.Affiliate.Configurations
 
         private static readonly ICache CacheInstance = CacheService.CreateInstance(CacheType.MemoryCache);
 
-        #region Constructor
 
-        #endregion
 
         #region AppSettings
 
@@ -64,6 +62,14 @@ namespace Fanex.Affiliate.Configurations
             get
             {
                 return GetValue("Theme");
+            }
+        }
+
+        public static string AffiliateName
+        {
+            get
+            {
+                return GetValue("AffiliateName");
             }
         }
 
@@ -113,7 +119,7 @@ namespace Fanex.Affiliate.Configurations
             {
                 return GetValue("ITMail");
             }
-        }    
+        }
 
         public static string MailContact
         {
@@ -275,7 +281,7 @@ namespace Fanex.Affiliate.Configurations
             }
         }
 
-        #endregion
+        #endregion AppSettings
 
         #region AffiliateSettings
 
@@ -309,7 +315,7 @@ namespace Fanex.Affiliate.Configurations
             {
                 return AffiliateSettings.MulitpliedBy;
             }
-        }  
+        }
 
         public static string AffiliateSupportedLanguages
         {
@@ -462,7 +468,7 @@ namespace Fanex.Affiliate.Configurations
             }
         }
 
-        #endregion
+        #endregion AffiliateSettings
 
         private static AffiliateSettings AffiliateSettings
         {
@@ -485,13 +491,14 @@ namespace Fanex.Affiliate.Configurations
                 catch (Exception exception)
                 {
                     LogService.Error("Error when call LoadAffiliateSettings" + exception.Message, exception);
-                    
+
                     throw;
                 }
             }
         }
 
         #region Private Methods
+
         /// <summary>
         /// Get key value.
         /// </summary>
@@ -594,13 +601,13 @@ namespace Fanex.Affiliate.Configurations
             affiliateSettings.AffiliateBaseCurrencyList = GetCommonAffiliateSettingString(commonSetting, "AffiliateCurrencies");
             affiliateSettings.MinimumWithdrawalAmount = GetCommonAffiliateSettingString(commonSetting, "AFF_MinPlayer" + GetValue("DefaultCurrency"));
             affiliateSettings.CompanyNegativeNetWin = GetCommonAffiliateSettingString(commonSetting, "AFF_MinimumNegativeCommission");
-            
+
             // get system languages
             GetSystemLanguages(affiliateSettings, allSystemSettings);
 
             // get system currencies
             GetSystemCurrencies(affiliateSettings, allSystemSettings);
-            
+
             // multiplied by values
             affiliateSettings.AffiliateCurrencyListMultipliedBy = allSystemSettings.Tables[8].Rows.Count > 0
                 ? allSystemSettings.Tables[8].Rows[0]["CurrencyMultipliedBy"].ToString()
@@ -629,8 +636,8 @@ namespace Fanex.Affiliate.Configurations
             affiliateSettings.BaseLanguage = allSystemSettings.Tables[2].AsEnumerable().Select(
                                              row => new Language
                                              {
-                                                LanguageId = row["LanguageID"].ToString(),
-                                                LanguageName = row["LanguageName"].ToString()
+                                                 LanguageId = row["LanguageID"].ToString(),
+                                                 LanguageName = row["LanguageName"].ToString()
                                              });
         }
 
@@ -683,6 +690,6 @@ namespace Fanex.Affiliate.Configurations
                                                });
         }
 
-        #endregion
+        #endregion Private Methods
     }
 }
