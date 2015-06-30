@@ -36,9 +36,7 @@ namespace Fanex.Affiliate.Configurations
         private static readonly ISystemSettingService SystemSetting = new SystemSettingService();
 
         private static readonly ICache CacheInstance = CacheService.CreateInstance(CacheType.MemoryCache);
-
-
-
+        
         #region AppSettings
 
         public static string Environment
