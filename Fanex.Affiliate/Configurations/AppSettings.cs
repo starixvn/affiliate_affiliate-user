@@ -61,15 +61,7 @@ namespace Fanex.Affiliate.Configurations
             {
                 return GetValue("Theme");
             }
-        }
-
-        public static string AffiliateName
-        {
-            get
-            {
-                return GetValue("AffiliateName");
-            }
-        }
+        }       
 
         public static int PageSize
         {

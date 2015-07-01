@@ -10,6 +10,11 @@
     {
         productList = string.Join(", ", Model.ProductList.Select(t => t.ProductName));
     }
+
+    if (Fanex.Affiliate.Configurations.AppSettings.Environment == "Production")
+    {
+        Html.RenderPartial("~/Views/Piwik/" + Fanex.Affiliate.Configurations.AppSettings.AffiliateName.ToLower() + ".cshtml");
+    }
 }
 
 @{
