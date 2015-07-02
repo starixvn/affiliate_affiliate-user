@@ -47,6 +47,14 @@ namespace Fanex.Affiliate.Configurations
             }
         }
 
+        public static string PiwikSiteId
+        {
+            get
+            {
+                return GetValue("PiwikSiteId");
+            }
+        }
+
         public static string Layout
         {
             get
