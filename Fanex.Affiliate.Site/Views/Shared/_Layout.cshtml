@@ -23,20 +23,24 @@
 
         var piwikSiteId = '@AppSettings.PiwikSiteId';
 
+        var environment = '@AppSettings.Environment';
+
          AFFILIATE.getAbsoluteUrl = function (relativeUrl) {
              return '@Url.Content("~/")' + relativeUrl;
          };
 
-        var _paq = _paq || [];
-        _paq.push(['trackPageView']);
-        _paq.push(['enableLinkTracking']);
-        (function () {
-            var u = "https://pw.detecas.com/";
-            _paq.push(['setTrackerUrl', u + 'piwik.php']);
-            _paq.push(['setSiteId', piwikSiteId]);
-            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-            g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'piwik.js'; s.parentNode.insertBefore(g, s);
-        })();
+        if (environment == 'Production') {
+            var _paq = _paq || [];
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function () {
+                var u = "https://pw.detecas.com/";
+                _paq.push(['setTrackerUrl', u + 'piwik.php']);
+                _paq.push(['setSiteId', piwikSiteId]);            
+                var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+                g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'piwik.js'; s.parentNode.insertBefore(g, s);
+            })();
+        }
 
     </script>
     @RenderSection("scripts", required: false) 
