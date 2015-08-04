@@ -4597,7 +4597,9 @@
     <Content Include="Configurations\WebConfigs\Web.allbetclubs.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.aoncash.local.config" />
     <Content Include="Configurations\WebConfigs\Web.aoncash.master.config" />
-    <Content Include="Configurations\WebConfigs\Web.aoncash.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.aoncash.production.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Configurations\WebConfigs\Web.aoncash.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.athena000.local.config" />
     <Content Include="Configurations\WebConfigs\Web.athena000.master.config" />
@@ -4673,10 +4675,6 @@
     <Content Include="Configurations\WebConfigs\Web.yhy1980.master.config" />
     <Content Include="Configurations\WebConfigs\Web.yhy1980.production.config" />
     <Content Include="Configurations\WebConfigs\Web.yhy1980.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.28bet.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.28bet.master.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.28bet.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.28bet.uat.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.allbetclubs.local.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.allbetclubs.master.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.allbetclubs.production.config">
