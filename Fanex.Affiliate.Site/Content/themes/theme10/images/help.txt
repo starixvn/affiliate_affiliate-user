@@ -1,5 +1,0 @@
-Button: bg_buttonsite.png
-Background site: bg_center.jpg
-Background Hot News: bghotNewsContent.png
-Background Under Maintenance: bgheader.png
-Background Header: header_gradient.png
