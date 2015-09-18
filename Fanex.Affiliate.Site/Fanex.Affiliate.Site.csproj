@@ -412,6 +412,31 @@
     <Content Include="Content\themes\theme28\images\ui-icons_454545_256x240.png" />
     <Content Include="Content\themes\theme28\images\undo.png" />
     <Content Include="Content\themes\theme28\images\up.png" />
+    <Content Include="Content\themes\theme29\images\banner.en-US.jpg" />
+    <Content Include="Content\themes\theme29\images\banner.zh-CN.jpg" />
+    <Content Include="Content\themes\theme29\images\banner.traditional-CN.jpg" />
+    <Content Include="Content\themes\theme29\images\banner_top.png" />
+    <Content Include="Content\themes\theme29\images\bg-contentLanguage.png" />
+    <Content Include="Content\themes\theme29\images\bgheader.png" />
+    <Content Include="Content\themes\theme29\images\bghotNewsContent.png" />
+    <Content Include="Content\themes\theme29\images\bgLanguage-Content.png" />
+    <Content Include="Content\themes\theme29\images\bgLanguage_Content.png" />
+    <Content Include="Content\themes\theme29\images\bgMainMenu.png" />
+    <Content Include="Content\themes\theme29\images\bgTableHeader.png" />
+    <Content Include="Content\themes\theme29\images\bg_buttonsite.png" />
+    <Content Include="Content\themes\theme29\images\bg_footer.jpg" />
+    <Content Include="Content\themes\theme29\images\deco.jpg" />
+    <Content Include="Content\themes\theme29\images\emailBanner.jpg" />
+    <Content Include="Content\themes\theme29\images\error_icons.png" />
+    <Content Include="Content\themes\theme29\images\favicons.ico" />
+    <Content Include="Content\themes\theme29\images\glyphicons-halflings-gray.png" />
+    <Content Include="Content\themes\theme29\images\glyphicons-halflings.png" />
+    <Content Include="Content\themes\theme29\images\in_top.png" />
+    <Content Include="Content\themes\theme29\images\loader.gif" />
+    <Content Include="Content\themes\theme29\images\logo-afterlogin.png" />
+    <Content Include="Content\themes\theme29\images\signup.png" />
+    <Content Include="Content\themes\theme29\images\sprite.png" />
+    <Content Include="Content\themes\theme29\images\ui-icons_454545_256x240.png" />
     <Content Include="Content\tipsy\custom-tipsy.css" />
     <Content Include="Content\tipsy\tipsy.css" />
     <Content Include="Form\GenHistoryImg.aspx.cs">
@@ -4235,6 +4260,9 @@
     <Content Include="Content\themes\theme28\mixins.less" />
     <Content Include="Content\themes\theme28\variables.less" />
     <None Include="Content\bootstrap\js\.jshintrc" />
+    <None Include="Content\themes\theme29\index.less" />
+    <None Include="Content\themes\theme29\mixins.less" />
+    <None Include="Content\themes\theme29\variables.less" />
     <None Include="Deployment.ignore" />
     <None Include="img\Slot\H0005\Thumbs.db" />
     <None Include="img\Slot\H0006\Thumbs.db" />
@@ -4617,7 +4645,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
+      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
