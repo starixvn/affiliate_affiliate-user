@@ -11,6 +11,7 @@ namespace Fanex.Affiliate.Controllers
 {
     using System.Web.Mvc;
     using Configurations;
+    using Fanex.Affiliate.Web.Filter;
     using Services;
 
     /// <summary>
@@ -23,6 +24,7 @@ namespace Fanex.Affiliate.Controllers
         /// </summary>
         /// <returns>Return view.</returns>
         [HttpGet]
+        [Undermaintenance(false)]
         public ActionResult Index()
         {
             string startTime;
@@ -49,6 +51,7 @@ namespace Fanex.Affiliate.Controllers
         /// </summary>
         /// <returns>Return view.</returns>
         [HttpGet]
+        [Undermaintenance(false)]
         public ActionResult Error()
         {
             return View();
