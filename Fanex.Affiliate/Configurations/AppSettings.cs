@@ -327,7 +327,7 @@ namespace Fanex.Affiliate.Configurations
         {
             get
             {
-                return AffiliateSettings.SystemName;
+                return GetValue("AffiliateName");
             }
         }
 
@@ -479,9 +479,7 @@ namespace Fanex.Affiliate.Configurations
 
                 try
                 {
-                    var affiliateSettings = new AffiliateSettings();
-
-                    affiliateSettings = LoadAffiliateSettings();
+                    var affiliateSettings = LoadAffiliateSettings();
                     CacheInstance.Set(AffiliateSettingsCacheKey, affiliateSettings, CacheDuration);
 
                     return affiliateSettings;
