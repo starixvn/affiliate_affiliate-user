@@ -147,10 +147,10 @@
     <Content Include="Configurations\SPNames\SpNames.nbcbet.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.nbcbet.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.nbcbet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.28bet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.28bet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.28bet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.28bet.uat.xml" />
+    <Content Include="Configurations\SPNames\SpNames.9bet.local.xml" />
+    <Content Include="Configurations\SPNames\SpNames.9bet.production.xml" />
+    <Content Include="Configurations\SPNames\SpNames.9bet.sandbox.xml" />
+    <Content Include="Configurations\SPNames\SpNames.9bet.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.allbetclubs.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.allbetclubs.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.allbetclubs.sandbox.xml" />
