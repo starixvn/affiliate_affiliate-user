@@ -352,10 +352,10 @@
     <Content Include="Views\Home\PageNotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.28bet.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.28bet.master.config" />
-    <Content Include="Configurations\WebConfigs\Web.28bet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.28bet.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.9bet.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.9bet.master.config" />
+    <Content Include="Configurations\WebConfigs\Web.9bet.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.9bet.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.allbetclubs.local.config" />
     <Content Include="Configurations\WebConfigs\Web.allbetclubs.master.config" />
     <Content Include="Configurations\WebConfigs\Web.allbetclubs.production.config" />
@@ -438,10 +438,10 @@
     <Content Include="Configurations\WebConfigs\Web.yhy1980.uat.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.28bet.local.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.28bet.master.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.28bet.production.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.28bet.uat.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.9bet.local.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.9bet.master.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.9bet.production.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.9bet.uat.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.allbetclubs.local.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.allbetclubs.master.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.allbetclubs.production.config" />
@@ -524,10 +524,10 @@
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.yhy1980.uat.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configurations\AppSettings\Web.AppSetting.28bet.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.28bet.master.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.28bet.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.28bet.uat.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.uat.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.allbetclubs.local.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.allbetclubs.master.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.allbetclubs.production.config" />
@@ -648,7 +648,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2014/3/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
+      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/3/28" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
