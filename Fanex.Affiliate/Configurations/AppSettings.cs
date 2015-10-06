@@ -140,7 +140,7 @@ namespace Fanex.Affiliate.Configurations
         {
             get
             {
-                return GetValue("Environment") != "Production";
+                return GetValue("Environment").Equals("Production", StringComparison.OrdinalIgnoreCase) == false;
             }
         }
 

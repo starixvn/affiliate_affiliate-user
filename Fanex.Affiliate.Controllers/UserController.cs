@@ -268,7 +268,7 @@ namespace Fanex.Affiliate.Controllers
             }
             else if (ModelState.IsValid)
             {
-                if (!IsValidCaptcha(captcha, false))
+                if (AppSettings.IsTesting == false && !IsValidCaptcha(captcha, false))
                 {
                     return Json(new ResultViewModel
                         {
