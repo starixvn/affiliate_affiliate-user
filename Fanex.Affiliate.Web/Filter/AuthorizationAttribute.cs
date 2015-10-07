@@ -11,6 +11,7 @@ namespace Fanex.Affiliate.Web.Filter
 {
     using System;
     using System.Net;
+    using System.Web;
     using System.Web.Mvc;
     using System.Web.Security;
     using Logging;
@@ -30,7 +31,8 @@ namespace Fanex.Affiliate.Web.Filter
             base.OnAuthorization(filterContext);
             try
             {
-                if (SessionManager.CurrentSession == null)
+                if (filterContext.HttpContext.User.Identity.IsAuthenticated == false ||
+                    SessionManager.CurrentSession == null)
                 {
                     DoUnAuthorized(filterContext);
                 }
@@ -59,6 +61,7 @@ namespace Fanex.Affiliate.Web.Filter
             }
             else
             {
+                SessionManager.ClearAll();
                 FormsAuthentication.SignOut();
                 FormsAuthentication.RedirectToLoginPage();
             }
