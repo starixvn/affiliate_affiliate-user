@@ -83,7 +83,8 @@ namespace Fanex.Affiliate.Site
         protected void Application_Error(object sender, EventArgs e)
         {
             var exception = Server.GetLastError();
-            if (exception is HttpException)
+            var httpException = exception as HttpException;
+            if (httpException != null && httpException.GetHttpCode() == 404)
             {
                 return;
             }

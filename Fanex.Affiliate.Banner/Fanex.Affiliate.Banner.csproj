@@ -125,14 +125,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\SpNames.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.9bet.local.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.9bet.production.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.9bet.sandbox.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.9bet.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.nbcbet.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.nbcbet.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.nbcbet.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.nbcbet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.28bet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.28bet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.28bet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.28bet.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.allbetclubs.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.allbetclubs.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.allbetclubs.sandbox.xml" />
@@ -149,42 +149,14 @@
     <Content Include="Configurations\SPNames\SpNames.banner.be7.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.be7.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.be7.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.bwinning.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.bwinning.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.bwinning.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.bwinning.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.goobet.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.goobet.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.goobet.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.goobet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.hbobet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.hbobet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.hbobet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.hbobet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.i668bet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.i668bet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.i668bet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.i668bet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.idlivebet365.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.idlivebet365.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.idlivebet365.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.idlivebet365.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.idlivebet365kiosk.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.idlivebet365kiosk.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.idlivebet365kiosk.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.idlivebet365kiosk.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.itcbet.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.itcbet.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.itcbet.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.itcbet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.livebet365.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.livebet365.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.livebet365.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.livebet365.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.livebet365kiosk.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.livebet365kiosk.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.livebet365kiosk.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.livebet365kiosk.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.m8bola.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.m8bola.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.m8bola.sandbox.xml" />
@@ -193,40 +165,10 @@
     <Content Include="Configurations\SPNames\SpNames.banner.macaubet.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.macaubet.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.macaubet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.mgm88.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.mgm88.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.mgm88.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.mgm88.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.mymbet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.mymbet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.mymbet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.mymbet.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.q8bola.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.q8bola.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.q8bola.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.q8bola.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.royalebet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.royalebet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.royalebet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.royalebet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.thbet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.thbet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.thbet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.thbet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.wawabet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.wawabet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.wawabet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.wawabet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.winner99.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.winner99.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.winner99.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.winner99.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.yhy1980.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.yhy1980.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.yhy1980.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.yhy1980.uat.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Configurations\SPNames\SpNames.banner.unobet.local.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -369,10 +311,6 @@
     <Content Include="Views\MarketingTools\PageNotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.banner.28bet.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.28bet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.28bet.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.28bet.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.allbetclubs.local.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.allbetclubs.production.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.allbetclubs.sandbox.config" />
@@ -389,10 +327,6 @@
     <Content Include="Configurations\WebConfigs\Web.banner.be7.production.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.be7.sandbox.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.be7.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.bwinning.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.bwinning.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.bwinning.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.bwinning.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.goobet.local.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.goobet.production.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.goobet.sandbox.config" />
@@ -401,30 +335,10 @@
     <Content Include="Configurations\WebConfigs\Web.banner.hbobet.production.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.hbobet.sandbox.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.hbobet.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.i668bet.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.i668bet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.i668bet.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.i668bet.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.idlivebet365.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.idlivebet365.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.idlivebet365.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.idlivebet365.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.idlivebet365kiosk.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.idlivebet365kiosk.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.idlivebet365kiosk.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.idlivebet365kiosk.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.itcbet.local.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.itcbet.production.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.itcbet.sandbox.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.itcbet.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.livebet365.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.livebet365.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.livebet365.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.livebet365.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.livebet365kiosk.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.livebet365kiosk.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.livebet365kiosk.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.livebet365kiosk.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.m8bola.local.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.m8bola.production.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.m8bola.sandbox.config" />
@@ -433,34 +347,10 @@
     <Content Include="Configurations\WebConfigs\Web.banner.macaubet.production.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.macaubet.sandbox.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.macaubet.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.mgm88.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.mgm88.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.mgm88.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.mgm88.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.mymbet.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.mymbet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.mymbet.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.mymbet.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.q8bola.local.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.q8bola.production.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.q8bola.sandbox.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.q8bola.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.royalebet.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.royalebet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.royalebet.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.royalebet.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.thbet.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.thbet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.thbet.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.thbet.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.wawabet.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.wawabet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.wawabet.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.wawabet.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.winner99.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.winner99.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.winner99.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.winner99.uat.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Configurations\WebConfigs\Web.banner.nbcbet.local.config" />
@@ -475,16 +365,22 @@
     <Content Include="Configurations\WebConfigs\Web.banner.nbcbet.sandbox.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.banner.yhy1980.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.yhy1980.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.yhy1980.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.yhy1980.uat.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Configurations\WebConfigs\Web.banner.unobet.local.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.unobet.master.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.unobet.production.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.unobet.uat.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configurations\WebConfigs\Web.banner.9bet.local.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configurations\WebConfigs\Web.banner.9bet.uat.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configurations\WebConfigs\Web.banner.9bet.production.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configurations\WebConfigs\Web.banner.9bet.sandbox.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

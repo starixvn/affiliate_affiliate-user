@@ -9,7 +9,6 @@
 
 namespace Fanex.Affiliate.Web.Filter
 {
-    using System;
     using System.Web.Mvc;
     using System.Web.Routing;
     using Services;
@@ -19,12 +18,25 @@ namespace Fanex.Affiliate.Web.Filter
     /// </summary>
     public sealed class UndermaintenanceAttribute : ActionFilterAttribute
     {
+        private bool _isEnabled;
+
+        public UndermaintenanceAttribute(bool isEnabled = true)
+        {
+            _isEnabled = isEnabled;
+        }
+
         /// <summary>
         /// Action filter for under maintenance service.
         /// </summary>
         /// <param name="filterContext">Action Executing Context.</param>
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
+            if (_isEnabled == false)
+            {
+                base.OnActionExecuting(filterContext);
+                return;
+            }
+
             string startTime;
             string endTime;
 
@@ -32,19 +44,14 @@ namespace Fanex.Affiliate.Web.Filter
             {
                 var controllerName = filterContext.Controller.GetType().Name;
                 var actionName = filterContext.ActionDescriptor.ActionName;
-                var isUM = controllerName.Equals("NotifyController", StringComparison.CurrentCultureIgnoreCase)
-                                     && actionName.Equals("Index", StringComparison.CurrentCultureIgnoreCase);
 
-                if (!isUM)
-                {
-                    var routeDictionary = new RouteValueDictionary(
-                        new
-                        {
-                            controller = "Notify",
-                            action = "Index"
-                        });
-                    filterContext.Result = new RedirectToRouteResult(routeDictionary);
-                }
+                var routeDictionary = new RouteValueDictionary(
+                    new
+                    {
+                        controller = "Notify",
+                        action = "Index"
+                    });
+                filterContext.Result = new RedirectToRouteResult(routeDictionary);
             }
 
             base.OnActionExecuting(filterContext);

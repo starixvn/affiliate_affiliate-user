@@ -33,7 +33,8 @@ namespace Fanex.Affiliate.Configurations
 
         private const int CacheDuration = 60;
 
-        private static readonly ISystemSettingService SystemSetting = new SystemSettingService();
+        private static readonly Lazy<ISystemSettingService> SystemSetting = new 
+            Lazy<ISystemSettingService>(() => new SystemSettingService());
 
         private static readonly ICache CacheInstance = CacheService.CreateInstance(CacheType.MemoryCache);
         
@@ -139,7 +140,7 @@ namespace Fanex.Affiliate.Configurations
         {
             get
             {
-                return GetValue("Environment") != "Production";
+                return GetValue("Environment").Equals("Production", StringComparison.OrdinalIgnoreCase) == false;
             }
         }
 
@@ -327,7 +328,7 @@ namespace Fanex.Affiliate.Configurations
         {
             get
             {
-                return AffiliateSettings.SystemName;
+                return GetValue("AffiliateName");
             }
         }
 
@@ -479,9 +480,7 @@ namespace Fanex.Affiliate.Configurations
 
                 try
                 {
-                    var affiliateSettings = new AffiliateSettings();
-
-                    affiliateSettings = LoadAffiliateSettings();
+                    var affiliateSettings = LoadAffiliateSettings();
                     CacheInstance.Set(AffiliateSettingsCacheKey, affiliateSettings, CacheDuration);
 
                     return affiliateSettings;
@@ -571,7 +570,7 @@ namespace Fanex.Affiliate.Configurations
         {
             var affiliateSettings = new AffiliateSettings();
 
-            var allSystemSettings = SystemSetting.GetAllSystemSettings(new SystemSettingsCriteria
+            var allSystemSettings = SystemSetting.Value.GetAllSystemSettings(new SystemSettingsCriteria
             {
                 Environment = GetValue("Environment")
             });

@@ -234,6 +234,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Content Include="Configurations\SPNames\SpName.9bet.master.xml" />
+    <Content Include="Configurations\SPNames\SpName.9bet.production.xml" />
+    <Content Include="Configurations\SPNames\SpName.9bet.uat.xml" />
     <Content Include="Configurations\SPNames\SpName.allbetclubs.master.xml" />
     <Content Include="Configurations\SPNames\SpName.allbetclubs.production.xml" />
     <Content Include="Configurations\SPNames\SpName.allbetclubs.uat.xml" />
@@ -269,9 +272,6 @@
     <Content Include="Configurations\SPNames\SpName.unobet.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpName.unobet.uat.xml" />
     <Content Include="Configurations\SPNames\SpName.xml" />
-    <Content Include="Configurations\SPNames\SpName.yhy1980.master.xml" />
-    <Content Include="Configurations\SPNames\SpName.yhy1980.production.xml" />
-    <Content Include="Configurations\SPNames\SpName.yhy1980.uat.xml" />
     <Content Include="Content\betlist\custom-betlist.css" />
     <Content Include="Content\bootstrap\img\glyphicons-halflings-white.png" />
     <Content Include="Content\bootstrap\img\glyphicons-halflings.png" />
@@ -412,6 +412,35 @@
     <Content Include="Content\themes\theme28\images\ui-icons_454545_256x240.png" />
     <Content Include="Content\themes\theme28\images\undo.png" />
     <Content Include="Content\themes\theme28\images\up.png" />
+    <Content Include="Content\themes\theme29\images\banner.en-US.jpg" />
+    <Content Include="Content\themes\theme29\images\banner.id-ID.jpg" />
+    <Content Include="Content\themes\theme29\images\banner.zh-CN.jpg" />
+    <Content Include="Content\themes\theme29\images\banner.zh-TW.jpg" />
+    <Content Include="Content\themes\theme29\images\banner_top.png" />
+    <Content Include="Content\themes\theme29\images\bg-contentLanguage.png" />
+    <Content Include="Content\themes\theme29\images\bgheader.png" />
+    <Content Include="Content\themes\theme29\images\bghotNewsContent.png" />
+    <Content Include="Content\themes\theme29\images\bgLanguage.png" />
+    <Content Include="Content\themes\theme29\images\bgLanguage_Content.png" />
+    <Content Include="Content\themes\theme29\images\bgMainMenu.png" />
+    <Content Include="Content\themes\theme29\images\bgTableHeader.png" />
+    <Content Include="Content\themes\theme29\images\bg_buttonsite.png" />
+    <Content Include="Content\themes\theme29\images\bg_footer.jpg" />
+    <Content Include="Content\themes\theme29\images\deco.jpg" />
+    <Content Include="Content\themes\theme29\images\emailBanner.jpg" />
+    <Content Include="Content\themes\theme29\images\emailBg.jpg" />
+    <Content Include="Content\themes\theme29\images\error_icons.png" />
+    <Content Include="Content\themes\theme29\images\favicon.jpg" />
+    <Content Include="Content\themes\theme29\images\glyphicons-halflings-gray-lighter.png" />
+    <Content Include="Content\themes\theme29\images\glyphicons-halflings-gray.png" />
+    <Content Include="Content\themes\theme29\images\glyphicons-halflings.png" />
+    <Content Include="Content\themes\theme29\images\headerbg_notify.png" />
+    <Content Include="Content\themes\theme29\images\in_top.png" />
+    <Content Include="Content\themes\theme29\images\loader.gif" />
+    <Content Include="Content\themes\theme29\images\logo-afterlogin.png" />
+    <Content Include="Content\themes\theme29\images\signup.png" />
+    <Content Include="Content\themes\theme29\images\sprite.png" />
+    <Content Include="Content\themes\theme29\images\ui-icons_454545_256x240.png" />
     <Content Include="Content\tipsy\custom-tipsy.css" />
     <Content Include="Content\tipsy\tipsy.css" />
     <Content Include="Form\GenHistoryImg.aspx.cs">
@@ -596,51 +625,6 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
     <Content Include="App_Code\RazorHelper.cshtml" />
-    <Content Include="Content\themes\theme27\images\banner.en-US.jpg" />
-    <Content Include="Content\themes\theme27\images\banner.zh-CN.jpg" />
-    <Content Include="Content\themes\theme27\images\banner_top.png" />
-    <Content Include="Content\themes\theme27\images\bar-loader.gif" />
-    <Content Include="Content\themes\theme27\images\bg-contentLanguage.png" />
-    <Content Include="Content\themes\theme27\images\bgheader.png" />
-    <Content Include="Content\themes\theme27\images\bghotNewsContent.png" />
-    <Content Include="Content\themes\theme27\images\bgLanguage-Content.png" />
-    <Content Include="Content\themes\theme27\images\bgLanguage.png" />
-    <Content Include="Content\themes\theme27\images\bgLanguage_Content.png" />
-    <Content Include="Content\themes\theme27\images\bgMainMenu.png" />
-    <Content Include="Content\themes\theme27\images\bgTableHeader.png" />
-    <Content Include="Content\themes\theme27\images\bg_buttonsite.png" />
-    <Content Include="Content\themes\theme27\images\bg_center.jpg" />
-    <Content Include="Content\themes\theme27\images\bg_center2.jpg" />
-    <Content Include="Content\themes\theme27\images\bg_footer.jpg" />
-    <Content Include="Content\themes\theme27\images\bg_footer.png" />
-    <Content Include="Content\themes\theme27\images\bg_header03.jpg" />
-    <Content Include="Content\themes\theme27\images\deco.jpg" />
-    <Content Include="Content\themes\theme27\images\emailBanner.jpg" />
-    <Content Include="Content\themes\theme27\images\emailBg.jpg" />
-    <Content Include="Content\themes\theme27\images\error_icons.png" />
-    <Content Include="Content\themes\theme27\images\favicon.jpg" />
-    <Content Include="Content\themes\theme27\images\firstGoal.gif" />
-    <Content Include="Content\themes\theme27\images\glyphicons-halflings-gray-lighter.png" />
-    <Content Include="Content\themes\theme27\images\glyphicons-halflings-gray.png" />
-    <Content Include="Content\themes\theme27\images\glyphicons-halflings.png" />
-    <Content Include="Content\themes\theme27\images\header_gradient.png" />
-    <Content Include="Content\themes\theme27\images\help.txt" />
-    <Content Include="Content\themes\theme27\images\in_top.png" />
-    <Content Include="Content\themes\theme27\images\lastGoal.gif" />
-    <Content Include="Content\themes\theme27\images\link_14x14.png" />
-    <Content Include="Content\themes\theme27\images\loader.gif" />
-    <Content Include="Content\themes\theme27\images\logo-afterlogin.png" />
-    <Content Include="Content\themes\theme27\images\note.png" />
-    <Content Include="Content\themes\theme27\images\plus.png" />
-    <Content Include="Content\themes\theme27\images\signup.png" />
-    <Content Include="Content\themes\theme27\images\sprite.png" />
-    <Content Include="Content\themes\theme27\images\tab_topbg.gif" />
-    <Content Include="Content\themes\theme27\images\ui-icons_454545_256x240.png" />
-    <Content Include="Content\themes\theme27\images\undo.png" />
-    <Content Include="Content\themes\theme27\images\up.png" />
-    <Content Include="Content\themes\theme27\index.less" />
-    <Content Include="Content\themes\theme27\mixins.less" />
-    <Content Include="Content\themes\theme27\variables.less" />
     <Content Include="Content\themes\theme26\images\banner.en-US.jpg" />
     <Content Include="Content\themes\theme26\images\banner.id-ID.jpg" />
     <Content Include="Content\themes\theme26\images\banner.ko-KR.jpg" />
@@ -4135,9 +4119,6 @@
     <Content Include="App_Data\Fanex.Result\Tennis.xls" />
     <Content Include="App_Data\Fanex.Result\VSHRacing.xls" />
     <Content Include="App_Data\Fanex.Result\VSTennis.xls" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.yhy1980.master.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.yhy1980.production.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.yhy1980.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.allbetclubs.master.config" />
     <Content Include="Configurations\WebConfigs\Web.allbetclubs.production.config" />
     <Content Include="Configurations\WebConfigs\Web.allbetclubs.uat.config" />
@@ -4170,9 +4151,6 @@
     <Content Include="Configurations\WebConfigs\Web.q8bola.master.config" />
     <Content Include="Configurations\WebConfigs\Web.q8bola.production.config" />
     <Content Include="Configurations\WebConfigs\Web.q8bola.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.yhy1980.master.config" />
-    <Content Include="Configurations\WebConfigs\Web.yhy1980.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.yhy1980.uat.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.allbetclubs.local.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.allbetclubs.master.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.allbetclubs.production.config">
@@ -4180,7 +4158,9 @@
     </Content>
     <Content Include="Configurations\AppSettings\Web.AppSetting.allbetclubs.uat.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.master.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.production.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.uat.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.athena000.local.config" />
@@ -4215,10 +4195,6 @@
     <Content Include="Configurations\AppSettings\Web.AppSetting.q8bola.master.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.q8bola.production.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.q8bola.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.yhy1980.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.yhy1980.master.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.yhy1980.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.yhy1980.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.unobet.master.config" />
     <Content Include="Configurations\WebConfigs\Web.unobet.production.config" />
     <Content Include="Configurations\WebConfigs\Web.unobet.uat.config">
@@ -4234,7 +4210,22 @@
     <Content Include="Content\themes\theme28\index.less" />
     <Content Include="Content\themes\theme28\mixins.less" />
     <Content Include="Content\themes\theme28\variables.less" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.uat.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.9bet.master.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.9bet.production.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.9bet.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.9bet.master.config" />
+    <Content Include="Configurations\WebConfigs\Web.9bet.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.9bet.uat.config" />
     <None Include="Content\bootstrap\js\.jshintrc" />
+    <Content Include="Content\themes\theme29\index.less" />
+    <Content Include="Content\themes\theme29\mixins.less" />
+    <Content Include="Content\themes\theme29\variables.less" />
     <None Include="Deployment.ignore" />
     <None Include="img\Slot\H0005\Thumbs.db" />
     <None Include="img\Slot\H0006\Thumbs.db" />
@@ -4607,7 +4598,7 @@
           <UseIIS>False</UseIIS>
           <AutoAssignPort>False</AutoAssignPort>
           <DevelopmentServerPort>7980</DevelopmentServerPort>
-          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <DevelopmentServerVPath>/AffUser</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

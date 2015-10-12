@@ -1,11 +1,10 @@
 ﻿@{
-    ViewBag.Title = string.Format(Lang.AffiliateTitle, AppSettings.SystemDisplayName);
+    ViewBag.Title = string.Format(Lang.AffiliateTitle, AppSettings.AffiliateName);
     Layout = string.Format("../Layout/Layout{0}/_Layout_Notify.cshtml", AppSettings.Layout);
 }
-    
 @section title
 {
-    Sorry! The system is not available
+Sorry! The system is not available
 }
 <div class="offset2 span3">
     <div class="error ic-errorpage">
@@ -13,57 +12,21 @@
 </div>
 <div class="span5">
     <ul class="notify-content">
-        @foreach (var lang in AppSettings.BaseLanguages)
-        {
-            switch (lang.LanguageId)
-            {
-                case "en-US":
-                    <li>
-                    	We are sorry. The system is currently unavailable.<br />
-						Please try again later or contact administrator.
-                    </li>
-                    break;
-                case "id-ID":
-                    <li class="end">
-                    Mohon maaf. Saat ini sistem tidak tersedia.
-					<br />Silahkan mencoba dilain waktu atau hubungi administrator.
-                    </li>
-                    break;
-                case "th-TH":
-                    <li>
-                    ขออภัยในความไม่สะดวก ขณะนี้ระบบยังไม่สามารถใช้งานได้ชั่วคราว อีกสักครู่
-					<br />กรุณาเข้าระบบใหม่อีกครั้ง หรือติดต่อเจ้าหน้าที่เพื่อให้คำแนะนำ 
-                    </li>
-                    break;
-                case "vi-VN":
-                    <li>
-                    Chúng tôi thành thật xin lỗi ,vì hệ thống đang tiến hành bảo trì.
-					<br />Xin vui lòng thử lại trong giây lát sau hoặc liên hệ hỗ trợ trực tuyến 
-                	</li>                                                                                   
-                    break;
-                case "zh-CN":
-                    <li>
-                    非常抱歉，本司服务器正在维护中，请稍后尝试登陆或联系在线客服。 
-                    </li>
-                    break;
-                case "zh-TW":
-                    <li>
-                    非常抱歉，本司服務器正在維護中，請稍後嘗試登陸或聯繫在線客服.
-                    </li>
-                    break;
-                case "ko-KR":
-                    <li>
-                    죄송합니다. 시스템을 현재 사용할 수 없습니다. <br />
-                    나중에 다시 시도하시거나 관리자에게 연락을 주시기 바랍니다.
-                    </li>
-                    break;
-                default:
-                    <li>
-                    	We are sorry. The system is currently unavailable.<br />
-						Please try again later or contact administrator.
-                    </li>
-                    break;
-            }
-        }       
+        <li><span>We are sorry. The system is currently unavailable.<br />
+            Please try again later or contact administrator. </span></li>
+        <li><span>Mohon maaf. Saat ini sistem tidak tersedia.
+            <br />
+            Silahkan mencoba dilain waktu atau hubungi administrator. </span></li>
+        <li><span>ขออภัยในความไม่สะดวก ขณะนี้ระบบยังไม่สามารถใช้งานได้ชั่วคราว อีกสักครู่
+            <br />
+            กรุณาเข้าระบบใหม่อีกครั้ง หรือติดต่อเจ้าหน้าที่เพื่อให้คำแนะนำ </span></li>
+        <li><span>Chúng tôi thành thật xin lỗi, vì hệ thống đang tiến hành bảo trì.
+            <br />
+            Xin vui lòng thử lại trong giây lát sau hoặc liên hệ hỗ trợ trực tuyến </span>
+        </li>
+        <li><span>非常抱歉，本司服务器正在维护中，请稍后尝试登陆或联系在线客服。 </span></li>
+        <li><span>非常抱歉，本司服務器正在維護中，請稍後嘗試登陸或聯繫在線客服. </span></li>
+        <li class="end"><span>죄송합니다. 시스템을 현재 사용할 수 없습니다. 나중에 다시 시도하시거나 관리자에게 연락을 주시기 바랍니다 </span>
+        </li>
     </ul>
 </div>

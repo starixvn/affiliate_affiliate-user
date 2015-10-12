@@ -268,7 +268,7 @@ namespace Fanex.Affiliate.Controllers
             }
             else if (ModelState.IsValid)
             {
-                if (!IsValidCaptcha(captcha, false))
+                if (AppSettings.IsTesting == false && !IsValidCaptcha(captcha, false))
                 {
                     return Json(new ResultViewModel
                         {
@@ -432,29 +432,6 @@ namespace Fanex.Affiliate.Controllers
         {
             DoSignOut();
             return Redirect(FormsAuthentication.LoginUrl);
-        }
-
-        /// <summary>
-        /// Sign out action page.
-        /// </summary>
-        public void DoSignOut()
-        {
-            if (SessionManager.CurrentSession != null)
-            {
-                _userService.UserLogOut(new LogOutUserCriteria
-                {
-                    AffId = SessionManager.CurrentSession.AffId,
-                    Username = SessionManager.CurrentSession.Username,
-                    ServerId = AppSettings.ServerId
-                });
-            }
-
-            var language = AppSession.Language;
-            FormsAuthentication.SignOut();
-            SessionManager.ClearAll();
-
-            // Keep current language for the page
-            AppSession.Language = language;
         }
 
         #endregion Sign Out
@@ -791,6 +768,29 @@ namespace Fanex.Affiliate.Controllers
             var isValidCaptcha = !string.IsNullOrEmpty(captcha) && captcha.Equals(captchaSession);
 
             return isCheatCaptcha || isValidCaptcha;
+        }
+
+        /// <summary>
+        /// Sign out action page.
+        /// </summary>
+        private void DoSignOut()
+        {
+            if (SessionManager.CurrentSession != null)
+            {
+                _userService.UserLogOut(new LogOutUserCriteria
+                {
+                    AffId = SessionManager.CurrentSession.AffId,
+                    Username = SessionManager.CurrentSession.Username,
+                    ServerId = AppSettings.ServerId
+                });
+            }
+
+            var language = AppSession.Language;
+            FormsAuthentication.SignOut();
+            SessionManager.ClearAll();
+
+            // Keep current language for the page
+            AppSession.Language = language;
         }
 
         #endregion
