@@ -160,13 +160,17 @@
     {
         var name = string.Empty;
         var style = string.Empty;
+        var isDisabled = false;
+        if(list.Count == 1)
+        {
+            isDisabled = true;
+        }
         if (htmlAttributies != null)
         {
             name = htmlAttributies.ContainsKey("id") ? "id=\"" + htmlAttributies["id"] + "\" name=\"" + htmlAttributies["name"] + "\"" : string.Empty;
             style = htmlAttributies.ContainsKey("style") ? "style=\"" + htmlAttributies["style"] + "\"" : string.Empty;
         }
-        <select @( new HtmlString(name)) @(new HtmlString(style))>
-            <option value="" @(selectedValue == 0 ? "selected=\"selected\"" : string.Empty)>@Lang.All</option>
+        <select @( new HtmlString(name)) @(new HtmlString(style)) @(isDisabled ? "disabled" : string.Empty)>
             @foreach (var item in list)
             {
                 <option value="@item.CurrencyId" @(item.CurrencyId == selectedValue ? "selected=\"selected\"" : string.Empty)>@item.CurrencyCode</option>
