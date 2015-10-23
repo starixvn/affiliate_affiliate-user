@@ -136,7 +136,7 @@ namespace Fanex.Affiliate.Controllers
         private void AssignCurrencyData(MarketingCriteria criteria)
         {
             var currencies = AppSettings.PlayerCurrencies;
-            if (currencies.Count() == 1)
+            if (criteria.Currency == null && currencies.Count() == 1)
             {
                 criteria.Currency = currencies.First().CurrencyId;
             }
