@@ -164,7 +164,8 @@ namespace Fanex.Affiliate.Configurations
         {
             get
             {
-                return new Uri(GetValue("AffCustomerServiceUrl"));
+                var value = GetValue("AffCustomerServiceUrl");
+                return string.IsNullOrWhiteSpace(value) ? null : new Uri(value);
             }
         }
 

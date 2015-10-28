@@ -11,6 +11,7 @@
 namespace Fanex.Affiliate.Controllers
 {
     using System.Collections.Generic;
+    using System.Linq;
     using System.Web.Mvc;
     using Configurations;
     using Criteria;
@@ -41,6 +42,7 @@ namespace Fanex.Affiliate.Controllers
             var linkList = SystemSettingService.ListSystemSetting(new SystemSettingsByTypeCriteria { Type = "CustomerPage" });
             criteria.PageSize = criteria.PageSize == 0 ? AppSettings.PageSize : criteria.PageSize;
             criteria.Type = (short)AppSettings.InputAffType;
+            AssignCurrencyData(criteria);
 
             var bannerList = MarketingService.GetBannerMediaList(criteria, ref totalPage);
             var viewModel = new MarketingViewModel
@@ -105,6 +107,7 @@ namespace Fanex.Affiliate.Controllers
             var domainList = MarketingService.GetDomainList(new DomainCriteria { AffID = CurrentSession.AffId });
             var linkList = SystemSettingService.ListSystemSetting(new SystemSettingsByTypeCriteria { Type = "CustomerPage" });
             criteria.PageSize = criteria.PageSize == 0 ? AppSettings.PageSize : criteria.PageSize;
+            AssignCurrencyData(criteria);
 
             var bannerList = MarketingService.GetBannerMediaList(criteria, ref totalPage);
             var viewModel = new MarketingViewModel
@@ -130,13 +133,22 @@ namespace Fanex.Affiliate.Controllers
             return View(viewModel);
         }
 
+        private void AssignCurrencyData(MarketingCriteria criteria)
+        {
+            var currencies = AppSettings.PlayerCurrencies;
+            if (criteria.Currency == null && currencies.Count() == 1)
+            {
+                criteria.Currency = currencies.First().CurrencyId;
+            }
+        }
+
         /// <summary>
         /// Assign more data to View Model.
         /// </summary>
         /// <param name="model">View Model.</param>
         /// <param name="criteria">Criteria including data.</param>
         public void AssignDataToModel(MarketingViewModel model, MarketingCriteria criteria)
-        {
+        {        
             model.CurrencyList = AppSettings.PlayerCurrencies;
             model.BaseLanguages = AppSettings.BaseLanguages;
             model.PreferLanguage = CurrentSession.PreferredLanguage;
