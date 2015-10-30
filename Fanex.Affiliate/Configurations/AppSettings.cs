@@ -160,12 +160,11 @@ namespace Fanex.Affiliate.Configurations
             }
         }
 
-        public static Uri AffCustomerServiceUrl
+        public static string AffCustomerServiceUrl
         {
             get
             {
-                var value = GetValue("AffCustomerServiceUrl");
-                return string.IsNullOrWhiteSpace(value) ? null : new Uri(value);
+                return GetValue("AffCustomerServiceUrl");
             }
         }
 
