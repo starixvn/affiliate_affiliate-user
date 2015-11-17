@@ -22,7 +22,10 @@ namespace Fanex.Affiliate.WebServices.DataAccess
     using Criteria;
     using Data;
     using DTO.BetList;
-    using Result.Core.DTO;
+    using Fanex.Result.Core.LiveCasino.DTO;
+    using Fanex.Result.Core.NumberGame.DTO;
+    using Fanex.Result.Core.Racing.DTO;
+    using Fanex.Result.Core.Sportsbook.DTO;
 
     /// <summary>
     /// Account data access.

@@ -10,18 +10,17 @@
 
 namespace Fanex.Affiliate.WebServices.Services
 {
-    using System;
     using System.Collections.Generic;
-    using System.Data;
-    using System.Diagnostics.CodeAnalysis;
-    using System.Globalization;
     using System.Linq;
     using BetList.Core.Entities;
     using Common.Helper;
     using Criteria;
     using DataAccess;
     using DTO.BetList;
-    using Result.Core.DTO;
+    using Fanex.Result.Core.LiveCasino.DTO;
+    using Fanex.Result.Core.NumberGame.DTO;
+    using Fanex.Result.Core.Racing.DTO;
+    using Fanex.Result.Core.Sportsbook.DTO;
 
     /// <summary>
     /// Account Service.
