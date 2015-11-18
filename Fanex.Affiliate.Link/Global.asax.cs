@@ -13,12 +13,10 @@ namespace Fanex.Affiliate.Link
     using System;
     using System.Diagnostics.CodeAnalysis;
     using System.Web;
-    using System.Web.Http;
     using System.Web.Mvc;
-    using System.Web.Optimization;
     using System.Web.Routing;
-    using Data.Configuration;
-    using Logging;
+    using Fanex.Data.Configuration;
+    using Fanex.Logging;
 
     /// <summary>
     /// Global for Affiliate link.
@@ -30,9 +28,7 @@ namespace Fanex.Affiliate.Link
         {
             DbSettingProviderManager.Current.Start();
             AreaRegistration.RegisterAllAreas();
-            WebApiConfig.Register(GlobalConfiguration.Configuration);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
 
         /// <summary>

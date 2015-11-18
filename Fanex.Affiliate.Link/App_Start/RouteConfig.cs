@@ -34,7 +34,7 @@ namespace Fanex.Affiliate.Link
                 new
                 {
                     controller = "Home",
-                    action = "Default", 
+                    action = "Default",
                     id = UrlParameter.Optional
                 });
 
@@ -44,10 +44,10 @@ namespace Fanex.Affiliate.Link
                 defaults:
                 new
                 {
-                    controller = "Home", 
-                    action = "Link", 
-                    affId = UrlParameter.Optional, 
-                    pageId = UrlParameter.Optional, 
+                    controller = "Home",
+                    action = "Link",
+                    affId = UrlParameter.Optional,
+                    pageId = UrlParameter.Optional,
                     lang = UrlParameter.Optional
                 });
         }

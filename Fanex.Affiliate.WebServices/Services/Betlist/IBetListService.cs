@@ -19,7 +19,6 @@ namespace Fanex.Affiliate.WebServices.Services
     using Fanex.Result.Core.Racing.DTO;
     using Fanex.Result.Core.Sportsbook.DTO;
 
-
     /// <summary>
     /// Interface Account service.
     /// </summary>
