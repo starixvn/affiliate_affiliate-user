@@ -816,9 +816,6 @@
 	<data name="Tier" xml:space="preserve">
     <value>Tier</value>
   </data>
-	<data name="To" xml:space="preserve">
-    <value>To</value>
-  </data>
 	<data name="Top" xml:space="preserve">
     <value>Top</value>
   </data>

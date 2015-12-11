@@ -816,9 +816,6 @@
 	<data name="Tier" xml:space="preserve">
     <value>層</value>
   </data>
-	<data name="To" xml:space="preserve">
-    <value>到</value>
-  </data>
 	<data name="Top" xml:space="preserve">
     <value>回到最頂</value>
   </data>
