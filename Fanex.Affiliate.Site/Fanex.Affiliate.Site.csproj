@@ -234,44 +234,97 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Content Include="Configurations\SPNames\SpName.9bet.master.xml" />
-    <Content Include="Configurations\SPNames\SpName.9bet.production.xml" />
-    <Content Include="Configurations\SPNames\SpName.9bet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpName.allbetclubs.master.xml" />
-    <Content Include="Configurations\SPNames\SpName.allbetclubs.production.xml" />
-    <Content Include="Configurations\SPNames\SpName.allbetclubs.uat.xml" />
-    <Content Include="Configurations\SPNames\SpName.aoncash.master.xml" />
-    <Content Include="Configurations\SPNames\SpName.aoncash.production.xml" />
-    <Content Include="Configurations\SPNames\SpName.aoncash.uat.xml" />
-    <Content Include="Configurations\SPNames\SpName.athena000.local.xml" />
-    <Content Include="Configurations\SPNames\SpName.athena000.master.xml" />
-    <Content Include="Configurations\SPNames\SpName.athena000.production.xml" />
-    <Content Include="Configurations\SPNames\SpName.athena000.uat.xml" />
-    <Content Include="Configurations\SPNames\SpName.be7.master.xml" />
-    <Content Include="Configurations\SPNames\SpName.be7.production.xml" />
-    <Content Include="Configurations\SPNames\SpName.be7.uat.xml" />
-    <Content Include="Configurations\SPNames\SpName.goobet.master.xml" />
-    <Content Include="Configurations\SPNames\SpName.goobet.production.xml" />
-    <Content Include="Configurations\SPNames\SpName.goobet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpName.itcbet.master.xml" />
-    <Content Include="Configurations\SPNames\SpName.itcbet.production.xml" />
-    <Content Include="Configurations\SPNames\SpName.itcbet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpName.m8bola.master.xml" />
-    <Content Include="Configurations\SPNames\SpName.m8bola.production.xml" />
-    <Content Include="Configurations\SPNames\SpName.m8bola.uat.xml" />
-    <Content Include="Configurations\SPNames\SpName.macaubet.master.xml" />
-    <Content Include="Configurations\SPNames\SpName.macaubet.production.xml" />
-    <Content Include="Configurations\SPNames\SpName.macaubet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpName.nbcbet.master.xml" />
-    <Content Include="Configurations\SPNames\SpName.nbcbet.production.xml" />
-    <Content Include="Configurations\SPNames\SpName.nbcbet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpName.q8bola.master.xml" />
-    <Content Include="Configurations\SPNames\SpName.q8bola.production.xml" />
-    <Content Include="Configurations\SPNames\SpName.q8bola.uat.xml" />
-    <Content Include="Configurations\SPNames\SpName.unobet.production.xml" />
-    <Content Include="Configurations\SPNames\SpName.unobet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpName.unobet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpName.xml" />
+    <Content Include="Configurations\SPNames\SpName.9bet.production.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.9bet.uat.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.allbetclub.production.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.allbetclub.uat.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.aoncash.production.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.aoncash.uat.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.athena000.production.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.athena000.uat.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.be7.production.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.be7.uat.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.goobet.production.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.goobet.uat.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.itcbet.production.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.itcbet.uat.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.m8bola.production.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.m8bola.uat.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.macaubet.production.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.macaubet.uat.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.nbcbet.production.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.nbcbet.uat.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.q8bola.production.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.q8bola.uat.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.unobet.production.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.unobet.uat.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\_SpName.xml.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>_SpName.xml1.txt</LastGenOutput>
+    </Content>
+    <Content Include="Configurations\SPNames\_SpName.xml.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\_SpName.xml1.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\_SpNameConfig.xml" />
+    <Content Include="Configurations\SPNames\_SpNameOriginal.xml" />
     <Content Include="Content\betlist\custom-betlist.css" />
     <Content Include="Content\bootstrap\img\glyphicons-halflings-white.png" />
     <Content Include="Content\bootstrap\img\glyphicons-halflings.png" />
@@ -4119,9 +4172,9 @@
     <Content Include="App_Data\Fanex.Result\Tennis.xls" />
     <Content Include="App_Data\Fanex.Result\VSHRacing.xls" />
     <Content Include="App_Data\Fanex.Result\VSTennis.xls" />
-    <Content Include="Configurations\WebConfigs\Web.allbetclubs.master.config" />
-    <Content Include="Configurations\WebConfigs\Web.allbetclubs.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.allbetclubs.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.allbetclub.master.config" />
+    <Content Include="Configurations\WebConfigs\Web.allbetclub.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.allbetclub.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.aoncash.master.config" />
     <Content Include="Configurations\WebConfigs\Web.aoncash.production.config">
       <SubType>Designer</SubType>
@@ -4151,12 +4204,12 @@
     <Content Include="Configurations\WebConfigs\Web.q8bola.master.config" />
     <Content Include="Configurations\WebConfigs\Web.q8bola.production.config" />
     <Content Include="Configurations\WebConfigs\Web.q8bola.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.allbetclubs.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.allbetclubs.master.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.allbetclubs.production.config">
+    <Content Include="Configurations\AppSettings\Web.AppSetting.allbetclub.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.allbetclub.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.allbetclub.production.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Configurations\AppSettings\Web.AppSetting.allbetclubs.uat.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.allbetclub.uat.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.local.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.master.config">
       <SubType>Designer</SubType>
@@ -4222,6 +4275,8 @@
     <Content Include="Configurations\WebConfigs\Web.9bet.master.config" />
     <Content Include="Configurations\WebConfigs\Web.9bet.production.config" />
     <Content Include="Configurations\WebConfigs\Web.9bet.uat.config" />
+    <None Include="Configurations\SPNames\_SpNameConfiguration.ttinclude" />
+    <None Include="Configurations\TemplateFilemanager.CS.ttinclude" />
     <None Include="Content\bootstrap\js\.jshintrc" />
     <Content Include="Content\themes\theme29\index.less" />
     <Content Include="Content\themes\theme29\mixins.less" />
@@ -4298,9 +4353,9 @@
     <Content Include="GameData\GlobalSetting.ini" />
     <Content Include="GameData\VideoPoker\RV009\Settings.ini" />
     <Content Include="GameData\VideoPoker\RV010\Settings.ini" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.allbetclubs.production.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.allbetclubs.sandbox.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.allbetclubs.uat.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.allbetclub.production.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.allbetclub.sandbox.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.allbetclub.uat.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aoncash.production.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aoncash.sandbox.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aoncash.uat.config" />
@@ -4580,7 +4635,9 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\AffBetlistService\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

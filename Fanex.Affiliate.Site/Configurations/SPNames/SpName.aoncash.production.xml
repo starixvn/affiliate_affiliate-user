@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <Functions>
   <Function Name="Aff-Account">
     <Setting Key="Aff_User_SecureLoginInfo" SpName="Aff_User_SecureLoginInfo" DbName="DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet" Plain="0" />
@@ -32,7 +32,7 @@
     <Setting Key="Aff_User_BetListResult_SelMatch" SpName="Aff_User_BetListResult_SelMatch" DbName="DBEXT.bodb02.bodbAdminNet" Plain="0" />
     <Setting Key="Aff_User_BetListResult_SelMatchParlay" SpName="Aff_User_BetListResult_SelMatchParlay" DbName="DBEXT.bodb02.bodbAdminNet" Plain="0" />
     <Setting Key="Aff_User_BetListResult_SelMatchNumberGame" SpName="Aff_User_BetListResult_SelMatchNumberGame" DbName="DBEXT.bodb02.bodbAdminNet" Plain="0" />
-</Function>
+  </Function>
 
   <Function Name="Aff-CustomerInfo">
     <Setting Key="Aff_User_MemberListSel" SpName="Aff_User_MemberListSel" DbName="DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet" Plain="0" />
@@ -75,7 +75,7 @@
 
   <Function Name="Aff-Message">
     <Setting Key="Aff_User_HotNewsSel_New" SpName="Aff_User_HotNewsSel_New" DbName="DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet" Plain="0" />
-    <Setting Key="Aff_User_HotNewsDetail_New" SpName="Aff_User_HotNewsDetail_New" DbName="DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet" Plain="0"/>
+    <Setting Key="Aff_User_HotNewsDetail_New" SpName="Aff_User_HotNewsDetail_New" DbName="DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet" Plain="0" />
   </Function>
 
   <Function Name="Aff-Contact-Us">
@@ -95,3 +95,4 @@
     <Setting Key="Aff_BetList_CheckBelonging" SpName="Aff_BetList_CheckBelonging" DbName="DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet" Plain="0" />
   </Function>
 </Functions>
+		
