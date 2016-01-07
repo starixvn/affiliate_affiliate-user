@@ -28,7 +28,7 @@ namespace Fanex.Affiliate.Services
         public string GetEmailBody(string templatePath, object model)
         {
             var template = File.ReadAllText(templatePath);
-            return Engine.Razor.RunCompile(template, "key", null, model);
+            return Engine.Razor.RunCompile(template, templatePath, null, model);
         }
     }
 }
