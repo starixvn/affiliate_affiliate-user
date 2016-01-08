@@ -35,7 +35,7 @@ namespace Fanex.Affiliate.Site.App_Start
             container.RegisterMvcControllers(Assembly.GetExecutingAssembly());
 
             // This is an extension method from the integration package as well.
-            container.RegisterMvcAttributeFilterProvider();
+            container.RegisterMvcIntegratedFilterProvider();
 
             container.Verify();
 
