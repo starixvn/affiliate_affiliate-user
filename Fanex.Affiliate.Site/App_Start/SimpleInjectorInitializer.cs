@@ -7,7 +7,7 @@
 //   <change who="Kaden.Trinh" date="2013.05.28">Define Simple Injector</change>
 // </history>
 
-namespace Fanex.Affiliate.Site.App_Start
+namespace Fanex.Affiliate.Site
 {
     using System.Reflection;
     using System.Web.Mvc;

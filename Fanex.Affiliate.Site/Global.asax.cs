@@ -12,14 +12,12 @@ namespace Fanex.Affiliate.Site
 {
     using System;
     using System.Diagnostics.CodeAnalysis;
-    using System.Linq;
     using System.Web;
     using System.Web.Mvc;
     using System.Web.Optimization;
     using System.Web.Routing;
     using System.Web.Script.Serialization;
     using System.Web.Security;
-    using App_Start;
     using CasinoSetting;
     using Configurations;
     using Data.Configuration;
