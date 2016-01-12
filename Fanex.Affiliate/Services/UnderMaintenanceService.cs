@@ -54,6 +54,13 @@ namespace Fanex.Affiliate.Services
                 var undermaintainCtrl = new UMBusiness();
                 checkUm = undermaintainCtrl.isUnderMaintainence(Sites.Affiliate, AppSettings.LBUrl, ref startTime, ref endTime);
                 MemoryCache.Add("IsUM", checkUm, DateTime.Now.AddSeconds(TimeCacheUm));
+
+                if (string.IsNullOrWhiteSpace(startTime))
+                {
+                    Logging.LogService.Error("UM service has problems!");
+                    return false;
+                }
+
                 MemoryCache.Add("StartTime", startTime, DateTime.Now.AddSeconds(TimeCacheUm));
                 MemoryCache.Add("EndTime", endTime, DateTime.Now.AddSeconds(TimeCacheUm));
             }
