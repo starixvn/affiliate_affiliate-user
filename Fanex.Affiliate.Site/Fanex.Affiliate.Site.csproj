@@ -680,9 +680,7 @@
     <Content Include="App_Code\RazorHelper.cshtml" />
     <Content Include="Content\themes\theme26\images\banner.en-US.jpg" />
     <Content Include="Content\themes\theme26\images\banner.id-ID.jpg" />
-    <Content Include="Content\themes\theme26\images\banner.ko-KR.jpg" />
     <Content Include="Content\themes\theme26\images\banner.th-TH.jpg" />
-    <Content Include="Content\themes\theme26\images\banner.vi-VN.jpg" />
     <Content Include="Content\themes\theme26\images\banner.zh-CN.jpg" />
     <Content Include="Content\themes\theme26\images\banner.zh-TW.jpg" />
     <Content Include="Content\themes\theme26\images\banner_top.png" />
@@ -4665,7 +4663,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
+      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
