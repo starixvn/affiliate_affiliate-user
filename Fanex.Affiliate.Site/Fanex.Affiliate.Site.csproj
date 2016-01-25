@@ -240,6 +240,12 @@
     <Content Include="Configurations\SPNames\SpName.9bet.uat.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
+    <Content Include="Configurations\SPNames\SpName.aiabet.production.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.aiabet.uat.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
     <Content Include="Configurations\SPNames\SpName.allbetclub.production.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
@@ -286,12 +292,6 @@
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.macaubet.uat.xml">
-      <DependentUpon>_SpName.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\SPNames\SpName.nbcbet.production.xml">
-      <DependentUpon>_SpName.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\SPNames\SpName.nbcbet.uat.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.q8bola.production.xml">
@@ -4196,9 +4196,9 @@
     <Content Include="Configurations\WebConfigs\Web.macaubet.master.config" />
     <Content Include="Configurations\WebConfigs\Web.macaubet.production.config" />
     <Content Include="Configurations\WebConfigs\Web.macaubet.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.nbcbet.master.config" />
-    <Content Include="Configurations\WebConfigs\Web.nbcbet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.nbcbet.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.aiabet.master.config" />
+    <Content Include="Configurations\WebConfigs\Web.aiabet.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.aiabet.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.q8bola.master.config" />
     <Content Include="Configurations\WebConfigs\Web.q8bola.production.config" />
     <Content Include="Configurations\WebConfigs\Web.q8bola.uat.config" />
@@ -4238,10 +4238,10 @@
     <Content Include="Configurations\AppSettings\Web.AppSetting.macaubet.master.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.macaubet.production.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.macaubet.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.nbcbet.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.nbcbet.master.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.nbcbet.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.nbcbet.uat.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.aiabet.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.aiabet.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.aiabet.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.aiabet.uat.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.q8bola.local.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.q8bola.master.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.q8bola.production.config" />
@@ -4381,9 +4381,9 @@
     <Content Include="Content\themes\theme26\index.less" />
     <Content Include="Content\themes\theme26\mixins.less" />
     <Content Include="Content\themes\theme26\variables.less" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.nbcbet.production.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.nbcbet.sandbox.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.nbcbet.uat.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aiabet.production.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aiabet.sandbox.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aiabet.uat.config" />
     <None Include="img\Slot\S0007\icon_20x20_doubleWild.jpg.exclude" />
     <None Include="img\Slot\S0007\icon_40x40_doubleWild.jpg.exclude" />
     <None Include="Properties\Settings.settings">
