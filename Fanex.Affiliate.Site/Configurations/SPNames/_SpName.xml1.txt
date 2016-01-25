@@ -4,7 +4,7 @@
 // Generated items
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.unobet.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.q8bola.production.xml
-// Fanex.Affiliate.Site\Configurations\SPNames\SpName.nbcbet.production.xml
+// Fanex.Affiliate.Site\Configurations\SPNames\SpName.aiabet.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.macaubet.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.m8bola.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.itcbet.production.xml
@@ -16,7 +16,7 @@
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.9bet.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.unobet.uat.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.q8bola.uat.xml
-// Fanex.Affiliate.Site\Configurations\SPNames\SpName.nbcbet.uat.xml
+// Fanex.Affiliate.Site\Configurations\SPNames\SpName.aiabet.uat.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.macaubet.uat.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.m8bola.uat.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.itcbet.uat.xml
