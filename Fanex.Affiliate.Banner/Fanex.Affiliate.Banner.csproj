@@ -129,10 +129,10 @@
     <Content Include="Configurations\SPNames\SpNames.banner.9bet.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.9bet.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.9bet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.nbcbet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.nbcbet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.nbcbet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.nbcbet.uat.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.aiabet.local.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.aiabet.production.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.aiabet.sandbox.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.aiabet.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.allbetclubs.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.allbetclubs.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.allbetclubs.sandbox.xml" />
@@ -353,16 +353,16 @@
     <Content Include="Configurations\WebConfigs\Web.banner.q8bola.uat.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.banner.nbcbet.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.aiabet.local.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.banner.nbcbet.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.aiabet.uat.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.banner.nbcbet.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.aiabet.production.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.banner.nbcbet.sandbox.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.aiabet.sandbox.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Configurations\WebConfigs\Web.banner.unobet.local.config" />
@@ -409,7 +409,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2014/3/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
+      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/3/28" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
