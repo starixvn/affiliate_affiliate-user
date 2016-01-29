@@ -79,9 +79,6 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="System.Configuration" />
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
@@ -129,10 +126,10 @@
     <Content Include="Configurations\SPNames\SpNames.banner.9bet.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.9bet.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.9bet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.nbcbet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.nbcbet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.nbcbet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.nbcbet.uat.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.aiabet.local.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.aiabet.production.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.aiabet.sandbox.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.aiabet.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.allbetclubs.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.allbetclubs.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.allbetclubs.sandbox.xml" />
@@ -253,8 +250,6 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\knockout-2.1.0.debug.js" />
-    <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\SwfVersDetection.js" />
     <Content Include="Scripts\_references.js" />
@@ -273,8 +268,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Configurations\AppSettings\" />
-    <Folder Include="Configurations\ConnectionStrings\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -353,16 +346,16 @@
     <Content Include="Configurations\WebConfigs\Web.banner.q8bola.uat.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.banner.nbcbet.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.aiabet.local.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.banner.nbcbet.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.aiabet.uat.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.banner.nbcbet.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.aiabet.production.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.banner.nbcbet.sandbox.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.aiabet.sandbox.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Configurations\WebConfigs\Web.banner.unobet.local.config" />

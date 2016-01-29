@@ -113,8 +113,9 @@
     <Reference Include="MiniProfiler">
       <HintPath>..\packages\MiniProfiler.2.1.0\lib\net40\MiniProfiler.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.5\lib\net40\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="NPOI, Version=2.0.6.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
       <HintPath>..\packages\NPOI.2.0.6\lib\net40\NPOI.dll</HintPath>
@@ -239,6 +240,15 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Service References\AffBetlistService\AffiliateAPI.wsdl" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\Fanex.Result.Resource\en-US.xml" />

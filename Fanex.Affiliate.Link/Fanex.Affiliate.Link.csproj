@@ -143,10 +143,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\SpNames.xml" />
-    <Content Include="Configurations\SPNames\SpNames.nbcbet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.nbcbet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.nbcbet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.nbcbet.uat.xml" />
+    <Content Include="Configurations\SPNames\SpNames.aiabet.local.xml" />
+    <Content Include="Configurations\SPNames\SpNames.aiabet.production.xml" />
+    <Content Include="Configurations\SPNames\SpNames.aiabet.sandbox.xml" />
+    <Content Include="Configurations\SPNames\SpNames.aiabet.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.9bet.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.9bet.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.9bet.sandbox.xml" />
@@ -356,112 +356,14 @@
     <Content Include="Configurations\WebConfigs\Web.macaubet.master.config" />
     <Content Include="Configurations\WebConfigs\Web.macaubet.production.config" />
     <Content Include="Configurations\WebConfigs\Web.macaubet.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.nbcbet.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.nbcbet.master.config" />
-    <Content Include="Configurations\WebConfigs\Web.nbcbet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.nbcbet.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.aiabet.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.aiabet.master.config" />
+    <Content Include="Configurations\WebConfigs\Web.aiabet.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.aiabet.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.q8bola.local.config" />
     <Content Include="Configurations\WebConfigs\Web.q8bola.master.config" />
     <Content Include="Configurations\WebConfigs\Web.q8bola.production.config" />
     <Content Include="Configurations\WebConfigs\Web.q8bola.uat.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.9bet.local.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.9bet.master.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.9bet.production.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.9bet.uat.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.allbetclubs.local.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.allbetclubs.master.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.allbetclubs.production.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.allbetclubs.uat.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aoncash.local.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aoncash.master.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aoncash.production.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aoncash.uat.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.athena000.local.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.athena000.master.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.athena000.production.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.athena000.uat.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.be7.local.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.be7.master.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.be7.production.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.be7.uat.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.goobet.local.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.goobet.master.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.goobet.production.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.goobet.uat.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.itcbet.local.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.itcbet.master.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.itcbet.production.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.itcbet.uat.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.m8bola.local.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.m8bola.master.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.m8bola.production.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.m8bola.uat.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.macaubet.local.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.macaubet.master.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.macaubet.production.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.macaubet.uat.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.nbcbet.local.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.nbcbet.master.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.nbcbet.production.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.nbcbet.uat.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.q8bola.local.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.q8bola.master.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.q8bola.production.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.q8bola.uat.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.master.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.allbetclubs.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.allbetclubs.master.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.allbetclubs.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.allbetclubs.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.master.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.athena000.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.athena000.master.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.athena000.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.athena000.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.be7.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.be7.master.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.be7.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.be7.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.goobet.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.goobet.master.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.goobet.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.goobet.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.itcbet.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.itcbet.master.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.itcbet.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.itcbet.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.m8bola.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.m8bola.master.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.m8bola.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.m8bola.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.macaubet.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.macaubet.master.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.macaubet.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.macaubet.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.nbcbet.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.nbcbet.master.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.nbcbet.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.nbcbet.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.q8bola.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.q8bola.master.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.q8bola.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.q8bola.uat.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.unobet.local.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.unobet.master.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.unobet.production.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.unobet.uat.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Configurations\WebConfigs\Web.unobet.local.config" />
@@ -496,7 +398,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2014/3/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
+      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/3/28" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -15,7 +15,7 @@
 		"itcbet",
 		"m8bola",
 		"macaubet",
-		"nbcbet",
+		"aiabet",
 		"q8bola",
 		"unobet"
 	};
@@ -30,7 +30,7 @@
 		"DBAFFITCBET.Affiliate_itcbet.bodbDownlineNet",
 		"DBAFFM8BOLA.Affiliate_m8bola.bodbDownlineNet",
 		"DBAFFMACAUBET.Affiliate_MacauBet.bodbDownlineNet",
-		"DBAFFNBCBET.Affiliate_NBCbet.bodbDownlineNet",
+		"DBAFFAIABET.Affiliate_AIAbet.bodbDownlineNet",
 		"DBAFFQ8BOLA.Affiliate_Q8BOLA.bodbDownlineNet",
 		"DBAFFUNOBET.Affiliate_unobet.bodbDownlineNet"
 	};
