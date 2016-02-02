@@ -42,3 +42,6 @@ Dependencies/Fanex.Age.UI.TotalBets.dll
 MsBuild.xml
 MSBUILD.SUMMARY.email
 SUMMARY.DISPLAY.xml
+
+/.vs
+/packages
