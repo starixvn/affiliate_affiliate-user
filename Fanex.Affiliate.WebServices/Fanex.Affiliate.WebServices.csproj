@@ -107,16 +107,16 @@
       <HintPath>..\packages\Fanex.Result.Core-MicroGaming.1.0.0.2\lib\net40\Fanex.Result.Core.MicroGaming.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Fanex.Result.Core.NumberGame, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Result.Core-NumberGame.1.0.0.5\lib\net40\Fanex.Result.Core.NumberGame.dll</HintPath>
+    <Reference Include="Fanex.Result.Core.NumberGame, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Result.Core-NumberGame.1.0.1.0\lib\net40\Fanex.Result.Core.NumberGame.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Fanex.Result.Core.Racing, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Result.Core-Racing.1.0.0.3\lib\net40\Fanex.Result.Core.Racing.dll</HintPath>
+    <Reference Include="Fanex.Result.Core.Racing, Version=1.0.0.9, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Result.Core-Racing.1.0.0.9\lib\net40\Fanex.Result.Core.Racing.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Fanex.Result.Core.Sportsbook, Version=1.0.1.9, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Result.Core-Sportsbook.1.0.1.9\lib\net40\Fanex.Result.Core.Sportsbook.dll</HintPath>
+    <Reference Include="Fanex.Result.Core.Sportsbook, Version=1.0.2.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Result.Core-Sportsbook.1.0.2.2\lib\net40\Fanex.Result.Core.Sportsbook.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="HandHistoryLibrary, Version=1.0.0.43, Culture=neutral, processorArchitecture=MSIL">
@@ -269,13 +269,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Fanex.Result.Resource\en-US.xml" />
-    <Content Include="App_Data\Fanex.Result.Resource\ja-JP.xml" />
-    <Content Include="App_Data\Fanex.Result.Resource\ko-KR.xml" />
-    <Content Include="App_Data\Fanex.Result.Resource\th-TH.xml" />
-    <Content Include="App_Data\Fanex.Result.Resource\vi-VN.xml" />
-    <Content Include="App_Data\Fanex.Result.Resource\zh-CN.xml" />
-    <Content Include="App_Data\Fanex.Result.Resource\zh-TW.xml" />
     <Content Include="App_Data\SpNames.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -469,7 +462,7 @@
     <None Include="App_Data\Fanex.Result\Billiard.xls" />
     <None Include="App_Data\Fanex.Result\GoldDeluxe.xls" />
     <None Include="App_Data\Fanex.Result\Hockey.xls" />
-    <None Include="App_Data\Fanex.Result\HorseRacing.xls" />
+    <Content Include="App_Data\Fanex.Result\HorseRacing.xls" />
     <None Include="App_Data\Fanex.Result\LiveCasino.xls" />
     <None Include="App_Data\Fanex.Result\MuayThai.xls" />
     <None Include="App_Data\Fanex.Result\NumberGame.xls" />
@@ -519,7 +512,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/3/28" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2014/3/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
