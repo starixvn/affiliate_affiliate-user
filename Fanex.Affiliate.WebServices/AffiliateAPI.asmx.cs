@@ -505,7 +505,7 @@ namespace Fanex.Affiliate.WebServices
             var displaySettings = new ResultSetting
             {
                 SportType = sportType,
-                IsOutRight = criteria.IsOutRight.HasValue && criteria.IsOutRight.Value > 0,
+                IsOutright = criteria.IsOutRight.HasValue && criteria.IsOutRight.Value > 0,
                 IsParlayPopUp = criteria.Bettype == (int)BetType.MixParlay || criteria.Bettype == (int)BetType.CombinationMixParlay,
                 IsPopUp = true,
                 LanguageCode = _resultsSupportedLanguages.Exists(i => i.Equals(sessionLanguage)) ? sessionLanguage : "en-US"
