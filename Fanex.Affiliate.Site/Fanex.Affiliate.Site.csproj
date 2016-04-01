@@ -517,6 +517,32 @@
     <Content Include="Content\themes\theme29\images\signup.png" />
     <Content Include="Content\themes\theme29\images\sprite.png" />
     <Content Include="Content\themes\theme29\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\theme30\images\banner.en-US.jpg" />
+    <Content Include="Content\themes\theme30\images\banner.th-TH.jpg" />
+    <Content Include="Content\themes\theme30\images\banner_top.png" />
+    <Content Include="Content\themes\theme30\images\bghotNewsContent.png" />
+    <Content Include="Content\themes\theme30\images\bgLanguage.png" />
+    <Content Include="Content\themes\theme30\images\bgLanguage_Content.png" />
+    <Content Include="Content\themes\theme30\images\bgMainMenu.png" />
+    <Content Include="Content\themes\theme30\images\bgTableHeader.png" />
+    <Content Include="Content\themes\theme30\images\bg_buttonsite.png" />
+    <Content Include="Content\themes\theme30\images\bg_footer.jpg" />
+    <Content Include="Content\themes\theme30\images\deco.jpg" />
+    <Content Include="Content\themes\theme30\images\emailBanner.jpg" />
+    <Content Include="Content\themes\theme30\images\emailBg.jpg" />
+    <Content Include="Content\themes\theme30\images\error_icons.png" />
+    <Content Include="Content\themes\theme30\images\favicon.jpg" />
+    <Content Include="Content\themes\theme30\images\glyphicons-halflings-gray.png" />
+    <Content Include="Content\themes\theme30\images\glyphicons-halflings.png" />
+    <Content Include="Content\themes\theme30\images\headerbg.jpg" />
+    <Content Include="Content\themes\theme30\images\header_gradient.png" />
+    <Content Include="Content\themes\theme30\images\in_top.png" />
+    <Content Include="Content\themes\theme30\images\loader.gif" />
+    <Content Include="Content\themes\theme30\images\logo-afterlogin.png" />
+    <Content Include="Content\themes\theme30\images\signup.png" />
+    <Content Include="Content\themes\theme30\images\sprite.png" />
+    <Content Include="Content\themes\theme30\images\top.jpg" />
+    <Content Include="Content\themes\theme30\images\ui-icons_454545_256x240.png" />
     <Content Include="Content\tipsy\custom-tipsy.css" />
     <Content Include="Content\tipsy\tipsy.css" />
     <Content Include="Form\GenHistoryImg.aspx.cs">
@@ -4308,6 +4334,9 @@
     <Content Include="Content\themes\theme29\mixins.less" />
     <Content Include="Content\themes\theme29\variables.less" />
     <Content Include="Content\Fanex.Result\fanex.result.less" />
+    <Content Include="Content\themes\theme30\index.less" />
+    <Content Include="Content\themes\theme30\mixins.less" />
+    <Content Include="Content\themes\theme30\variables.less" />
     <None Include="Deployment.ignore" />
     <None Include="img\Slot\H0005\Thumbs.db" />
     <None Include="img\Slot\H0006\Thumbs.db" />
@@ -4665,6 +4694,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -4692,7 +4722,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
