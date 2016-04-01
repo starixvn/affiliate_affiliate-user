@@ -22,7 +22,10 @@ namespace Fanex.Affiliate.Services
     using DTO;
     using DTO.BetList;
     using Fanex.Affiliate.Criteria.BetList;
-    using Result.Core.DTO;
+    using Fanex.Result.Core.LiveCasino.DTO;
+    using Fanex.Result.Core.NumberGame.DTO;
+    using Fanex.Result.Core.Racing.DTO;
+    using Fanex.Result.Core.Sportsbook.DTO;
     using ViewModels;
 
     /// <summary>

@@ -12,22 +12,16 @@ namespace Fanex.Affiliate.Site
 {
     using System;
     using System.Diagnostics.CodeAnalysis;
-    using System.Linq;
     using System.Web;
-    using System.Web.Http;
     using System.Web.Mvc;
     using System.Web.Optimization;
     using System.Web.Routing;
     using System.Web.Script.Serialization;
     using System.Web.Security;
-    using App_Start;
     using CasinoSetting;
     using Configurations;
     using Data.Configuration;
-    using log4net;
     using Logging;
-    using StackExchange.Profiling;
-    using StackExchange.Profiling.MVCHelpers;
     using Web.Mvc;
 
     /// <summary>
@@ -57,14 +51,6 @@ namespace Fanex.Affiliate.Site
             ViewEngines.Engines.Clear();
             ViewEngines.Engines.Add(new CustomRazorViewEngine());
             ViewEngines.Engines.Add(new RazorViewEngine());
-
-            // Use MiniProfiler for Rendering
-            var copy = ViewEngines.Engines.ToList();
-            ViewEngines.Engines.Clear();
-            foreach (var item in copy)
-            {
-                ViewEngines.Engines.Add(new ProfilingViewEngine(item));
-            }
 
             log4net.Config.XmlConfigurator.Configure();
             log4net.LogManager.GetLogger("GeneralLog").Info("Start");
@@ -109,28 +95,6 @@ namespace Fanex.Affiliate.Site
                     ErrorCode = exception.GetHashCode(),
                     ErrorMessage = exception.Message
                 }));
-            }
-        }
-
-        /// <summary>
-        /// Begin Request.
-        /// </summary>
-        protected void Application_BeginRequest()
-        {
-            if (Request.IsLocal)
-            {
-                MiniProfiler.Start();
-            }
-        }
-
-        /// <summary>
-        /// End Request.
-        /// </summary>
-        protected void Application_EndRequest()
-        {
-            if (Request.IsLocal)
-            {
-                MiniProfiler.Stop();
             }
         }
 

@@ -7,7 +7,7 @@
 //   <change who="Kaden.Trinh" date="2013.05.28">Created</change>
 // </history>
 
-namespace Fanex.Affiliate.Site.App_Start
+namespace Fanex.Affiliate.Site
 {
     using System.Web.Mvc;
     using Web.Filter;
@@ -15,7 +15,7 @@ namespace Fanex.Affiliate.Site.App_Start
     /// <summary>
     /// Filter Config.
     /// </summary>
-    public class FilterConfig
+    public static class FilterConfig
     {
         /// <summary>
         /// Register Global Filters.

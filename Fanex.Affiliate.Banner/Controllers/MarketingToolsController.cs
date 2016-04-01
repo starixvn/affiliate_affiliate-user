@@ -10,16 +10,15 @@
 
 namespace Fanex.Affiliate.Banner.Controllers
 {
-    using System;
+    using Criteria;
+    using DTO;
+    using Microsoft.Practices.EnterpriseLibrary.Caching;
+    using Services;
     using System.Configuration;
     using System.IO;
     using System.Text;
     using System.Text.RegularExpressions;
     using System.Web.Mvc;
-    using Criteria;
-    using DTO;
-    using Microsoft.Practices.EnterpriseLibrary.Caching;
-    using Services;
 
     /// <summary>
     /// Marketing Tools controller of Affiliate Banner.
@@ -40,16 +39,19 @@ namespace Fanex.Affiliate.Banner.Controllers
         private static Regex _regex = new Regex(@"\.swf", RegexOptions.IgnoreCase);
         private static string _systemName;
 
-        #endregion
+        #endregion Variables
 
         #region Services
+
         /// <summary>
         /// Define Payment service.
         /// </summary>
         private readonly IBannerService _bannerService;
+
         #endregion Services
 
         #region Constructor
+
         /// <summary>
         /// Initializes a new instance of the MarketingToolsController class.
         /// </summary>
@@ -66,8 +68,9 @@ namespace Fanex.Affiliate.Banner.Controllers
         {
             _bannerService = new BannerService();
         }
+
         #endregion Constructor
-        
+
         /// <summary>
         /// Simplify HTML string.
         /// </summary>
@@ -184,7 +187,7 @@ namespace Fanex.Affiliate.Banner.Controllers
                         @"function hasClass(element, cls) {
                                 return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
                             };
-                            function replaceHtml(tag,classname,html) {		
+                            function replaceHtml(tag,classname,html) {
                           var els = document.getElementsByTagName(tag), i, flag = false;
                           for (i = 0; i < els.length; i++){
                             if (hasClass(els[i],classname)){ if(!flag) flag = true; els[i].innerHTML = html;}}
@@ -197,7 +200,7 @@ namespace Fanex.Affiliate.Banner.Controllers
                         "text/javascript");
                 }
             }
-            
+
             return Content(string.Empty);
         }
 
@@ -221,11 +224,13 @@ namespace Fanex.Affiliate.Banner.Controllers
                 case TEXT:
                     bannerInfo.BannerStringBuilder.Replace("{content}", bannerInfo.Content.Replace("\r\n", "<br/>"));
                     break;
+
                 case IMAGE:
                     bannerInfo.BannerStringBuilder.Replace(
                     "{src}",
                     string.Format("{0}/Content/Banners/{1}?v={2}", Common.FullDomainName, Server.HtmlDecode(bannerInfo.Content), bannerInfo.Version));
                     break;
+
                 default:
                     // FLASH
                     var sizes = bannerInfo.Size.ToString().Split('x');

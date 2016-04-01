@@ -10,6 +10,15 @@
 
 namespace Fanex.Affiliate.WebServices.DataAccess
 {
+    using BetList.Core.Entities;
+    using Common;
+    using Criteria;
+    using Data;
+    using DTO.BetList;
+    using Fanex.Result.Core.LiveCasino.DTO;
+    using Fanex.Result.Core.NumberGame.DTO;
+    using Fanex.Result.Core.Racing.DTO;
+    using Fanex.Result.Core.Sportsbook.DTO;
     using System;
     using System.Collections;
     using System.Collections.Generic;
@@ -17,12 +26,6 @@ namespace Fanex.Affiliate.WebServices.DataAccess
     using System.Diagnostics.CodeAnalysis;
     using System.Globalization;
     using System.Linq;
-    using BetList.Core.Entities;
-    using Common;
-    using Criteria;
-    using Data;
-    using DTO.BetList;
-    using Result.Core.DTO;
 
     /// <summary>
     /// Account data access.
@@ -349,7 +352,7 @@ namespace Fanex.Affiliate.WebServices.DataAccess
         public CustomerInfoBetList GetPlayerIbcInfo(string affiliateGroup, string playerUsername)
         {
             var hashParam = new Hashtable
-            { 
+            {
                 { "username", playerUsername },
                 { "custid", 0 },
                 { "ibcusername", string.Empty },
@@ -367,8 +370,8 @@ namespace Fanex.Affiliate.WebServices.DataAccess
             };
         }
 
-        #endregion
-        
+        #endregion BetList
+
         #region Betlist.Results
 
         /// <summary>
@@ -584,7 +587,7 @@ namespace Fanex.Affiliate.WebServices.DataAccess
             }
         }
 
-        #endregion
+        #endregion Betlist.Results
 
         #region Betlist.Results.Utilities
 
@@ -779,6 +782,6 @@ namespace Fanex.Affiliate.WebServices.DataAccess
             return string.Empty;
         }
 
-        #endregion
+        #endregion Betlist.Results.Utilities
     }
 }

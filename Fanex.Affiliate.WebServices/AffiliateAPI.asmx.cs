@@ -18,7 +18,6 @@ namespace Fanex.Affiliate.WebServices
     using System.Runtime.Serialization.Formatters.Binary;
     using System.Web.Services;
     using System.Xml.Serialization;
-    using Affiliate.DTO;
     using BetList.Core.Builder;
     using BetList.Core.Entities;
     using BetList.Core.TicketHelper;
@@ -26,12 +25,15 @@ namespace Fanex.Affiliate.WebServices
     using Data.Configuration;
     using DTO.BetList;
     using Enumerations;
+    using Fanex.Affiliate.DTO;
+    using Fanex.Result.Core.Base;
     using RazorEngine;
     using Result.Core;
     using Services;
     using Utilities;
+    using RazorEngine.Templating;
 
-    // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
+    // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line.
     // [System.Web.Script.Services.ScriptService]
 
     /// <summary>
@@ -52,7 +54,7 @@ namespace Fanex.Affiliate.WebServices
 
         private LanguageManager _langManager = new LanguageManager();
 
-        #endregion
+        #endregion Properties
 
         #region Constructor
 
@@ -66,7 +68,7 @@ namespace Fanex.Affiliate.WebServices
             _betlistService = new BetListService();
         }
 
-        #endregion
+        #endregion Constructor
 
         #region Common
 
@@ -92,24 +94,13 @@ namespace Fanex.Affiliate.WebServices
         /// <param name="templatePath">Template path.</param>
         /// <param name="model">Binding model.</param>
         /// <returns>Bet list's Html string.</returns>
-        public string BindDataToTemplate(string templatePath, dynamic model)
+        public string BindDataToTemplate(string templatePath, object model)
         {
-            try
-            {
-                var template = File.ReadAllText(templatePath);
-                return Razor.Parse(template, model);
-            }
-            catch
-            {
-                throw;
-            }
+            var template = File.ReadAllText(templatePath);
+            return Engine.Razor.RunCompile(template, "key", null, model);
         }
 
-        #endregion
-
-        #region Affiliate's Email - Utilities
-
-        #endregion
+        #endregion Common
 
         #region Affiliate's Email - Web Methods
 
@@ -135,7 +126,7 @@ namespace Fanex.Affiliate.WebServices
             }
         }
 
-        #endregion
+        #endregion Affiliate's Email - Web Methods
 
         #region Affiliate's Betlist - Utilities
 
@@ -215,18 +206,23 @@ namespace Fanex.Affiliate.WebServices
                 case "Sportsbook":
                     criteria.ShowSB = true;
                     break;
+
                 case "RNG Casino":
                     criteria.ShowCasino = true;
                     break;
+
                 case "Number Game":
                     criteria.ShowNG = true;
                     break;
+
                 case "Live Casino":
                     criteria.ShowLiveCasino = true;
                     break;
+
                 case "Virtual Sports":
                     criteria.ShowVS = true;
                     break;
+
                 default:
                     criteria.ShowSB = true;
                     break;
@@ -336,7 +332,7 @@ namespace Fanex.Affiliate.WebServices
             return objectBytes;
         }
 
-        #endregion
+        #endregion Affiliate's Betlist - Utilities
 
         #region Affiliate's Betlist - Web Methods
 
@@ -366,7 +362,7 @@ namespace Fanex.Affiliate.WebServices
                 ticket.WinLoss = FormaterCurrency.Format(ticket.WinLoss);
             }
 
-            dynamic content = new
+            var content = new
             {
                 IsShowSystemIdAndExternalId = false,
                 IsShowWinLoss = true,
@@ -442,7 +438,7 @@ namespace Fanex.Affiliate.WebServices
             return builder.BuildSystemParlayDetail(new TicketHelper(), systemParlayData);
         }
 
-        #endregion
+        #endregion Affiliate's Betlist - Web Methods
 
         #region Affiliate's Results - Utilities
 
@@ -490,7 +486,7 @@ namespace Fanex.Affiliate.WebServices
             }
         }
 
-        #endregion
+        #endregion Affiliate's Results - Utilities
 
         #region Affiliate's Results - Web Methods
 
@@ -502,14 +498,14 @@ namespace Fanex.Affiliate.WebServices
         /// <param name="criteria">Input criteria.</param>
         /// <returns>Result's Html string.</returns>
         [WebMethod]
-        public string GetBetlistResults(string affiliateName, string sessionLanguage, BetListResultsCriteria criteria, string language="en-US")
+        public string GetBetlistResults(string affiliateName, string sessionLanguage, BetListResultsCriteria criteria, string language = "en-US")
         {
             _langManager.SetCulture(language);
             var sportType = (SportType)criteria.SportType;
             var displaySettings = new ResultSetting
             {
                 SportType = sportType,
-                IsOutRight = criteria.IsOutRight.HasValue && criteria.IsOutRight.Value > 0,
+                IsOutright = criteria.IsOutRight.HasValue && criteria.IsOutRight.Value > 0,
                 IsParlayPopUp = criteria.Bettype == (int)BetType.MixParlay || criteria.Bettype == (int)BetType.CombinationMixParlay,
                 IsPopUp = true,
                 LanguageCode = _resultsSupportedLanguages.Exists(i => i.Equals(sessionLanguage)) ? sessionLanguage : "en-US"
@@ -525,6 +521,6 @@ namespace Fanex.Affiliate.WebServices
             return result;
         }
 
-        #endregion
+        #endregion Affiliate's Results - Web Methods
     }
 }

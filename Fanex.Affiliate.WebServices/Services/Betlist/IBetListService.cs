@@ -14,7 +14,10 @@ namespace Fanex.Affiliate.WebServices.Services
     using BetList.Core.Entities;
     using Criteria;
     using DTO.BetList;
-    using Result.Core.DTO;
+    using Fanex.Result.Core.LiveCasino.DTO;
+    using Fanex.Result.Core.NumberGame.DTO;
+    using Fanex.Result.Core.Racing.DTO;
+    using Fanex.Result.Core.Sportsbook.DTO;
 
     /// <summary>
     /// Interface Account service.

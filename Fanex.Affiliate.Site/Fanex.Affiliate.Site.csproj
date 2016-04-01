@@ -18,13 +18,18 @@
     <UseIISExpress>false</UseIISExpress>
     <JSLintSkip>
     </JSLintSkip>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
@@ -39,14 +44,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Antlr3.Runtime">
-      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    <Reference Include="Antlr3.Runtime, Version=3.3.1.7705, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="BundleTransformer.Core, Version=1.6.28.0, Culture=neutral, PublicKeyToken=973c344c93aac60d, processorArchitecture=MSIL">
-      <HintPath>..\packages\BundleTransformer.Core.1.6.28\lib\net40\BundleTransformer.Core.dll</HintPath>
+    <Reference Include="BundleTransformer.Core, Version=1.7.16.0, Culture=neutral, PublicKeyToken=973c344c93aac60d, processorArchitecture=MSIL">
+      <HintPath>..\packages\BundleTransformer.Core.1.7.16\lib\net40\BundleTransformer.Core.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="BundleTransformer.Less">
-      <HintPath>..\packages\BundleTransformer.Less.1.6.26\lib\net40\BundleTransformer.Less.dll</HintPath>
+    <Reference Include="BundleTransformer.Less, Version=1.7.16.0, Culture=neutral, PublicKeyToken=973c344c93aac60d, processorArchitecture=MSIL">
+      <HintPath>..\packages\BundleTransformer.Less.1.7.16\lib\net40\BundleTransformer.Less.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="CasinoLibrary">
       <HintPath>..\packages\CasinoLibrary.1.0.2.6\lib\net40\CasinoLibrary.dll</HintPath>
@@ -60,9 +68,21 @@
     <Reference Include="dotless.Core">
       <HintPath>..\packages\dotless.1.3.1.0\lib\dotless.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Fanex.BetList.Core, Version=2.0.5.11, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Fanex.BetList.Core.2.0.5.11\lib\net40\Fanex.BetList.Core.dll</HintPath>
+    <Reference Include="Fanex.BetList.AGCasino, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.BetList.AGCasino.1.0.0.4\lib\net40\Fanex.BetList.AGCasino.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.BetList.BetTrade, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.BetList.Core.2.10.0.3\lib\net40\Fanex.BetList.BetTrade.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.BetList.Core, Version=2.2.11.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.BetList.Core.2.10.0.3\lib\net40\Fanex.BetList.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.BetList.GoldDeluxe, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.BetList.Core.2.10.0.3\lib\net40\Fanex.BetList.GoldDeluxe.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Fanex.Common, Version=1.0.404.97, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.Common.1.0.404.97\lib\net40\Fanex.Common.dll</HintPath>
@@ -73,9 +93,13 @@
     <Reference Include="Fanex.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.Logging.1.0.0.0\lib\net40\Fanex.Logging.dll</HintPath>
     </Reference>
-    <Reference Include="Fanex.Result.Core, Version=1.6.2.6, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Fanex.Result.Core-NPOI.2.0.6.1.6.2.6\lib\net40\Fanex.Result.Core.dll</HintPath>
+    <Reference Include="Fanex.Result.Core, Version=2.0.1.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Result.Core-NPOI.2.0.6.2.0.2.6\lib\net40\Fanex.Result.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.Result.Core.Base, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Result.Core-NPOI.2.0.6.2.0.2.6\lib\net40\Fanex.Result.Core.Base.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="HandHistoryLibrary">
       <HintPath>..\packages\HandHistoryLibrary.1.0.0.43\lib\net40\HandHistoryLibrary.dll</HintPath>
@@ -127,9 +151,6 @@
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MiniProfiler">
-      <HintPath>..\packages\MiniProfiler.2.1.0\lib\net40\MiniProfiler.dll</HintPath>
-    </Reference>
     <Reference Include="NetUtility, Version=1.0.4199.22106, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\CasinoLibrary.1.0.2.6\lib\net40\NetUtility.dll</HintPath>
     </Reference>
@@ -144,23 +165,25 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\NPOI.2.0.6\lib\net40\NPOI.dll</HintPath>
     </Reference>
-    <Reference Include="RazorEngine, Version=3.2.0.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
-      <HintPath>..\packages\RazorEngine.3.2.0\lib\net40\RazorEngine.dll</HintPath>
+    <Reference Include="RazorEngine, Version=3.7.3.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
+      <HintPath>..\packages\RazorEngine.3.7.3\lib\net40\RazorEngine.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="RemotingRef, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\RemotingRef.1.0.0.1\lib\net40\RemotingRef.dll</HintPath>
+      <HintPath>..\packages\RemotingRef.1.0.0.4\lib\net40\RemotingRef.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="SimpleInjector, Version=2.3.5.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
-      <HintPath>..\Dependencies\SimpleInjector.dll</HintPath>
+    <Reference Include="SimpleInjector, Version=3.1.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.3.1.2\lib\net40-client\SimpleInjector.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="SimpleInjector.Integration.Web, Version=2.3.5.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\SimpleInjector.Integration.Web.2.3.5\lib\net40\SimpleInjector.Integration.Web.dll</HintPath>
+    <Reference Include="SimpleInjector.Integration.Web, Version=3.1.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.Integration.Web.3.1.2\lib\net40\SimpleInjector.Integration.Web.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="SimpleInjector.Integration.Web.Mvc, Version=2.3.5.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\SimpleInjector.Integration.Web.Mvc.2.3.5\lib\net40\SimpleInjector.Integration.Web.Mvc.dll</HintPath>
+    <Reference Include="SimpleInjector.Integration.Web.Mvc, Version=3.1.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.Integration.Web.Mvc.3.1.2\lib\net40\SimpleInjector.Integration.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="SPSRemoting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\SPSRemoting.1.0.0\lib\net40\SPSRemoting.dll</HintPath>
@@ -183,52 +206,50 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Optimization">
-      <HintPath>..\Dependencies\System.Web.Optimization.dll</HintPath>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.40804.0\lib\net40\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.0\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Services" />
-    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Configuration" />
-    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="TplCore, Version=1.0.4694.29951, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\TplCore.1.0.4694.29951\lib\net40\TplCore.dll</HintPath>
     </Reference>
-    <Reference Include="WebActivator">
-      <HintPath>..\packages\WebActivator.1.4.4\lib\net40\WebActivator.dll</HintPath>
-    </Reference>
-    <Reference Include="WebGrease, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    <Reference Include="WebGrease, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\AbsolutePathExtension.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\SimpleInjectorInitializer.cs" />
-    <Compile Include="App_Start\StyleImagePathBundle.cs" />
-    <Compile Include="App_Start\StyleRelativePathTransform.cs" />
     <Compile Include="Service References\AffBetlistService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -323,7 +344,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
-    <Content Include="Configurations\SPNames\_SpNameConfig.xml" />
+    <Content Include="Configurations\SPNames\_SpNameConfig.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Configurations\SPNames\_SpNameOriginal.xml" />
     <Content Include="Content\betlist\custom-betlist.css" />
     <Content Include="Content\bootstrap\img\glyphicons-halflings-white.png" />
@@ -609,12 +632,6 @@
     <Content Include="Content\betlist\images\up.png" />
     <Content Include="Content\betlist\global.content.css" />
     <Content Include="Content\Fanex.Result\fanex.result.css" />
-    <Content Include="Content\Fanex.Result\images\1F.gif" />
-    <Content Include="Content\Fanex.Result\images\1L.gif" />
-    <Content Include="Content\Fanex.Result\images\bg_header03.jpg" />
-    <Content Include="Content\Fanex.Result\images\first-goal.gif" />
-    <Content Include="Content\Fanex.Result\images\last-goal.gif" />
-    <Content Include="Content\Fanex.Result\images\tab_topbg.gif" />
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -4156,20 +4173,6 @@
     <Content Include="Scripts\site\paging.js" />
     <Content Include="Scripts\site\query.string.js" />
     <Content Include="Scripts\site\sign-in.js" />
-    <Content Include="App_Data\Fanex.Result\Badminton.xls" />
-    <Content Include="App_Data\Fanex.Result\BaseBall.xls" />
-    <Content Include="App_Data\Fanex.Result\Basketball.xls" />
-    <Content Include="App_Data\Fanex.Result\Billiard.xls" />
-    <Content Include="App_Data\Fanex.Result\Hockey.xls" />
-    <Content Include="App_Data\Fanex.Result\HorseRacing.xls" />
-    <Content Include="App_Data\Fanex.Result\LiveCasino.xls" />
-    <Content Include="App_Data\Fanex.Result\NumberGame.xls" />
-    <Content Include="App_Data\Fanex.Result\OtherSport.xls" />
-    <Content Include="App_Data\Fanex.Result\Outright.xls" />
-    <Content Include="App_Data\Fanex.Result\Soccer.xls" />
-    <Content Include="App_Data\Fanex.Result\Tennis.xls" />
-    <Content Include="App_Data\Fanex.Result\VSHRacing.xls" />
-    <Content Include="App_Data\Fanex.Result\VSTennis.xls" />
     <Content Include="Configurations\WebConfigs\Web.allbetclub.master.config" />
     <Content Include="Configurations\WebConfigs\Web.allbetclub.production.config" />
     <Content Include="Configurations\WebConfigs\Web.allbetclub.uat.config" />
@@ -4277,12 +4280,34 @@
     <Content Include="Configurations\WebConfigs\Web.9bet.master.config" />
     <Content Include="Configurations\WebConfigs\Web.9bet.production.config" />
     <Content Include="Configurations\WebConfigs\Web.9bet.uat.config" />
+    <Content Include="App_Data\Fanex.Result\VSTennis.xls" />
+    <Content Include="App_Data\Fanex.Result\VSSpeedWay.xls" />
+    <Content Include="App_Data\Fanex.Result\VSHRacing.xls" />
+    <Content Include="App_Data\Fanex.Result\Tennis.xls" />
+    <Content Include="App_Data\Fanex.Result\Soccer.xls" />
+    <Content Include="App_Data\Fanex.Result\Racing.xls" />
+    <Content Include="App_Data\Fanex.Result\Outright.xls" />
+    <Content Include="App_Data\Fanex.Result\Other.xls" />
+    <Content Include="App_Data\Fanex.Result\NumberGame.xls" />
+    <Content Include="App_Data\Fanex.Result\MuayThai.xls" />
+    <Content Include="App_Data\Fanex.Result\LiveCasino.xls" />
+    <Content Include="App_Data\Fanex.Result\Hockey.xls" />
+    <Content Include="App_Data\Fanex.Result\GoldDeluxe.xls" />
+    <Content Include="App_Data\Fanex.Result\Billiard.xls" />
+    <Content Include="App_Data\Fanex.Result\Basketball.xls" />
+    <Content Include="App_Data\Fanex.Result\BaseBall.xls" />
+    <Content Include="App_Data\Fanex.Result\Badminton.xls" />
+    <Content Include="App_Data\Fanex.Result\HorseRacing.xls" />
+    <None Include="BundleTransformer.Configuration.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Configurations\SPNames\_SpNameConfiguration.ttinclude" />
     <None Include="Configurations\TemplateFilemanager.CS.ttinclude" />
     <None Include="Content\bootstrap\js\.jshintrc" />
     <Content Include="Content\themes\theme29\index.less" />
     <Content Include="Content\themes\theme29\mixins.less" />
     <Content Include="Content\themes\theme29\variables.less" />
+    <Content Include="Content\Fanex.Result\fanex.result.less" />
     <None Include="Deployment.ignore" />
     <None Include="img\Slot\H0005\Thumbs.db" />
     <None Include="img\Slot\H0006\Thumbs.db" />
@@ -4667,7 +4692,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
+      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -10,10 +10,10 @@
 
 namespace Fanex.Affiliate.Criteria
 {
-    using System.ComponentModel.DataAnnotations;
-    using System.Web.Mvc;
     using Fanex.Data.Repository;
     using Resources;
+    using System.ComponentModel.DataAnnotations;
+    using System.Web.Mvc;
 
     /// <summary>
     /// Change Password Criteria.
