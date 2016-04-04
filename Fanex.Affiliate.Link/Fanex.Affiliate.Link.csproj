@@ -259,8 +259,8 @@
     <Content Include="Configurations\WebConfigs\Web.unobet.uat.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Configurations\WebConfigs\Web.be7th.production.config" />
-    <None Include="Configurations\WebConfigs\Web.be7th.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.be7th.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.be7th.uat.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -289,7 +289,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2014/3/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
+      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/3/28" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
