@@ -9,6 +9,7 @@
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.m8bola.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.itcbet.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.goobet.production.xml
+// Fanex.Affiliate.Site\Configurations\SPNames\SpName.be7th.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.be7.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.athena000.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.aoncash.production.xml
@@ -21,6 +22,7 @@
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.m8bola.uat.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.itcbet.uat.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.goobet.uat.xml
+// Fanex.Affiliate.Site\Configurations\SPNames\SpName.be7th.uat.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.be7.uat.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.athena000.uat.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.aoncash.uat.xml
