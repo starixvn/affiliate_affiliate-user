@@ -1,6 +1,6 @@
 ﻿@{
     ViewBag.Title = Lang.AccountOverview;
-    ViewBag.Theme = "theme" + AppSettings.Theme;
+    ViewBag.Theme = AppSettings.Theme;
     Layout = @String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
     var LangList = AppSettings.BaseLanguages;
 }

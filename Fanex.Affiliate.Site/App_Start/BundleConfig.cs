@@ -41,7 +41,7 @@ namespace Fanex.Affiliate.Site
                 Transforms = { new CssTransformer(), new CssMinify() },
                 Orderer = new NullOrderer()
             }
-            .Include(string.Format("~/Content/themes/theme{0}/index.less", AppSettings.Theme)));
+            .Include(string.Format("~/Content/themes/{0}/index.less", AppSettings.Theme)));
 
             bundles.Add(new ScriptBundle("~/js/core")
                 .Include("~/Scripts/libraries/head.js")
@@ -78,7 +78,7 @@ namespace Fanex.Affiliate.Site
                 Transforms = { new CssTransformer(), new CssMinify() },
                 Orderer = new NullOrderer()
             }
-            .Include("~/Content/themes/base/jquery-ui.css"));
+            .Include("~/Content/themes/_base/jquery-ui.css"));
 
             bundles.Add(new ScriptBundle("~/js/jquery")
                 .Include("~/Scripts/libraries/jquery-1.10.1.js")
@@ -102,8 +102,8 @@ namespace Fanex.Affiliate.Site
                 Transforms = { new CssTransformer(), new CssMinify() },
                 Orderer = new NullOrderer()
             }
-            .Include("~/Content/themes/base/jquery.ui.datepicker.css")
-            .Include("~/Content/themes/base/calendar.less"));
+            .Include("~/Content/themes/_base/jquery.ui.datepicker.css")
+            .Include("~/Content/themes/_base/calendar.less"));
         }
 
         #endregion Components
@@ -138,7 +138,7 @@ namespace Fanex.Affiliate.Site
                 Transforms = { new CssTransformer(), new CssMinify() },
                 Orderer = new NullOrderer()
             }
-            .Include("~/Content/themes/base/jquery.ui.tooltip.css"));
+            .Include("~/Content/themes/_base/jquery.ui.tooltip.css"));
 
             bundles.Add(new ScriptBundle("~/js/changepwd")
                 .Include("~/Scripts/site/change-password.js"));
