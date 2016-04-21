@@ -26,7 +26,6 @@ namespace Fanex.Affiliate.Controllers
     /// <summary>
     /// Base Controller.
     /// </summary>
-    [CheckUMFilter]
     public class BaseController : Controller
     {
         protected readonly string FormTokenName = "SecureLoginToken";

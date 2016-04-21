@@ -15,12 +15,14 @@ namespace Fanex.Affiliate.Controllers
     using System.Web.Mvc;
     using Configurations;
     using Criteria;
+    using ONEbook.UM.Filters;
     using Services;
     using Web;
 
     /// <summary>
     /// Shared Controller.
     /// </summary>
+    [CheckUMFilter]
     public class SharedController : BaseController
     {
         #region Services

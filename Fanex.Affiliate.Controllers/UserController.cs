@@ -23,6 +23,7 @@ namespace Fanex.Affiliate.Controllers
     using Criteria;
     using DTO;
     using Enumerations;
+    using ONEbook.UM.Filters;
     using Resources;
     using Services;
     using Utilities;
@@ -61,6 +62,7 @@ namespace Fanex.Affiliate.Controllers
         /// </summary>
         /// <returns>Return view.</returns>
         [HttpGet]
+        [CheckUMFilter]
         public ActionResult Index()
         {
             var model = new UserViewModel();
@@ -73,6 +75,7 @@ namespace Fanex.Affiliate.Controllers
         /// <param name="user">User view model.</param>
         /// <returns>Return view.</returns>
         [HttpPost]
+        [CheckUMFilter]
         public ActionResult Index(UserViewModel user)
         {
             if (user.IsValid(ModelState))
@@ -238,6 +241,7 @@ namespace Fanex.Affiliate.Controllers
         /// </summary>
         /// <returns>Return view.</returns>
         [HttpGet]
+        [CheckUMFilter]
         public ActionResult SignUpSuccess()
         {
             return View();
@@ -256,6 +260,7 @@ namespace Fanex.Affiliate.Controllers
         /// <param name="loginToken">Login token.</param>
         /// <returns>Return view.</returns>
         [HttpPost]
+        [CheckUMFilter]
         public ActionResult SignIn(string username, string password, string captcha, string loginToken)
         {
             var result = new ResultViewModel();
@@ -384,6 +389,7 @@ namespace Fanex.Affiliate.Controllers
         /// </summary>
         /// <returns>Return view.</returns>
         [HttpPost]
+        [CheckUMFilter]
         public ActionResult ReCheckIn()
         {
             var result = new ResultViewModel();
@@ -465,6 +471,7 @@ namespace Fanex.Affiliate.Controllers
         /// </summary>
         /// <returns>Return view.</returns>
         [HttpGet]
+        [CheckUMFilter]
         public ActionResult ForgetPassword()
         {
             return View();
@@ -476,6 +483,7 @@ namespace Fanex.Affiliate.Controllers
         /// <param name="criteria">Forget password criteria.</param>
         /// <returns>Return view.</returns>
         [HttpPost]
+        [CheckUMFilter]
         public ActionResult ForgetPassword(ForgetPasswordCriteria criteria)
         {
             var result = new ResultViewModel();
@@ -584,6 +592,7 @@ namespace Fanex.Affiliate.Controllers
         /// <param name="vid">Validation code.</param>
         /// <returns>Return view.</returns>
         [HttpGet]
+        [CheckUMFilter]
         public ActionResult RecoverPassword(string uid, string vid)
         {
             int affId;
@@ -679,6 +688,7 @@ namespace Fanex.Affiliate.Controllers
         /// <param name="result">Result parameter.</param>
         /// <returns>Return view.</returns>
         [HttpGet]
+        [CheckUMFilter]
         public ActionResult ForgetPasswordResults(int result = 0)
         {
             ViewBag.Result = result == 1;
@@ -696,6 +706,7 @@ namespace Fanex.Affiliate.Controllers
         /// <param name="criteria">Admin login criteria.</param>
         /// <returns>Return view.</returns>
         [HttpGet]
+        [CheckUMFilter]
         public ActionResult AdminLogin(AdminLoginCriteria criteria)
         {
             if (ModelState.IsValid)

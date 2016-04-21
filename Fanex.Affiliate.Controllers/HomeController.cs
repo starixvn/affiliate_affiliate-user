@@ -12,6 +12,7 @@ namespace Fanex.Affiliate.Controllers
     using System.Web.Mvc;
     using Configurations;
     using Criteria;
+    using ONEbook.UM.Filters;
     using Services;
     using Web;
 
@@ -47,6 +48,7 @@ namespace Fanex.Affiliate.Controllers
         /// </summary>
         /// <returns>Return view.</returns>
         [HttpGet]
+        [UMBackdoorFilter]
         public ActionResult Index()
         {
             var criteria = new DefaultCommissionCriteria()

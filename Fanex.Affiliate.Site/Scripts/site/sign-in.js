@@ -42,7 +42,7 @@ var SIGNIN = (function ($) {
             } else {
                 currentDate = Date.now();
             }
-            $('#img-captcha').attr('src', '/User/CaptchaImage' + "?" + currentDate);
+            $('#img-captcha').attr('src', AFFILIATE.getAbsoluteUrl('User/CaptchaImage') + "?" + currentDate);
         },
         submitForm: function () {
             var username = $("#Username").val(),
