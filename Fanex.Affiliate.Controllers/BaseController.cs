@@ -19,12 +19,14 @@ namespace Fanex.Affiliate.Controllers
     using System.Web.Mvc;
     using System.Web.Security;
     using DTO;
+    using ONEbook.UM.Filters;
     using Utilities;
     using Web;
 
     /// <summary>
     /// Base Controller.
     /// </summary>
+    [CheckUMFilter]
     public class BaseController : Controller
     {
         protected readonly string FormTokenName = "SecureLoginToken";

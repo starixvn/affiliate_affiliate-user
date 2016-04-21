@@ -11,32 +11,35 @@ namespace Fanex.Affiliate.Controllers
 {
     using System.Web.Mvc;
     using Configurations;
-    using Fanex.Affiliate.Web.Filter;
-    using Services;
+    using ONEbook.UM.Services;
 
     /// <summary>
     /// Notify Controller.
     /// </summary>
     public class NotifyController : Controller
     {
+        private readonly IMaintenanceService _maintenanceService;
+
+        public NotifyController(IMaintenanceService maintenanceService)
+        {
+            _maintenanceService = maintenanceService;
+        }
+
         /// <summary>
         /// Action Notify.
         /// </summary>
         /// <returns>Return view.</returns>
         [HttpGet]
-        [Undermaintenance(false)]
         public ActionResult Index()
         {
-            string startTime;
-            string endTime;
-
-            if (!UnderMaintenanceService.GetDownTime(out startTime, out endTime))
+            var underMaintenanceTime = _maintenanceService.GetUnderMaintenanceTime();
+            if (!underMaintenanceTime.IsUnderMaintenanceTime)
             {
                 return RedirectToAction("Index", "Home");
             }
 
-            ViewBag.StartTime = startTime;
-            ViewBag.EndTime = endTime;
+            ViewBag.StartTime = underMaintenanceTime.From;
+            ViewBag.EndTime = underMaintenanceTime.To;
             ViewBag.AffCustomerServiceUrl = AppSettings.AffCustomerServiceUrl;
             ViewBag.ContactEmail = string.Format(
                 "mailto:{0}?subject=Enquiries%20sent%20from%20{1}%20website", 
@@ -51,7 +54,6 @@ namespace Fanex.Affiliate.Controllers
         /// </summary>
         /// <returns>Return view.</returns>
         [HttpGet]
-        [Undermaintenance(false)]
         public ActionResult Error()
         {
             return View();

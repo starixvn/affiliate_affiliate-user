@@ -15,9 +15,7 @@ namespace Fanex.Affiliate.Controllers
     using System;
     using System.Globalization;
     using System.Net;
-    using System.Text;
     using System.Text.RegularExpressions;
-    using System.Web;
     using System.Web.Mvc;
     using System.Web.Routing;
     using System.Web.Security;
@@ -402,18 +400,6 @@ namespace Fanex.Affiliate.Controllers
                 result.Success = checkKickedOut;
                 result.Message = checkKickedOut ? Lang.MsgKickout : string.Empty;
                 result.ErrorMessage = "Expired";
-                DoSignOut();
-            }
-
-            string startTime;
-            string endTime;
-            var checkUm = UnderMaintenanceService.GetDownTime(out startTime, out endTime);
-
-            if (checkUm)
-            {
-                result.Success = checkKickedOut;
-                result.Message = "Undermaintenance";
-                result.ErrorMessage = "UM";
                 DoSignOut();
             }
 
