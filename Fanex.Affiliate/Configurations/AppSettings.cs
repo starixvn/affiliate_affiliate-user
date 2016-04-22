@@ -127,15 +127,7 @@ namespace Fanex.Affiliate.Configurations
                 return GetValue("MailContact");
             }
         }
-
-        public static string LBUrl
-        {
-            get
-            {
-                return GetValue("LBUrl");
-            }
-        }
-
+        
         public static bool IsTesting
         {
             get
@@ -143,23 +135,7 @@ namespace Fanex.Affiliate.Configurations
                 return GetValue("Environment").Equals("Production", StringComparison.OrdinalIgnoreCase) == false;
             }
         }
-
-        public static DateTime UmStartTime
-        {
-            get
-            {
-                return Convert.ToDateTime(GetValue("UM_StartTime"));
-            }
-        }
-
-        public static DateTime UMEndTime
-        {
-            get
-            {
-                return Convert.ToDateTime(GetValue("UM_EndTime"));
-            }
-        }
-
+        
         public static string AffCustomerServiceUrl
         {
             get

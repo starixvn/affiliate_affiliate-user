@@ -331,6 +331,17 @@ var AFFILIATE = (function ($) {
             }
 
             return !!input;
+        },
+
+        isUndermaintenance: function (xhr) {
+            var undermaintenanceCode = 999999;
+
+            if (xhr) {
+                var result = $.parseJSON(xhr.responseText);
+                return result.code === undermaintenanceCode;
+            }
+
+            return false;
         }
     };
 })(jQuery);
@@ -367,6 +378,12 @@ $(function () {
     });
 
     $.datepicker.setDefaults($.datepicker.regional[$('#selectedLang').attr('class')]);
+
+    $(document).ajaxError(function (event, xhr) {
+        if (AFFILIATE.isUndermaintenance(xhr)) {
+            top.location.href = AFFILIATE.getAbsoluteUrl("Notify");
+        }
+    });
 });
 
 // First, checks if it isn't implemented yet.

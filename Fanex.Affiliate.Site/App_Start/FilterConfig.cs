@@ -23,7 +23,6 @@ namespace Fanex.Affiliate.Site
         /// <param name="filters">Global Filter Collection.</param>
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new UndermaintenanceAttribute());
         }
     }
 }

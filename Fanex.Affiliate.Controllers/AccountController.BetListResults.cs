@@ -21,6 +21,7 @@ namespace Fanex.Affiliate.Controllers
     using DTO.BetList;
     using Enumerations;
     using Fanex.Affiliate.Web;
+    using ONEbook.UM.Filters;
     using Utilities;
     using ViewModels;
     using Web.Filter;

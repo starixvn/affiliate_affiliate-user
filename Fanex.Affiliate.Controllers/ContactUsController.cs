@@ -15,6 +15,7 @@ namespace Fanex.Affiliate.Controllers
     using System.Web.Mvc;
     using Configurations;
     using Criteria;
+    using ONEbook.UM.Filters;
     using Resources;
     using Services;
     using Utilities;
@@ -25,6 +26,7 @@ namespace Fanex.Affiliate.Controllers
     /// <summary>
     /// Contact us Controller.
     /// </summary>
+    [CheckUMFilter]
     public class ContactUsController : BaseController
     {
         #region Services

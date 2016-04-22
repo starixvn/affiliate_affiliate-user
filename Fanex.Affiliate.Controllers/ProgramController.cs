@@ -10,10 +10,12 @@
 namespace Fanex.Affiliate.Controllers
 {
     using System.Web.Mvc;
+    using ONEbook.UM.Filters;
 
     /// <summary>
     /// Program Controller.
     /// </summary>
+    [CheckUMFilter]
     public class ProgramController : BaseController
     {
         /// <summary>

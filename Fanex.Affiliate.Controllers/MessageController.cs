@@ -12,6 +12,7 @@ namespace Fanex.Affiliate.Controllers
     using System.Web.Mvc;
     using Configurations;
     using Criteria;
+    using ONEbook.UM.Filters;
     using Services;
     using ViewModels;
     using Web;
@@ -22,6 +23,7 @@ namespace Fanex.Affiliate.Controllers
     /// Message Controller.
     /// </summary>
     [Authorization]
+    [CheckUMFilter]
     public class MessageController : BaseController
     {
         #region Service

@@ -23,6 +23,7 @@ namespace Fanex.Affiliate.Controllers
     using Criteria;
     using DTO;
     using Enumerations;
+    using ONEbook.UM.Filters;
     using Resources;
     using Services;
     using StackExchange.Profiling;
@@ -37,6 +38,7 @@ namespace Fanex.Affiliate.Controllers
     /// </summary>
     [Authorization]
     [RoleBasedMenu]
+    [CheckUMFilter]
     public partial class AccountController : BaseController
     {
         #region Services

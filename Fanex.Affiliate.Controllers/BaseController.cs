@@ -19,6 +19,7 @@ namespace Fanex.Affiliate.Controllers
     using System.Web.Mvc;
     using System.Web.Security;
     using DTO;
+    using ONEbook.UM.Filters;
     using Utilities;
     using Web;
 

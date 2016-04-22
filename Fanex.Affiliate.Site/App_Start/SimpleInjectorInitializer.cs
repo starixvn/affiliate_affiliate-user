@@ -11,6 +11,8 @@ namespace Fanex.Affiliate.Site
 {
     using System.Reflection;
     using System.Web.Mvc;
+    using ONEbook.UM.Services;
+    using ONEbook.UM.Services.Impl;
     using Services;
     using SimpleInjector;
     using SimpleInjector.Integration.Web.Mvc;
@@ -57,6 +59,7 @@ namespace Fanex.Affiliate.Site
             container.Register<IMessageService, MessageService>();
             container.Register<IHotNewsService, HotNewsService>();
             container.Register<IBetListService, BetListService>();
+            container.Register<IMaintenanceService, MaintenanceService>();
         }
     }
 }
