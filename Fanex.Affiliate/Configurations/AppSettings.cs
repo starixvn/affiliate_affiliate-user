@@ -127,15 +127,7 @@ namespace Fanex.Affiliate.Configurations
                 return GetValue("MailContact");
             }
         }
-
-        public static string LBUrl
-        {
-            get
-            {
-                return GetValue("LBUrl");
-            }
-        }
-
+        
         public static bool IsTesting
         {
             get
