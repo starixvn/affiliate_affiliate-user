@@ -114,7 +114,41 @@ var BetList = (function ($) {
                 divEvent.html("");
             }
         },
+        showNewParlayDetail: function (transId, transIndex, refNo, handicap1, handicap2, betcheck, betteam) {
+            var divEvent = $('#combinationOfferName_' + transId + transIndex);
+            divEvent.addClass("mx-parlay"); //to make line-through for void-parlay-ticket
+            var url = AFFILIATE.getAbsoluteUrl('Account/NewBetListParlay');
+            url = QueryString.setParam(url, "transId", transId);
+            url = QueryString.setParam(url, "refno", refNo);
+            url = QueryString.setParam(url, "handicap1", handicap1);
+            url = QueryString.setParam(url, "handicap2", handicap2);
+            url = QueryString.setParam(url, "betcheck", betcheck);
+            url = QueryString.setParam(url, "betteam", betteam);
+            if (divEvent.css("display") !== 'none') {
+                $.ajax({
+                    type: "GET",
+                    contentType: 'application/json',
+                    dataType: "text",
+                    cache: false,
+                    url: url,
+                    error: function () {
+                    },
+                    success: function (response) {
+                        divEvent.html(response);
+                        divEvent.css("display", "");
+                    },
+                    beforeSend: function () {
 
+                    },
+                    complete: function () {
+                    }
+                });
+            }
+            else {
+                divEvent.css("display", "none");
+                divEvent.html("");
+            }
+        },
         showSystemParlayDetail: function (transId, refNo, betId, custId, betTeam, baseCurrency) {
             if (transId === 0) {
                 return;
@@ -202,4 +236,5 @@ var showCombMP = function (transId, index) {
 
 var showCombMPDetail = BetList.showSystemParlayDetail;
 var showRnGCasinoDetails = BetList.showRnGCasinoDetails;
-var showAGCasinoDetails = BetList.showAGCasinoDetails;
+var showAGCasinoDetails = BetList.showAGCasinoDetails;var showCombMPDetail = BetList.showSystemParlayDetail;
+var showNewCombMP = BetList.showNewParlayDetail;
