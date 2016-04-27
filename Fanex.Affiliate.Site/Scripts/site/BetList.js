@@ -115,16 +115,18 @@ var BetList = (function ($) {
             }
         },
         showNewParlayDetail: function (transId, transIndex, refNo, handicap1, handicap2, betcheck, betteam) {
-            var divEvent = $('#combinationOfferName_' + transId + transIndex);
-            divEvent.addClass("mx-parlay"); //to make line-through for void-parlay-ticket
-            var url = AFFILIATE.getAbsoluteUrl('Account/NewBetListParlay');
-            url = QueryString.setParam(url, "transId", transId);
-            url = QueryString.setParam(url, "refno", refNo);
-            url = QueryString.setParam(url, "handicap1", handicap1);
-            url = QueryString.setParam(url, "handicap2", handicap2);
-            url = QueryString.setParam(url, "betcheck", betcheck);
-            url = QueryString.setParam(url, "betteam", betteam);
-            if (divEvent.css("display") !== 'none') {
+            var $detaillDiv = $('#divEvent_' + transId + "" + transIndex);
+            var $nameDiv = $('#combinationOfferName_' + transId + transIndex);
+            $detaillDiv.addClass("mx-parlay"); //to make line-through for void-parlay-ticket
+
+            if ($detaillDiv.is(':hidden')) {
+                var url = AFFILIATE.getAbsoluteUrl('Account/NewBetListParlay');
+                url = QueryString.setParam(url, "transId", transId);
+                url = QueryString.setParam(url, "refno", refNo);
+                url = QueryString.setParam(url, "handicap1", handicap1);
+                url = QueryString.setParam(url, "handicap2", handicap2);
+                url = QueryString.setParam(url, "betcheck", betcheck);
+                url = QueryString.setParam(url, "betteam", betteam);
                 $.ajax({
                     type: "GET",
                     contentType: 'application/json',
@@ -134,8 +136,8 @@ var BetList = (function ($) {
                     error: function () {
                     },
                     success: function (response) {
-                        divEvent.html(response);
-                        divEvent.css("display", "");
+                        $detaillDiv.html(response).show();
+                        $nameDiv.hide();
                     },
                     beforeSend: function () {
 
@@ -145,8 +147,8 @@ var BetList = (function ($) {
                 });
             }
             else {
-                divEvent.css("display", "none");
-                divEvent.html("");
+                $detaillDiv.hide().html("");
+                $nameDiv.show();
             }
         },
         showSystemParlayDetail: function (transId, refNo, betId, custId, betTeam, baseCurrency) {

@@ -173,7 +173,7 @@ var AFFILIATE = (function ($) {
             return AFFILIATE.currentOpenDialog;
         },
         openDialogFrame: function (url, title, options) {
-            var frameHtml = '<iframe src="' + url + '" width="100%" height="99%" frameborder="0" border="0"></iframe>';
+            var frameHtml = '<iframe src="' + url + '" width="100%" height="98%" frameborder="0" border="0"></iframe>';
             var frame = $("#aff-dialog-frame");
 
             if (frame.length > 0) {
