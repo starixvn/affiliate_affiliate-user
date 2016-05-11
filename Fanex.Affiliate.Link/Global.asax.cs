@@ -34,8 +34,20 @@
                 return;
             }
 
-            var message = exception.Message + Environment.NewLine + exception.StackTrace;
-            LogService.Error("Affiliate Link Error!" + Environment.NewLine + message + Environment.NewLine + Request.Url);
-       }
+            string message = exception.Message +
+                             "\r\nSOURCE: " + exception.Source +
+                             "\r\nDOMAIN: " + Request.Headers["Host"] +
+                             "\r\nFORM: " + string.Join("~", Request.Form) +
+                             "\r\nUrl: " + Request.RawUrl +
+                             "\r\nQUERYSTRING: " + string.Join("~", Request.QueryString) +
+                             "\r\nTARGETSITE: " + exception.TargetSite +
+                             "\r\nUrlReferrer: " + Request.UrlReferrer +
+                             "\r\nSTACKTRACE: " + exception.StackTrace +
+                             "\r\nBrowser:" + Request.Browser.Type.ToString() +
+                             "\r\nBrowserVer:" + Request.Browser.Version.ToString() +
+                             "\r\nAgent:" + Request.UserAgent.ToString();
+
+            LogService.Error("Affiliate Link Error!" + Environment.NewLine + message, exception);
+        }
     }
 }
