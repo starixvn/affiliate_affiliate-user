@@ -103,9 +103,10 @@ var BetList = (function ($) {
                         divEvent.css("display", "");
                     },
                     beforeSend: function () {
-
+                        $.blockUI();
                     },
                     complete: function () {
+                        $.unblockUI();
                     }
                 });
             }
@@ -140,9 +141,10 @@ var BetList = (function ($) {
                         $nameDiv.hide();
                     },
                     beforeSend: function () {
-
+                        $.blockUI();
                     },
                     complete: function () {
+                        $.unblockUI();
                     }
                 });
             }
