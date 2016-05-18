@@ -15,7 +15,7 @@ var paging = function () {
 };
 
 $(window).load(function () {
-    var pagingControl = new paging();
+    var pagingControl = new paging(); // jshint ignore:line
     var currentPage = parseInt($("div.paging-info input.pagingCurrent").val(), 10);
 
     $("div.paging-info input.pagingFirst").click(function () {

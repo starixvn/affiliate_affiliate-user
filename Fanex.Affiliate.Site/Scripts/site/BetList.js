@@ -1,5 +1,5 @@
 ﻿/* global AFFILIATE, QueryString */
-/* exported showCombMP, showCombMPDetail, showMP, ViewResult */
+/* exported showCombMP, showCombMPDetail, showMP, ViewResult, showNewCombMP */
 "use strict";
 
 var BetList = (function ($) {
