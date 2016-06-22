@@ -1,14 +1,4 @@
-﻿// ----------------------------------------------------------------------
-// <copyright file="BundleConfig.cs" company="Nexcel Solutions Vietnam">
-//     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// ------------------------------------------------------------------------
-// <history>
-//   <change who="Long.Luu" date="2014/03/27">Created</change>
-//   <change who="" date=""></change>
-// </history>
-
-namespace Fanex.Affiliate.Site
+﻿namespace Fanex.Affiliate.Site
 {
     using System.Web.Optimization;
     using BundleTransformer.Core.Orderers;

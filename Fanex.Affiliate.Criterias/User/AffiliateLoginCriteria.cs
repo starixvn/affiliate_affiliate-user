@@ -1,13 +1,4 @@
-﻿// --------------------------------------------------------------------------
-// <copyright file="AffiliateLoginCriteria.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// --------------------------------------------------------------------------
-// <history>
-//   <change who="Kaden.Trinh" date="2013.05.30">Created</change>
-// </history>
-
-namespace Fanex.Affiliate.Criteria
+﻿namespace Fanex.Affiliate.Criteria
 {
     using System.Web.Mvc;
     using Fanex.Data.Repository;

@@ -1,13 +1,4 @@
-﻿// --------------------------------------------------------------------------
-// <copyright file="IServiceWrapper.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// --------------------------------------------------------------------------
-// <history>
-//   <change who="Long.Luu" date="2013.07.04">call Taiwan side's apis</change>
-// </history>
-
-namespace Fanex.Affiliate.Services
+﻿namespace Fanex.Affiliate.Services
 {
     using System;
     using System.Xml.Linq;

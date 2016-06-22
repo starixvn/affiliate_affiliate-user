@@ -1,14 +1,4 @@
-﻿// ----------------------------------------------------------------------
-// <copyright file="ReferrersStatisticsDetail.cs" company="Nexcel Solutions Vietnam">
-//     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// ------------------------------------------------------------------------
-// <history>
-//   <change who="Jeff.Nguyen" date="2013/07/02">Created</change>
-//   <change who="" date=""></change>
-// </history>
-
-namespace Fanex.Affiliate.DTO
+﻿namespace Fanex.Affiliate.DTO
 {
     /// <summary>
     /// Referrers Statistics Detail.

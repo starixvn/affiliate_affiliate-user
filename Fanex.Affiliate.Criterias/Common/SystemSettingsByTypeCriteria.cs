@@ -1,14 +1,4 @@
-﻿// ----------------------------------------------------------------------
-// <copyright file="SystemSettingsByTypeCriteria.cs" company="Nexcel Solutions Vietnam">
-//     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// ------------------------------------------------------------------------
-// <history>
-//   <change who="Long.Luu" date="2014/03/20">Created</change>
-//   <change who="" date=""></change>
-// </history>
-
-namespace Fanex.Affiliate.Criteria
+﻿namespace Fanex.Affiliate.Criteria
 {
     using Fanex.Data.Repository;
 

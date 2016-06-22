@@ -1,13 +1,4 @@
-﻿// --------------------------------------------------------------------------
-// <copyright file="HotNewsCriteria.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// --------------------------------------------------------------------------
-// <history>
-//   <change who="Kaden.Trinh" date="2013.06.10">Created and add Properties</change>
-// </history>
-
-namespace Fanex.Affiliate.Criteria
+﻿namespace Fanex.Affiliate.Criteria
 {
     using Fanex.Data.Repository;
 

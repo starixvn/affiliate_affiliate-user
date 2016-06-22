@@ -1,13 +1,4 @@
-﻿// --------------------------------------------------------------------------
-// <copyright file="UserViewModel.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// --------------------------------------------------------------------------
-// <history>
-//   <change who="Johnny.Trinh" date="2013.06.24">Created</change>
-// </history>
-
-namespace Fanex.Affiliate.ViewModels
+﻿namespace Fanex.Affiliate.ViewModels
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;

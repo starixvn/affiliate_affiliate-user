@@ -1,14 +1,4 @@
-﻿// ----------------------------------------------------------------------
-// <copyright file="PaymentCancelCriteria.cs" company="Nexcel Solutions Vietnam">
-//     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// ------------------------------------------------------------------------
-// <history>
-//   <change who="Long.Luu" date="2013/07/03">Created</change>
-//   <change who="" date=""></change>
-// </history>
-
-namespace Fanex.Affiliate.Criteria
+﻿namespace Fanex.Affiliate.Criteria
 {
     using System;
     using Fanex.Data.Repository;

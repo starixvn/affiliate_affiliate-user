@@ -1,14 +1,4 @@
-﻿// ----------------------------------------------------------------------
-// <copyright file="Defaults.cs" company="Nexcel Solutions Vietnam">
-//     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// ------------------------------------------------------------------------
-// <history>
-//   <change who="Long.Luu" date="2014/10/06">Created</change>
-//   <change who="" date=""></change>
-// </history>
-
-namespace Fanex.Affiliate.Web.Pager
+﻿namespace Fanex.Affiliate.Web.Pager
 {
     /// <summary>
     /// The static Defaults class allows you to set Pager defaults for the entire application.

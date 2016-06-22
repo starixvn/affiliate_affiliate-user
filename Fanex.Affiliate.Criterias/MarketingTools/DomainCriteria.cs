@@ -1,13 +1,4 @@
-﻿// -----------------------------------------------------------------------
-// <copyright file="DomainCriteria.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// -----------------------------------------------------------------------
-// <history>
-//   <change who="Muller.Nguyen" date="2013.07.01">Created</change>
-// </history>
-
-namespace Fanex.Affiliate.Criteria
+﻿namespace Fanex.Affiliate.Criteria
 {
     using Fanex.Data.Repository;
 

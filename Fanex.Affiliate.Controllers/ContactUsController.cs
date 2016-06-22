@@ -1,14 +1,4 @@
-﻿// --------------------------------------------------------------------------
-// <copyright file="ContactUsController.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// --------------------------------------------------------------------------
-// <history>
-//   <change who="Kaden.Trinh" date="2013.05.29">Created</change>
-//   <change who="Jeff.Nguyen" date="2013.07.04">Funtion capcha</change>
-// </history>
-
-namespace Fanex.Affiliate.Controllers
+﻿namespace Fanex.Affiliate.Controllers
 {
     using System;
     using System.Web;

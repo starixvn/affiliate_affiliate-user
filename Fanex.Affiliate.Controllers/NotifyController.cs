@@ -1,13 +1,4 @@
-﻿// ----------------------------------------------------------------------
-// <copyright file="NotifyController.cs" company="Nexcel Solutions Vietnam">
-//     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// ------------------------------------------------------------------------
-// <history>
-//   <change who="Long.Luu" date="2013/08/19">Created and add Properties</change>
-// </history>
-
-namespace Fanex.Affiliate.Controllers
+﻿namespace Fanex.Affiliate.Controllers
 {
     using System.Web.Mvc;
     using Configurations;

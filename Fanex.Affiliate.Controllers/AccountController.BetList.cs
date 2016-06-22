@@ -1,14 +1,4 @@
-﻿// ----------------------------------------------------------------------
-// <copyright file="AccountController.BetList.cs" company="Nexcel Solutions Vietnam">
-//     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// ------------------------------------------------------------------------
-// <history>
-//   <change who="Long.Luu" date="2013/12/03">Created</change>
-//   <change who="" date=""></change>
-// </history>
-
-namespace Fanex.Affiliate.Controllers
+﻿namespace Fanex.Affiliate.Controllers
 {
     using System;
     using System.Collections.Generic;

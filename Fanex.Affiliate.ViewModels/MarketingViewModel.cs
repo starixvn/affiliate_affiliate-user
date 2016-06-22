@@ -1,13 +1,4 @@
-﻿// -----------------------------------------------------------------------
-// <copyright file="MarketingViewModel.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// -----------------------------------------------------------------------
-// <history>
-//   <change who="Muller.Nguyen" date="2013.07.01">Created and add Properties</change>
-// </history>
-
-namespace Fanex.Affiliate.ViewModels
+﻿namespace Fanex.Affiliate.ViewModels
 {
     using System.Collections.Generic;
     using DTO;

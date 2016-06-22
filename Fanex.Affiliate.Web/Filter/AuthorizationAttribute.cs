@@ -1,13 +1,4 @@
-﻿// --------------------------------------------------------------------------
-// <copyright file="AuthorizationAttribute.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// --------------------------------------------------------------------------
-// <history>
-//   <change who="Kaden.Trinh" date="2013.07.05">Created</change>
-// </history>
-
-namespace Fanex.Affiliate.Web.Filter
+﻿namespace Fanex.Affiliate.Web.Filter
 {
     using System;
     using System.Net;

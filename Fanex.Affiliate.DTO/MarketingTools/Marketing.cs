@@ -1,13 +1,4 @@
-﻿// --------------------------------------------------------------------------
-// <copyright file="Marketing.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// --------------------------------------------------------------------------
-// <history>
-//   <change who="Muller.Nguyen" date="2013.06.28">Created</change>
-// </history>
-
-namespace Fanex.Affiliate.DTO
+﻿namespace Fanex.Affiliate.DTO
 {
     /// <summary>
     /// Marketing data object.

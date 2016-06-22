@@ -1,14 +1,4 @@
-﻿// --------------------------------------------------------------------------
-// <copyright file="ISystemSettingService.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// --------------------------------------------------------------------------
-// <history>
-//   <change who="Kaden.Trinh" date="2013.06.25">Created</change>
-//   <change who="Muller.Nguyen" date="2013.07.04">Add properties ListCurrency</change>
-// </history>
-
-namespace Fanex.Affiliate.Services
+﻿namespace Fanex.Affiliate.Services
 {
     using System.Collections.Generic;
     using System.Data;

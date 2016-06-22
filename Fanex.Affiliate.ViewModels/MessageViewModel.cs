@@ -1,13 +1,4 @@
-﻿// --------------------------------------------------------------------------
-// <copyright file="MessageViewModel.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// --------------------------------------------------------------------------
-// <history>
-//   <change who="Brian.Dinh" date="2013.07.03">Created</change>
-// </history>
-
-namespace Fanex.Affiliate.ViewModels
+﻿namespace Fanex.Affiliate.ViewModels
 {
     using System;
     using System.Collections.Generic;

@@ -1,14 +1,4 @@
-﻿// --------------------------------------------------------------------------
-// <copyright file="PaymentDataAccess.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// --------------------------------------------------------------------------
-// <history>
-//   <change who="Kaden.Trinh" date="2013.06.03">Created</change>
-//   <change who="Kaden.Trinh" date="2013.06.13">Get list payment request</change>
-// </history>
-
-namespace Fanex.Affiliate.DataAccess
+﻿namespace Fanex.Affiliate.DataAccess
 {
     using System;
     using Criteria;
