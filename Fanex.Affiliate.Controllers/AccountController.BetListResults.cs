@@ -226,7 +226,7 @@
         /// <param name="gameTypeId">The game type Id.</param>
         /// <returns>The game type id.</returns>
         [SuppressMessage(
-              "StyleCop.CSharp.Nexcel.NexcelCustomRules",
+              "StyleCop.CSharp.StylecopPlus.Rules",
               "SP2101:MethodMustNotContainMoreLinesThan",
               Justification = "Reviewed. Suppression is OK here.")]
         private string GetGroupByGameTypeId(int gameTypeId)
