@@ -71,8 +71,8 @@
             .Include("~/Content/themes/_base/jquery-ui.css"));
 
             bundles.Add(new ScriptBundle("~/js/jquery")
-                .Include("~/Scripts/libraries/jquery-1.10.1.js")
-                .Include("~/Scripts/libraries/jquery-ui-1.10.3.js")
+                .Include("~/Scripts/libraries/jquery-1.11.3.min.js")
+                .Include("~/Scripts/libraries/jquery-ui.min.js")
                 .Include("~/Scripts/libraries/jquery-ui-languages.js")
                 .Include("~/Scripts/libraries/jquery.formattyping.js")
                 .Include("~/Scripts/libraries/jquery.blockUI.js")
