@@ -18,7 +18,7 @@ var DailyEarningsDetails = (function ($) {
                     $(this).attr('data-domain-affcurrency'));
                 var queryString = jQuery.param(param);
                 var url = AFFILIATE.getAbsoluteUrl("Account/BetList?" + queryString);
-                AFFILIATE.openDialogFrame(url, popupTitle, { width: 1000, height: 600 });
+                AFFILIATE.openDialogFrame(url, popupTitle, { width: 1020, height: 600 });
             });
         }
     };

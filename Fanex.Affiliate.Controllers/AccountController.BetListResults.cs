@@ -11,7 +11,6 @@
     using DTO.BetList;
     using Enumerations;
     using Fanex.Affiliate.Web;
-    using ONEbook.UM.Filters;
     using Utilities;
     using ViewModels;
     using Web.Filter;
@@ -60,6 +59,14 @@
                 AppSession.Language,
                 criteria,
                 AppSession.Language);
+        }
+
+        [HttpPost]
+        public ActionResult RngCasinoSingleWalletResult(string refNo)
+        {
+            var affBetlistService = new AffBetlistService.AffiliateAPISoapClient();
+            var result = affBetlistService.GetRngCasinoSingleWalletResult(refNo);
+            return Content(result, "application/json");
         }
 
         #endregion BetList.Results
@@ -254,54 +261,71 @@
                 case (int)CasinoGameType.MiniBlackjack:
                 case (int)CasinoGameType.MiniCasinoHoldEm:
                     return "1";
+
                 case (int)CasinoGameType.TexasHoldEm:
                     return "1-1";
+
                 case (int)CasinoGameType.RedDog:
                 case (int)CasinoGameType.MiniRoulette:
                 case (int)CasinoGameType.FishPrawnCrab:
                 case (int)CasinoGameType.CardWheel:
                 case (int)CasinoGameType.FanTan:
                     return "2";
+
                 case (int)CasinoGameType.MoneySlot:
                 case (int)CasinoGameType.Engagement:
                 case (int)CasinoGameType.FoxForce5:
                 case (int)CasinoGameType.TattooArt:
                 case (int)CasinoGameType.MiniMoneySlot:
                     return "3";
+
                 case (int)CasinoGameType.Champions:
                 case (int)CasinoGameType.WaterMargin:
                     return "4";
+
                 case (int)CasinoGameType.WesternZodiac:
                     return "4-1";
+
                 case (int)CasinoGameType.MoneyWheel:
                     return "5";
+
                 case (int)CasinoGameType.JourneytotheWest:
                     return "6";
+
                 case (int)CasinoGameType.ChineseZodiac:
                     return "6-1";
+
                 case (int)CasinoGameType.JacksorBetter:
                     return "7-0";
+
                 case (int)CasinoGameType.JungleWild:
                 case (int)CasinoGameType.GodofProsperity:
                     return "7-1";
+
                 case (int)CasinoGameType.No4_LineJacksorBetter:
                 case (int)CasinoGameType.No25_LineJacksorBetter:
                 case (int)CasinoGameType.No50_LineJacksorBetter:
                     return "7-2";
+
                 case (int)CasinoGameType.No_10sOrBetter:
                     return "7-3";
+
                 case (int)CasinoGameType.MonkeyHiLo:
                 case (int)CasinoGameType.MahjongHiLo:
                     return "7-4";
+
                 case (int)CasinoGameType.KenoChinese:
                 case (int)CasinoGameType.KenoCamera:
                     return "7-5";
+
                 case (int)CasinoGameType.TurfKing:
                     return "7-6";
+
                 case (int)CasinoGameType.MamakCorner:
                 case (int)CasinoGameType.WinterSlot:
                 case (int)CasinoGameType.DragonSlot:
                     return "7-8";
+
                 case (int)CasinoGameType.MayaPush:
                 case (int)CasinoGameType.Knock2Eggs:
                 case (int)CasinoGameType.HoHoHo:
@@ -310,10 +334,12 @@
                 case (int)CasinoGameType.FruitScratch:
                 case (int)CasinoGameType.FlamesofOlympics:
                     return "8";
+
                 case (int)CasinoGameType.PenaltyHat_Trick:
                 case (int)CasinoGameType.FancyScratch:
                 case (int)CasinoGameType.LoveStory:
                     return "9";
+
                 default:
                     return string.Empty;
             }
