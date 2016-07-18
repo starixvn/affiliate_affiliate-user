@@ -1,15 +1,4 @@
-﻿// --------------------------------------------------------------------------
-// <copyright file="UserDataAccess.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// --------------------------------------------------------------------------
-// <history>
-//   <change who="Kaden.Trinh" date="2013.06.05">Created</change>
-//   <change who="Kaden.Trinh" date="2013.07.01">Register aff, get affiliate info, update aff</change>
-//   <change who="Leo.Vo" date="2013.07.03">Login from admin site</change>
-// </history>
-
-namespace Fanex.Affiliate.DataAccess
+﻿namespace Fanex.Affiliate.DataAccess
 {
     using System;
     using System.Linq;

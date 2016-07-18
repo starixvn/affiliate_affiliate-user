@@ -1,13 +1,4 @@
-﻿// -----------------------------------------------------------------------
-// <copyright file="BannerType.cs" company="Nexcel Solutions Vietnam">
-// TODO: Update copyright text.
-// </copyright>
-// -----------------------------------------------------------------------
-// <history>
-//   <change who="Muller.Nguyen" date="2013.06.28">Created</change>
-// </history>
-
-namespace Fanex.Affiliate.DTO
+﻿namespace Fanex.Affiliate.DTO
 {
     /// <summary>
     /// Banner Type.

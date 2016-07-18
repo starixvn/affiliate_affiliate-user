@@ -1,13 +1,4 @@
-﻿// --------------------------------------------------------------------------
-// <copyright file="SimpleInjectorInitializer.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// --------------------------------------------------------------------------
-// <history>
-//   <change who="Kaden.Trinh" date="2013.05.28">Define Simple Injector</change>
-// </history>
-
-namespace Fanex.Affiliate.Site
+﻿namespace Fanex.Affiliate.Site
 {
     using System.Reflection;
     using System.Web.Mvc;

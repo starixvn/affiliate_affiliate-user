@@ -1,17 +1,4 @@
-﻿// --------------------------------------------------------------------------
-// <copyright file="AccountController.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// --------------------------------------------------------------------------
-// <history>
-//   <change who="Kaden.Trinh" date="2013.05.29">Created</change>
-//   <change who="Kaden.Trinh" date="2013.05.30">Implement SignIn action</change>
-//   <change who="Kaden.Trinh" date="2013.06.11">Implement action: Overview account</change>
-//   <change who="Johny.Trinh" date="2013.07.01">Implement action: My Account</change>
-//   <change who="Long.Luu" date="2014.04.17">Refactor</change>
-// </history>
-
-namespace Fanex.Affiliate.Controllers
+﻿namespace Fanex.Affiliate.Controllers
 {
     using System;
     using System.Collections.Generic;

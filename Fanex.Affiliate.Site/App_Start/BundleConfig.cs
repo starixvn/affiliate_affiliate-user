@@ -1,14 +1,4 @@
-﻿// ----------------------------------------------------------------------
-// <copyright file="BundleConfig.cs" company="Nexcel Solutions Vietnam">
-//     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// ------------------------------------------------------------------------
-// <history>
-//   <change who="Long.Luu" date="2014/03/27">Created</change>
-//   <change who="" date=""></change>
-// </history>
-
-namespace Fanex.Affiliate.Site
+﻿namespace Fanex.Affiliate.Site
 {
     using System.Web.Optimization;
     using BundleTransformer.Core.Orderers;
@@ -81,8 +71,8 @@ namespace Fanex.Affiliate.Site
             .Include("~/Content/themes/_base/jquery-ui.css"));
 
             bundles.Add(new ScriptBundle("~/js/jquery")
-                .Include("~/Scripts/libraries/jquery-1.10.1.js")
-                .Include("~/Scripts/libraries/jquery-ui-1.10.3.js")
+                .Include("~/Scripts/libraries/jquery-1.11.3.min.js")
+                .Include("~/Scripts/libraries/jquery-ui.min.js")
                 .Include("~/Scripts/libraries/jquery-ui-languages.js")
                 .Include("~/Scripts/libraries/jquery.formattyping.js")
                 .Include("~/Scripts/libraries/jquery.blockUI.js")

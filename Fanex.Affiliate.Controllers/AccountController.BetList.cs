@@ -1,23 +1,14 @@
-﻿// ----------------------------------------------------------------------
-// <copyright file="AccountController.BetList.cs" company="Nexcel Solutions Vietnam">
-//     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// ------------------------------------------------------------------------
-// <history>
-//   <change who="Long.Luu" date="2013/12/03">Created</change>
-//   <change who="" date=""></change>
-// </history>
-
-namespace Fanex.Affiliate.Controllers
+﻿namespace Fanex.Affiliate.Controllers
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Web.Mvc;
+    using AffBetlistService;
     using Configurations;
     using Criteria;
-    using DTO;
     using Fanex.Affiliate.Criteria.BetList;
+    using ViewModels;
     using Web;
     using Web.Filter;
 
@@ -55,7 +46,7 @@ namespace Fanex.Affiliate.Controllers
             CurrentSession.ExchangeRate = exchangeRate;
             var supportedProducts = GetSupportedProductsForWebService(winlostDate);
 
-            var betlistSOAP = new AffBetlistService.BetlistSOAP
+            var betlistSOAP = new BetlistSOAP
             {
                 AffiliateName = AppSettings.AffiliateName.ToLower(),
                 Username = username,
@@ -67,7 +58,7 @@ namespace Fanex.Affiliate.Controllers
                 Language = AppSession.Language
             };
 
-            var affBetlistService = new AffBetlistService.AffiliateAPISoapClient();
+            var affBetlistService = new AffiliateAPISoapClient();
 
             ViewBag.Data = affBetlistService.GetBetlist(betlistSOAP);
 
@@ -82,7 +73,7 @@ namespace Fanex.Affiliate.Controllers
         [HttpGet]
         public dynamic BetListParlay(long transId)
         {
-            var affBetlistService = new AffBetlistService.AffiliateAPISoapClient();
+            var affBetlistService = new AffiliateAPISoapClient();
             var tickets = affBetlistService.GetBetlistParlay(
                 AppSettings.AffiliateName,
                 transId.ToString(),
@@ -100,7 +91,7 @@ namespace Fanex.Affiliate.Controllers
         [HttpGet]
         public ActionResult SystemParlayDetail(AffBetlistService.BetListSystemParlayDetailCriteria criteria)
         {
-            var affBetlistService = new AffBetlistService.AffiliateAPISoapClient();
+            var affBetlistService = new AffiliateAPISoapClient();
             var systemParlayDataText = affBetlistService.GetBetlistSystemParlay(
                 AppSettings.AffiliateName,
                 CurrentSession.ExchangeRate.ToString(),
@@ -116,7 +107,7 @@ namespace Fanex.Affiliate.Controllers
         /// </summary>
         /// <param name="winlostDate">Win lost date.</param>
         /// <returns>List of Product.</returns>
-        public List<Product> GetSupportedProducts(DateTime? winlostDate)
+        public List<DTO.Product> GetSupportedProducts(DateTime? winlostDate)
         {
             var productCriteria = new ProductCriteria
             {
@@ -126,6 +117,36 @@ namespace Fanex.Affiliate.Controllers
             };
 
             return ProductService.GetProductList(productCriteria).ToList();
+        }
+
+        [HttpGet]
+        public ActionResult RngCasinoDetailTicket(CasinoDetailViewModel model)
+        {
+            var criteria = new BetListDetailCriteria
+            {
+                CustId = model.CustId,
+                RefNo = model.TransId,
+            };
+
+            var affBetlistService = new AffiliateAPISoapClient();
+            ViewBag.Data = affBetlistService.GetBetListRngCasinoDetail(SessionManager.CurrentSession.Username, criteria);
+
+            return View("~/Views/Shared/Account/CasinoDetailTicket.cshtml");
+        }
+
+        [HttpGet]
+        public ActionResult AgCasinoDetailTicket(CasinoDetailViewModel model)
+        {
+            var criteria = new BetListDetailCriteria
+            {
+                CustId = model.CustId,
+                RefNo = model.TransId,
+            };
+
+            var affBetlistService = new AffiliateAPISoapClient();
+            ViewBag.Data = affBetlistService.GetBetListAgCasinoDetail(SessionManager.CurrentSession.Username, criteria);
+
+            return View("~/Views/BetList/CasinoDetailTicket.cshtml");
         }
 
         /// <summary>

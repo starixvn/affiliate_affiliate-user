@@ -1,13 +1,4 @@
-﻿// --------------------------------------------------------------------------
-// <copyright file="BannerDataAccess.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// --------------------------------------------------------------------------
-// <history>
-//   <change who="Long.Luu" date="2013.09.24">Created</change>
-// </history>
-
-namespace Fanex.Affiliate.DataAccess
+﻿namespace Fanex.Affiliate.DataAccess
 {
     using Common.Extensions;
     using Criteria;

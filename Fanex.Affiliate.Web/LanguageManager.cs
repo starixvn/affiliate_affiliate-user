@@ -1,13 +1,4 @@
-﻿// --------------------------------------------------------------------------
-// <copyright file="LanguageManager.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// --------------------------------------------------------------------------
-// <history>
-//   <change who="Kaden.Trinh" date="2013.06.17">Created</change>
-// </history>
-
-namespace Fanex.Affiliate.Web
+﻿namespace Fanex.Affiliate.Web
 {
     using System.Diagnostics.CodeAnalysis;
     using System.Globalization;

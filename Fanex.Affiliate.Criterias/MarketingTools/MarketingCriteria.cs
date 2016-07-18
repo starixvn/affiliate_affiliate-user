@@ -1,14 +1,4 @@
-﻿// --------------------------------------------------------------------------
-// <copyright file="MarketingCriteria.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// --------------------------------------------------------------------------
-// <history>
-//   <change who="Kaden.Trinh" date="2013.06.03">Created and add Properties</change>
-//   <change who="Muller.Nguyen" date="2013.06.28">Add method GetSettingKey</change>
-// </history>
-
-namespace Fanex.Affiliate.Criteria
+﻿namespace Fanex.Affiliate.Criteria
 {
     using Fanex.Data.Repository;
 

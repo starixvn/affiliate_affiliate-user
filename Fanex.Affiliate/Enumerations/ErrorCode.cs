@@ -1,13 +1,4 @@
-﻿// --------------------------------------------------------------------------
-// <copyright file="ErrorCode.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// --------------------------------------------------------------------------
-// <history>
-//   <change who="Kaden.Trinh" date="2013.05.28">Created</change>
-// </history>
-
-namespace Fanex.Affiliate.Enumerations
+﻿namespace Fanex.Affiliate.Enumerations
 {
     public enum ErrorCode
     {

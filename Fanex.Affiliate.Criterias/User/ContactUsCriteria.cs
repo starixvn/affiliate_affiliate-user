@@ -1,14 +1,4 @@
-﻿// ----------------------------------------------------------------------
-// <copyright file="ContactUsCriteria.cs" company="Nexcel Solutions Vietnam">
-//     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// ------------------------------------------------------------------------
-// <history>
-//   <change who="Jeff.Nguyen" date="2013/07/04">Created</change>
-//   <change who="" date=""></change>
-// </history>
-
-namespace Fanex.Affiliate.Criteria
+﻿namespace Fanex.Affiliate.Criteria
 {
     using System.ComponentModel.DataAnnotations;
     using System.Web.Mvc;

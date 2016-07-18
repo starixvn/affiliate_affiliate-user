@@ -1,13 +1,4 @@
-﻿// --------------------------------------------------------------------------
-// <copyright file="CustomRazorViewEngine.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// --------------------------------------------------------------------------
-// <history>
-//   <change who="Kaden.Trinh" date="2013.05.28">Customize Razor ViewEngine</change>
-// </history>
-
-namespace Fanex.Affiliate.Web.Mvc
+﻿namespace Fanex.Affiliate.Web.Mvc
 {
     using System.Threading;
     using System.Web.Mvc;

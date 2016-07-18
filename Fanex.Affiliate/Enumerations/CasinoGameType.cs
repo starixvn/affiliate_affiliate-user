@@ -1,14 +1,4 @@
-﻿// ----------------------------------------------------------------------
-// <copyright file="CasinoGameType.cs" company="Nexcel Solutions Vietnam">
-//     Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// ------------------------------------------------------------------------
-// <history>
-//   <change who="Long.Luu" date="2013/12/05">Created</change>
-//   <change who="" date=""></change>
-// </history>
-
-namespace Fanex.Affiliate.Enumerations
+﻿namespace Fanex.Affiliate.Enumerations
 {
     using System.Diagnostics.CodeAnalysis;
 

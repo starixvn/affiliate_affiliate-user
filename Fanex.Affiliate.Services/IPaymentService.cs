@@ -1,15 +1,4 @@
-﻿// --------------------------------------------------------------------------
-// <copyright file="IPaymentService.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// --------------------------------------------------------------------------
-// <history>
-//   <change who="Kaden.Trinh" date="2013.06.03">Created</change>
-//   <change who="Kaden.Trinh" date="2013.06.13">Get list payment request</change>
-//   <change who="Long.Luu" date="2013.06.28">Insert payment request</change>
-// </history>
-
-namespace Fanex.Affiliate.Services
+﻿namespace Fanex.Affiliate.Services
 {
     using Criteria;
     using ViewModels;

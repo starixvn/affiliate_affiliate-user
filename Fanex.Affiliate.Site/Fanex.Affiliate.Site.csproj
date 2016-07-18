@@ -16,8 +16,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>false</UseIISExpress>
-    <JSLintSkip>
-    </JSLintSkip>
+    <JSLintSkip>|\Scripts\|\Content\bootstrap\js\</JSLintSkip>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -4183,17 +4182,15 @@
     <Content Include="img\Wheel\RJ.jpg" />
     <Content Include="Index.aspx" />
     <Content Include="Scripts\libraries\cryptoJS.js" />
-    <Content Include="Scripts\libraries\jquery-1.10.1.js" />
-    <Content Include="Scripts\libraries\jquery-1.10.1.min.js" />
+    <Content Include="Scripts\libraries\jquery-1.11.3.min.js" />
     <Content Include="Scripts\libraries\jquery-ui-languages.js" />
+    <Content Include="Scripts\libraries\jquery-ui.min.js" />
     <Content Include="Scripts\libraries\jquery.formattyping.js" />
     <Content Include="Scripts\libraries\jquery.tipsy.js" />
     <Content Include="Scripts\libraries\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\libraries\jquery.validate.js" />
     <Content Include="Scripts\libraries\head.js" />
     <Content Include="Scripts\libraries\head.min.js" />
-    <Content Include="Scripts\libraries\jquery-ui-1.10.3.js" />
-    <Content Include="Scripts\libraries\jquery-ui-1.10.3.min.js" />
     <Content Include="Scripts\libraries\jquery.blockUI.js" />
     <Content Include="Scripts\libraries\jquery.cookie.js" />
     <Content Include="Scripts\libraries\modernizr-2.6.2.js" />
@@ -4488,6 +4485,7 @@
     <Content Include="Web.AppSetting.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Views\Shared\Account\CasinoDetailTicket.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
@@ -4751,7 +4749,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

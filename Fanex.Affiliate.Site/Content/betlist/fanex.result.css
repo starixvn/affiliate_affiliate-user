@@ -69,12 +69,25 @@ table.fn-rs tbody .cl-league
     line-height: 7px;
     height: 21px;
 }
-table.fn-rs tbody .cl-match
+table.fn-rs tbody .cl-match,
+table.fn-rs tbody .cl-match-mt
 {
     text-align: left;
     font-weight: normal;
     font-size: 12px;
     padding-left: 3px;
+}
+table.fn-rs tbody .cl-match-mt.home 
+{
+    color: #c00;
+}
+table.fn-rs tbody .cl-match-mt.away 
+{
+    color: #0000CD;
+}
+table.fn-rs tbody .cl-match-mt.win 
+{
+    font-weight: bold;
 }
 table.fn-rs tbody .cl-match.home
 {
@@ -166,6 +179,11 @@ table.fn-rs .cl-status
 {
     text-transform: capitalize;
     width: 94px;
+}
+table.fn-rs .cl-status .ko 
+{
+    color: #0000CD;
+	font-size: 10px;
 }
 table.fn-rs .cl-status .detail-link
 {

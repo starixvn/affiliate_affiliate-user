@@ -1,13 +1,4 @@
-﻿// --------------------------------------------------------------------------
-// <copyright file="SecurityQuestion.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// --------------------------------------------------------------------------
-// <history>
-//   <change who="Johnny.Trinh" date="2013.06.24">Created</change>
-// </history>
-
-namespace Fanex.Affiliate.DTO
+﻿namespace Fanex.Affiliate.DTO
 {
     /// <summary>
     /// Security Question.

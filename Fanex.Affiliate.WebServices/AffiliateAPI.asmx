@@ -1,1 +1,0 @@
-﻿<%@ WebService Language="C#" CodeBehind="AffiliateAPI.asmx.cs" Class="Fanex.Affiliate.WebServices.AffiliateAPI" %>

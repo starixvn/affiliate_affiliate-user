@@ -1,13 +1,4 @@
-﻿// --------------------------------------------------------------------------
-// <copyright file="Message.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// --------------------------------------------------------------------------
-// <history>
-//   <change who="Brian.Dinh" date="2013.07.04">Created</change>
-// </history>
-
-namespace Fanex.Affiliate.DTO
+﻿namespace Fanex.Affiliate.DTO
 {
     using System;
 

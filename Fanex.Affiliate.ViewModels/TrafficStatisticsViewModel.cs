@@ -1,14 +1,4 @@
-﻿// --------------------------------------------------------------------------
-// <copyright file="TrafficStatisticsViewModel.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// --------------------------------------------------------------------------
-// <history>
-//   <change who="Kaden.Trinh" date="2013.06.14">Created</change>
-//   <change who="Muller.Nguyen" date="2013.06.25">Modefied</change>
-// </history>
-
-namespace Fanex.Affiliate.ViewModels
+﻿namespace Fanex.Affiliate.ViewModels
 {
     using System;
     using System.Collections.Generic;

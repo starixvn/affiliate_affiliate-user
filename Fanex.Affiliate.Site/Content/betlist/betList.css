@@ -419,6 +419,10 @@ Format styles
     color: #0000FF;
 }
 
+.gamegroupname{
+    color: #008000;
+}
+
 /*to make line-through for void-parlay-ticket*/
 div.mx-parlay div.refund span, div.mx-parlay div.refund div,
 {

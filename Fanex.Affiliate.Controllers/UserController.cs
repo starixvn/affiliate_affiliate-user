@@ -1,16 +1,4 @@
-﻿// --------------------------------------------------------------------------
-// <copyright file="UserController.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// --------------------------------------------------------------------------
-// <history>
-//   <change who="Kaden.Trinh" date="2013.06.06">Created</change>
-//   <change who="Long.Luu" date="2013.06.24">Add action: Forget Password</change>
-//   <change who="johnny.trinh" date="2013.07.01">Add action: Index (Signup new affiliate)</change>
-//   <change who="leo.vo" date="2013.07.04">Internal login from admin site</change>
-// </history>
-
-namespace Fanex.Affiliate.Controllers
+﻿namespace Fanex.Affiliate.Controllers
 {
     using System;
     using System.Globalization;

@@ -1,13 +1,4 @@
-﻿// -----------------------------------------------------------------------
-// <copyright file="BannerTypeCriteria.cs" company="Nexcel Solutions Vietnam">
-// TODO: Update copyright text.
-// </copyright>
-// -----------------------------------------------------------------------
-// <history>
-//   <change who="Muller.Nguyen" date="2013.06.28">Create</change>
-// </history>
-
-namespace Fanex.Affiliate.Criteria
+﻿namespace Fanex.Affiliate.Criteria
 {
     using Fanex.Data.Repository;
 

@@ -1,14 +1,4 @@
-﻿// --------------------------------------------------------------------------
-// <copyright file="PaymentViewModel.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// --------------------------------------------------------------------------
-// <history>
-//   <change who="Kaden.Trinh" date="2013.06.13">Created</change>
-//   <change who="Long.Luu" date="2013.06.28">Add more properties</change>
-// </history>
-
-namespace Fanex.Affiliate.ViewModels
+﻿namespace Fanex.Affiliate.ViewModels
 {
     using System;
     using System.Collections.Generic;

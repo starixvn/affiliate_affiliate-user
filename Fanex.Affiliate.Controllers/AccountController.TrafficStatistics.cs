@@ -1,17 +1,4 @@
-﻿// --------------------------------------------------------------------------
-// <copyright file="AccountController.TrafficStatistics.cs" company="Nexcel Solutions Vietnam">
-// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
-// </copyright>
-// --------------------------------------------------------------------------
-// <history>
-//   <change who="Kaden.Trinh" date="2013.06.24">Created</change>
-//   <change who="Kaden.Trinh" date="2013.06.12">Implement action: Statement history</change>
-//   <change who="Kaden.Trinh" date="2013.06.12">Implement action: Open Popup Daily Earning on Statement page</change>
-//   <change who="Jeff.Nguyen" date="2013.06.26">Referrers Pages</change>
-//   <change who="Leo.Vo" date="2013.06.29">Landing Pages Statistics</change>
-// </history>
-
-namespace Fanex.Affiliate.Controllers
+﻿namespace Fanex.Affiliate.Controllers
 {
     using System;
     using System.Collections.Generic;
