@@ -4357,13 +4357,14 @@
     <None Include="img\Slot\S0032\Thumbs.db" />
     <None Include="img\Slot\S0033\Thumbs.db" />
     <Content Include="package.json" />
-    <None Include="Service References\AffBetlistService\AffiliateAPI.disco" />
+    <None Include="Service References\AffBetlistService\AffiliateAPI1.wsdl" />
     <None Include="Service References\AffBetlistService\configuration91.svcinfo" />
     <None Include="Service References\AffBetlistService\configuration.svcinfo" />
     <None Include="Service References\AffBetlistService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Service References\AffBetlistService\AffiliateAPI1.disco" />
     <Content Include="Views\itcbet\Account\Overview.cshtml" />
     <Content Include="Views\itcbet\Layout\Layout1\_Layout.cshtml" />
     <Content Include="Views\itcbet\Layout\Layout1\_Layout_Notify.cshtml" />
@@ -4461,7 +4462,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Service References\AffBetlistService\AffiliateAPI.wsdl" />
     <Content Include="Views\Shared\_LayoutSimplePopup.cshtml">
       <SubType>Code</SubType>
     </Content>
