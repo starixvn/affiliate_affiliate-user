@@ -39,7 +39,7 @@
         /// </summary>
         /// <returns>Return view.</returns>
         [HttpGet]
-        [UMBackdoorFilter]
+        [CheckUMFilter]
         public ActionResult Index()
         {
             var criteria = new DefaultCommissionCriteria()

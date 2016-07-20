@@ -22,13 +22,13 @@
         /// <returns>Return view.</returns>
         [HttpGet]
         public ActionResult Index()
-        {
-            var underMaintenanceTime = _maintenanceService.GetUnderMaintenanceTime();
-            if (!underMaintenanceTime.IsUnderMaintenanceTime)
+        {           
+            if (!_maintenanceService.IsUnderMaintenance())
             {
                 return RedirectToAction("Index", "Home");
             }
 
+            var underMaintenanceTime = _maintenanceService.GetUnderMaintenanceTime();
             ViewBag.StartTime = underMaintenanceTime.From;
             ViewBag.EndTime = underMaintenanceTime.To;
             ViewBag.AffCustomerServiceUrl = AppSettings.AffCustomerServiceUrl;

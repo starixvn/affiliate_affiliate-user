@@ -3,7 +3,6 @@
     using System.Collections.Generic;
     using Criteria;
     using DTO;
-    using Fanex.BetList.Core.Entities;
     using ViewModels;
 
     /// <summary>

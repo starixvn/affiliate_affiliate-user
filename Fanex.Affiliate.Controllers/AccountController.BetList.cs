@@ -83,6 +83,23 @@
             return tickets;
         }
 
+        [HttpGet]
+        public dynamic NewBetListParlay(long transId, string betTeam, string betCheck, decimal handicap1, decimal handicap2)
+        {
+            var affBetlistService = new AffBetlistService.AffiliateAPISoapClient();
+            var tickets = affBetlistService.GetNewBetlistParlay(
+                AppSettings.AffiliateName,
+                transId.ToString(),
+                CurrentSession.ExchangeRate.ToString(),
+                betTeam,
+                betCheck,
+                handicap1,
+                handicap2,
+                AppSession.Language);
+
+            return tickets;
+        }
+
         /// <summary>
         /// Action Get for System Parlay Detail.
         /// </summary>

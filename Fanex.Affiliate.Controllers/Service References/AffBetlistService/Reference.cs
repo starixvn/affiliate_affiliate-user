@@ -29,6 +29,11 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CriteriaBase))]
         string GetBetlistParlay(string affiliateName, string transactionId, string exchangeRate, string language);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetNewBetlistParlay", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CriteriaBase))]
+        string GetNewBetlistParlay(string affiliateName, string transactionId, string exchangeRate, string betTeam, string betCheck, decimal handicap1, decimal handicap2, string language);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBetlistSystemParlay", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CriteriaBase))]
@@ -915,6 +920,10 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         
         public string GetBetlistParlay(string affiliateName, string transactionId, string exchangeRate, string language) {
             return base.Channel.GetBetlistParlay(affiliateName, transactionId, exchangeRate, language);
+        }
+        
+        public string GetNewBetlistParlay(string affiliateName, string transactionId, string exchangeRate, string betTeam, string betCheck, decimal handicap1, decimal handicap2, string language) {
+            return base.Channel.GetNewBetlistParlay(affiliateName, transactionId, exchangeRate, betTeam, betCheck, handicap1, handicap2, language);
         }
         
         public string GetBetlistSystemParlay(string affiliateName, string exchangeRate, Fanex.Affiliate.Controllers.AffBetlistService.BetListSystemParlayDetailCriteria criteria, string language) {
