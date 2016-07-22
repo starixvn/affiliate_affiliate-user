@@ -148,9 +148,6 @@
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Nini">
-      <HintPath>..\packages\HandHistoryLibrary.1.0.0.43\lib\net40\Nini.dll</HintPath>
-    </Reference>
     <Reference Include="NPOI, Version=2.0.6.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\NPOI.2.0.6\lib\net40\NPOI.dll</HintPath>
@@ -271,11 +268,6 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\SimpleInjectorInitializer.cs" />
-    <Compile Include="Service References\AffBetlistService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Content Include="Configurations\SPNames\SpName.9bet.production.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
@@ -4383,14 +4375,6 @@
     <None Include="img\Slot\S0032\Thumbs.db" />
     <None Include="img\Slot\S0033\Thumbs.db" />
     <Content Include="package.json" />
-    <None Include="Service References\AffBetlistService\AffiliateAPI1.wsdl" />
-    <None Include="Service References\AffBetlistService\configuration91.svcinfo" />
-    <None Include="Service References\AffBetlistService\configuration.svcinfo" />
-    <None Include="Service References\AffBetlistService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Service References\AffBetlistService\AffiliateAPI1.disco" />
     <Content Include="Views\itcbet\Account\Overview.cshtml" />
     <Content Include="Views\itcbet\Layout\Layout1\_Layout.cshtml" />
     <Content Include="Views\itcbet\Layout\Layout1\_Layout_Notify.cshtml" />
@@ -4727,9 +4711,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Service References\AffBetlistService\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
