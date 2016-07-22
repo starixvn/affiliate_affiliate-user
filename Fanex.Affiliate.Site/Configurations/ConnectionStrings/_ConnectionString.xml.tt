@@ -1,0 +1,86 @@
+﻿<#@ template debug="true" hostSpecific="true" #>
+<#@ output extension=".txt" #>
+<#@ import namespace="System" #>
+<#@ include file="$(SolutionDir)\Fanex.Affiliate.Site\Configurations\TemplateFilemanager.CS.ttinclude" #>
+
+<#
+	var manager = TemplateFileManager.Create(this);
+
+	var licenseeNames = new string[] {
+			"9bet", 
+			"allbetclub",
+			"aoncash",
+			"athena000",
+			"be7",
+			"be7th",
+			"goobet",
+			"itcbet",
+			"m8bola",
+			"macaubet",
+			"aiabet",
+			"q8bola",
+			"unobet"
+		};
+
+	var dbAlias = new string[] {
+		"DBAFF9BET.Affiliate_9Bet.bodbDownlineNet", 
+		"DBAFFALLBETCLUB.Affiliate_AllbetClub.bodbDownlineNet",
+		"DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet",
+		"DBAFFATHENA000.Affiliate_Athena000.bodbDownlineNet",
+		"DBAFFBE7.Affiliate_BE7.bodbDownlineNet",
+		"DBAFFBE7TH.Affiliate_BE7TH.bodbDownlineNet",
+		"DBAFFGOOBET.Affiliate_Goobet.bodbDownlineNet",
+		"DBAFFITCBET.Affiliate_itcbet.bodbDownlineNet",
+		"DBAFFM8BOLA.Affiliate_M8bola.bodbDownlineNet",
+		"DBAFFMACAUBET.Affiliate_MacauBet.bodbDownlineNet",
+		"DBAFFAIABET.Affiliate_AIAbet.bodbDownlineNet",
+		"DBAFFQ8BOLA.Affiliate_Q8Bola.bodbDownlineNet",
+		"DBAFFUNOBET.Affiliate_Unobet.bodbDownlineNet"
+	};
+
+	var dbNames = new string[] {
+		"9bet", 
+		"allbetclub",
+		"aoncash",
+		"athena000",
+		"be7",
+		"be7th",
+		"goobet",
+		"itcbet",
+		"m8bola",
+		"macaubet",
+		"nbcbet",
+		"q8bola",
+		"unobet"
+	};
+
+	var environments = new string[] { "uat", "production" };
+	var index = 0;
+	foreach(var licenseeName in licenseeNames)
+	{
+		foreach(var environment in environments)
+		{
+			var fileName = string.Format("Web.ConnectionString.{0}.{1}.config", licenseeName, environment);
+			manager.StartNewFile(fileName);
+
+			var licenseeDb = string.Format("<add name=\"{0}\" connectionString=\"packet size=4096; Data Source=10.40.40.224;Initial Catalog=Affiliate_{1};integrated security=false; user id=bodbDownlineNet; password=TBAw8F+PqCx3u382anlnOVRxKIJYMsMwXVn1hJpeyKk=;\" providerName=\"System.Data.SqlClient\" />", dbAlias[index], dbNames[index]);
+#>
+<connectionStrings>
+	<#= licenseeDb #>
+	<add name="DBEXT.bodb02.bodbAdminNet" connectionString="Data Source=10.40.40.92;Persist Security Info=True;User ID=bodbAdminNet;Initial Catalog=bodb02;Connect Timeout=360000;Password=i9hNnaZltx04XF6oTNOKTnvvtLC/zfxr=" providerName="System.Data.SqlClient" />
+
+	<add name="live_casino" connectionString="packet size=4096; Data Source=10.40.40.187;Initial Catalog=LiveCasinoAdmin;integrated security=false; User Id=dot_agent;Password=mitKKyz3dDYDUvLCNDdQmw==;" providerName="System.Data.SqlClient" />
+	<add name="DBLOG_bodbLicenseeNet" connectionString="packet size=4096; Data Source=10.40.40.92;Initial Catalog=bodb_CustomerLog;integrated security=false; User Id=bodbLicenseeNet;Password=rQdgyA7UNg5isU2wtrRVyRrWEq1gYCANdd3I4UUfIHA==" providerName="System.Data.SqlClient" />
+	<add name="CS_BackupDB" connectionString="Data Source=10.40.40.167;initial catalog=CasinoAdmin;User ID=dot_agent;Password=ibc$agt%2TGwG*a;Pooling=true;" providerName="System.Data.SqlClient" />
+	<add name="CS_BackupDB_004202600" connectionString="Data Source=10.40.40.167;initial catalog=CasinoAdmin;User ID=dot_agent;Password=ibc$agt%2TGwG*a;Pooling=true;" providerName="System.Data.SqlClient" />
+	<add name="CS_BackupDB_004202700" connectionString="Data Source=10.40.40.167;initial catalog=CasinoAdmin;User ID=dot_agent;Password=ibc$agt%2TGwG*a;Pooling=true;" providerName="System.Data.SqlClient" />
+	<add name="LV_BackupDB" connectionString="packet size=4096; Data Source=10.40.40.187;Initial Catalog=LiveCasinoAdmin;integrated security=false; User Id=LVCasino_Agen;Password=ibc$agt%2TGwG*a" providerName="System.Data.SqlClient" />
+	<add name="CS_ArchiveDB" connectionString="Data Source=10.40.40.167;initial catalog=Casino_Archive;User ID=dot_agent;Password=ibc$agt%2TGwG*a;Pooling=true;" providerName="System.Data.SqlClient" />			
+</connectionStrings>
+		<#
+		}
+
+		index++;
+	}
+	manager.Process();
+#>
