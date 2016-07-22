@@ -3,6 +3,8 @@
     using System;
     using System.Globalization;
     using System.Net;
+    using System.Security.Cryptography;
+    using System.Text;
     using System.Text.RegularExpressions;
     using System.Web.Mvc;
     using System.Web.Routing;
@@ -700,9 +702,7 @@
             if (ModelState.IsValid)
             {
                 criteria.NetSessionId = _userService.GetAdminNetSessionID(criteria);
-                var hashedPassword =
-                    FormsAuthentication.HashPasswordForStoringInConfigFile(
-                        criteria.NetSessionId + criteria.ChalengeStr, "MD5");
+                var hashedPassword = HashPassword(criteria.NetSessionId + criteria.ChalengeStr);
                 if (string.CompareOrdinal(criteria.AccKey, hashedPassword) != 0)
                 {
                     throw new Exception("Can not authenticate log-in, invalid ticket!");
@@ -739,6 +739,18 @@
             }
 
             return RedirectToAction("Index", "Home");
+        }
+
+        private static string HashPassword(string value)
+        {
+            MD5 algorithm = MD5.Create();
+            byte[] data = algorithm.ComputeHash(Encoding.UTF8.GetBytes(value));
+            string result = "";
+            for (int i = 0; i < data.Length; i++)
+            {
+                result += data[i].ToString("x2").ToUpperInvariant();
+            }
+            return result;
         }
 
         #endregion Process Login From Admin Site

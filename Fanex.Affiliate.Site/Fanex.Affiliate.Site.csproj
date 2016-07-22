@@ -4373,6 +4373,84 @@
     <Content Include="App_Data\Fanex.Result\Basketball.xls" />
     <Content Include="App_Data\Fanex.Result\BaseBall.xls" />
     <Content Include="App_Data\Fanex.Result\Badminton.xls" />
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.9bet.production.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.9bet.uat.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.aiabet.production.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.aiabet.uat.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.allbetclub.production.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.allbetclub.uat.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.aoncash.production.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.aoncash.uat.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.athena000.production.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.athena000.uat.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.be7.production.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.be7.uat.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.be7th.production.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.be7th.uat.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.goobet.production.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.goobet.uat.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.itcbet.production.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.itcbet.uat.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.m8bola.production.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.m8bola.uat.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.macaubet.production.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.macaubet.uat.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.q8bola.production.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.q8bola.uat.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.unobet.production.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.unobet.uat.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
     <None Include="Configurations\SPNames\_SpNameConfiguration.ttinclude" />
     <None Include="Configurations\TemplateFilemanager.CS.ttinclude" />
     <None Include="Configurations\WebConfigs\Web.9bet.master.config">
@@ -4843,7 +4921,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
+      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
