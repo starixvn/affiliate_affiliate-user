@@ -60,7 +60,7 @@
         public string Email { get; set; }
 
         [Display(Name = "VerifyEmail", ResourceType = typeof(Lang))]
-        [Compare("Email", ErrorMessageResourceType = typeof(Lang), ErrorMessageResourceName = "EmailMatch")]
+        [System.ComponentModel.DataAnnotations.Compare("Email", ErrorMessageResourceType = typeof(Lang), ErrorMessageResourceName = "EmailMatch")]
         public string VerifyEmail { get; set; }
 
         [Display(Name = "ContactNumber", ResourceType = typeof(Lang))]
