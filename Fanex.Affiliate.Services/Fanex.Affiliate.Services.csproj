@@ -271,7 +271,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="AccountService.cs" />
     <Compile Include="ContactUsService.cs" />
     <Compile Include="BannerService.cs" />

@@ -246,7 +246,6 @@
     <Compile Include="ContactUsController.cs" />
     <Compile Include="AccountController.BetList.cs" />
     <Compile Include="AccountController.BetListResults.cs" />
-    <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="NotifyController.cs" />
     <Compile Include="MessageController.cs" />
     <Compile Include="FAQsController.cs" />

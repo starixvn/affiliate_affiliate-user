@@ -147,7 +147,6 @@
     <Compile Include="Filter\AuthorizationAttribute.cs" />
     <Compile Include="Filter\InternalCheckingAttribute.cs" />
     <Compile Include="Filter\RoleBasedMenuAttribute.cs" />
-    <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="LanguageManager.cs" />
     <Compile Include="Mvc\HtmlHelperExtensions.cs" />
     <Compile Include="ICurrentSession.cs" />

@@ -111,7 +111,6 @@
     <Compile Include="BetList\RNGCasinoResultWinlossDetail.cs" />
     <Compile Include="BetList\RNGCasinoResultWinlossDetailHeader.cs" />
     <Compile Include="Common\AffiliateSettings.cs" />
-    <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="MarketingTools\Banner.cs" />
     <Compile Include="Account\CustomerInfo.cs" />
     <Compile Include="DailyEarnings\DailyEarningsDetail.cs" />
