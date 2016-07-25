@@ -440,7 +440,7 @@
                     
                     // Call API to check whether member is exists
                     string ibcUsername = string.Empty, playerCurrency = string.Empty, strErrorMsg = string.Empty;
-                    if (!IsExistLicenseeCustInfo(paymentInfo.SystemName, paymentInfo.PlayerUsername, ref ibcUsername, ref playerCurrency, ref strErrorMsg))
+                    if (IsExistLicenseeCustInfo(paymentInfo.SystemName, paymentInfo.PlayerUsername, ref ibcUsername, ref playerCurrency, ref strErrorMsg))
                     {
                         result.Success = false;
                         result.Message = Lang.Msg142;
