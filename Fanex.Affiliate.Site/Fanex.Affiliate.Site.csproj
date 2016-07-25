@@ -106,14 +106,6 @@
       <HintPath>..\packages\Fanex.Logging.1.0.0.0\lib\net40\Fanex.Logging.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Fanex.Result.Core, Version=2.0.1.6, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Result.Core-NPOI.2.0.6.2.0.2.6\lib\net40\Fanex.Result.Core.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Fanex.Result.Core.Base, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Result.Core-NPOI.2.0.6.2.0.2.6\lib\net40\Fanex.Result.Core.Base.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="HandHistoryLibrary, Version=1.0.0.43, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\HandHistoryLibrary.1.0.0.43\lib\net40\HandHistoryLibrary.dll</HintPath>
       <Private>True</Private>
@@ -521,8 +513,6 @@
     <Content Include="Content\bootstrap\less\utilities.less" />
     <Content Include="Content\bootstrap\less\variables.less" />
     <Content Include="Content\bootstrap\less\wells.less" />
-    <Content Include="Content\Fanex.Result\fanex.result.css" />
-    <Content Include="Content\Fanex.Result\images\goal-icon.png" />
     <Content Include="Content\themes\19\images\banner_top.png" />
     <Content Include="Content\themes\19\images\bg-contentLanguage.png" />
     <Content Include="Content\themes\19\images\logo-afterlogin.png" />
@@ -4356,23 +4346,6 @@
     <Content Include="Configurations\AppSettings\Web.AppSetting.be7th.master.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.be7th.production.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.be7th.uat.config" />
-    <Content Include="App_Data\Fanex.Result\VSTennis.xls" />
-    <Content Include="App_Data\Fanex.Result\VSSpeedWay.xls" />
-    <Content Include="App_Data\Fanex.Result\VSHRacing.xls" />
-    <Content Include="App_Data\Fanex.Result\Tennis.xls" />
-    <Content Include="App_Data\Fanex.Result\Soccer.xls" />
-    <Content Include="App_Data\Fanex.Result\Racing.xls" />
-    <Content Include="App_Data\Fanex.Result\Outright.xls" />
-    <Content Include="App_Data\Fanex.Result\Other.xls" />
-    <Content Include="App_Data\Fanex.Result\NumberGame.xls" />
-    <Content Include="App_Data\Fanex.Result\MuayThai.xls" />
-    <Content Include="App_Data\Fanex.Result\LiveCasino.xls" />
-    <Content Include="App_Data\Fanex.Result\Hockey.xls" />
-    <Content Include="App_Data\Fanex.Result\GoldDeluxe.xls" />
-    <Content Include="App_Data\Fanex.Result\Billiard.xls" />
-    <Content Include="App_Data\Fanex.Result\Basketball.xls" />
-    <Content Include="App_Data\Fanex.Result\BaseBall.xls" />
-    <Content Include="App_Data\Fanex.Result\Badminton.xls" />
     <None Include="Configurations\ConnectionStrings\Web.ConnectionString.9bet.production.config">
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
     </None>
@@ -4577,7 +4550,6 @@
     <Content Include="Content\themes\be7th\index.less" />
     <Content Include="Content\themes\be7th\mixins.less" />
     <Content Include="Content\themes\be7th\variables.less" />
-    <Content Include="Content\Fanex.Result\fanex.result.less" />
     <None Include="Deployment.ignore" />
     <Content Include="GruntFilters.json" />
     <None Include="img\Slot\H0005\Thumbs.db" />
@@ -4921,7 +4893,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
