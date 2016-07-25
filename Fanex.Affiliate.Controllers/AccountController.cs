@@ -440,7 +440,7 @@
                     
                     // Call API to check whether member is exists
                     string ibcUsername = string.Empty, playerCurrency = string.Empty, strErrorMsg = string.Empty;
-                    if (IsExistLicenseeCustInfo(paymentInfo.SystemName, paymentInfo.PlayerUsername, ref ibcUsername, ref playerCurrency, ref strErrorMsg))
+                    if (!IsExistLicenseeCustInfo(paymentInfo.SystemName, paymentInfo.PlayerUsername, ref ibcUsername, ref playerCurrency, ref strErrorMsg))
                     {
                         result.Success = false;
                         result.Message = Lang.Msg142;
@@ -672,6 +672,11 @@
         /// <returns>Boolean: success or not.</returns>
         public bool IsExistLicenseeCustInfo(string siteName, string userName, ref string ibcUsername, ref string playerCurrency, ref string errMsg)
         {
+            if (AppSettings.IsTesting)
+            {
+                return true;
+            }
+
             try
             {
                 var xml = ServiceWrapper.GetLicenseeCustInfo(siteName, userName);
