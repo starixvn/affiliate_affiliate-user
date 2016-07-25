@@ -745,11 +745,12 @@
         {
             MD5 algorithm = MD5.Create();
             byte[] data = algorithm.ComputeHash(Encoding.UTF8.GetBytes(value));
-            string result = "";
+            string result = string.Empty;
             for (int i = 0; i < data.Length; i++)
             {
                 result += data[i].ToString("x2").ToUpperInvariant();
             }
+
             return result;
         }
 
