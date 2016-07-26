@@ -1,8 +1,11 @@
 ﻿namespace Fanex.Affiliate.ViewModels
 {
+    using System;
+
     /// <summary>
     /// Result view model.
     /// </summary>
+    [Serializable]
     public class ResultViewModel
     {
         public bool Success { get; set; }
