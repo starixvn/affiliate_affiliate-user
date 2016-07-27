@@ -1,10 +1,9 @@
 ﻿namespace Fanex.Affiliate.Controllers
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
     using System.Globalization;
     using System.Net;
-    using System.Security.Cryptography;
-    using System.Text;
     using System.Text.RegularExpressions;
     using System.Web.Mvc;
     using System.Web.Routing;
@@ -47,6 +46,7 @@
         #endregion Constructor
 
         #region Sign Up
+
         /// <summary>
         /// Sign up page.
         /// </summary>
@@ -109,9 +109,11 @@
                 case (int)ErrorCode.EmailUnavailable:
                     model.Message = Lang.Msg121;
                     break;
+
                 case (int)ErrorCode.InvalidAffiliateInfo:
                     model.Message = Lang.Msg122;
                     break;
+
                 case (int)ErrorCode.CreateCustomerFail:
                     model.Message = Lang.Msg123;
                     break;
@@ -264,10 +266,10 @@
                 if (AppSettings.IsTesting == false && !IsValidCaptcha(captcha, false))
                 {
                     return Json(new ResultViewModel
-                        {
-                            Success = false,
-                            Message = Lang.MsgIncorrectCaptchaMsg
-                        });
+                    {
+                        Success = false,
+                        Message = Lang.MsgIncorrectCaptchaMsg
+                    });
                 }
 
                 var errorCode = 0;
@@ -311,12 +313,12 @@
         public User GetUserInfoBasedOnUsername(string username, ref int errorCode)
         {
             var criteria = new AffiliateLoginCriteria
-                {
-                    Username = username.Trim(),
-                    InputAffType = AppSettings.InputAffType,
-                    ServerId = AppSettings.ServerId,
-                    LoginIp = Common.GetIPAddressOfClient()
-                };
+            {
+                Username = username.Trim(),
+                InputAffType = AppSettings.InputAffType,
+                ServerId = AppSettings.ServerId,
+                LoginIp = Common.GetIPAddressOfClient()
+            };
 
             var userInfo = _userService.AuthenticateUser(criteria);
             errorCode = criteria.ErrCode;
@@ -360,9 +362,11 @@
                 case (int)ErrorCode.WrongUserOrPassword:
                     result.Message = Lang.Msg101;
                     break;
+
                 case (int)ErrorCode.AccountClosed:
                     result.Message = Lang.Msg102;
                     break;
+
                 default:
                     result.Message = Lang.Msg103;
                     break;
@@ -374,6 +378,7 @@
         #endregion Sign In
 
         #region Re-Checkin
+
         /// <summary>
         /// Recheck In.
         /// </summary>
@@ -595,11 +600,11 @@
 
                 // Stored into database
                 var criteria = new ResetPasswordCriteria
-                            {
-                                AffID = affId,
-                                ValidCode = vid,
-                                NewPwd = newPassword
-                            };
+                {
+                    AffID = affId,
+                    ValidCode = vid,
+                    NewPwd = newPassword
+                };
                 var user = _userService.ChangePassword(criteria);
 
                 if (criteria.ErrCode == 0)
@@ -702,7 +707,10 @@
             if (ModelState.IsValid)
             {
                 criteria.NetSessionId = _userService.GetAdminNetSessionID(criteria);
-                var hashedPassword = HashPassword(criteria.NetSessionId + criteria.ChalengeStr);
+#pragma warning disable 0618 // Type or member is obsolete
+                var hashedPassword = FormsAuthentication.HashPasswordForStoringInConfigFile(
+                        criteria.NetSessionId + criteria.ChalengeStr, "MD5");
+#pragma warning restore 0618 // Type or member is obsolete
                 if (string.CompareOrdinal(criteria.AccKey, hashedPassword) != 0)
                 {
                     throw new Exception("Can not authenticate log-in, invalid ticket!");
@@ -739,19 +747,6 @@
             }
 
             return RedirectToAction("Index", "Home");
-        }
-
-        private static string HashPassword(string value)
-        {
-            MD5 algorithm = MD5.Create();
-            byte[] data = algorithm.ComputeHash(Encoding.UTF8.GetBytes(value));
-            string result = string.Empty;
-            for (int i = 0; i < data.Length; i++)
-            {
-                result += data[i].ToString("x2").ToUpperInvariant();
-            }
-
-            return result;
         }
 
         #endregion Process Login From Admin Site
@@ -791,6 +786,6 @@
             AppSession.Language = language;
         }
 
-        #endregion
+        #endregion Private
     }
 }
