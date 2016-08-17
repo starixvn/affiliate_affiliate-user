@@ -212,29 +212,32 @@
 {
     @Scripts.Render("~/js/paymentrequest")
 
-    @if (ViewBag.Result != null)
-    {
-        var msg = ((ResultViewModel)ViewBag.Result).Message;
-        if (!string.IsNullOrEmpty(msg))
+    @{ 
+        var result = (ResultViewModel)ViewBag.Result;
+        if (result != null)
         {
-            if (((ResultViewModel) ViewBag.Result).Success == false)
+            var msg = result.Message;
+            if (!string.IsNullOrEmpty(msg))
             {
-                <script type="text/javascript">
-                    AFFILIATE.showErrorMsg("@msg");
-                </script>
+                if (result.Success == false)
+                {
+                    <script type="text/javascript">
+                        AFFILIATE.showErrorMsg("@msg");
+                    </script>
+                }
+                else
+                {
+                    <script type="text/javascript">
+                        AFFILIATE.showSuccessMsg("@msg");
+                    </script>
+                }
             }
             else
             {
                 <script type="text/javascript">
-                    AFFILIATE.showSuccessMsg("@msg");
+                    AFFILIATE.hideMessageRegion();
                 </script>
             }
-        }
-        else
-        {
-            <script type="text/javascript">
-                AFFILIATE.hideMessageRegion();
-            </script>
         }
     }
 }

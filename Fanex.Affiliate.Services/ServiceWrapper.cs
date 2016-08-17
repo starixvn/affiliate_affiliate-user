@@ -2,7 +2,7 @@
 {
     using System;
     using System.Xml.Linq;
-    using Core.MemberSiteService;
+    using MemberSiteService;
 
     /// <summary>
     /// Service for getting info from Taiwan side's APIs.

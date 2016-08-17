@@ -67,10 +67,6 @@
 
         #endregion Services
 
-        #region Const
-
-        #endregion Const
-
         #region Constructor
 
         /// <summary>
@@ -190,7 +186,7 @@
             model.ListProduct.ForEach(i => i.ProductName = ProductsFormatter.Format(i.ProductName));
             model.ProductId = criteria.ProductId;
             model.ListDailyEarning = AccountService.GetDailyEarnings(criteria).ToList();
-            model.ShowPlaytechCasinoData = (model.ProductId == 0 && model.ListProduct.Count(l => l.OriginalProductName == "Casino") > 0) 
+            model.ShowPlaytechCasinoData = (model.ProductId == 0 && model.ListProduct.Count(l => l.OriginalProductName == "Casino") > 0)
                 || (model.ProductId != 0 && model.ListProduct.Where(i => i.ProductId == model.ProductId).First().OriginalProductName == "Casino");
             FormaterCurrency.SetDefaultCurrency(criteria.AffCurrency);
 
@@ -242,7 +238,7 @@
             {
                 model.MonthDate = (DateTime)criteria.MonthDate;
             }
-            
+
             criteria.AffId = CurrentSession.AffId;
             model.ProductId = criteria.ProductId;
             model.ListDailyEarningDetail = AccountService.GetDailyEarningsDetail(criteria).ToList();
@@ -343,7 +339,7 @@
             // Get Current Commission Setting
             var commSettingCriteria = new AccountCommGroupCriteria { AffId = CurrentSession.AffId };
             var model = commSettingCriteria.IsValid() ? AccountService.GetCommissionSetting(commSettingCriteria) : new AccountOverviewViewModel();
-            
+
             model.Month = criteria.Month;
             model.Year = criteria.Year;
             model.Statistics = statistics;
@@ -364,10 +360,10 @@
         /// <param name="success">Check whether showing the cancel request success.</param>
         /// <returns>Return view.</returns>
         [HttpGet]
-        public virtual ActionResult PaymentRequest(int success = 0)
+        public virtual ActionResult PaymentRequest(bool initial = true)
         {
             var result = new ResultViewModel { Success = true };
-            
+
             var criteria = new PaymentCriteria
             {
                 AffId = CurrentSession.AffId
@@ -378,8 +374,8 @@
             {
                 payment = PaymentService.GetPaymentRequest(criteria);
             }
-            
-            if (success != 1)
+
+            if (initial)
             {
                 // Check pending request
                 if (payment.ListPayment.Where(p => p.Status.ToLower() == PaymentStatus.Pending.ToString().ToLower()).ToList().Any())
@@ -397,10 +393,9 @@
             }
             else
             {
-                result.Success = true;
-                result.Message = Lang.PaymentRequestCancel;
+                result = TempData["RequestResult"] as ResultViewModel;
             }
-            
+
             ViewBag.Result = result;
 
             return View(payment);
@@ -415,51 +410,44 @@
         [HttpPost]
         public virtual ActionResult PaymentRequest(PaymentViewModel paymentModel)
         {
-            var result = new ResultViewModel { Success = true };
+            var success = true;
 
             if (ModelState.IsValid)
             {
                 if (paymentModel.Amount > paymentModel.BalanceBroughtForward)
                 {
-                    result.Success = false;
-                    result.Message = Lang.Msg131;
+                    success = false;
+                    SetResultMessage(success, Lang.Msg131);
                 }
 
                 if (paymentModel.Amount < paymentModel.MinimumWithdrawalAmount)
                 {
-                    result.Success = false;
-                    result.Message = Lang.Msg136;
+                    success = false;
+                    SetResultMessage(success, Lang.Msg136);
                 }
 
-                if (result.Success)
+                if (success)
                 {
                     var paymentInfo = PaymentService.GetPaymentRequestPlayerInfo(new PaymentPlayerInfoCriteria
                     {
                         AffId = CurrentSession.AffId
                     });
-                    
+
                     // Call API to check whether member is exists
                     string ibcUsername = string.Empty, playerCurrency = string.Empty, strErrorMsg = string.Empty;
                     if (!IsExistLicenseeCustInfo(paymentInfo.SystemName, paymentInfo.PlayerUsername, ref ibcUsername, ref playerCurrency, ref strErrorMsg))
                     {
-                        result.Success = false;
-                        result.Message = Lang.Msg142;
+                        SetResultMessage(false, Lang.Msg142);
                     }
                     else
                     {
-                        result = InsertPaymentRequest(paymentInfo.PlayerUsername, playerCurrency, paymentModel.Amount, Common.GetIPAddressOfClient());
+                        var result = InsertPaymentRequest(paymentInfo.PlayerUsername, playerCurrency, paymentModel.Amount, Common.GetIPAddressOfClient());
+                        SetResultMessage(result.Success, result.Message);
                     }
                 }
             }
-            
-            var freshPayment = PaymentService.GetPaymentRequest(new PaymentCriteria
-            {
-                AffId = CurrentSession.AffId
-            });
-            
-            ViewBag.Result = result;
 
-            return View(freshPayment);
+            return RedirectToAction("PaymentRequest", new { initial = false });
         }
 
         /// <summary>
@@ -484,7 +472,7 @@
                 IP = ip,
                 Language = AppSession.Language
             };
-            
+
             var paymentRequest = PaymentService.InsertPaymentRequest(criteria);
 
             if (criteria.ErrCode == 0)
@@ -567,8 +555,6 @@
         [HttpPost]
         public ActionResult CancelPaymentRequest(PaymentViewModel paymentModel)
         {
-            var result = new ResultViewModel { Success = true };
-
             if (ModelState.IsValid)
             {
                 var criteria = new PaymentCancelCriteria
@@ -584,7 +570,7 @@
 
                 if (criteria.ErrCode == 0)
                 {
-                    result.Message = Lang.PaymentRequestCancel;
+                    SetResultMessage(true, Lang.PaymentRequestCancel);
 
                     if (string.IsNullOrEmpty(paymentCancel.PreferredLanguage))
                     {
@@ -592,23 +578,14 @@
                     }
 
                     SendCancelPaymentEmail(paymentCancel, paymentModel.TransID);
-
-                    return RedirectToAction("PaymentRequest", new { success = 1 });
                 }
                 else
                 {
-                    result.Success = false;
-                    result.Message = Common.GetErrorMsg(criteria.ErrCode);
+                    SetResultMessage(false, Common.GetErrorMsg(criteria.ErrCode));
                 }
             }
 
-            var payment = PaymentService.GetPaymentRequest(new PaymentCriteria
-            {
-                AffId = CurrentSession.AffId
-            });
-            ViewBag.Result = result;
-
-            return View("PaymentRequest", payment);
+            return RedirectToAction("PaymentRequest", new { initial = false });
         }
 
         /// <summary>
@@ -672,6 +649,11 @@
         /// <returns>Boolean: success or not.</returns>
         public bool IsExistLicenseeCustInfo(string siteName, string userName, ref string ibcUsername, ref string playerCurrency, ref string errMsg)
         {
+            if (AppSettings.IsTesting)
+            {
+                return true;
+            }
+
             try
             {
                 var xml = ServiceWrapper.GetLicenseeCustInfo(siteName, userName);
@@ -689,13 +671,18 @@
                 errMsg = xml.Element("ReturnMessage") != null ? xml.Element("ReturnMessage").Value : string.Empty;
                 ibcUsername = xml.Element("IBCusername") != null ? xml.Element("IBCusername").Value : string.Empty;
                 playerCurrency = xml.Element("Currency") != null ? xml.Element("Currency").Value : string.Empty;
-                
+
                 return true;
             }
             catch
             {
                 return false;
             }
+        }
+
+        private void SetResultMessage(bool success, string message)
+        {
+            TempData["RequestResult"] = new ResultViewModel { Success = success, Message = message };
         }
 
         #endregion Payment Request
@@ -961,15 +948,15 @@
             var templatePath = Server.MapPath("~/Views/Shared/Email/SignUp/CsdMail.txt");
 
             dynamic emailContent = new
-                                    {
-                                        AffiliateName = AppSettings.SystemDisplayName,
-                                        FirstName = "Suong",
-                                        LastName = "Mai Ngao",
-                                        UserName = "MaiNgaoSuong",
-                                        SiteUrl = "www.maingaosuong.com",
-                                        MoreUrls = "www.mnsmnl.com",
-                                        MailContact = AppSettings.MailContact
-                                    };
+            {
+                AffiliateName = AppSettings.SystemDisplayName,
+                FirstName = "Suong",
+                LastName = "Mai Ngao",
+                UserName = "MaiNgaoSuong",
+                SiteUrl = "www.maingaosuong.com",
+                MoreUrls = "www.mnsmnl.com",
+                MailContact = AppSettings.MailContact
+            };
 
             var emailTitle = string.Format(Lang.CsdMailSubject, AppSettings.SystemDisplayName, "MaiNgaoSuong");
             var emailBody = (new EmailTemplateResolverService()).GetEmailBody(templatePath, emailContent);
@@ -1075,6 +1062,6 @@
             ChangeSystemLanguage();
         }
 
-        #endregion
+        #endregion QCPreTest
     }
 }
