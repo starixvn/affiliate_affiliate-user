@@ -138,22 +138,21 @@
                         <div style="overflow-x: scroll;">
                             <table class="aff-table table-padding" style="width: 100%">
                                 <tbody id="result">
+                                    @{ 
+                                        var bannerDomain = AppSettings.BannerDomain;
+                                    }
                                     @foreach (var banner in bannerList)
                                     {
                                         string signUpLink = RazorHelper.GenerateLink(AppSettings.LinkFormat, Model.CustomerID, Model.DomainSelected, Model.LinkSelected, banner.LanguageCode).ToHtmlString();
                                         string domainPrefix = Model.DomainSelected.Split('.').First().Trim();
-                                        string bannerDomain = "http://" + Model.DomainSelected.Replace(domainPrefix, "banner");
+                                        string selectedBannerDomain = "http://" + Model.DomainSelected.Replace(domainPrefix, "banner");
                                         string srcVal = AppSettings.IsTesting ?
-                                            AppSettings.BannerDomain + banner.Content :
-                                            bannerDomain + "/Content/Banners/" + banner.Content;
+                                            bannerDomain + banner.Content :
+                                            selectedBannerDomain + "/Content/Banners/" + banner.Content;
 
                                         string scriptVal = AppSettings.IsTesting ?
                                             AppSettings.BannerScriptUrl + banner.BannerId.ToString() :
-                                            bannerDomain + "/MarketingTools/GetScript/" + banner.BannerId.ToString();
-
-                                        string imgUrl = HttpContext.Current.Request.Url.AbsoluteUri.Replace(HttpContext.Current.Request.Url.AbsolutePath, string.Empty);
-                                        imgUrl = HttpContext.Current.Request.Url.Host;
-                                        imgUrl = "http://" + imgUrl.Replace(imgUrl.Split('.').First(), "banner") + "/Content/Banners/" + banner.Content;
+                                            selectedBannerDomain + "/MarketingTools/GetScript/" + banner.BannerId.ToString();
                                         
                                         string[] size = banner.Size.Split('x');
 
@@ -162,7 +161,7 @@
                                         <tr>
                                             <td>
                                                 <a class="banner-link" data-link="@signUpLink" href='javascript:;'>
-                                                    <img src='@imgUrl' border='0' alt="" style="max-width: 620px" />
+                                                    <img src='@srcVal' border='0' alt="" style="max-width: 620px" />
                                                 </a>
                                             </td>
                                         </tr>
@@ -174,12 +173,12 @@
                                                 <a class="hand banner-link" data-link="@signUpLink" href="javascript:;">
                                                     <object codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0'
                                                             classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' width='@size[0]' height='@size[1]'>
-                                                        <param value='@imgUrl' name='movie' />
+                                                        <param value='@srcVal' name='movie' />
                                                         <param value='high' name='quality' />
                                                         <param name='wmode' value='transparent' />
                                                         <param name='flashvars' value='@Model.CustomerID' />
                                                         <embed type='application/x-shockwave-flash' pluginspage='http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash'
-                                                                wmode='transparent' quality='high' src='@imgUrl' width='@size[0]' height='@size[1]' />
+                                                                wmode='transparent' quality='high' src='@srcVal' width='@size[0]' height='@size[1]' />
                                                     </object>
                                                 </a>
                                             </td>
