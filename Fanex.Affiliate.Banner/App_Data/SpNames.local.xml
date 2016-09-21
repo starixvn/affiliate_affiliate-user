@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Functions>
-  <Function Name="Aff-Banner">
-    <Setting Key="Aff_BannerUpdateStatistic" SpName="Aff_Banner_UpdateStatistic" DbName="affiliate" Plain="0" />
-    <Setting Key="Aff_BannerSelInfo" SpName="Aff_Banner_SelInfo" DbName="affiliate" Plain="0" />
-    <Setting Key="Aff_BannerGetSystemName" SpName="Aff_Banner_GetSystemName" DbName="affiliate" Plain="0" />
-  </Function>
-</Functions>
