@@ -146,9 +146,7 @@
                                         string signUpLink = RazorHelper.GenerateLink(AppSettings.LinkFormat, Model.CustomerID, Model.DomainSelected, Model.LinkSelected, banner.LanguageCode).ToHtmlString();
                                         string domainPrefix = Model.DomainSelected.Split('.').First().Trim();
                                         string selectedBannerDomain = "http://" + Model.DomainSelected.Replace(domainPrefix, "banner");
-                                        string srcVal = AppSettings.IsTesting ?
-                                            bannerDomain + banner.Content :
-                                            selectedBannerDomain + "/Content/Banners/" + banner.Content;
+                                        string srcVal = bannerDomain + banner.Content;
 
                                         string scriptVal = AppSettings.IsTesting ?
                                             AppSettings.BannerScriptUrl + banner.BannerId.ToString() :
