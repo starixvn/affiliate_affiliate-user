@@ -14,11 +14,9 @@
         public AffiliateSettings()
         {
             SystemStartDate = new DateTime();
-            BannerDomain = string.Empty;
             LicenseeID = 0;
             SystemName = string.Empty;
             SystemDisplayName = string.Empty;
-            BannerDirectory = string.Empty;
             AffiliateSupportedLanguages = string.Empty;
             AffiliateBaseCurrencyList = string.Empty;
             MinimumWithdrawalAmount = string.Empty;
@@ -29,8 +27,6 @@
 
         public DateTime SystemStartDate { get; set; }
 
-        public string BannerDomain { get; set; }
-
         public int LicenseeID { get; set; }
 
         public string SystemName { get; set; }
@@ -38,8 +34,6 @@
         public string SystemDisplayName { get; set; }
 
         public Uri BannerScriptUrl { get; set; }
-
-        public string BannerDirectory { get; set; }
 
         public string AffiliateSupportedLanguages { get; set; }
 

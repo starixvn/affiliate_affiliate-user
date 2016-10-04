@@ -364,7 +364,7 @@
         {
             get
             {
-                return AffiliateSettings.BannerDomain;
+                return GetValue("BannerDomain");
             }
         }
 
@@ -389,14 +389,6 @@
             get
             {
                 return AffiliateSettings.BannerScriptUrl;
-            }
-        }
-
-        public static string BannerDirectory
-        {
-            get
-            {
-                return AffiliateSettings.BannerDirectory;
             }
         }
 
@@ -550,14 +542,12 @@
             // common settings for whole system
             affiliateSettings.CommonSettings = commonSetting;
             affiliateSettings.SystemStartDate = GetCommonAffiliateSettingDate(commonSetting, "SystemStartDate");
-            affiliateSettings.BannerDomain = GetCommonAffiliateSettingString(commonSetting, "BannerDomain");
             affiliateSettings.LicenseeID = GetCommonAffiliateSettingInteger(commonSetting, "LicenseeID");
             affiliateSettings.SystemName = GetCommonAffiliateSettingString(commonSetting, "SystemName");
             affiliateSettings.SystemDisplayName = string.IsNullOrEmpty(GetCommonAffiliateSettingString(commonSetting, "SystemDisplayName"))
                                             ? GetCommonAffiliateSettingString(commonSetting, "SystemName")
                                             : GetCommonAffiliateSettingString(commonSetting, "SystemDisplayName");
             affiliateSettings.BannerScriptUrl = new Uri(GetCommonAffiliateSettingString(commonSetting, "BannerScriptUrl"));
-            affiliateSettings.BannerDirectory = GetCommonAffiliateSettingString(commonSetting, "BannerDirectory");
             affiliateSettings.AffiliateSupportedLanguages = GetCommonAffiliateSettingString(commonSetting, "AFF_AffiliateSupportedLanguages");
             affiliateSettings.AffiliateBaseCurrencyList = GetCommonAffiliateSettingString(commonSetting, "AffiliateCurrencies");
             affiliateSettings.MinimumWithdrawalAmount = GetCommonAffiliateSettingString(commonSetting, "AFF_MinPlayer" + GetValue("DefaultCurrency"));

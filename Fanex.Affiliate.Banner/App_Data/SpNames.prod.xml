@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Functions>
-  <Function Name="Aff-Banner">
-    <Setting Key="Aff_BannerUpdateStatistic" SpName="Aff_Banner_UpdateStatistic" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
-    <Setting Key="Aff_BannerSelInfo" SpName="Aff_Banner_SelInfo" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
-    <Setting Key="Aff_BannerGetSystemName" SpName="Aff_Banner_GetSystemName" DbName="DBAFFQ8BOLA.Affiliate_Q8bola.bodbDownlineNet" Plain="0" />
-  </Function>
-</Functions>
