@@ -1,14 +1,15 @@
 ﻿namespace Fanex.Affiliate.Banner.Controllers
 {
-    using Criteria;
-    using DTO;
-    using Microsoft.Practices.EnterpriseLibrary.Caching;
-    using Services;
+    using System;
     using System.Configuration;
     using System.IO;
+    using System.Runtime.Caching;
     using System.Text;
     using System.Text.RegularExpressions;
     using System.Web.Mvc;
+    using Criteria;
+    using DTO;
+    using Services;
 
     /// <summary>
     /// Marketing Tools controller of Affiliate Banner.
@@ -82,13 +83,13 @@
         /// <returns>Script's content.</returns>
         public static StringBuilder ReadFile(string fileScript)
         {
-            // Script existed in cache.
-            if (CacheFactory.GetCacheManager().GetData(fileScript) != null)
+            var cache = MemoryCache.Default;
+            var fileContent = cache.Get(fileScript);
+            if (fileContent != null)
             {
-                return new StringBuilder(CacheFactory.GetCacheManager().GetData(fileScript).ToString());
+                return new StringBuilder(fileContent.ToString());
             }
 
-            // Read script from file.
             var scriptContent = new StringBuilder();
             using (var fileReader = System.IO.File.OpenText(fileScript))
             {
@@ -96,7 +97,7 @@
                 fileReader.Close();
             }
 
-            CacheFactory.GetCacheManager().Add(fileScript, scriptContent.ToString());
+            cache.Add(fileScript, scriptContent.ToString(), DateTimeOffset.Now.AddMinutes(30));
             return scriptContent;
         }
 

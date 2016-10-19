@@ -3,8 +3,6 @@
     using System;
     using System.Configuration;
     using System.Web;
-    using Microsoft.Practices.EnterpriseLibrary.Caching;
-    using Microsoft.Practices.EnterpriseLibrary.Caching.Expirations;
 
     /// <summary>
     /// Common class for affiliate banner.
@@ -25,22 +23,10 @@
                 {
                     fulldomain = fulldomain + ":" + port;
                 }
-                    
+
                 fulldomain = fulldomain + (HttpRuntime.AppDomainAppVirtualPath == "/" ? string.Empty : HttpRuntime.AppDomainAppVirtualPath);
                 return fulldomain;
             }
-        }
-
-        public static bool CacheContainsException(string message)
-        {
-            var key = message.GetHashCode().ToString();
-            if (CacheFactory.GetCacheManager().Contains(key))
-            {
-                return true;
-            }
-
-            CacheFactory.GetCacheManager().Add(key, null, CacheItemPriority.None, null, new AbsoluteTime(TimeSpan.FromDays(1)));
-            return false;
         }
     }
 }
