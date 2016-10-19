@@ -123,22 +123,23 @@
             return View(viewModel);
         }
 
-        private void AssignCurrencyData(MarketingCriteria criteria)
+        /// <summary>
+        /// Marketing Category.
+        /// </summary>
+        /// <param name="criteria">Banner type criteria.</param>
+        /// <returns>Return view.</returns>
+        [HttpPost]
+        public JsonResult MarketingSubCategory(BannerTypeCriteria criteria)
         {
-            var currencies = AppSettings.PlayerCurrencies;
-            if (criteria.Currency == null && currencies.Count() == 1)
-            {
-                criteria.Currency = currencies.First().CurrencyId;
-            }
+            criteria.TypeName = "MediaSubCategory";
+            criteria.Language = AppSession.Language;
+            var subCategoryList = MarketingService.GetBannerTypeList(criteria);
+
+            return new JsonResult { Data = subCategoryList };
         }
 
-        /// <summary>
-        /// Assign more data to View Model.
-        /// </summary>
-        /// <param name="model">View Model.</param>
-        /// <param name="criteria">Criteria including data.</param>
-        public void AssignDataToModel(MarketingViewModel model, MarketingCriteria criteria)
-        {        
+        private void AssignDataToModel(MarketingViewModel model, MarketingCriteria criteria)
+        {
             model.CurrencyList = AppSettings.PlayerCurrencies;
             model.BaseLanguages = AppSettings.BaseLanguages;
             model.PreferLanguage = CurrentSession.PreferredLanguage;
@@ -155,19 +156,13 @@
             model.PageSize = criteria.PageSize;
         }
 
-        /// <summary>
-        /// Marketing Category.
-        /// </summary>
-        /// <param name="criteria">Banner type criteria.</param>
-        /// <returns>Return view.</returns>
-        [HttpPost]
-        public JsonResult MarketingSubCategory(BannerTypeCriteria criteria)
+        private void AssignCurrencyData(MarketingCriteria criteria)
         {
-            criteria.TypeName = "MediaSubCategory";
-            criteria.Language = AppSession.Language;
-            var subCategoryList = MarketingService.GetBannerTypeList(criteria);
-
-            return new JsonResult { Data = subCategoryList };
+            var currencies = AppSettings.PlayerCurrencies;
+            if (criteria.Currency == null && currencies.Count() == 1)
+            {
+                criteria.Currency = AppSettings.PlayerCurrencies.First().CurrencyId;
+            }
         }
     }
 }

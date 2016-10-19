@@ -2,6 +2,7 @@
     ViewBag.Title = Lang.MediaGallery;
     Layout = @String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
 }
+@using System.Text.RegularExpressions;
 
 @model MarketingViewModel
 
@@ -140,17 +141,15 @@
                                 <tbody id="result">
                                     @{ 
                                         var bannerDomain = AppSettings.BannerDomain;
+                                        var domainPrefix = Model.DomainSelected.Split('.').First().Trim();
+                                        var regex = new Regex(Regex.Escape(domainPrefix));
+                                        var selectedBannerDomain = "http://" + regex.Replace(Model.DomainSelected, "banner", 1);
                                     }
                                     @foreach (var banner in bannerList)
                                     {
                                         string signUpLink = RazorHelper.GenerateLink(AppSettings.LinkFormat, Model.CustomerID, Model.DomainSelected, Model.LinkSelected, banner.LanguageCode).ToHtmlString();
-                                        string domainPrefix = Model.DomainSelected.Split('.').First().Trim();
-                                        string selectedBannerDomain = "http://" + Model.DomainSelected.Replace(domainPrefix, "banner");
                                         string srcVal = bannerDomain + banner.Content;
-
-                                        string scriptVal = AppSettings.IsTesting ?
-                                            AppSettings.BannerScriptUrl + banner.BannerId.ToString() :
-                                            selectedBannerDomain + "/MarketingTools/GetScript/" + banner.BannerId.ToString();
+                                        string scriptVal = selectedBannerDomain + "/MarketingTools/GetScript/" + banner.BannerId.ToString();
                                         
                                         string[] size = banner.Size.Split('x');
 
