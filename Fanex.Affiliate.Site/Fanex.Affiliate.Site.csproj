@@ -15,7 +15,7 @@
     <AssemblyName>Fanex.Affiliate.Site</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <JSLintSkip>|\Scripts\|\Content\bootstrap\js\</JSLintSkip>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -406,6 +406,7 @@
     <Content Include="Configurations\SPNames\_SpNameConfig.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Configurations\SPNames\SpName.athena000.sit.xml" />
     <Content Include="Configurations\SPNames\_SpNameOriginal.xml" />
     <Content Include="Configurations\WebConfigs\_WebConfig.xml.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -4411,6 +4412,8 @@
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.unobet.uat.config">
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
     </Content>
+    <Content Include="Configurations\AppSettings\Web.AppSetting.athena000.sit.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.athena000.sit.config" />
     <None Include="Configurations\SPNames\_SpNameConfiguration.ttinclude" />
     <None Include="Configurations\TemplateFilemanager.CS.ttinclude" />
     <Content Include="Configurations\WebConfigs\Web.9bet.master.config">
@@ -4530,6 +4533,7 @@
     <Content Include="Configurations\WebConfigs\Web.unobet.uat.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
+    <Content Include="Configurations\WebConfigs\Web.athena000.sit.config" />
     <None Include="Content\bootstrap\js\.jshintrc" />
     <Content Include="Content\themes\29\index.less" />
     <Content Include="Content\themes\29\mixins.less" />
@@ -4867,7 +4871,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>false</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>False</AutoAssignPort>
           <DevelopmentServerPort>7980</DevelopmentServerPort>
           <DevelopmentServerVPath>/AffUser</DevelopmentServerVPath>
@@ -4879,7 +4883,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
+      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
