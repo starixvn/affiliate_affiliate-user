@@ -335,6 +335,9 @@
     <Content Include="Configurations\SPNames\SpName.athena000.production.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
+    <Content Include="Configurations\SPNames\SpName.athena000.sit.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
     <Content Include="Configurations\SPNames\SpName.athena000.uat.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
@@ -380,6 +383,18 @@
     <Content Include="Configurations\SPNames\SpName.q8bola.uat.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
+    <Content Include="Configurations\SPNames\SpName.spondemo.local.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.spondemo.production.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.spondemo.sit.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.spondemo.uat.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
     <Content Include="Configurations\SPNames\SpName.unobet.production.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
@@ -406,7 +421,6 @@
     <Content Include="Configurations\SPNames\_SpNameConfig.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Configurations\SPNames\SpName.athena000.sit.xml" />
     <Content Include="Configurations\SPNames\_SpNameOriginal.xml" />
     <Content Include="Configurations\WebConfigs\_WebConfig.xml.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -4414,6 +4428,20 @@
     </Content>
     <Content Include="Configurations\AppSettings\Web.AppSetting.athena000.sit.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.athena000.sit.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.spondemo.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.spondemo.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.spondemo.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.spondemo.sit.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.spondemo.uat.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.spondemo.sit.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.spondemo.production.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.spondemo.uat.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </Content>
     <None Include="Configurations\SPNames\_SpNameConfiguration.ttinclude" />
     <None Include="Configurations\TemplateFilemanager.CS.ttinclude" />
     <Content Include="Configurations\WebConfigs\Web.9bet.master.config">
@@ -4534,6 +4562,16 @@
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\WebConfigs\Web.athena000.sit.config" />
+    <Content Include="Configurations\WebConfigs\Web.spondemo.sit.config" />
+    <Content Include="Configurations\WebConfigs\Web.spondemo.master.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.spondemo.production.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.spondemo.uat.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
     <None Include="Content\bootstrap\js\.jshintrc" />
     <Content Include="Content\themes\29\index.less" />
     <Content Include="Content\themes\29\mixins.less" />
@@ -4629,6 +4667,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\Shared\Account\CasinoDetailTicket.cshtml" />
+    <Content Include="Web.ConnectionString.spondemo.local.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\common.less" />
@@ -4871,11 +4910,11 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>False</AutoAssignPort>
           <DevelopmentServerPort>7980</DevelopmentServerPort>
           <DevelopmentServerVPath>/AffUser</DevelopmentServerVPath>
-          <IISUrl>http://localhost:7981/AffUser</IISUrl>
+          <IISUrl>http://localhost:7980</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -4883,7 +4922,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />

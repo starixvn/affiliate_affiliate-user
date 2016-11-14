@@ -28,3 +28,5 @@
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.allbetclub.uat.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.9bet.production.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.9bet.uat.config
+// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.spondemo.production.config
+// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.spondemo.uat.config

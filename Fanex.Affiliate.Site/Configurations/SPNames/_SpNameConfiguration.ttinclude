@@ -6,6 +6,7 @@
 <#
 	
     var licenseeNames = new string[] {
+		"spondemo",
 		"9bet", 
 		"allbetclub",
 		"aoncash",
@@ -22,6 +23,7 @@
 	};
 
 	var dbNames = new string[] {
+		"DBAFFSPONDEMO.Affiliate_Spondemo.bodbDownlineNet", 
 		"DBAFF9BET.Affiliate_9Bet.bodbDownlineNet", 
 		"DBAFFALLBETCLUB.Affiliate_Allbetclub.bodbDownlineNet",
 		"DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet",
@@ -45,6 +47,21 @@
 				Environment = "DEV",
 				LicenseeName = "athena000",
 				DbName = "DBAFFATHENA000.Affiliate_Athena000.bodbDownlineNet"
+			});
+	sites.Add(new SiteInfo(){
+				Environment = "sit",
+				LicenseeName = "athena000",
+				DbName = "DBAFFATHENA000.Affiliate_Athena000.bodbDownlineNet"
+			});
+	sites.Add(new SiteInfo(){
+				Environment = "local",
+				LicenseeName = "spondemo",
+				DbName = "DBAFFSPONDEMO.Affiliate_Spondemo.bodbDownlineNet"
+			});
+	sites.Add(new SiteInfo(){
+				Environment = "sit",
+				LicenseeName = "spondemo",
+				DbName = "DBAFFSPONDEMO.Affiliate_Spondemo.bodbDownlineNet"
 			});
 
 	foreach(var environment in environments)

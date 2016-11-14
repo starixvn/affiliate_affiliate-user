@@ -41,3 +41,6 @@
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.9bet.production.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.9bet.uat.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.9bet.master.config
+// Fanex.Affiliate.Site\Configurations\WebConfigs\Web.spondemo.production.config
+// Fanex.Affiliate.Site\Configurations\WebConfigs\Web.spondemo.uat.config
+// Fanex.Affiliate.Site\Configurations\WebConfigs\Web.spondemo.master.config
