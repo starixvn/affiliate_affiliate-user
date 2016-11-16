@@ -15,7 +15,7 @@
     <AssemblyName>Fanex.Affiliate.Site</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <JSLintSkip>|\Scripts\|\Content\bootstrap\js\</JSLintSkip>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -609,10 +609,10 @@
     <Content Include="Content\themes\spondemo\images\bg-bottomLanguage.png" />
     <Content Include="Content\themes\spondemo\images\bg-contentLanguage.png" />
     <Content Include="Content\themes\spondemo\images\bg-topLanguage.png" />
+    <Content Include="Content\themes\spondemo\images\bgheader.jpg" />
     <Content Include="Content\themes\spondemo\images\bgheader.png" />
     <Content Include="Content\themes\spondemo\images\bghotNewsContent.png" />
-    <Content Include="Content\themes\spondemo\images\bgMainMenu_01.png" />
-    <Content Include="Content\themes\spondemo\images\bgMainMenu_02.png" />
+    <Content Include="Content\themes\spondemo\images\bgMainMenu.png" />
     <Content Include="Content\themes\spondemo\images\bg_buttonsite.png" />
     <Content Include="Content\themes\spondemo\images\bg_center.jpg" />
     <Content Include="Content\themes\spondemo\images\bg_center2.jpg" />
@@ -4947,7 +4947,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>False</AutoAssignPort>
           <DevelopmentServerPort>7980</DevelopmentServerPort>
           <DevelopmentServerVPath>/AffUser</DevelopmentServerVPath>
@@ -4959,7 +4959,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
+      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
