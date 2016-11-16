@@ -151,8 +151,11 @@
     <Content Include="Configurations\SPNames\SpNames.aoncash.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.aoncash.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.athena000.local.xml" />
+    <Content Include="Configurations\SPNames\SpNames.spondemo.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.athena000.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.athena000.sandbox.xml" />
+    <Content Include="Configurations\SPNames\SpNames.spondemo.sit.xml" />
+    <Content Include="Configurations\SPNames\SpNames.spondemo.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.athena000.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.be7.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.be7.production.xml" />
@@ -278,6 +281,13 @@
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configurations\WebConfigs\Web.spondemo.sit.config" />
+    <Content Include="Configurations\WebConfigs\Web.spondemo.production.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configurations\WebConfigs\Web.spondemo.uat.config" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -305,7 +315,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/3/28" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2014/3/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
