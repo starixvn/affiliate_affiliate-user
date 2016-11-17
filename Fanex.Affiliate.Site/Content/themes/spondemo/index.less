@@ -71,6 +71,7 @@ select {
 			position: relative;
 
 			.top-header {
+                height: 60px;
 				/* LOGO */
 				.logo {			
 					float: left;
@@ -208,7 +209,7 @@ select {
 					.pull-right;
 
 					* {
-						vertical-align: center;
+						vertical-align: middle;
 					}
 
 					.icon-clock {
@@ -240,11 +241,11 @@ select {
 				margin-left: 2px;
 
 				ul {
-					float: left;
-					margin: 0;
-					font-weight: bold;
-					padding-top: 12px;
-					width:700px;
+					float: right;
+                    margin: 0;
+                    font-weight: bold;
+                    padding-top: 0;
+                    padding-right: 20px;
 						
 					li {
 						display: inline;
@@ -281,13 +282,16 @@ select {
 				
 				/* DATETIME */
 				#datetime {
-					color: @dateTimeColor;
-                    float: right;
-                    font-size: 11px;
-                    line-height: 26px;
-                    margin-top: 4px;
-                    text-align: left;
-                    width: 230px;
+					    color: @dateTimeColor;
+                        float: right;
+                        font-size: 11px;
+                        line-height: 26px;
+                        position: absolute;
+                        right: 44px;
+                        text-align: right;
+                        top: 31px;
+                        width: auto;
+                        white-space: nowrap;
 					
 					.clock {
 						background: url(images/sprite.png) -143px -415px;
@@ -295,7 +299,7 @@ select {
 						width: 20px;
 						margin-right: 5px;
                         margin-top: 1px;
-						.pull-left;	
+						float: left;
 					}
 				}
 			}
