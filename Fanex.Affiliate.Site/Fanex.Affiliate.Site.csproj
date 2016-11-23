@@ -15,7 +15,7 @@
     <AssemblyName>Fanex.Affiliate.Site</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <JSLintSkip>|\Scripts\|\Content\bootstrap\js\</JSLintSkip>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -335,6 +335,9 @@
     <Content Include="Configurations\SPNames\SpName.athena000.production.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
+    <Content Include="Configurations\SPNames\SpName.athena000.sit.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
     <Content Include="Configurations\SPNames\SpName.athena000.uat.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
@@ -380,6 +383,18 @@
     <Content Include="Configurations\SPNames\SpName.q8bola.uat.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
+    <Content Include="Configurations\SPNames\SpName.spondemo.local.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.spondemo.production.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.spondemo.sit.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.spondemo.uat.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
     <Content Include="Configurations\SPNames\SpName.unobet.production.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
@@ -406,7 +421,6 @@
     <Content Include="Configurations\SPNames\_SpNameConfig.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Configurations\SPNames\SpName.athena000.sit.xml" />
     <Content Include="Configurations\SPNames\_SpNameOriginal.xml" />
     <Content Include="Configurations\WebConfigs\_WebConfig.xml.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -585,6 +599,40 @@
     <Content Include="Content\themes\29\images\signup.png" />
     <Content Include="Content\themes\29\images\sprite.png" />
     <Content Include="Content\themes\29\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\spondemo\images\banner.en-US.jpg" />
+    <Content Include="Content\themes\spondemo\images\banner.id-ID.jpg" />
+    <Content Include="Content\themes\spondemo\images\banner.ko-KR.jpg" />
+    <Content Include="Content\themes\spondemo\images\banner.th-TH.jpg" />
+    <Content Include="Content\themes\spondemo\images\banner.vi-VN.jpg" />
+    <Content Include="Content\themes\spondemo\images\banner.zh-CN.jpg" />
+    <Content Include="Content\themes\spondemo\images\banner.zh-TW.jpg" />
+    <Content Include="Content\themes\spondemo\images\bg-bottomLanguage.png" />
+    <Content Include="Content\themes\spondemo\images\bg-contentLanguage.png" />
+    <Content Include="Content\themes\spondemo\images\bg-topLanguage.png" />
+    <Content Include="Content\themes\spondemo\images\bgheader.png" />
+    <Content Include="Content\themes\spondemo\images\bghotNewsContent.png" />
+    <Content Include="Content\themes\spondemo\images\bgMainMenu.png" />
+    <Content Include="Content\themes\spondemo\images\bg_buttonsite.png" />
+    <Content Include="Content\themes\spondemo\images\bg_center.jpg" />
+    <Content Include="Content\themes\spondemo\images\bg_center2.jpg" />
+    <Content Include="Content\themes\spondemo\images\emailBanner.jpg" />
+    <Content Include="Content\themes\spondemo\images\emailBg.jpg" />
+    <Content Include="Content\themes\spondemo\images\error_icons.png" />
+    <Content Include="Content\themes\spondemo\images\favicon.ico" />
+    <Content Include="Content\themes\spondemo\images\favicon.jpg" />
+    <Content Include="Content\themes\spondemo\images\glyphicons-halflings-gray-lighter.png" />
+    <Content Include="Content\themes\spondemo\images\glyphicons-halflings-gray.png" />
+    <Content Include="Content\themes\spondemo\images\glyphicons-halflings.png" />
+    <Content Include="Content\themes\spondemo\images\header_gradient.png" />
+    <Content Include="Content\themes\spondemo\images\help.txt" />
+    <Content Include="Content\themes\spondemo\images\in_top.png" />
+    <Content Include="Content\themes\spondemo\images\loader.gif" />
+    <Content Include="Content\themes\spondemo\images\deco.jpg" />
+    <Content Include="Content\themes\spondemo\images\logout.png" />
+    <Content Include="Content\themes\spondemo\images\signup.png" />
+    <Content Include="Content\themes\spondemo\images\spliter.png" />
+    <Content Include="Content\themes\spondemo\images\sprite.png" />
+    <Content Include="Content\themes\spondemo\images\ui-icons_454545_256x240.png" />
     <Content Include="Content\themes\be7th\images\banner.en-US.jpg" />
     <Content Include="Content\themes\be7th\images\banner.th-TH.jpg" />
     <Content Include="Content\themes\be7th\images\banner_top.png" />
@@ -4414,6 +4462,20 @@
     </Content>
     <Content Include="Configurations\AppSettings\Web.AppSetting.athena000.sit.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.athena000.sit.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.spondemo.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.spondemo.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.spondemo.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.spondemo.sit.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.spondemo.uat.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.spondemo.sit.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.spondemo.production.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.spondemo.uat.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </Content>
     <None Include="Configurations\SPNames\_SpNameConfiguration.ttinclude" />
     <None Include="Configurations\TemplateFilemanager.CS.ttinclude" />
     <Content Include="Configurations\WebConfigs\Web.9bet.master.config">
@@ -4534,6 +4596,16 @@
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\WebConfigs\Web.athena000.sit.config" />
+    <Content Include="Configurations\WebConfigs\Web.spondemo.sit.config" />
+    <Content Include="Configurations\WebConfigs\Web.spondemo.master.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.spondemo.production.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.spondemo.uat.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
     <None Include="Content\bootstrap\js\.jshintrc" />
     <Content Include="Content\themes\29\index.less" />
     <Content Include="Content\themes\29\mixins.less" />
@@ -4541,6 +4613,9 @@
     <Content Include="Content\themes\be7th\index.less" />
     <Content Include="Content\themes\be7th\mixins.less" />
     <Content Include="Content\themes\be7th\variables.less" />
+    <Content Include="Content\themes\spondemo\index.less" />
+    <Content Include="Content\themes\spondemo\mixins.less" />
+    <Content Include="Content\themes\spondemo\variables.less" />
     <None Include="Deployment.ignore" />
     <Content Include="GruntFilters.json" />
     <None Include="img\Slot\H0005\Thumbs.db" />
@@ -4629,6 +4704,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\Shared\Account\CasinoDetailTicket.cshtml" />
+    <Content Include="Web.ConnectionString.spondemo.local.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\common.less" />
@@ -4875,7 +4951,7 @@
           <AutoAssignPort>False</AutoAssignPort>
           <DevelopmentServerPort>7980</DevelopmentServerPort>
           <DevelopmentServerVPath>/AffUser</DevelopmentServerVPath>
-          <IISUrl>http://localhost:7981/AffUser</IISUrl>
+          <IISUrl>http://localhost:7980</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
