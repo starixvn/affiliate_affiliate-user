@@ -198,6 +198,7 @@
     <Content Include="Configurations\SPNames\SpNames.banner.aoncash.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.aoncash.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.athena000.local.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.spondemo.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.spondemo.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.athena000.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.athena000.sandbox.xml" />
