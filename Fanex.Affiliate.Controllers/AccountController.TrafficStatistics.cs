@@ -97,7 +97,7 @@
             return View(data.ToPagedList(currentPageIndex, itemPerPage, totalPage * itemPerPage));
         }
 
-        #endregion Statistics Clicks Landing Pages
+        #endregion Traffic Statistics - Clicks Landing Pages
 
         #region Traffic Statistics - Referrers Pages
 
@@ -131,7 +131,6 @@
                 var startDate = destinateDate.AddMonths(-1);
                 criteria = new TrafficStatisticCriteria
                 {
-                    AffId = CurrentSession.AffId,
                     FromDate = startDate,
                     ToDate = destinateDate,
                 };
@@ -168,6 +167,6 @@
             return View(data.ToPagedList(currentPageIndex, itemPerPage, totalPage * itemPerPage));
         }
 
-        #endregion Statistics Referrers Pages
+        #endregion Traffic Statistics - Referrers Pages
     }
 }

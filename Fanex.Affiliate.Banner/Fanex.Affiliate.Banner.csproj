@@ -198,6 +198,8 @@
     <Content Include="Configurations\SPNames\SpNames.banner.aoncash.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.aoncash.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.athena000.local.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.spondemo.production.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.spondemo.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.athena000.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.athena000.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.athena000.uat.xml" />
@@ -358,6 +360,8 @@
     <Content Include="Configurations\WebConfigs\Web.banner.be7th.uat.config" />
     <Content Include="packages.config" />
     <Content Include="Deployment.ignore" />
+    <Content Include="Configurations\WebConfigs\Web.banner.spondemo.sit.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.spondemo.production.config" />
     <None Include="Properties\PublishProfiles\a.pubxml" />
   </ItemGroup>
   <PropertyGroup>

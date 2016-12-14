@@ -1,7 +1,9 @@
 ﻿namespace Fanex.Affiliate.Site
 {
     using System;
+    using System.Data.SqlClient;
     using System.Diagnostics.CodeAnalysis;
+    using System.Text;
     using System.Web;
     using System.Web.Mvc;
     using System.Web.Optimization;
@@ -12,6 +14,7 @@
     using Configurations;
     using Data.Configuration;
     using Logging;
+    using Web;
     using Web.Mvc;
 
     /// <summary>
@@ -66,13 +69,9 @@
                 return;
             }
 
-            var message = "Affiliate" + AppSettings.AffiliateName +
-                          "\r\nError:" + exception.Message +
-                          "\r\nUrl: " + Request.RawUrl +
-                          "\r\nQUERYSTRING: " + Request.QueryString +
-                          "\r\nStackTrace: " + exception.StackTrace;
+            StringBuilder message = BuildErrorMessage(exception);
 
-            LogService.Error(message);
+            LogService.Error(message.ToString());
 
             if (!AppSettings.IsTesting && Request.RequestContext.HttpContext.Request.IsAjaxRequest())
             {
@@ -105,6 +104,40 @@
                 FormsAuthentication.RedirectToLoginPage("Session=Expired");
                 HttpContext.Current.Response.End();
             }
+        }
+
+        private StringBuilder BuildErrorMessage(Exception exception)
+        {
+            var message = new StringBuilder()
+                            .AppendLine("Affiliate: " + AppSettings.AffiliateName)
+                            .AppendLine("Error:" + exception.Message)
+                            .AppendLine("Url: " + Request.RawUrl)
+                            .AppendLine("UrlReferrer: " + Request.UrlReferrer)
+                            .AppendLine("QUERYSTRING: " + Request.QueryString)
+                            .AppendLine("FORM: " + string.Join("~", Request.Form))
+                            .AppendLine("Browser:" + Request.Browser.Type.ToString())
+                            .AppendLine("BrowserVer:" + Request.Browser.Version.ToString())
+                            .AppendLine("Agent:" + Request.UserAgent.ToString());
+
+            var currenSession = SessionManager.CurrentSession;
+            if (currenSession != null)
+            {
+                message.AppendLine("AffId: " + currenSession.AffId)
+                    .AppendLine("AffType: " + currenSession.AffType)
+                    .AppendLine("IsInternalSite: " + currenSession.IsInternalSite)
+                    .AppendLine("Username: " + currenSession.Username);
+            }
+
+            var sqlException = exception as SqlException;
+            if (sqlException != null)
+            {
+                message.AppendLine("Procedure: " + sqlException.Procedure)
+                    .AppendLine("Line Number: " + sqlException.LineNumber)
+                    .AppendLine("Server: " + sqlException.Server);
+            }
+
+            message.AppendLine("StackTrace: " + exception.StackTrace);
+            return message;
         }
     }
 }
