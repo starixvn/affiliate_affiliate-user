@@ -91,11 +91,7 @@
             }
 
             var scriptContent = new StringBuilder();
-            using (var fileReader = System.IO.File.OpenText(fileScript))
-            {
-                scriptContent.Append(fileReader.ReadToEnd());
-                fileReader.Close();
-            }
+            scriptContent.Append(System.IO.File.ReadAllText(fileScript));
 
             cache.Add(fileScript, scriptContent.ToString(), DateTimeOffset.Now.AddMinutes(30));
             return scriptContent;
