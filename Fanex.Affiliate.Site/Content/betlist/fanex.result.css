@@ -153,6 +153,14 @@ table.fn-rs .cl-ko-time
 {
     width: 90px;
 }
+table.fn-rs .cl-result.home
+{
+    min-width: 150px;
+}
+table.fn-rs .cl-result.away
+{
+    min-width: 150px;
+}
 table.fn-rs .cl-match
 {
     min-width: 82px;
