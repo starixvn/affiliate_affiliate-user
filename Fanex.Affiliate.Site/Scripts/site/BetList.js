@@ -22,7 +22,7 @@ var BetList = (function ($) {
             return url;
         },
 
-        getSportBookResultUrl: function (matchid, bettype, raceNo, sporttype, league, isOutright, username) {
+        getSportBookResultUrl: function (matchid, bettype, raceNo, sporttype, league, isOutright, username, betid) {
             var url = AFFILIATE.getAbsoluteUrl('Account/BetListResults');
             url = QueryString.setParam(url, "matchid", matchid);
             url = QueryString.setParam(url, "bettype", bettype);
@@ -30,11 +30,13 @@ var BetList = (function ($) {
             url = QueryString.setParam(url, "sporttype", sporttype);
             url = QueryString.setParam(url, "isoutright", isOutright);
             url = QueryString.setParam(url, "username", username);
+            url = QueryString.setParam(url, "betid", betid);
 
             return url;
         },
 
-        showResult: function (matchid, raceNo, bettype, sporttype, refno, username, winlostdate, refnoMixParlay, league, isOutright) {
+        showResult: function (matchid, raceNo, bettype, sporttype, refno, username, winlostdate, refnoMixParlay,
+            league, isOutright, betid, betcheck, custid) {
             var title = window.MSG.Results;
 
             if (sporttype === SPORT_RNG_GAME || sporttype === SPORT_RNG_MINIGAME || sporttype === SPORT_RNG_MOBILE) {
@@ -43,7 +45,7 @@ var BetList = (function ($) {
             else {
                 var url = bettype === 9 || bettype === 29
                         ? BetList.getMixParlayResultUrl(refnoMixParlay, winlostdate, bettype, username)
-                        : BetList.getSportBookResultUrl(matchid, bettype, raceNo, sporttype, league, isOutright, username);
+                        : BetList.getSportBookResultUrl(matchid, bettype, raceNo, sporttype, league, isOutright, username, betid);
                
                 AFFILIATE.openDialogFrame(url, title, { width: 720, height: 500 });
             }
