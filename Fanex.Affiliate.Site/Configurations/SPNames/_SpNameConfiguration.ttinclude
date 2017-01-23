@@ -20,7 +20,8 @@
 		"aiabet",
 		"q8bola",
 		"unobet",
-		"indowin"
+		"indowin",
+		"aragon88"
 	};
 
 	var dbNames = new string[] {
@@ -38,7 +39,8 @@
 		"DBAFFAIABET.Affiliate_AIAbet.bodbDownlineNet",
 		"DBAFFQ8BOLA.Affiliate_Q8BOLA.bodbDownlineNet",
 		"DBAFFUNOBET.Affiliate_unobet.bodbDownlineNet",
-		"DBAFFUNOBET.Affiliate_indowin.bodbDownlineNet"
+		"DBAFFUNOBET.Affiliate_indowin.bodbDownlineNet",
+		"DBAFFUNOBET.Affiliate_aragon88.bodbDownlineNet"
 	};
 
 	var environments = new string[] { "uat", "production" };
