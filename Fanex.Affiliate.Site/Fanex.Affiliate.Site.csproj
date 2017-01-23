@@ -607,12 +607,6 @@
     <Content Include="Content\themes\29\images\ui-icons_454545_256x240.png" />
     <Content Include="Content\themes\indowin\images\banner.en-US.jpg" />
     <Content Include="Content\themes\indowin\images\banner.id-ID.jpg" />
-    <Content Include="Content\themes\indowin\images\banner.in-IN.jpg" />
-    <Content Include="Content\themes\indowin\images\banner.ko-KR.jpg" />
-    <Content Include="Content\themes\indowin\images\banner.th-TH.jpg" />
-    <Content Include="Content\themes\indowin\images\banner.vi-VN.jpg" />
-    <Content Include="Content\themes\indowin\images\banner.zh-CN.jpg" />
-    <Content Include="Content\themes\indowin\images\banner.zh-TW.jpg" />
     <Content Include="Content\themes\indowin\images\bg-bottomLanguage.png" />
     <Content Include="Content\themes\indowin\images\bg-topLanguage.png" />
     <Content Include="Content\themes\indowin\images\bgheader.png" />
@@ -5022,7 +5016,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
