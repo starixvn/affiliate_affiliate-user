@@ -40,7 +40,7 @@ var SIGNUP = (function ($) {
             } else {
                 currentDate = Date.now();
             }
-            $('#captcha-signup').attr('src', '/User/CaptchaImage' + "?" + currentDate);
+            $('#captcha-signup').attr('src', AFFILIATE.getAbsoluteUrl('/User/CaptchaImage') + "?" + currentDate);
         },
         addUrl: function () {
             var sites = $(".sites");
