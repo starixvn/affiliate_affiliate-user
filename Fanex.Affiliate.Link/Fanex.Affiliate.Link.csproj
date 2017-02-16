@@ -150,7 +150,15 @@
     <Content Include="Configurations\SPNames\SpNames.aoncash.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.aoncash.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.aoncash.uat.xml" />
+    <Content Include="Configurations\SPNames\SpNames.aragon88.local.xml" />
+    <Content Include="Configurations\SPNames\SpNames.aragon88.production.xml" />
+    <Content Include="Configurations\SPNames\SpNames.aragon88.sandbox.xml" />
+    <Content Include="Configurations\SPNames\SpNames.aragon88.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.athena000.local.xml" />
+    <Content Include="Configurations\SPNames\SpNames.indowin.local.xml" />
+    <Content Include="Configurations\SPNames\SpNames.indowin.production.xml" />
+    <Content Include="Configurations\SPNames\SpNames.indowin.sandbox.xml" />
+    <Content Include="Configurations\SPNames\SpNames.indowin.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.spondemo.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.athena000.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.athena000.sandbox.xml" />
@@ -287,6 +295,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Configurations\WebConfigs\Web.spondemo.uat.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configurations\WebConfigs\Web.aragon88.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.aragon88.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.indowin.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.indowin.uat.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -197,7 +197,15 @@
     <Content Include="Configurations\SPNames\SpNames.banner.aoncash.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.aoncash.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.aoncash.uat.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.aragon88.local.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.aragon88.production.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.aragon88.sandbox.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.aragon88.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.athena000.local.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.indowin.local.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.indowin.production.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.indowin.sandbox.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.indowin.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.spondemo.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.spondemo.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.athena000.production.xml" />
@@ -362,6 +370,12 @@
     <Content Include="Deployment.ignore" />
     <Content Include="Configurations\WebConfigs\Web.banner.spondemo.sit.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.spondemo.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.aragon88.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.aragon88.sandbox.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.aragon88.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.indowin.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.indowin.sandbox.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.indowin.uat.config" />
     <None Include="Properties\PublishProfiles\a.pubxml" />
   </ItemGroup>
   <PropertyGroup>

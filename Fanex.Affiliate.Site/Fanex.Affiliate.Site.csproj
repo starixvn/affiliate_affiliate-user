@@ -332,6 +332,12 @@
     <Content Include="Configurations\SPNames\SpName.aoncash.uat.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
+    <Content Include="Configurations\SPNames\SpName.aragon88.production.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.aragon88.uat.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
     <Content Include="Configurations\SPNames\SpName.athena000.production.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
@@ -357,6 +363,12 @@
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.goobet.uat.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.indowin.production.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.indowin.uat.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.itcbet.production.xml">
@@ -599,6 +611,68 @@
     <Content Include="Content\themes\29\images\signup.png" />
     <Content Include="Content\themes\29\images\sprite.png" />
     <Content Include="Content\themes\29\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\aragon88\images\banner.en-US.jpg" />
+    <Content Include="Content\themes\aragon88\images\banner.in-IN.jpg" />
+    <Content Include="Content\themes\aragon88\images\banner.th-TH.jpg" />
+    <Content Include="Content\themes\aragon88\images\banner.zh-CN.jpg" />
+    <Content Include="Content\themes\aragon88\images\banner.zh-TW.jpg" />
+    <Content Include="Content\themes\aragon88\images\banner_top.png" />
+    <Content Include="Content\themes\aragon88\images\bg-bottomLanguage.png" />
+    <Content Include="Content\themes\aragon88\images\bg-contentLanguage.png" />
+    <Content Include="Content\themes\aragon88\images\bg-topLanguage.png" />
+    <Content Include="Content\themes\aragon88\images\bgheader.png" />
+    <Content Include="Content\themes\aragon88\images\bghotNewsContent.png" />
+    <Content Include="Content\themes\aragon88\images\bgMainMenu.png" />
+    <Content Include="Content\themes\aragon88\images\bg_buttonsite.png" />
+    <Content Include="Content\themes\aragon88\images\bg_center.jpg" />
+    <Content Include="Content\themes\aragon88\images\bg_center2.jpg" />
+    <Content Include="Content\themes\aragon88\images\deco.jpg" />
+    <Content Include="Content\themes\aragon88\images\emailBanner.jpg" />
+    <Content Include="Content\themes\aragon88\images\emailBg.jpg" />
+    <Content Include="Content\themes\aragon88\images\error_icons.png" />
+    <Content Include="Content\themes\aragon88\images\favicon.jpg" />
+    <Content Include="Content\themes\aragon88\images\favicon.ico" />
+    <Content Include="Content\themes\aragon88\images\glyphicons-halflings-gray-lighter.png" />
+    <Content Include="Content\themes\aragon88\images\glyphicons-halflings-gray.png" />
+    <Content Include="Content\themes\aragon88\images\glyphicons-halflings.png" />
+    <Content Include="Content\themes\aragon88\images\header_gradient.png" />
+    <Content Include="Content\themes\aragon88\images\help.txt" />
+    <Content Include="Content\themes\aragon88\images\in_top.png" />
+    <Content Include="Content\themes\aragon88\images\loader.gif" />
+    <Content Include="Content\themes\aragon88\images\logout.png" />
+    <Content Include="Content\themes\aragon88\images\signup.png" />
+    <Content Include="Content\themes\aragon88\images\spliter.png" />
+    <Content Include="Content\themes\aragon88\images\sprite.png" />
+    <Content Include="Content\themes\aragon88\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\indowin\images\banner.en-US.jpg" />
+    <Content Include="Content\themes\indowin\images\banner.id-ID.jpg" />
+    <Content Include="Content\themes\indowin\images\bg-bottomLanguage.png" />
+    <Content Include="Content\themes\indowin\images\bg-topLanguage.png" />
+    <Content Include="Content\themes\indowin\images\bgheader.png" />
+    <Content Include="Content\themes\indowin\images\bghotNewsContent.png" />
+    <Content Include="Content\themes\indowin\images\bg-contentLanguage.png" />
+    <Content Include="Content\themes\indowin\images\bgMainMenu.png" />
+    <Content Include="Content\themes\indowin\images\bg_buttonsite.png" />
+    <Content Include="Content\themes\indowin\images\bg_center.jpg" />
+    <Content Include="Content\themes\indowin\images\bg_center2.jpg" />
+    <Content Include="Content\themes\indowin\images\emailBanner.jpg" />
+    <Content Include="Content\themes\indowin\images\emailBg.jpg" />
+    <Content Include="Content\themes\indowin\images\error_icons.png" />
+    <Content Include="Content\themes\indowin\images\favicon.ico" />
+    <Content Include="Content\themes\indowin\images\favicon.jpg" />
+    <Content Include="Content\themes\indowin\images\glyphicons-halflings-gray-lighter.png" />
+    <Content Include="Content\themes\indowin\images\glyphicons-halflings-gray.png" />
+    <Content Include="Content\themes\indowin\images\glyphicons-halflings.png" />
+    <Content Include="Content\themes\indowin\images\header_gradient.png" />
+    <Content Include="Content\themes\indowin\images\help.txt" />
+    <Content Include="Content\themes\indowin\images\in_top.png" />
+    <Content Include="Content\themes\indowin\images\loader.gif" />
+    <Content Include="Content\themes\indowin\images\deco.jpg" />
+    <Content Include="Content\themes\indowin\images\logout.png" />
+    <Content Include="Content\themes\indowin\images\signup.png" />
+    <Content Include="Content\themes\indowin\images\spliter.png" />
+    <Content Include="Content\themes\indowin\images\sprite.png" />
+    <Content Include="Content\themes\indowin\images\ui-icons_454545_256x240.png" />
     <Content Include="Content\themes\spondemo\images\banner.en-US.jpg" />
     <Content Include="Content\themes\spondemo\images\banner.id-ID.jpg" />
     <Content Include="Content\themes\spondemo\images\banner.ko-KR.jpg" />
@@ -4476,6 +4550,26 @@
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.spondemo.uat.config">
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
     </Content>
+    <Content Include="Configurations\AppSettings\Web.AppSetting.indowin.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.indowin.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.indowin.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.indowin.uat.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.indowin.production.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.indowin.uat.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\AppSettings\Web.AppSetting.aragon88.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.aragon88.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.aragon88.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.aragon88.uat.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aragon88.production.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aragon88.uat.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </Content>
     <None Include="Configurations\SPNames\_SpNameConfiguration.ttinclude" />
     <None Include="Configurations\TemplateFilemanager.CS.ttinclude" />
     <Content Include="Configurations\WebConfigs\Web.9bet.master.config">
@@ -4606,6 +4700,24 @@
     <Content Include="Configurations\WebConfigs\Web.spondemo.uat.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
+    <Content Include="Configurations\WebConfigs\Web.indowin.master.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.indowin.production.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.indowin.uat.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.aragon88.master.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.aragon88.production.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.aragon88.uat.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
     <None Include="Content\bootstrap\js\.jshintrc" />
     <Content Include="Content\themes\29\index.less" />
     <Content Include="Content\themes\29\mixins.less" />
@@ -4616,6 +4728,12 @@
     <Content Include="Content\themes\spondemo\index.less" />
     <Content Include="Content\themes\spondemo\mixins.less" />
     <Content Include="Content\themes\spondemo\variables.less" />
+    <Content Include="Content\themes\indowin\index.less" />
+    <Content Include="Content\themes\indowin\mixins.less" />
+    <Content Include="Content\themes\indowin\variables.less" />
+    <Content Include="Content\themes\aragon88\index.less" />
+    <Content Include="Content\themes\aragon88\mixins.less" />
+    <Content Include="Content\themes\aragon88\variables.less" />
     <None Include="Deployment.ignore" />
     <Content Include="GruntFilters.json" />
     <None Include="img\Slot\H0005\Thumbs.db" />
