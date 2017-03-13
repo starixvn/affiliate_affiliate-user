@@ -735,6 +735,8 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         
         private long refNoField;
         
+        private decimal exchangeRateField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public long RefNo {
@@ -744,6 +746,18 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
             set {
                 this.refNoField = value;
                 this.RaisePropertyChanged("RefNo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public decimal ExchangeRate {
+            get {
+                return this.exchangeRateField;
+            }
+            set {
+                this.exchangeRateField = value;
+                this.RaisePropertyChanged("ExchangeRate");
             }
         }
     }
