@@ -15,7 +15,7 @@
     <AssemblyName>Fanex.Affiliate.Site</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <JSLintSkip>|\Scripts\|\Content\bootstrap\js\</JSLintSkip>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -4447,7 +4447,9 @@
     <Content Include="Content\themes\28\index.less" />
     <Content Include="Content\themes\28\mixins.less" />
     <Content Include="Content\themes\28\variables.less" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.local.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.master.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.production.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.uat.config" />
@@ -5077,7 +5079,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
