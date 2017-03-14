@@ -143,6 +143,7 @@
             {
                 CustId = model.CustId,
                 RefNo = model.TransId,
+                ExchangeRate = CurrentSession.ExchangeRate
             };
 
             var affBetlistService = new AffiliateAPISoapClient();
@@ -158,6 +159,7 @@
             {
                 CustId = model.CustId,
                 RefNo = model.TransId,
+                ExchangeRate = CurrentSession.ExchangeRate
             };
 
             var affBetlistService = new AffiliateAPISoapClient();

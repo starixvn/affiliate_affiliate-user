@@ -18,11 +18,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://10.18.200.209:5001/WebService/AffiliateAPI.asmx" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:52390/AffiliateAPI.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="AffiliateAPI11.wsdl" MetadataType="Wsdl" ID="61318cfe-4cb0-474b-9e1d-5ec0672d1c58" SourceId="1" SourceUrl="http://10.18.200.209:5001/WebService/AffiliateAPI.asmx?wsdl" />
-    <MetadataFile FileName="AffiliateAPI11.disco" MetadataType="Disco" ID="44bea005-30fa-480c-a8da-006d71a79747" SourceId="1" SourceUrl="http://10.18.200.209:5001/WebService/AffiliateAPI.asmx?disco" />
+    <MetadataFile FileName="AffiliateAPI.disco" MetadataType="Disco" ID="ec6fe3d5-b1a8-4811-9c6d-1c8e06de114c" SourceId="1" SourceUrl="http://localhost:52390/AffiliateAPI.asmx?disco" />
+    <MetadataFile FileName="AffiliateAPI.wsdl" MetadataType="Wsdl" ID="0c4acf8b-cd6e-4a95-bb97-dd0d2d500f62" SourceId="1" SourceUrl="http://localhost:52390/AffiliateAPI.asmx?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
