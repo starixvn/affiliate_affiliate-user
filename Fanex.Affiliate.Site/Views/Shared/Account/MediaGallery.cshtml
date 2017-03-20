@@ -140,7 +140,7 @@
                             <table class="aff-table table-padding" style="width: 100%">
                                 <tbody id="result">
                                     @{ 
-                                        var bannerDomain = AppSettings.BannerDomain;
+                                        var bannerDomain = RazorHelper.GetBannerUrl();
                                         var domainPrefix = Model.DomainSelected.Split('.').First().Trim();
                                         var regex = new Regex(Regex.Escape(domainPrefix));
                                         var selectedBannerDomain = "http://" + regex.Replace(Model.DomainSelected, "banner", 1);
