@@ -1,6 +1,22 @@
-﻿@using System.Globalization
-@using Fanex.Affiliate.DTO
+﻿@using Fanex.Affiliate.DTO
 @using Fanex.Affiliate.Resources
+@using Fanex.Affiliate.Configurations
+
+@functions{
+    public static string GetBannerUrl()
+    {
+        var url = AppSettings.BannerDomain;
+        if (AppSettings.Environment.Equals("Production", StringComparison.OrdinalIgnoreCase))
+        {
+            var secondLevelDomain = Request.Url.Host.Split('.')[1];
+            var defaultSecondLevelDomain = url.Split('.')[1];
+            url = url.Replace("." + defaultSecondLevelDomain + ".", "." + secondLevelDomain + ".");
+        }
+
+        return url;
+    }
+}
+
 @helper DropDownListGetMonth(int selectedValue, IDictionary<string, object> htmlAttributies = null)
     {
         var name = "class=\"sel-filter\" ";
