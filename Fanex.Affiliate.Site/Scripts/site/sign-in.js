@@ -82,7 +82,7 @@ var SIGNIN = (function ($) {
                                 parent.location.href = AFFILIATE.getAbsoluteUrl("Account/Overview");
                             }
                             else {
-                                parent.location.href = AFFILIATE.getAbsoluteUrl(returnUrl.substring(1, returnUrl.length));
+                                parent.location.href = AFFILIATE.getAbsoluteUrl("");
                             }
                         }
                     },
