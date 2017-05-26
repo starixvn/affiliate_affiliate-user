@@ -1,4 +1,8 @@
-﻿@Styles.Render("~/css/cashoutdetail")
+﻿@{
+    ViewBag.Title = ViewBag.IsCashOut ? Lang.CashOutDetails : Lang.BoughtDetails;
+}
+
+@Styles.Render("~/css/cashoutdetail")
 @Styles.Render("~/css/betlist")
 
 <style type="text/css">
