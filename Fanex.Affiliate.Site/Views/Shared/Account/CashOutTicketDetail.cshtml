@@ -1,0 +1,29 @@
+﻿@Styles.Render("~/css/cashoutdetail")
+@Styles.Render("~/css/betlist")
+
+<style type="text/css">
+    .popup .container-fluid {
+        width: auto !important;
+    }
+
+        .popup .container-fluid .span12.contents .leftColumn {
+            width: 715px !important;
+        }
+</style>
+
+@if (string.IsNullOrEmpty(ViewBag.Data))
+{
+    Layout = "~/Views/Shared/_LayoutSimplePopup.cshtml";
+    <p style="font-size: 12px; font-weight: bold; text-align: center; margin-top: 7px;">@Lang.NoInformation</p>
+}
+else
+{
+    Layout = "~/Views/Shared/_LayoutPopup.cshtml";
+    @Html.Raw(ViewBag.Data)
+}
+
+
+@section scripts {
+    @Scripts.Render("~/js/betlist")
+}
+

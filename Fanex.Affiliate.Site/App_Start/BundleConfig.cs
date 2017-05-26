@@ -207,6 +207,14 @@
             }
             .Include("~/Content/betlist/global.content.css")
             .Include("~/Content/betlist/systemparlay.detail.css"));
+
+            bundles.Add(new Bundle("~/css/cashoutdetail")
+            {
+                Transforms = { new CssTransformer(), new CssMinify() },
+                Orderer = new NullOrderer()
+            }
+            .Include("~/Content/betlist/global.content.css")
+            .Include("~/Content/betlist/cashoutdetail.css"));
         }
 
         /// <summary>

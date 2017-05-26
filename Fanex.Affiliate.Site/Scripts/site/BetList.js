@@ -1,11 +1,12 @@
 ﻿/* global AFFILIATE, QueryString */
-/* exported showCombMP, showCombMPDetail, showMP, ViewResult, showNewCombMP */
+/* exported showCombMP, showCombMPDetail, showMP, ViewResult, showNewCombMP, ViewCashOutHistory */
 "use strict";
 
 var BetList = (function ($) {
     var SPORT_RNG_GAME = 208;
     var SPORT_RNG_MINIGAME = 209;
     var SPORT_RNG_MOBILE = 210;
+    var BETTYPE_CASHOUT = 911;
 
     return {
         initialize: function () {
@@ -222,6 +223,29 @@ var BetList = (function ($) {
                 width: popW + 10,
                 height: popH + 50
             });
+        },
+
+        viewCashOutHistory: function (transId, refNo, betType, betdapId) {
+            var para = $('form').serializeObject2();
+            var url = AFFILIATE.getAbsoluteUrl('BetList/CashOutDetailTicket');
+            url = QueryString.setParam(url, "transId", transId);
+            url = QueryString.setParam(url, "refNo", refNo);
+            url = QueryString.setParam(url, "betType", betType);
+            url = QueryString.setParam(url, "originalTransId", betdapId);
+            url = QueryString.setParam(url, "exchangeRate", para.ExchangeRate);
+
+            var popH = Math.min($(window).height() - 100, 550), popW = 960;
+            var isCashOut = betdapId < 1 || betType === BETTYPE_CASHOUT;;
+            var title = isCashOut ? MSG.TitleCashOutTicketDetail : MSG.TitleBoughtTicketDetail;
+
+            var dialogForm = '<div title="' + title + '"><iframe scrolling="no" frameborder="0" width="' +
+                             popW + '" height="99%" src="' + url + '" ></iframe></div>';
+
+            $(dialogForm).dialog({
+                modal: true,
+                width: popW + 10,
+                height: popH + 50
+            });
         }
     };
 })(jQuery);
@@ -244,3 +268,4 @@ var showCombMPDetail = BetList.showSystemParlayDetail;
 var showRnGCasinoDetails = BetList.showRnGCasinoDetails;
 var showAGCasinoDetails = BetList.showAGCasinoDetails;var showCombMPDetail = BetList.showSystemParlayDetail;
 var showNewCombMP = BetList.showNewParlayDetail;
+var ViewCashOutHistory = BetList.viewCashOutHistory;

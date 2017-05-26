@@ -443,6 +443,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
+    <Content Include="Content\betlist\cashoutdetail.css" />
     <Content Include="Content\betlist\custom-betlist.css" />
     <Content Include="Content\bootstrap\img\glyphicons-halflings-white.png" />
     <Content Include="Content\bootstrap\img\glyphicons-halflings.png" />
@@ -4825,6 +4826,7 @@
     </Content>
     <Content Include="Views\Shared\Account\CasinoDetailTicket.cshtml" />
     <Content Include="Web.ConnectionString.spondemo.local.config" />
+    <Content Include="Views\Shared\Account\CashOutTicketDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\common.less" />
@@ -5079,7 +5081,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
+      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />

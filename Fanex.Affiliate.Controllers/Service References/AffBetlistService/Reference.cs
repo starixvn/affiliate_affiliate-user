@@ -54,6 +54,11 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CriteriaBase))]
         string GetBetListAgCasinoDetail(string userName, Fanex.Affiliate.Controllers.AffBetlistService.BetListDetailCriteria criteria);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBetListCashOutDetail", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CriteriaBase))]
+        string GetBetListCashOutDetail(Fanex.Affiliate.Controllers.AffBetlistService.BetListDetailCriteria criteria);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBetlistResults", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CriteriaBase))]
@@ -737,6 +742,12 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         
         private decimal exchangeRateField;
         
+        private long transIdField;
+        
+        private long originalTransIdField;
+        
+        private int betTypeField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public long RefNo {
@@ -758,6 +769,42 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
             set {
                 this.exchangeRateField = value;
                 this.RaisePropertyChanged("ExchangeRate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public long TransId {
+            get {
+                return this.transIdField;
+            }
+            set {
+                this.transIdField = value;
+                this.RaisePropertyChanged("TransId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public long OriginalTransId {
+            get {
+                return this.originalTransIdField;
+            }
+            set {
+                this.originalTransIdField = value;
+                this.RaisePropertyChanged("OriginalTransId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public int BetType {
+            get {
+                return this.betTypeField;
+            }
+            set {
+                this.betTypeField = value;
+                this.RaisePropertyChanged("BetType");
             }
         }
     }
@@ -954,6 +1001,10 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         
         public string GetBetListAgCasinoDetail(string userName, Fanex.Affiliate.Controllers.AffBetlistService.BetListDetailCriteria criteria) {
             return base.Channel.GetBetListAgCasinoDetail(userName, criteria);
+        }
+        
+        public string GetBetListCashOutDetail(Fanex.Affiliate.Controllers.AffBetlistService.BetListDetailCriteria criteria) {
+            return base.Channel.GetBetListCashOutDetail(criteria);
         }
         
         public string GetBetlistResults(string affiliateName, string sessionLanguage, Fanex.Affiliate.Controllers.AffBetlistService.BetListResultsCriteria criteria, string language) {

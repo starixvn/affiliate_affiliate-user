@@ -646,6 +646,15 @@ namespace Fanex.Affiliate.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bought Details.
+        /// </summary>
+        public static string BoughtDetails {
+            get {
+                return ResourceManager.GetString("BoughtDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bonaire, Sint Eustatius And Saba.
         /// </summary>
         public static string BQ {
@@ -750,6 +759,15 @@ namespace Fanex.Affiliate.Resources {
         public static string CancelRequest {
             get {
                 return ResourceManager.GetString("CancelRequest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cash Out Details.
+        /// </summary>
+        public static string CashOutDetails {
+            get {
+                return ResourceManager.GetString("CashOutDetails", resourceCulture);
             }
         }
         

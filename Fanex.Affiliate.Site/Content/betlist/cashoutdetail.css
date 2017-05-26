@@ -1,0 +1,11 @@
+﻿/*Style for Cash out detail*/
+.tblCashOutDetail {
+    margin-left: 20px;
+    margin-bottom: 30px;
+    min-width: 880px !important;
+}
+
+    .tblCashOutDetail th {
+        padding: 0 !important;
+    }
+/********** ------------------ **************/
