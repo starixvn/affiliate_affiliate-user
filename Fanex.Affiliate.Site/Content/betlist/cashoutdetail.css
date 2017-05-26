@@ -2,10 +2,13 @@
 .tblCashOutDetail {
     margin-left: 20px;
     margin-bottom: 30px;
-    min-width: 880px !important;
 }
 
-    .tblCashOutDetail th {
-        padding: 0 !important;
-    }
+.original-ticket .tblCashOutDetail {
+    min-width: 930px;
+}
+
+.cashout-ticket .tblCashOutDetail {
+    min-width: 840px;
+}
 /********** ------------------ **************/
