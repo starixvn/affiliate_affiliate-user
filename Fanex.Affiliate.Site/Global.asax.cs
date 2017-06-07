@@ -17,30 +17,18 @@
     using Web;
     using Web.Mvc;
 
-    /// <summary>
-    /// Application Global config.
-    /// Note: For instructions on enabling IIS6 or IIS7 classic mode,
-    /// visit http://go.microsoft.com/?LinkId=9394801.
-    /// </summary>
     public class MvcApplication : HttpApplication
     {
-        /// <summary>
-        /// Application Start.
-        /// </summary>
         [SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic", Justification = "Reviewed. Suppression is OK here.")]
         protected void Application_Start()
         {
-            // Start setting connect to DB
             DbSettingProviderManager.Current.Start();
             AreaRegistration.RegisterAllAreas();
-            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            // Register my types, for instance:
             SimpleInjectorInitializer.Initialize();
 
-            // Customnize Razor ViewEngine
             ViewEngines.Engines.Clear();
             ViewEngines.Engines.Add(new CustomRazorViewEngine());
             ViewEngines.Engines.Add(new RazorViewEngine());
@@ -55,11 +43,6 @@
             }
         }
 
-        /// <summary>
-        /// Application Error.
-        /// </summary>
-        /// <param name="sender">Object sender.</param>
-        /// <param name="e">Error arguments.</param>
         protected void Application_Error(object sender, EventArgs e)
         {
             var exception = Server.GetLastError();
@@ -69,7 +52,7 @@
                 return;
             }
 
-            StringBuilder message = BuildErrorMessage(exception);
+            var message = BuildErrorMessage(exception);
 
             LogService.Error(message.ToString());
 
@@ -81,26 +64,18 @@
                 Response.Write(new JavaScriptSerializer().Serialize(new
                 {
                     Success = false,
-                    Message = exception.Message,
+                    exception.Message,
                     ErrorCode = exception.GetHashCode(),
                     ErrorMessage = exception.Message
                 }));
             }
         }
 
-        /// <summary>
-        /// Session Start.
-        /// </summary>
-        /// <param name="sender">Object sender.</param>
-        /// <param name="e">Error arguments.</param>
         protected void Session_Start(object sender, EventArgs e)
         {
             if (HttpContext.Current.Request.IsAuthenticated)
             {
-                // old authentication, kill it
                 FormsAuthentication.SignOut();
-
-                // or use Response.Redirect to go to a different page
                 FormsAuthentication.RedirectToLoginPage("Session=Expired");
                 HttpContext.Current.Response.End();
             }
@@ -109,34 +84,34 @@
         private StringBuilder BuildErrorMessage(Exception exception)
         {
             var message = new StringBuilder()
-                            .AppendLine("Affiliate: " + AppSettings.AffiliateName)
-                            .AppendLine("Error:" + exception.Message)
-                            .AppendLine("Url: " + Request.RawUrl)
-                            .AppendLine("UrlReferrer: " + Request.UrlReferrer)
-                            .AppendLine("QUERYSTRING: " + Request.QueryString)
-                            .AppendLine("FORM: " + string.Join("~", Request.Form))
-                            .AppendLine("Browser:" + Request.Browser.Type.ToString())
-                            .AppendLine("BrowserVer:" + Request.Browser.Version.ToString())
-                            .AppendLine("Agent:" + Request.UserAgent.ToString());
+                            .AppendLine($"Affiliate: {AppSettings.AffiliateName}")
+                            .AppendLine($"Error:{exception.Message}")
+                            .AppendLine($"Url: { Request.RawUrl}")
+                            .AppendLine($"UrlReferrer: {Request.UrlReferrer} ")
+                            .AppendLine($"QUERYSTRING: {Request.QueryString}")
+                            .AppendLine($"FORM: {string.Join("~", Request.Form)}")
+                            .AppendLine($"Browser:{Request.Browser.Type}")
+                            .AppendLine($"BrowserVer:{Request.Browser.Version}")
+                            .AppendLine($"Agent:{Request.UserAgent}");
 
             var currenSession = SessionManager.CurrentSession;
             if (currenSession != null)
             {
-                message.AppendLine("AffId: " + currenSession.AffId)
-                    .AppendLine("AffType: " + currenSession.AffType)
-                    .AppendLine("IsInternalSite: " + currenSession.IsInternalSite)
-                    .AppendLine("Username: " + currenSession.Username);
+                message.AppendLine($"AffId: {currenSession.AffId}")
+                    .AppendLine($"AffType: { currenSession.AffType}")
+                    .AppendLine($"IsInternalSite: {currenSession.IsInternalSite}")
+                    .AppendLine($"Username: {currenSession.Username}");
             }
 
             var sqlException = exception as SqlException;
             if (sqlException != null)
             {
-                message.AppendLine("Procedure: " + sqlException.Procedure)
-                    .AppendLine("Line Number: " + sqlException.LineNumber)
-                    .AppendLine("Server: " + sqlException.Server);
+                message.AppendLine($"Procedure: { sqlException.Procedure}")
+                    .AppendLine($"Line Number: {sqlException.LineNumber}")
+                    .AppendLine($"Server: {sqlException.Server}");
             }
 
-            message.AppendLine("StackTrace: " + exception.StackTrace);
+            message.AppendLine($"StackTrace: {exception.StackTrace}");
             return message;
         }
     }
