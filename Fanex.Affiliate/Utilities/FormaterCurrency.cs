@@ -19,26 +19,19 @@
         {
             get
             {
-                try
+                var symbolsByCode = new Dictionary<string, CultureInfo>();
+                var regions = CultureInfo.GetCultures(CultureTypes.SpecificCultures);
+                foreach (var item in regions)
                 {
-                    var symbolsByCode = new Dictionary<string, CultureInfo>();
-                    var regions = CultureInfo.GetCultures(CultureTypes.SpecificCultures);
-                    foreach (var item in regions)
+                    var key = new RegionInfo(item.LCID).ISOCurrencySymbol;
+                    if (!symbolsByCode.ContainsKey(key))
                     {
-                        var key = new RegionInfo(item.LCID).ISOCurrencySymbol;
-                        if (!symbolsByCode.ContainsKey(key))
-                        {
-                            item.NumberFormat.CurrencyDecimalDigits = 2;
-                            symbolsByCode.Add(key, item);
-                        }
+                        item.NumberFormat.CurrencyDecimalDigits = 2;
+                        symbolsByCode.Add(key, item);
                     }
+                }
 
-                    return symbolsByCode;
-                }
-                catch
-                {
-                    throw;
-                }
+                return symbolsByCode;
             }
         }
 
@@ -49,7 +42,7 @@
         /// <returns>Currency symbol.</returns>
         public static string GetCurrencySymbol(string currencyCode = null)
         {
-            return string.IsNullOrEmpty(currencyCode)
+            return string.IsNullOrEmpty(currencyCode) || !SymbolsByCode.ContainsKey(currencyCode)
                 ? _defaultCulture.NumberFormat.CurrencySymbol
                 : SymbolsByCode[currencyCode].NumberFormat.CurrencySymbol;
         }
