@@ -2,7 +2,6 @@
 {
     using System.Collections.Generic;
     using System.Globalization;
-    using System.Threading;
 
     /// <summary>
     /// Format currency.
@@ -13,7 +12,7 @@
 
         private const string Minus = "<span style='color: red'>{0}</span>";
 
-        private static CultureInfo _defaultCulture = Thread.CurrentThread.CurrentCulture;
+        private static CultureInfo _defaultCulture = new CultureInfo("en-US");
 
         private static Dictionary<string, CultureInfo> SymbolsByCode
         {
@@ -54,15 +53,6 @@
         public static void SetDefaultCurrency(string currencyCode)
         {
             _defaultCulture = GetCulture(currencyCode);
-        }
-
-        /// <summary>
-        /// Set default currency from a culture information.
-        /// </summary>
-        /// <param name="culture">Culture information.</param>
-        public static void SetDefaultCurrency(CultureInfo culture)
-        {
-            _defaultCulture = culture;
         }
 
         /// <summary>
