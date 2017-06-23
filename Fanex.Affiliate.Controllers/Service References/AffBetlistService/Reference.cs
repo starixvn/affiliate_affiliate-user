@@ -53,7 +53,7 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBetListCashOutDetail", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CriteriaBase))]
-        string GetBetListCashOutDetail(Fanex.Affiliate.Controllers.AffBetlistService.BetListDetailCriteria criteria, bool isCashOut);
+        string GetBetListCashOutDetail(Fanex.Affiliate.Controllers.AffBetlistService.BetListDetailCriteria criteria, bool isCashOut, string language);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBetlistResults", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -995,8 +995,8 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
             return base.Channel.GetBetListAgCasinoDetail(userName, criteria);
         }
         
-        public string GetBetListCashOutDetail(Fanex.Affiliate.Controllers.AffBetlistService.BetListDetailCriteria criteria, bool isCashOut) {
-            return base.Channel.GetBetListCashOutDetail(criteria, isCashOut);
+        public string GetBetListCashOutDetail(Fanex.Affiliate.Controllers.AffBetlistService.BetListDetailCriteria criteria, bool isCashOut, string language) {
+            return base.Channel.GetBetListCashOutDetail(criteria, isCashOut, language);
         }
         
         public string GetBetlistResults(string affiliateName, string sessionLanguage, Fanex.Affiliate.Controllers.AffBetlistService.BetListResultsCriteria criteria, string language) {

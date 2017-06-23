@@ -181,7 +181,7 @@
             };
 
             var affBetlistService = new AffiliateAPISoapClient();
-            ViewBag.Data = affBetlistService.GetBetListCashOutDetail(criteria, model.IsCashOut);
+            ViewBag.Data = affBetlistService.GetBetListCashOutDetail(criteria, model.IsCashOut, AppSession.Language);
             ViewBag.IsCashOut = model.IsCashOut;
 
             return View("~/Views/Shared/Account/CashOutTicketDetail.cshtml");
