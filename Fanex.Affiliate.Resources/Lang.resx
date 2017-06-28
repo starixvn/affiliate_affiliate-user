@@ -1939,4 +1939,12 @@
     <value>Bet List - AG Casino - TicketDetail</value>
     <comment>#54368</comment>
   </data>
+  <data name="BoughtDetails" xml:space="preserve">
+    <value>Bought Details</value>
+    <comment>#74874</comment>
+  </data>
+  <data name="CashOutDetails" xml:space="preserve">
+    <value>Cash Out Details</value>
+    <comment>#74874</comment>
+  </data>
 </root>

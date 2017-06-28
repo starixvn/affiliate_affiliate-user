@@ -1,11 +1,12 @@
 ﻿/* global AFFILIATE, QueryString */
-/* exported showCombMP, showCombMPDetail, showMP, ViewResult, showNewCombMP */
+/* exported showCombMP, showCombMPDetail, showMP, ViewResult, showNewCombMP, ViewCashOutHistory */
 "use strict";
 
 var BetList = (function ($) {
     var SPORT_RNG_GAME = 208;
     var SPORT_RNG_MINIGAME = 209;
     var SPORT_RNG_MOBILE = 210;
+    var BETTYPE_CASHOUT = 911;
 
     return {
         initialize: function () {
@@ -222,6 +223,28 @@ var BetList = (function ($) {
                 width: popW + 10,
                 height: popH + 50
             });
+        },
+
+        viewCashOutHistory: function (transId, refNo, betType, betdaqId) {
+            var isCashOut = betdaqId < 1 || betType === BETTYPE_CASHOUT;
+            var url = AFFILIATE.getAbsoluteUrl('Account/CashOutDetailTicket');
+            url = QueryString.setParam(url, "transId", transId);
+            url = QueryString.setParam(url, "refNo", refNo);
+            url = QueryString.setParam(url, "betType", betType);
+            url = QueryString.setParam(url, "isCashOut", isCashOut);
+            url = QueryString.setParam(url, "betdaqId", betdaqId);
+
+            var popH = Math.min($(window).height() - 100, 450), popW = 960;
+            var title = isCashOut ? MSG.TitleCashOutTicketDetail : MSG.TitleBoughtTicketDetail;
+
+            var dialogForm = '<div title="' + title + '"><iframe scrolling="no" frameborder="0" width="' +
+                             popW + '" height="95%" src="' + url + '" ></iframe></div>';
+
+            $(dialogForm).dialog({
+                modal: true,
+                width: popW,
+                height: popH + 50
+            });
         }
     };
 })(jQuery);
@@ -244,3 +267,4 @@ var showCombMPDetail = BetList.showSystemParlayDetail;
 var showRnGCasinoDetails = BetList.showRnGCasinoDetails;
 var showAGCasinoDetails = BetList.showAGCasinoDetails;var showCombMPDetail = BetList.showSystemParlayDetail;
 var showNewCombMP = BetList.showNewParlayDetail;
+var ViewCashOutHistory = BetList.viewCashOutHistory;

@@ -443,6 +443,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
+    <Content Include="Content\betlist\cashoutdetail.css" />
     <Content Include="Content\betlist\custom-betlist.css" />
     <Content Include="Content\bootstrap\img\glyphicons-halflings-white.png" />
     <Content Include="Content\bootstrap\img\glyphicons-halflings.png" />
@@ -821,7 +822,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Content Include="Content\betlist\betlist.css" />
     <Content Include="Content\betlist\betlist.core.css" />
@@ -4825,6 +4825,7 @@
     </Content>
     <Content Include="Views\Shared\Account\CasinoDetailTicket.cshtml" />
     <Content Include="Web.ConnectionString.spondemo.local.config" />
+    <Content Include="Views\Shared\Account\CashOutTicketDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\common.less" />

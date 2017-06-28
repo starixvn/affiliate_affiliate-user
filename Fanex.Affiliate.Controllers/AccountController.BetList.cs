@@ -168,6 +168,25 @@
             return View("~/Views/BetList/CasinoDetailTicket.cshtml");
         }
 
+        [HttpGet]
+        public ActionResult CashOutDetailTicket(CashOutDetailViewModel model)
+        {
+            var criteria = new BetListDetailCriteria
+            {
+                TransId = model.TransId,
+                RefNo = model.RefNo,
+                BetType = model.BetType,
+                BetdaqId = model.BetdaqId,
+                ExchangeRate = CurrentSession.ExchangeRate
+            };
+
+            var affBetlistService = new AffiliateAPISoapClient();
+            ViewBag.Data = affBetlistService.GetBetListCashOutDetail(criteria, model.IsCashOut, AppSession.Language);
+            ViewBag.IsCashOut = model.IsCashOut;
+
+            return View("~/Views/Shared/Account/CashOutTicketDetail.cshtml");
+        }
+
         /// <summary>
         /// Get supported products.
         /// </summary>

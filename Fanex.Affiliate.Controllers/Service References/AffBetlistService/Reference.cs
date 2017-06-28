@@ -15,10 +15,6 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AffBetlistService.AffiliateAPISoap")]
     public interface AffiliateAPISoap {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAffiliateEmail", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        string GetAffiliateEmail(string siteName, string btag);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBetlist", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CriteriaBase))]
@@ -53,6 +49,11 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CriteriaBase))]
         string GetBetListAgCasinoDetail(string userName, Fanex.Affiliate.Controllers.AffBetlistService.BetListDetailCriteria criteria);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBetListCashOutDetail", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CriteriaBase))]
+        string GetBetListCashOutDetail(Fanex.Affiliate.Controllers.AffBetlistService.BetListDetailCriteria criteria, bool isCashOut, string language);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBetlistResults", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -737,6 +738,12 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         
         private decimal exchangeRateField;
         
+        private long transIdField;
+        
+        private long betdaqIdField;
+        
+        private int betTypeField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public long RefNo {
@@ -758,6 +765,42 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
             set {
                 this.exchangeRateField = value;
                 this.RaisePropertyChanged("ExchangeRate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public long TransId {
+            get {
+                return this.transIdField;
+            }
+            set {
+                this.transIdField = value;
+                this.RaisePropertyChanged("TransId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public long BetdaqId {
+            get {
+                return this.betdaqIdField;
+            }
+            set {
+                this.betdaqIdField = value;
+                this.RaisePropertyChanged("BetdaqId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public int BetType {
+            get {
+                return this.betTypeField;
+            }
+            set {
+                this.betTypeField = value;
+                this.RaisePropertyChanged("BetType");
             }
         }
     }
@@ -924,10 +967,6 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
                 base(binding, remoteAddress) {
         }
         
-        public string GetAffiliateEmail(string siteName, string btag) {
-            return base.Channel.GetAffiliateEmail(siteName, btag);
-        }
-        
         public string GetBetlist(Fanex.Affiliate.Controllers.AffBetlistService.BetlistSOAP betlistSOAP) {
             return base.Channel.GetBetlist(betlistSOAP);
         }
@@ -954,6 +993,10 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         
         public string GetBetListAgCasinoDetail(string userName, Fanex.Affiliate.Controllers.AffBetlistService.BetListDetailCriteria criteria) {
             return base.Channel.GetBetListAgCasinoDetail(userName, criteria);
+        }
+        
+        public string GetBetListCashOutDetail(Fanex.Affiliate.Controllers.AffBetlistService.BetListDetailCriteria criteria, bool isCashOut, string language) {
+            return base.Channel.GetBetListCashOutDetail(criteria, isCashOut, language);
         }
         
         public string GetBetlistResults(string affiliateName, string sessionLanguage, Fanex.Affiliate.Controllers.AffBetlistService.BetListResultsCriteria criteria, string language) {
