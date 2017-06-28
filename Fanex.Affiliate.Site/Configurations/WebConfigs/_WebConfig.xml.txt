@@ -2,6 +2,9 @@
 
 // Generated helper templates
 // Generated items
+// Fanex.Affiliate.Site\Configurations\WebConfigs\Web.bolanation.production.config
+// Fanex.Affiliate.Site\Configurations\WebConfigs\Web.bolanation.uat.config
+// Fanex.Affiliate.Site\Configurations\WebConfigs\Web.bolanation.master.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.aragon88.production.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.aragon88.uat.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.aragon88.master.config

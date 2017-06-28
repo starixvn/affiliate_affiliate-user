@@ -2,6 +2,7 @@
 
 // Generated helper templates
 // Generated items
+// Fanex.Affiliate.Site\Configurations\SPNames\SpName.bolanation.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.aragon88.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.indowin.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.unobet.production.xml
@@ -18,6 +19,7 @@
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.allbetclub.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.9bet.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.spondemo.production.xml
+// Fanex.Affiliate.Site\Configurations\SPNames\SpName.bolanation.uat.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.aragon88.uat.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.indowin.uat.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.unobet.uat.xml

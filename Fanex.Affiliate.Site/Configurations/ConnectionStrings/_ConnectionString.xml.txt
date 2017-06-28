@@ -2,6 +2,8 @@
 
 // Generated helper templates
 // Generated items
+// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.bolanation.production.config
+// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.bolanation.uat.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.aragon88.production.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.aragon88.uat.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.indowin.production.config
