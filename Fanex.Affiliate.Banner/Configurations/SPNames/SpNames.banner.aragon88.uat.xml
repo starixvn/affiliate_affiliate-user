@@ -3,6 +3,5 @@
   <Function Name="Aff-Banner">
     <Setting Key="Aff_Banner_UpdateStatistic" SpName="Aff_Banner_UpdateStatistic" DbName="DBAFFARAGON88.Affiliate_Aragon88.bodbDownlineNet" Plain="0" />
     <Setting Key="Aff_Banner_SelInfo" SpName="Aff_Banner_SelInfo" DbName="DBAFFARAGON88.Affiliate_Aragon88.bodbDownlineNet" Plain="0" />
-    <Setting Key="Aff_Banner_GetSystemName" SpName="Aff_Banner_GetSystemName" DbName="DBAFFARAGON88.Affiliate_Aragon88.bodbDownlineNet" Plain="0" />
   </Function>
 </Functions>

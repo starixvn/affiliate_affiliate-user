@@ -11,16 +11,10 @@
     using DTO;
     using Services;
 
-    /// <summary>
-    /// Marketing Tools controller of Affiliate Banner.
-    /// </summary>
     public class MarketingToolsController : Controller
     {
-        #region Variables
-
         private const int TEXT = 0;
         private const int IMAGE = 1;
-        private const int FLASH = 2;
 
         private const string SWFVERSIONDETECTJS = "SwfVersDetection.js";
         private const string AFFMEDIAJS = "affiliate.media.js";
@@ -28,39 +22,25 @@
 
         private static string[] fileNames = { "text", "image", "flash1" };
         private static Regex _regex = new Regex(@"\.swf", RegexOptions.IgnoreCase);
-        private static string _systemName;
-
-        #endregion Variables
-
-        #region Services
-
-        /// <summary>
-        /// Define Payment service.
-        /// </summary>
+        
         private readonly IBannerService _bannerService;
 
-        #endregion Services
+        public MarketingToolsController() : this(null)
+        {
+        }
 
-        #region Constructor
-
-        /// <summary>
-        /// Initializes a new instance of the MarketingToolsController class.
-        /// </summary>
-        /// <param name="bannerService">Banner Service.</param>
         public MarketingToolsController(IBannerService bannerService)
         {
-            _bannerService = bannerService;
+            _bannerService = bannerService ?? new BannerService();
         }
 
-        /// <summary>
-        /// Initializes a new instance of the MarketingToolsController class.
-        /// </summary>
-        public MarketingToolsController()
+        private string SystemName
         {
-            _bannerService = new BannerService();
+            get
+            {
+                return ConfigurationManager.AppSettings["SystemName"];
+            }
         }
-
-        #endregion Constructor
 
         /// <summary>
         /// Simplify HTML string.
@@ -127,13 +107,11 @@
         {
             try
             {
-                _systemName = _bannerService.BannerGetSystemName("Aff_Banner_GetSystemName");
-
                 var scriptContent = ReadFile(Server.MapPath("~/Scripts/" + AFFMEDIAJS));
                 scriptContent = scriptContent.Replace("{requesttime}", ConfigurationManager.AppSettings["RequestTime"]);
                 scriptContent = scriptContent.Replace("{url}", Common.FullDomainName + "/MarketingTools/Refresh");
                 scriptContent = scriptContent.Replace("{id}", id.ToString());
-                scriptContent = scriptContent.Replace("{systemname}", _systemName);
+                scriptContent = scriptContent.Replace("{systemname}", SystemName);
                 scriptContent = scriptContent.Replace("{afflink}", Server.UrlEncode(signuplink + "?ref="));
 
                 return Content(scriptContent.ToString(), "text/javascript");
@@ -156,7 +134,6 @@
         /// <returns>Content result.</returns>
         public ContentResult Refresh(int id, string signuplink)
         {
-            _systemName = _bannerService.BannerGetSystemName("Aff_Banner_GetSystemName");
             var bannerInfo = GetFirstBannerRowInfo(id);
             if (bannerInfo != null)
             {
@@ -165,11 +142,11 @@
                     var fileName = fileNames[bannerInfo.ImageType] + ".htm";
 
                     bannerInfo.BannerStringBuilder = ReadFile(Server.MapPath("~/Content/templates/" + fileName));
-                    bannerInfo.BannerStringBuilder.Replace("{systemname}", _systemName).Replace("{id}", id.ToString());
+                    bannerInfo.BannerStringBuilder.Replace("{systemname}", SystemName).Replace("{id}", id.ToString());
                     bannerInfo.BannerStringBuilder = new StringBuilder(MinifyHtml(bannerInfo.BannerStringBuilder.ToString()));
                     bannerInfo.BannerStringBuilder.Replace("{afflink}", signuplink);
 
-                    var script = GenerateScript(id, signuplink, _systemName, bannerInfo);
+                    var script = GenerateScript(id, signuplink, SystemName, bannerInfo);
                     return Content(
                         @"function hasClass(element, cls) {
                                 return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
@@ -181,7 +158,7 @@
                           return flag;
                         };"
                         + "var content = \"" + bannerInfo.BannerStringBuilder.ToString() + "\";"
-                        + "var r = replaceHtml('a','banner_" + _systemName + id + "',content); \n"
+                        + "var r = replaceHtml('a','banner_" + SystemName + id + "',content); \n"
                         + " if(!r) {var el = document.getElementById('bannerContainer'); if(el) el.innerHTML =content;} \n" + script
                         + ";",
                         "text/javascript");
