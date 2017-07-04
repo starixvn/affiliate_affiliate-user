@@ -193,7 +193,7 @@ function AC_GetArgs(args, ext, srcParamName, classid, mimeType) {
                 break;
             case "src":
             case "movie":
-                args[i + 1] = AC_AddExtension(args[i + 1], ext);
+               // args[i + 1] = AC_AddExtension(args[i + 1], ext);
                 ret.embedAttrs["src"] = args[i + 1];
                 ret.params[srcParamName] = args[i + 1];
                 break;

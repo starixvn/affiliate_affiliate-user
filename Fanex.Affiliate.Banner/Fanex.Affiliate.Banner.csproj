@@ -178,6 +178,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\StringHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -256,7 +257,6 @@
     <Content Include="Content\Banners\Normal\Casino\Sic bo\Banner_indonesian.jpg" />
     <Content Include="Content\expressInstall.swf" />
     <Content Include="Content\img\error404.png" />
-    <Content Include="Content\templates\flash.htm" />
     <Content Include="Content\templates\flash.js" />
     <Content Include="Content\templates\flash1.htm" />
     <Content Include="Content\templates\image.htm" />

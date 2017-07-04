@@ -14,7 +14,7 @@
 
             routes.MapRoute(
                 name: "Banner", 
-                url: "{controller}/{action}/{*encodedFilePath}", 
+                url: "Home/Banner/{*encodedFilePath}",
                 defaults: new { controller = "Home", action = "Banner" });
 
             routes.MapRoute(
