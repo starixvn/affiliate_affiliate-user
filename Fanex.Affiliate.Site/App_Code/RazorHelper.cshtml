@@ -15,6 +15,12 @@
 
         return url;
     }
+
+    public static string EncodeBase64(string plainText)
+    {
+        var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
+        return Convert.ToBase64String(plainTextBytes);
+    }
 }
 
 @helper DropDownListGetMonth(int selectedValue, IDictionary<string, object> htmlAttributies = null)
