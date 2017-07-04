@@ -22,7 +22,7 @@
 
         private static string[] fileNames = { "text", "image", "flash1" };
         private static Regex _regex = new Regex(@"\.swf", RegexOptions.IgnoreCase);
-        
+
         private readonly IBannerService _bannerService;
 
         public MarketingToolsController() : this(null)
@@ -103,6 +103,7 @@
         /// <param name="id">Affiliate ID.</param>
         /// <param name="signuplink">Sign up link.</param>
         /// <returns>Content result.</returns>
+        [HttpGet]
         public ContentResult GetScript(int id, string signuplink)
         {
             try
@@ -122,7 +123,7 @@
             }
             finally
             {
-                BannerUpdateStatistic(id);
+                UpdateBannerStatistic(id);
             }
         }
 
@@ -132,23 +133,25 @@
         /// <param name="id">Affiliate ID.</param>
         /// <param name="signuplink">Sign up link.</param>
         /// <returns>Content result.</returns>
+        [HttpGet]
         public ContentResult Refresh(int id, string signuplink)
         {
             var bannerInfo = GetFirstBannerRowInfo(id);
-            if (bannerInfo != null)
+            if (bannerInfo == null || string.IsNullOrEmpty(bannerInfo.Content))
             {
-                if (!string.IsNullOrEmpty(bannerInfo.Content))
-                {
-                    var fileName = fileNames[bannerInfo.ImageType] + ".htm";
+                return Content(string.Empty);
+            }
 
-                    bannerInfo.BannerStringBuilder = ReadFile(Server.MapPath("~/Content/templates/" + fileName));
-                    bannerInfo.BannerStringBuilder.Replace("{systemname}", SystemName).Replace("{id}", id.ToString());
-                    bannerInfo.BannerStringBuilder = new StringBuilder(MinifyHtml(bannerInfo.BannerStringBuilder.ToString()));
-                    bannerInfo.BannerStringBuilder.Replace("{afflink}", signuplink);
+            var fileName = fileNames[bannerInfo.ImageType] + ".htm";
 
-                    var script = GenerateScript(id, signuplink, SystemName, bannerInfo);
-                    return Content(
-                        @"function hasClass(element, cls) {
+            bannerInfo.BannerStringBuilder = ReadFile(Server.MapPath("~/Content/templates/" + fileName));
+            bannerInfo.BannerStringBuilder.Replace("{systemname}", SystemName).Replace("{id}", id.ToString());
+            bannerInfo.BannerStringBuilder = new StringBuilder(MinifyHtml(bannerInfo.BannerStringBuilder.ToString()));
+            bannerInfo.BannerStringBuilder.Replace("{afflink}", signuplink);
+
+            var script = GenerateScript(id, signuplink, SystemName, bannerInfo);
+            return Content(
+                @"function hasClass(element, cls) {
                                 return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
                             };
                             function replaceHtml(tag,classname,html) {
@@ -157,26 +160,14 @@
                             if (hasClass(els[i],classname)){ if(!flag) flag = true; els[i].innerHTML = html;}}
                           return flag;
                         };"
-                        + "var content = \"" + bannerInfo.BannerStringBuilder.ToString() + "\";"
-                        + "var r = replaceHtml('a','banner_" + SystemName + id + "',content); \n"
-                        + " if(!r) {var el = document.getElementById('bannerContainer'); if(el) el.innerHTML =content;} \n" + script
-                        + ";",
-                        "text/javascript");
-                }
-            }
-
-            return Content(string.Empty);
+                + "var content = \"" + bannerInfo.BannerStringBuilder.ToString() + "\";"
+                + "var r = replaceHtml('a','banner_" + SystemName + id + "',content); \n"
+                + " if(!r) {var el = document.getElementById('bannerContainer'); if(el) el.innerHTML =content;} \n" + script
+                + ";",
+                "text/javascript");
         }
 
-        /// <summary>
-        /// Generate script.
-        /// </summary>
-        /// <param name="bannerId">Input banner ID.</param>
-        /// <param name="signupLink">Sign up Link.</param>
-        /// <param name="systemName">System name.</param>
-        /// <param name="bannerInfo">Banner information.</param>
-        /// <returns>String Builder.</returns>
-        public StringBuilder GenerateScript(
+        private StringBuilder GenerateScript(
             int bannerId,
             string signupLink,
             string systemName,
@@ -222,11 +213,7 @@
             return script;
         }
 
-        /// <summary>
-        /// Store banner statistic into database.
-        /// </summary>
-        /// <param name="bannerId">Input Banner ID.</param>
-        public void BannerUpdateStatistic(int bannerId)
+        private void UpdateBannerStatistic(int bannerId)
         {
             var criteria = new BannerUpdateStatisticCriteria
             {
@@ -236,12 +223,7 @@
             _bannerService.BannerUpdateStatistic(criteria);
         }
 
-        /// <summary>
-        /// Get first row of banner information.
-        /// </summary>
-        /// <param name="bannerId">Input banner ID.</param>
-        /// <returns>Banner data object.</returns>
-        public Banner GetFirstBannerRowInfo(int bannerId)
+        private Banner GetFirstBannerRowInfo(int bannerId)
         {
             var criteria = new BannerInfoCriteria
             {
