@@ -5,7 +5,6 @@
     using System.Linq;
     using System.Web;
     using System.Web.Mvc;
-    using Helpers;
 
     public class HomeController : Controller
     {
@@ -23,7 +22,7 @@
         public ActionResult Banner(string encodedFilePath)
         {
             var folderPath = ConfigurationManager.AppSettings["BannerFolder"];
-            string filePath = StringHelper.DecodeBase64(encodedFilePath);
+            string filePath = HttpUtility.UrlDecode(encodedFilePath);
             var fullPath = Path.Combine(folderPath, filePath);
             if (string.IsNullOrEmpty(filePath) || !IsValidFileExtension(filePath) || !System.IO.File.Exists(fullPath))
             {

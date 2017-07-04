@@ -183,7 +183,7 @@
                 case IMAGE:
                     bannerInfo.BannerStringBuilder.Replace(
                     "{src}",
-                    string.Format("{0}/Home/Banner/{1}?v={2}", Common.FullDomainName, Helpers.StringHelper.EncodeBase64(bannerInfo.Content), bannerInfo.Version));
+                    string.Format("{0}/Home/Banner/{1}?v={2}", Common.FullDomainName, System.Web.HttpUtility.UrlEncode(bannerInfo.Content), bannerInfo.Version));
                     break;
 
                 default:
@@ -192,7 +192,7 @@
                     var bannerURL = string.Format(
                         "{0}/Home/Banner/{1}?v={2}",
                         Common.FullDomainName,
-                        Helpers.StringHelper.EncodeBase64(bannerInfo.Content),
+                        System.Web.HttpUtility.UrlEncode(bannerInfo.Content),
                         bannerInfo.Version);
                     bannerInfo.BannerStringBuilder.Replace("{src}", bannerURL);
                     bannerInfo.BannerStringBuilder.Replace("{width}", sizes[0]); // Width
