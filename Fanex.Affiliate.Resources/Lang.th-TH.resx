@@ -1892,4 +1892,8 @@
   <data name="AF" xml:space="preserve">
     <value>Afghanistan</value>
   </data>
+  <data name="SystemParlayDetailNote" xml:space="preserve">
+    <value>ยอดได้เสียปัดเศษใช้เป็นข้อมูลอ้างอิงเท่านั้น ดังนั้น ผลรวมยอดได้เสียทั้งหมดที่เกิดขึ้นจริงอาจจะแตกจากจำนวนยอดปัดเศษ</value>
+    <comment>78976</comment>
+  </data>
 </root>
