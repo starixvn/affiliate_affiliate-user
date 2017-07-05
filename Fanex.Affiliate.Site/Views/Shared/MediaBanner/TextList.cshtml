@@ -109,7 +109,7 @@
 					                new SelectListItem { Value = "50", Text = "50", Selected = "50" == Model.PageSize.ToString() },
                                     new SelectListItem { Value = "100", Text = "100", Selected = "100" == Model.PageSize.ToString()},
                                     new SelectListItem { Value = "200", Text = "200", Selected = "200" == Model.PageSize.ToString()}
-				                }, new { id = string.Empty, @class = "items-per-page", @data_controller = "/Account/TextBox" })</span>
+				                }, new { id = string.Empty, @class = "items-per-page", @data_controller = "/MediaBanner/TextList" })</span>
                         </div>
                         <div class="paging-info clear">
                             @Html.Pager(bannerList.PageSize, bannerList.PageNumber, bannerList.TotalItemCount)
