@@ -17,11 +17,14 @@
         private const int IMAGE = 1;
 
         private const string SWFVERSIONDETECTJS = "SwfVersDetection.js";
+
         private const string AFFMEDIAJS = "affiliate.media.js";
+
         private const string FLASHJS = "flash.js";
 
-        private static string[] fileNames = { "text", "image", "flash1" };
-        private static Regex _regex = new Regex(@"\.swf", RegexOptions.IgnoreCase);
+        private static readonly string[] TemplateFileNames = { "text", "image", "flash" };
+
+        private static readonly Regex SwfExtensionRegex = new Regex(@"\.swf", RegexOptions.IgnoreCase);
 
         private readonly IBannerService _bannerService;
 
@@ -42,55 +45,12 @@
             }
         }
 
-        /// <summary>
-        /// Simplify HTML string.
-        /// </summary>
-        /// <param name="html">Original HTML string.</param>
-        /// <returns>Simplified HTML string.</returns>
-        public static string MinifyHtml(string html)
-        {
-            html = Regex.Replace(html, @"\n|\t", " ");
-            html = Regex.Replace(html, @">\s+<", "><").Trim();
-            html = Regex.Replace(html, @"\s{2,}", " ");
-
-            return html;
-        }
-
-        /// <summary>
-        /// Read script file.
-        /// </summary>
-        /// <param name="fileScript">Script file name.</param>
-        /// <returns>Script's content.</returns>
-        public static StringBuilder ReadFile(string fileScript)
-        {
-            var cache = MemoryCache.Default;
-            var fileContent = cache.Get(fileScript);
-            if (fileContent != null)
-            {
-                return new StringBuilder(fileContent.ToString());
-            }
-
-            var scriptContent = new StringBuilder();
-            scriptContent.Append(System.IO.File.ReadAllText(fileScript));
-
-            cache.Add(fileScript, scriptContent.ToString(), DateTimeOffset.Now.AddMinutes(30));
-            return scriptContent;
-        }
-
-        /// <summary>
-        /// Action Error page.
-        /// </summary>
-        /// <returns>Action result.</returns>
         [HttpGet]
         public ActionResult Error()
         {
             return View();
         }
 
-        /// <summary>
-        /// Action page not found.
-        /// </summary>
-        /// <returns>Action result.</returns>
         [HttpGet]
         public ActionResult PageNotFound()
         {
@@ -142,7 +102,7 @@
                 return Content(string.Empty);
             }
 
-            var fileName = fileNames[bannerInfo.ImageType] + ".htm";
+            var fileName = TemplateFileNames[bannerInfo.ImageType] + ".htm";
 
             bannerInfo.BannerStringBuilder = ReadFile(Server.MapPath("~/Content/templates/" + fileName));
             bannerInfo.BannerStringBuilder.Replace("{systemname}", SystemName).Replace("{id}", id.ToString());
@@ -165,6 +125,31 @@
                 + " if(!r) {var el = document.getElementById('bannerContainer'); if(el) el.innerHTML =content;} \n" + script
                 + ";",
                 "text/javascript");
+        }
+
+        private static string MinifyHtml(string html)
+        {
+            html = Regex.Replace(html, @"\n|\t", " ");
+            html = Regex.Replace(html, @">\s+<", "><").Trim();
+            html = Regex.Replace(html, @"\s{2,}", " ");
+
+            return html;
+        }
+
+        private static StringBuilder ReadFile(string fileScript)
+        {
+            var cache = MemoryCache.Default;
+            var fileContent = cache.Get(fileScript);
+            if (fileContent != null)
+            {
+                return new StringBuilder(fileContent.ToString());
+            }
+
+            var scriptContent = new StringBuilder();
+            scriptContent.Append(System.IO.File.ReadAllText(fileScript));
+
+            cache.Add(fileScript, scriptContent.ToString(), DateTimeOffset.Now.AddMinutes(30));
+            return scriptContent;
         }
 
         private StringBuilder GenerateScript(
@@ -195,15 +180,15 @@
                         System.Web.HttpUtility.UrlEncode(bannerInfo.Content),
                         bannerInfo.Version);
                     bannerInfo.BannerStringBuilder.Replace("{src}", bannerURL);
-                    bannerInfo.BannerStringBuilder.Replace("{width}", sizes[0]); // Width
-                    bannerInfo.BannerStringBuilder.Replace("{height}", sizes[1]); // Height
+                    bannerInfo.BannerStringBuilder.Replace("{width}", sizes[0]);
+                    bannerInfo.BannerStringBuilder.Replace("{height}", sizes[1]);
 
                     var file = ReadFile(Server.MapPath("~/Scripts/" + SWFVERSIONDETECTJS));
                     script = ReadFile(Server.MapPath("~/Content/templates/" + FLASHJS));
-                    script.Replace("{width}", sizes[0]); // Width
-                    script.Replace("{height}", sizes[1]); // Height
+                    script.Replace("{width}", sizes[0]);
+                    script.Replace("{height}", sizes[1]);
                     script.Replace("{afflink}", signupLink);
-                    script.Replace("{srcnoswf}", _regex.Replace(bannerURL, string.Empty));
+                    script.Replace("{srcnoswf}", SwfExtensionRegex.Replace(bannerURL, string.Empty));
                     script.Replace("{systemname}", systemName);
                     script.Replace("{id}", bannerId.ToString());
                     script.Insert(0, file);
@@ -212,7 +197,7 @@
 
             return script;
         }
-        
+
         private void UpdateBannerStatistic(int bannerId)
         {
             var criteria = new BannerUpdateStatisticCriteria
