@@ -148,7 +148,7 @@
                                     @foreach (var banner in bannerList)
                                     {
                                         string signUpLink = RazorHelper.GenerateLink(AppSettings.LinkFormat, Model.CustomerID, Model.DomainSelected, Model.LinkSelected, banner.LanguageCode).ToHtmlString();
-                                        string srcVal = bannerDomain + HttpUtility.UrlDecode(banner.Content);
+                                        string srcVal = bannerDomain + System.Uri.EscapeUriString(banner.Content);
                                         string scriptVal = selectedBannerDomain + "/MarketingTools/GetScript/" + banner.BannerId.ToString();
                                         
                                         string[] size = banner.Size.Split('x');

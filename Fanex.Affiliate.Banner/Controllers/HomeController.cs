@@ -9,7 +9,7 @@
     using SFile = System.IO;
     public class HomeController : Controller
     {
-        private const string ErrorNotFoundImagePath = "~/Content/img/error404.png";
+        private const string ErrorNotFoundImagePath = "~/Content/img/image-error404.jpg";
 
         private static readonly string[] AllowedExtensions = { ".gif", ".jpg", ".png", ".jpeg", ".swf" };
 
