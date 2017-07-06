@@ -3,10 +3,9 @@
     using System.Configuration;
     using System.IO;
     using System.Linq;
-    using System.Net.Mime;
     using System.Web;
     using System.Web.Mvc;
-    using SFile = System.IO;
+
     public class HomeController : Controller
     {
         private const string ErrorNotFoundImagePath = "~/Content/img/image-error404.jpg";
@@ -20,7 +19,7 @@
         }
 
         [HttpGet]
-      //  [OutputCache(Duration = 300, VaryByParam = "encodedFilePath")]
+        [OutputCache(Duration = 300, VaryByParam = "encodedFilePath")]
         public ActionResult Banner(string encodedFilePath)
         {
             var folderPath = ConfigurationManager.AppSettings["BannerFolder"];
@@ -40,7 +39,6 @@
                     return new FileContentResult(memoryStream.ToArray(), MimeMapping.GetMimeMapping(fileInfo.Name));
                 }
             }
-
         }
 
         private static bool IsValidFileExtension(string fileName)
