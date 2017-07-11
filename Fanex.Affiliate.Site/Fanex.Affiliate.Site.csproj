@@ -439,7 +439,9 @@
     <Content Include="Configurations\SPNames\_SpNameConfig.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Configurations\SPNames\_SpNameOriginal.xml" />
+    <Content Include="Configurations\SPNames\_SpNameOriginal.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Configurations\WebConfigs\_WebConfig.xml.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>_WebConfig.xml.txt</LastGenOutput>
@@ -4609,6 +4611,7 @@
     <Content Include="Configurations\AppSettings\Web.AppSetting.aragon88.uat.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aragon88.production.config">
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aragon88.uat.config">
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
@@ -4985,14 +4988,14 @@
     <Content Include="Views\Shared\Account\ChangePassword.cshtml" />
     <Content Include="Views\Shared\Account\LandingPages.cshtml" />
     <Content Include="Views\Shared\Account\LandingPagesDetail.cshtml" />
-    <Content Include="Views\Shared\Account\MediaGallery.cshtml" />
+    <Content Include="Views\Shared\MediaBanner\BannerList.cshtml" />
     <Content Include="Views\Shared\Account\MyAccount.cshtml" />
     <Content Include="Views\Shared\Account\Overview.cshtml" />
     <Content Include="Views\Shared\Account\PaymentRequest.cshtml" />
     <Content Include="Views\Shared\Account\ReferrersStatistics.cshtml" />
     <Content Include="Views\Shared\Account\ReferrersStatisticsDetail.cshtml" />
     <Content Include="Views\Shared\Account\StatementHistory.cshtml" />
-    <Content Include="Views\Shared\Account\TextBox.cshtml" />
+    <Content Include="Views\Shared\MediaBanner\TextList.cshtml" />
     <Content Include="Views\Shared\Message\Index.cshtml" />
     <Content Include="Views\Shared\User\ForgetPassword.cshtml" />
     <Content Include="Views\Shared\User\ForgetPasswordResults.cshtml" />
@@ -5143,7 +5146,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
+      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />

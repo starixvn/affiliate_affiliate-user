@@ -1,17 +1,16 @@
 ﻿@{
-    ViewBag.Title = Lang.MediaGallery;
+    ViewBag.Title = Lang.TextBox;
     Layout = @String.Format("../Layout/Layout{0}/_Layout.cshtml", AppSettings.Layout);
 }
-@using System.Text.RegularExpressions;
 
 @model MarketingViewModel
 
-@using (Html.BeginForm("MediaGallery", "Account"))
+@using (Html.BeginForm("TextBox", "Account"))
 {
     <div class="span12 box-insite">
         <div class="top">
             <div class="in-top">
-                @Lang.MediaGallery
+                @Lang.TextBox
             </div>
             <div class="in-right">
             </div>
@@ -32,12 +31,6 @@
                                 @RazorHelper.DropDownListCategory(Model.CategoryList.ToList(), Model.CategorySelected, new Dictionary<string, object> { { "id", "slCategory" }, { "name", "BannerCategory" } })
                             </td>
                         </tr>
-                        <tr id="trSubCategory" style="height: 25px; display: none;">
-                            <td>@Lang.SubCategory
-                            </td>
-                            <td>
-                            </td>
-                        </tr>
                         <tr>
                             <td>@Lang.Language
                             </td>
@@ -53,22 +46,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>@Lang.Type
-                            </td>
-                            <td>
-                                @RazorHelper.DropDownListMediaType(Model.TypeList.ToList(), Model.TypeSelected, new Dictionary<string, object> { { "id", "slImageType" }, { "name", "ImageType" } })
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>@Lang.Size
-                            </td>
-                            <td>
-                                @RazorHelper.DropDownListMediaSize(Model.SizeList.ToList(), Model.SizeSelected, new Dictionary<string, object> { { "id", "slSize" }, { "name", "Size" } })
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                            </td>
+                            <td></td>
                             <td style="height: 35px;">
                                 <input type="button" class="button" value="@Lang.Search" id="btnSearch" name="btnSearch" />
                             </td>
@@ -81,9 +59,9 @@
                 <div class="line-block">
                 </div>
                 <div class="content-block">
-                    <table class="table-striped table-padding">
+                     <table class="table-striped table-padding">
                         <tr>
-                            <td style="white-space: nowrap; width: 100px;">@Lang.AvailableDomains
+                            <td style="white-space: nowrap; width:100px;">@Lang.AvailableDomains
                             </td>
                             <td>
                                 @RazorHelper.DropDownListDomain(Model.DomainList.ToList(), Model.DomainSelected, new Dictionary<string, object> { { "id", "slDomain" }, { "name", "Domain" } })
@@ -131,74 +109,43 @@
 					                new SelectListItem { Value = "50", Text = "50", Selected = "50" == Model.PageSize.ToString() },
                                     new SelectListItem { Value = "100", Text = "100", Selected = "100" == Model.PageSize.ToString()},
                                     new SelectListItem { Value = "200", Text = "200", Selected = "200" == Model.PageSize.ToString()}
-				                }, new { id = string.Empty, @class = "items-per-page", @data_controller = "/Account/MediaGallery" })</span>
+				                }, new { id = string.Empty, @class = "items-per-page", @data_controller = "/MediaBanner/TextList" })</span>
                         </div>
                         <div class="paging-info clear">
                             @Html.Pager(bannerList.PageSize, bannerList.PageNumber, bannerList.TotalItemCount)
                         </div>
-                        <div style="overflow-x: scroll;">
-                            <table class="aff-table table-padding" style="width: 100%">
-                                <tbody id="result">
-                                    @{ 
-                                        var bannerDomain = RazorHelper.GetBannerUrl();
-                                        var domainPrefix = Model.DomainSelected.Split('.').First().Trim();
-                                        var regex = new Regex(Regex.Escape(domainPrefix));
-                                        var selectedBannerDomain = "http://" + regex.Replace(Model.DomainSelected, "banner", 1);
-                                    }
-                                    @foreach (var banner in bannerList)
+                        <table class="aff-table table-padding" style="width:100%">
+                            <tbody id="result">
+                                    @foreach (var banner in Model.BannerList)
                                     {
                                         string signUpLink = RazorHelper.GenerateLink(AppSettings.LinkFormat, Model.CustomerID, Model.DomainSelected, Model.LinkSelected, banner.LanguageCode).ToHtmlString();
-                                        string srcVal = bannerDomain + banner.Content;
-                                        string scriptVal = selectedBannerDomain + "/MarketingTools/GetScript/" + banner.BannerId.ToString();
-                                        
-                                        string[] size = banner.Size.Split('x');
-
-                                        if (string.IsNullOrEmpty(banner.ImageType) || banner.ImageType.Equals("Image", StringComparison.OrdinalIgnoreCase))
-                                        {
+                                        string domainPrefix = Model.DomainSelected.Split('.').First().Trim();
+                                        string bannerDomain = "http://" + Model.DomainSelected.Replace(domainPrefix, "banner");
+                                        string srcVal = AppSettings.IsTesting ?
+                                            AppSettings.BannerScriptUrl + banner.BannerId.ToString() :
+                                            bannerDomain + "/MarketingTools/GetScript/" + banner.BannerId.ToString();
                                         <tr>
-                                            <td>
-                                                <a class="banner-link" data-link="@signUpLink" href='javascript:;'>
-                                                    <img src='@srcVal' border='0' alt="" style="max-width: 620px" />
-                                                </a>
+                                            <td class='cont12oe' colspan='3'>
+                                                @HttpUtility.HtmlDecode(banner.Content.Replace("\r\n", "<br/>"))
                                             </td>
                                         </tr>
-                                        }
-                                        else
-                                        {
                                         <tr>
-                                            <td>
-                                                <a class="hand banner-link" data-link="@signUpLink" href="javascript:;">
-                                                    <object codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0'
-                                                            classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' width='@size[0]' height='@size[1]'>
-                                                        <param value='@srcVal' name='movie' />
-                                                        <param value='high' name='quality' />
-                                                        <param name='wmode' value='transparent' />
-                                                        <param name='flashvars' value='@Model.CustomerID' />
-                                                        <embed type='application/x-shockwave-flash' pluginspage='http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash'
-                                                                wmode='transparent' quality='high' src='@srcVal' width='@size[0]' height='@size[1]' />
-                                                    </object>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        }
-                                        <tr>
-                                            <td>
-                                                <input type='text' style='width: 610px' onclick='this.focus();this.select();'
-                                                    value = "&lt;a class='banner_@(AppSettings.SystemName + banner.BannerId.ToString())' onclick='window.open(&quot;@signUpLink?ref=&quot; + location.href,&quot;_blank&quot;); return false;' href='@signUpLink' target='_blank' id=&quot;bannerContainer&quot;&gt;&lt;/a&gt;&lt;script src=&quot;@scriptVal?signuplink=@signUpLink&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;" />
+                                            <td class='cont12oe' colspan='3'>
+                                                 <input type='text' style='width: 610px' onclick='this.focus();this.select();' 
+                                                value = "&lt;a class='banner_@(AppSettings.SystemName + banner.BannerId.ToString())' onclick='window.open(&quot;@signUpLink?ref=&quot; + location.href,&quot;_blank&quot;); return false;' href='@signUpLink' target='_blank' id=&quot;bannerContainer&quot;&gt;&lt;/a&gt;&lt;script src=&quot;@srcVal?signuplink=@signUpLink&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;" />
                                             </td>
                                         </tr>
                                     }
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="paging-info clear">
+                            </tbody>
+                        </table>
+                         <div class="paging-info clear">
                             @Html.Pager(bannerList.PageSize, bannerList.PageNumber, bannerList.TotalItemCount)
                         </div>
                     </div>
                 }
                 else
                 {
-                    <table class="aff-table table-padding" style="width: 100%">
+                    <table class="aff-table table-padding" style="width:100%">
                         <tbody>
                             <tr>
                                 <td class="text-center">@Lang.NoInformation
@@ -210,7 +157,6 @@
             </div>
         </div>
     </div>
-    <input type="hidden" id="subCategory" value="@Model.SubCategorySelected" />
 }
 
 @section scriptspage

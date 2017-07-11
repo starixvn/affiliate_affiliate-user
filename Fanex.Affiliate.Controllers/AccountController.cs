@@ -28,76 +28,33 @@
     [CheckUMFilter]
     public partial class AccountController : BaseController
     {
-        #region Services
+        private readonly IAccountService _accountService;
 
-        /// <summary>
-        /// Define account service.
-        /// </summary>
-        protected readonly IAccountService AccountService;
+        private readonly ISystemSettingService _systemSettingService;
 
-        /// <summary>
-        /// Define System Setting service.
-        /// </summary>
-        protected readonly ISystemSettingService SystemSettingService;
+        private readonly IPaymentService _paymentService;
 
-        /// <summary>
-        /// Define Payment service.
-        /// </summary>
-        protected readonly IPaymentService PaymentService;
+        private readonly IUserService _userService;
 
-        /// <summary>
-        /// Define User service.
-        /// </summary>
-        protected readonly IUserService UserService;
+        private readonly IProductService _productService;
 
-        /// <summary>
-        /// Define Product service.
-        /// </summary>
-        protected readonly IProductService ProductService;
+        private readonly IBetListService _betListService;
 
-        /// <summary>
-        /// Define Marketing service.
-        /// </summary>
-        protected readonly IMarketingService MarketingService;
-
-        /// <summary>
-        /// Bet List service.
-        /// </summary>
-        protected readonly IBetListService BetListService;
-
-        #endregion Services
-
-        #region Constructor
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AccountController" /> class.
-        /// </summary>
-        /// <param name="accountService">Account Service.</param>
-        /// <param name="systemSettingService">System Setting Service.</param>
-        /// <param name="paymentService">System payment Service.</param>
-        /// <param name="userService">User Service.</param>
-        /// <param name="productService">Product Service.</param>
-        /// <param name="marketingService">Marketing Service.</param>
-        /// <param name="betlistService">Bet List Service.</param>
         public AccountController(
             IAccountService accountService,
             ISystemSettingService systemSettingService,
             IPaymentService paymentService,
             IUserService userService,
             IProductService productService,
-            IMarketingService marketingService,
             IBetListService betlistService)
         {
-            AccountService = accountService;
-            SystemSettingService = systemSettingService;
-            PaymentService = paymentService;
-            UserService = userService;
-            ProductService = productService;
-            MarketingService = marketingService;
-            BetListService = betlistService;
+            _accountService = accountService;
+            _systemSettingService = systemSettingService;
+            _paymentService = paymentService;
+            _userService = userService;
+            _productService = productService;
+            _betListService = betlistService;
         }
-
-        #endregion Constructor
 
         #region Statement History
 
@@ -121,7 +78,7 @@
                 TotalPages = totalPage
             };
 
-            var statement = AccountService.GetStatementHistory(criteria, ref totalPage);
+            var statement = _accountService.GetStatementHistory(criteria, ref totalPage);
             return View(statement.ToPagedList(currentPageIndex, itemPerPage, totalPage * itemPerPage));
         }
 
@@ -129,11 +86,6 @@
 
         #region Daily Earnings
 
-        /// <summary>
-        /// Daily Earning.
-        /// </summary>
-        /// <param name="monthDate">Input Month Date.</param>
-        /// <returns>Return view.</returns>
         [HttpGet]
         public ActionResult DailyEarnings(string monthDate = null)
         {
@@ -181,11 +133,11 @@
                 model.ToDate = (DateTime)criteria.ToDate;
             }
 
-            model.ListProduct = ProductService.GetProductList(productCriteria).ToList();
+            model.ListProduct = _productService.GetProductList(productCriteria).ToList();
             model.ListProduct.ForEach(l => l.OriginalProductName = l.ProductName);
             model.ListProduct.ForEach(i => i.ProductName = ProductsFormatter.Format(i.ProductName));
             model.ProductId = criteria.ProductId;
-            model.ListDailyEarning = AccountService.GetDailyEarnings(criteria).ToList();
+            model.ListDailyEarning = _accountService.GetDailyEarnings(criteria).ToList();
             model.ShowPlaytechCasinoData = (model.ProductId == 0 && model.ListProduct.Count(l => l.OriginalProductName == "Casino") > 0)
                 || (model.ProductId != 0 && model.ListProduct.Where(i => i.ProductId == model.ProductId).First().OriginalProductName == "Casino");
             FormaterCurrency.SetDefaultCurrency(criteria.AffCurrency);
@@ -231,7 +183,7 @@
             };
 
             var model = new DailyEarningsKioskDetailViewModel();
-            model.ListProduct = ProductService.GetProductList(productCriteria).ToList();
+            model.ListProduct = _productService.GetProductList(productCriteria).ToList();
             model.ListProduct.ForEach(i => i.OriginalProductName = i.ProductName);
             model.ListProduct.ForEach(i => i.ProductName = ProductsFormatter.Format(i.ProductName));
             if (criteria.MonthDate != null)
@@ -241,7 +193,7 @@
 
             criteria.AffId = CurrentSession.AffId;
             model.ProductId = criteria.ProductId;
-            model.ListDailyEarningDetail = AccountService.GetDailyEarningsDetail(criteria).ToList();
+            model.ListDailyEarningDetail = _accountService.GetDailyEarningsDetail(criteria).ToList();
             model.ShowPlaytechCasinoData = HasShowPlaytechCasino(model);
             FormaterCurrency.SetDefaultCurrency(criteria.AffCurrency);
             ViewBag.AffiliateCurrency = CurrentSession.Currency;
@@ -299,7 +251,7 @@
                 TotalPages = 0
             };
 
-            var customerInfo = AccountService.GetCustomerInfo(criteria);
+            var customerInfo = _accountService.GetCustomerInfo(criteria);
             return View(customerInfo.ToPagedList(currentPageIndex, itemPerPage, criteria.TotalPages * itemPerPage));
         }
 
@@ -333,12 +285,12 @@
             // Get statistics account
             criteria.AffId = CurrentSession.AffId;
             var listProduct = new List<Product>();
-            var statistics = AccountService.GetStatisticsOverview(criteria, ref listProduct);
+            var statistics = _accountService.GetStatisticsOverview(criteria, ref listProduct);
             listProduct.ForEach(i => i.ProductName = ProductsFormatter.Format(i.ProductName));
 
             // Get Current Commission Setting
             var commSettingCriteria = new AccountCommGroupCriteria { AffId = CurrentSession.AffId };
-            var model = commSettingCriteria.IsValid() ? AccountService.GetCommissionSetting(commSettingCriteria) : new AccountOverviewViewModel();
+            var model = commSettingCriteria.IsValid() ? _accountService.GetCommissionSetting(commSettingCriteria) : new AccountOverviewViewModel();
 
             model.Month = criteria.Month;
             model.Year = criteria.Year;
@@ -372,13 +324,12 @@
             var profiler = MiniProfiler.Current;
             using (profiler.Step("DB Call"))
             {
-                payment = PaymentService.GetPaymentRequest(criteria);
+                payment = _paymentService.GetPaymentRequest(criteria);
             }
 
             if (initial)
             {
-                // Check pending request
-                if (payment.ListPayment.Where(p => p.Status.ToLower() == PaymentStatus.Pending.ToString().ToLower()).ToList().Any())
+                if (payment.ListPayment.Any(p => p.Status.ToLower() == PaymentStatus.Pending.ToString().ToLower()))
                 {
                     result.Success = false;
                     result.Message = Lang.Msg130;
@@ -428,7 +379,7 @@
 
                 if (success)
                 {
-                    var paymentInfo = PaymentService.GetPaymentRequestPlayerInfo(new PaymentPlayerInfoCriteria
+                    var paymentInfo = _paymentService.GetPaymentRequestPlayerInfo(new PaymentPlayerInfoCriteria
                     {
                         AffId = CurrentSession.AffId
                     });
@@ -473,7 +424,7 @@
                 Language = AppSession.Language
             };
 
-            var paymentRequest = PaymentService.InsertPaymentRequest(criteria);
+            var paymentRequest = _paymentService.InsertPaymentRequest(criteria);
 
             if (criteria.ErrCode == 0)
             {
@@ -566,7 +517,7 @@
                     Status = PaymentStatus.Cancelled.ToString(),
                     TransDate = DateTime.Now
                 };
-                var paymentCancel = PaymentService.CancelPaymentRequest(criteria);
+                var paymentCancel = _paymentService.CancelPaymentRequest(criteria);
 
                 if (criteria.ErrCode == 0)
                 {
@@ -701,7 +652,7 @@
                 AffID = CurrentSession.AffId
             };
 
-            var user = UserService.AffiliateSelectByID(criteria);
+            var user = _userService.AffiliateSelectByID(criteria);
             return View(user);
         }
 
@@ -728,7 +679,7 @@
                     MoreSiteURLs = WebUtility.HtmlEncode(user.MoreSiteURLs),
                     Ip = Common.GetIPAddressOfClient()
                 };
-                var result = UserService.AffiliateUpdate(criteria);
+                var result = _userService.AffiliateUpdate(criteria);
 
                 if (result.Success)
                 {
@@ -767,7 +718,7 @@
             if (ModelState.IsValid)
             {
                 CheckPasswordFormat(criteria);
-                var passwordFromDB = AccountService.GetChangePasswordInfo(new ChangePasswordInfoCriteria
+                var passwordFromDB = _accountService.GetChangePasswordInfo(new ChangePasswordInfoCriteria
                 {
                     AffId = CurrentSession.AffId
                 });
@@ -777,7 +728,7 @@
                 criteria.IP = Common.GetIPAddressOfClient();
                 criteria.Language = CurrentSession.Language;
                 criteria.IsSuccess = passwordFromDB == criteria.OldPassword;
-                AccountService.UpdateChangePasswordResult(criteria);
+                _accountService.UpdateChangePasswordResult(criteria);
                 if (criteria.ErrCode == 0)
                 {
                     ViewBag.Result = new ResultViewModel { Success = true, Message = Lang.PwdChanged };

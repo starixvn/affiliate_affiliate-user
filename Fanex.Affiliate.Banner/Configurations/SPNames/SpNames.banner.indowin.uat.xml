@@ -3,6 +3,5 @@
   <Function Name="Aff-Banner">
     <Setting Key="Aff_Banner_UpdateStatistic" SpName="Aff_Banner_UpdateStatistic" DbName="DBAFFINDOWIN.Affiliate_Indowin.bodbDownlineNet" Plain="0" />
     <Setting Key="Aff_Banner_SelInfo" SpName="Aff_Banner_SelInfo" DbName="DBAFFINDOWIN.Affiliate_Indowin.bodbDownlineNet" Plain="0" />
-    <Setting Key="Aff_Banner_GetSystemName" SpName="Aff_Banner_GetSystemName" DbName="DBAFFINDOWIN.Affiliate_Indowin.bodbDownlineNet" Plain="0" />
   </Function>
 </Functions>

@@ -133,7 +133,7 @@
                 MonthDate = winlostDate
             };
 
-            return ProductService.GetProductList(productCriteria).ToList();
+            return _productService.GetProductList(productCriteria).ToList();
         }
 
         [HttpGet]
@@ -226,7 +226,7 @@
                 Date = winlostDate
             };
 
-            return (decimal)BetListService.GetExchangeRate(exchangeCriteria);
+            return (decimal)_betListService.GetExchangeRate(exchangeCriteria);
         }
 
         #endregion BetList
@@ -244,7 +244,7 @@
                 MemberName = username ?? string.Empty
             };
 
-            BetListService.ValidatePermission(criteria);
+            _betListService.ValidatePermission(criteria);
 
             return criteria.BelongLevel2;
         }

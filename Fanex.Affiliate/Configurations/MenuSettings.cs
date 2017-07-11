@@ -48,11 +48,11 @@
             },
             new MenuItem() 
             { 
-                MenuName = "MediaGallery", ParentName = "MarketingTools",  ActionName = "MediaGallery", ControllerName = "Account", Roles = "All" 
+                MenuName = "MediaGallery", ParentName = "MarketingTools",  ActionName = "BannerList", ControllerName = "MediaBanner", Roles = "All" 
             },
             new MenuItem() 
             { 
-                MenuName = "TextBox", ParentName = "MarketingTools",  ActionName = "TextBox", ControllerName = "Account", Roles = "All" 
+                MenuName = "TextBox", ParentName = "MarketingTools",  ActionName = "TextList", ControllerName = "MediaBanner", Roles = "All" 
             },
 
             new MenuItem() 

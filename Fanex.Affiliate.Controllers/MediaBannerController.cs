@@ -6,35 +6,45 @@
     using Configurations;
     using Criteria;
     using DTO;
+    using ONEbook.UM.Filters;
+    using Services;
     using Utilities;
     using ViewModels;
     using Web;
+    using Web.Filter;
 
-    /// <summary>
-    /// All action for Media Gallery and TextBox.
-    /// </summary>
-    public partial class AccountController
+    [Authorization]
+    [RoleBasedMenu]
+    [CheckUMFilter]
+    public class MediaBannerController : BaseController
     {
-        /// <summary>
-        /// Get list Media Gallery.
-        /// </summary>
-        /// <param name="criteria">Marketing criteria.</param>
-        /// <returns>Return view.</returns>
+        private readonly ISystemSettingService _systemSettingService;
+
+        private readonly IMarketingService _marketingService;
+
+        public MediaBannerController(
+            ISystemSettingService systemSettingService,
+            IMarketingService marketingService)
+        {
+            _systemSettingService = systemSettingService;
+            _marketingService = marketingService;
+        }
+
         [HttpGet]
-        public ActionResult MediaGallery(MarketingCriteria criteria)
+        public ActionResult BannerList(MarketingCriteria criteria)
         {
             var totalPage = 0;
             var categoryList = GetProducts();
 
-            var typeList = MarketingService.GetBannerTypeList(new BannerTypeCriteria { TypeName = "ImageType", Language = AppSession.Language });
-            var sizeList = MarketingService.GetBannerTypeList(new BannerTypeCriteria { TypeName = "Size", Language = AppSession.Language });
-            var domainList = MarketingService.GetDomainList(new DomainCriteria { AffID = CurrentSession.AffId });
-            var linkList = SystemSettingService.ListSystemSetting(new SystemSettingsByTypeCriteria { Type = "CustomerPage" });
+            var typeList = _marketingService.GetBannerTypeList(new BannerTypeCriteria { TypeName = "ImageType", Language = AppSession.Language });
+            var sizeList = _marketingService.GetBannerTypeList(new BannerTypeCriteria { TypeName = "Size", Language = AppSession.Language });
+            var domainList = _marketingService.GetDomainList(new DomainCriteria { AffID = CurrentSession.AffId });
+            var linkList = _systemSettingService.ListSystemSetting(new SystemSettingsByTypeCriteria { Type = "CustomerPage" });
             criteria.PageSize = criteria.PageSize == 0 ? AppSettings.PageSize : criteria.PageSize;
             criteria.Type = (short)AppSettings.InputAffType;
             AssignCurrencyData(criteria);
 
-            var bannerList = MarketingService.GetBannerMediaList(criteria, ref totalPage);
+            var bannerList = _marketingService.GetBannerMediaList(criteria, ref totalPage);
             var viewModel = new MarketingViewModel
             {
                 CategoryList = categoryList,
@@ -60,13 +70,9 @@
             return View(viewModel);
         }
 
-        /// <summary>
-        /// Get product list.
-        /// </summary>
-        /// <returns>A list of products.</returns>
         public IEnumerable<BannerType> GetProducts()
         {
-            var categoryList = MarketingService.GetBannerTypeList(
+            var categoryList = _marketingService.GetBannerTypeList(
                 new BannerTypeCriteria { TypeName = "MediaCategory", Language = AppSession.Language });
 
             // Globalize Product's names
@@ -78,28 +84,23 @@
             return categoryList;
         }
 
-        /// <summary>
-        /// Get list TextBox.
-        /// </summary>
-        /// <param name="criteria">Marketing criteria.</param>
-        /// <returns>Return view.</returns>
         [HttpGet]
-        public ActionResult TextBox(MarketingCriteria criteria)
+        public ActionResult TextList(MarketingCriteria criteria)
         {
             var totalPage = 0;
-            var categoryList = MarketingService.GetBannerTypeList(
+            var categoryList = _marketingService.GetBannerTypeList(
                 new BannerTypeCriteria { TypeName = "MediaCategory", Language = AppSession.Language });
             foreach (var item in categoryList)
             {
                 item.Value = ProductsFormatter.Format(item.Value);
             }
 
-            var domainList = MarketingService.GetDomainList(new DomainCriteria { AffID = CurrentSession.AffId });
-            var linkList = SystemSettingService.ListSystemSetting(new SystemSettingsByTypeCriteria { Type = "CustomerPage" });
+            var domainList = _marketingService.GetDomainList(new DomainCriteria { AffID = CurrentSession.AffId });
+            var linkList = _systemSettingService.ListSystemSetting(new SystemSettingsByTypeCriteria { Type = "CustomerPage" });
             criteria.PageSize = criteria.PageSize == 0 ? AppSettings.PageSize : criteria.PageSize;
             AssignCurrencyData(criteria);
 
-            var bannerList = MarketingService.GetBannerMediaList(criteria, ref totalPage);
+            var bannerList = _marketingService.GetBannerMediaList(criteria, ref totalPage);
             var viewModel = new MarketingViewModel
             {
                 CategoryList = categoryList,
@@ -123,19 +124,23 @@
             return View(viewModel);
         }
 
-        /// <summary>
-        /// Marketing Category.
-        /// </summary>
-        /// <param name="criteria">Banner type criteria.</param>
-        /// <returns>Return view.</returns>
         [HttpPost]
-        public JsonResult MarketingSubCategory(BannerTypeCriteria criteria)
+        public JsonResult SubCategory(BannerTypeCriteria criteria)
         {
             criteria.TypeName = "MediaSubCategory";
             criteria.Language = AppSession.Language;
-            var subCategoryList = MarketingService.GetBannerTypeList(criteria);
+            var subCategoryList = _marketingService.GetBannerTypeList(criteria);
 
             return new JsonResult { Data = subCategoryList };
+        }
+
+        private static void AssignCurrencyData(MarketingCriteria criteria)
+        {
+            var currencies = AppSettings.PlayerCurrencies;
+            if (criteria.Currency == null && currencies.Count() == 1)
+            {
+                criteria.Currency = AppSettings.PlayerCurrencies.First().CurrencyId;
+            }
         }
 
         private void AssignDataToModel(MarketingViewModel model, MarketingCriteria criteria)
@@ -154,15 +159,6 @@
             model.LinkSelected = criteria.LinkTo;
             model.PageIndex = criteria.Page;
             model.PageSize = criteria.PageSize;
-        }
-
-        private void AssignCurrencyData(MarketingCriteria criteria)
-        {
-            var currencies = AppSettings.PlayerCurrencies;
-            if (criteria.Currency == null && currencies.Count() == 1)
-            {
-                criteria.Currency = AppSettings.PlayerCurrencies.First().CurrencyId;
-            }
         }
     }
 }

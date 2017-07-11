@@ -91,14 +91,14 @@
                 return View("~/Views/Shared/Account/BetListResults_RNGCasino.cshtml", null);
             }
 
-            var customerInfoBetList = BetListService.GetPlayerIbcInfo(AppSettings.AffiliateName + "$" + criteria.UserName);
+            var customerInfoBetList = _betListService.GetPlayerIbcInfo(AppSettings.AffiliateName + "$" + criteria.UserName);
             criteria.BaseCurrency = criteria.BaseCurrency ?? string.Empty;
             criteria.ExternalId = customerInfoBetList.Username;
             criteria.CurrencyId = customerInfoBetList.CurrencyId;
             criteria.BaseUrl = UrlUtil.GetBaseUrl(this);
 
             var data = criteria.IsValid()
-                ? BetListService.GetRNGCasinoResult(criteria)
+                ? _betListService.GetRNGCasinoResult(criteria)
                 : new List<RNGCasinoResult>();
 
             ExchangeRNGCasinoValues(data);
@@ -165,7 +165,7 @@
             }
 
             var viewModel = criteria.IsValid()
-                ? BetListService.GetRNGCasinoResultDetail(criteria)
+                ? _betListService.GetRNGCasinoResultDetail(criteria)
                 : new BetListResultsRNGCasinoDetailViewModel();
 
             viewModel.Param = criteria;

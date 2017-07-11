@@ -45,7 +45,7 @@
         [ValidateInput(true)]
         public ActionResult LandingPages(LandingPagesByPageCriteria criteria)
         {
-            var pageList = SystemSettingService.ListSystemSetting(new SystemSettingsByTypeCriteria
+            var pageList = _systemSettingService.ListSystemSetting(new SystemSettingsByTypeCriteria
             {
                 Type = "CustomerPage"
             });
@@ -63,7 +63,7 @@
                 };
             }
 
-            var data = criteria.IsValid() ? AccountService.GetLandingPagesStatistics(criteria) : new List<TrafficStatistic>();
+            var data = criteria.IsValid() ? _accountService.GetLandingPagesStatistics(criteria) : new List<TrafficStatistic>();
             var viewModel = new TrafficStatisticsViewModel
             {
                 PageSelected = "All",
@@ -92,7 +92,7 @@
             criteria.AffId = CurrentSession.AffId;
             criteria.PageSize = itemPerPage;
             criteria.Page = currentPageIndex;
-            var data = AccountService.GetLandingPagesStatisticsDetail(criteria, ref totalPage);
+            var data = _accountService.GetLandingPagesStatisticsDetail(criteria, ref totalPage);
 
             return View(data.ToPagedList(currentPageIndex, itemPerPage, totalPage * itemPerPage));
         }
@@ -139,7 +139,7 @@
             criteria.AffId = CurrentSession.AffId;
             var viewModel = new TrafficStatisticsViewModel
             {
-                ReferrersStatisticsList = criteria.IsValid() ? AccountService.GetReferrersStatistics(criteria) : new List<TrafficStatistic>(),
+                ReferrersStatisticsList = criteria.IsValid() ? _accountService.GetReferrersStatistics(criteria) : new List<TrafficStatistic>(),
                 FromDate = criteria.FromDate,
                 ToDate = criteria.ToDate
             };
@@ -162,7 +162,7 @@
             criteria.AffId = CurrentSession.AffId;
             criteria.PageSize = itemPerPage;
             criteria.Page = currentPageIndex;
-            var data = AccountService.GetReferrersStatisticsDetail(criteria, ref totalPage);
+            var data = _accountService.GetReferrersStatisticsDetail(criteria, ref totalPage);
 
             return View(data.ToPagedList(currentPageIndex, itemPerPage, totalPage * itemPerPage));
         }

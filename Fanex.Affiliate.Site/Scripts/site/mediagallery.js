@@ -44,7 +44,7 @@ var MARKETING = (function ($) {
             };
             $.ajax({
                 type: "POST",
-                url: AFFILIATE.getAbsoluteUrl("Account/MarketingSubCategory"),
+                url: AFFILIATE.getAbsoluteUrl("MediaBanner/SubCategory"),
                 data: JSON.stringify(param),
                 contentType: "application/json",
                 dataType: "json",
