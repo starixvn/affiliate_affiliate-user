@@ -84,7 +84,7 @@
             var isOffered = IsOfferedRNGCasino(criteria.FromDate);
             var isValid = GetValidationResult(criteria.UserName);
 
-            if (!(isValid & isOffered))
+            if (!(isValid && isOffered))
             {
                 ViewBag.Data = string.Empty;
 
