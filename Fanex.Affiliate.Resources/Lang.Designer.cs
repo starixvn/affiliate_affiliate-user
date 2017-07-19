@@ -3585,6 +3585,15 @@ namespace Fanex.Affiliate.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Note.
+        /// </summary>
+        public static string Note2 {
+            get {
+                return ResourceManager.GetString("Note2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Nov.
         /// </summary>
         public static string Nov {
@@ -4796,6 +4805,15 @@ namespace Fanex.Affiliate.Resources {
         public static string SY {
             get {
                 return ResourceManager.GetString("SY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Win Loss is rounded for reference only. Therefore, Sub Total amount may be different from the sum of Win Loss when it sums all the actual Win Loss amounts..
+        /// </summary>
+        public static string SystemParlayDetailNote {
+            get {
+                return ResourceManager.GetString("SystemParlayDetailNote", resourceCulture);
             }
         }
         
