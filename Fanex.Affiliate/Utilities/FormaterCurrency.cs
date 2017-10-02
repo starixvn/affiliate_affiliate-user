@@ -2,7 +2,6 @@
 {
     using System.Collections.Generic;
     using System.Globalization;
-    using System.Threading;
 
     /// <summary>
     /// Format currency.
@@ -13,32 +12,25 @@
 
         private const string Minus = "<span style='color: red'>{0}</span>";
 
-        private static CultureInfo _defaultCulture = Thread.CurrentThread.CurrentCulture;
+        private static CultureInfo _defaultCulture = new CultureInfo("en-US");
 
         private static Dictionary<string, CultureInfo> SymbolsByCode
         {
             get
             {
-                try
+                var symbolsByCode = new Dictionary<string, CultureInfo>();
+                var regions = CultureInfo.GetCultures(CultureTypes.SpecificCultures);
+                foreach (var item in regions)
                 {
-                    var symbolsByCode = new Dictionary<string, CultureInfo>();
-                    var regions = CultureInfo.GetCultures(CultureTypes.SpecificCultures);
-                    foreach (var item in regions)
+                    var key = new RegionInfo(item.LCID).ISOCurrencySymbol;
+                    if (!symbolsByCode.ContainsKey(key))
                     {
-                        var key = new RegionInfo(item.LCID).ISOCurrencySymbol;
-                        if (!symbolsByCode.ContainsKey(key))
-                        {
-                            item.NumberFormat.CurrencyDecimalDigits = 2;
-                            symbolsByCode.Add(key, item);
-                        }
+                        item.NumberFormat.CurrencyDecimalDigits = 2;
+                        symbolsByCode.Add(key, item);
                     }
+                }
 
-                    return symbolsByCode;
-                }
-                catch
-                {
-                    throw;
-                }
+                return symbolsByCode;
             }
         }
 
@@ -49,7 +41,7 @@
         /// <returns>Currency symbol.</returns>
         public static string GetCurrencySymbol(string currencyCode = null)
         {
-            return string.IsNullOrEmpty(currencyCode)
+            return string.IsNullOrEmpty(currencyCode) || !SymbolsByCode.ContainsKey(currencyCode)
                 ? _defaultCulture.NumberFormat.CurrencySymbol
                 : SymbolsByCode[currencyCode].NumberFormat.CurrencySymbol;
         }
@@ -61,15 +53,6 @@
         public static void SetDefaultCurrency(string currencyCode)
         {
             _defaultCulture = GetCulture(currencyCode);
-        }
-
-        /// <summary>
-        /// Set default currency from a culture information.
-        /// </summary>
-        /// <param name="culture">Culture information.</param>
-        public static void SetDefaultCurrency(CultureInfo culture)
-        {
-            _defaultCulture = culture;
         }
 
         /// <summary>

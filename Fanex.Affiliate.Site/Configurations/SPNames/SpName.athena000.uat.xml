@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Functions>
+<Functions SiteId="35" SiteName="Affiliate - Athena - User">
   <Function Name="Aff-Account">
     <Setting Key="Aff_User_SecureLoginInfo" SpName="Aff_User_SecureLoginInfo" DbName="DBAFFATHENA000.Affiliate_Athena000.bodbDownlineNet" Plain="0" />
     <Setting Key="Aff_User_SecureLoginUpdate" SpName="Aff_User_SecureLoginUpdate" DbName="DBAFFATHENA000.Affiliate_Athena000.bodbDownlineNet" Plain="0" />
