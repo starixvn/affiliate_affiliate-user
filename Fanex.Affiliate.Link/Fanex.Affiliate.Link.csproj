@@ -134,10 +134,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\SpNames.xml" />
-    <Content Include="Configurations\SPNames\SpNames.aiabet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.aiabet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.aiabet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.aiabet.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.9bet.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.9bet.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.9bet.sandbox.xml" />
@@ -177,18 +173,10 @@
     <Content Include="Configurations\SPNames\SpNames.be7th.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.be7th.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.be7th.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.goobet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.goobet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.goobet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.goobet.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.itcbet.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.itcbet.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.itcbet.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.itcbet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.m8bola.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.m8bola.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.m8bola.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.m8bola.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.macaubet.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.macaubet.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.macaubet.sandbox.xml" />
@@ -197,14 +185,6 @@
     <Content Include="Configurations\SPNames\SpNames.mgm88.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.mgm88.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.mgm88.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.q8bola.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.q8bola.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.q8bola.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.q8bola.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.unobet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.unobet.master.xml" />
-    <Content Include="Configurations\SPNames\SpNames.unobet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.unobet.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.xml" />
     <Content Include="Global.asax" />
     <Content Include="Web.config">
@@ -267,24 +247,10 @@
     <Content Include="Configurations\WebConfigs\Web.athena000.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.be7.production.config" />
     <Content Include="Configurations\WebConfigs\Web.be7.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.goobet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.goobet.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.itcbet.production.config" />
     <Content Include="Configurations\WebConfigs\Web.itcbet.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.m8bola.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.m8bola.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.macaubet.production.config" />
     <Content Include="Configurations\WebConfigs\Web.macaubet.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.aiabet.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.aiabet.master.config" />
-    <Content Include="Configurations\WebConfigs\Web.aiabet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.aiabet.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.q8bola.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.q8bola.uat.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.unobet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.unobet.uat.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Configurations\WebConfigs\Web.be7th.production.config" />
@@ -337,7 +303,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/3/28" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2014/3/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -5,13 +5,8 @@
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.bolanation.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.aragon88.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.indowin.production.xml
-// Fanex.Affiliate.Site\Configurations\SPNames\SpName.unobet.production.xml
-// Fanex.Affiliate.Site\Configurations\SPNames\SpName.q8bola.production.xml
-// Fanex.Affiliate.Site\Configurations\SPNames\SpName.aiabet.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.macaubet.production.xml
-// Fanex.Affiliate.Site\Configurations\SPNames\SpName.m8bola.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.itcbet.production.xml
-// Fanex.Affiliate.Site\Configurations\SPNames\SpName.goobet.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.be7th.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.be7.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.athena000.production.xml
@@ -22,13 +17,8 @@
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.bolanation.uat.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.aragon88.uat.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.indowin.uat.xml
-// Fanex.Affiliate.Site\Configurations\SPNames\SpName.unobet.uat.xml
-// Fanex.Affiliate.Site\Configurations\SPNames\SpName.q8bola.uat.xml
-// Fanex.Affiliate.Site\Configurations\SPNames\SpName.aiabet.uat.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.macaubet.uat.xml
-// Fanex.Affiliate.Site\Configurations\SPNames\SpName.m8bola.uat.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.itcbet.uat.xml
-// Fanex.Affiliate.Site\Configurations\SPNames\SpName.goobet.uat.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.be7th.uat.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.be7.uat.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.athena000.uat.xml

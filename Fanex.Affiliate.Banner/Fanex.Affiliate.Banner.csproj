@@ -182,9 +182,6 @@
     <Content Include="Configurations\SPNames\SpNames.banner.9bet.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.9bet.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.9bet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.aiabet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.aiabet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.aiabet.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.allbetclubs.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.allbetclubs.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.allbetclubs.uat.xml" />
@@ -211,24 +208,12 @@
     <Content Include="Configurations\SPNames\SpNames.banner.be7th.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.be7th.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.be7th.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.goobet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.goobet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.goobet.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.itcbet.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.itcbet.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.itcbet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.m8bola.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.m8bola.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.m8bola.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.macaubet.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.macaubet.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.macaubet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.q8bola.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.q8bola.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.q8bola.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.unobet.master.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.unobet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.unobet.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -302,35 +287,12 @@
     <Content Include="Configurations\WebConfigs\Web.banner.be7.production.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.be7.sandbox.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.be7.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.goobet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.goobet.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.goobet.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.itcbet.production.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.itcbet.sandbox.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.itcbet.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.m8bola.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.m8bola.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.m8bola.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.macaubet.production.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.macaubet.sandbox.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.macaubet.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.q8bola.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.q8bola.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.q8bola.uat.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.banner.aiabet.uat.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.banner.aiabet.production.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.banner.aiabet.sandbox.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.banner.unobet.master.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.unobet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.unobet.uat.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Configurations\WebConfigs\Web.banner.9bet.uat.config" />
@@ -387,7 +349,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2014/3/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
+      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/3/28" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />

@@ -15,7 +15,7 @@
     <AssemblyName>Fanex.Affiliate.Site</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <JSLintSkip>|\Scripts\|\Content\bootstrap\js\</JSLintSkip>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -314,12 +314,6 @@
     <Content Include="Configurations\SPNames\SpName.9bet.uat.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
-    <Content Include="Configurations\SPNames\SpName.aiabet.production.xml">
-      <DependentUpon>_SpName.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\SPNames\SpName.aiabet.uat.xml">
-      <DependentUpon>_SpName.xml.tt</DependentUpon>
-    </Content>
     <Content Include="Configurations\SPNames\SpName.allbetclub.production.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
@@ -365,12 +359,6 @@
     <Content Include="Configurations\SPNames\SpName.bolanation.uat.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
-    <Content Include="Configurations\SPNames\SpName.goobet.production.xml">
-      <DependentUpon>_SpName.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\SPNames\SpName.goobet.uat.xml">
-      <DependentUpon>_SpName.xml.tt</DependentUpon>
-    </Content>
     <Content Include="Configurations\SPNames\SpName.indowin.production.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
@@ -383,22 +371,10 @@
     <Content Include="Configurations\SPNames\SpName.itcbet.uat.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
-    <Content Include="Configurations\SPNames\SpName.m8bola.production.xml">
-      <DependentUpon>_SpName.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\SPNames\SpName.m8bola.uat.xml">
-      <DependentUpon>_SpName.xml.tt</DependentUpon>
-    </Content>
     <Content Include="Configurations\SPNames\SpName.macaubet.production.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.macaubet.uat.xml">
-      <DependentUpon>_SpName.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\SPNames\SpName.q8bola.production.xml">
-      <DependentUpon>_SpName.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\SPNames\SpName.q8bola.uat.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.spondemo.local.xml">
@@ -411,12 +387,6 @@
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.spondemo.uat.xml">
-      <DependentUpon>_SpName.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\SPNames\SpName.unobet.production.xml">
-      <DependentUpon>_SpName.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\SPNames\SpName.unobet.uat.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.xml">
@@ -537,60 +507,6 @@
     <Content Include="Content\bootstrap\less\utilities.less" />
     <Content Include="Content\bootstrap\less\variables.less" />
     <Content Include="Content\bootstrap\less\wells.less" />
-    <Content Include="Content\themes\19\images\banner_top.png" />
-    <Content Include="Content\themes\19\images\bg-contentLanguage.png" />
-    <Content Include="Content\themes\19\images\logo-afterlogin.png" />
-    <Content Include="Content\themes\25\images\bg-contentLanguage.png" />
-    <Content Include="Content\themes\25\images\favicon.jpg" />
-    <Content Include="Content\themes\25\images\logo-afterlogin.png" />
-    <Content Include="Content\themes\28\images\banner.en-US.jpg" />
-    <Content Include="Content\themes\28\images\banner.id-ID.jpg" />
-    <Content Include="Content\themes\28\images\banner.ko-KR.jpg" />
-    <Content Include="Content\themes\28\images\banner.th-TH.jpg" />
-    <Content Include="Content\themes\28\images\banner.vi-VN.jpg" />
-    <Content Include="Content\themes\28\images\banner.zh-CN.jpg" />
-    <Content Include="Content\themes\28\images\banner.zh-TW.jpg" />
-    <Content Include="Content\themes\28\images\banner_top.png" />
-    <Content Include="Content\themes\28\images\bar-loader.gif" />
-    <Content Include="Content\themes\28\images\bg-contentLanguage.png" />
-    <Content Include="Content\themes\28\images\bgheader.png" />
-    <Content Include="Content\themes\28\images\bghotNewsContent.png" />
-    <Content Include="Content\themes\28\images\bgLanguage-Content.png" />
-    <Content Include="Content\themes\28\images\bgLanguage.png" />
-    <Content Include="Content\themes\28\images\bgLanguage_Content.png" />
-    <Content Include="Content\themes\28\images\bgMainMenu.png" />
-    <Content Include="Content\themes\28\images\bgTableHeader.png" />
-    <Content Include="Content\themes\28\images\bg_buttonsite.png" />
-    <Content Include="Content\themes\28\images\bg_center.jpg" />
-    <Content Include="Content\themes\28\images\bg_center2.jpg" />
-    <Content Include="Content\themes\28\images\bg_footer.jpg" />
-    <Content Include="Content\themes\28\images\bg_footer.png" />
-    <Content Include="Content\themes\28\images\bg_header03.jpg" />
-    <Content Include="Content\themes\28\images\deco.jpg" />
-    <Content Include="Content\themes\28\images\emailBanner.jpg" />
-    <Content Include="Content\themes\28\images\emailBg.jpg" />
-    <Content Include="Content\themes\28\images\error_icons.png" />
-    <Content Include="Content\themes\28\images\favicon.jpg" />
-    <Content Include="Content\themes\28\images\firstGoal.gif" />
-    <Content Include="Content\themes\28\images\glyphicons-halflings-gray-lighter.png" />
-    <Content Include="Content\themes\28\images\glyphicons-halflings-gray.png" />
-    <Content Include="Content\themes\28\images\glyphicons-halflings.png" />
-    <Content Include="Content\themes\28\images\header.png" />
-    <Content Include="Content\themes\28\images\header_gradient.png" />
-    <Content Include="Content\themes\28\images\help.txt" />
-    <Content Include="Content\themes\28\images\in_top.png" />
-    <Content Include="Content\themes\28\images\lastGoal.gif" />
-    <Content Include="Content\themes\28\images\link_14x14.png" />
-    <Content Include="Content\themes\28\images\loader.gif" />
-    <Content Include="Content\themes\28\images\logo-afterlogin.png" />
-    <Content Include="Content\themes\28\images\note.png" />
-    <Content Include="Content\themes\28\images\plus.png" />
-    <Content Include="Content\themes\28\images\signup.png" />
-    <Content Include="Content\themes\28\images\sprite.png" />
-    <Content Include="Content\themes\28\images\tab_topbg.gif" />
-    <Content Include="Content\themes\28\images\ui-icons_454545_256x240.png" />
-    <Content Include="Content\themes\28\images\undo.png" />
-    <Content Include="Content\themes\28\images\up.png" />
     <Content Include="Content\themes\29\images\banner.en-US.jpg" />
     <Content Include="Content\themes\29\images\banner.id-ID.jpg" />
     <Content Include="Content\themes\29\images\banner.zh-CN.jpg" />
@@ -952,49 +868,6 @@
     <Content Include="Content\themes\_base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\_base\minified\jquery.ui.tooltip.min.css" />
     <Content Include="App_Code\RazorHelper.cshtml" />
-    <Content Include="Content\themes\26\images\banner.en-US.jpg" />
-    <Content Include="Content\themes\26\images\banner.id-ID.jpg" />
-    <Content Include="Content\themes\26\images\banner.th-TH.jpg" />
-    <Content Include="Content\themes\26\images\banner.zh-CN.jpg" />
-    <Content Include="Content\themes\26\images\banner.zh-TW.jpg" />
-    <Content Include="Content\themes\26\images\banner_top.png" />
-    <Content Include="Content\themes\26\images\bar-loader.gif" />
-    <Content Include="Content\themes\26\images\bgheader.png" />
-    <Content Include="Content\themes\26\images\bghotNewsContent.png" />
-    <Content Include="Content\themes\26\images\bgLanguage-Content.png" />
-    <Content Include="Content\themes\26\images\bgLanguage.png" />
-    <Content Include="Content\themes\26\images\bgLanguage_Content.png" />
-    <Content Include="Content\themes\26\images\bgMainMenu.png" />
-    <Content Include="Content\themes\26\images\bgTableHeader.png" />
-    <Content Include="Content\themes\26\images\bg_buttonsite.png" />
-    <Content Include="Content\themes\26\images\bg_center.jpg" />
-    <Content Include="Content\themes\26\images\bg_center2.jpg" />
-    <Content Include="Content\themes\26\images\bg_footer.jpg" />
-    <Content Include="Content\themes\26\images\bg_footer.png" />
-    <Content Include="Content\themes\26\images\bg_header03.jpg" />
-    <Content Include="Content\themes\26\images\deco.jpg" />
-    <Content Include="Content\themes\26\images\emailBanner.jpg" />
-    <Content Include="Content\themes\26\images\emailBg.jpg" />
-    <Content Include="Content\themes\26\images\error_icons.png" />
-    <Content Include="Content\themes\26\images\favicon.jpg" />
-    <Content Include="Content\themes\26\images\firstGoal.gif" />
-    <Content Include="Content\themes\26\images\glyphicons-halflings-gray-lighter.png" />
-    <Content Include="Content\themes\26\images\glyphicons-halflings-gray.png" />
-    <Content Include="Content\themes\26\images\glyphicons-halflings.png" />
-    <Content Include="Content\themes\26\images\header_gradient.png" />
-    <Content Include="Content\themes\26\images\help.txt" />
-    <Content Include="Content\themes\26\images\in_top.png" />
-    <Content Include="Content\themes\26\images\lastGoal.gif" />
-    <Content Include="Content\themes\26\images\link_14x14.png" />
-    <Content Include="Content\themes\26\images\loader.gif" />
-    <Content Include="Content\themes\26\images\note.png" />
-    <Content Include="Content\themes\26\images\plus.png" />
-    <Content Include="Content\themes\26\images\signup.png" />
-    <Content Include="Content\themes\26\images\sprite.png" />
-    <Content Include="Content\themes\26\images\tab_topbg.gif" />
-    <Content Include="Content\themes\26\images\ui-icons_454545_256x240.png" />
-    <Content Include="Content\themes\26\images\undo.png" />
-    <Content Include="Content\themes\26\images\up.png" />
     <Content Include="Content\themes\12\images\banner.en-US.jpg" />
     <Content Include="Content\themes\12\images\banner.id-ID.jpg" />
     <Content Include="Content\themes\12\images\banner.zh-CN.jpg" />
@@ -1104,49 +977,6 @@
     <Content Include="Content\themes\18\images\ui-icons_454545_256x240.png" />
     <Content Include="Content\themes\18\images\undo.png" />
     <Content Include="Content\themes\18\images\up.png" />
-    <Content Include="Content\themes\19\images\banner.en-US.jpg" />
-    <Content Include="Content\themes\19\images\banner.id-ID.jpg" />
-    <Content Include="Content\themes\19\images\banner.ko-KR.jpg" />
-    <Content Include="Content\themes\19\images\banner.th-TH.jpg" />
-    <Content Include="Content\themes\19\images\banner.vi-VN.jpg" />
-    <Content Include="Content\themes\19\images\banner.zh-CN.jpg" />
-    <Content Include="Content\themes\19\images\banner.zh-TW.jpg" />
-    <Content Include="Content\themes\19\images\bar-loader.gif" />
-    <Content Include="Content\themes\19\images\bgheader.png" />
-    <Content Include="Content\themes\19\images\bghotNewsContent.png" />
-    <Content Include="Content\themes\19\images\bgLanguage.png" />
-    <Content Include="Content\themes\19\images\bgLanguage_Content.png" />
-    <Content Include="Content\themes\19\images\bgMainMenu.png" />
-    <Content Include="Content\themes\19\images\bgTableHeader.png" />
-    <Content Include="Content\themes\19\images\bg_buttonsite.png" />
-    <Content Include="Content\themes\19\images\bg_center.jpg" />
-    <Content Include="Content\themes\19\images\bg_center2.jpg" />
-    <Content Include="Content\themes\19\images\bg_footer.jpg" />
-    <Content Include="Content\themes\19\images\bg_footer.png" />
-    <Content Include="Content\themes\19\images\bg_header03.jpg" />
-    <Content Include="Content\themes\19\images\deco.jpg" />
-    <Content Include="Content\themes\19\images\emailBanner.jpg" />
-    <Content Include="Content\themes\19\images\emailBg.jpg" />
-    <Content Include="Content\themes\19\images\error_icons.png" />
-    <Content Include="Content\themes\19\images\favicon.jpg" />
-    <Content Include="Content\themes\19\images\firstGoal.gif" />
-    <Content Include="Content\themes\19\images\glyphicons-halflings-gray-lighter.png" />
-    <Content Include="Content\themes\19\images\glyphicons-halflings-gray.png" />
-    <Content Include="Content\themes\19\images\glyphicons-halflings.png" />
-    <Content Include="Content\themes\19\images\header_gradient.png" />
-    <Content Include="Content\themes\19\images\help.txt" />
-    <Content Include="Content\themes\19\images\in_top.png" />
-    <Content Include="Content\themes\19\images\lastGoal.gif" />
-    <Content Include="Content\themes\19\images\link_14x14.png" />
-    <Content Include="Content\themes\19\images\loader.gif" />
-    <Content Include="Content\themes\19\images\note.png" />
-    <Content Include="Content\themes\19\images\plus.png" />
-    <Content Include="Content\themes\19\images\signup.png" />
-    <Content Include="Content\themes\19\images\sprite.png" />
-    <Content Include="Content\themes\19\images\tab_topbg.gif" />
-    <Content Include="Content\themes\19\images\ui-icons_454545_256x240.png" />
-    <Content Include="Content\themes\19\images\undo.png" />
-    <Content Include="Content\themes\19\images\up.png" />
     <Content Include="Content\themes\21\images\banner.en-US.jpg" />
     <Content Include="Content\themes\21\images\banner.id-ID.jpg" />
     <Content Include="Content\themes\21\images\banner.ko-KR.jpg" />
@@ -1284,94 +1114,6 @@
     <Content Include="Content\themes\23\images\ui-icons_454545_256x240.png" />
     <Content Include="Content\themes\23\images\undo.png" />
     <Content Include="Content\themes\23\images\up.png" />
-    <Content Include="Content\themes\24\images\banner.en-US.jpg" />
-    <Content Include="Content\themes\24\images\banner.id-ID.jpg" />
-    <Content Include="Content\themes\24\images\banner.ko-KR.jpg" />
-    <Content Include="Content\themes\24\images\banner.th-TH.jpg" />
-    <Content Include="Content\themes\24\images\banner.vi-VN.jpg" />
-    <Content Include="Content\themes\24\images\banner.zh-CN.jpg" />
-    <Content Include="Content\themes\24\images\banner.zh-TW.jpg" />
-    <Content Include="Content\themes\24\images\banner_top.png" />
-    <Content Include="Content\themes\24\images\bar-loader.gif" />
-    <Content Include="Content\themes\24\images\bgheader.png" />
-    <Content Include="Content\themes\24\images\bghotNewsContent.png" />
-    <Content Include="Content\themes\24\images\bgLanguage.png" />
-    <Content Include="Content\themes\24\images\bgLanguage_Content.png" />
-    <Content Include="Content\themes\24\images\bgMainMenu.png" />
-    <Content Include="Content\themes\24\images\bgTableHeader.png" />
-    <Content Include="Content\themes\24\images\bg_buttonsite.png" />
-    <Content Include="Content\themes\24\images\bg_center.jpg" />
-    <Content Include="Content\themes\24\images\bg_center2.jpg" />
-    <Content Include="Content\themes\24\images\bg_footer.jpg" />
-    <Content Include="Content\themes\24\images\bg_footer.png" />
-    <Content Include="Content\themes\24\images\bg_header03.jpg" />
-    <Content Include="Content\themes\24\images\deco.jpg" />
-    <Content Include="Content\themes\24\images\emailBanner.jpg" />
-    <Content Include="Content\themes\24\images\emailBg.jpg" />
-    <Content Include="Content\themes\24\images\error_icons.png" />
-    <Content Include="Content\themes\24\images\favicon.jpg" />
-    <Content Include="Content\themes\24\images\firstGoal.gif" />
-    <Content Include="Content\themes\24\images\glyphicons-halflings-gray-lighter.png" />
-    <Content Include="Content\themes\24\images\glyphicons-halflings-gray.png" />
-    <Content Include="Content\themes\24\images\glyphicons-halflings.png" />
-    <Content Include="Content\themes\24\images\header_gradient.png" />
-    <Content Include="Content\themes\24\images\help.txt" />
-    <Content Include="Content\themes\24\images\in_top.png" />
-    <Content Include="Content\themes\24\images\lastGoal.gif" />
-    <Content Include="Content\themes\24\images\link_14x14.png" />
-    <Content Include="Content\themes\24\images\loader.gif" />
-    <Content Include="Content\themes\24\images\note.png" />
-    <Content Include="Content\themes\24\images\plus.png" />
-    <Content Include="Content\themes\24\images\signup.png" />
-    <Content Include="Content\themes\24\images\sprite.png" />
-    <Content Include="Content\themes\24\images\tab_topbg.gif" />
-    <Content Include="Content\themes\24\images\ui-icons_454545_256x240.png" />
-    <Content Include="Content\themes\24\images\undo.png" />
-    <Content Include="Content\themes\24\images\up.png" />
-    <Content Include="Content\themes\25\images\banner.en-US.jpg" />
-    <Content Include="Content\themes\25\images\banner.id-ID.jpg" />
-    <Content Include="Content\themes\25\images\banner.ko-KR.jpg" />
-    <Content Include="Content\themes\25\images\banner.th-TH.jpg" />
-    <Content Include="Content\themes\25\images\banner.vi-VN.jpg" />
-    <Content Include="Content\themes\25\images\banner.zh-CN.jpg" />
-    <Content Include="Content\themes\25\images\banner.zh-TW.jpg" />
-    <Content Include="Content\themes\25\images\banner_top.png" />
-    <Content Include="Content\themes\25\images\bar-loader.gif" />
-    <Content Include="Content\themes\25\images\bgheader.png" />
-    <Content Include="Content\themes\25\images\bghotNewsContent.png" />
-    <Content Include="Content\themes\25\images\bgLanguage-Content.png" />
-    <Content Include="Content\themes\25\images\bgLanguage.png" />
-    <Content Include="Content\themes\25\images\bgLanguage_Content.png" />
-    <Content Include="Content\themes\25\images\bgMainMenu.png" />
-    <Content Include="Content\themes\25\images\bgTableHeader.png" />
-    <Content Include="Content\themes\25\images\bg_buttonsite.png" />
-    <Content Include="Content\themes\25\images\bg_center.jpg" />
-    <Content Include="Content\themes\25\images\bg_center2.jpg" />
-    <Content Include="Content\themes\25\images\bg_footer.jpg" />
-    <Content Include="Content\themes\25\images\bg_footer.png" />
-    <Content Include="Content\themes\25\images\bg_header03.jpg" />
-    <Content Include="Content\themes\25\images\deco.jpg" />
-    <Content Include="Content\themes\25\images\emailBanner.jpg" />
-    <Content Include="Content\themes\25\images\emailBg.jpg" />
-    <Content Include="Content\themes\25\images\error_icons.png" />
-    <Content Include="Content\themes\25\images\firstGoal.gif" />
-    <Content Include="Content\themes\25\images\glyphicons-halflings-gray-lighter.png" />
-    <Content Include="Content\themes\25\images\glyphicons-halflings-gray.png" />
-    <Content Include="Content\themes\25\images\glyphicons-halflings.png" />
-    <Content Include="Content\themes\25\images\header_gradient.png" />
-    <Content Include="Content\themes\25\images\help.txt" />
-    <Content Include="Content\themes\25\images\in_top.png" />
-    <Content Include="Content\themes\25\images\lastGoal.gif" />
-    <Content Include="Content\themes\25\images\link_14x14.png" />
-    <Content Include="Content\themes\25\images\loader.gif" />
-    <Content Include="Content\themes\25\images\note.png" />
-    <Content Include="Content\themes\25\images\plus.png" />
-    <Content Include="Content\themes\25\images\signup.png" />
-    <Content Include="Content\themes\25\images\sprite.png" />
-    <Content Include="Content\themes\25\images\tab_topbg.gif" />
-    <Content Include="Content\themes\25\images\ui-icons_454545_256x240.png" />
-    <Content Include="Content\themes\25\images\undo.png" />
-    <Content Include="Content\themes\25\images\up.png" />
     <Content Include="Content\themes\4\images\banner.ko-KR.jpg" />
     <Content Include="Content\themes\4\images\banner.vi-VN.jpg" />
     <Content Include="Content\themes\4\images\banner.zh-CN.jpg" />
@@ -4457,39 +4199,14 @@
     <Content Include="Configurations\AppSettings\Web.AppSetting.be7.master.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.be7.production.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.be7.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.goobet.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.goobet.master.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.goobet.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.goobet.uat.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.itcbet.local.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.itcbet.master.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.itcbet.production.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.itcbet.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.m8bola.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.m8bola.master.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.m8bola.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.m8bola.uat.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.macaubet.local.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.macaubet.master.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.macaubet.production.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.macaubet.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.aiabet.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.aiabet.master.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.aiabet.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.aiabet.uat.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Configurations\AppSettings\Web.AppSetting.q8bola.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.q8bola.master.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.q8bola.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.q8bola.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.unobet.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.unobet.master.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.unobet.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.unobet.uat.config" />
-    <Content Include="Content\themes\28\index.less" />
-    <Content Include="Content\themes\28\mixins.less" />
-    <Content Include="Content\themes\28\variables.less" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.local.config">
       <SubType>Designer</SubType>
     </Content>
@@ -4505,12 +4222,6 @@
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.9bet.uat.config">
-      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aiabet.production.config">
-      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aiabet.uat.config">
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.allbetclub.production.config">
@@ -4543,40 +4254,16 @@
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.be7th.uat.config">
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
     </Content>
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.goobet.production.config">
-      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.goobet.uat.config">
-      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
-    </Content>
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.itcbet.production.config">
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.itcbet.uat.config">
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
     </Content>
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.m8bola.production.config">
-      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.m8bola.uat.config">
-      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
-    </Content>
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.macaubet.production.config">
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.macaubet.uat.config">
-      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.q8bola.production.config">
-      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.q8bola.uat.config">
-      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.unobet.production.config">
-      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.unobet.uat.config">
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\AppSettings\Web.AppSetting.athena000.sit.config" />
@@ -4637,15 +4324,6 @@
     <Content Include="Configurations\WebConfigs\Web.9bet.uat.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
-    <Content Include="Configurations\WebConfigs\Web.aiabet.master.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\WebConfigs\Web.aiabet.production.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\WebConfigs\Web.aiabet.uat.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
     <Content Include="Configurations\WebConfigs\Web.allbetclub.master.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
@@ -4691,15 +4369,6 @@
     <Content Include="Configurations\WebConfigs\Web.be7th.uat.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
-    <Content Include="Configurations\WebConfigs\Web.goobet.master.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\WebConfigs\Web.goobet.production.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\WebConfigs\Web.goobet.uat.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
     <Content Include="Configurations\WebConfigs\Web.itcbet.master.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
@@ -4709,15 +4378,6 @@
     <Content Include="Configurations\WebConfigs\Web.itcbet.uat.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
-    <Content Include="Configurations\WebConfigs\Web.m8bola.master.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\WebConfigs\Web.m8bola.production.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\WebConfigs\Web.m8bola.uat.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
     <Content Include="Configurations\WebConfigs\Web.macaubet.master.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
@@ -4725,24 +4385,6 @@
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\WebConfigs\Web.macaubet.uat.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\WebConfigs\Web.q8bola.master.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\WebConfigs\Web.q8bola.production.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\WebConfigs\Web.q8bola.uat.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\WebConfigs\Web.unobet.master.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\WebConfigs\Web.unobet.production.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\WebConfigs\Web.unobet.uat.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\WebConfigs\Web.athena000.sit.config" />
@@ -4869,9 +4511,6 @@
     <Content Include="GameData\GlobalSetting.ini" />
     <Content Include="GameData\VideoPoker\RV009\Settings.ini" />
     <Content Include="GameData\VideoPoker\RV010\Settings.ini" />
-    <Content Include="Content\themes\26\index.less" />
-    <Content Include="Content\themes\26\mixins.less" />
-    <Content Include="Content\themes\26\variables.less" />
     <None Include="img\Slot\S0007\icon_20x20_doubleWild.jpg.exclude" />
     <None Include="img\Slot\S0007\icon_40x40_doubleWild.jpg.exclude" />
     <Content Include="packages.config" />
@@ -4909,9 +4548,6 @@
     <Content Include="Content\themes\18\index.less" />
     <Content Include="Content\themes\18\mixins.less" />
     <Content Include="Content\themes\18\variables.less" />
-    <Content Include="Content\themes\19\index.less" />
-    <Content Include="Content\themes\19\mixins.less" />
-    <Content Include="Content\themes\19\variables.less" />
     <Content Include="Content\themes\21\index.less" />
     <Content Include="Content\themes\21\mixins.less" />
     <Content Include="Content\themes\21\variables.less" />
@@ -4921,12 +4557,6 @@
     <Content Include="Content\themes\23\index.less" />
     <Content Include="Content\themes\23\mixins.less" />
     <Content Include="Content\themes\23\variables.less" />
-    <Content Include="Content\themes\24\index.less" />
-    <Content Include="Content\themes\24\mixins.less" />
-    <Content Include="Content\themes\24\variables.less" />
-    <Content Include="Content\themes\25\index.less" />
-    <Content Include="Content\themes\25\mixins.less" />
-    <Content Include="Content\themes\25\variables.less" />
     <Content Include="Content\themes\2\mixins.less" />
     <Content Include="Content\themes\2\variables.less" />
     <None Include="Content\themes\3\fonts\BenchNine\BenchNine-Bold.ttf" />
@@ -5146,7 +4776,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
+      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
