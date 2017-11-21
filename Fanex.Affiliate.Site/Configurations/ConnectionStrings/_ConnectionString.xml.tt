@@ -5,62 +5,31 @@
 
 <#
 	var manager = TemplateFileManager.Create(this);
-
-	var licenseeNames = new string[] {
-			"spondemo",
-			"9bet", 
-			"allbetclub",
-			"aoncash",
-			"athena000",
-			"be7",
-			"be7th",
-			"itcbet",
-			"macaubet",
-			"indowin",
-			"aragon88",
-			"bolanation"
-		};
-
-	var dbAlias = new string[] {
-		"DBAFFSPONDEMO.Affiliate_Spondemo.bodbDownlineNet", 
-		"DBAFF9BET.Affiliate_9Bet.bodbDownlineNet", 
-		"DBAFFALLBETCLUB.Affiliate_Allbetclub.bodbDownlineNet",
-		"DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet",
-		"DBAFFATHENA000.Affiliate_Athena000.bodbDownlineNet",
-		"DBAFFBE7.Affiliate_BE7.bodbDownlineNet",
-		"DBAFFBE7TH.Affiliate_BE7TH.bodbDownlineNet",
-		"DBAFFITCBET.Affiliate_itcbet.bodbDownlineNet",
-		"DBAFFMACAUBET.Affiliate_MacauBet.bodbDownlineNet",
-		"DBAFFINDOWIN.Affiliate_indowin.bodbDownlineNet",
-		"DBAFFARAGON88.Affiliate_aragon88.bodbDownlineNet",
-		"DBAFFBOLANATION.Affiliate_bolanation.bodbDownlineNet"
-	};
-
-	var dbNames = new string[] {
-		"spondemo",
-		"9bet", 
-		"allbetclub",
-		"aoncash",
-		"athena000",
-		"be7",
-		"be7th",
-		"itcbet",
-		"macaubet",
-		"indowin",
-		"aragon88",
-		"bolanation"
+	var licenseeDbNameList = new System.Collections.Generic.Dictionary<string, string>
+	{
+		{"spondemo", "DBAFFSPONDEMO.Affiliate_Spondemo.bodbDownlineNet"},
+		{"9bet", "DBAFF9BET.Affiliate_9Bet.bodbDownlineNet"}, 
+		{"allbetclub", "DBAFFALLBETCLUB.Affiliate_Allbetclub.bodbDownlineNet"},
+		{"aoncash", "DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet"},
+		{"athena000", "DBAFFATHENA000.Affiliate_Athena000.bodbDownlineNet"},
+		{"be7", "DBAFFBE7.Affiliate_BE7.bodbDownlineNet"},
+		{"be7th", "DBAFFBE7TH.Affiliate_BE7TH.bodbDownlineNet"},
+		{"itcbet", "DBAFFITCBET.Affiliate_itcbet.bodbDownlineNet"},
+		{"macaubet", "DBAFFMACAUBET.Affiliate_MacauBet.bodbDownlineNet"},
+		{"indowin", "DBAFFINDOWIN.Affiliate_indowin.bodbDownlineNet"},
+		{"aragon88", "DBAFFARAGON88.Affiliate_aragon88.bodbDownlineNet"},
+		{"bolanation", "DBAFFBOLANATION.Affiliate_bolanation.bodbDownlineNet"}
 	};
 
 	var environments = new string[] { "uat", "production" };
-	var index = 0;
-	foreach(var licenseeName in licenseeNames)
+	foreach(var licenseeDbName in licenseeDbNameList)
 	{
 		foreach(var environment in environments)
 		{
-			var fileName = string.Format("Web.ConnectionString.{0}.{1}.config", licenseeName, environment);
+			var fileName = string.Format("Web.ConnectionString.{0}.{1}.config", licenseeDbName.Key, environment);
 			manager.StartNewFile(fileName);
 
-			var licenseeDb = string.Format("<add name=\"{0}\" connectionString=\"packet size=4096; Data Source=10.40.40.224;Initial Catalog=Affiliate_{1};integrated security=false; user id=bodbDownlineNet; password=TBAw8F+PqCx3u382anlnOVRxKIJYMsMwXVn1hJpeyKk=;\" providerName=\"System.Data.SqlClient\" />", dbAlias[index], dbNames[index]);
+			var licenseeDb = string.Format("<add name=\"{0}\" connectionString=\"packet size=4096; Data Source=10.40.40.224;Initial Catalog=Affiliate_{1};integrated security=false; user id=bodbDownlineNet; password=TBAw8F+PqCx3u382anlnOVRxKIJYMsMwXVn1hJpeyKk=;\" providerName=\"System.Data.SqlClient\" />", licenseeDbName.Value, licenseeDbName.Key);
 #>
 <connectionStrings>
 	<#= licenseeDb #>
@@ -76,7 +45,6 @@
 </connectionStrings>
 <#
 }
-		index++;
 	}
 	manager.Process();
 #>
