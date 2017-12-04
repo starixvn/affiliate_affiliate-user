@@ -8,18 +8,21 @@ var PAYMENTREQUEST = (function ($) {
             var maxAmount = parseFloat($("#tbMaxAmount").val());
             var minAmount = parseFloat($("#tbMinAmount").val());
             var message = Lang.AmountError + $("#minValue").text() + ' ' + Lang.And + ' ' + $("#maxValue").text();
+            var hasPendingRequest = $("#tbTransID").length > 0;
 
-            if (maxAmount <= 0 || maxAmount < minAmount) {
-                $('#btnSubmit').attr("disabled", true);
-                $('#tbAmount').attr("disabled", true);
+            if (maxAmount <= 0 || maxAmount < minAmount || hasPendingRequest) {
+                $('#btnSubmit').prop("disabled", true);
+                $('#tbAmount').prop("disabled", true);
             }
 
             $('#RequestPaymentForm').submit(function () {
+                $.blockUI();
                 $('#tbAmount').val($('#tbAmount').val().replace(/,/g, ""));
                 var reqAmount = $('#tbAmount').val();
 
                 if ($('#tbAmount').val().length <= 0 || isNaN(reqAmount)) {
                     AFFILIATE.showErrorMsg(message);
+                    $.unblockUI();
                     return false;
                 }
             });
