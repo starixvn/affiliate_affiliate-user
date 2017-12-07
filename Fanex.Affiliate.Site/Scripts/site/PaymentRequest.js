@@ -10,10 +10,9 @@ var PAYMENTREQUEST = (function ($) {
             var message = Lang.AmountError + $("#minValue").text() + ' ' + Lang.And + ' ' + $("#maxValue").text();
             var hasPendingRequest = $("#tbTransID").length > 0;
 
-            if (maxAmount <= 0 || maxAmount < minAmount || hasPendingRequest) {
-                $('#btnSubmit').prop("disabled", true);
-                $('#tbAmount').prop("disabled", true);
-            }
+            var disabledInput = maxAmount <= 0 || maxAmount < minAmount || hasPendingRequest;
+            $('#btnSubmit').prop("disabled", disabledInput);
+            $('#tbAmount').prop("disabled", truedisabledInput);
 
             $('#RequestPaymentForm').submit(function () {
                 $.blockUI();
