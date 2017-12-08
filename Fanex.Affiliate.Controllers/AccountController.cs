@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Globalization;
     using System.Linq;
     using System.Net;
     using System.Text;
@@ -9,6 +10,7 @@
     using System.Web.Mvc;
     using Configurations;
     using Criteria;
+    using Criteria.Payment;
     using DTO;
     using Enumerations;
     using Logging;
@@ -610,6 +612,8 @@
             try
             {
                 var xml = ServiceWrapper.GetLicenseeCustInfo(siteName, userName);
+                WriteLogForCallingApi(siteName, userName, xml);
+
                 if (xml == null || xml.IsEmpty)
                 {
                     return false;
@@ -634,6 +638,29 @@
 
                 return false;
             }
+        }
+
+        private void WriteLogForCallingApi(string siteName, string userName, System.Xml.Linq.XElement xml)
+        {
+            var methodName = "GetLicenseeCustInfo";
+            var userId = SessionManager.CurrentSession.AffId;
+            var paramInfo = $"siteName={siteName}, userName={userName}";
+            var resultLogContent = BuildLogContentByResult(methodName, userId, paramInfo, xml?.ToString());
+            _paymentService.WritePaymentLog(new PaymentLogCriteria { UserId = userId, LogContent = resultLogContent });
+        }
+
+        private static string BuildLogContentByResult(string methodName, int userId, string paramInfo, string resultContent)
+        {
+            var builder = new StringBuilder();
+
+            builder.AppendLine($"Affiliate User - Complete Call Method {methodName} at {DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss tt", CultureInfo.InvariantCulture)}");
+            builder.AppendLine("Infor:");
+            builder.AppendLine($"UserId: {userId}");
+            builder.AppendLine($"Param Info: {paramInfo}");
+
+            builder.AppendLine($"Result Content: {resultContent}");
+
+            return builder.ToString();
         }
 
         private static string GetErrorMessage(string siteName, string userName, Exception exception)
