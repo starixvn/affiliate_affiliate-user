@@ -4,12 +4,14 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Net;
+    using System.Text;
     using System.Text.RegularExpressions;
     using System.Web.Mvc;
     using Configurations;
     using Criteria;
     using DTO;
     using Enumerations;
+    using Logging;
     using ONEbook.UM.Filters;
     using Resources;
     using Services;
@@ -625,10 +627,36 @@
 
                 return true;
             }
-            catch
+            catch (Exception exception)
             {
+                var message = GetErrorMessage(siteName, userName, exception);
+                LogService.Error(message, exception);
+
                 return false;
             }
+        }
+
+        private static string GetErrorMessage(string siteName, string userName, Exception exception)
+        {
+            var message = new StringBuilder();
+            message.AppendLine("Error when calling Api, method: GetLicenseeCustInfo");
+
+            message.AppendLine("Info: ");
+            var currenSession = SessionManager.CurrentSession;
+            if (currenSession != null)
+            {
+                message.AppendLine($"AffId: {currenSession.AffId}")
+                    .AppendLine($"AffType: { currenSession.AffType}")
+                    .AppendLine($"IsInternalSite: {currenSession.IsInternalSite}")
+                    .AppendLine($"Username: {currenSession.Username}");
+            }
+
+            message.AppendLine($"Affiliate: {AppSettings.AffiliateName}")
+           .AppendLine($"Param Info: siteName={siteName}, userName={userName}")
+           .AppendLine($"Error:{exception.Message}")
+           .AppendLine($"StackTrace: {exception.StackTrace}");
+
+            return message.ToString();
         }
 
         private void SetResultMessage(bool success, string message)
