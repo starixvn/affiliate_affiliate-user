@@ -2,6 +2,9 @@
 <Root>
   <item LicenseeName="" Environment="DEV" SpName="Test" Suffix="_xtest"></item>
   
-  <item LicenseeName="" Environment="DEV" SpName="Aff_User_PaymentRequestUpd" Suffix="_xtest"></item>
-  <item LicenseeName="" Environment="DEV" SpName="Aff_User_PaymentRequestIns" Suffix="_xtest"></item>
+  <item LicenseeName="spondemo" Environment="DEV,UAT,SIT" SpName="Aff_User_PaymentRequestUpd" Suffix="_xtest"></item>
+  <item LicenseeName="spondemo" Environment="DEV,UAT,SIT" SpName="Aff_User_PaymentRequestIns" Suffix="_xtest"></item>
+
+  <item LicenseeName="athena000" Environment="DEV,UAT,SIT" SpName="Aff_User_PaymentRequestUpd" Suffix="_xtest"></item>
+  <item LicenseeName="athena000" Environment="DEV,UAT,SIT" SpName="Aff_User_PaymentRequestIns" Suffix="_xtest"></item>
 </Root>
