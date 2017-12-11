@@ -612,7 +612,7 @@
             try
             {
                 var xml = ServiceWrapper.GetLicenseeCustInfo(siteName, userName);
-                WriteLogForCallingApi(siteName, userName, xml);
+                WriteLogForCallingApi(siteName, userName, xml?.ToString());
 
                 if (xml == null || xml.IsEmpty)
                 {
@@ -635,17 +635,18 @@
             {
                 var message = GetErrorMessage(siteName, userName, exception);
                 LogService.Error(message, exception);
+                WriteLogForCallingApi(siteName, userName, message);
 
                 return false;
             }
         }
 
-        private void WriteLogForCallingApi(string siteName, string userName, System.Xml.Linq.XElement xml)
+        private void WriteLogForCallingApi(string siteName, string userName, string logContent)
         {
             var methodName = "GetLicenseeCustInfo";
             var userId = SessionManager.CurrentSession.AffId;
             var paramInfo = $"siteName={siteName}, userName={userName}";
-            var resultLogContent = BuildLogContentByResult(methodName, userId, paramInfo, xml?.ToString());
+            var resultLogContent = BuildLogContentByResult(methodName, userId, paramInfo, logContent);
             _paymentService.WritePaymentLog(new PaymentLogCriteria { UserId = userId, LogContent = resultLogContent });
         }
 
