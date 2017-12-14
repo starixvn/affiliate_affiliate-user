@@ -41,8 +41,8 @@
   <Function Name="Aff-Payment">
     <Setting Key="Aff_User_PaymentRequestSelInfoByAff" SpName="Aff_User_PaymentRequestSelInfoByAff" DbName="DBAFFSPONDEMO.Affiliate_Spondemo.bodbDownlineNet" Plain="0" />
     <Setting Key="Aff_User_PlayerPayoutInfoSel" SpName="Aff_User_PlayerPayoutInfoSel" DbName="DBAFFSPONDEMO.Affiliate_Spondemo.bodbDownlineNet" Plain="0" />
-    <Setting Key="Aff_User_PaymentRequestIns" SpName="Aff_User_PaymentRequestIns" DbName="DBAFFSPONDEMO.Affiliate_Spondemo.bodbDownlineNet" Plain="0" />
-    <Setting Key="Aff_User_PaymentRequestUpd" SpName="Aff_User_PaymentRequestUpd" DbName="DBAFFSPONDEMO.Affiliate_Spondemo.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_User_PaymentRequestIns" SpName="Aff_User_PaymentRequestIns_xtest" DbName="DBAFFSPONDEMO.Affiliate_Spondemo.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_User_PaymentRequestUpd" SpName="Aff_User_PaymentRequestUpd_xtest" DbName="DBAFFSPONDEMO.Affiliate_Spondemo.bodbDownlineNet" Plain="0" />
   </Function>
 
   <Function Name="Aff-Statistics">
@@ -96,7 +96,7 @@
   </Function>
 
   <Function name="Log">
-    <Setting Key="Aff_WebAPI_WriteLog" SpName="Aff_WebAPI_WriteLog" DbName="DBLOG_bodbLicenseeNet" Plain="0" />
+    <Setting Key="Aff_WebAPI_WriteLog" SpName="Aff_WebAPI_WriteLog_xtest" DbName="DBLOG_bodbLicenseeNet" Plain="0" />
   </Function>
 </Functions>
 		
