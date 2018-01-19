@@ -197,6 +197,7 @@
     <Content Include="Configurations\SPNames\SpNames.banner.indowin.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.indowin.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.indowin.uat.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.itcbet.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.macaubet.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.spondemo.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.spondemo.sit.xml" />
@@ -321,6 +322,7 @@
     <Content Include="Configurations\WebConfigs\Web.banner.bolanation.production.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.bolanation.sandbox.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.bolanation.uat.config" />
+    <None Include="Configurations\WebConfigs\Web.banner.itcbet.sit.config" />
     <None Include="Configurations\WebConfigs\Web.banner.macaubet.sit.config" />
     <None Include="Properties\PublishProfiles\a.pubxml" />
   </ItemGroup>
