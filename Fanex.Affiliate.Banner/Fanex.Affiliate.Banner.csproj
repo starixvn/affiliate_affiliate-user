@@ -322,8 +322,8 @@
     <Content Include="Configurations\WebConfigs\Web.banner.bolanation.production.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.bolanation.sandbox.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.bolanation.uat.config" />
-    <None Include="Configurations\WebConfigs\Web.banner.itcbet.sit.config" />
-    <None Include="Configurations\WebConfigs\Web.banner.macaubet.sit.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.itcbet.sit.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.macaubet.sit.config" />
     <None Include="Properties\PublishProfiles\a.pubxml" />
   </ItemGroup>
   <PropertyGroup>
@@ -353,7 +353,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2014/3/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
+      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/3/28" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
