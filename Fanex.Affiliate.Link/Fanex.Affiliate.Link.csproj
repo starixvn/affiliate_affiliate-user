@@ -159,6 +159,8 @@
     <Content Include="Configurations\SPNames\SpNames.indowin.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.indowin.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.indowin.uat.xml" />
+    <Content Include="Configurations\SPNames\SpNames.itcbet.sit.xml" />
+    <Content Include="Configurations\SPNames\SpNames.macaubet.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.spondemo.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.athena000.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.athena000.sandbox.xml" />
@@ -275,6 +277,10 @@
   <ItemGroup>
     <Content Include="Configurations\WebConfigs\Web.bolanation.production.config" />
     <Content Include="Configurations\WebConfigs\Web.bolanation.uat.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configurations\WebConfigs\Web.itcbet.sit.config" />
+    <Content Include="Configurations\WebConfigs\Web.macaubet.sit.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

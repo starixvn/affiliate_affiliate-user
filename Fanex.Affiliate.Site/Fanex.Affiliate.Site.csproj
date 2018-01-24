@@ -368,10 +368,16 @@
     <Content Include="Configurations\SPNames\SpName.itcbet.production.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
+    <Content Include="Configurations\SPNames\SpName.itcbet.sit.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
     <Content Include="Configurations\SPNames\SpName.itcbet.uat.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.macaubet.production.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.macaubet.sit.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.macaubet.uat.xml">
@@ -4313,6 +4319,10 @@
     <Content Include="Configurations\AppSettings\Web.AppSetting.bolanation.master.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.bolanation.production.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.bolanation.uat.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.itcbet.sit.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.macaubet.sit.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.itcbet.sit.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.macaubet.sit.config" />
     <None Include="Configurations\SPNames\_SpNameConfiguration.ttinclude" />
     <None Include="Configurations\TemplateFilemanager.CS.ttinclude" />
     <Content Include="Configurations\WebConfigs\Web.9bet.master.config">
@@ -4425,6 +4435,8 @@
     <Content Include="Configurations\WebConfigs\Web.bolanation.uat.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
+    <Content Include="Configurations\WebConfigs\Web.itcbet.sit.config" />
+    <Content Include="Configurations\WebConfigs\Web.macaubet.sit.config" />
     <None Include="Content\bootstrap\js\.jshintrc" />
     <Content Include="Content\themes\29\index.less" />
     <Content Include="Content\themes\29\mixins.less" />
