@@ -3,6 +3,8 @@
     using System;
     using System.Data.SqlClient;
     using System.Diagnostics.CodeAnalysis;
+    using System.Globalization;
+    using System.Linq;
     using System.Text;
     using System.Web;
     using System.Web.Mvc;
@@ -117,6 +119,10 @@
 
             message.AppendLine($"StackTrace: {exception.StackTrace}");
             message.AppendLine($"InnerException: {exception.InnerException}");
+
+            var cultures = CultureInfo.GetCultures(CultureTypes.SpecificCultures);
+            message.AppendLine($"CultureTypes: {CultureTypes.SpecificCultures}");
+            message.AppendLine($"Currency Code: {string.Join(",", cultures.Select(x => new RegionInfo(x.LCID).ISOCurrencySymbol))}");
             return message;
         }
     }
