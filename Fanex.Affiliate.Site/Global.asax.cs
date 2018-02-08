@@ -92,7 +92,9 @@
                             .AppendLine($"FORM: {string.Join("~", Request.Form)}")
                             .AppendLine($"Browser:{Request.Browser.Type}")
                             .AppendLine($"BrowserVer:{Request.Browser.Version}")
-                            .AppendLine($"Agent:{Request.UserAgent}");
+                            .AppendLine($"Agent:{Request.UserAgent}")
+                            .AppendLine($"Source:{exception.Source}")
+                            .AppendLine($"TargetSite:{exception.TargetSite}");
 
             var currenSession = SessionManager.CurrentSession;
             if (currenSession != null)
@@ -100,7 +102,9 @@
                 message.AppendLine($"AffId: {currenSession.AffId}")
                     .AppendLine($"AffType: { currenSession.AffType}")
                     .AppendLine($"IsInternalSite: {currenSession.IsInternalSite}")
-                    .AppendLine($"Username: {currenSession.Username}");
+                    .AppendLine($"Username: {currenSession.Username}")
+                    .AppendLine($"CurrencyID: {currenSession.CurrencyID}")
+                    .AppendLine($"Currency: {currenSession.Currency}");
             }
 
             var sqlException = exception as SqlException;
@@ -112,6 +116,7 @@
             }
 
             message.AppendLine($"StackTrace: {exception.StackTrace}");
+            message.AppendLine($"InnerException: {exception.InnerException}");
             return message;
         }
     }
