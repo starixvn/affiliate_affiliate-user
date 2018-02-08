@@ -78,7 +78,7 @@
             var realCurrencyCode = string.IsNullOrEmpty(currencyCode) ? "MYR" :
                 string.Equals(currencyCode, "UUS", StringComparison.OrdinalIgnoreCase) ? "USD" : currencyCode;
          
-            return SymbolsByCode.ContainsKey(realCurrencyCode) ? SymbolsByCode[currencyCode] : _defaultCulture;
+            return SymbolsByCode.ContainsKey(realCurrencyCode) ? SymbolsByCode[realCurrencyCode] : _defaultCulture;
         }
 
         /// <summary>
