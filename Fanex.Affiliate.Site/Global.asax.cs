@@ -120,9 +120,6 @@
             message.AppendLine($"StackTrace: {exception.StackTrace}");
             message.AppendLine($"InnerException: {exception.InnerException}");
 
-            var cultures = CultureInfo.GetCultures(CultureTypes.SpecificCultures);
-            message.AppendLine($"CultureTypes: {CultureTypes.SpecificCultures}");
-            message.AppendLine($"Currency Code: {string.Join(",", cultures.Select(x => new RegionInfo(x.LCID).ISOCurrencySymbol))}");
             return message;
         }
     }

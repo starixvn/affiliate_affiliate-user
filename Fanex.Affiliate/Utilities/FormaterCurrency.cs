@@ -1,7 +1,10 @@
 ﻿namespace Fanex.Affiliate.Utilities
 {
+    using Logging;
+    using System;
     using System.Collections.Generic;
     using System.Globalization;
+    using System.Linq;
 
     /// <summary>
     /// Format currency.
@@ -13,24 +16,34 @@
         private const string Minus = "<span style='color: red'>{0}</span>";
 
         private static CultureInfo _defaultCulture = new CultureInfo("en-US");
-
+        private static Dictionary<string, CultureInfo> _symbolsByCode = new Dictionary<string, CultureInfo>();
         private static Dictionary<string, CultureInfo> SymbolsByCode
         {
             get
             {
-                var symbolsByCode = new Dictionary<string, CultureInfo>();
-                var regions = CultureInfo.GetCultures(CultureTypes.SpecificCultures);
-                foreach (var item in regions)
+                try
                 {
-                    var key = new RegionInfo(item.LCID).ISOCurrencySymbol;
-                    if (!symbolsByCode.ContainsKey(key))
+                    if (!_symbolsByCode.Any())
                     {
-                        item.NumberFormat.CurrencyDecimalDigits = 2;
-                        symbolsByCode.Add(key, item);
+                        var symbolsByCode = new Dictionary<string, CultureInfo>();
+                        var regions = CultureInfo.GetCultures(CultureTypes.SpecificCultures);
+                        foreach (var item in regions)
+                        {
+                            var key = new RegionInfo(item.LCID).ISOCurrencySymbol;
+                            if (!symbolsByCode.ContainsKey(key))
+                            {
+                                item.NumberFormat.CurrencyDecimalDigits = 2;
+                                symbolsByCode.Add(key, item);
+                            }
+                        }
                     }
                 }
+                catch (Exception ex)
+                {
+                    Logger.Log.Error(ex.Message, ex);
+                }
 
-                return symbolsByCode;
+                return _symbolsByCode;
             }
         }
 
@@ -41,9 +54,9 @@
         /// <returns>Currency symbol.</returns>
         public static string GetCurrencySymbol(string currencyCode = null)
         {
-            return string.IsNullOrEmpty(currencyCode) || !SymbolsByCode.ContainsKey(currencyCode)
-                ? _defaultCulture.NumberFormat.CurrencySymbol
-                : SymbolsByCode[currencyCode].NumberFormat.CurrencySymbol;
+            return string.IsNullOrEmpty(currencyCode) || !SymbolsByCode.ContainsKey(currencyCode) ?
+                _defaultCulture.NumberFormat.CurrencySymbol : SymbolsByCode[currencyCode]?.NumberFormat.CurrencySymbol;
+
         }
 
         /// <summary>
@@ -62,19 +75,10 @@
         /// <returns>Culture information.</returns>
         public static CultureInfo GetCulture(string currencyCode)
         {
-            // Default currency code
-            if (string.IsNullOrEmpty(currencyCode))
-            {
-                return SymbolsByCode["MYR"];
-            }
-
-            // Test currency
-            if (currencyCode.ToUpper() == "UUS")
-            {
-                return SymbolsByCode["USD"];
-            }
-
-            return SymbolsByCode[currencyCode];
+            var realCurrencyCode = string.IsNullOrEmpty(currencyCode) ? "MYR" :
+                string.Equals(currencyCode, "UUS", StringComparison.OrdinalIgnoreCase) ? "USD" : currencyCode;
+         
+            return SymbolsByCode.ContainsKey(realCurrencyCode) ? SymbolsByCode[currencyCode] : _defaultCulture;
         }
 
         /// <summary>
