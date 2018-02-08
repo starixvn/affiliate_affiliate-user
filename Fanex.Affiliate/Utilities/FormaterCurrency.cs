@@ -25,15 +25,14 @@
                 {
                     if (!_symbolsByCode.Any())
                     {
-                        var symbolsByCode = new Dictionary<string, CultureInfo>();
                         var regions = CultureInfo.GetCultures(CultureTypes.SpecificCultures);
                         foreach (var item in regions)
                         {
                             var key = new RegionInfo(item.LCID).ISOCurrencySymbol;
-                            if (!symbolsByCode.ContainsKey(key))
+                            if (!_symbolsByCode.ContainsKey(key))
                             {
                                 item.NumberFormat.CurrencyDecimalDigits = 2;
-                                symbolsByCode.Add(key, item);
+                                _symbolsByCode.Add(key, item);
                             }
                         }
                     }
