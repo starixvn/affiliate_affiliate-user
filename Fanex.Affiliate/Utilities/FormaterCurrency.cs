@@ -18,23 +18,26 @@
         private static CultureInfo _defaultCulture = new CultureInfo("en-US");
 
         private static Dictionary<string, CultureInfo> _symbolsByCode = new Dictionary<string, CultureInfo>();
-
+        private static object _spinLock = new object();
         private static Dictionary<string, CultureInfo> SymbolsByCode
         {
             get
             {
                 try
                 {
-                    if (!_symbolsByCode.Any())
+                    lock (_spinLock)
                     {
-                        var regions = CultureInfo.GetCultures(CultureTypes.SpecificCultures);
-                        foreach (var item in regions)
+                        if (!_symbolsByCode.Any())
                         {
-                            var key = new RegionInfo(item.LCID).ISOCurrencySymbol;
-                            if (!_symbolsByCode.ContainsKey(key))
+                            var regions = CultureInfo.GetCultures(CultureTypes.SpecificCultures);
+                            foreach (var item in regions)
                             {
-                                item.NumberFormat.CurrencyDecimalDigits = 2;
-                                _symbolsByCode.Add(key, item);
+                                var key = new RegionInfo(item.LCID).ISOCurrencySymbol;
+                                if (!_symbolsByCode.ContainsKey(key))
+                                {
+                                    item.NumberFormat.CurrencyDecimalDigits = 2;
+                                    _symbolsByCode.Add(key, item);
+                                }
                             }
                         }
                     }
