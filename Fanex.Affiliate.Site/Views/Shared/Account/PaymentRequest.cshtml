@@ -10,6 +10,7 @@
     var listPayment = Model.ListPayment;
     var pendingList = listPayment.Where(p => p.Status.ToLower() == "pending").ToList();
     var recentList = listPayment.Where(p => p.Status.ToLower() != "pending").ToList();
+    var currencySymbol = FormaterCurrency.GetCurrencySymbol(SessionManager.CurrentSession.Currency);
 }
 
 <div class="span12 box-insite">
@@ -85,7 +86,7 @@
                                     @Lang.RequestDate
                                 </th>
                                 <th style="width: 150px;">
-                                    @string.Format("{0} ({1})", Lang.RequestAmount, FormaterCurrency.GetCurrencySymbol(SessionManager.CurrentSession.Currency))
+                                    @string.Format("{0} ({1})", Lang.RequestAmount, currencySymbol)
                                 </th>
                                 <th style="width: 150px;">
                                     @Lang.Status
@@ -142,7 +143,7 @@
                                 @Lang.RequestDate
                             </th>
                             <th style="width: 95px;">
-                                @string.Format("{0} ({1})", Lang.RequestAmount, FormaterCurrency.GetCurrencySymbol(SessionManager.CurrentSession.Currency))
+                                @string.Format("{0} ({1})", Lang.RequestAmount, currencySymbol)
                             </th>
                             <th style="width: 85px;">
                                 @Lang.PaymentMethod
