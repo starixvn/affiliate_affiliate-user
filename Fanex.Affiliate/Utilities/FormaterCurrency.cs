@@ -1,10 +1,10 @@
 ﻿namespace Fanex.Affiliate.Utilities
 {
-    using Logging;
     using System;
     using System.Collections.Generic;
     using System.Globalization;
     using System.Linq;
+    using Logging;
 
     /// <summary>
     /// Format currency.
@@ -16,7 +16,9 @@
         private const string Minus = "<span style='color: red'>{0}</span>";
 
         private static CultureInfo _defaultCulture = new CultureInfo("en-US");
+
         private static Dictionary<string, CultureInfo> _symbolsByCode = new Dictionary<string, CultureInfo>();
+
         private static Dictionary<string, CultureInfo> SymbolsByCode
         {
             get
@@ -55,7 +57,6 @@
         {
             return string.IsNullOrEmpty(currencyCode) || !SymbolsByCode.ContainsKey(currencyCode) ?
                 _defaultCulture.NumberFormat.CurrencySymbol : SymbolsByCode[currencyCode]?.NumberFormat.CurrencySymbol;
-
         }
 
         /// <summary>
@@ -76,7 +77,7 @@
         {
             var realCurrencyCode = string.IsNullOrEmpty(currencyCode) ? "MYR" :
                 string.Equals(currencyCode, "UUS", StringComparison.OrdinalIgnoreCase) ? "USD" : currencyCode;
-         
+
             return SymbolsByCode.ContainsKey(realCurrencyCode) ? SymbolsByCode[realCurrencyCode] : _defaultCulture;
         }
 
