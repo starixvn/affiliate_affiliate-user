@@ -1,7 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Root>
   <item LicenseeName="" Environment="production" SpName="Test" Suffix="_xtest"></item>
-
-  <item LicenseeName="spondemo" Environment="SIT,UAT,PRODUCTION" SpName="Aff_User_AffiliateStatementHistorySel" Suffix="_xpre"></item>
-  <item LicenseeName="" Environment="SIT,UAT,PRODUCTION" SpName="Aff_User_AffiliateStatementHistorySel" Suffix="_xpre"></item>
 </Root>

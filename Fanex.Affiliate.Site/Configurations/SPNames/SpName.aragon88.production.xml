@@ -19,7 +19,7 @@
   </Function>
 
   <Function Name="Aff-Statement">
-    <Setting Key="Aff_User_AffiliateStatementHistorySel" SpName="Aff_User_AffiliateStatementHistorySel_xpre" DbName="DBAFFARAGON88.Affiliate_aragon88.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_User_AffiliateStatementHistorySel" SpName="Aff_User_AffiliateStatementHistorySel" DbName="DBAFFARAGON88.Affiliate_aragon88.bodbDownlineNet" Plain="0" />
     <Setting Key="Aff_User_EarningSelDaily" SpName="Aff_User_EarningSelDaily" DbName="DBAFFARAGON88.Affiliate_aragon88.bodbDownlineNet" Plain="0" />
     <Setting Key="Aff_User_EarningSelDetail" SpName="Aff_User_EarningSelDetail" DbName="DBAFFARAGON88.Affiliate_aragon88.bodbDownlineNet" Plain="0" />
     <Setting Key="Aff_User_GetExchangeRate" SpName="Aff_User_GetExchangeRate" DbName="DBAFFARAGON88.Affiliate_aragon88.bodbDownlineNet" Plain="0" />
