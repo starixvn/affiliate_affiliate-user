@@ -7,8 +7,6 @@
     /// </summary>
     public class ValidationCriteria : CriteriaBase
     {
-        public string AdminName { get; set; }
-
         public int AffId { get; set; }
 
         public string MemberName { get; set; }
@@ -16,6 +14,8 @@
         public bool BelongLevel1 { get; set; }
 
         public bool BelongLevel2 { get; set; }
+
+        public string UserCurrencies { get; set; }
 
         public override string GetSettingKey()
         {

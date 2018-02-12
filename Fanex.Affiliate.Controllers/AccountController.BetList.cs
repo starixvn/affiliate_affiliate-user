@@ -241,7 +241,8 @@
             var criteria = new ValidationCriteria
             {
                 AffId = CurrentSession.AffId,
-                MemberName = username ?? string.Empty
+                MemberName = username ?? string.Empty,
+                UserCurrencies = CurrentSession.CurrencyID.ToString()
             };
 
             _betListService.ValidatePermission(criteria);
