@@ -1,7 +1,12 @@
 ﻿namespace Fanex.Affiliate.Services
 {
     using System;
+    using System.Globalization;
+    using System.Text;
     using System.Xml.Linq;
+    using Criteria.Payment;
+    using DTO;
+    using Logging;
     using MemberSiteService;
 
     /// <summary>
@@ -10,14 +15,20 @@
     public static class ServiceWrapper
     {
         private static ServiceSoapClient _client;
+        private static IDbLogger _dbLogger;
 
         private static ServiceSoapClient Client
         {
-            get 
+            get
             {
                 return _client ??
                        (_client = new ServiceSoapClient("ServiceSoap"));
             }
+        }
+
+        private static IDbLogger DbLogger
+        {
+            get { return _dbLogger ?? (_dbLogger = new DbLogger()); }
         }
 
         /// <summary>
@@ -54,6 +65,32 @@
             return Client.GetLicenseeCustInfo(siteName, licenseeUserName);
         }
 
+        public static ApiCustInfo GetLicenseeCustInfo(string siteName, string licenseeUserName, int userId)
+        {
+            var custInfo = new ApiCustInfo();
+
+            try
+            {
+                var xml = Client.GetLicenseeCustInfo(siteName, licenseeUserName);
+                WriteLogForCallingApi(siteName, licenseeUserName, xml?.ToString(), userId);
+
+                var isValid = IsValidApiResult(xml);
+
+                if (isValid)
+                {
+                    custInfo.ErrorMessage = xml.Element("ReturnMessage") != null ? xml.Element("ReturnMessage").Value : string.Empty;
+                    custInfo.IbcUserName = xml.Element("IBCusername") != null ? xml.Element("IBCusername").Value : string.Empty;
+                    custInfo.PlayerCurrency = xml.Element("Currency") != null ? xml.Element("Currency").Value : string.Empty;
+                }
+            }
+            catch (Exception exception)
+            {
+                LogService.Error(exception.Message, exception);
+            }
+
+            return custInfo;
+        }
+
         /// <summary>
         /// Transfer request.
         /// </summary>
@@ -65,6 +102,42 @@
         public static XElement Transfer(string siteName, string licenseeUserName, double amount, int dummyAccount)
         {
             return Client.Transfer(siteName, licenseeUserName, amount, dummyAccount);
+        }
+
+        private static void WriteLogForCallingApi(string siteName, string userName, string logContent, int userId)
+        {
+            var methodName = "GetLicenseeCustInfo";
+            var paramInfo = $"siteName={siteName}, userName={userName}";
+            var resultLogContent = BuildLogContentByResult(methodName, paramInfo, logContent);
+            DbLogger.WritePaymentLog(new PaymentLogCriteria { UserId = userId, LogContent = resultLogContent });
+        }
+
+        private static string BuildLogContentByResult(string methodName, string paramInfo, string resultContent)
+        {
+            var builder = new StringBuilder();
+
+            builder.AppendLine($"Affiliate User - Complete Call Method {methodName} at {DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss tt", CultureInfo.InvariantCulture)}");
+            builder.AppendLine($"Param Info: {paramInfo}");
+
+            builder.AppendLine($"Result Content: {resultContent}");
+
+            return builder.ToString();
+        }
+
+        private static bool IsValidApiResult(XElement xmlResult)
+        {
+            if (xmlResult == null || xmlResult.IsEmpty)
+            {
+                return false;
+            }
+
+            var xmlElement = xmlResult.Element("ReturnCode");
+            if (xmlElement == null || Convert.ToInt32(xmlElement.Value) != 0)
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }

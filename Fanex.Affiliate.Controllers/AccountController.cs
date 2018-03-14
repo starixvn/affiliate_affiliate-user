@@ -2,19 +2,14 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Globalization;
     using System.Linq;
     using System.Net;
-    using System.Text;
     using System.Text.RegularExpressions;
     using System.Web.Mvc;
-    using System.Xml.Linq;
     using Configurations;
     using Criteria;
-    using Criteria.Payment;
     using DTO;
     using Enumerations;
-    using Logging;
     using ONEbook.UM.Filters;
     using Resources;
     using Services;
@@ -391,7 +386,7 @@
 
                     var custInfo = GetCustInfo(paymentInfo.SystemName, paymentInfo.PlayerUsername);
 
-                    if (!IsCustomerExist(custInfo))
+                    if (!HasCustomer(custInfo))
                     {
                         SetResultMessage(false, Lang.Msg142);
                     }
@@ -605,105 +600,17 @@
         /// <returns>Boolean: success or not.</returns>
         public ApiCustInfo GetCustInfo(string siteName, string userName)
         {
-            var custInfo = new ApiCustInfo();
-
-            if (AppSettings.IsTesting)
-            {
-                custInfo.PlayerCurrency = "USD";
-                return custInfo;
-            }
-
-            try
-            {
-                var xml = ServiceWrapper.GetLicenseeCustInfo(siteName, userName);
-                WriteLogForCallingApi(siteName, userName, xml?.ToString());
-
-                var isValid = IsValidApiResult(xml);
-
-                if (isValid)
-                {
-                    custInfo.ErrorMessage = xml.Element("ReturnMessage") != null ? xml.Element("ReturnMessage").Value : string.Empty;
-                    custInfo.IbcUserName = xml.Element("IBCusername") != null ? xml.Element("IBCusername").Value : string.Empty;
-                    custInfo.PlayerCurrency = xml.Element("Currency") != null ? xml.Element("Currency").Value : string.Empty;
-                }
-            }
-            catch (Exception exception)
-            {
-                var message = GetErrorMessage(siteName, userName, exception);
-                LogService.Error(message, exception);
-            }
-
-            return custInfo;
+            return AppSettings.IsTesting ?
+                new ApiCustInfo { PlayerCurrency = "USD" } :
+                ServiceWrapper.GetLicenseeCustInfo(siteName, userName, SessionManager.CurrentSession.AffId);
         }
 
-        private static bool IsValidApiResult(XElement xmlResult)
-        {
-            if (xmlResult == null || xmlResult.IsEmpty)
-            {
-                return false;
-            }
-
-            var xmlElement = xmlResult.Element("ReturnCode");
-            if (xmlElement == null || Convert.ToInt32(xmlElement.Value) != 0)
-            {
-                return false;
-            }
-
-            return true;
-        }
-
-        private static bool IsCustomerExist(ApiCustInfo custInfo)
+        private static bool HasCustomer(ApiCustInfo custInfo)
         {
             return AppSettings.IsTesting ||
                                         (!string.IsNullOrEmpty(custInfo.IbcUserName) &&
                                         !string.IsNullOrEmpty(custInfo.PlayerCurrency) &&
                                         string.IsNullOrEmpty(custInfo.ErrorMessage));
-        }
-
-        private static string BuildLogContentByResult(string methodName, int userId, string paramInfo, string resultContent)
-        {
-            var builder = new StringBuilder();
-
-            builder.AppendLine($"Affiliate User - Complete Call Method {methodName} at {DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss tt", CultureInfo.InvariantCulture)}");
-            builder.AppendLine("Infor:");
-            builder.AppendLine($"UserId: {userId}");
-            builder.AppendLine($"Param Info: {paramInfo}");
-
-            builder.AppendLine($"Result Content: {resultContent}");
-
-            return builder.ToString();
-        }
-
-        private static string GetErrorMessage(string siteName, string userName, Exception exception)
-        {
-            var message = new StringBuilder();
-            message.AppendLine("Error when calling Api, method: GetLicenseeCustInfo");
-
-            message.AppendLine("Info: ");
-            var currenSession = SessionManager.CurrentSession;
-            if (currenSession != null)
-            {
-                message.AppendLine($"AffId: {currenSession.AffId}")
-                    .AppendLine($"AffType: { currenSession.AffType}")
-                    .AppendLine($"IsInternalSite: {currenSession.IsInternalSite}")
-                    .AppendLine($"Username: {currenSession.Username}");
-            }
-
-            message.AppendLine($"Affiliate: {AppSettings.AffiliateName}")
-           .AppendLine($"Param Info: siteName={siteName}, userName={userName}")
-           .AppendLine($"Error:{exception.Message}")
-           .AppendLine($"StackTrace: {exception.StackTrace}");
-
-            return message.ToString();
-        }
-
-        private void WriteLogForCallingApi(string siteName, string userName, string logContent)
-        {
-            var methodName = "GetLicenseeCustInfo";
-            var userId = SessionManager.CurrentSession.AffId;
-            var paramInfo = $"siteName={siteName}, userName={userName}";
-            var resultLogContent = BuildLogContentByResult(methodName, userId, paramInfo, logContent);
-            _paymentService.WritePaymentLog(new PaymentLogCriteria { UserId = userId, LogContent = resultLogContent });
         }
 
         private void SetResultMessage(bool success, string message)
