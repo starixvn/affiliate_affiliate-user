@@ -31,40 +31,6 @@
             get { return _dbLogger ?? (_dbLogger = new DbLogger()); }
         }
 
-        /// <summary>
-        /// Get Register List.
-        /// </summary>
-        /// <param name="siteName">Site name.</param>
-        /// <param name="targetDate">Target date.</param>
-        /// <returns>Xml element.</returns>
-        public static XElement GetRegList(string siteName, DateTime targetDate)
-        {
-            return Client.GetRegList(siteName, targetDate);
-        }
-
-        /// <summary>
-        /// Update B's tag of a link.
-        /// </summary>
-        /// <param name="siteName">Site name.</param>
-        /// <param name="licenseeUserName">Licensee username.</param>
-        /// <param name="newBtag">New B's tag.</param>
-        /// <returns>Xml element.</returns>
-        public static XElement UpdateBtage(string siteName, string licenseeUserName, string newBtag)
-        {
-            return Client.UpdateBtage(siteName, licenseeUserName, newBtag);
-        }
-
-        /// <summary>
-        /// Get Licensee Customer Info.
-        /// </summary>
-        /// <param name="siteName">Site name.</param>
-        /// <param name="licenseeUserName">Licensee username.</param>
-        /// <returns>Xml element.</returns>
-        public static XElement GetLicenseeCustInfo(string siteName, string licenseeUserName)
-        {
-            return Client.GetLicenseeCustInfo(siteName, licenseeUserName);
-        }
-
         public static ApiCustInfo GetLicenseeCustInfo(string siteName, string licenseeUserName, int userId)
         {
             var custInfo = new ApiCustInfo();
@@ -89,19 +55,6 @@
             }
 
             return custInfo;
-        }
-
-        /// <summary>
-        /// Transfer request.
-        /// </summary>
-        /// <param name="siteName">Site name.</param>
-        /// <param name="licenseeUserName">Licensee username.</param>
-        /// <param name="amount">Amount transfer.</param>
-        /// <param name="dummyAccount">Account to transfer.</param>
-        /// <returns>Xml element.</returns>
-        public static XElement Transfer(string siteName, string licenseeUserName, double amount, int dummyAccount)
-        {
-            return Client.Transfer(siteName, licenseeUserName, amount, dummyAccount);
         }
 
         private static void WriteLogForCallingApi(string siteName, string userName, string logContent, int userId)
