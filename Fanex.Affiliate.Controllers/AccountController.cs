@@ -8,6 +8,7 @@
     using System.Text;
     using System.Text.RegularExpressions;
     using System.Web.Mvc;
+    using System.Xml.Linq;
     using Configurations;
     using Criteria;
     using Criteria.Payment;
@@ -389,14 +390,16 @@
                     });
 
                     // Call API to check whether member is exists
-                    string ibcUsername = string.Empty, playerCurrency = string.Empty, strErrorMsg = string.Empty;
-                    if (!IsExistLicenseeCustInfo(paymentInfo.SystemName, paymentInfo.PlayerUsername, ref ibcUsername, ref playerCurrency, ref strErrorMsg))
+                    var custInfoCheckingResult = CheckLicenseeCustInfo(paymentInfo.SystemName, paymentInfo.PlayerUsername);
+                    if (!custInfoCheckingResult.IsSuccess)
                     {
-                        SetResultMessage(false, Lang.Msg142);
+                        var message = Lang.Msg142;
+                        SetResultMessage(false, message);
+                        LogService.Info(custInfoCheckingResult.ErrorMessage);
                     }
                     else
                     {
-                        var result = InsertPaymentRequest(paymentInfo.PlayerUsername, playerCurrency, paymentModel.Amount, Common.GetIPAddressOfClient());
+                        var result = InsertPaymentRequest(paymentInfo.PlayerUsername, custInfoCheckingResult.PlayerCurrency, paymentModel.Amount, Common.GetIPAddressOfClient());
                         SetResultMessage(result.Success, result.Message);
                     }
                 }
@@ -602,11 +605,14 @@
         /// <param name="playerCurrency">Affiliate currency.</param>
         /// <param name="errMsg">Return error message.</param>
         /// <returns>Boolean: success or not.</returns>
-        public bool IsExistLicenseeCustInfo(string siteName, string userName, ref string ibcUsername, ref string playerCurrency, ref string errMsg)
+        public LicenseeCustInfoCheckingResult CheckLicenseeCustInfo(string siteName, string userName)
         {
+            var checkingResult = new LicenseeCustInfoCheckingResult();
+
             if (AppSettings.IsTesting)
             {
-                return true;
+                WriteLogForCallingApi(siteName, userName, "Local testing");
+                return new LicenseeCustInfoCheckingResult();
             }
 
             try
@@ -614,22 +620,16 @@
                 var xml = ServiceWrapper.GetLicenseeCustInfo(siteName, userName);
                 WriteLogForCallingApi(siteName, userName, xml?.ToString());
 
-                if (xml == null || xml.IsEmpty)
+                checkingResult = ValidateApiResult(xml);
+
+                if (checkingResult.IsSuccess)
                 {
-                    return false;
+                    checkingResult.ErrorMessage = xml.Element("ReturnMessage") != null ? xml.Element("ReturnMessage").Value : string.Empty;
+                    checkingResult.IbcUserName = xml.Element("IBCusername") != null ? xml.Element("IBCusername").Value : string.Empty;
+                    checkingResult.PlayerCurrency = xml.Element("Currency").Value;
                 }
 
-                var xmlElement = xml.Element("ReturnCode");
-                if (xmlElement == null || Convert.ToInt32(xmlElement.Value) != 0)
-                {
-                    return false;
-                }
-
-                errMsg = xml.Element("ReturnMessage") != null ? xml.Element("ReturnMessage").Value : string.Empty;
-                ibcUsername = xml.Element("IBCusername") != null ? xml.Element("IBCusername").Value : string.Empty;
-                playerCurrency = xml.Element("Currency") != null ? xml.Element("Currency").Value : string.Empty;
-
-                return true;
+                return checkingResult;
             }
             catch (Exception exception)
             {
@@ -637,17 +637,44 @@
                 LogService.Error(message, exception);
                 WriteLogForCallingApi(siteName, userName, message);
 
-                return false;
+                checkingResult.ErrorMessage = "Throw Exception";
+
+                return checkingResult;
             }
         }
 
-        private void WriteLogForCallingApi(string siteName, string userName, string logContent)
+        private static LicenseeCustInfoCheckingResult ValidateApiResult(XElement xmlResult)
         {
-            var methodName = "GetLicenseeCustInfo";
-            var userId = SessionManager.CurrentSession.AffId;
-            var paramInfo = $"siteName={siteName}, userName={userName}";
-            var resultLogContent = BuildLogContentByResult(methodName, userId, paramInfo, logContent);
-            _paymentService.WritePaymentLog(new PaymentLogCriteria { UserId = userId, LogContent = resultLogContent });
+            var checkingResult = new LicenseeCustInfoCheckingResult();
+
+            const string ApiInfo = "Api GetLicenseeCustInfo:";
+            if (xmlResult == null || xmlResult.IsEmpty)
+            {
+                checkingResult.ErrorMessage = $"{ApiInfo} result is null or empty";
+                return checkingResult;
+            }
+
+            var xmlElement = xmlResult.Element("ReturnCode");
+            if (xmlElement == null)
+            {
+                checkingResult.ErrorMessage = $"{ApiInfo} ReturnCode element is null";
+                return checkingResult;
+            }
+
+            var errorCode = Convert.ToInt32(xmlElement.Value);
+            if (errorCode != 0)
+            {
+                checkingResult.ErrorMessage = $"{ApiInfo} ErrorCode: {errorCode}";
+                return checkingResult;
+            }
+
+            if (xmlResult.Element("Currency") == null)
+            {
+                checkingResult.ErrorMessage = $"{ApiInfo} Can not get player currency";
+                return checkingResult;
+            }
+
+            return checkingResult;
         }
 
         private static string BuildLogContentByResult(string methodName, int userId, string paramInfo, string resultContent)
@@ -685,6 +712,15 @@
            .AppendLine($"StackTrace: {exception.StackTrace}");
 
             return message.ToString();
+        }
+
+        private void WriteLogForCallingApi(string siteName, string userName, string logContent)
+        {
+            var methodName = "GetLicenseeCustInfo";
+            var userId = SessionManager.CurrentSession.AffId;
+            var paramInfo = $"siteName={siteName}, userName={userName}";
+            var resultLogContent = BuildLogContentByResult(methodName, userId, paramInfo, logContent);
+            _paymentService.WritePaymentLog(new PaymentLogCriteria { UserId = userId, LogContent = resultLogContent });
         }
 
         private void SetResultMessage(bool success, string message)
