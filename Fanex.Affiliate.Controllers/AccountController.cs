@@ -389,17 +389,15 @@
                         AffId = CurrentSession.AffId
                     });
 
-                    // Call API to check whether member is exists
-                    var custInfoCheckingResult = CheckLicenseeCustInfo(paymentInfo.SystemName, paymentInfo.PlayerUsername);
-                    if (!custInfoCheckingResult.IsSuccess)
+                    var custInfo = GetCustInfo(paymentInfo.SystemName, paymentInfo.PlayerUsername);
+
+                    if (!IsCustomerExist(custInfo))
                     {
-                        var message = Lang.Msg142;
-                        SetResultMessage(false, message);
-                        LogService.Info(custInfoCheckingResult.ErrorMessage);
+                        SetResultMessage(false, Lang.Msg142);
                     }
                     else
                     {
-                        var result = InsertPaymentRequest(paymentInfo.PlayerUsername, custInfoCheckingResult.PlayerCurrency, paymentModel.Amount, Common.GetIPAddressOfClient());
+                        var result = InsertPaymentRequest(paymentInfo.PlayerUsername, custInfo.PlayerCurrency, paymentModel.Amount, Common.GetIPAddressOfClient());
                         SetResultMessage(result.Success, result.Message);
                     }
                 }
@@ -605,14 +603,14 @@
         /// <param name="playerCurrency">Affiliate currency.</param>
         /// <param name="errMsg">Return error message.</param>
         /// <returns>Boolean: success or not.</returns>
-        public LicenseeCustInfoCheckingResult CheckLicenseeCustInfo(string siteName, string userName)
+        public ApiCustInfo GetCustInfo(string siteName, string userName)
         {
-            var checkingResult = new LicenseeCustInfoCheckingResult();
+            var custInfo = new ApiCustInfo();
 
             if (AppSettings.IsTesting)
             {
-                WriteLogForCallingApi(siteName, userName, "Local testing");
-                return new LicenseeCustInfoCheckingResult();
+                custInfo.PlayerCurrency = "USD";
+                return custInfo;
             }
 
             try
@@ -620,61 +618,46 @@
                 var xml = ServiceWrapper.GetLicenseeCustInfo(siteName, userName);
                 WriteLogForCallingApi(siteName, userName, xml?.ToString());
 
-                checkingResult = ValidateApiResult(xml);
+                var isValid = IsValidApiResult(xml);
 
-                if (checkingResult.IsSuccess)
+                if (isValid)
                 {
-                    checkingResult.ErrorMessage = xml.Element("ReturnMessage") != null ? xml.Element("ReturnMessage").Value : string.Empty;
-                    checkingResult.IbcUserName = xml.Element("IBCusername") != null ? xml.Element("IBCusername").Value : string.Empty;
-                    checkingResult.PlayerCurrency = xml.Element("Currency").Value;
+                    custInfo.ErrorMessage = xml.Element("ReturnMessage") != null ? xml.Element("ReturnMessage").Value : string.Empty;
+                    custInfo.IbcUserName = xml.Element("IBCusername") != null ? xml.Element("IBCusername").Value : string.Empty;
+                    custInfo.PlayerCurrency = xml.Element("Currency") != null ? xml.Element("Currency").Value : string.Empty;
                 }
-
-                return checkingResult;
             }
             catch (Exception exception)
             {
                 var message = GetErrorMessage(siteName, userName, exception);
                 LogService.Error(message, exception);
-                WriteLogForCallingApi(siteName, userName, message);
-
-                checkingResult.ErrorMessage = "Throw Exception";
-
-                return checkingResult;
             }
+
+            return custInfo;
         }
 
-        private static LicenseeCustInfoCheckingResult ValidateApiResult(XElement xmlResult)
+        private static bool IsValidApiResult(XElement xmlResult)
         {
-            var checkingResult = new LicenseeCustInfoCheckingResult();
-
-            const string ApiInfo = "Api GetLicenseeCustInfo:";
             if (xmlResult == null || xmlResult.IsEmpty)
             {
-                checkingResult.ErrorMessage = $"{ApiInfo} result is null or empty";
-                return checkingResult;
+                return false;
             }
 
             var xmlElement = xmlResult.Element("ReturnCode");
-            if (xmlElement == null)
+            if (xmlElement == null || Convert.ToInt32(xmlElement.Value) != 0)
             {
-                checkingResult.ErrorMessage = $"{ApiInfo} ReturnCode element is null";
-                return checkingResult;
+                return false;
             }
 
-            var errorCode = Convert.ToInt32(xmlElement.Value);
-            if (errorCode != 0)
-            {
-                checkingResult.ErrorMessage = $"{ApiInfo} ErrorCode: {errorCode}";
-                return checkingResult;
-            }
+            return true;
+        }
 
-            if (xmlResult.Element("Currency") == null)
-            {
-                checkingResult.ErrorMessage = $"{ApiInfo} Can not get player currency";
-                return checkingResult;
-            }
-
-            return checkingResult;
+        private static bool IsCustomerExist(ApiCustInfo custInfo)
+        {
+            return AppSettings.IsTesting ||
+                                        (!string.IsNullOrEmpty(custInfo.IbcUserName) &&
+                                        !string.IsNullOrEmpty(custInfo.PlayerCurrency) &&
+                                        string.IsNullOrEmpty(custInfo.ErrorMessage));
         }
 
         private static string BuildLogContentByResult(string methodName, int userId, string paramInfo, string resultContent)
