@@ -44,9 +44,12 @@
 
                 if (isValid)
                 {
-                    custInfo.ErrorMessage = xml.Element("ReturnMessage") != null ? xml.Element("ReturnMessage").Value : string.Empty;
                     custInfo.IbcUserName = xml.Element("IBCusername") != null ? xml.Element("IBCusername").Value : string.Empty;
                     custInfo.PlayerCurrency = xml.Element("Currency") != null ? xml.Element("Currency").Value : string.Empty;
+                }
+                else
+                {
+                    custInfo.ErrorMessage = xml?.Element("ReturnMessage")?.Value;
                 }
             }
             catch (Exception exception)
