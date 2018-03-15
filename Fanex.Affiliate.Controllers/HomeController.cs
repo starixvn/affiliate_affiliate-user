@@ -7,9 +7,6 @@
     using Services;
     using Web;
 
-    /// <summary>
-    /// Home Controller.
-    /// </summary>
     public class HomeController : BaseController
     {
         #region Services
@@ -23,21 +20,12 @@
 
         #region Constructor
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="HomeController" /> class.
-        /// </summary>
-        /// <param name="accountService">Account Service.</param>
         public HomeController(IAccountService accountService)
         {
             _accountService = accountService;
         }
 
         #endregion Constructor
-
-        /// <summary>
-        /// Action Home.
-        /// </summary>
-        /// <returns>Return view.</returns>
         [HttpGet]
         [CheckUMFilter]
         public ActionResult Index()

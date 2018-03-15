@@ -9,21 +9,13 @@
     using Services;
     using Web;
 
-    /// <summary>
-    /// Shared Controller.
-    /// </summary>
     [CheckUMFilter]
     public class SharedController : BaseController
     {
         #region Services
-        /// <summary>
-        /// Define hot news service.
-        /// </summary>
+
         private readonly IHotNewsService _hotNewsService;
 
-        /// <summary>
-        /// Define system setting service.
-        /// </summary>
         private readonly ISystemSettingService _systemSettingService;
 
         #endregion
@@ -37,10 +29,6 @@
         }
         #endregion
 
-        /// <summary>
-        /// Load language list to select box.
-        /// </summary>
-        /// <returns>Return partial view.</returns>
         [ChildActionOnly]
         public PartialViewResult Language()
         {
@@ -52,11 +40,6 @@
             return PartialView(Tuple.Create(languageList, selectedLang));
         }
 
-        /// <summary>
-        /// Change language.
-        /// </summary>
-        /// <param name="lang">Language parameter.</param>
-        /// <returns>Return view.</returns>
         [HttpPost]
         public ActionResult ChangeLanguage(string lang)
         {
@@ -64,10 +47,6 @@
             return Json(string.Empty);
         }
 
-        /// <summary>
-        /// Load system date time.
-        /// </summary>
-        /// <returns>Return partial view.</returns>
         [ChildActionOnly]
         public PartialViewResult Clock()
         {
@@ -75,10 +54,6 @@
             return PartialView(sysDateTime);
         }
 
-        /// <summary>
-        /// Generate hot news view.
-        /// </summary>
-        /// <returns>Return partial view.</returns>
         [ChildActionOnly]
         public PartialViewResult HotNews()
         {

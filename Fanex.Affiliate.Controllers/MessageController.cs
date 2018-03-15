@@ -10,18 +10,11 @@
     using Web.Filter;
     using Web.Pager;
 
-    /// <summary>
-    /// Message Controller.
-    /// </summary>
     [Authorization]
     [CheckUMFilter]
     public class MessageController : BaseController
     {
         #region Service
-
-        /// <summary>
-        /// Define Message service.
-        /// </summary>
         private readonly IMessageService _messageService;
 
         #endregion Service
@@ -37,11 +30,6 @@
 
         #region Message History
 
-        /// <summary>
-        /// Retrieve message history.
-        /// </summary>
-        /// <param name="criteria">The filter criteria.</param>
-        /// <returns>Return view.</returns>
         [HttpGet]
         public ActionResult Index(MessageCriteria criteria)
         {

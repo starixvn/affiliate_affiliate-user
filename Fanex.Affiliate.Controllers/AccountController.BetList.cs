@@ -12,22 +12,11 @@
     using Web;
     using Web.Filter;
 
-    /// <summary>
-    /// All action after login.
-    /// </summary>
     [Authorization]
     public partial class AccountController
     {
         #region BetList
 
-        /// <summary>
-        /// View bet list.
-        /// </summary>
-        /// <param name="username">User name value.</param>
-        /// /// <param name="product">Product value.</param>
-        /// /// <param name="winlostdate">Win loss date value.</param>
-        /// /// <param name="currency">Currency value.</param>
-        /// <returns>Result value.</returns>
         [HttpGet]
         public ActionResult BetList(string username, string product, string winlostdate, string currency)
         {
@@ -65,11 +54,6 @@
             return View();
         }
 
-        /// <summary>
-        /// Get data for running mix parlay bet list.
-        /// </summary>
-        /// <param name="transId">Transaction Id.</param>
-        /// <returns>Dynamic objects, contain Mix Parlay result.</returns>
         [HttpGet]
         public dynamic BetListParlay(long transId)
         {
@@ -100,11 +84,6 @@
             return tickets;
         }
 
-        /// <summary>
-        /// Action Get for System Parlay Detail.
-        /// </summary>
-        /// <param name="criteria">The metal model.</param>
-        /// <returns>The action result.</returns>
         [HttpGet]
         public ActionResult SystemParlayDetail(AffBetlistService.BetListSystemParlayDetailCriteria criteria)
         {
@@ -119,11 +98,6 @@
             return View();
         }
 
-        /// <summary>
-        /// Get supported products.
-        /// </summary>
-        /// <param name="winlostDate">Win lost date.</param>
-        /// <returns>List of Product.</returns>
         public List<DTO.Product> GetSupportedProducts(DateTime? winlostDate)
         {
             var productCriteria = new ProductCriteria
@@ -187,11 +161,6 @@
             return View("~/Views/Shared/Account/CashOutTicketDetail.cshtml");
         }
 
-        /// <summary>
-        /// Get supported products.
-        /// </summary>
-        /// <param name="winlostDate">Win lost date.</param>
-        /// <returns>An array of supported products.</returns>
         public AffBetlistService.Product[] GetSupportedProductsForWebService(DateTime? winlostDate)
         {
             var products = GetSupportedProducts(winlostDate);
@@ -211,12 +180,6 @@
             return supportedProducts.ToArray();
         }
 
-        /// <summary>
-        /// Get Exchange rate.
-        /// </summary>
-        /// <param name="fromCurrency">From currency.</param>
-        /// <param name="winlostDate">Win loss date.</param>
-        /// <returns>Exchange rate.</returns>
         public decimal GetExchangeRate(string fromCurrency, DateTime winlostDate)
         {
             var exchangeCriteria = new ExchangeRateCriteria
@@ -231,11 +194,6 @@
 
         #endregion BetList
 
-        /// <summary>
-        /// Get Validation Result.
-        /// </summary>
-        /// <param name="username">User Name.</param>
-        /// <returns>Validation Result.</returns>
         private bool GetValidationResult(string username)
         {
             var criteria = new ValidationCriteria
