@@ -334,7 +334,7 @@
 
                     var custInfo = GetCustInfo(paymentInfo.SystemName, paymentInfo.PlayerUsername);
 
-                    if (!HasCustomer(custInfo))
+                    if (!IsValidCustomer(custInfo))
                     {
                         SetResultMessage(false, Lang.Msg142);
                     }
@@ -519,11 +519,10 @@
                 ServiceWrapper.GetLicenseeCustInfo(siteName, userName, SessionManager.CurrentSession.AffId);
         }
 
-        private static bool HasCustomer(ApiCustInfo custInfo)
+        private static bool IsValidCustomer(ApiCustInfo custInfo)
         {
             return AppSettings.IsTesting ||
-                                        (!string.IsNullOrEmpty(custInfo.IbcUserName) &&
-                                        !string.IsNullOrEmpty(custInfo.PlayerCurrency) &&
+                                        (!string.IsNullOrEmpty(custInfo.PlayerCurrency) &&
                                         string.IsNullOrEmpty(custInfo.ErrorMessage));
         }
 
