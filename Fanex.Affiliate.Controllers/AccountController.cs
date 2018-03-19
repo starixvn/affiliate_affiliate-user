@@ -514,14 +514,14 @@
 
         public ApiCustInfo GetCustInfo(string siteName, string userName)
         {
-            return AppSettings.IsTesting ?
+            return AppSettings.IsLocal ?
                 new ApiCustInfo { PlayerCurrency = "USD" } :
                 ServiceWrapper.GetLicenseeCustInfo(siteName, userName, SessionManager.CurrentSession.AffId);
         }
 
         private static bool IsValidCustomer(ApiCustInfo custInfo)
         {
-            return AppSettings.IsTesting ||
+            return AppSettings.IsLocal ||
                                         (!string.IsNullOrEmpty(custInfo.PlayerCurrency) &&
                                         string.IsNullOrEmpty(custInfo.ErrorMessage));
         }

@@ -21,11 +21,11 @@
 
         private const int CacheDuration = 60;
 
-        private static readonly Lazy<ISystemSettingService> SystemSetting = new 
+        private static readonly Lazy<ISystemSettingService> SystemSetting = new
             Lazy<ISystemSettingService>(() => new SystemSettingService());
 
         private static readonly ICache CacheInstance = CacheService.CreateInstance(CacheType.MemoryCache);
-        
+
         #region AppSettings
 
         public static string Environment
@@ -50,7 +50,7 @@
             {
                 return GetValue("Theme");
             }
-        }       
+        }
 
         public static int PageSize
         {
@@ -107,15 +107,23 @@
                 return GetValue("MailContact");
             }
         }
-        
-        public static bool IsTesting
+
+        public static bool IsProduction
         {
             get
             {
-                return GetValue("Environment").Equals("Production", StringComparison.OrdinalIgnoreCase) == false;
+                return GetValue("Environment").Equals("Production", StringComparison.OrdinalIgnoreCase);
             }
         }
-        
+
+        public static bool IsLocal
+        {
+            get
+            {
+                return GetValue("Environment").Equals("Local Development", StringComparison.OrdinalIgnoreCase);
+            }
+        }
+
         public static string AffCustomerServiceUrl
         {
             get

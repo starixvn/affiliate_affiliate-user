@@ -214,7 +214,7 @@
             }
             else if (ModelState.IsValid)
             {
-                if (AppSettings.IsTesting == false && !IsValidCaptcha(captcha, false))
+                if (AppSettings.IsProduction && !IsValidCaptcha(captcha, false))
                 {
                     return Json(new ResultViewModel
                     {
@@ -326,7 +326,8 @@
             var checkKickedOut = _userService.ReCheckIn(criteria);
 
             // Check internal site login, if internal login not allow to edit account information
-            if (SessionManager.CurrentSession == null || (!SessionManager.CurrentSession.IsInternalSite && !AppSettings.IsTesting && checkKickedOut))
+            if (SessionManager.CurrentSession == null ||
+                (!SessionManager.CurrentSession.IsInternalSite && AppSettings.IsProduction && checkKickedOut))
             {
                 result.Success = checkKickedOut;
                 result.Message = checkKickedOut ? Lang.MsgKickout : string.Empty;
