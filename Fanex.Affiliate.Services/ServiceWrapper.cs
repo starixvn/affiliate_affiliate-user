@@ -5,6 +5,7 @@
     using System.Text;
     using System.Xml.Linq;
     using Criteria.Payment;
+    using DataAccess;
     using DTO;
     using Logging;
     using MemberSiteService;
@@ -15,7 +16,7 @@
     public static class ServiceWrapper
     {
         private static ServiceSoapClient _client;
-        private static IDbLogger _dbLogger;
+        private static ILoggerDataAccess _dbLogger;
 
         private static ServiceSoapClient Client
         {
@@ -26,9 +27,9 @@
             }
         }
 
-        private static IDbLogger DbLogger
+        private static ILoggerDataAccess DbLogger
         {
-            get { return _dbLogger ?? (_dbLogger = new DbLogger()); }
+            get { return _dbLogger ?? (_dbLogger = new LoggerDataAccess()); }
         }
 
         public static ApiCustInfo GetLicenseeCustInfo(string siteName, string licenseeUserName, int userId)
@@ -44,12 +45,12 @@
 
                 if (isValid)
                 {
-                    custInfo.IbcUserName = xml.Element("IBCusername") != null ? xml.Element("IBCusername").Value : string.Empty;
-                    custInfo.PlayerCurrency = xml.Element("Currency") != null ? xml.Element("Currency").Value : string.Empty;
+                    custInfo.IbcUserName = xml.Element("IBCusername")?.Value;
+                    custInfo.PlayerCurrency = xml.Element("Currency")?.Value;
                 }
                 else
                 {
-                    custInfo.ErrorMessage = xml?.Element("ReturnMessage")?.Value;
+                    custInfo.ErrorMessage = xml.Element("ReturnMessage")?.Value;
                 }
             }
             catch (Exception exception)

@@ -522,8 +522,7 @@
         private static bool IsValidCustomer(ApiCustInfo custInfo)
         {
             return AppSettings.IsLocal ||
-                                        (!string.IsNullOrEmpty(custInfo.PlayerCurrency) &&
-                                        string.IsNullOrEmpty(custInfo.ErrorMessage));
+                    (!string.IsNullOrEmpty(custInfo.PlayerCurrency) && string.IsNullOrEmpty(custInfo.ErrorMessage));
         }
 
         private void SetResultMessage(bool success, string message)
