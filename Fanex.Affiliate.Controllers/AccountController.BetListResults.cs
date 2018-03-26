@@ -44,8 +44,7 @@
             return affBetlistService.GetBetlistResults(
                 AppSettings.AffiliateName,
                 AppSession.Language,
-                criteria,
-                AppSession.Language);
+                criteria);
         }
 
         [HttpPost]

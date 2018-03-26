@@ -23,7 +23,7 @@ var BetList = (function ($) {
             return url;
         },
 
-        getSportBookResultUrl: function (matchid, bettype, raceNo, sporttype, league, isOutright, username, betid) {
+        getSportBookResultUrl: function (matchid, bettype, raceNo, sporttype, league, isOutright, username, betidOrHdp1, hdp2) {
             var url = AFFILIATE.getAbsoluteUrl('Account/BetListResults');
             url = QueryString.setParam(url, "matchid", matchid);
             url = QueryString.setParam(url, "bettype", bettype);
@@ -31,13 +31,14 @@ var BetList = (function ($) {
             url = QueryString.setParam(url, "sporttype", sporttype);
             url = QueryString.setParam(url, "isoutright", isOutright);
             url = QueryString.setParam(url, "username", username);
-            url = QueryString.setParam(url, "betid", betid);
+            url = QueryString.setParam(url, "betid", betidOrHdp1);
+            url = QueryString.setParam(url, "handicap2", hdp2);
 
             return url;
         },
 
         showResult: function (matchid, raceNo, bettype, sporttype, refno, username, winlostdate, refnoMixParlay,
-            league, isOutright, betid, betcheck, custid) {
+            league, isOutright, betidOrHdp1, hdp2) {
             var title = window.MSG.Results;
 
             if (sporttype === SPORT_RNG_GAME || sporttype === SPORT_RNG_MINIGAME || sporttype === SPORT_RNG_MOBILE) {
@@ -46,7 +47,7 @@ var BetList = (function ($) {
             else {
                 var url = bettype === 9 || bettype === 29
                         ? BetList.getMixParlayResultUrl(refnoMixParlay, winlostdate, bettype, username)
-                        : BetList.getSportBookResultUrl(matchid, bettype, raceNo, sporttype, league, isOutright, username, betid);
+                        : BetList.getSportBookResultUrl(matchid, bettype, raceNo, sporttype, league, isOutright, username, betidOrHdp1, hdp2);
                
                 AFFILIATE.openDialogFrame(url, title, { width: 720, height: 500 });
             }
@@ -265,6 +266,7 @@ var showCombMP = function (transId, index) {
 
 var showCombMPDetail = BetList.showSystemParlayDetail;
 var showRnGCasinoDetails = BetList.showRnGCasinoDetails;
-var showAGCasinoDetails = BetList.showAGCasinoDetails;var showCombMPDetail = BetList.showSystemParlayDetail;
+var showAGCasinoDetails = BetList.showAGCasinoDetails;
+var showCombMPDetail = BetList.showSystemParlayDetail;
 var showNewCombMP = BetList.showNewParlayDetail;
 var ViewCashOutHistory = BetList.viewCashOutHistory;
