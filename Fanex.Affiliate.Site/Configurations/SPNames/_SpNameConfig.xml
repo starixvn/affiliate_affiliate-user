@@ -1,8 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Root>
   <item LicenseeName="" Environment="DEV" SpName="Test" Suffix="_xtest"></item>
-  
-  <item LicenseeName="athena000" Environment="DEV,UAT,SIT,production" SpName="Aff_User_PaymentRequestUpd" Suffix="_xtest"></item>
-  <item LicenseeName="athena000" Environment="DEV,UAT,SIT,production" SpName="Aff_User_PaymentRequestIns" Suffix="_xtest"></item>
-  <item LicenseeName="athena000" Environment="DEV,UAT,SIT,production" SpName="Aff_WebAPI_WriteLog" Suffix="_xtest"></item>
 </Root>
