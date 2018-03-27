@@ -10,21 +10,14 @@
     using System.Web.Mvc;
     using System.Web.Security;
     using DTO;
-    using ONEbook.UM.Filters;
     using Utilities;
     using Web;
 
-    /// <summary>
-    /// Base Controller.
-    /// </summary>
     public class BaseController : Controller
     {
         protected readonly string FormTokenName = "SecureLoginToken";
         private readonly LanguageManager _langManager;
 
-        /// <summary>
-        ///     Initializes a new instance of the <see cref="BaseController" /> class.
-        /// </summary>
         public BaseController()
         {
             // Set default language
@@ -48,10 +41,6 @@
             get { return SessionManager.CurrentSession; }
         }
 
-        /// <summary>
-        /// Add secure token to the response's cookie.
-        /// </summary>
-        /// <param name="loginToken">Login token.</param>
         public void AddLoginTokenToCookie(string loginToken)
         {
             var responseCookie = new HttpCookie(FormTokenName)
@@ -68,9 +57,6 @@
             Response.Cookies.Set(responseCookie);
         }
 
-        /// <summary>
-        /// Clear Login Token in case of login successfully.
-        /// </summary>
         public void ClearLoginToken()
         {
             AppSession.SecureLoginToken = string.Empty;
@@ -83,11 +69,6 @@
             }
         }
 
-        /// <summary>
-        /// Check whether the Request's Login-Token is correct.
-        /// </summary>
-        /// <param name="loginToken">Login Token.</param>
-        /// <returns>True if the Request's login-token is correct, and vice versa.</returns>
         public bool CheckLoginToken(string loginToken)
         {
             return !string.IsNullOrWhiteSpace(loginToken)
@@ -96,10 +77,6 @@
                 && loginToken == Request.Cookies[FormTokenName].Value;
         }
 
-        /// <summary>
-        /// Gets the site domain info.
-        /// </summary>
-        /// <returns>Site domain information.</returns>
         protected SiteDomainInfo GetSiteDomainInfo()
         {
             var currentSession = CurrentSession;
@@ -120,21 +97,11 @@
             return siteDomainInfo;
         }
 
-        /// <summary>
-        /// Change System Language.
-        /// </summary>
         protected void ChangeSystemLanguage()
         {
             _langManager.SetCulture(AppSession.Language);
         }
 
-        /// <summary>
-        /// Generate Captcha image function.
-        /// </summary>
-        /// <param name = "rand">Random number.</param>
-        /// <param name = "captcha">Captcha number.</param>
-        /// <param name = "noisy">Noisy parameter.</param>
-        /// <returns>Return view.</returns>
         protected ActionResult GenerateCaptchaImage(Random rand, int captcha, bool noisy = true)
         {
             FileContentResult img = null; // image stream

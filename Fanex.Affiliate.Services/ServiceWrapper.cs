@@ -1,7 +1,13 @@
 ﻿namespace Fanex.Affiliate.Services
 {
     using System;
+    using System.Globalization;
+    using System.Text;
     using System.Xml.Linq;
+    using Criteria.Payment;
+    using DataAccess;
+    using DTO;
+    using Logging;
     using MemberSiteService;
 
     /// <summary>
@@ -10,61 +16,85 @@
     public static class ServiceWrapper
     {
         private static ServiceSoapClient _client;
+        private static ILoggerDataAccess _dbLogger;
 
         private static ServiceSoapClient Client
         {
-            get 
+            get
             {
                 return _client ??
                        (_client = new ServiceSoapClient("ServiceSoap"));
             }
         }
 
-        /// <summary>
-        /// Get Register List.
-        /// </summary>
-        /// <param name="siteName">Site name.</param>
-        /// <param name="targetDate">Target date.</param>
-        /// <returns>Xml element.</returns>
-        public static XElement GetRegList(string siteName, DateTime targetDate)
+        private static ILoggerDataAccess DbLogger
         {
-            return Client.GetRegList(siteName, targetDate);
+            get { return _dbLogger ?? (_dbLogger = new LoggerDataAccess()); }
         }
 
-        /// <summary>
-        /// Update B's tag of a link.
-        /// </summary>
-        /// <param name="siteName">Site name.</param>
-        /// <param name="licenseeUserName">Licensee username.</param>
-        /// <param name="newBtag">New B's tag.</param>
-        /// <returns>Xml element.</returns>
-        public static XElement UpdateBtage(string siteName, string licenseeUserName, string newBtag)
+        public static ApiCustInfo GetLicenseeCustInfo(string siteName, string licenseeUserName, int userId)
         {
-            return Client.UpdateBtage(siteName, licenseeUserName, newBtag);
+            var custInfo = new ApiCustInfo();
+
+            try
+            {
+                var xml = Client.GetLicenseeCustInfo(siteName, licenseeUserName);
+                WriteLogForCallingApi(siteName, licenseeUserName, xml?.ToString(), userId);
+
+                var isValid = IsValidApiResult(xml);
+
+                if (isValid)
+                {
+                    custInfo.IbcUserName = xml.Element("IBCusername")?.Value;
+                    custInfo.PlayerCurrency = xml.Element("Currency")?.Value;
+                }
+                else
+                {
+                    custInfo.ErrorMessage = xml.Element("ReturnMessage")?.Value;
+                }
+            }
+            catch (Exception exception)
+            {
+                LogService.Error(exception.Message, exception);
+            }
+
+            return custInfo;
         }
 
-        /// <summary>
-        /// Get Licensee Customer Info.
-        /// </summary>
-        /// <param name="siteName">Site name.</param>
-        /// <param name="licenseeUserName">Licensee username.</param>
-        /// <returns>Xml element.</returns>
-        public static XElement GetLicenseeCustInfo(string siteName, string licenseeUserName)
+        private static void WriteLogForCallingApi(string siteName, string userName, string logContent, int userId)
         {
-            return Client.GetLicenseeCustInfo(siteName, licenseeUserName);
+            var methodName = "GetLicenseeCustInfo";
+            var paramInfo = $"siteName={siteName}, userName={userName}";
+            var resultLogContent = BuildLogContentByResult(methodName, paramInfo, logContent);
+            DbLogger.WritePaymentLog(new PaymentLogCriteria { UserId = userId, LogContent = resultLogContent });
         }
 
-        /// <summary>
-        /// Transfer request.
-        /// </summary>
-        /// <param name="siteName">Site name.</param>
-        /// <param name="licenseeUserName">Licensee username.</param>
-        /// <param name="amount">Amount transfer.</param>
-        /// <param name="dummyAccount">Account to transfer.</param>
-        /// <returns>Xml element.</returns>
-        public static XElement Transfer(string siteName, string licenseeUserName, double amount, int dummyAccount)
+        private static string BuildLogContentByResult(string methodName, string paramInfo, string resultContent)
         {
-            return Client.Transfer(siteName, licenseeUserName, amount, dummyAccount);
+            var builder = new StringBuilder();
+
+            builder.AppendLine($"Affiliate User - Complete Call Method {methodName} at {DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss tt", CultureInfo.InvariantCulture)}");
+            builder.AppendLine($"Param Info: {paramInfo}");
+
+            builder.AppendLine($"Result Content: {resultContent}");
+
+            return builder.ToString();
+        }
+
+        private static bool IsValidApiResult(XElement xmlResult)
+        {
+            if (xmlResult == null || xmlResult.IsEmpty)
+            {
+                return false;
+            }
+
+            var xmlElement = xmlResult.Element("ReturnCode");
+            if (xmlElement == null || Convert.ToInt32(xmlElement.Value) != 0)
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }

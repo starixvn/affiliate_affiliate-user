@@ -1,6 +1,7 @@
 ﻿namespace Fanex.Affiliate.DataAccess
 {
     using Criteria;
+    using Criteria.Payment;
     using ViewModels;
 
     /// <summary>
@@ -35,5 +36,7 @@
         /// <param name="criteria">Input criteria.</param>
         /// <returns>Return object.</returns>
         PaymentViewModel GetPaymentRequestPlayerInfo(PaymentPlayerInfoCriteria criteria);
+
+        void WritePaymentLog(PaymentLogCriteria criteria);
     }
 }

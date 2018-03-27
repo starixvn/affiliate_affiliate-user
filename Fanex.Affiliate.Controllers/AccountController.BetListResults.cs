@@ -15,19 +15,11 @@
     using ViewModels;
     using Web.Filter;
 
-    /// <summary>
-    /// All action after login.
-    /// </summary>
     [Authorization]
     public partial class AccountController
     {
         #region BetList.Results
 
-        /// <summary>
-        /// The pop up result page.
-        /// </summary>
-        /// <param name="criteria">The metal model.</param>
-        /// <returns>The action result.</returns>
         [HttpGet]
         public ActionResult BetListResults(AffBetlistService.BetListResultsCriteria criteria)
         {
@@ -45,11 +37,6 @@
             return View();
         }
 
-        /// <summary>
-        /// Get data for pop-up page.
-        /// </summary>
-        /// <param name="criteria">The metal model.</param>
-        /// <returns>HTML formatted of data.</returns>
         public string GetPopUpData(AffBetlistService.BetListResultsCriteria criteria)
         {
             var affBetlistService = new AffBetlistService.AffiliateAPISoapClient();
@@ -73,11 +60,6 @@
 
         #region BetList.Results.RNGCasino
 
-        /// <summary>
-        /// Get RNG Casino data.
-        /// </summary>
-        /// <param name="criteria">The meta model.</param>
-        /// <returns>The data string.</returns>
         [HttpGet]
         public ActionResult RNGCasinoData(BetListResultsRNGCasinoCriteria criteria)
         {
@@ -121,10 +103,6 @@
             return View("~/Views/Shared/Account/BetListResults_RNGCasino.cshtml", model);
         }
 
-        /// <summary>
-        /// Exchange RNG Casino Values.
-        /// </summary>
-        /// <param name="originalData">Original data.</param>
         public void ExchangeRNGCasinoValues(List<RNGCasinoResult> originalData)
         {
             foreach (var item in originalData)
@@ -138,12 +116,6 @@
             }
         }
 
-        /// <summary>
-        /// RNG Casino detail.
-        /// </summary>
-        /// <param name="criteria">The meta model.</param>
-        /// <param name="username">The user name.</param>
-        /// <returns>The action result.</returns>
         [HttpGet]
         public ViewResult RNGCasinoDetail(BetListResultsRNGCasinoDetailCriteria criteria, string username)
         {
@@ -176,10 +148,6 @@
                 : View("~/Views/Shared/Account/RNGCasinoDetail/Noinfo.cshtml");
         }
 
-        /// <summary>
-        /// Exchange RNG Casino detail Values.
-        /// </summary>
-        /// <param name="originalData">Original data.</param>
         public void ExchangeRNGCasinoDetailValues(BetListResultsRNGCasinoDetailViewModel originalData)
         {
             foreach (var detailItem in originalData.CasinoDetailList)
@@ -213,11 +181,6 @@
             }
         }
 
-        /// <summary>
-        /// Exchange Value Including Currency code.
-        /// </summary>
-        /// <param name="originalValue">Value including currency code.</param>
-        /// <returns>Exchanged value.</returns>
         public string ExchangeValueIncludingCurrency(string originalValue)
         {
             var regexRemoveLetters = new Regex(@"[a-zA-Z\s]");
@@ -227,11 +190,6 @@
                 : (decimal.Parse(regexRemoveLetters.Replace(originalValue, string.Empty)) * CurrentSession.ExchangeRate).ToString();
         }
 
-        /// <summary>
-        /// Get game type Id.
-        /// </summary>
-        /// <param name="gameTypeId">The game type Id.</param>
-        /// <returns>The game type id.</returns>
         [SuppressMessage(
               "StyleCop.CSharp.StylecopPlus.Rules",
               "SP2101:MethodMustNotContainMoreLinesThan",

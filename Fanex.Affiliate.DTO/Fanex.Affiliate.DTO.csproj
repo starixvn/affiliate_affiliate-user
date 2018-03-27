@@ -118,6 +118,7 @@
     <Compile Include="Common\MenuItem.cs" />
     <Compile Include="Common\SiteDomainInfo.cs" />
     <Compile Include="Common\Utility.cs" />
+    <Compile Include="Payment\ApiCustInfo.cs" />
     <Compile Include="User\InternalLoginInfo.cs" />
     <Compile Include="MarketingTools\BannerType.cs" />
     <Compile Include="TrafficStatistics\ClicksLandingPagesDetail.cs" />

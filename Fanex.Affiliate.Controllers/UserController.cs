@@ -1,7 +1,6 @@
 ﻿namespace Fanex.Affiliate.Controllers
 {
     using System;
-    using System.Diagnostics.CodeAnalysis;
     using System.Globalization;
     using System.Net;
     using System.Text.RegularExpressions;
@@ -19,9 +18,6 @@
     using ViewModels;
     using Web;
 
-    /// <summary>
-    /// User Controller.
-    /// </summary>
     public class UserController : BaseController
     {
         #region Services
@@ -34,10 +30,6 @@
 
         #region Constructor
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserController" /> class.
-        /// </summary>
-        /// <param name="userService">User service.</param>
         public UserController(IUserService userService)
         {
             _userService = userService;
@@ -47,10 +39,6 @@
 
         #region Sign Up
 
-        /// <summary>
-        /// Sign up page.
-        /// </summary>
-        /// <returns>Return view.</returns>
         [HttpGet]
         [CheckUMFilter]
         public ActionResult Index()
@@ -59,11 +47,6 @@
             return View(model);
         }
 
-        /// <summary>
-        /// Action Sign up page.
-        /// </summary>
-        /// <param name="user">User view model.</param>
-        /// <returns>Return view.</returns>
         [HttpPost]
         [CheckUMFilter]
         public ActionResult Index(UserViewModel user)
@@ -98,10 +81,6 @@
             return View(user);
         }
 
-        /// <summary>
-        /// Get model error message.
-        /// </summary>
-        /// <param name="model">Result view model.</param>
         public void GetModelErrorMessage(ref ResultViewModel model)
         {
             switch (model.ErrorCode)
@@ -120,13 +99,6 @@
             }
         }
 
-        /// <summary>
-        /// Update affiliate info.
-        /// </summary>
-        /// <param name="user">User view model.</param>
-        /// <param name="ip">IP parameter.</param>
-        /// <param name="criteria">User criteria.</param>
-        /// <returns>Return result view model.</returns>
         public ResultViewModel InsertAffiliate(UserViewModel user, string ip, ref UserInsertCriteria criteria)
         {
             criteria.FirstName = WebUtility.HtmlEncode(user.FirstName.TrimEnd().TrimStart());
@@ -157,10 +129,6 @@
             return _userService.AffiliateInsert(criteria);
         }
 
-        /// <summary>
-        /// Sign Up Send Mail.
-        /// </summary>
-        /// <param name="criteria">User criteria.</param>
         public void SignUpSendMail(UserInsertCriteria criteria)
         {
             var currentLanguage = AppSession.Language;
@@ -200,11 +168,6 @@
             SendSignUpEmailToCsd(criteria, currentLanguage);
         }
 
-        /// <summary>
-        /// Send sign up email to CSD.
-        /// </summary>
-        /// <param name="criteria">User criteria.</param>
-        /// <param name="currentLanguage">Current language.</param>
         public void SendSignUpEmailToCsd(UserInsertCriteria criteria, string currentLanguage)
         {
             // Send mail to CSD
@@ -228,10 +191,6 @@
             ChangeSystemLanguage();
         }
 
-        /// <summary>
-        /// Sign Up Success.
-        /// </summary>
-        /// <returns>Return view.</returns>
         [HttpGet]
         [CheckUMFilter]
         public ActionResult SignUpSuccess()
@@ -243,14 +202,6 @@
 
         #region Sign In
 
-        /// <summary>
-        /// Sign In Action page.
-        /// </summary>
-        /// <param name="username">User name parameter.</param>
-        /// <param name="password">Password parameter.</param>
-        /// <param name="captcha">Captcha parameter.</param>
-        /// <param name="loginToken">Login token.</param>
-        /// <returns>Return view.</returns>
         [HttpPost]
         [CheckUMFilter]
         public ActionResult SignIn(string username, string password, string captcha, string loginToken)
@@ -263,7 +214,7 @@
             }
             else if (ModelState.IsValid)
             {
-                if (AppSettings.IsTesting == false && !IsValidCaptcha(captcha, false))
+                if (AppSettings.IsProduction && !IsValidCaptcha(captcha, false))
                 {
                     return Json(new ResultViewModel
                     {
@@ -304,12 +255,6 @@
             return Json(result);
         }
 
-        /// <summary>
-        /// Get user info based on User name.
-        /// </summary>
-        /// <param name="username">User name.</param>
-        /// <param name="errorCode">Error code.</param>
-        /// <returns>User Information.</returns>
         public User GetUserInfoBasedOnUsername(string username, ref int errorCode)
         {
             var criteria = new AffiliateLoginCriteria
@@ -326,12 +271,6 @@
             return userInfo;
         }
 
-        /// <summary>
-        /// Update login result into DB.
-        /// </summary>
-        /// <param name="affId">Affiliate ID.</param>
-        /// <param name="loginSuccess">Login Result.</param>
-        /// <returns>On User ID.</returns>
         public int UpdateLoginInfo(int affId, bool loginSuccess)
         {
             var loginResultCriteria = new AffiliateLoginResultCriteria
@@ -348,11 +287,6 @@
             return loginResultCriteria.OnUserID;
         }
 
-        /// <summary>
-        /// Get result model.
-        /// </summary>
-        /// <param name="errCode">Error code.</param>
-        /// <returns>Return result view model.</returns>
         public ResultViewModel GetResultModel(int errCode)
         {
             var result = new ResultViewModel { Success = false };
@@ -379,10 +313,6 @@
 
         #region Re-Checkin
 
-        /// <summary>
-        /// Recheck In.
-        /// </summary>
-        /// <returns>Return view.</returns>
         [HttpPost]
         [CheckUMFilter]
         public ActionResult ReCheckIn()
@@ -396,7 +326,8 @@
             var checkKickedOut = _userService.ReCheckIn(criteria);
 
             // Check internal site login, if internal login not allow to edit account information
-            if (SessionManager.CurrentSession == null || (!SessionManager.CurrentSession.IsInternalSite && !AppSettings.IsTesting && checkKickedOut))
+            if (SessionManager.CurrentSession == null ||
+                (!SessionManager.CurrentSession.IsInternalSite && AppSettings.IsProduction && checkKickedOut))
             {
                 result.Success = checkKickedOut;
                 result.Message = checkKickedOut ? Lang.MsgKickout : string.Empty;
@@ -411,10 +342,6 @@
 
         #region Sign Out
 
-        /// <summary>
-        /// Action logout.
-        /// </summary>
-        /// <returns>Return view.</returns>
         public ActionResult LogOut()
         {
             DoSignOut();
@@ -425,11 +352,6 @@
 
         #region CaptchaImage
 
-        /// <summary>
-        /// Captcha image.
-        /// </summary>
-        /// <param name="noisy">Noisy parameter.</param>
-        /// <returns>Return view.</returns>
         public ActionResult CaptchaImage(bool noisy = true)
         {
             var rand = new Random((int)DateTime.Now.Ticks);
@@ -441,11 +363,6 @@
             return GenerateCaptchaImage(rand, captcha, noisy);
         }
 
-        /// <summary>
-        /// Captcha image for Forget password function.
-        /// </summary>
-        /// <param name="noisy">Noisy parameter.</param>
-        /// <returns>Return view.</returns>
         public ActionResult CaptchaImageForgetPwd(bool noisy = true)
         {
             var rand = new Random((int)DateTime.Now.Ticks);
@@ -461,10 +378,6 @@
 
         #region Forget Password
 
-        /// <summary>
-        /// Forget Password.
-        /// </summary>
-        /// <returns>Return view.</returns>
         [HttpGet]
         [CheckUMFilter]
         public ActionResult ForgetPassword()
@@ -695,11 +608,6 @@
 
         #region Process Login From Admin Site
 
-        /// <summary>
-        /// Login from admin site.
-        /// </summary>
-        /// <param name="criteria">Admin login criteria.</param>
-        /// <returns>Return view.</returns>
         [HttpGet]
         [CheckUMFilter]
         public ActionResult AdminLogin(AdminLoginCriteria criteria)
@@ -763,9 +671,6 @@
             return isCheatCaptcha || isValidCaptcha;
         }
 
-        /// <summary>
-        /// Sign out action page.
-        /// </summary>
         private void DoSignOut()
         {
             if (SessionManager.CurrentSession != null)

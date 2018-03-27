@@ -94,5 +94,9 @@
   <Function Name="Validation-Aff-Member">
     <Setting Key="Aff_BetList_CheckBelonging" SpName="Aff_BetList_CheckBelonging" DbName="DBAFFBE7.Affiliate_BE7.bodbDownlineNet" Plain="0" />
   </Function>
+
+  <Function name="Log">
+    <Setting Key="Aff_WebAPI_WriteLog" SpName="Aff_WebAPI_WriteLog" DbName="DBLOG_bodbLicenseeNet" Plain="0" />
+  </Function>
 </Functions>
 		

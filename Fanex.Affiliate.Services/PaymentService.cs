@@ -2,6 +2,7 @@
 {
     using Common.Helper;
     using Criteria;
+    using Criteria.Payment;
     using DataAccess;
     using ViewModels;
 
@@ -84,6 +85,12 @@
         {
             Check.Argument.IsNotNull(criteria, "criteria");
             return _paymentDataAccess.GetPaymentRequestPlayerInfo(criteria);
+        }
+
+        public void WritePaymentLog(PaymentLogCriteria criteria)
+        {
+            Check.Argument.IsNotNull(criteria, "criteria");
+            _paymentDataAccess.WritePaymentLog(criteria);
         }
     }
 }

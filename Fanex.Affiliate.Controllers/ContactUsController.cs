@@ -13,9 +13,6 @@
     using Web;
     using Web.Filter;
 
-    /// <summary>
-    /// Contact us Controller.
-    /// </summary>
     [CheckUMFilter]
     public class ContactUsController : BaseController
     {
@@ -26,10 +23,6 @@
         #endregion Services
 
         #region Constructor
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ContactUsController" /> class.
-        /// </summary>
         public ContactUsController()
         {
             _contactUsService = new ContactUsService();
@@ -37,10 +30,6 @@
 
         #endregion Constructor
 
-        /// <summary>
-        /// Contact us.
-        /// </summary>
-        /// <returns>Return view.</returns>
         [HttpGet]
         public ActionResult Index()
         {
@@ -55,11 +44,6 @@
             return View(criteria);
         }
 
-        /// <summary>
-        /// Action contact us.
-        /// </summary>
-        /// <param name="criteria">Contact us criteria.</param>
-        /// <returns>Return view.</returns>
         [InternalChecking]
         [HttpPost]
         public ActionResult Index(ContactUsCriteria criteria)
@@ -100,11 +84,6 @@
             return View(criteria);
         }
 
-        /// <summary>
-        /// Contact us result.
-        /// </summary>
-        /// <param name="result">Result parameter.</param>
-        /// <returns>Return view.</returns>
         [HttpGet]
         public ActionResult ContactUsResult(int result = 0)
         {
@@ -112,12 +91,6 @@
             return View();
         }
 
-        /// <summary>
-        /// Store contact us email onto database.
-        /// </summary>
-        /// <param name="criteria">Contact us criteria.</param>
-        /// <param name="ip">IP parameter.</param>
-        /// <param name="browser">Browser parameter.</param>
         public void StoreContactUsEmail(ContactUsCriteria criteria, string ip, string browser)
         {
             criteria.Content = HttpUtility.HtmlEncode(criteria.Content);
@@ -133,24 +106,20 @@
             _contactUsService.ContactUs(criteria);
         }
 
-        /// <summary>
-        /// Send contact us email to customer service department.
-        /// </summary>
-        /// <param name="criteria">Contact us criteria.</param>
         public void SendContactUsEmail(ContactUsCriteria criteria)
         {
             var templatePath = Server.MapPath("~/Views/Shared/Email/ContactUs/ContactUs.txt");
 
             dynamic emailContent = new
-                                    {
-                                        AffiliateName = AppSettings.SystemDisplayName,
-                                        Name = criteria.Sender,
-                                        AffID = CurrentSession != null ? CurrentSession.AffId.ToString() : string.Empty,
-                                        Email = criteria.Email,
-                                        Comment = HttpUtility.HtmlDecode(criteria.Content),
-                                        Subject = criteria.Subject,
-                                        MailContact = AppSettings.MailContact
-                                    };
+            {
+                AffiliateName = AppSettings.SystemDisplayName,
+                Name = criteria.Sender,
+                AffID = CurrentSession != null ? CurrentSession.AffId.ToString() : string.Empty,
+                Email = criteria.Email,
+                Comment = HttpUtility.HtmlDecode(criteria.Content),
+                Subject = criteria.Subject,
+                MailContact = AppSettings.MailContact
+            };
 
             var emailTitle = string.Format("{0} Affiliates - Contact Us – {1}", AppSettings.SystemDisplayName, criteria.Subject);
             var emailBody = (new EmailTemplateResolverService()).GetEmailBody(templatePath, emailContent);
@@ -159,11 +128,6 @@
 
         #region CaptchaImage
 
-        /// <summary>
-        /// Captcha image for Forget password function.
-        /// </summary>
-        /// <param name = "noisy">Noisy parameter.</param>
-        /// <returns>Return view.</returns>
         public ActionResult CaptchaImage(bool noisy = true)
         {
             var rand = new Random((int)DateTime.Now.Ticks);

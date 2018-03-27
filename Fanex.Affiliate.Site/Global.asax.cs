@@ -3,8 +3,6 @@
     using System;
     using System.Data.SqlClient;
     using System.Diagnostics.CodeAnalysis;
-    using System.Globalization;
-    using System.Linq;
     using System.Text;
     using System.Web;
     using System.Web.Mvc;
@@ -58,7 +56,7 @@
 
             LogService.Error(message.ToString());
 
-            if (!AppSettings.IsTesting && Request.RequestContext.HttpContext.Request.IsAjaxRequest())
+            if (AppSettings.IsProduction && Request.RequestContext.HttpContext.Request.IsAjaxRequest())
             {
                 Context.ClearError();
                 Response.ContentType = "application/json";

@@ -2,6 +2,7 @@
 {
     using System;
     using Criteria;
+    using Criteria.Payment;
     using Data;
     using DTO;
     using ViewModels;
@@ -104,6 +105,15 @@
             }
 
             return payment;
+        }
+
+        public void WritePaymentLog(PaymentLogCriteria criteria)
+        {
+            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            {
+                var param = criteria.GetSpParams();
+                objectDb.ExecuteNonQuery(param);
+            }
         }
     }
 }

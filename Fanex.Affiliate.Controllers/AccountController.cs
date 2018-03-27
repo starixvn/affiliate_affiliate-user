@@ -58,12 +58,6 @@
 
         #region Statement History
 
-        /// <summary>
-        /// Action get statement history.
-        /// </summary>
-        /// <param name="pageSize">Input page size.</param>
-        /// <param name="page">Input page index.</param>
-        /// <returns>Return view.</returns>
         [HttpGet]
         public ActionResult StatementHistory(int pageSize = 0, int page = 1)
         {
@@ -105,11 +99,6 @@
             return DailyEarnings(criteria);
         }
 
-        /// <summary>
-        /// Daily Earning.
-        /// </summary>
-        /// <param name="criteria">Daily earning criteria.</param>
-        /// <returns>Return view.</returns>
         [HttpPost]
         public ActionResult DailyEarnings(DailyEarningCriteria criteria)
         {
@@ -145,12 +134,6 @@
             return View(model);
         }
 
-        /// <summary>
-        /// Daily Earning Detail.
-        /// </summary>
-        /// <param name="product">Initialize product ID.</param>
-        /// <param name="winlostdate">Initialize Win lost date.</param>
-        /// <returns>Return view.</returns>
         [HttpGet]
         public ActionResult DailyEarningsDetail(int product, string winlostdate)
         {
@@ -167,11 +150,6 @@
             return DailyEarningsDetail(criteria);
         }
 
-        /// <summary>
-        /// Daily Earning Detail.
-        /// </summary>
-        /// <param name="criteria">Daily earning detail criteria.</param>
-        /// <returns>Return view.</returns>
         [HttpPost]
         public ActionResult DailyEarningsDetail(DailyEarningsDetailCriteria criteria)
         {
@@ -201,11 +179,6 @@
             return View(model);
         }
 
-        /// <summary>
-        /// Has Show Play Tech Casino.
-        /// </summary>
-        /// <param name="model">Model input.</param>
-        /// <returns>Show or don't show play tech.</returns>
         public bool HasShowPlaytechCasino(DailyEarningsKioskDetailViewModel model)
         {
             if (model.ProductId == 0 && model.ListProduct.Count(l => l.OriginalProductName == "Casino") > 0)
@@ -227,12 +200,6 @@
 
         #region Customer Information Kiosk
 
-        /// <summary>
-        /// Action get customer information.
-        /// </summary>
-        /// <param name="pageSize">Input page size.</param>
-        /// <param name="page">Input page index.</param>
-        /// <returns>Return view.</returns>
         [HttpGet]
         public ActionResult CustomerInfoKiosk(int pageSize = 0, int page = 1)
         {
@@ -259,10 +226,6 @@
 
         #region Account Overview
 
-        /// <summary>
-        /// Action get account overview.
-        /// </summary>
-        /// <returns>Return view.</returns>
         [HttpGet]
         public ActionResult Overview()
         {
@@ -274,11 +237,6 @@
             return Overview(criteria);
         }
 
-        /// <summary>
-        /// Action get account overview.
-        /// </summary>
-        /// <param name="criteria">Post criteria.</param>
-        /// <returns>Return view.</returns>
         [HttpPost]
         public ActionResult Overview(AccountStatisticInfoCriteria criteria)
         {
@@ -306,11 +264,6 @@
 
         #region Payment Request
 
-        /// <summary>
-        /// Payment Information.
-        /// </summary>
-        /// <param name="success">Check whether showing the cancel request success.</param>
-        /// <returns>Return view.</returns>
         [HttpGet]
         public virtual ActionResult PaymentRequest(bool initial = true)
         {
@@ -352,11 +305,6 @@
             return View(payment);
         }
 
-        /// <summary>
-        /// Handle payout request event.
-        /// </summary>
-        /// <param name="paymentModel">Input view model.</param>
-        /// <returns>Return view.</returns>
         [InternalChecking]
         [HttpPost]
         public virtual ActionResult PaymentRequest(PaymentViewModel paymentModel)
@@ -384,15 +332,15 @@
                         AffId = CurrentSession.AffId
                     });
 
-                    // Call API to check whether member is exists
-                    string ibcUsername = string.Empty, playerCurrency = string.Empty, strErrorMsg = string.Empty;
-                    if (!IsExistLicenseeCustInfo(paymentInfo.SystemName, paymentInfo.PlayerUsername, ref ibcUsername, ref playerCurrency, ref strErrorMsg))
+                    var custInfo = GetCustInfo(paymentInfo.SystemName, paymentInfo.PlayerUsername);
+
+                    if (!IsValidCustomer(custInfo))
                     {
                         SetResultMessage(false, Lang.Msg142);
                     }
                     else
                     {
-                        var result = InsertPaymentRequest(paymentInfo.PlayerUsername, playerCurrency, paymentModel.Amount, Common.GetIPAddressOfClient());
+                        var result = InsertPaymentRequest(paymentInfo.PlayerUsername, custInfo.PlayerCurrency, paymentModel.Amount, Common.GetIPAddressOfClient());
                         SetResultMessage(result.Success, result.Message);
                     }
                 }
@@ -401,14 +349,6 @@
             return RedirectToAction("PaymentRequest", new { initial = false });
         }
 
-        /// <summary>
-        /// Insert payment request and send mail.
-        /// </summary>
-        /// <param name="playerUsername">Player user name.</param>
-        /// <param name="currency">Player currency.</param>
-        /// <param name="amount">Request amount.</param>
-        /// <param name="ip">IP parameter.</param>
-        /// <returns>Return result view model.</returns>
         public ResultViewModel InsertPaymentRequest(string playerUsername, string currency, decimal amount, string ip)
         {
             var result = new ResultViewModel { Success = true };
@@ -445,11 +385,6 @@
             return result;
         }
 
-        /// <summary>
-        /// Send payment request email.
-        /// </summary>
-        /// <param name="paymentRequest">Payment view model.</param>
-        /// <param name="amount">Request amount.</param>
         public void SendPaymentRequestEmail(PaymentViewModel paymentRequest, decimal amount)
         {
             var mapPath = string.Format(
@@ -497,11 +432,6 @@
             ChangeSystemLanguage();
         }
 
-        /// <summary>
-        /// Handle payout request cancel event.
-        /// </summary>
-        /// <param name="paymentModel">Input view model.</param>
-        /// <returns>Return view.</returns>
         [InternalChecking]
         [HttpPost]
         public ActionResult CancelPaymentRequest(PaymentViewModel paymentModel)
@@ -539,11 +469,6 @@
             return RedirectToAction("PaymentRequest", new { initial = false });
         }
 
-        /// <summary>
-        /// Send cancel payment email.
-        /// </summary>
-        /// <param name="paymentCancel">Payment view model.</param>
-        /// <param name="transId">Transaction id.</param>
         public void SendCancelPaymentEmail(PaymentViewModel paymentCancel, long transId)
         {
             var mapPath = string.Format(
@@ -587,48 +512,17 @@
             ChangeSystemLanguage();
         }
 
-        /// <summary>
-        /// 0: username not existing.
-        /// 1: existing in Licensee DB.
-        /// 3: existing in both.
-        /// </summary>
-        /// <param name="siteName">Affiliate name.</param>
-        /// <param name="userName">Affiliate username.</param>
-        /// <param name="ibcUsername">Affiliate's IBC username.</param>
-        /// <param name="playerCurrency">Affiliate currency.</param>
-        /// <param name="errMsg">Return error message.</param>
-        /// <returns>Boolean: success or not.</returns>
-        public bool IsExistLicenseeCustInfo(string siteName, string userName, ref string ibcUsername, ref string playerCurrency, ref string errMsg)
+        public ApiCustInfo GetCustInfo(string siteName, string userName)
         {
-            if (AppSettings.IsTesting)
-            {
-                return true;
-            }
+            return AppSettings.IsLocal ?
+                new ApiCustInfo { PlayerCurrency = "USD" } :
+                ServiceWrapper.GetLicenseeCustInfo(siteName, userName, SessionManager.CurrentSession.AffId);
+        }
 
-            try
-            {
-                var xml = ServiceWrapper.GetLicenseeCustInfo(siteName, userName);
-                if (xml == null || xml.IsEmpty)
-                {
-                    return false;
-                }
-
-                var xmlElement = xml.Element("ReturnCode");
-                if (xmlElement == null || Convert.ToInt32(xmlElement.Value) != 0)
-                {
-                    return false;
-                }
-
-                errMsg = xml.Element("ReturnMessage") != null ? xml.Element("ReturnMessage").Value : string.Empty;
-                ibcUsername = xml.Element("IBCusername") != null ? xml.Element("IBCusername").Value : string.Empty;
-                playerCurrency = xml.Element("Currency") != null ? xml.Element("Currency").Value : string.Empty;
-
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
+        private static bool IsValidCustomer(ApiCustInfo custInfo)
+        {
+            return AppSettings.IsLocal ||
+                    (!string.IsNullOrEmpty(custInfo.PlayerCurrency) && string.IsNullOrEmpty(custInfo.ErrorMessage));
         }
 
         private void SetResultMessage(bool success, string message)
@@ -640,10 +534,6 @@
 
         #region My Account
 
-        /// <summary>
-        /// My Account page - Update affiliate information.
-        /// </summary>
-        /// <returns>Return view.</returns>
         [HttpGet]
         public ActionResult MyAccount()
         {
@@ -656,11 +546,6 @@
             return View(user);
         }
 
-        /// <summary>
-        /// Update profile.
-        /// </summary>
-        /// <param name="user">Input User view model.</param>
-        /// <returns>Return view.</returns>
         [InternalChecking]
         [HttpPost]
         public ActionResult MyAccount(UserViewModel user)
@@ -696,21 +581,12 @@
 
         #region Change Password
 
-        /// <summary>
-        /// Changes the password.
-        /// </summary>
-        /// <returns>Return view.</returns>
         [HttpGet]
         public ActionResult ChangePassword()
         {
             return View(new ChangePasswordCriteria());
         }
 
-        /// <summary>
-        /// Changes the password.
-        /// </summary>
-        /// <param name="criteria">The criteria.</param>
-        /// <returns>Return view.</returns>
         [InternalChecking]
         [HttpPost]
         public ActionResult ChangePassword(ChangePasswordCriteria criteria)
@@ -742,10 +618,6 @@
             return View();
         }
 
-        /// <summary>
-        /// Check whether the format of passwords inputted from user are correct.
-        /// </summary>
-        /// <param name="criteria">Change password criteria.</param>
         public void CheckPasswordFormat(ChangePasswordCriteria criteria)
         {
             criteria.OldPassword = criteria.OldPassword.Trim();
@@ -774,12 +646,6 @@
             return View();
         }
 
-        /// <summary>
-        /// Send test email.
-        /// </summary>
-        /// <param name="email">Input email.</param>
-        /// <param name="preferLangs">Prefer language.</param>
-        /// <returns>Action result.</returns>
         [HttpPost]
         public ActionResult QCPreTest(string email, string preferLangs)
         {
@@ -812,11 +678,6 @@
             return View();
         }
 
-        /// <summary>
-        /// Send all emails.
-        /// </summary>
-        /// <param name="preferredLanguage">Prefer language.</param>
-        /// <param name="email">Input email.</param>
         public void SendAllMails(string preferredLanguage, string email)
         {
             SignUpSendMail(preferredLanguage, email);
@@ -825,10 +686,6 @@
             SendRecoverPasswordEmail(preferredLanguage, email);
         }
 
-        /// <summary>
-        /// Payment Send Mail.
-        /// </summary>
-        /// <param name="preferredLanguage">Prefer language.</param>
         public void PaymentSendMail(string preferredLanguage)
         {
             var paymentModel = new PaymentViewModel
@@ -843,11 +700,6 @@
             SendCancelPaymentEmail(paymentModel, 229);
         }
 
-        /// <summary>
-        /// Sign Up Send Mail.
-        /// </summary>
-        /// <param name="preferredLanguage">Prefer language.</param>
-        /// <param name="email">Input email.</param>
         public void SignUpSendMail(string preferredLanguage, string email)
         {
             var currentLanguage = AppSession.Language;
@@ -890,10 +742,6 @@
             ChangeSystemLanguage();
         }
 
-        /// <summary>
-        /// Send sign up email to CSD.
-        /// </summary>
-        /// <param name="email">Input email.</param>
         public void SendSignUpEmailToCsd(string email)
         {
             var templatePath = Server.MapPath("~/Views/Shared/Email/SignUp/CsdMail.txt");
@@ -914,11 +762,6 @@
             Common.SendEmail(emailBody, email, emailTitle, AppSettings.BccMail);
         }
 
-        /// <summary>
-        /// Send forget password email.
-        /// </summary>
-        /// <param name="preferredLanguage">Prefer language.</param>
-        /// <param name="email">Input email.</param>
         public void SendForgetPasswordEmail(string preferredLanguage, string email)
         {
             var currentLanguage = AppSession.Language;
@@ -962,11 +805,6 @@
             ChangeSystemLanguage();
         }
 
-        /// <summary>
-        /// Send Recover password email.
-        /// </summary>
-        /// <param name="preferredLanguage">Prefer language.</param>
-        /// <param name="email">Input email.</param>
         public void SendRecoverPasswordEmail(string preferredLanguage, string email)
         {
             var currentLanguage = AppSession.Language;
