@@ -111,9 +111,9 @@
             };
 
             AssignDataToModel(viewModel, criteria);
-            if (string.IsNullOrEmpty(viewModel.DomainSelected) && domainList.GetEnumerator().MoveNext())
+            if (string.IsNullOrEmpty(viewModel.DomainSelected) && domainList.Any())
             {
-                viewModel.DomainSelected = ((List<Domain>)domainList)[0].DomainId;
+                viewModel.DomainSelected = domainList.First().DomainId;
             }
 
             if (string.IsNullOrEmpty(viewModel.LinkSelected))
