@@ -58,11 +58,11 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBetlistResults", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CriteriaBase))]
-        string GetBetlistResults(string affiliateName, string sessionLanguage, Fanex.Affiliate.Controllers.AffBetlistService.BetListResultsCriteria criteria, string language);
+        string GetBetlistResults(string affiliateName, string language, Fanex.Affiliate.Controllers.AffBetlistService.BetListResultsCriteria criteria);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -192,7 +192,7 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -270,7 +270,7 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BetListCriteria))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BetListDetailCriteria))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BetListSystemParlayDetailCriteria))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -288,7 +288,7 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -312,6 +312,8 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
         private System.Nullable<System.DateTime> winLossDateField;
         
         private string userNameField;
+        
+        private int handicap2Field;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -420,11 +422,23 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
                 this.RaisePropertyChanged("UserName");
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public int Handicap2 {
+            get {
+                return this.handicap2Field;
+            }
+            set {
+                this.handicap2Field = value;
+                this.RaisePropertyChanged("Handicap2");
+            }
+        }
     }
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BetListDetailCriteria))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -727,7 +741,7 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -806,7 +820,7 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -999,8 +1013,8 @@ namespace Fanex.Affiliate.Controllers.AffBetlistService {
             return base.Channel.GetBetListCashOutDetail(criteria, isCashOut, language);
         }
         
-        public string GetBetlistResults(string affiliateName, string sessionLanguage, Fanex.Affiliate.Controllers.AffBetlistService.BetListResultsCriteria criteria, string language) {
-            return base.Channel.GetBetlistResults(affiliateName, sessionLanguage, criteria, language);
+        public string GetBetlistResults(string affiliateName, string language, Fanex.Affiliate.Controllers.AffBetlistService.BetListResultsCriteria criteria) {
+            return base.Channel.GetBetlistResults(affiliateName, language, criteria);
         }
     }
 }
