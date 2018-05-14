@@ -12,7 +12,7 @@ var PAYMENTREQUEST = (function ($) {
 
             var disabledInput = maxAmount <= 0 || maxAmount < minAmount || hasPendingRequest;
             $('#btnSubmit').prop("disabled", disabledInput);
-            $('#tbAmount').prop("disabled", truedisabledInput);
+            $('#tbAmount').prop("disabled", disabledInput);
 
             $('#RequestPaymentForm').submit(function () {
                 $.blockUI();
