@@ -8,9 +8,6 @@
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.aragon88.production.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.aragon88.uat.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.aragon88.master.config
-// Fanex.Affiliate.Site\Configurations\WebConfigs\Web.indowin.production.config
-// Fanex.Affiliate.Site\Configurations\WebConfigs\Web.indowin.uat.config
-// Fanex.Affiliate.Site\Configurations\WebConfigs\Web.indowin.master.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.macaubet.production.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.macaubet.uat.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.macaubet.master.config
