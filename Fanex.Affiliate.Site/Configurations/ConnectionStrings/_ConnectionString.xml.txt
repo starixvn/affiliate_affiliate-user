@@ -6,8 +6,6 @@
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.bolanation.uat.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.aragon88.production.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.aragon88.uat.config
-// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.indowin.production.config
-// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.indowin.uat.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.macaubet.production.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.macaubet.uat.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.itcbet.production.config
