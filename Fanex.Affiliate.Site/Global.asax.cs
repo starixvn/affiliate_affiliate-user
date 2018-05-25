@@ -1,6 +1,7 @@
 ﻿namespace Fanex.Affiliate.Site
 {
     using System;
+    using System.Collections.Generic;
     using System.Data.SqlClient;
     using System.Diagnostics.CodeAnalysis;
     using System.Text;
@@ -105,6 +106,39 @@
                     .AppendLine($"Username: {currenSession.Username}")
                     .AppendLine($"CurrencyID: {currenSession.CurrencyID}")
                     .AppendLine($"Currency: {currenSession.Currency}");
+            }
+            else
+            {
+                var context = HttpContext.Current;
+                message.AppendLine($"IdentityName: {context?.User?.Identity?.Name}");
+
+                var session = context?.Session;
+
+                if (session != null)
+                {
+                    message.AppendLine($"SessionId: {session.SessionID}");
+
+                    var sessionKeyList = new List<string>();
+                    foreach (var key in session.Keys)
+                    {
+                        sessionKeyList.Add(key.ToString());
+                    }
+                    message.AppendLine($"SessionKey: {string.Join(",", sessionKeyList)}");
+                }
+
+                var cookies = Request.Cookies;
+                if (cookies != null)
+                {
+                    foreach (var key in cookies.AllKeys)
+                    {
+                        var cookie = cookies.Get(key);
+
+                        if (cookie != null)
+                        {
+                            message.AppendLine($"CookieKey:{key} && CookieValue={cookie.Value}");
+                        }
+                    }
+                }
             }
 
             var sqlException = exception as SqlException;
