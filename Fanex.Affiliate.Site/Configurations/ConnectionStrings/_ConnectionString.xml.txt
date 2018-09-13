@@ -2,25 +2,13 @@
 
 // Generated helper templates
 // Generated items
-// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.bolanation.production.config
-// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.bolanation.uat.config
-// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.aragon88.production.config
-// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.aragon88.uat.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.macaubet.production.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.macaubet.uat.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.itcbet.production.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.itcbet.uat.config
-// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.be7th.production.config
-// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.be7th.uat.config
-// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.be7.production.config
-// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.be7.uat.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.athena000.production.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.athena000.uat.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.aoncash.production.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.aoncash.uat.config
-// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.allbetclub.production.config
-// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.allbetclub.uat.config
-// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.9bet.production.config
-// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.9bet.uat.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.spondemo.production.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.spondemo.uat.config
