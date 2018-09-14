@@ -134,27 +134,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\SpNames.xml" />
-    <Content Include="Configurations\SPNames\SpNames.9bet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.9bet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.9bet.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.9bet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.allbetclubs.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.allbetclubs.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.allbetclubs.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.allbetclubs.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.aoncash.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.aoncash.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.aoncash.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.aoncash.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.aragon88.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.aragon88.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.aragon88.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.aragon88.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.athena000.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.bolanation.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.bolanation.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.bolanation.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.bolanation.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.itcbet.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.macaubet.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.spondemo.production.xml" />
@@ -163,14 +147,6 @@
     <Content Include="Configurations\SPNames\SpNames.spondemo.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.spondemo.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.athena000.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.be7.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.be7.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.be7.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.be7.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.be7th.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.be7th.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.be7th.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.be7th.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.itcbet.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.itcbet.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.itcbet.sandbox.xml" />
@@ -179,10 +155,6 @@
     <Content Include="Configurations\SPNames\SpNames.macaubet.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.macaubet.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.macaubet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.mgm88.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.mgm88.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.mgm88.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.mgm88.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.xml" />
     <Content Include="Global.asax" />
     <Content Include="Web.config">
@@ -235,24 +207,14 @@
     <Content Include="Views\Home\PageNotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.9bet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.9bet.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.allbetclubs.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.allbetclubs.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.aoncash.production.config" />
     <Content Include="Configurations\WebConfigs\Web.aoncash.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.athena000.production.config" />
     <Content Include="Configurations\WebConfigs\Web.athena000.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.be7.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.be7.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.itcbet.production.config" />
     <Content Include="Configurations\WebConfigs\Web.itcbet.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.macaubet.production.config" />
     <Content Include="Configurations\WebConfigs\Web.macaubet.uat.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.be7th.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.be7th.uat.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -263,14 +225,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Configurations\WebConfigs\Web.spondemo.uat.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.aragon88.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.aragon88.uat.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.bolanation.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.bolanation.uat.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Configurations\WebConfigs\Web.itcbet.sit.config" />
@@ -303,7 +257,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/3/28" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2014/3/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
