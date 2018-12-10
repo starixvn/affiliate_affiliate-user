@@ -11,9 +11,6 @@
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.athena000.production.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.athena000.uat.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.athena000.master.config
-// Fanex.Affiliate.Site\Configurations\WebConfigs\Web.aoncash.production.config
-// Fanex.Affiliate.Site\Configurations\WebConfigs\Web.aoncash.uat.config
-// Fanex.Affiliate.Site\Configurations\WebConfigs\Web.aoncash.master.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.spondemo.production.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.spondemo.uat.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.spondemo.master.config

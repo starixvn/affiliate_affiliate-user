@@ -134,10 +134,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\SpNames.xml" />
-    <Content Include="Configurations\SPNames\SpNames.aoncash.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.aoncash.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.aoncash.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.aoncash.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.athena000.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.itcbet.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.macaubet.sit.xml" />
@@ -207,8 +203,6 @@
     <Content Include="Views\Home\PageNotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.aoncash.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.aoncash.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.athena000.production.config" />
     <Content Include="Configurations\WebConfigs\Web.athena000.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.itcbet.production.config" />
@@ -257,7 +251,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2014/3/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
+      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/3/28" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

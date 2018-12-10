@@ -308,12 +308,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
     </Content>
-    <Content Include="Configurations\SPNames\SpName.aoncash.production.xml">
-      <DependentUpon>_SpName.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\SPNames\SpName.aoncash.uat.xml">
-      <DependentUpon>_SpName.xml.tt</DependentUpon>
-    </Content>
     <Content Include="Configurations\SPNames\SpName.athena000.production.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
@@ -4112,12 +4106,6 @@
     <Content Include="Configurations\WebConfigs\Web.master.config" />
     <Content Include="Configurations\WebConfigs\Web.production.config" />
     <Content Include="Configurations\WebConfigs\Web.uat.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.master.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.production.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.uat.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.athena000.local.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.athena000.master.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.athena000.production.config" />
@@ -4133,12 +4121,6 @@
     <Content Include="Configurations\AppSettings\Web.AppSetting.macaubet.production.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.macaubet.uat.config" />
     <Content Include="App_Data\Fanex.Result\HorseRacing.xls" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aoncash.production.config">
-      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aoncash.uat.config">
-      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
-    </Content>
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.athena000.production.config">
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
     </Content>
@@ -4179,15 +4161,6 @@
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.macaubet.sit.config" />
     <None Include="Configurations\SPNames\_SpNameConfiguration.ttinclude" />
     <None Include="Configurations\TemplateFilemanager.CS.ttinclude" />
-    <Content Include="Configurations\WebConfigs\Web.aoncash.master.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\WebConfigs\Web.aoncash.production.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\WebConfigs\Web.aoncash.uat.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
     <Content Include="Configurations\WebConfigs\Web.athena000.master.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
@@ -4576,7 +4549,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
+      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
