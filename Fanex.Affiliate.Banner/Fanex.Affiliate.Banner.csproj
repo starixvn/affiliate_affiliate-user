@@ -179,9 +179,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configurations\SPNames\SpNames.banner.aoncash.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.aoncash.sandbox.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.aoncash.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.itcbet.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.macaubet.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.spondemo.production.xml" />
@@ -256,9 +253,6 @@
     <Content Include="Views\MarketingTools\PageNotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.banner.aoncash.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.aoncash.sandbox.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.aoncash.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.athena000.production.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.athena000.sandbox.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.athena000.uat.config" />
@@ -305,7 +299,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/3/28" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2014/3/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />

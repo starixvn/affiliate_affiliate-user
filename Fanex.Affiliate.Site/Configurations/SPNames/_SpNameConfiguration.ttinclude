@@ -7,7 +7,6 @@
 	var licenseeDbNameList = new System.Collections.Generic.Dictionary<string, string>
 	{
 		{"spondemo", "DBAFFSPONDEMO.Affiliate_Spondemo.bodbDownlineNet"},
-		{"aoncash", "DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet"},
 		{"athena000", "DBAFFATHENA000.Affiliate_Athena000.bodbDownlineNet"},
 		{"itcbet", "DBAFFITCBET.Affiliate_itcbet.bodbDownlineNet"},
 		{"macaubet", "DBAFFMACAUBET.Affiliate_MacauBet.bodbDownlineNet"}
