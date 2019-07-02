@@ -6,6 +6,8 @@
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.macaubet.uat.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.itcbet.production.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.itcbet.uat.config
+// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.aoncash.production.config
+// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.aoncash.uat.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.athena000.production.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.athena000.uat.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.spondemo.production.config
