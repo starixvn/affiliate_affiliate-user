@@ -4168,9 +4168,6 @@
     <None Include="Configurations\AppSettings\Web.AppSetting.aoncash.local.config" />
     <None Include="Configurations\AppSettings\Web.AppSetting.aoncash.master.config" />
     <None Include="Configurations\AppSettings\Web.AppSetting.aoncash.production.config" />
-    <None Include="Configurations\AppSettings\Web.AppSetting.aoncash.sit.config">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Configurations\AppSettings\Web.AppSetting.aoncash.uat.config">
       <SubType>Designer</SubType>
     </None>
@@ -4579,7 +4576,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
+      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
