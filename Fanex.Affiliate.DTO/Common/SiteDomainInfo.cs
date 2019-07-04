@@ -28,8 +28,7 @@
         public static SiteDomainInfo Parse(Controller controller)
         {
             var siteUrl = controller.Request.Url;
-            var regex = new Regex(@":\d+");
-            var host = regex.Replace(siteUrl.Authority, string.Empty);
+            var host = siteUrl.Authority;
             var scheme = siteUrl.Scheme;
             
             var affiliateDomain = string.Format("{0}://{1}{2}", scheme, host, controller.Url.Content("~/"));
