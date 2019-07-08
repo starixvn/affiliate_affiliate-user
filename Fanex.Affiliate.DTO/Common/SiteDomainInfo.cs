@@ -31,8 +31,9 @@
             var regex = new Regex(@":\d+");
             var host = regex.Replace(siteUrl.Authority, string.Empty);
             var scheme = siteUrl.Scheme;
+            var port = siteUrl.Port;
             
-            var affiliateDomain = string.Format("{0}://{1}{2}", scheme, host, controller.Url.Content("~/"));
+            var affiliateDomain = string.Format("{0}://{1}:{2}{3}", scheme, host, port, controller.Url.Content("~/"));
             var rootDomain = affiliateDomain.Substring(0, affiliateDomain.Length - 1);
             var memberSiteDomain = affiliateDomain;
             var memberSiteDomainWithoutProtocolnPort = host;
