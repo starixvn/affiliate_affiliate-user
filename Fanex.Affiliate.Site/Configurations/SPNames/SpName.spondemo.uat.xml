@@ -7,7 +7,7 @@
     <Setting Key="Aff_User_Logout" SpName="Aff_User_Logout" DbName="DBAFFSPONDEMO.Affiliate_Spondemo.bodbDownlineNet" Plain="0" />
     <Setting Key="Aff_User_AffiliateForgotPwd" SpName="Aff_User_AffiliateForgotPwd" DbName="DBAFFSPONDEMO.Affiliate_Spondemo.bodbDownlineNet" Plain="0" />
     <Setting Key="Aff_User_AffiliateRecoverPwd" SpName="Aff_User_AffiliateRecoverPwd" DbName="DBAFFSPONDEMO.Affiliate_Spondemo.bodbDownlineNet" Plain="0" />
-    <Setting Key="Aff_User_OnUserSelNetSessionID" SpName="Aff_User_OnUserSelNetSessionID" DbName="DBAFFSPONDEMO.Affiliate_Spondemo.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_User_OnUserSelNetSessionID" SpName="Aff_User_OnUserSelNetSessionID" DbName="DBCUST.bodb_licensee" Plain="0" />
     <Setting Key="Aff_User_AffiliateInternalLogin" SpName="Aff_User_AffiliateInternalLogin" DbName="DBAFFSPONDEMO.Affiliate_Spondemo.bodbDownlineNet" Plain="0" />
     <Setting Key="Aff_User_SecureUpdPasswordInfo" SpName="Aff_User_SecureUpdPasswordInfo" DbName="DBAFFSPONDEMO.Affiliate_Spondemo.bodbDownlineNet" Plain="0" />
     <Setting Key="Aff_User_SecureUpdPasswordUpdate" SpName="Aff_User_SecureUpdPasswordUpdate" DbName="DBAFFSPONDEMO.Affiliate_Spondemo.bodbDownlineNet" Plain="0" />
