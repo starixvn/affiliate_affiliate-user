@@ -244,6 +244,14 @@
             }
         }
 
+        public static bool IsHideBetList
+        {
+            get
+            {
+                return Convert.ToBoolean(GetValue("IsHideBetList"));
+            }
+        }
+
         #endregion AppSettings
 
         #region AffiliateSettings
