@@ -5,10 +5,12 @@
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.macaubet.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.itcbet.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.athena000.production.xml
+// Fanex.Affiliate.Site\Configurations\SPNames\SpName.aoncash.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.spondemo.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.macaubet.uat.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.itcbet.uat.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.athena000.uat.xml
+// Fanex.Affiliate.Site\Configurations\SPNames\SpName.aoncash.uat.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.spondemo.uat.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.itcbet.sit.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.macaubet.sit.xml

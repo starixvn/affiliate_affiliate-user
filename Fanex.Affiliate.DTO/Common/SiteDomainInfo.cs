@@ -1,6 +1,7 @@
 ﻿namespace Fanex.Affiliate.DTO
 {
     using System;
+    using System.Configuration;
     using System.Text.RegularExpressions;
     using System.Web.Mvc;
 
@@ -31,8 +32,11 @@
             var regex = new Regex(@":\d+");
             var host = regex.Replace(siteUrl.Authority, string.Empty);
             var scheme = siteUrl.Scheme;
-            
-            var affiliateDomain = string.Format("{0}://{1}{2}", scheme, host, controller.Url.Content("~/"));
+
+            var isLocal = ConfigurationManager.AppSettings["Environment"].Equals("Local Development", StringComparison.OrdinalIgnoreCase);
+            var hostHasPort = isLocal ? siteUrl.Authority : host;
+            var affiliateDomain = string.Format("{0}://{1}{2}", scheme, hostHasPort, controller.Url.Content("~/"));
+
             var rootDomain = affiliateDomain.Substring(0, affiliateDomain.Length - 1);
             var memberSiteDomain = affiliateDomain;
             var memberSiteDomainWithoutProtocolnPort = host;

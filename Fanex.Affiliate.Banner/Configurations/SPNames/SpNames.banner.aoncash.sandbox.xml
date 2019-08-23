@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Functions>
+  <Function Name="Aff-Banner">
+    <Setting Key="Aff_Banner_UpdateStatistic" SpName="Aff_Banner_UpdateStatistic" DbName="DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_Banner_SelInfo" SpName="Aff_Banner_SelInfo" DbName="DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet" Plain="0" />
+  </Function>
+</Functions>

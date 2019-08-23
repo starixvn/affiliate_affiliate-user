@@ -134,7 +134,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\SpNames.xml" />
+    <Content Include="Configurations\SPNames\SpNames.aoncash.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.athena000.local.xml" />
+    <Content Include="Configurations\SPNames\SpNames.aoncash.production.xml" />
+    <Content Include="Configurations\SPNames\SpNames.aoncash.sandbox.xml" />
+    <Content Include="Configurations\SPNames\SpNames.aoncash.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.itcbet.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.macaubet.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.spondemo.production.xml" />
@@ -223,6 +227,10 @@
   <ItemGroup>
     <Content Include="Configurations\WebConfigs\Web.itcbet.sit.config" />
     <Content Include="Configurations\WebConfigs\Web.macaubet.sit.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configurations\WebConfigs\Web.aoncash.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.aoncash.uat.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

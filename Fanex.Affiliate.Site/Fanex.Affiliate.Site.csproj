@@ -308,6 +308,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
     </Content>
+    <Content Include="Configurations\SPNames\SpName.aoncash.production.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.aoncash.uat.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
     <Content Include="Configurations\SPNames\SpName.athena000.production.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
@@ -4159,6 +4165,18 @@
     <Content Include="Configurations\AppSettings\Web.AppSetting.macaubet.sit.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.itcbet.sit.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.macaubet.sit.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.uat.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aoncash.production.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aoncash.uat.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </Content>
     <None Include="Configurations\SPNames\_SpNameConfiguration.ttinclude" />
     <None Include="Configurations\TemplateFilemanager.CS.ttinclude" />
     <Content Include="Configurations\WebConfigs\Web.athena000.master.config">
@@ -4201,6 +4219,15 @@
     </Content>
     <Content Include="Configurations\WebConfigs\Web.itcbet.sit.config" />
     <Content Include="Configurations\WebConfigs\Web.macaubet.sit.config" />
+    <Content Include="Configurations\WebConfigs\Web.aoncash.master.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.aoncash.production.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.aoncash.uat.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
     <None Include="Content\bootstrap\js\.jshintrc" />
     <Content Include="Content\themes\29\index.less" />
     <Content Include="Content\themes\29\mixins.less" />
