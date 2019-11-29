@@ -49,7 +49,6 @@
             container.Register<IProductService, ProductService>();
             container.Register<IMessageService, MessageService>();
             container.Register<IHotNewsService, HotNewsService>();
-            container.Register<IBetListService, BetListService>();
             container.Register<IMaintenanceService, MaintenanceService>();
         }
     }

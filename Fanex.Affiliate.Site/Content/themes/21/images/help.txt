@@ -1,25 +1,23 @@
 1. Signup now: banner.xx-XX.jpg
-2. bar-loader.fig: betlist
-3. bg_buttonsite.png: button Login
-4. bg_center/2.jpg: content background
-5. bg_footer.jpg: footer background incase of no color (optional)
-6. bg_header03.jpg: fanex results
-7. Language: bg-bottomLanguage.png, bg-contentLanguage.png, bg-topLanguage.png, spliter.png
-8. bgheader.png: error page header background
-9. deco.jpg: error pages header
-10. Headlines background: bghotNewsContent.png
-11. Menu item background: bgMainMenu_01/02.png
-12. Email banner: emailBanner.jpg
-13. Email background: emailBg.jpg
-14. error_icons.png
-15. Favorite icon: favicon.jpg
-16. Betlist: firstGoal.gif, lastGoal.gif, link_14x14.png, undo.png, plus.png
-17. Icon collection: glyphicons-halflings.png, glyphicons-halflings-gray.png, glyphicons-halflings-gray-lighter.png, ui-icons_454545_256x240.png
-18. Main page's header background: header_gradient.png
-19. in_top.png
-20. loader.gif
-21. Log out: logout.png
-22. For daily earnings page: note.png
-23. Sign up now in FAQs: signup.png
-24. sprite.png
-25. tab_topbg.gif: system parlay detail
+2. bg_buttonsite.png: button Login
+3. bg_center/2.jpg: content background
+4. bg_footer.jpg: footer background incase of no color (optional)
+5. bg_header03.jpg: fanex results
+6. Language: bg-bottomLanguage.png, bg-contentLanguage.png, bg-topLanguage.png, spliter.png
+7. bgheader.png: error page header background
+8. deco.jpg: error pages header
+9. Headlines background: bghotNewsContent.png
+10. Menu item background: bgMainMenu_01/02.png
+11. Email banner: emailBanner.jpg
+12. Email background: emailBg.jpg
+13. error_icons.png
+14. Favorite icon: favicon.jpg
+15. Icon collection: glyphicons-halflings.png, glyphicons-halflings-gray.png, glyphicons-halflings-gray-lighter.png, ui-icons_454545_256x240.png
+16. Main page's header background: header_gradient.png
+17. in_top.png
+18. loader.gif
+19. Log out: logout.png
+20. For daily earnings page: note.png
+21. Sign up now in FAQs: signup.png
+22. sprite.png
+23. tab_topbg.gif: system parlay detail

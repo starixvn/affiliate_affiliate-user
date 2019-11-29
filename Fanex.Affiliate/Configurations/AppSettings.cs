@@ -244,14 +244,6 @@
             }
         }
 
-        public static bool IsHideBetList
-        {
-            get
-            {
-                return Convert.ToBoolean(GetValue("IsHideBetList"));
-            }
-        }
-
         public static string SentryBackEndDsn
         {
             get

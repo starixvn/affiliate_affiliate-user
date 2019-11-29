@@ -38,22 +38,18 @@
 
         private readonly IProductService _productService;
 
-        private readonly IBetListService _betListService;
-
         public AccountController(
             IAccountService accountService,
             ISystemSettingService systemSettingService,
             IPaymentService paymentService,
             IUserService userService,
-            IProductService productService,
-            IBetListService betlistService)
+            IProductService productService)
         {
             _accountService = accountService;
             _systemSettingService = systemSettingService;
             _paymentService = paymentService;
             _userService = userService;
             _productService = productService;
-            _betListService = betlistService;
         }
 
         #region Statement History

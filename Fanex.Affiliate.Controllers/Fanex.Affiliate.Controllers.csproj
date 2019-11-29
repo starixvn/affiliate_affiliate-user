@@ -218,8 +218,6 @@
     <Compile Include="BaseController.cs" />
     <Compile Include="ConditionController.cs" />
     <Compile Include="ContactUsController.cs" />
-    <Compile Include="AccountController.BetList.cs" />
-    <Compile Include="AccountController.BetListResults.cs" />
     <Compile Include="NotifyController.cs" />
     <Compile Include="MessageController.cs" />
     <Compile Include="FAQsController.cs" />
@@ -230,11 +228,6 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
-    <Compile Include="Service References\AffBetlistService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="SharedController.cs" />
     <Compile Include="UserController.cs" />
@@ -293,13 +286,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Service References\AffBetlistService\AffiliateAPI.wsdl" />
-    <None Include="Service References\AffBetlistService\configuration91.svcinfo" />
-    <None Include="Service References\AffBetlistService\configuration.svcinfo" />
-    <None Include="Service References\AffBetlistService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\Fanex.Result.Resource\en-US.xml" />
@@ -312,7 +298,6 @@
     <Content Include="CodeAnalysis\CodeAnalysisConfiguration.xml" />
     <Content Include="Content\Fanex.Result\fanex.result.css" />
     <Content Include="Content\Fanex.Result\images\goal-icon.png" />
-    <None Include="Service References\AffBetlistService\AffiliateAPI.disco" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
@@ -342,13 +327,10 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Service References\AffBetlistService\" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/3/28" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2014/3/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

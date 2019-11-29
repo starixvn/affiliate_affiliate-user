@@ -2,17 +2,12 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Diagnostics.CodeAnalysis;
     using System.Linq;
 
     /// <summary>
     /// Paging class.
     /// </summary>
     /// <typeparam name="T">Type parameter.</typeparam>
-    [SuppressMessage(
-        "Microsoft.Design",
-        "CA1026:DefaultParametersShouldNotBeUsed",
-        Justification = "Since Betlist.dll used that data-structure.")]
     public class PagedList<T> : List<T>, IPagedList<T>
     {
         public PagedList(IEnumerable<T> source, int index, int pageSize, int? totalCount = null)
@@ -24,12 +19,12 @@
         {
             if (index < 0)
             {
-                throw new ArgumentOutOfRangeException("index", "Value can not be below 0.");
+                throw new ArgumentOutOfRangeException(nameof(index), "Value can not be below 0.");
             }
 
             if (pageSize < 1)
             {
-                throw new ArgumentOutOfRangeException("pageSize", "Value can not be less than 1.");
+                throw new ArgumentOutOfRangeException(nameof(pageSize), "Value can not be less than 1.");
             }
 
             if (source == null)

@@ -13,7 +13,6 @@
     /// Overview View Model.
     /// </summary>
     [SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", Justification = "Reviewed. Suppression is OK here")]
-    [SuppressMessage("Microsoft.Design", "CA1002:DoNotExposeGenericLists", Justification = "Since Betlist.dll used that data-structure.")]
     public class UserViewModel : IValidatableObject
     {
         /// <summary>

@@ -529,33 +529,6 @@ namespace Fanex.Affiliate.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bet List.
-        /// </summary>
-        public static string BetList {
-            get {
-                return ResourceManager.GetString("BetList", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Results.
-        /// </summary>
-        public static string BetListResults {
-            get {
-                return ResourceManager.GetString("BetListResults", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Bet List {0} - {1} - View in {2}.
-        /// </summary>
-        public static string BetListTitle {
-            get {
-                return ResourceManager.GetString("BetListTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Burkina Faso.
         /// </summary>
         public static string BF {
@@ -1367,15 +1340,6 @@ namespace Fanex.Affiliate.Resources {
         public static string DO {
             get {
                 return ResourceManager.GetString("DO", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to We don&apos;t support running bet list at the moment..
-        /// </summary>
-        public static string DontShowRunningBetList {
-            get {
-                return ResourceManager.GetString("DontShowRunningBetList", resourceCulture);
             }
         }
         
