@@ -323,10 +323,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
     </Content>
+    <Content Include="Configurations\SPNames\SpName.aoncash.mnl.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
     <Content Include="Configurations\SPNames\SpName.aoncash.production.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.aoncash.uat.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.athena000.mnl.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.athena000.production.xml">
@@ -338,6 +344,9 @@
     <Content Include="Configurations\SPNames\SpName.athena000.uat.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
+    <Content Include="Configurations\SPNames\SpName.itcbet.mnl.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
     <Content Include="Configurations\SPNames\SpName.itcbet.production.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
@@ -345,6 +354,9 @@
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.itcbet.uat.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.macaubet.mnl.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.macaubet.production.xml">
@@ -357,6 +369,9 @@
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.spondemo.local.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.spondemo.mnl.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.spondemo.production.xml">
@@ -4138,6 +4153,26 @@
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aoncash.uat.config">
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
     </Content>
+    <None Include="Configurations\AppSettings\Web.AppSetting.aoncash.mnl.config" />
+    <None Include="Configurations\AppSettings\Web.AppSetting.athena000.mnl.config" />
+    <None Include="Configurations\AppSettings\Web.AppSetting.itcbet.mnl.config" />
+    <None Include="Configurations\AppSettings\Web.AppSetting.macaubet.mnl.config" />
+    <None Include="Configurations\AppSettings\Web.AppSetting.spondemo.mnl.config" />
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.aoncash.mnl.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.athena000.mnl.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.itcbet.mnl.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.macaubet.mnl.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.spondemo.mnl.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
     <None Include="Configurations\SPNames\_SpNameConfiguration.ttinclude" />
     <None Include="Configurations\TemplateFilemanager.CS.ttinclude" />
     <Content Include="Configurations\WebConfigs\Web.athena000.master.config">
@@ -4189,6 +4224,22 @@
     <Content Include="Configurations\WebConfigs\Web.aoncash.uat.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
+    <None Include="Configurations\WebConfigs\Web.aoncash.mnl.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\WebConfigs\Web.athena000.mnl.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\WebConfigs\Web.itcbet.mnl.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\WebConfigs\Web.macaubet.mnl.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\WebConfigs\Web.mnl.config" />
+    <None Include="Configurations\WebConfigs\Web.spondemo.mnl.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </None>
     <None Include="Content\bootstrap\js\.jshintrc" />
     <Content Include="Content\themes\29\index.less" />
     <Content Include="Content\themes\29\mixins.less" />
@@ -4511,7 +4562,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />

@@ -14,7 +14,7 @@
 		{"macaubet", "DBAFFMACAUBET.Affiliate_MacauBet.bodbDownlineNet"}
 	};
 
-	var environments = new string[] { "uat", "production" };
+	var environments = new string[] { "uat", "production", "mnl" };
 	foreach(var licenseeDbName in licenseeDbNameList)
 	{
 		foreach(var environment in environments)
