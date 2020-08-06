@@ -26,7 +26,7 @@ a {
 	color: @linkColor;
 
 	&:hover {
-		color: @linkColor;	
+		color: @linkColor;
 		text-decoration: underline;
 	}
 }
@@ -36,7 +36,7 @@ a {
 }
 
 .primary-tone {
-	color: @primaryColor;						
+	color: @primaryColor;
 }
 
 .second-tone {
@@ -53,7 +53,7 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 	font-size: @fontSize;
 	color: #959595;
 	height: 15px;
-	.border-radius(0);	
+	.border-radius(0);
 
 	&.btn {
 		background: url(images/btn-login.png) repeat-x left center;
@@ -68,16 +68,14 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 }
 
 /* PAGE */
-.container-fluid {	
-    margin: 0 auto;    
+.container-fluid {
+	margin: 0 auto;
 	padding: 0;
 
 	.span12 {
 		margin-left: 0;
-
 		/* HEADER */
-
-		&.header {		
+		&.header {
 			height: @headerHeight;
 			margin: 0 auto;
 			position: relative;
@@ -89,14 +87,13 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 
 			.top-header {
 				.center(@widthPage);
-				height: 102px;				
+				height: 102px;
 
 				.span5 {
 					margin: 0;
 				}
-
 				/* LOGO */
-				.logo {			
+				.logo {
 					float: left;
 					height: 47px;
 					margin-top: 30px;
@@ -105,7 +102,6 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 						background: url(images/logo_e.png) no-repeat;
 					}
 				}
-
 				/* LANGUAGE */
 				#language {
 					line-height: 15px;
@@ -135,9 +131,7 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 							color: #f26522;
 						}
 					}
-				
 				}
-
 				/* LOGOUT LINK */
 				.after-login-info {
 					background: url(images/ComboBox.png) no-repeat;
@@ -155,14 +149,13 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 						text-decoration: none;
 					}
 				}
-
 				/* DATETIME */
 				#datetime {
 					color: @dateTimeColor;
 					font-size: 10px;
 					font-weight: bold;
 					line-height: 26px;
-					text-align: right;					
+					text-align: right;
 
 					.clock {
 						background: url(images/clock.png) no-repeat left center;
@@ -171,25 +164,23 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 						padding-left: 20px;
 						margin: 15px 16px 0 0;
 					}
-				}	
+				}
 			}
-			
 			/* TOPMENU */
-
 			.top-menu {
-				height: 57px;	
-				background: url(images/bg-top-menu.png) repeat-x;			
+				height: 57px;
+				background: url(images/bg-top-menu.png) repeat-x;
 
 				table {
 					.center(@widthPage);
 					height: 26px;
 					display: block;
-					margin-top: 7px;					
-					padding-top: 15px;					
+					margin-top: 7px;
+					padding-top: 15px;
 
 					td {
 						border-left: 1px solid #ddd;
-						text-align: center;						
+						text-align: center;
 						height: 24px;
 						padding: 0;
 						.font-title;
@@ -206,7 +197,7 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 								text-decoration: none;
 							}
 
-							&.current{
+							&.current {
 								.current-link;
 							}
 						}
@@ -216,10 +207,8 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 						}
 					}
 				}
-						
-			}					
+			}
 		}
-		
 		/* HOT NEWS */
 		&.hotNews {
 			background: url(images/bg-content.png);
@@ -232,7 +221,7 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 					margin: 0;
 					min-height: 36px;
 				}
-			} 
+			}
 
 			.leftHotNews {
 				background: url(images/bg-leftHotNews.png) repeat-x;
@@ -240,7 +229,7 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 				width: 85px;
 				text-align: center;
 				padding-top: 7px;
-			    .pull-left;					
+				.pull-left;
 			}
 
 			.contentHotNews {
@@ -251,20 +240,19 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 					color: @contentNewsColor;
 					height: 18px;
 					margin: 7px 0;
-					
+
 					&:hover {
-				        cursor: pointer;
-                    }
+						cursor: pointer;
+					}
 				}
-			}	
-			
+			}
+
 			.rightHotNews {
 				background: url(images/bg-rightHotNews.png) no-repeat;
 				height: 36px;
 				width: 9px;
-			}		
+			}
 		}
-
 		/* LOGIN - BANNER */
 		&.login-banner {
 			background: url(images/bg-content.png);
@@ -272,7 +260,6 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 
 			.content {
 				.center(@widthPage);
-
 				/* LOGIN BLOCK */
 				.login-block {
 					padding: 0 0 0 10px;
@@ -280,7 +267,7 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 
 					.login {
 
-						.title-login {						
+						.title-login {
 							.bg-title;
 
 							.txtTitle {
@@ -296,11 +283,11 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 							}
 
 							.title-block {
-								float: left;							
-							}					
+								float: left;
+							}
 
 							input {
-								width: 198px;							
+								width: 198px;
 								margin: 0 0 10px 10px;
 
 								&#btnlogin {
@@ -308,10 +295,10 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 									height: 24px;
 								}
 							}
-					
+
 							#txtvalidate {
 								width: 65px;
-							}						
+							}
 
 							.forget-pass {
 								color: #ED1C24;
@@ -324,46 +311,46 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 							margin: 20px 0 0;
 						}
 					}
-					
+
 					.after-login {
 						margin-top: 7px;
-						
+
 						.bg-top {
 							background: url(images/bg-topAfterLoginMenu.png) no-repeat;
 							width: 100%;
-							height: 9px;							
+							height: 9px;
 						}
 
 						.bg-content {
 							background: url(images/bg-afterLoginMenu.jpg) repeat;
 							width: 100%;
 							height: 287px;
-							
+
 							.txtTitle {
 								color: @primaryColor;
 								text-align: center;
 								.font-title;
 								width: 175px;
 								margin: auto;
-								padding: 7px 0;	
+								padding: 7px 0;
 							}
-						
+
 							.left-menu {
 								li {
 									list-style: none;
 									height: 25px;
-									margin: 5px 0;							
+									margin: 5px 0;
 									padding: 1px 0 0 45px;
-									color: @menuAfterLoginColor;					
+									color: @menuAfterLoginColor;
 									background: url(images/bg-leftMenu.png) no-repeat 0 0;
-								
+
 									a {
 										color: @menuAfterLoginColor;
 										text-decoration: none;
-									
+
 										&:hover {
 											color: @hoverMenuAfterLoginColor;
-										}									
+										}
 									}
 
 									&.have-child {
@@ -393,13 +380,11 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 										}
 									}
 								}
-							}							
-						}										
-					}				
+							}
+						}
+					}
 				}
-
 				/* BANNER */
-
 				.banner_main {
 					padding: 0 0 0 5px;
 					width: 705px;
@@ -410,11 +395,9 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 						margin: 6px 0 0;
 					}
 				}
-			}			
+			}
 		}
-		
 		/* CONTENTS */
-
 		&.contents {
 			background: url(images/bg-content.png);
 			padding: 0 0 10px 0;
@@ -422,19 +405,19 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 			.title {
 				.center(@widthPage);
 				background: url(images/bg-leftTitle.png) no-repeat left center;
-				height: 36px;					
-				margin: 5px auto auto;				
+				height: 36px;
+				margin: 5px auto auto;
 				position: relative;
-				
+
 				.txtTitle {
 					margin: auto;
 					text-align: center;
 					color: @white;
-					background: url(images/bg-contentTitle.png);					
-					height: 18px;					
+					background: url(images/bg-contentTitle.png);
+					height: 18px;
 					margin: 0 10px 0 10px;
-					padding: 9px 0;	
-					.font-title;				
+					padding: 9px 0;
+					.font-title;
 				}
 
 				.rightTitle {
@@ -446,17 +429,15 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 					top: 0;
 				}
 			}
-
 			/* Formatting For Content Block */
 			.content-blocks {
 				.center(@widthPage);
-								
-				.block {					
+
+				.block {
 					padding: 0 10px;
 					margin: 5px 0;
-
 					/* Formatting For Title of Content */
-					.title-block {						
+					.title-block {
 						.bg-title;
 
 						.txtTitleBlock {
@@ -475,8 +456,8 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 
 						.link-top {
 							//background: url(images/arrow_top.png) left center;
-							background: url("images/bg-content.png") repeat;							
-							height: 18px;							
+							background: url("images/bg-content.png") repeat;
+							height: 18px;
 							width: 36px;
 							padding-left: 5px;
 							.pull-right;
@@ -490,7 +471,6 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 							}
 						}
 					}
-
 					/* Formatting For Subtitle of Content */
 					.sub-title {
 						background: #F2F2F2;
@@ -515,14 +495,14 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 						.list-action {
 							margin: 0 3px 0 0;
 
-							.selMonth, .selYear {							
+							.selMonth, .selYear {
 								height: 25px;
 								margin: 3px 0;
 								color: @textColor;
 							}
 
 							.selMonth {
-								width: 80px;							
+								width: 80px;
 							}
 
 							.selYear {
@@ -540,7 +520,7 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 						.txt {
 							width: 245px;
 							margin: 5px;
-						}						
+						}
 					}
 
 					.block {
@@ -550,7 +530,6 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 							margin-right: 20px;
 						}
 					}
-
 					/* Formatting For Main Content */
 					.content-block {
 						margin: 10px 10px 0;
@@ -580,11 +559,10 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 						.padd15 {
 							padding: 0 15px;
 						}
-
 						/* Formatting For Tables Which Were Used For The Report */
 						table.tblReport {
 							width: 630px;
-							border: 1px solid @tableBorderColor;				
+							border: 1px solid @tableBorderColor;
 							margin: 10px;
 							margin: auto auto 10px;
 
@@ -600,10 +578,9 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 									font-weight: normal;
 									text-align: center;
 									background: @headerBackground;
-									color: @tableHeaderColor;									
+									color: @tableHeaderColor;
 								}
-
-							} 
+							}
 
 							tbody tr td {
 								background: @tableBodyBackground;
@@ -615,7 +592,6 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 								}
 							}
 						}
-
 						/* Formatting For Contact Form */
 						#frmContactUs {
 							margin: 0 0 30px 0;
@@ -623,6 +599,7 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 							* {
 								vertical-align: top;
 							}
+
 							textarea {
 								width: 370px;
 								height: 140px;
@@ -630,14 +607,13 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 							}
 
 							.inputText {
-
 							}
 
 							#txtvalidate {
 								width: 65px;
 							}
 						}
-						
+
 						.mssError {
 							min-height: 40px;
 							margin: 15px 0;
@@ -649,7 +625,7 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 							}
 
 							.top {
-								background: url(images/bg-topMessageBox.png) no-repeat left center;								
+								background: url(images/bg-topMessageBox.png) no-repeat left center;
 							}
 
 							.center {
@@ -679,7 +655,6 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 								}
 							}
 						}
-						
 						/* Formatting For Tables Which have odd row and even row */
 						.odd-even {
 							width: 710px;
@@ -689,10 +664,10 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 									td {
 										padding: 3px 5px;
 										border-top: none;
-										
+
 										&.text-right {
 											text-align: right;
-										}						
+										}
 									}
 
 									&.odd td {
@@ -729,14 +704,14 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 										border-left: 1px solid @listTableBorderColor;
 										border-top: 1px solid @borderListTableBodyColor;
 										padding: 4px 7px;
-										
+
 										&.text-right {
 											.text-right;
 										}
 
 										&.text-center {
 											.text-center;
-										}							
+										}
 									}
 
 									&.noBorder-left-top {
@@ -756,60 +731,59 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 											border-left: 1px solid @evenRowListTableBackground;
 										}
 									}
-								}	
+								}
 							}
-						}			
+						}
 					}
-				}				
-			}			
+				}
+			}
 		}
-
 		/* FOOTER */
-
 		&.footer {
 			background: @footerBackground;
 			color: @textFooterColor;
 			height: 35px;
-			padding: 7px 0;			
-			
+			padding: 7px 0;
+
 			* {
 				vertical-align: top;
 			}
 
 			.content {
 				.center(@widthPage);
-						
+
 				.browser {
 					float: left;
 					width: 240px;
-				
+
 					a {
-						height:16px;
+						height: 16px;
 						width: 16px;
 						color: @footerLinkColor;
 						padding-left: 22px;
 
 						&.firefox {
-							background: url(images/icon-firefox.png) no-repeat;							
+							background: url(images/icon-firefox.png) no-repeat;
 						}
-				
+
 						&.ie {
 							background: url(images/icon-IE.png) no-repeat;
 						}
 					}
 				}
-			
+
 				.button-footer {
 					text-align: center;
 					width: auto;
 					float: left;
+					margin-left: 280px;
 
 					a {
 						color: @footerLinkColor;
 						padding-left: 5px;
 						text-decoration: none;
 
-						&.current{
+						&.current {
 							.current-link;
 						}
 
@@ -818,13 +792,13 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 						}
 					}
 				}
-			
+
 				.copyright {
 					float: right;
 					text-align: right;
 					width: 270px;
 				}
-			}			
+			}
 		}
 	}
 }
@@ -840,7 +814,7 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 				.top-menu table {
 					margin-top: 15px;
 				}
-			} 
+			}
 
 			&.hotNews {
 				.content .span9 {
@@ -849,13 +823,13 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 
 				.contentHotNews {
 					width: 885px;
-					padding: 7px 0;					
+					padding: 7px 0;
 				}
 			}
 
 			&.contents {
 				.content .block {
-					.content .mssError .top, 				
+					.content .mssError .top,
 					.content .mssError .bottom {
 						height: 11px;
 					}
@@ -869,14 +843,14 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 						margin-top: 0;
 					}
 				}
-			} 				
+			}
 		}
-	} 
+	}
 }
 
 .eq-ie7, .eq-ie8 {
 	.container-fluid {
-		.span12 {		
+		.span12 {
 			&.header {
 				height: 159px;
 
@@ -888,7 +862,7 @@ textarea, select, input[type="text"], input[type="submit"], input[type="button"]
 			&.footer {
 				height: 25px;
 				padding-bottom: 0;
-			}						
+			}
 		}
-	} 
-}	
+	}
+}

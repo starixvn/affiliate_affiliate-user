@@ -37,7 +37,7 @@ textarea, select, input[type="text"], input[type="password"], input[type="submit
 	font-size: @fontSize;
 	color: @black;
 	margin: 0;
-	.border-radius(0);	
+	.border-radius(0);
 }
 input[type="text"], input[type="password"], input[type="Reset"] {
 	height: 19px;
@@ -59,29 +59,26 @@ select {
 
 	.span12 {
 		margin-left: 0;
-
 		/* HEADER */
-
 		&.header {
 			background: url(images/header_gradient.png) repeat-x;
-			
 			height: 86px;
 			margin: 0 auto;
 			position: relative;
 
 			.top-header {
 				/* LOGO */
-				.logo {			
+				.logo {
 					float: left;
 					height: 46px;
 					width: 345px;
 					margin-top: 5px;
-					margin-left:15px;
+					margin-left: 15px;
+
 					&.logo_en-US {
 						background: url(images/sprite.png) 0 -62px no-repeat;
 					}
 				}
-
 				/* LANGUAGE */
 				#language {
 					line-height: 17px;
@@ -93,74 +90,74 @@ select {
 
 					#box {
 						background: url(images/sprite.png) -86px -297px no-repeat;
-									cursor: pointer;
-									height: 21px;
-									padding: 6px 0 0 8px;
-									margin-top: 2px;
+						cursor: pointer;
+						height: 21px;
+						padding: 6px 0 0 8px;
+						margin-top: 2px;
 
 						.arrUp {
 							background: url(images/sprite.png) -35px -429px;
-									cursor: pointer;
-									float: right;
-									height: 5px;
-									margin-top: 5px;
-									width: 15px;
-									margin-right: 7px;
+							cursor: pointer;
+							float: right;
+							height: 5px;
+							margin-top: 5px;
+							width: 15px;
+							margin-right: 7px;
 						}
-						
+
 						.arrDown {
 							.arrUp;
-							background-position:-35px -421px;
-						}	
-						
+							background-position: -35px -421px;
+						}
+
 						.en-US {
 							background: url(images/sprite.png) -222px -302px no-repeat;
 							color: @black;
 							padding-left: 30px;
 						}
 
-						.zh-CN {							
+						.zh-CN {
 							.en-US;
-							background-position:-221px -316px;						
+							background-position: -221px -316px;
 						}
 
 						.zh-TW {
 							.en-US;
-							background-position:-221px -316px;	
+							background-position: -221px -316px;
 						}
 
 						.ko-KR {
 							.en-US;
-							background-position:-223px -331px;
+							background-position: -223px -331px;
 						}
 
 						.id-ID {
 							.en-US;
-							background-position:-222px -536px;	
+							background-position: -222px -536px;
 						}
 
 						.th-TH {
 							.en-US;
-							background-position:-222px -503px;	
+							background-position: -222px -503px;
 						}
-						
+
 						.lang-list {
 							width: 136px;
 							margin: 2px 0 0 -10px;
 							position: absolute;
 							z-index: 999;
 							display: none;
-							
+
 							.lang-top {
 								background: url("images/bg-topLanguage.png") no-repeat;
 								height: 6px;
 							}
-                            
+
 							.lang-content {
 								background: url("images/bg-contentLanguage.png") repeat-y;
 								padding-bottom: 5px;
 								text-align: left;
-								
+
 								ul, li {
 									margin: 0;
 									padding: 0;
@@ -177,22 +174,18 @@ select {
 									z-index: 10;
 								}
 							}
-                            
+
 							.lang-bottom {
 								background: url("images/bg-bottomLanguage.png") no-repeat;
 								height: 6px;
 							}
-                            
 						}
-
 					}
-				
 				}
-
 				/* LOGOUT LINK */
-				.after-login-info {			
+				.after-login-info {
 					height: 25px;
-					margin: 2px 8px;					
+					margin: 2px 8px;
 					.pull-right;
 
 					* {
@@ -204,18 +197,19 @@ select {
 						padding: 5px 0 0 15px;
 						.setWidthHeight(70px, 19px);
 						.pull-left;
-						a{
+
+						a {
 							color: @white;
 							margin-left: 8px;
 							text-transform: uppercase;
-							font-weight:bold;
+							font-weight: bold;
 						}
-						a:hover{
-							color:#ffb046;
+
+						a:hover {
+							color: #ffb046;
 						}
 					}
 				}
-
 				/* DATETIME */
 				#datetime {
 					color: @dateTimeColor;
@@ -224,32 +218,32 @@ select {
 					line-height: 26px;
 					margin-right: 20px;
 					text-align: right;
-					width:210px;
+					width: 210px;
 					float: right;
+
 					.clock {
 						background: url(images/sprite.png) -143px -415px;
 						height: 26px;
 						width: 20px;
-						.pull-left;	
+						.pull-left;
 					}
-				}	
+				}
 			}
-
 			/* TOPMENU */
-
 			.top-menu {
 				margin-left: 3px;
 
 				ul {
 					float: left;
 					margin: 0;
-					font-weight: bold;					
+					font-weight: bold;
 					padding-top: 11px;
-					width:700px;
-						
+					width: 700px;
+
 					li {
 						display: inline;
-						line-height:24px;
+						line-height: 24px;
+
 						a {
 							background: url(images/bgMainMenu_01.png) no-repeat left top;
 							float: left;
@@ -271,47 +265,43 @@ select {
 
 						&.current a, a:hover {
 							background-position: 0 -24px;
-							
+
 							span {
 								white-space: nowrap;
 								background-position: 100% -24px;
-								color:#ffb046;
+								color: #ffb046;
 							}
 						}
-				    }
+					}
 				}
-				
 				/* DATETIME */
 				#datetime {
 					color: @dateTimeColor;
 					float: right;
-                    font-size: 11px;
-                    font-weight: bold;
-                    line-height: 26px;
-                    margin-top: 4px;
-                    text-align: left;
-                    width: 230px;
-					
+					font-size: 11px;
+					font-weight: bold;
+					line-height: 26px;
+					margin-top: 4px;
+					text-align: left;
+					width: 230px;
+
 					.clock {
 						background: url(images/sprite.png) -143px -415px;
 						height: 26px;
 						width: 20px;
 						margin-right: 5px;
-                        margin-top: 1px;
-						.pull-left;	
+						margin-top: 1px;
+						.pull-left;
 					}
-				}	
-			}						
+				}
+			}
 		}
-
 		/* RED LINE */
-
 		&.red-line {
 			background: @lineBackground;
 			min-height: 3px;
 			margin: 0 1px;
 		}
-
 		/* HOT NEWS */
 		&.hotNews {
 			background: url(images/bghotNewsContent.png) repeat-x center bottom;
@@ -320,32 +310,32 @@ select {
 			width: 921px;
 			margin: 2px 6px 0 9px;
 			padding: 1px;
-			
+
 			.row-fluid {
 				.span2, .span8 {
 					margin: 0;
 					min-height: 21px;
 				}
-			} 
+			}
+
 			.hotNewHeader {
 				background: url(images/sprite.png) -10px -323px;
 				color: @hotNewsColor;
 				height: 22px;
 				width: 116px;
 				text-align: center;
-				.pull-left;				
+				.pull-left;
 
-                .iconHeadline {
+				.iconHeadline {
 					background: url(images/sprite.png) -63px -417px;
 					height: 20px;
 					margin-left: 7px;
 					margin-right: 7px;
 					width: 20px;
 				}
-				
-				.iconHotNew 
-				{
-				    .iconHeadline;
+
+				.iconHotNew {
+					.iconHeadline;
 					background-position: -44px -420px;
 					margin-right: 7px;
 					margin-top: 3px;
@@ -353,9 +343,8 @@ select {
 					width: 20px;
 				}
 
-				.txtHotNew  {
-					a
-					{
+				.txtHotNew {
+					a {
 						color: @white;
 					}
 				}
@@ -369,44 +358,42 @@ select {
 				width: 669px;
 
 				.text_hotnews {
-                    color: brown ; /* #0099FF;*/
-	                font-size: 11px;
-	                padding-left: 10px;
+					color: brown; /* #0099FF;*/
+					font-size: 11px;
+					padding-left: 10px;
 				}
-				
-				.important
-				{
-				    color:  #FF0000;
-                }
+
+				.important {
+					color: #FF0000;
+				}
 			}
 
 			.leftHN, .rightHN {
 				background: url(images/sprite.png) -167px -323px;
 				height: 22px;
-				width:7px;
-				.pull-left;	
+				width: 7px;
+				.pull-left;
 			}
 
 			.rightHN {
 				background-position: 0 -323px;
 			}
 		}
-
 		/* CONTENTS */
-
 		&.contents {
 			height: auto;
 			margin: 7px 0 0 0;
 
 			.button {
-				background: url(images/bg_buttonsite.png) @btnBackground repeat-x center top ;
+				background: url(images/bg_buttonsite.png) @btnBackground repeat-x center top;
 				border: 1px solid @btnBorderColor;
 				color: @btnColor;
 				cursor: pointer;
 				font-size: 11px;
 				font-weight: bold;
-				height:21px;
+				height: 21px;
 				line-height: 15px;
+
 				&:hover {
 					color: @btnHoverColor;
 				}
@@ -415,7 +402,6 @@ select {
 			.mouse-pointer {
 				cursor: pointer;
 			}
-
 			/* LEFT COLUMN */
 			.leftColumn {
 				margin-left: 7px;
@@ -424,15 +410,14 @@ select {
 				.mainBanner {
 					width: auto;
 				}
-				
+
 				.line-block {
 					background: url(images/sprite.png) @lineBlockBackground no-repeat left center;
-					background-position:0 -403px;
+					background-position: 0 -403px;
 					clear: both;
 					font-weight: bold;
 					height: 3px;
 				}
-
 				/* CONTENT */
 				#content {
 					margin: 0 3px;
@@ -445,47 +430,45 @@ select {
 							font-weight: bold;
 							line-height: 18px;
 							padding: 3px 10px 5px 2px;
-						}				
-						
+						}
+
 
 						.content-block {
 							.img-conts {
 								margin: 2px 7px 7px 0;
 								.pull-left;
 							}
-							
+
 							.text-block {
 								width: 225px;
 								.pull-left;
 							}
-						}						
-					}					
+						}
+					}
 				}
-				
-				/* BOX SITE */			
+				/* BOX SITE */
 				.box-insite {
 					border-color: #D6D6D6;
 					border-style: none solid solid;
 					border-width: 0 1px 1px;
-
 					/* TOP BOX */
 					.top {
 						border-top: 1px solid @primaryColor;
-						height: 30px;						
+						height: 30px;
 						width: 100%;
-					
+
 						.in-top {
 							background: url(images/in_top.png) repeat-x;
 							color: @white;
 							float: left;
 							height: 25px;
 							padding: 3px 0 3px 9px;
-							min-width:120px;
+							min-width: 120px;
 							max-width: 200px;
 							text-transform: uppercase;
-							font-weight: bold;					
+							font-weight: bold;
 						}
-					
+
 						.in-right {
 							background: url(images/sprite.png) 0 -358px no-repeat;
 							color: @white;
@@ -499,7 +482,7 @@ select {
 						padding: 10px;
 
 						.txtRequire {
-							color: red;							
+							color: red;
 						}
 
 						.block {
@@ -514,29 +497,30 @@ select {
 									line-height: 17px;
 									padding: 3px 2px 3px 0;
 								}
-																
+
 								a.link-top {
 									float: right;
 									margin-top: 3px;
 									text-decoration: none;
-									color:@black;
+									color: @black;
 									font-weight: normal;
 
-									span{
+									span {
 										background: url(images/sprite.png) -91px -420px;
-										width:12px;
-										height:14px;
-										display:block;
-										float:left;
-										margin-right:2px;
+										width: 12px;
+										height: 14px;
+										display: block;
+										float: left;
+										margin-right: 2px;
 									}
-								}							
+								}
 							}
+
 							.sel-filter {
 								width: 80px;
 								margin: 0 2px 0 0;
 							}
-											
+
 							.box-header {
 								.row {
 									.clearfix;
@@ -566,7 +550,7 @@ select {
 										.icon-calendar {
 											cursor: pointer;
 											background: url(images/sprite.png) -166px -419px;
-											.setWidthHeight(15px, 18px);											
+											.setWidthHeight(15px, 18px);
 										}
 									}
 								}
@@ -576,27 +560,25 @@ select {
 								line-height: 18px;
 								padding: 2px 2px 3px 0;
 								text-align: justify;
-								.middle
-								{
-									input[type="radio"],input[type="checkbox"]
-									{
-										margin-top:-5px;
+
+								.middle {
+									input[type="radio"], input[type="checkbox"] {
+										margin-top: -5px;
 									}
 								}
 								/* Formatting For Tables Which have odd row and even row */
 								.table {
 									border: 1px solid #d7cfcf;
-									
-									th, td 
-									{
-									    line-height: 17px;
-									    
-									    &.important {
-									        color: #F00;
-                                        }
-                                    }
+
+									th, td {
+										line-height: 17px;
+
+										&.important {
+											color: #F00;
+										}
+									}
 								}
-								
+
 								.odd-even {
 									width: 100%;
 									margin: 10px 0;
@@ -606,10 +588,10 @@ select {
 											td {
 												padding: 1px 5px;
 												border-top: none;
-										
+
 												&.text-right {
 													text-align: right;
-												}																	
+												}
 											}
 
 											&.odd td {
@@ -635,18 +617,18 @@ select {
 									&.list {
 										background: @listTableBackground;
 										border-spacing: 1px;
-										border-collapse: separate;										
+										border-collapse: separate;
 
 										* {
 											vertical-align: middle;
 										}
 
-										thead {											
+										thead {
 
 											th {
 												background: @listTableHeaderBackground;
 												color: @listTableHeaderColor;
-												font-weight: normal;											
+												font-weight: normal;
 												line-height: 10px;
 											}
 
@@ -660,23 +642,23 @@ select {
 												}
 
 												&.line-height th {
-													 line-height: 15px;
+													line-height: 15px;
 												}
 											}
 										}
 
 										tr {
-											td {												
+											td {
 												padding: 2px 7px;
 												border-top: none;
-										
+
 												&.text-right {
 													.text-right;
 												}
 
 												&.text-center {
 													.text-center;
-												}							
+												}
 											}
 
 											&.odd {
@@ -684,7 +666,7 @@ select {
 											}
 
 											&.even {
-												background: @evenRowListTableBackground;												
+												background: @evenRowListTableBackground;
 											}
 
 											&:hover {
@@ -692,17 +674,16 @@ select {
 													background: #FFF5A5;
 												}
 											}
-											
+
 											&.gradient-summary td {
 												background: @footerBackground;
 												color: @white;
 												font-weight: bold;
 												line-height: 15px;
 											}
-										}	
+										}
 									}
 								}
-								
 								/* Paging */
 								.pagesize {
 									background: url(images/sprite.png) 0 -501px no-repeat;
@@ -719,14 +700,14 @@ select {
 										width: 50px;
 									}
 								}
-								
+
 								.paging-info {
 									background: #E1E1E1;
 									border: 1px solid #CACACA;
 									height: 21px;
 									padding-left: 5px;
 									padding-top: 4px;
-									padding-bottom:3px;
+									padding-bottom: 3px;
 									text-align: center;
 
 									input {
@@ -767,8 +748,8 @@ select {
 											}
 
 											&.pagingHiden {
-												display:none;
-												width:100%;
+												display: none;
+												width: 100%;
 											}
 										}
 
@@ -776,7 +757,7 @@ select {
 											width: 23px;
 											margin: 0px 4px;
 											white-space: nowrap;
-											height:18px;	
+											height: 18px;
 											text-align: center;
 										}
 									}
@@ -792,7 +773,7 @@ select {
 							}
 						}
 
-						
+
 						.frmRegister, .frmForgetPass {
 							table {
 								margin-top: 10px;
@@ -803,7 +784,7 @@ select {
 
 								textarea, input[type="text"], select {
 									margin: 0 0 5px 10px;
-									.border-radius(0);									
+									.border-radius(0);
 									.pull-left;
 								}
 
@@ -815,21 +796,19 @@ select {
 									height: 21px;
 									margin: 0 5px;
 								}
-
 							}
 						}
-
 						/* Register Account*/
 						.frmRegister {
 							table {
-							
+
 								.txtRequire {
 									.pull-left;
 								}
 
 								.lbl {
-									width: 150px; 
-								}								
+									width: 150px;
+								}
 
 								select {
 									.setWidthHeight(213px, 22px);
@@ -843,7 +822,7 @@ select {
 									margin-left: 17px;
 								}
 
-								.inputUserName  {
+								.inputUserName {
 									margin-bottom: 0;
 								}
 
@@ -855,11 +834,11 @@ select {
 									margin-top: 20px;
 
 									a {
-										color: @black;	
-									
+										color: @black;
+
 										&:hover {
 											color: @hoverLinkColor;
-										}								
+										}
 									}
 								}
 
@@ -875,10 +854,9 @@ select {
 										}
 									}
 								}
-							}				
+							}
 						}
 					}
-
 					/* Forget Password */
 					.frmForgetPass {
 						table {
@@ -899,7 +877,6 @@ select {
 							}
 						}
 					}
-
 					/* CONTACT MESSAGE */
 					/* CONTACT FORM */
 					table.frmContact {
@@ -907,44 +884,42 @@ select {
 						border: 0;
 
 						.lbl {
-								width: 90px;
-								display: block;
-								margin-bottom: 5px;
-						}
-						
-						.txtCharacter {
-								color: red;
-								font-size: 12px;
+							width: 90px;
+							display: block;
+							margin-bottom: 5px;
 						}
 
-						input[type="text"]{						
-							margin: 0 0 5px 2px;						
+						.txtCharacter {
+							color: red;
+							font-size: 12px;
+						}
+
+						input[type="text"] {
+							margin: 0 0 5px 2px;
 							.border-radius(0);
 							.setWidthHeight (137px, 20px);
 						}
-						
-						.textComment {
-									width: 427px;
-									height: 115px;
-									margin: 0 0 5px 2px;
-						}	
 
-						#imgCaptchaContactUs{
-							 margin: 0 0 5px 2px;
+						.textComment {
+							width: 427px;
+							height: 115px;
+							margin: 0 0 5px 2px;
+						}
+
+						#imgCaptchaContactUs {
+							margin: 0 0 5px 2px;
 						}
 					}
-					
-					#MessageSentSuccuess{
-							display: none;
-						}					
-				}				
-			}
 
+					#MessageSentSuccuess {
+						display: none;
+					}
+				}
+			}
 			/* RIGHT COLUMN */
 			.rightColumn {
 				margin: 0 7px;
 				width: 268px;
-
 				/* TITLE BLOCK */
 				.title-block {
 					background: url(images/sprite.png) 0 -108px no-repeat;
@@ -959,7 +934,7 @@ select {
 
 					.btn-show {
 						background: url(images/iconExpand.png) no-repeat center top;
-						padding: 6px 10px 5px;	
+						padding: 6px 10px 5px;
 						height: 22px;
 						position: absolute;
 						right: 20px;
@@ -985,14 +960,13 @@ select {
 						margin-bottom: 5px;
 					}
 				}
-
 				/* LOGIN BLOCK */
 				.login-block {
 					background: url(images/sprite.png) 0 -144px;
-					padding: 6px 10px 5px;	
+					padding: 6px 10px 5px;
 					height: 143px;
-					
-					.icuser >label, .icpass >label{
+
+					.icuser > label, .icpass > label {
 						height: 16px;
 						width: 250px;
 						padding-left: 20px;
@@ -1001,16 +975,16 @@ select {
 
 					.icuser {
 						background: url(images/sprite.png) 0 -420px;
-						width:18px;						
+						width: 18px;
 					}
 
 					.icpass {
-						background: url(images/sprite.png) -17px -420px;	
-						width:18px;		
+						background: url(images/sprite.png) -17px -420px;
+						width: 18px;
 					}
-					
+
 					input[type="text"], input[type="password"] {
-						margin: 0 0 5px 20px;						
+						margin: 0 0 5px 20px;
 						font-size: @fontSize;
 						color: @textColor;
 						.border-radius(0);
@@ -1022,7 +996,7 @@ select {
 					}
 
 					.action {
-						
+
 						* {
 							vertical-align: top;
 						}
@@ -1036,19 +1010,18 @@ select {
 						margin-left: 20px;
 
 						a {
-							color: @black;	
-									
+							color: @black;
+
 							&:hover {
 								color: @hoverLinkColor;
-							}								
+							}
 						}
 					}
 				}
-
 				/* AFTER LOGIN BLOCK */
 				ul.after-login-block {
 					margin: 0;
-					padding-bottom:5px;
+					padding-bottom: 5px;
 					width: 268px;
 
 					li {
@@ -1068,57 +1041,53 @@ select {
 								color: #FF9900;
 							}
 						}
-						&.sub{
-                            margin-left: 25px;
-							
-							a{
+
+						&.sub {
+							margin-left: 25px;
+
+							a {
 								background: none;
 								padding: 4px 0 0 5px;
 								font-weight: normal;
 								display: inline-block;
 							}
-							
-							.leftArrow
-							{
+
+							.leftArrow {
 								background: url(images/ui-icons_454545_256x240.png) -35px -13px no-repeat;
 								display: inline-block;
 								height: 15px;
 								width: 10px;
 							}
 						}
-
-					} 
+					}
 				}
-
 				/* FAQS */
 				.faqs-block {
-					background:#A49B9C;
+					background: #A49B9C;
 					padding: 6px 10px 10px;
 					margin-bottom: 5px;
-					
+
 					.white-link {
 						color: @white;
 						display: block;
 						line-height: 20px;
 						text-decoration: none;
-                        margin-bottom: 0px;
+						margin-bottom: 0px;
 					}
 
-                    li{
-                        border-bottom: 1px dotted @white;
-                    }
+					li {
+						border-bottom: 1px dotted @white;
+					}
 				}
 			}
 		}
-
 		/* FOOTER */
-
 		&.footer {
 			background: @footerBackground;
 			height: 50px;
 			margin-top: 7px;
 			padding: 15px 10px 5px;
-			
+
 			* {
 				vertical-align: top;
 			}
@@ -1126,22 +1095,23 @@ select {
 			.browser {
 				float: left;
 				width: 280px;
-				
+
 				.firefox {
 					background: url(images/sprite.png) -59px -358px no-repeat;
 					padding: 4px 32px 5px;
 				}
-				
+
 				.ie {
 					background: url(images/sprite.png) -122px -358px;
 					padding: 4px 30px 5px;
 				}
 			}
-			
+
 			.button-footer {
 				text-align: center;
 				width: auto;
 				float: left;
+				margin-left: 280px;
 
 				a {
 					color: @footerLinkColor;
@@ -1149,7 +1119,7 @@ select {
 					text-decoration: none;
 				}
 			}
-			
+
 			.copyright {
 				float: right;
 				text-align: right;
@@ -1172,7 +1142,7 @@ select {
 	padding: 0;
 	height: 180px;
 	color: #924910;
-	
+
 	.span12 {
 		margin: 0;
 		padding: 0;
@@ -1185,8 +1155,8 @@ select {
 			    margin: 0 auto;
 				.setWidthHeight (652px, 180px);
 				background: url(images/deco.jpg) no-repeat;
-				
-				.title 
+
+				.title
 				{
 				    padding-top: 130px;
 				    text-align: center;
@@ -1210,7 +1180,7 @@ select {
 	{
 	    background: url(images/error_icons.png) no-repeat;
 	    .setWidthHeight (246px, 210px);
-	    
+
 	    &.ic-maintenance
 	    {
 	        background-position: 0px -210px;
@@ -1224,14 +1194,14 @@ select {
 	    {
 	        background-position: 0px 0px;
 	    }
-	    
-	}	
+
+	}
 	.notify-content
 	{
 	    li
 	    {
-	         border-bottom: 1px dotted #006600; 
-	         list-style-type: none; 
+	         border-bottom: 1px dotted #006600;
+	         list-style-type: none;
 	         padding: 10px;
 	         font-size: 14px;
 	    }
