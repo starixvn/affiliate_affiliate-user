@@ -16,6 +16,7 @@
     @Html.Partial("_AffResources")
     @MiniProfiler.RenderIncludes()
 
+    @Html.Raw(Fanex.Logging.LogManager.RenderJavascriptLogger())
     @Scripts.Render("~/js/jquery")
     @Scripts.Render("~/js/core")
     @RenderSection("scripts", required: false)

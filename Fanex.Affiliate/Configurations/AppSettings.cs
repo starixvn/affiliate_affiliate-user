@@ -244,11 +244,35 @@
             }
         }
 
-        public static bool IsHideBetList
+        public static string SentryBackEndDsn
         {
             get
             {
-                return Convert.ToBoolean(GetValue("IsHideBetList"));
+                return GetValue("SentryBackEndDsn");
+            }
+        }
+
+        public static string SentryFrontEndDsn
+        {
+            get
+            {
+                return GetValue("SentryFrontEndDsn");
+            }
+        }
+
+        public static string LoggingCategory
+        {
+            get
+            {
+                return GetValue("LoggingCategory");
+            }
+        }
+
+        public static bool IsRegisterSentry
+        {
+            get
+            {
+                return Convert.ToBoolean(GetValue("IsRegisterSentry"));
             }
         }
 

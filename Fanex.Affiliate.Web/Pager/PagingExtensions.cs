@@ -1,19 +1,13 @@
 ﻿namespace Fanex.Affiliate.Web.Pager
 {
     using System.Collections.Generic;
-    using System.Diagnostics.CodeAnalysis;
     using System.Linq;
     using System.Web.Mvc;
     using System.Web.Mvc.Ajax;
-    using System.Web.Mvc.Html;
 
     /// <summary>
     /// Paging Extensions.
     /// </summary>
-    [SuppressMessage(
-        "Microsoft.Design",
-        "CA1026:DefaultParametersShouldNotBeUsed",
-        Justification = "Since Betlist.dll used that data-structure.")]
     public static class PagingExtensions
     {
         #region HtmlHelper extensions

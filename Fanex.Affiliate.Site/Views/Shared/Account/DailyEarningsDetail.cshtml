@@ -47,13 +47,6 @@
                                 <div class="editor">
                                     <input id="submit" type="submit" value="@Lang.Submit" class="button"></div>
                             </div>
-                            @if (AppSettings.IsShowDetailDailyEarnings)
-                            { 
-                                <div class="cell" style="float:right !important;">
-                                    <img id="betlistNote" style="cursor:hand;" src="~/Content/betlist/images/note.png" onmouseover="showBetlistTooltip()" title="@Lang.DontShowRunningBetList" />
-                                </div>
-                            }
-                            
                         </div>
                     </div>
                 </div>
@@ -168,11 +161,7 @@
                                             <td class="text-center">@count.ToString()
                                             </td>
                                             <td class="text-center">
-                                                @if (!AppSettings.IsHideBetList && (dailyEarningDetail.Turnover > 0 || (dailyEarningDetail.Turnover == 0 && dailyEarningDetail.Winlost != 0)))
-                                                {
-                                                    @Html.Raw(string.Format("<a href='javascript:;' class='domain-view-detail' data-domain-username='{0}' data-domain-product='{1}' data-domain-winlostdate='{2}' data-domain-currency='{3}' data-domain-affcurrency='{4}'>{5}</a>", dailyEarningDetail.Username, Model.ProductId == 0 ? "All" : Model.ListProduct.Where(l=>l.ProductId == Model.ProductId).First().OriginalProductName, Model.MonthDate, dailyEarningDetail.Currency, ViewBag.AffiliateCurrency, dailyEarningDetail.Username));
-                                                }
-                                                else
+                                                @if (!(dailyEarningDetail.Turnover > 0 || (dailyEarningDetail.Turnover == 0 && dailyEarningDetail.Winlost != 0)))
                                                 {
                                                     @Html.Raw(dailyEarningDetail.Username);
                                                 }
@@ -254,14 +243,4 @@
             </div>
         </div>
     </div>
-}
-
-@section scriptspage
-{
-    <script type="text/javascript">
-    var MSG = {
-        BetListTitle: "@Lang.BetListTitle"
-    };
-    </script>
-    @Scripts.Render("~/js/dailyearnings")
 }

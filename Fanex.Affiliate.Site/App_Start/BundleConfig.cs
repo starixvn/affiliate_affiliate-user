@@ -108,7 +108,6 @@
         {
             RegisterFunctionUser(bundles);
             RegisterFunctionAccount(bundles);
-            RegisterFunctionBetList(bundles);
             RegisterFunctionToolTips(bundles);
         }
 
@@ -132,10 +131,6 @@
 
             bundles.Add(new ScriptBundle("~/js/changepwd")
                 .Include("~/Scripts/site/change-password.js"));
-
-            // Daily earnings
-            bundles.Add(new ScriptBundle("~/js/dailyearnings")
-                .Include("~/Scripts/site/dailyearnings-detail.js"));
 
             // Landing pages
             bundles.Add(new ScriptBundle("~/js/landingpages")
@@ -174,47 +169,6 @@
 
             bundles.Add(new ScriptBundle("~/js/contactus")
                 .Include("~/Scripts/site/contact-us.js"));
-        }
-
-        /// <summary>
-        /// Registers Bet List.
-        /// </summary>
-        /// <param name="bundles">The bundles.</param>
-        private static void RegisterFunctionBetList(BundleCollection bundles)
-        {
-            bundles.Add(new Bundle("~/css/betlist")
-            {
-                Transforms = { new CssTransformer(), new CssMinify() },
-                Orderer = new NullOrderer()
-            }
-            .Include("~/Content/betlist/betlist.css")
-            .Include("~/Content/betlist/betlist.core.css")
-            .Include("~/Content/betlist/systemparlay.detail.css")
-            .Include("~/Content/betlist/rngcasino.handhistory.css")
-            .Include("~/Content/betlist/fanex.result.css")
-            .Include("~/Content/betlist/custom-betlist.css"));
-
-            bundles.Add(new ScriptBundle("~/js/betlist")
-                .Include("~/Scripts/site/betlist.js"));
-
-            bundles.Add(new ScriptBundle("~/js/betlistrngcasino")
-                .Include("~/Scripts/site/rngcasino-results.js"));
-
-            bundles.Add(new Bundle("~/css/systemparlaydetails")
-            {
-                Transforms = { new CssTransformer(), new CssMinify() },
-                Orderer = new NullOrderer()
-            }
-            .Include("~/Content/betlist/global.content.css")
-            .Include("~/Content/betlist/systemparlay.detail.css"));
-
-            bundles.Add(new Bundle("~/css/cashoutdetail")
-            {
-                Transforms = { new CssTransformer(), new CssMinify() },
-                Orderer = new NullOrderer()
-            }
-            .Include("~/Content/betlist/global.content.css")
-            .Include("~/Content/betlist/cashoutdetail.css"));
         }
 
         /// <summary>

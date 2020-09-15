@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -1099,16 +1099,6 @@
   <data name="Racebook" xml:space="preserve">
     <value>賽馬</value>
   </data>
-  <data name="BetList" xml:space="preserve">
-    <value>注单
-</value>
-  </data>
-  <data name="DontShowRunningBetList" xml:space="preserve">
-    <value>我们目前不支持及时下注清单</value>
-  </data>
-  <data name="BetListResults" xml:space="preserve">
-    <value>赛果</value>
-  </data>
   <data name="PlaytechCasino" xml:space="preserve">
     <value>娱乐厅</value>
   </data>
@@ -1909,9 +1899,6 @@
   </data>
   <data name="CurrentMonthStatistics" xml:space="preserve">
     <value>本月统计资料</value>
-  </data>
-  <data name="BetListTitle" xml:space="preserve">
-    <value>下注清单 {0} - {1} - 查看 {2}</value>
   </data>
   <data name="Close" xml:space="preserve">
     <value>关</value>

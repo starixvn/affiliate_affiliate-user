@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -1093,15 +1093,6 @@
   </data>
   <data name="Racebook" xml:space="preserve">
     <value>Racebook</value>
-  </data>
-  <data name="BetList" xml:space="preserve">
-    <value>Bet List</value>
-  </data>
-  <data name="DontShowRunningBetList" xml:space="preserve">
-    <value>We don't support running bet list at the moment.</value>
-  </data>
-  <data name="BetListResults" xml:space="preserve">
-    <value>Results</value>
   </data>
   <data name="PlaytechCasino" xml:space="preserve">
     <value>Casino</value>

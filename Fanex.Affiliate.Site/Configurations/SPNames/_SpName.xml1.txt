@@ -2,6 +2,11 @@
 
 // Generated helper templates
 // Generated items
+// Fanex.Affiliate.Site\Configurations\SPNames\SpName.macaubet.mnl.xml
+// Fanex.Affiliate.Site\Configurations\SPNames\SpName.itcbet.mnl.xml
+// Fanex.Affiliate.Site\Configurations\SPNames\SpName.athena000.mnl.xml
+// Fanex.Affiliate.Site\Configurations\SPNames\SpName.aoncash.mnl.xml
+// Fanex.Affiliate.Site\Configurations\SPNames\SpName.spondemo.mnl.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.macaubet.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.itcbet.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.athena000.production.xml

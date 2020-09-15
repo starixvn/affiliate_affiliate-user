@@ -90,8 +90,12 @@
       <HintPath>..\packages\Fanex.Data.DbSettingProviderExtension.1.0.0.1\lib\net40\Fanex.Data.DbSettingProviderExtension.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Fanex.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Logging.1.0.0.0\lib\net40\Fanex.Logging.dll</HintPath>
+    <Reference Include="Fanex.Logging, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Logging.2.0.1\lib\net461\Fanex.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fanex.Logging.Sentry.RavenClient, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Logging.Sentry.RavenClient.1.0.1\lib\net461\Fanex.Logging.Sentry.RavenClient.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="HandHistoryLibrary, Version=1.0.0.43, Culture=neutral, processorArchitecture=MSIL">
@@ -126,8 +130,8 @@
       <HintPath>..\packages\LiveCasinoLibrary.1.0.0.18\lib\net40\LiveCasinoLibrary.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="log4net, Version=1.2.9.0, Culture=neutral, PublicKeyToken=b32731d11ce58905">
-      <HintPath>..\packages\HandHistoryLibrary.1.0.0.43\lib\net40\log4net.dll</HintPath>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.ApplicationBlocks.Data, Version=3.1.0.0, Culture=neutral">
@@ -195,6 +199,10 @@
       <HintPath>..\packages\RestSharp.105.2.3\lib\net46\RestSharp.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="SharpRaven, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpRaven.2.4.0\lib\net45\SharpRaven.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="SimpleInjector, Version=3.1.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
       <HintPath>..\packages\SimpleInjector.3.1.2\lib\net45\SimpleInjector.dll</HintPath>
       <Private>True</Private>
@@ -238,8 +246,14 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -298,6 +312,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\LoggingConfig.cs" />
     <Compile Include="App_Start\SimpleInjectorInitializer.cs" />
     <Content Include="Configurations\ConnectionStrings\_ConnectionString.xml.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -308,10 +323,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
     </Content>
+    <Content Include="Configurations\SPNames\SpName.aoncash.mnl.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
     <Content Include="Configurations\SPNames\SpName.aoncash.production.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.aoncash.uat.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.athena000.mnl.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.athena000.production.xml">
@@ -323,6 +344,9 @@
     <Content Include="Configurations\SPNames\SpName.athena000.uat.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
+    <Content Include="Configurations\SPNames\SpName.itcbet.mnl.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
     <Content Include="Configurations\SPNames\SpName.itcbet.production.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
@@ -330,6 +354,9 @@
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.itcbet.uat.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.macaubet.mnl.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.macaubet.production.xml">
@@ -342,6 +369,9 @@
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.spondemo.local.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.spondemo.mnl.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.spondemo.production.xml">
@@ -385,8 +415,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
-    <Content Include="Content\betlist\cashoutdetail.css" />
-    <Content Include="Content\betlist\custom-betlist.css" />
     <Content Include="Content\bootstrap\img\glyphicons-halflings-white.png" />
     <Content Include="Content\bootstrap\img\glyphicons-halflings.png" />
     <Content Include="Content\bootstrap\js\bootstrap-affix.js" />
@@ -717,29 +745,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Content Include="Content\betlist\betlist.css" />
-    <Content Include="Content\betlist\betlist.core.css" />
-    <Content Include="Content\betlist\fanex.result.css" />
-    <Content Include="Content\betlist\images\1F.gif" />
-    <Content Include="Content\betlist\images\1L.gif" />
-    <Content Include="Content\betlist\images\goal-icon.png" />
-    <Content Include="Content\betlist\images\note.png" />
-    <Content Include="Content\betlist\images\q_Icon2_1.png" />
-    <Content Include="Content\betlist\images\q_Icon_2.png" />
-    <Content Include="Content\betlist\images\tab_topbg.gif" />
-    <Content Include="Content\betlist\images\undo.png" />
-    <Content Include="Content\betlist\rngcasino.handhistory.css" />
-    <Content Include="Content\betlist\systemparlay.detail.css" />
-    <Content Include="Content\betlist\images\bar-loader.gif" />
-    <Content Include="Content\betlist\images\bgHeader.jpg" />
-    <Content Include="Content\betlist\images\blank.gif" />
-    <Content Include="Content\betlist\images\firstGoal.gif" />
-    <Content Include="Content\betlist\images\lastGoal.gif" />
-    <Content Include="Content\betlist\images\link_14x14.png" />
-    <Content Include="Content\betlist\images\link_16x16.png" />
-    <Content Include="Content\betlist\images\plus.png" />
-    <Content Include="Content\betlist\images\up.png" />
-    <Content Include="Content\betlist\global.content.css" />
     <Content Include="Content\themes\_base\images\animated-overlay.gif" />
     <Content Include="Content\themes\_base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\_base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -872,7 +877,6 @@
     <Content Include="Content\themes\18\images\banner.vi-VN.jpg" />
     <Content Include="Content\themes\18\images\banner.zh-CN.jpg" />
     <Content Include="Content\themes\18\images\banner.zh-TW.jpg" />
-    <Content Include="Content\themes\18\images\bar-loader.gif" />
     <Content Include="Content\themes\18\images\bg-bottomLanguage.png" />
     <Content Include="Content\themes\18\images\bg-contentLanguage.png" />
     <Content Include="Content\themes\18\images\bg-topLanguage.png" />
@@ -892,25 +896,20 @@
     <Content Include="Content\themes\18\images\emailBg.jpg" />
     <Content Include="Content\themes\18\images\error_icons.png" />
     <Content Include="Content\themes\18\images\favicon.jpg" />
-    <Content Include="Content\themes\18\images\firstGoal.gif" />
     <Content Include="Content\themes\18\images\glyphicons-halflings-gray-lighter.png" />
     <Content Include="Content\themes\18\images\glyphicons-halflings-gray.png" />
     <Content Include="Content\themes\18\images\glyphicons-halflings.png" />
     <Content Include="Content\themes\18\images\header_gradient.png" />
     <Content Include="Content\themes\18\images\help.txt" />
     <Content Include="Content\themes\18\images\in_top.png" />
-    <Content Include="Content\themes\18\images\lastGoal.gif" />
-    <Content Include="Content\themes\18\images\link_14x14.png" />
     <Content Include="Content\themes\18\images\loader.gif" />
     <Content Include="Content\themes\18\images\logout.png" />
     <Content Include="Content\themes\18\images\note.png" />
-    <Content Include="Content\themes\18\images\plus.png" />
     <Content Include="Content\themes\18\images\signup.png" />
     <Content Include="Content\themes\18\images\spliter.png" />
     <Content Include="Content\themes\18\images\sprite.png" />
     <Content Include="Content\themes\18\images\tab_topbg.gif" />
     <Content Include="Content\themes\18\images\ui-icons_454545_256x240.png" />
-    <Content Include="Content\themes\18\images\undo.png" />
     <Content Include="Content\themes\18\images\up.png" />
     <Content Include="Content\themes\21\images\banner.en-US.jpg" />
     <Content Include="Content\themes\21\images\banner.id-ID.jpg" />
@@ -920,7 +919,6 @@
     <Content Include="Content\themes\21\images\banner.zh-CN.jpg" />
     <Content Include="Content\themes\21\images\banner.zh-TW.jpg" />
     <Content Include="Content\themes\21\images\banner_top.png" />
-    <Content Include="Content\themes\21\images\bar-loader.gif" />
     <Content Include="Content\themes\21\images\bg-contentLanguage.png" />
     <Content Include="Content\themes\21\images\bgheader.png" />
     <Content Include="Content\themes\21\images\bghotNewsContent.png" />
@@ -939,24 +937,19 @@
     <Content Include="Content\themes\21\images\emailBg.jpg" />
     <Content Include="Content\themes\21\images\error_icons.png" />
     <Content Include="Content\themes\21\images\favicon.jpg" />
-    <Content Include="Content\themes\21\images\firstGoal.gif" />
     <Content Include="Content\themes\21\images\glyphicons-halflings-gray-lighter.png" />
     <Content Include="Content\themes\21\images\glyphicons-halflings-gray.png" />
     <Content Include="Content\themes\21\images\glyphicons-halflings.png" />
     <Content Include="Content\themes\21\images\header_gradient.png" />
     <Content Include="Content\themes\21\images\help.txt" />
     <Content Include="Content\themes\21\images\in_top.png" />
-    <Content Include="Content\themes\21\images\lastGoal.gif" />
-    <Content Include="Content\themes\21\images\link_14x14.png" />
     <Content Include="Content\themes\21\images\loader.gif" />
     <Content Include="Content\themes\21\images\logo-afterlogin.png" />
     <Content Include="Content\themes\21\images\note.png" />
-    <Content Include="Content\themes\21\images\plus.png" />
     <Content Include="Content\themes\21\images\signup.png" />
     <Content Include="Content\themes\21\images\sprite.png" />
     <Content Include="Content\themes\21\images\tab_topbg.gif" />
     <Content Include="Content\themes\21\images\ui-icons_454545_256x240.png" />
-    <Content Include="Content\themes\21\images\undo.png" />
     <Content Include="Content\themes\21\images\up.png" />
     <Content Include="Content\themes\22\images\banner.en-US.jpg" />
     <Content Include="Content\themes\22\images\banner.id-ID.jpg" />
@@ -966,7 +959,6 @@
     <Content Include="Content\themes\22\images\banner.zh-CN.jpg" />
     <Content Include="Content\themes\22\images\banner.zh-TW.jpg" />
     <Content Include="Content\themes\22\images\banner_top.png" />
-    <Content Include="Content\themes\22\images\bar-loader.gif" />
     <Content Include="Content\themes\22\images\bg-contentLanguage.png" />
     <Content Include="Content\themes\22\images\bgheader.png" />
     <Content Include="Content\themes\22\images\bghotNewsContent.png" />
@@ -985,24 +977,19 @@
     <Content Include="Content\themes\22\images\emailBg.jpg" />
     <Content Include="Content\themes\22\images\error_icons.png" />
     <Content Include="Content\themes\22\images\favicon.jpg" />
-    <Content Include="Content\themes\22\images\firstGoal.gif" />
     <Content Include="Content\themes\22\images\glyphicons-halflings-gray-lighter.png" />
     <Content Include="Content\themes\22\images\glyphicons-halflings-gray.png" />
     <Content Include="Content\themes\22\images\glyphicons-halflings.png" />
     <Content Include="Content\themes\22\images\header_gradient.png" />
     <Content Include="Content\themes\22\images\help.txt" />
     <Content Include="Content\themes\22\images\in_top.png" />
-    <Content Include="Content\themes\22\images\lastGoal.gif" />
-    <Content Include="Content\themes\22\images\link_14x14.png" />
     <Content Include="Content\themes\22\images\loader.gif" />
     <Content Include="Content\themes\22\images\logo-afterlogin.png" />
     <Content Include="Content\themes\22\images\note.png" />
-    <Content Include="Content\themes\22\images\plus.png" />
     <Content Include="Content\themes\22\images\signup.png" />
     <Content Include="Content\themes\22\images\sprite.png" />
     <Content Include="Content\themes\22\images\tab_topbg.gif" />
     <Content Include="Content\themes\22\images\ui-icons_454545_256x240.png" />
-    <Content Include="Content\themes\22\images\undo.png" />
     <Content Include="Content\themes\22\images\up.png" />
     <Content Include="Content\themes\23\images\banner.en-US.jpg" />
     <Content Include="Content\themes\23\images\banner.id-ID.jpg" />
@@ -1012,7 +999,6 @@
     <Content Include="Content\themes\23\images\banner.zh-CN.jpg" />
     <Content Include="Content\themes\23\images\banner.zh-TW.jpg" />
     <Content Include="Content\themes\23\images\banner_top.png" />
-    <Content Include="Content\themes\23\images\bar-loader.gif" />
     <Content Include="Content\themes\23\images\bg-contentLanguage.png" />
     <Content Include="Content\themes\23\images\bgheader.png" />
     <Content Include="Content\themes\23\images\bghotNewsContent.png" />
@@ -1031,23 +1017,18 @@
     <Content Include="Content\themes\23\images\emailBg.jpg" />
     <Content Include="Content\themes\23\images\error_icons.png" />
     <Content Include="Content\themes\23\images\favicon.jpg" />
-    <Content Include="Content\themes\23\images\firstGoal.gif" />
     <Content Include="Content\themes\23\images\glyphicons-halflings-gray-lighter.png" />
     <Content Include="Content\themes\23\images\glyphicons-halflings-gray.png" />
     <Content Include="Content\themes\23\images\glyphicons-halflings.png" />
     <Content Include="Content\themes\23\images\header_gradient.png" />
     <Content Include="Content\themes\23\images\help.txt" />
     <Content Include="Content\themes\23\images\in_top.png" />
-    <Content Include="Content\themes\23\images\lastGoal.gif" />
-    <Content Include="Content\themes\23\images\link_14x14.png" />
     <Content Include="Content\themes\23\images\loader.gif" />
     <Content Include="Content\themes\23\images\note.png" />
-    <Content Include="Content\themes\23\images\plus.png" />
     <Content Include="Content\themes\23\images\signup.png" />
     <Content Include="Content\themes\23\images\sprite.png" />
     <Content Include="Content\themes\23\images\tab_topbg.gif" />
     <Content Include="Content\themes\23\images\ui-icons_454545_256x240.png" />
-    <Content Include="Content\themes\23\images\undo.png" />
     <Content Include="Content\themes\23\images\up.png" />
     <Content Include="Content\themes\4\images\banner.ko-KR.jpg" />
     <Content Include="Content\themes\4\images\banner.vi-VN.jpg" />
@@ -4089,19 +4070,14 @@
     <Content Include="Scripts\libraries\jquery.blockUI.js" />
     <Content Include="Scripts\libraries\jquery.cookie.js" />
     <Content Include="Scripts\libraries\modernizr-2.6.2.js" />
-    <Content Include="Scripts\site\Casino\RNGCasinoResult.js" />
-    <Content Include="Scripts\site\Casino\RNGCasinoResult.option.js" />
     <Content Include="Scripts\site\loggedin-account.js" />
-    <Content Include="Scripts\site\betlist.js" />
     <Content Include="Scripts\site\change-password.js" />
     <Content Include="Scripts\site\landingpages.js" />
     <Content Include="Scripts\site\contact-us.js" />
-    <Content Include="Scripts\site\dailyearnings-detail.js" />
     <Content Include="Scripts\site\mediagallery.js" />
     <Content Include="Scripts\site\message.js" />
     <Content Include="Scripts\site\paymentrequest.js" />
     <Content Include="Scripts\site\referrersstatistics.js" />
-    <Content Include="Scripts\site\rngcasino-results.js" />
     <Content Include="Scripts\site\scroller.js" />
     <Content Include="Scripts\site\sign-up.js" />
     <Content Include="Scripts\site\forget-password.js" />
@@ -4177,6 +4153,26 @@
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aoncash.uat.config">
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
     </Content>
+    <None Include="Configurations\AppSettings\Web.AppSetting.aoncash.mnl.config" />
+    <None Include="Configurations\AppSettings\Web.AppSetting.athena000.mnl.config" />
+    <None Include="Configurations\AppSettings\Web.AppSetting.itcbet.mnl.config" />
+    <None Include="Configurations\AppSettings\Web.AppSetting.macaubet.mnl.config" />
+    <None Include="Configurations\AppSettings\Web.AppSetting.spondemo.mnl.config" />
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.aoncash.mnl.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.athena000.mnl.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.itcbet.mnl.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.macaubet.mnl.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.spondemo.mnl.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
     <None Include="Configurations\SPNames\_SpNameConfiguration.ttinclude" />
     <None Include="Configurations\TemplateFilemanager.CS.ttinclude" />
     <Content Include="Configurations\WebConfigs\Web.athena000.master.config">
@@ -4228,6 +4224,22 @@
     <Content Include="Configurations\WebConfigs\Web.aoncash.uat.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
+    <None Include="Configurations\WebConfigs\Web.aoncash.mnl.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\WebConfigs\Web.athena000.mnl.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\WebConfigs\Web.itcbet.mnl.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\WebConfigs\Web.macaubet.mnl.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </None>
+    <None Include="Configurations\WebConfigs\Web.mnl.config" />
+    <None Include="Configurations\WebConfigs\Web.spondemo.mnl.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </None>
     <None Include="Content\bootstrap\js\.jshintrc" />
     <Content Include="Content\themes\29\index.less" />
     <Content Include="Content\themes\29\mixins.less" />
@@ -4328,9 +4340,7 @@
     <Content Include="Web.AppSetting.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Views\Shared\Account\CasinoDetailTicket.cshtml" />
     <Content Include="Web.ConnectionString.spondemo.local.config" />
-    <Content Include="Views\Shared\Account\CashOutTicketDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\common.less" />
@@ -4484,31 +4494,7 @@
     <Content Include="Views\Shared\Condition\Index.vi-VN.cshtml" />
     <Content Include="Views\Shared\Condition\Index.zh-TW.cshtml" />
     <Content Include="Views\Shared\Condition\Index.zh-CN.cshtml" />
-    <Content Include="Views\Shared\Account\BetList.cshtml" />
     <Content Include="Views\Shared\Account\SystemParlayDetail.cshtml" />
-    <Content Include="Views\Shared\Account\BetListResults.cshtml" />
-    <Content Include="Views\Shared\Account\RNGCasinoDetail\Group1-1.cshtml" />
-    <Content Include="Views\Shared\Account\RNGCasinoDetail\Group1.cshtml" />
-    <Content Include="Views\Shared\Account\RNGCasinoDetail\Group2.cshtml" />
-    <Content Include="Views\Shared\Account\RNGCasinoDetail\Group3.cshtml" />
-    <Content Include="Views\Shared\Account\RNGCasinoDetail\Group4-1.cshtml" />
-    <Content Include="Views\Shared\Account\RNGCasinoDetail\Group4.cshtml" />
-    <Content Include="Views\Shared\Account\RNGCasinoDetail\Group5.cshtml" />
-    <Content Include="Views\Shared\Account\RNGCasinoDetail\Group6-1.cshtml" />
-    <Content Include="Views\Shared\Account\RNGCasinoDetail\Group6.cshtml" />
-    <Content Include="Views\Shared\Account\RNGCasinoDetail\Group7-0.cshtml" />
-    <Content Include="Views\Shared\Account\RNGCasinoDetail\Group7-1.cshtml" />
-    <Content Include="Views\Shared\Account\RNGCasinoDetail\Group7-2.cshtml" />
-    <Content Include="Views\Shared\Account\RNGCasinoDetail\Group7-3.cshtml" />
-    <Content Include="Views\Shared\Account\RNGCasinoDetail\Group7-4.cshtml" />
-    <Content Include="Views\Shared\Account\RNGCasinoDetail\Group7-5.cshtml" />
-    <Content Include="Views\Shared\Account\RNGCasinoDetail\Group7-6.cshtml" />
-    <Content Include="Views\Shared\Account\RNGCasinoDetail\Group7-8.cshtml" />
-    <Content Include="Views\Shared\Account\RNGCasinoDetail\Group8.cshtml" />
-    <Content Include="Views\Shared\Account\RNGCasinoDetail\Group9.cshtml" />
-    <Content Include="Views\Shared\Account\RNGCasinoDetail\NoGameErr.cshtml" />
-    <Content Include="Views\Shared\Account\RNGCasinoDetail\Noinfo.cshtml" />
-    <Content Include="Views\Shared\Account\BetListResults_RNGCasino.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Fanex.Affiliate.Controllers\Fanex.Affiliate.Controllers.csproj">
@@ -4576,7 +4562,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />

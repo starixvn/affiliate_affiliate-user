@@ -156,14 +156,12 @@
     <Compile Include="AccountDataAccess.cs" />
     <Compile Include="ContactUsDataAccess.cs" />
     <Compile Include="BannerDataAccess.cs" />
-    <Compile Include="BetListDataAccess.cs" />
     <Compile Include="HotNewsDataAccess.cs" />
     <Compile Include="ILoggerDataAccess.cs" />
     <Compile Include="LoggerDataAccess.cs" />
     <Compile Include="PaymentDataAccess.cs" />
     <Compile Include="TrackingSystemDataAccess.cs" />
     <Compile Include="UserDataAccess.cs" />
-    <Compile Include="IBetListDataAccess.cs" />
     <Compile Include="IBannerDataAccess.cs" />
     <Compile Include="IHotNewsDataAccess.cs" />
     <Compile Include="IContactUsDataAccess.cs" />
@@ -217,7 +215,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2014/3/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
+      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/3/28" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
