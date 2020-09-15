@@ -38,7 +38,7 @@ textarea, select, input[type="text"], input[type="password"], input[type="submit
 	font-size: @fontSize;
 	color: @black;
 	margin: 0;
-	.border-radius(0);	
+	.border-radius(0);
 }
 
 input[type="text"], input[type="password"], input[type="Reset"] {
@@ -61,9 +61,7 @@ select {
 
 	.span12 {
 		margin-left: 0;
-
 		/* HEADER */
-
 		&.header {
 			background: url(images/header_gradient.png) repeat-x;
 			height: 86px;
@@ -72,17 +70,17 @@ select {
 
 			.top-header {
 				/* LOGO */
-				.logo {			
+				.logo {
 					float: left;
 					height: 77px;
 					width: 345px;
 					margin-top: -5px;
-					margin-left:15px;
+					margin-left: 15px;
+
 					&.logo_en-US {
 						background: url(images/sprite.png) 0 -25px no-repeat;
 					}
 				}
-
 				/* LANGUAGE */
 				#language {
 					line-height: 17px;
@@ -111,9 +109,9 @@ select {
 
 						.arrDown {
 							.arrUp;
-							background-position:-33px -421px;
-						}	
-						
+							background-position: -33px -421px;
+						}
+
 						.en-US {
 							background: url(images/sprite.png) -220px -302px no-repeat;
 							color: @languageTextColor;
@@ -122,56 +120,56 @@ select {
 
 						.zh-CN {
 							.en-US;
-							background-position:-220px -316px;
+							background-position: -220px -316px;
 						}
 
 						.zh-TW {
 							.en-US;
-							background-position:-220px -316px;
+							background-position: -220px -316px;
 						}
 
 						.ko-KR {
 							.en-US;
-							background-position:-220px -331px;
+							background-position: -220px -331px;
 						}
 
 						.id-ID {
 							.en-US;
-							background-position:-220px -534px;
+							background-position: -220px -534px;
 						}
 
 						.th-TH {
 							.en-US;
-							background-position:-220px -503px;
+							background-position: -220px -503px;
 						}
 
 						.vi-VN {
 							.en-US;
 							background-position: -220px -362px;
 						}
-						
+
 						.lang-list {
 							width: 135px;
 							margin: 3px 0 0 -8px;
 							position: absolute;
 							z-index: 999;
 							display: none;
-							
+
 							.lang-top {
 								background: url("images/bgLanguage.png") no-repeat left top;
 								height: 6px;
 							}
-                            
+
 							.lang-content {
 								background: url("images/bgLanguage_Content.png") repeat-y;
 								padding-bottom: 0px;
 								text-align: left;
-								
+
 								ul, li {
 									margin: 0;
 									padding: 0;
 								}
-								
+
 								li {
 									list-style: none;
 									background: url("images/bgLanguage.png") no-repeat scroll -15px -20px;
@@ -182,13 +180,11 @@ select {
 									z-index: 10;
 								}
 
-								li:hover a
-								{
+								li:hover a {
 									color: @hoverLinkColor;
 								}
-								
 							}
-                            
+
 							.lang-bottom {
 								background: url("images/bgLanguage.png") no-repeat left -12px;
 								height: 6px;
@@ -196,7 +192,6 @@ select {
 						}
 					}
 				}
-
 				/* LOGOUT LINK */
 				.after-login-info {
 					height: 25px;
@@ -208,7 +203,7 @@ select {
 					}
 
 					.icon-clock {
-						background: url(images/sprite.png) no-repeat 0px -298px ;
+						background: url(images/sprite.png) no-repeat 0px -298px;
 						padding: 3px 0;
 						.setWidthHeight(30px, 19px);
 						.pull-left;
@@ -221,18 +216,17 @@ select {
 						background: url("images/sprite.png") repeat-x 241px -297px;
 						height: 19px;
 
-						a{
-							font-weight:bold;
+						a {
+							font-weight: bold;
 							color: @logoutColor;
 						}
 
-						a:hover{
+						a:hover {
 							color: @logoutHoverColor;
 						}
 					}
 				}
 			}
-
 			/* TOPMENU */
 			.top-menu {
 				margin-left: 2px;
@@ -244,10 +238,11 @@ select {
 					font-weight: bold;
 					padding-top: 0px;
 					padding-right: 20px;
-						
+
 					li {
 						display: inline;
-						line-height:24px;
+						line-height: 24px;
+
 						a {
 							background: url(images/bgMainMenu.png) no-repeat left -28px;
 							float: left;
@@ -269,20 +264,19 @@ select {
 
 						&.current a, a:hover {
 							background-position: 0 -4px;
-							
+
 							span {
 								white-space: nowrap;
 								background-position: 100% -57px;
 								color: @mainMenuHoverColor;
 							}
 						}
-				    }
+					}
 				}
-				
 				/* DATETIME */
 				#datetime {
 					color: @dateTimeColor;
-                    float: right;
+					float: right;
 					font-size: 11px;
 					font-weight: bold;
 					line-height: 26px;
@@ -298,20 +292,17 @@ select {
 						height: 26px;
 						width: 20px;
 						margin-right: 5px;
-                        margin-top: 1px;
-						.pull-left;	
+						margin-top: 1px;
+						.pull-left;
 					}
 				}
 			}
 		}
-
 		/* RED LINE */
-
 		&.red-line {
 			background: @lineBackground;
 			min-height: 3px;
 		}
-
 		/* HOT NEWS */
 		&.hotNews {
 			background: url(images/bghotNewsContent.png) repeat-x center bottom;
@@ -323,13 +314,13 @@ select {
 			padding: 1px;
 			margin-top: 4px;
 			font-weight: bold;
-			
+
 			.row-fluid {
 				.span2, .span8 {
 					margin: 0;
 					min-height: 22px;
 				}
-			} 
+			}
 
 			.hotNewHeader {
 				background: url(images/sprite.png) -10px -323px;
@@ -338,19 +329,18 @@ select {
 				line-height: 23px;
 				width: 116px;
 				text-align: center;
-				.pull-left;				
+				.pull-left;
 
-                .iconHeadline {
+				.iconHeadline {
 					background: url(images/sprite.png) -63px -415px;
 					height: 20px;
 					margin-left: 7px;
 					margin-right: 7px;
 					width: 20px;
 				}
-				
-				.iconHotNew 
-				{
-				    .iconHeadline;
+
+				.iconHotNew {
+					.iconHeadline;
 					background-position: -44px -420px;
 					margin-right: 7px;
 					margin-top: 3px;
@@ -358,9 +348,8 @@ select {
 					width: 20px;
 				}
 
-				.txtHotNew  {
-					a
-					{
+				.txtHotNew {
+					a {
 						color: @hotNewsColor;
 					}
 				}
@@ -382,35 +371,32 @@ select {
 				width: 669px;
 
 				.text_hotnews {
-                    color: @normalHotNewColor; 
-	                font-size: 11px;
-	                padding-left: 10px;
+					color: @normalHotNewColor;
+					font-size: 11px;
+					padding-left: 10px;
 				}
-				
-				.important
-				{
-				    color:  @importantHotNewColor;
-                }
+
+				.important {
+					color: @importantHotNewColor;
+				}
 			}
 
 			.leftHN, .rightHN {
 				background: url(images/sprite.png) -167px -323px;
 				height: 22px;
-				width:7px;
-				.pull-left;	
+				width: 7px;
+				.pull-left;
 			}
 
 			.rightHN {
 				background-position: 0 -323px;
 			}
 		}
-
 		/* CONTENTS */
-
 		&.contents {
 			height: auto;
 			margin: 1px 0 0 0;
-			background: url(images/bg_center2.jpg) no-repeat center top ;
+			background: url(images/bg_center2.jpg) no-repeat center top;
 
 			.button {
 				background: url(images/bg_buttonsite.png) @btnBackground repeat-x center top;
@@ -420,8 +406,9 @@ select {
 				cursor: pointer;
 				font-size: 11px;
 				font-weight: bold;
-				height:21px;
+				height: 21px;
 				line-height: 15px;
+
 				&:hover {
 					color: @btnHoverColor;
 				}
@@ -430,7 +417,6 @@ select {
 			.mouse-pointer {
 				cursor: pointer;
 			}
-
 			/* LEFT COLUMN */
 			.leftColumn {
 				margin-right: 7px;
@@ -439,15 +425,14 @@ select {
 				.mainBanner {
 					width: auto;
 				}
-				
+
 				.line-block {
 					background: url(images/sprite.png) @lineBlockBackground no-repeat left center;
-					background-position:0 -403px;
+					background-position: 0 -403px;
 					clear: both;
 					font-weight: bold;
 					height: 3px;
 				}
-
 				/* CONTENT */
 				#content {
 					margin: 0 3px;
@@ -460,47 +445,45 @@ select {
 							font-weight: bold;
 							line-height: 18px;
 							padding: 3px 10px 5px 2px;
-						}				
-						
+						}
+
 
 						.content-block {
 							.img-conts {
 								margin: 2px 7px 7px 0;
 								.pull-left;
 							}
-							
+
 							.text-block {
 								width: 225px;
 								.pull-left;
 							}
-						}						
-					}					
+						}
+					}
 				}
-				
-				/* BOX SITE */			
+				/* BOX SITE */
 				.box-insite {
 					border-color: @boxBackgroundColor;
 					border-style: none solid solid;
 					border-width: 0 1px 1px;
-
 					/* TOP BOX */
 					.top {
 						border-top: 1px solid @topBoxBorderColor;
-						height: 30px;						
+						height: 30px;
 						width: 100%;
-					
+
 						.in-top {
 							background: url(images/in_top.png) repeat-x;
 							color: @titleTextColor;
 							float: left;
 							height: 25px;
 							padding: 4px 0 3px 9px;
-							min-width:120px;
+							min-width: 120px;
 							max-width: 200px;
 							text-transform: uppercase;
 							font-weight: bold;
 						}
-					
+
 						.in-right {
 							background: url(images/sprite.png) 0 -358px no-repeat;
 							color: @white;
@@ -514,7 +497,7 @@ select {
 						padding: 10px;
 
 						.txtRequire {
-							color: red;							
+							color: red;
 						}
 
 						.block {
@@ -529,29 +512,30 @@ select {
 									line-height: 17px;
 									padding: 3px 2px 3px 0;
 								}
-																
+
 								a.link-top {
 									float: right;
 									margin-top: 3px;
 									text-decoration: none;
-									color:@black;
+									color: @black;
 									font-weight: normal;
 
-									span{
+									span {
 										background: url(images/sprite.png) -91px -416px;
-										width:12px;
-										height:14px;
-										display:block;
-										float:left;
-										margin-right:2px;
+										width: 12px;
+										height: 14px;
+										display: block;
+										float: left;
+										margin-right: 2px;
 									}
-								}							
+								}
 							}
+
 							.sel-filter {
 								width: 80px;
 								margin: 0 2px 0 0;
 							}
-											
+
 							.box-header {
 								.row {
 									.clearfix;
@@ -581,7 +565,7 @@ select {
 										.icon-calendar {
 											cursor: pointer;
 											background: url(images/sprite.png) -166px -419px;
-											.setWidthHeight(15px, 18px);											
+											.setWidthHeight(15px, 18px);
 										}
 									}
 								}
@@ -591,42 +575,38 @@ select {
 								line-height: 18px;
 								padding: 2px 2px 3px 0;
 								text-align: justify;
-								.middle
-								{
-									input[type="radio"],input[type="checkbox"]
-									{
-										margin-top:-5px;
+
+								.middle {
+									input[type="radio"], input[type="checkbox"] {
+										margin-top: -5px;
 									}
 								}
 								/* Formatting For Tables Which have odd row and even row */
 								.table {
 									border: 1px solid @tableBorderColor;
 									background: @tableBackground;
-									
-									th, td 
-									{
-									    line-height: 17px;
-									    border: 1px solid #D0D0D0;
-									    
-									    &.important {
-									        color: #F00;
-                                        }
-                                        
-                                        &.wordWrapTD
-                                        {
-	                                        word-break: break-all;
-	                                        word-wrap: break-word;
-                                        }
-                                    }
+
+									th, td {
+										line-height: 17px;
+										border: 1px solid #D0D0D0;
+
+										&.important {
+											color: #F00;
+										}
+
+										&.wordWrapTD {
+											word-break: break-all;
+											word-wrap: break-word;
+										}
+									}
 								}
 
 								.odd-even {
 									width: 100%;
 									margin: 10px 0;
 
-									&.table-striped tbody 
-									{
-									    
+									&.table-striped tbody {
+
 										tr {
 											td {
 												padding: 1px 5px;
@@ -674,16 +654,15 @@ select {
 												text-align: center;
 											}
 
-											tr 
-											{
-											    &.gradient-header th {
+											tr {
+												&.gradient-header th {
 													background: @listTableHeaderBackground;
 													color: @listTableHeaderColor;
 													font-weight: bold;
 												}
-											    
+
 												&.line-height th {
-													 line-height: 15px;
+													line-height: 15px;
 												}
 											}
 										}
@@ -692,7 +671,7 @@ select {
 											td {
 												padding: 2px 7px;
 												border-top: none;
-										
+
 												&.text-right {
 													.text-right;
 												}
@@ -715,17 +694,16 @@ select {
 													background: @hoverRowListTableBackground;
 												}
 											}
-											
+
 											&.gradient-summary td {
 												background: @footerBackground;
 												color: @white;
 												font-weight: bold;
 												line-height: 15px;
 											}
-										}	
+										}
 									}
 								}
-								
 								/* Paging */
 								.pagesize {
 									background: url(images/sprite.png) 0 -501px no-repeat;
@@ -742,14 +720,14 @@ select {
 										width: 50px;
 									}
 								}
-								
+
 								.paging-info {
 									background: #E1E1E1;
 									border: 1px solid #CACACA;
 									height: 21px;
 									padding-left: 5px;
 									padding-top: 4px;
-									padding-bottom:3px;
+									padding-bottom: 3px;
 									text-align: center;
 
 									input {
@@ -790,8 +768,8 @@ select {
 											}
 
 											&.pagingHiden {
-												display:none;
-												width:100%;
+												display: none;
+												width: 100%;
 											}
 										}
 
@@ -799,7 +777,7 @@ select {
 											width: 23px;
 											margin: 0px 4px;
 											white-space: nowrap;
-											height:18px;	
+											height: 18px;
 											text-align: center;
 										}
 									}
@@ -812,25 +790,22 @@ select {
 										list-style-type: decimal;
 									}
 								}
-								
-								.validate-fail
-                                {
-                                    background: url(images/sprite.png) 0px -530px no-repeat;
-                                    width: 16px;
-                                    height: 16px;
-                                }
 
-                                .validate-pass
-                                {
-                                    background: url(images/sprite.png) -18px -530px no-repeat;
-                                    width: 16px;
-                                    height: 16px;
-                                }
+								.validate-fail {
+									background: url(images/sprite.png) 0px -530px no-repeat;
+									width: 16px;
+									height: 16px;
+								}
 
+								.validate-pass {
+									background: url(images/sprite.png) -18px -530px no-repeat;
+									width: 16px;
+									height: 16px;
+								}
 							}
 						}
 
-						
+
 						.frmRegister, .frmForgetPass {
 							table {
 								margin-top: 10px;
@@ -841,7 +816,7 @@ select {
 
 								textarea, input[type="text"], select {
 									margin: 0 0 5px 10px;
-									.border-radius(0);									
+									.border-radius(0);
 									.pull-left;
 								}
 
@@ -853,21 +828,19 @@ select {
 									height: 21px;
 									margin: 0 5px;
 								}
-
 							}
 						}
-
 						/* Register Account*/
 						.frmRegister {
 							table {
-							
+
 								.txtRequire {
 									.pull-left;
 								}
 
 								.lbl {
-									width: 150px; 
-								}								
+									width: 150px;
+								}
 
 								select {
 									.setWidthHeight(213px, 22px);
@@ -881,7 +854,7 @@ select {
 									margin-left: 17px;
 								}
 
-								.inputUserName  {
+								.inputUserName {
 									margin-bottom: 0;
 								}
 
@@ -893,11 +866,11 @@ select {
 									margin-top: 20px;
 
 									a {
-										color: @black;	
-									
+										color: @black;
+
 										&:hover {
 											color: @hoverLinkColor;
-										}								
+										}
 									}
 								}
 
@@ -913,23 +886,19 @@ select {
 										}
 									}
 								}
-							}				
+							}
 						}
 					}
-					
-					&.th-TH 
-					{
-					    .content 
-					    {
-					        .block{
-					            .content-block 
-					            {
-					                text-align: left !important;
-					            }
-					        }
-					    }
-                    }
 
+					&.th-TH {
+						.content {
+							.block {
+								.content-block {
+									text-align: left !important;
+								}
+							}
+						}
+					}
 					/* Forget Password */
 					.frmForgetPass {
 						table {
@@ -950,7 +919,6 @@ select {
 							}
 						}
 					}
-
 					/* CONTACT MESSAGE */
 					/* CONTACT FORM */
 					table.frmContact {
@@ -958,79 +926,73 @@ select {
 						border: 0;
 
 						.lbl {
-								width: 90px;
-								display: block;
-								margin-bottom: 5px;
-						}
-						
-						.txtCharacter {
-								color: red;
-								font-size: 12px;
+							width: 90px;
+							display: block;
+							margin-bottom: 5px;
 						}
 
-						input[type="text"]{						
-							margin: 0 0 5px 2px;						
+						.txtCharacter {
+							color: red;
+							font-size: 12px;
+						}
+
+						input[type="text"] {
+							margin: 0 0 5px 2px;
 							.border-radius(0);
 							.setWidthHeight (137px, 20px);
 						}
-						
-						.textComment {
-									width: 427px;
-									height: 115px;
-									margin: 0 0 5px 2px;
-						}	
 
-						#imgCaptchaContactUs{
-							 margin: 0 0 5px 2px;
+						.textComment {
+							width: 427px;
+							height: 115px;
+							margin: 0 0 5px 2px;
+						}
+
+						#imgCaptchaContactUs {
+							margin: 0 0 5px 2px;
 						}
 					}
-					
-					#MessageSentSuccuess{
-							display: none;
+
+					#MessageSentSuccuess {
+						display: none;
+					}
+
+					.joinUsButton {
+						height: 34px;
+						padding-left: 135px;
+
+						a.signup {
+							background: url(images/signup.png) no-repeat 0 -3px;
+							height: 34px;
+							float: left;
+							text-decoration: none;
+							color: #fff;
+							font-size: 11px;
+							font-weight: bold;
+							padding-left: 34px;
+
+							span {
+								background: url(images/signup.png) no-repeat right -83px;
+								display: block;
+								height: 34px;
+								padding: 5px 35px 0 1px;
+							}
 						}
-					.joinUsButton
-                    {
-	                    height: 34px;
-	                    padding-left:135px;
 
-	                    a.signup
-	                    {
-		                    background:url(images/signup.png) no-repeat 0 -3px;
-		                    height:34px;
-		                    float:left;
-		                    text-decoration: none;
-		                    color: #fff;
-		                    font-size: 11px;
-		                    font-weight:bold;
-		                    padding-left:34px;
+						a.signup:hover {
+							background: url(images/signup.png) no-repeat 0 -47px;
 
-		                    span
-		                    {
-			                    background:url(images/signup.png) no-repeat right -83px;
-			                    display:block;
-			                    height:34px;
-			                    padding:5px 35px 0 1px;
-		                    }
-	                    }
-	
-	                    a.signup:hover
-	                    {
-		                    background:url(images/signup.png) no-repeat 0 -47px;
-
-		                    span
-		                    {
-			                    background:url(images/signup.png) no-repeat right -127px;
-		                    }
-	                    }
-                    }
+							span {
+								background: url(images/signup.png) no-repeat right -127px;
+							}
+						}
+					}
 				}
 			}
-
 			/* RIGHT COLUMN */
 			.rightColumn {
 				margin: 0 7px;
 				width: 268px;
-
 				/* TITLE BLOCK */
 				.title-block {
 					background: url(images/sprite.png) 0 -108px no-repeat;
@@ -1045,7 +1007,7 @@ select {
 
 					.btn-show {
 						background: url(images/iconExpand.png) no-repeat center top;
-						padding: 6px 10px 5px;	
+						padding: 6px 10px 5px;
 						height: 22px;
 						position: absolute;
 						right: 20px;
@@ -1071,14 +1033,13 @@ select {
 						margin-bottom: 5px;
 					}
 				}
-
 				/* LOGIN BLOCK */
 				.login-block {
 					background: url(images/sprite.png) 0 -144px;
-					padding: 6px 10px 5px;	
+					padding: 6px 10px 5px;
 					height: 143px;
-					
-					.icuser >label, .icpass >label{
+
+					.icuser > label, .icpass > label {
 						height: 16px;
 						width: 250px;
 						padding-left: 20px;
@@ -1087,16 +1048,16 @@ select {
 
 					.icuser {
 						background: url(images/sprite.png) 0 -420px;
-						width:18px;						
+						width: 18px;
 					}
 
 					.icpass {
-						background: url(images/sprite.png) -17px -420px;	
-						width:18px;		
+						background: url(images/sprite.png) -17px -420px;
+						width: 18px;
 					}
-					
+
 					input[type="text"], input[type="password"] {
-						margin: 0 0 5px 20px;						
+						margin: 0 0 5px 20px;
 						font-size: @fontSize;
 						color: @textColor;
 						.border-radius(0);
@@ -1108,7 +1069,7 @@ select {
 					}
 
 					.action {
-						
+
 						* {
 							vertical-align: top;
 						}
@@ -1122,19 +1083,18 @@ select {
 						margin-left: 20px;
 
 						a {
-							color: @black;	
-									
+							color: @black;
+
 							&:hover {
 								color: @hoverLinkColor;
-							}								
+							}
 						}
 					}
 				}
-
 				/* AFTER LOGIN BLOCK */
 				ul.after-login-block {
 					margin: 0;
-					padding-bottom:5px;
+					padding-bottom: 5px;
 					width: 268px;
 
 					li {
@@ -1154,65 +1114,59 @@ select {
 								color: #FF9900;
 							}
 						}
-						&.sub{
-                            margin-left: 25px;
-							
-							a{
+
+						&.sub {
+							margin-left: 25px;
+
+							a {
 								background: none;
 								padding: 4px 0 0 5px;
 								font-weight: normal;
 								display: inline-block;
 							}
-							
-							.leftArrow
-							{
+
+							.leftArrow {
 								background: url(images/ui-icons_454545_256x240.png) -35px -13px no-repeat;
 								display: inline-block;
 								height: 15px;
 								width: 10px;
 							}
 						}
-					} 
+					}
 				}
-
 				/* FAQS */
 				.faqs-block {
 					background: @faqBackgroundColor;
 					padding: 6px 10px 10px;
 					margin-bottom: 5px;
 
-					ol 
-					{
+					ol {
 						margin-left: 18px;
 					}
-                    
-                    li a
-                    {
-                        color: @faqTextColor;
-                        display: block;
+
+					li a {
+						color: @faqTextColor;
+						display: block;
 						line-height: 20px;
 						text-decoration: none;
-                        margin-bottom: 0px;
-                        border-bottom: 1px dotted @white;
-                    }
-                    
-                    li:hover, li:hover a
-                    {
-                        color: @faqHoverTextColor;
-                    } 
+						margin-bottom: 0px;
+						border-bottom: 1px dotted @white;
+					}
+
+					li:hover, li:hover a {
+						color: @faqHoverTextColor;
+					}
 				}
 			}
 		}
-
 		/* FOOTER */
-
 		&.footer {
 			background: url("images/bg_footer.jpg") repeat-x scroll center top #fff;
 			height: 50px;
 			margin-top: 7px;
 			padding: 15px 10px 5px;
 			color: @footerTextColor;
-			
+
 			* {
 				vertical-align: top;
 			}
@@ -1220,48 +1174,46 @@ select {
 			.browser {
 				float: left;
 				width: 280px;
-				
+
 				.firefox {
 					background: url(images/sprite.png) -59px -358px no-repeat;
 					padding: 4px 32px 5px;
 				}
-				
+
 				.ie {
 					background: url(images/sprite.png) -122px -358px;
 					padding: 4px 30px 5px;
 				}
 			}
-			
+
 			.button-footer {
 				text-align: center;
 				width: auto;
 				float: left;
+				margin-left: 280px;
 
 				a {
 					color: @footerTextColor;
 					padding-left: 5px;
 					text-decoration: none;
 
-					&:hover 
-					{
+					&:hover {
 						color: @footerLinkHoverColor;
 						text-decoration: none;
 					}
 				}
 			}
-			
+
 			.copyright {
 				float: right;
 				text-align: right;
 				width: 245px;
 			}
 
-			.copyright a
-			{
+			.copyright a {
 				color: @footerLinkColor;
-				
-				&:hover 
-				{
+
+				&:hover {
 					color: @footerLinkHoverColor;
 					text-decoration: none;
 				}
@@ -1281,7 +1233,7 @@ select {
 /* Notify page */
 /* PAGE */
 
-body.notify 
+body.notify
 {
     background: @notifyBackground repeat;
     color: @maintenanceTextColor;
@@ -1289,7 +1241,7 @@ body.notify
     .container-um {
 	    padding: 0;
 	    height: 180px;
-	
+
 	    .span12 {
 		    margin: 0;
 		    padding: 0;
@@ -1302,8 +1254,8 @@ body.notify
 			        margin: 0 auto;
 				    .setWidthHeight (652px, 180px);
 				    background: url(images/deco.jpg) no-repeat;
-				
-				    .title 
+
+				    .title
 				    {
 				        padding-top: 1px;
 				        text-align: center;
@@ -1334,7 +1286,7 @@ body.notify
 	        background: url(images/error_icons.png) no-repeat;
 	        .setWidthHeight (246px, 210px);
 			margin-left: 80px;
-	    
+
 	        &.ic-maintenance
 	        {
 	            background-position: 0px -210px;
@@ -1348,13 +1300,13 @@ body.notify
 	        {
 	            background-position: 0px 0px;
 	        }
-	    }	
+	    }
 	    .notify-content
-	    {		
+	    {
 	        li
 	        {
-	             border-bottom: 1px dotted #006600; 
-	             list-style-type: none; 
+	             border-bottom: 1px dotted #006600;
+	             list-style-type: none;
 	             padding-top: 10px;
 				 padding-bottom: 3px;
 	             font-size: 14px;

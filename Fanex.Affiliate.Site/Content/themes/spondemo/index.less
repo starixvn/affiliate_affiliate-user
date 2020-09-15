@@ -38,7 +38,7 @@ textarea, select, input[type="text"], input[type="password"], input[type="submit
 	font-size: @fontSize;
 	color: @black;
 	margin: 0;
-	.border-radius(0);	
+	.border-radius(0);
 }
 
 input[type="text"], input[type="password"], input[type="Reset"] {
@@ -73,14 +73,14 @@ select {
 			.top-header {
                 height: 60px;
 				/* LOGO */
-				.logo {			
+				.logo {
 					float: left;
-					height: 46px;
+					height: 50px;
 					width: 345px;
-					margin-top: 5px;
+					margin-top: 15px;
 					margin-left:15px;
 					&.logo_en-US {
-						background: url(images/sprite.png) 0 -62px no-repeat;
+						background: url(images/sprite.png) 0 -55px no-repeat;
 					}
 				}
 
@@ -113,8 +113,8 @@ select {
 						.arrDown {
 							.arrUp;
 							background-position:-35px -421px;
-						}	
-						
+						}
+
 						.en-US {
 							background: url(images/sprite.png) -223px -302px no-repeat;
 							color: @languageTextColor;
@@ -150,24 +150,24 @@ select {
 							.en-US;
 							background-position:-223px -362px;
 						}
-						
+
 						.lang-list {
 							width: 134px;
 							margin: 3px 0 0 -8px;
 							position: absolute;
 							z-index: 999;
 							display: none;
-							
+
 							.lang-top {
 								background: url("images/bg-topLanguage.png") no-repeat;
 								height: 6px;
 							}
-                            
+
 							.lang-content {
 								background: url("images/bg-contentLanguage.png") repeat-y;
 								padding-bottom: 0px;
 								text-align: left;
-								
+
 								ul, li {
 									margin: 0;
 									padding: 0;
@@ -188,18 +188,18 @@ select {
 								{
 									color: @hoverLinkColor;
 								}
-								
+
 							}
-                            
+
 							.lang-bottom {
 								background: url("images/bg-bottomLanguage.png") no-repeat;
 								height: 6px;
 							}
-                            
+
 						}
 
 					}
-				
+
 				}
 
 				/* LOGOUT LINK */
@@ -246,7 +246,7 @@ select {
                     font-weight: bold;
                     padding-top: 0;
                     padding-right: 20px;
-						
+
 					li {
 						display: inline;
 						line-height:24px;
@@ -270,7 +270,7 @@ select {
 
 						&.current a, a:hover {
 							background-position: 0 -4px;
-							
+
 							span {
 								white-space: nowrap;
 								background-position: 100% -57px;
@@ -279,7 +279,7 @@ select {
 						}
 				    }
 				}
-				
+
 				/* DATETIME */
 				#datetime {
 					    color: @dateTimeColor;
@@ -292,7 +292,7 @@ select {
                         top: 31px;
                         width: auto;
                         white-space: nowrap;
-					
+
 					.clock {
 						background: url(images/sprite.png) -143px -415px;
 						height: 26px;
@@ -321,13 +321,13 @@ select {
 			margin: 2px 1px;
 			padding: 1px;
 			margin-top: 4px;
-			
+
 			.row-fluid {
 				.span2, .span8 {
 					margin: 0;
 					min-height: 22px;
 				}
-			} 
+			}
 
 			.hotNewHeader {
 				background: url(images/sprite.png) -10px -323px;
@@ -336,7 +336,7 @@ select {
 				line-height: 23px;
 				width: 116px;
 				text-align: center;
-				.pull-left;				
+				.pull-left;
 
                 .iconHeadline {
 					background: url(images/sprite.png) -63px -417px;
@@ -345,8 +345,8 @@ select {
 					margin-right: 7px;
 					width: 20px;
 				}
-				
-				.iconHotNew 
+
+				.iconHotNew
 				{
 				    .iconHeadline;
 					background-position: -44px -420px;
@@ -380,11 +380,11 @@ select {
 				width: 669px;
 
 				.text_hotnews {
-                    color: @normalHotNewColor; 
+                    color: @normalHotNewColor;
 	                font-size: 11px;
 	                padding-left: 10px;
 				}
-				
+
 				.important
 				{
 				    color:  @importantHotNewColor;
@@ -395,7 +395,7 @@ select {
 				background: url(images/sprite.png) -167px -323px;
 				height: 22px;
 				width:7px;
-				.pull-left;	
+				.pull-left;
 			}
 
 			.rightHN {
@@ -437,7 +437,7 @@ select {
 				.mainBanner {
 					width: auto;
 				}
-				
+
 				.line-block {
 					background: url(images/sprite.png) @lineBlockBackground no-repeat left center;
 					background-position:0 -403px;
@@ -458,24 +458,24 @@ select {
 							font-weight: bold;
 							line-height: 18px;
 							padding: 3px 10px 5px 2px;
-						}				
-						
+						}
+
 
 						.content-block {
 							.img-conts {
 								margin: 2px 7px 7px 0;
 								.pull-left;
 							}
-							
+
 							.text-block {
 								width: 225px;
 								.pull-left;
 							}
-						}						
-					}					
+						}
+					}
 				}
-				
-				/* BOX SITE */			
+
+				/* BOX SITE */
 				.box-insite {
 					border-color: @boxBackgroundColor;
 					border-style: none solid solid;
@@ -484,9 +484,9 @@ select {
 					/* TOP BOX */
 					.top {
 						border-top: 1px solid @topBoxBorderColor;
-						height: 30px;						
+						height: 30px;
 						width: 100%;
-					
+
 						.in-top {
 							background: url(images/in_top.png) repeat-x;
 							color: @titleTextColor;
@@ -498,7 +498,7 @@ select {
 							text-transform: uppercase;
 							font-weight: bold;
 						}
-					
+
 						.in-right {
 							background: url(images/sprite.png) 0 -358px no-repeat;
 							color: @white;
@@ -512,7 +512,7 @@ select {
 						padding: 10px;
 
 						.txtRequire {
-							color: red;							
+							color: red;
 						}
 
 						.block {
@@ -527,7 +527,7 @@ select {
 									line-height: 17px;
 									padding: 3px 2px 3px 0;
 								}
-																
+
 								a.link-top {
 									float: right;
 									margin-top: 3px;
@@ -543,13 +543,13 @@ select {
 										float:left;
 										margin-right:2px;
 									}
-								}							
+								}
 							}
 							.sel-filter {
 								width: 80px;
 								margin: 0 2px 0 0;
 							}
-											
+
 							.box-header {
 								.row {
 									.clearfix;
@@ -579,7 +579,7 @@ select {
 										.icon-calendar {
 											cursor: pointer;
 											background: url(images/sprite.png) -166px -419px;
-											.setWidthHeight(15px, 18px);											
+											.setWidthHeight(15px, 18px);
 										}
 									}
 								}
@@ -600,16 +600,16 @@ select {
 								.table {
 									border: 1px solid @tableBorderColor;
 									background: @tableBackground;
-									
-									th, td 
+
+									th, td
 									{
 									    line-height: 17px;
 									    border: 1px solid #D0D0D0;
-									    
+
 									    &.important {
 									        color: #F00;
                                         }
-                                        
+
                                         &.wordWrapTD
                                         {
 	                                        word-break: break-all;
@@ -622,9 +622,9 @@ select {
 									width: 100%;
 									margin: 10px 0;
 
-									&.table-striped tbody 
+									&.table-striped tbody
 									{
-									    
+
 										tr {
 											td {
 												padding: 1px 5px;
@@ -672,14 +672,14 @@ select {
 												text-align: center;
 											}
 
-											tr 
+											tr
 											{
 											    &.gradient-header th {
 													background: @listTableHeaderBackground;
 													color: @listTableHeaderColor;
 													font-weight: bold;
 												}
-											    
+
 												&.line-height th {
 													 line-height: 15px;
 												}
@@ -690,7 +690,7 @@ select {
 											td {
 												padding: 2px 7px;
 												border-top: none;
-										
+
 												&.text-right {
 													.text-right;
 												}
@@ -713,17 +713,17 @@ select {
 													background: @hoverRowListTableBackground;
 												}
 											}
-											
+
 											&.gradient-summary td {
 												background: @footerBackground;
 												color: @white;
 												font-weight: bold;
 												line-height: 15px;
 											}
-										}	
+										}
 									}
 								}
-								
+
 								/* Paging */
 								.pagesize {
 									background: url(images/sprite.png) 0 -501px no-repeat;
@@ -740,7 +740,7 @@ select {
 										width: 50px;
 									}
 								}
-								
+
 								.paging-info {
 									background: #E1E1E1;
 									border: 1px solid #CACACA;
@@ -797,7 +797,7 @@ select {
 											width: 23px;
 											margin: 0px 4px;
 											white-space: nowrap;
-											height:18px;	
+											height:18px;
 											text-align: center;
 										}
 									}
@@ -810,7 +810,7 @@ select {
 										list-style-type: decimal;
 									}
 								}
-								
+
 								.validate-fail
                                 {
                                     background: url(images/sprite.png) 0px -530px no-repeat;
@@ -828,7 +828,7 @@ select {
 							}
 						}
 
-						
+
 						.frmRegister, .frmForgetPass {
 							table {
 								margin-top: 10px;
@@ -839,7 +839,7 @@ select {
 
 								textarea, input[type="text"], select {
 									margin: 0 0 5px 10px;
-									.border-radius(0);									
+									.border-radius(0);
 									.pull-left;
 								}
 
@@ -858,14 +858,14 @@ select {
 						/* Register Account*/
 						.frmRegister {
 							table {
-							
+
 								.txtRequire {
 									.pull-left;
 								}
 
 								.lbl {
-									width: 150px; 
-								}								
+									width: 150px;
+								}
 
 								select {
 									.setWidthHeight(213px, 22px);
@@ -891,11 +891,11 @@ select {
 									margin-top: 20px;
 
 									a {
-										color: @black;	
-									
+										color: @black;
+
 										&:hover {
 											color: @hoverLinkColor;
-										}								
+										}
 									}
 								}
 
@@ -911,16 +911,16 @@ select {
 										}
 									}
 								}
-							}				
+							}
 						}
 					}
-					
-					&.th-TH 
+
+					&.th-TH
 					{
-					    .content 
+					    .content
 					    {
 					        .block{
-					            .content-block 
+					            .content-block
 					            {
 					                text-align: left !important;
 					            }
@@ -960,29 +960,29 @@ select {
 								display: block;
 								margin-bottom: 5px;
 						}
-						
+
 						.txtCharacter {
 								color: red;
 								font-size: 12px;
 						}
 
-						input[type="text"]{						
-							margin: 0 0 5px 2px;						
+						input[type="text"]{
+							margin: 0 0 5px 2px;
 							.border-radius(0);
 							.setWidthHeight (137px, 20px);
 						}
-						
+
 						.textComment {
 									width: 427px;
 									height: 115px;
 									margin: 0 0 5px 2px;
-						}	
+						}
 
 						#imgCaptchaContactUs{
 							 margin: 0 0 5px 2px;
 						}
 					}
-					
+
 					#MessageSentSuccuess{
 							display: none;
 						}
@@ -1010,7 +1010,7 @@ select {
 			                    padding:5px 35px 0 1px;
 		                    }
 	                    }
-	
+
 	                    a.signup:hover
 	                    {
 		                    background:url(images/signup.png) no-repeat 0 -47px;
@@ -1043,7 +1043,7 @@ select {
 
 					.btn-show {
 						background: url(images/iconExpand.png) no-repeat center top;
-						padding: 6px 10px 5px;	
+						padding: 6px 10px 5px;
 						height: 22px;
 						position: absolute;
 						right: 20px;
@@ -1073,9 +1073,9 @@ select {
 				/* LOGIN BLOCK */
 				.login-block {
 					background: url(images/sprite.png) 0 -144px;
-					padding: 6px 10px 5px;	
+					padding: 6px 10px 5px;
 					height: 143px;
-					
+
 					.icuser >label, .icpass >label{
 						height: 16px;
 						width: 250px;
@@ -1085,16 +1085,16 @@ select {
 
 					.icuser {
 						background: url(images/sprite.png) 0 -420px;
-						width:18px;						
+						width:18px;
 					}
 
 					.icpass {
-						background: url(images/sprite.png) -17px -420px;	
-						width:18px;		
+						background: url(images/sprite.png) -17px -420px;
+						width:18px;
 					}
-					
+
 					input[type="text"], input[type="password"] {
-						margin: 0 0 5px 20px;						
+						margin: 0 0 5px 20px;
 						font-size: @fontSize;
 						color: @textColor;
 						.border-radius(0);
@@ -1106,7 +1106,7 @@ select {
 					}
 
 					.action {
-						
+
 						* {
 							vertical-align: top;
 						}
@@ -1120,11 +1120,11 @@ select {
 						margin-left: 20px;
 
 						a {
-							color: @black;	
-									
+							color: @black;
+
 							&:hover {
 								color: @hoverLinkColor;
-							}								
+							}
 						}
 					}
 				}
@@ -1154,14 +1154,14 @@ select {
 						}
 						&.sub{
                             margin-left: 25px;
-							
+
 							a{
 								background: none;
 								padding: 4px 0 0 5px;
 								font-weight: normal;
 								display: inline-block;
 							}
-							
+
 							.leftArrow
 							{
 								background: url(images/ui-icons_454545_256x240.png) -35px -13px no-repeat;
@@ -1171,7 +1171,7 @@ select {
 							}
 						}
 
-					} 
+					}
 				}
 
 				/* FAQS */
@@ -1180,11 +1180,11 @@ select {
 					padding: 6px 10px 10px;
 					margin-bottom: 5px;
 
-					ol 
+					ol
 					{
 						margin-left: 18px;
 					}
-                    
+
                     li a
                     {
                         color: @faqTextColor;
@@ -1194,11 +1194,11 @@ select {
                         margin-bottom: 0px;
                         border-bottom: 1px dotted @white;
                     }
-                    
+
                     li:hover, li:hover a
                     {
                         color: @faqHoverTextColor;
-                    } 
+                    }
 				}
 			}
 		}
@@ -1211,7 +1211,7 @@ select {
 			margin-top: 7px;
 			padding: 15px 10px 5px;
             color: @white;
-			
+
 			* {
 				vertical-align: top;
 			}
@@ -1219,22 +1219,23 @@ select {
 			.browser {
 				float: left;
 				width: 280px;
-				
+
 				.firefox {
 					background: url(images/sprite.png) -59px -356px no-repeat;
 					padding: 4px 32px 5px;
 				}
-				
+
 				.ie {
 					background: url(images/sprite.png) -122px -356px;
 					padding: 4px 30px 5px;
 				}
 			}
-			
+
 			.button-footer {
 				text-align: center;
 				width: auto;
 				float: left;
+				margin-left: 280px;
 
 				a {
 					color: @footerLinkColor;
@@ -1242,7 +1243,7 @@ select {
 					text-decoration: none;
 				}
 			}
-			
+
 			.copyright {
 				float: right;
 				text-align: right;
@@ -1265,7 +1266,7 @@ select {
 
 /* Notify page */
 /* PAGE */
-body.notify 
+body.notify
 {
     background: @white repeat;
     color: #4D6489;
@@ -1274,7 +1275,7 @@ body.notify
 	    padding: 0;
 		margin: 0;
 	    height: 180px;
-	
+
 	    .span12 {
 		    margin: 0;
 		    padding: 0;
@@ -1287,8 +1288,8 @@ body.notify
 			        margin: 0 auto;
 				    .setWidthHeight (652px, 180px);
 				    background: url(images/deco.jpg) no-repeat;
-				
-				    .title 
+
+				    .title
 				    {
 				        padding-top: 130px;
 						height: 180px;
@@ -1318,7 +1319,7 @@ body.notify
 	        background: url(images/error_icons.png) no-repeat;
 			float: right;
 	        .setWidthHeight (246px, 210px);
-	    
+
 	        &.ic-maintenance
 	        {
 	            background-position: -47px -413px;
@@ -1333,13 +1334,13 @@ body.notify
 	            background-position: -16px -219px;
 	            .setWidthHeight (230px, 185px);
 	        }
-	    }	
+	    }
 	    .notify-content
 	    {
 	        li
 	        {
-	             border-bottom: 1px dotted #006600; 
-	             list-style-type: none; 
+	             border-bottom: 1px dotted #006600;
+	             list-style-type: none;
 	             padding-top: 10px;
 				 padding-bottom: 3px;
 	             font-size: 14px;
