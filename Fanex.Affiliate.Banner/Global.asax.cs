@@ -16,6 +16,7 @@
         [SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic", Justification = "Reviewed. Suppression is OK here.")]
         protected void Application_Start()
         {
+            LoggingConfig.RegisterSentry();
             DbSettingProviderManager.Current.Start();
             AreaRegistration.RegisterAllAreas();
 
@@ -36,8 +37,8 @@
                 return;
             }
 
-            var message = exception.Message + Environment.NewLine + exception.StackTrace;
-            LogService.Error("Affiliate Banner Error!" + Environment.NewLine + message + Environment.NewLine + Request.Url);
+            //var message = exception.Message + Environment.NewLine + exception.StackTrace;
+            //LogService.Error("Affiliate Banner Error!" + Environment.NewLine + message + Environment.NewLine + Request.Url);
         }
     }
 }
