@@ -16,6 +16,7 @@
         [SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", Justification = "Reviewed. Suppression is OK here.")]
         protected void Application_Start()
         {
+            LoggingConfig.RegisterSentry();
             DbSettingProviderManager.Current.Start();
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
@@ -47,7 +48,7 @@
                              "\r\nBrowserVer:" + Request.Browser.Version.ToString() +
                              "\r\nAgent:" + Request.UserAgent.ToString();
 
-            LogService.Error("Affiliate Link Error!" + Environment.NewLine + message, exception);
+            Logger.Log.Error("Affiliate Link Error!" + Environment.NewLine + message, exception);
         }
     }
 }
