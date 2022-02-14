@@ -5,15 +5,14 @@
     using Common;
     using Common.Extensions;
     using Criteria;
-    using Data;
     using DTO;
-    using Fanex.Data.Repository;
+    using Fanex.Data.SqlServer;
     using ViewModels;
 
     /// <summary>
     /// User DataAccess.
     /// </summary>
-    public class UserDataAccess : ReadonlyRepository<User>, IUserDataAccess
+    public class UserDataAccess : IUserDataAccess
     {
         /// <summary>
         /// Authenticate User.
@@ -24,10 +23,9 @@
         {
             var user = new User();
 
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var param = criteria.GetSpParams();
-                var reader = objectDb.ExecuteReader(param);
+                var reader = objectDb.ExecuteReader(criteria);
 
                 while (reader.Read())
                 {
@@ -46,7 +44,7 @@
                     user.CurrencyID = reader.ToInt("currencyid");
                 }
 
-                criteria.ErrCode = Converter.ToInt(objectDb.GetOuputParams()["errcode"]);
+                criteria.ErrCode = Converter.ToInt(objectDb.GetOutputParams()["errcode"]);
             }
 
             return user;
@@ -58,10 +56,10 @@
         /// <param name="criteria">Input criteria.</param>
         public void UpdateLoginResult(AffiliateLoginResultCriteria criteria)
         {
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var param = criteria.GetSpParams();
-                objectDb.ExecuteNonQuery(param);
+                objectDb.ExecuteNonQuery(criteria);
+                var param = objectDb.GetOutputParams();
                 criteria.OnUserID = Converter.ToInt(param["onuserid"]);
                 criteria.ErrCode = Converter.ToInt(param["errcode"]);
             }
@@ -74,11 +72,10 @@
         /// <returns>Kick out or not.</returns>
         public bool ReCheckIn(ReCheckInCriteria criteria)
         {
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var currentParams = criteria.GetSpParams();
-                objectDb.ExecuteNonQuery(currentParams);
-                return Converter.ToBool(currentParams["iskickedout"]);
+                objectDb.ExecuteNonQuery(criteria);
+                return Converter.ToBool(objectDb.GetOutputParams()["iskickedout"]);
             }
         }
 
@@ -88,10 +85,9 @@
         /// <param name="criteria">Log out user criteria.</param>
         public void UserLogOut(LogOutUserCriteria criteria)
         {
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var currentParams = criteria.GetSpParams();
-                objectDb.ExecuteNonQuery(currentParams);
+                objectDb.ExecuteNonQuery(criteria);
             }
         }
 
@@ -103,10 +99,11 @@
         public User ForgetPassword(ForgetPasswordCriteria criteria)
         {
             var user = new User();
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var currentParams = criteria.GetSpParams();
-                objectDb.ExecuteNonQuery(currentParams);
+                objectDb.ExecuteNonQuery(criteria);
+
+                var currentParams = objectDb.GetOutputParams();
                 var affId = Converter.ToInt(currentParams["affid"]);
                 if (affId > 0)
                 {
@@ -132,10 +129,11 @@
         public ResultViewModel AffiliateInsert(UserInsertCriteria criteria)
         {
             ResultViewModel result = null;
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var currentParams = criteria.GetSpParams();
-                objectDb.ExecuteNonQuery(currentParams);
+                objectDb.ExecuteNonQuery(criteria);
+
+                var currentParams = objectDb.GetOutputParams();
                 result = new ResultViewModel
                 {
                     ErrorCode = Converter.ToInt(currentParams["errcode"]),
@@ -154,10 +152,10 @@
         public ResultViewModel AffiliateUpdate(UserUpdateInfoCriteria criteria)
         {
             ResultViewModel result = null;
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var currentParams = criteria.GetSpParams();
-                objectDb.ExecuteNonQuery(currentParams);
+                objectDb.ExecuteNonQuery(criteria);
+                var currentParams = objectDb.GetOutputParams();
                 result = new ResultViewModel
                 {
                     ErrorCode = Converter.ToInt(currentParams["errcode"]),
@@ -176,10 +174,9 @@
         public UserViewModel AffiliateSelectById(UserSelectInfoCriteria criteria)
         {
             UserViewModel result = null;
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var param = criteria.GetSpParams();
-                result = objectDb.QueryEntity<UserViewModel>(param);
+                result = objectDb.QueryEntity<UserViewModel>(criteria);
             }
 
             return result;
@@ -193,14 +190,15 @@
         public User ChangePassword(ResetPasswordCriteria criteria)
         {
             var user = new User();
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var currentParams = criteria.GetSpParams();
-                objectDb.ExecuteNonQuery(currentParams);
+                objectDb.ExecuteNonQuery(criteria);
+
+                var currentParams = objectDb.GetOutputParams();
                 var email = Converter.ToString2(currentParams["email"]);
                 if (!string.IsNullOrEmpty(email))
                 {
-                    user.Email = Converter.ToString2(currentParams["email"]);
+                    user.Email = email;
                     user.Username = Converter.ToString2(currentParams["username"]);
                     user.FirstName = Converter.ToString2(currentParams["firstname"]);
                     user.LastName = Converter.ToString2(currentParams["lastname"]);
@@ -223,11 +221,10 @@
         /// <returns>Admin Session ID.</returns>
         public string GetAdminNetSessionId(AdminLoginCriteria criteria)
         {
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var param = criteria.GetSpParams();
-                objectDb.ExecuteNonQuery(param);
-                var output = objectDb.GetOuputParams();
+                objectDb.ExecuteNonQuery(criteria);
+                var output = objectDb.GetOutputParams();
 
                 return Convert.ToString(output["netsessionid"]);
             }
@@ -240,11 +237,10 @@
         /// <returns>User model.</returns>
         public User InternalAuthenticateUser(InternalLoginCriteria criteria)
         {
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var param = criteria.GetSpParams();
-                var internalLoginInfo = objectDb.Query<InternalLoginInfo>(param).FirstOrDefault();
-                criteria.ErrCode = Converter.ToInt(param["errcode"]);
+                var internalLoginInfo = objectDb.Query<InternalLoginInfo>(criteria).FirstOrDefault();
+                criteria.ErrCode = Converter.ToInt(objectDb.GetOutputParams()["errcode"]);
 
                 return internalLoginInfo == null
                     ? null

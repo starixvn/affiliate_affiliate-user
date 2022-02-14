@@ -1,12 +1,11 @@
 ﻿namespace Fanex.Affiliate.Criteria
 {
     using System;
-    using Fanex.Data.Repository;
 
     /// <summary>
     /// Traffic Statistic Criteria.
     /// </summary>
-    public class TrafficStatisticCriteria : CriteriaBase
+    public class TrafficStatisticCriteria : CriteriaBaseImpl
     {
         public int AffId { get; set; }
 

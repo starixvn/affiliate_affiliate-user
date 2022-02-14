@@ -1,11 +1,10 @@
 ﻿namespace Fanex.Affiliate.Criteria
 {
-    using Fanex.Data.Repository;
 
     /// <summary>
     /// User Select Info Criteria.
     /// </summary>
-    public class UserSelectInfoCriteria : CriteriaBase
+    public class UserSelectInfoCriteria : CriteriaBaseImpl
     {
         public int AffID { get; set; }
 

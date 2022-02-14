@@ -1,11 +1,10 @@
 ﻿namespace Fanex.Affiliate.Criteria
 {
-    using Fanex.Data.Repository;
 
     /// <summary>
     /// Overview Criteria.
     /// </summary>
-    public class AccountCommGroupCriteria : CriteriaBase
+    public class AccountCommGroupCriteria : CriteriaBaseImpl
     {
         public int AffId { get; set; }
 

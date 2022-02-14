@@ -8,7 +8,7 @@
     /// <summary>
     /// Interface User DataAccess.
     /// </summary>
-    public interface IUserDataAccess : IReadonlyRepository<User>
+    public interface IUserDataAccess
     {
         /// <summary>
         /// Authenticate User.

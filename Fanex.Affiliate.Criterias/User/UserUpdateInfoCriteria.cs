@@ -2,12 +2,11 @@
 {
     using System;
     using System.Web.Mvc;
-    using Fanex.Data.Repository;
 
     /// <summary>
     /// User Update Info Criteria.
     /// </summary>
-    public class UserUpdateInfoCriteria : CriteriaBase
+    public class UserUpdateInfoCriteria : CriteriaBaseImpl
     {
         public int AffID { get; set; }
 
@@ -50,7 +49,7 @@
         public bool EmailFormat { get; set; }
 
         public short Currency { get; set; }
-        
+
         public string PlayerCurrency { get; set; }
 
         public Uri SiteURL { get; set; }
@@ -63,7 +62,7 @@
 
         [AllowHtml]
         public string Player_Username { get; set; }
-        
+
         public string Language { get; set; }
 
         public string Ip { get; set; }

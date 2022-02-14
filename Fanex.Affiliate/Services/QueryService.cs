@@ -2,8 +2,8 @@
 {
     using System;
     using System.Collections.Generic;
-    using Data;
     using Fanex.Data.Repository;
+    using Fanex.Data.SqlServer;
 
     /// <summary>
     /// Query service.
@@ -24,11 +24,10 @@
 
         public IEnumerable<T> GetData<T>(ICriteria criteria, ref int totalPages)
         {
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var param = criteria.GetSpParams();
-                var list = objectDb.Query<T>(param);
-                totalPages = Convert.ToInt32(param["totalpages"]);
+                var list = objectDb.Query<T>(criteria);
+                totalPages = Convert.ToInt32(objectDb.GetOutputParams()["totalpages"]);
 
                 return list;
             }

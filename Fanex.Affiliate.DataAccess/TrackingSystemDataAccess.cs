@@ -3,6 +3,7 @@
     using System;
     using Criteria;
     using Data;
+    using Fanex.Data.SqlServer;
 
     /// <summary>
     /// Tracking statistics.
@@ -16,10 +17,10 @@
         /// <returns>Success or fail.</returns>
         public string InsertStatistic(TrackingSystemCriteria criteria)
         {
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var currentParams = criteria.GetSpParams();
-                objectDb.ExecuteNonQuery(currentParams);
+                objectDb.ExecuteNonQuery(criteria);
+                var currentParams = objectDb.GetOutputParams();
 
                 return Convert.ToInt16(currentParams["errcode"]) != 0
                     ? string.Empty

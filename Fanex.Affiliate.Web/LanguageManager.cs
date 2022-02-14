@@ -28,7 +28,6 @@
         /// Set Culture by Language code.
         /// </summary>
         /// <param name="language">Language parameter.</param>
-        [SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic", Justification = "Reviewed. Suppression is OK here.")]
         public void SetCulture(string language)
         {
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
@@ -45,7 +44,7 @@
         /// <returns>Resource data.</returns>
         public string GetResourceData(string key)
         {
-            if (!ReferenceEquals(_resourceManagerLang, null))
+            if (_resourceManagerLang is object)
             {
                 return _resourceManagerLang.GetString(key);
             }

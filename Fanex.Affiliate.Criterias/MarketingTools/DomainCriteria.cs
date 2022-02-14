@@ -5,7 +5,7 @@
     /// <summary>
     /// Domain Criteria.
     /// </summary>
-    public class DomainCriteria : CriteriaBase
+    public class DomainCriteria : CriteriaBaseImpl
     {
         public int AffID { get; set; }
 

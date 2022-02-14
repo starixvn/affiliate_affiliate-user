@@ -8,6 +8,7 @@
     using Data;
     using DTO;
     using Fanex.Affiliate.Resources;
+    using Fanex.Data.SqlServer;
 
     /// <summary>
     /// System Setting Service.
@@ -62,10 +63,9 @@
         public DataSet GetAllSystemSettings(SystemSettingsCriteria criteria)
         {
             Check.Argument.IsNotNull(criteria, "criteria");
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var param = criteria.GetSpParams();
-                return objectDb.ExecuteDataSet(param);
+                return objectDb.ExecuteDataSet(criteria);
             }
         }
     }

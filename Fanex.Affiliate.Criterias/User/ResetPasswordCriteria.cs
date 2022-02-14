@@ -1,13 +1,12 @@
 ﻿namespace Fanex.Affiliate.Criteria
 {
     using System.ComponentModel.DataAnnotations;
-    using Fanex.Data.Repository;
     using Resources;
 
     /// <summary>
     /// Criteria for changing the password.
     /// </summary>
-    public class ResetPasswordCriteria : CriteriaBase
+    public class ResetPasswordCriteria : CriteriaBaseImpl
     {
         public int AffID { get; set; }
 

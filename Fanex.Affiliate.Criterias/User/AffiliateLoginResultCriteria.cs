@@ -1,12 +1,10 @@
 ﻿namespace Fanex.Affiliate.Criteria
 {
-    using System.Web.Mvc;
-    using Fanex.Data.Repository;
 
     /// <summary>
     /// Authenticate User Criteria.
     /// </summary>
-    public class AffiliateLoginResultCriteria : CriteriaBase
+    public class AffiliateLoginResultCriteria : CriteriaBaseImpl
     {
         public int AffId { get; set; }
 

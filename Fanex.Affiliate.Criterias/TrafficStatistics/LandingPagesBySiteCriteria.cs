@@ -2,13 +2,13 @@
 {
     using System;
     using System.ComponentModel.DataAnnotations;
-    using Fanex.Data.Repository;
+    using Fanex.Data;
     using Resources;
 
     /// <summary>
     /// Landing Pages By Site Criteria.
     /// </summary>
-    public class LandingPagesBySiteCriteria : CriteriaBase
+    public class LandingPagesBySiteCriteria : CriteriaBaseImpl
     {
         public int AffId { get; set; }
 
@@ -19,7 +19,7 @@
 
         [SpParam(SqlParamName = "LanguageCode")]
         public string LanguageSelected { get; set; }
-        
+
         [Required(ErrorMessageResourceName = "FromDateIsRequired", ErrorMessageResourceType = typeof(Lang))]
         public DateTime FromDate { get; set; }
 

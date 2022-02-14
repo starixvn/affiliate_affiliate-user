@@ -1,11 +1,10 @@
 ﻿namespace Fanex.Affiliate.Criteria
 {
-    using Fanex.Data.Repository;
 
     /// <summary>
     /// Default Group Commission Criteria.
     /// </summary>
-    public class DefaultCommissionCriteria : CriteriaBase
+    public class DefaultCommissionCriteria : CriteriaBaseImpl
     {
         public DefaultCommissionCriteria()
         {

@@ -1,11 +1,10 @@
 ﻿namespace Fanex.Affiliate.Criteria
 {
-    using Fanex.Data.Repository;
 
     /// <summary>
     /// Re-Check In Criteria.
     /// </summary>
-    public class ReCheckInCriteria : CriteriaBase
+    public class ReCheckInCriteria : CriteriaBaseImpl
     {
         public int OnUserID { get; set; }
 

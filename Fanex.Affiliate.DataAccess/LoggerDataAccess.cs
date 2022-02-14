@@ -1,16 +1,15 @@
 ﻿namespace Fanex.Affiliate.DataAccess
 {
-    using Data;
     using Fanex.Affiliate.Criteria.Payment;
+    using Fanex.Data.SqlServer;
 
     public class LoggerDataAccess : ILoggerDataAccess
     {
         public void WritePaymentLog(PaymentLogCriteria criteria)
         {
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var param = criteria.GetSpParams();
-                objectDb.ExecuteNonQuery(param);
+                objectDb.ExecuteNonQuery(criteria);
             }
         }
     }

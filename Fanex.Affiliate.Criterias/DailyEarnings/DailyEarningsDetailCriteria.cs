@@ -1,12 +1,11 @@
 ﻿namespace Fanex.Affiliate.Criteria
 {
     using System;
-    using Fanex.Data.Repository;
 
     /// <summary>
     /// Daily Earnings Detail Criteria.
     /// </summary>
-    public class DailyEarningsDetailCriteria : CriteriaBase
+    public class DailyEarningsDetailCriteria : CriteriaBaseImpl
     {
         public DailyEarningsDetailCriteria()
         {

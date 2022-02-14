@@ -1,12 +1,11 @@
 ﻿namespace Fanex.Affiliate.Criteria
 {
     using System;
-    using Fanex.Data.Repository;
 
     /// <summary>
     /// Product Criteria.
     /// </summary>
-    public class ProductCriteria : CriteriaBase
+    public class ProductCriteria : CriteriaBaseImpl
     {
         public ProductCriteria()
         {

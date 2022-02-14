@@ -1,11 +1,11 @@
 ﻿namespace Fanex.Affiliate.Criteria
 {
-    using Fanex.Data.Repository;
+    using Fanex.Data;
 
     /// <summary>
     /// Criteria for getting the player's info.
     /// </summary>
-    public class PaymentCriteria : CriteriaBase
+    public class PaymentCriteria : CriteriaBaseImpl
     {
         public int AffId { get; set; }
 

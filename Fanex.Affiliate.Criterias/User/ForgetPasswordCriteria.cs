@@ -1,13 +1,12 @@
 ﻿namespace Fanex.Affiliate.Criteria
 {
     using System.ComponentModel.DataAnnotations;
-    using Fanex.Data.Repository;
     using Resources;
 
     /// <summary>
     /// Forget Password Criteria.
     /// </summary>
-    public class ForgetPasswordCriteria : CriteriaBase
+    public class ForgetPasswordCriteria : CriteriaBaseImpl
     {
         [Required(ErrorMessageResourceType = typeof(Lang), ErrorMessageResourceName = "Msg120")]
         [Display(Name = "Email", ResourceType = typeof(Lang))]

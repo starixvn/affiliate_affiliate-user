@@ -1,12 +1,12 @@
 ﻿namespace Fanex.Affiliate.Criteria
 {
     using System.ComponentModel.DataAnnotations;
-    using Fanex.Data.Repository;
+    using Fanex.Data;
 
     /// <summary>
     /// Admin Login Criteria.
     /// </summary>
-    public class AdminLoginCriteria : CriteriaBase
+    public class AdminLoginCriteria : CriteriaBaseImpl
     {
         public AdminLoginCriteria()
         {

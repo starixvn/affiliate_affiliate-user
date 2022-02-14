@@ -1,11 +1,10 @@
 ﻿namespace Fanex.Affiliate.Criteria
 {
-    using Fanex.Data.Repository;
 
     /// <summary>
     /// Statement Criteria.
     /// </summary>
-    public class StatementCriteria : CriteriaBase
+    public class StatementCriteria : CriteriaBaseImpl
     {
         public int AffId { get; set; }
 

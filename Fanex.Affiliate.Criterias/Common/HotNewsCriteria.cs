@@ -1,11 +1,11 @@
 ﻿namespace Fanex.Affiliate.Criteria
 {
-    using Fanex.Data.Repository;
+    using Fanex.Data;
 
     /// <summary>
     /// Overview Criteria.
     /// </summary>
-    public class HotNewsCriteria : CriteriaBase
+    public class HotNewsCriteria : CriteriaBaseImpl
     {
         public int? MsgId { get; set; }
 

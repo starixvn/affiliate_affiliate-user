@@ -3,6 +3,7 @@
     using Common;
     using Criteria;
     using Data;
+    using Fanex.Data.SqlServer;
 
     /// <summary>
     /// Contact Us Data Access.
@@ -15,10 +16,10 @@
         /// <param name="criteria">Contact us criteria.</param>
         public void ContactUs(ContactUsCriteria criteria)
         {
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var currentParams = criteria.GetSpParams();
-                objectDb.ExecuteNonQuery(currentParams);
+                objectDb.ExecuteNonQuery(criteria);
+                var currentParams = objectDb.GetOutputParams();
                 criteria.ErrCode = Converter.ToInt(currentParams["errcode"]);
             }
         }

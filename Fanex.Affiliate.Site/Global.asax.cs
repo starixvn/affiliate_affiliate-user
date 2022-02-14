@@ -13,7 +13,8 @@
     using System.Web.Security;
     using CasinoSetting;
     using Configurations;
-    using Data.Configuration;
+    using Data.SqlServer;
+    using Fanex.Data;
     using Logging;
     using Web;
     using Web.Mvc;
@@ -24,7 +25,10 @@
         protected void Application_Start()
         {
             LoggingConfig.RegisterSentry();
-            DbSettingProviderManager.Current.Start();
+            DbSettingProviderManager
+                .StartNewSession()
+                .WithSqlServer("~/Configurations/SpNames/SpName.xml")
+                .Run();
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);

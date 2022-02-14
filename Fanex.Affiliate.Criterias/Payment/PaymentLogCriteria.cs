@@ -1,8 +1,7 @@
 ﻿namespace Fanex.Affiliate.Criteria.Payment
 {
-    using Fanex.Data.Repository;
 
-    public class PaymentLogCriteria : CriteriaBase
+    public class PaymentLogCriteria : CriteriaBaseImpl
     {
         public int UserId { get; set; }
 
@@ -11,11 +10,6 @@
         public override string GetSettingKey()
         {
             return "Aff_WebAPI_WriteLog";
-        }
-
-        public override bool IsValid()
-        {
-            return true;
         }
     }
 }

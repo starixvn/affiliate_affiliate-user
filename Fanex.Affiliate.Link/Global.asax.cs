@@ -5,7 +5,8 @@
     using System.Web;
     using System.Web.Mvc;
     using System.Web.Routing;
-    using Fanex.Data.Configuration;
+    using Fanex.Data;
+    using Fanex.Data.SqlServer;
     using Fanex.Logging;
 
     /// <summary>
@@ -17,7 +18,10 @@
         protected void Application_Start()
         {
             LoggingConfig.RegisterSentry();
-            DbSettingProviderManager.Current.Start();
+            DbSettingProviderManager
+                .StartNewSession()
+                .WithSqlServer("~/App_Data/SpNames.xml")
+                .Run();
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
