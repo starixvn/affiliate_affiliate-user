@@ -160,26 +160,29 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\SpNames.xml" />
+    <Content Include="Configurations\SPNames\SpNames.9bet.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.aoncash.local.xml" />
+    <Content Include="Configurations\SPNames\SpNames.9bet.production.xml" />
+    <Content Include="Configurations\SPNames\SpNames.9bet.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.athena000.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.aoncash.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.aoncash.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.aoncash.uat.xml" />
+    <Content Include="Configurations\SPNames\SpNames.9bet.sit.xml" />
+    <Content Include="Configurations\SPNames\SpNames.aoncash.sit.xml" />
+    <Content Include="Configurations\SPNames\SpNames.athena000.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.itcbet.sit.xml" />
+    <Content Include="Configurations\SPNames\SpNames.spondemo.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.macaubet.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.spondemo.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.athena000.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.athena000.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.spondemo.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.spondemo.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.athena000.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.itcbet.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.itcbet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.itcbet.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.itcbet.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.macaubet.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.macaubet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.macaubet.sandbox.xml" />
     <Content Include="Configurations\SPNames\SpNames.macaubet.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.xml" />
     <Content Include="Global.asax" />
@@ -258,6 +261,21 @@
     <Content Include="Configurations\WebConfigs\Web.aoncash.production.config" />
     <Content Include="Configurations\WebConfigs\Web.aoncash.uat.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configurations\WebConfigs\Web.9bet.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.9bet.sit.config" />
+    <Content Include="Configurations\WebConfigs\Web.aoncash.sit.config" />
+    <Content Include="Configurations\WebConfigs\Web.9bet.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.athena000.sit.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configurations\WebConfigs\Web.spondemo.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.macaubet.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.itcbet.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.athena000.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.aocash.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.9bet.local.config" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -285,7 +303,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/3/28" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2014/3/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
