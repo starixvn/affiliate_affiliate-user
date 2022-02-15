@@ -9,6 +9,7 @@
     using Caching;
     using Criteria;
     using DTO;
+    using Fanex.Caching.Memory;
     using Logging;
     using Services;
 
@@ -24,7 +25,7 @@
         private static readonly Lazy<ISystemSettingService> SystemSetting = new
             Lazy<ISystemSettingService>(() => new SystemSettingService());
 
-        private static readonly ICache CacheInstance = CacheService.CreateInstance(CacheType.MemoryCache);
+        private static readonly ICache CacheInstance = new MemoryCache(new MemoryCacheOptions());
 
         #region AppSettings
 
@@ -461,15 +462,17 @@
         {
             get
             {
-                if (CacheInstance.Contains(AffiliateSettingsCacheKey))
+                if (CacheInstance.Contain(AffiliateSettingsCacheKey))
                 {
-                    return CacheInstance.Get<AffiliateSettings>(AffiliateSettingsCacheKey);
+                    CacheInstance.TryGet<AffiliateSettings>(AffiliateSettingsCacheKey, out AffiliateSettings setting);
+                    return setting;
                 }
 
                 try
                 {
                     var affiliateSettings = LoadAffiliateSettings();
-                    CacheInstance.Set(AffiliateSettingsCacheKey, affiliateSettings, CacheDuration);
+                    var cachePolicy = new CacheItemOptions().SetAbsoluteExpiration(TimeSpan.FromSeconds(CacheDuration));
+                    CacheInstance.Set(AffiliateSettingsCacheKey, affiliateSettings, cachePolicy);
 
                     return affiliateSettings;
                 }

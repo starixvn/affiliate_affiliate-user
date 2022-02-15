@@ -5,7 +5,7 @@
     using System.Web.Mvc;
     using Configurations;
     using Criteria;
-    using ONEbook.UM.Filters;
+    using ONEbook.UM.AspNetMVC.Filters;
     using Services;
     using Web;
 

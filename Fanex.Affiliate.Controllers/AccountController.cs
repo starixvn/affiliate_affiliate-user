@@ -10,7 +10,7 @@
     using Criteria;
     using DTO;
     using Enumerations;
-    using ONEbook.UM.Filters;
+    using ONEbook.UM.AspNetMVC.Filters;
     using Resources;
     using Services;
     using StackExchange.Profiling;

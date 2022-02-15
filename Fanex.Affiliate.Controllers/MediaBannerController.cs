@@ -6,7 +6,7 @@
     using Configurations;
     using Criteria;
     using DTO;
-    using ONEbook.UM.Filters;
+    using ONEbook.UM.AspNetMVC.Filters;
     using Services;
     using Utilities;
     using ViewModels;

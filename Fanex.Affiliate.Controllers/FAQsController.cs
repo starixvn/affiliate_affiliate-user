@@ -1,7 +1,7 @@
 ﻿namespace Fanex.Affiliate.Controllers
 {
     using System.Web.Mvc;
-    using ONEbook.UM.Filters;
+    using ONEbook.UM.AspNetMVC.Filters;
 
     [CheckUMFilter]
     public class FAQsController : BaseController

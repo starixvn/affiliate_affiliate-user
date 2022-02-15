@@ -29,6 +29,7 @@
                 .StartNewSession()
                 .WithSqlServer("~/Configurations/SpNames/SpName.xml")
                 .Run();
+            UMConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
