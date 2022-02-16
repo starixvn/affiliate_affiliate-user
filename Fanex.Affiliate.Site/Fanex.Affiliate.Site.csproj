@@ -348,13 +348,37 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
     </Content>
+    <Content Include="Configurations\SPNames\SpName.9bet.local.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.9bet.mnl.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.9bet.production.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.9bet.sit.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.9bet.uat.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.aoncash.local.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
     <Content Include="Configurations\SPNames\SpName.aoncash.mnl.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.aoncash.production.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
+    <Content Include="Configurations\SPNames\SpName.aoncash.sit.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
     <Content Include="Configurations\SPNames\SpName.aoncash.uat.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.athena000.local.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.athena000.mnl.xml">
@@ -369,6 +393,9 @@
     <Content Include="Configurations\SPNames\SpName.athena000.uat.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
+    <Content Include="Configurations\SPNames\SpName.itcbet.local.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
     <Content Include="Configurations\SPNames\SpName.itcbet.mnl.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
@@ -379,6 +406,9 @@
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.itcbet.uat.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.macaubet.local.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.macaubet.mnl.xml">
@@ -4179,26 +4209,52 @@
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aoncash.uat.config">
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
     </Content>
-    <None Include="Configurations\AppSettings\Web.AppSetting.aoncash.mnl.config" />
-    <None Include="Configurations\AppSettings\Web.AppSetting.athena000.mnl.config" />
-    <None Include="Configurations\AppSettings\Web.AppSetting.itcbet.mnl.config" />
-    <None Include="Configurations\AppSettings\Web.AppSetting.macaubet.mnl.config" />
-    <None Include="Configurations\AppSettings\Web.AppSetting.spondemo.mnl.config" />
-    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.aoncash.mnl.config">
+    <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.local.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.master.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.mnl.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.mnl.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.uat.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.production.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.sit.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.athena000.mnl.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.sit.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.itcbet.mnl.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.macaubet.mnl.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.spondemo.mnl.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.9bet.mnl.config">
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
-    </None>
-    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.athena000.mnl.config">
+    </Content>
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.9bet.production.config">
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
-    </None>
-    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.itcbet.mnl.config">
+    </Content>
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.9bet.uat.config">
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
-    </None>
-    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.macaubet.mnl.config">
+    </Content>
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aoncash.mnl.config">
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
-    </None>
-    <None Include="Configurations\ConnectionStrings\Web.ConnectionString.spondemo.mnl.config">
+    </Content>
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.athena000.mnl.config">
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
-    </None>
+    </Content>
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aoncash.sit.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.9bet.sit.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.itcbet.mnl.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.macaubet.mnl.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.9bet.local.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aoncash.local.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.itcbet.local.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.macaubet.local.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.athena000.local.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.spondemo.local.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.spondemo.mnl.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </Content>
     <None Include="Configurations\SPNames\_SpNameConfiguration.ttinclude" />
     <None Include="Configurations\TemplateFilemanager.CS.ttinclude" />
     <Content Include="Configurations\WebConfigs\Web.athena000.master.config">
@@ -4228,8 +4284,10 @@
     <Content Include="Configurations\WebConfigs\Web.macaubet.uat.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
-    <Content Include="Configurations\WebConfigs\Web.athena000.sit.config" />
-    <Content Include="Configurations\WebConfigs\Web.spondemo.sit.config" />
+    <Content Include="Configurations\WebConfigs\Web.athena000.sit.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.local.config" />
     <Content Include="Configurations\WebConfigs\Web.spondemo.master.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
@@ -4239,8 +4297,10 @@
     <Content Include="Configurations\WebConfigs\Web.spondemo.uat.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
-    <Content Include="Configurations\WebConfigs\Web.itcbet.sit.config" />
-    <Content Include="Configurations\WebConfigs\Web.macaubet.sit.config" />
+    <Content Include="Configurations\WebConfigs\Web.sit.config" />
+    <Content Include="Configurations\WebConfigs\Web.macaubet.sit.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
     <Content Include="Configurations\WebConfigs\Web.aoncash.master.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
@@ -4250,22 +4310,64 @@
     <Content Include="Configurations\WebConfigs\Web.aoncash.uat.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
-    <None Include="Configurations\WebConfigs\Web.aoncash.mnl.config">
+    <Content Include="Configurations\WebConfigs\Web.9bet.local.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </None>
-    <None Include="Configurations\WebConfigs\Web.athena000.mnl.config">
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.9bet.master.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </None>
-    <None Include="Configurations\WebConfigs\Web.itcbet.mnl.config">
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.9bet.mnl.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </None>
-    <None Include="Configurations\WebConfigs\Web.macaubet.mnl.config">
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.9bet.production.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </None>
-    <None Include="Configurations\WebConfigs\Web.mnl.config" />
-    <None Include="Configurations\WebConfigs\Web.spondemo.mnl.config">
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.9bet.sit.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </None>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.9bet.uat.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.aoncash.local.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.aoncash.mnl.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.aoncash.sit.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.athena000.local.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.athena000.mnl.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.itcbet.local.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.itcbet.mnl.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.itcbet.sit.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.macaubet.local.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.macaubet.mnl.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.mnl.config" />
+    <Content Include="Configurations\WebConfigs\Web.spondemo.local.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.spondemo.mnl.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.spondemo.sit.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
     <None Include="Content\bootstrap\js\.jshintrc" />
     <Content Include="Content\themes\29\index.less" />
     <Content Include="Content\themes\29\mixins.less" />
@@ -4366,7 +4468,6 @@
     <Content Include="Web.AppSetting.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Web.ConnectionString.spondemo.local.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\common.less" />
