@@ -20,7 +20,7 @@
             LoggingConfig.RegisterSentry();
             DbSettingProviderManager
                 .StartNewSession()
-                .WithSqlServer("~/App_Data/SpNames.xml")
+                .WithSqlServer("~/Configurations/SpNames/SpNames.xml")
                 .Run();
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
