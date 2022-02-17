@@ -12,7 +12,7 @@
 		{"aoncash", "DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet"},
 		{"itcbet", "DBAFFITCBET.Affiliate_itcbet.bodbDownlineNet"},
 		{"macaubet", "DBAFFMACAUBET.Affiliate_MacauBet.bodbDownlineNet"},
-		{"9bet", "DBAFFMACAUBET.Affiliate_9Bet.bodbDownlineNet"}
+		{"9bet", "DBAFF9BET.Affiliate_9Bet.bodbDownlineNet"}
 	};
 
 	var environments = new string[] { "uat", "production", "mnl" };
