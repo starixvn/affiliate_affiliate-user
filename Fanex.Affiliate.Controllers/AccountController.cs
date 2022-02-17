@@ -511,7 +511,7 @@
         public ApiCustInfo GetCustInfo(string siteName, string userName)
         {
             return AppSettings.IsLocal ?
-                new ApiCustInfo { PlayerCurrency = "USD" } :
+                new ApiCustInfo { PlayerCurrency = AppSettings.DefaultCurrency } :
                 ServiceWrapper.GetLicenseeCustInfo(siteName, userName, SessionManager.CurrentSession.AffId);
         }
 
