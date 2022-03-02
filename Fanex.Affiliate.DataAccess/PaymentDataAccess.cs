@@ -101,7 +101,7 @@
 
                 payment.PlayerUsername = param["playerusername"].ToString();
                 payment.SystemName = param["systemname"].ToString();
-                payment.DummyBalAcc = param["dummybalacc"].ToString();
+                payment.DummyBalAcc = param["dummybalacc"]?.ToString();
                 payment.AffCurrency = param["affcurrency"].ToString();
             }
 
