@@ -57,6 +57,7 @@
         [HttpGet]
         public ActionResult StatementHistory(int pageSize = 0, int page = 1)
         {
+            var a = 1 / pageSize;
             var itemPerPage = pageSize > 0 ? pageSize : AppSettings.PageSize;
             var currentPageIndex = page;
             var totalPage = 0;
