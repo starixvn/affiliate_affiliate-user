@@ -5,7 +5,8 @@
     using System.Web;
     using System.Web.Mvc;
     using System.Web.Routing;
-    using Fanex.Data.Configuration;
+    using Fanex.Data;
+    using Fanex.Data.SqlServer;
     using Logging;
 
     /// <summary>
@@ -13,10 +14,13 @@
     /// </summary>
     public class MvcApplication : System.Web.HttpApplication
     {
-        [SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic", Justification = "Reviewed. Suppression is OK here.")]
         protected void Application_Start()
         {
-            DbSettingProviderManager.Current.Start();
+            LoggingConfig.RegisterSentry();
+            DbSettingProviderManager
+                .StartNewSession()
+                .WithSqlServer("~/Configurations/SpNames/SpNames.xml")
+                .Run();
             AreaRegistration.RegisterAllAreas();
 
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
@@ -36,8 +40,8 @@
                 return;
             }
 
-            var message = exception.Message + Environment.NewLine + exception.StackTrace;
-            LogService.Error("Affiliate Banner Error!" + Environment.NewLine + message + Environment.NewLine + Request.Url);
+            //var message = exception.Message + Environment.NewLine + exception.StackTrace;
+            //LogService.Error("Affiliate Banner Error!" + Environment.NewLine + message + Environment.NewLine + Request.Url);
         }
     }
 }

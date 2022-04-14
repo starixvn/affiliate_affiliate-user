@@ -3,12 +3,12 @@
     using System.ComponentModel.DataAnnotations;
     using System.Web.Mvc;
     using Fanex.Affiliate.Resources;
-    using Fanex.Data.Repository;
+    using Fanex.Data;
 
     /// <summary>
     /// Contact Us Criteria.
     /// </summary>
-    public class ContactUsCriteria : CriteriaBase
+    public class ContactUsCriteria : CriteriaBaseImpl
     {
         public int MID { get; set; }
 

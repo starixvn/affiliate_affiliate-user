@@ -1,12 +1,11 @@
 ﻿namespace Fanex.Affiliate.Criteria
 {
     using System;
-    using Fanex.Data.Repository;
 
     /// <summary>
     /// Criteria for inserting the new payment request.
     /// </summary>
-    public class PaymentRequestCriteria : CriteriaBase
+    public class PaymentRequestCriteria : CriteriaBaseImpl
     {
         public int AffId { get; set; }
 

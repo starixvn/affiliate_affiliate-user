@@ -2,12 +2,11 @@
 {
     using System.Diagnostics.CodeAnalysis;
     using System.Web.Mvc;
-    using Fanex.Data.Repository;
 
     /// <summary>
     /// User Insert Criteria.
     /// </summary>
-    public class UserInsertCriteria : CriteriaBase
+    public class UserInsertCriteria : CriteriaBaseImpl
     {
         public int AffID { get; set; }
 
@@ -68,14 +67,14 @@
         public string Ip { get; set; }
 
         public string Browser { get; set; }
-        
+
         public string Language { get; set; }
 
         // Output parameters
         public string Username { get; set; }
 
         public int ErrCode { get; set; }
-        
+
         public string ErrMsg { get; set; }
 
         /// <summary>

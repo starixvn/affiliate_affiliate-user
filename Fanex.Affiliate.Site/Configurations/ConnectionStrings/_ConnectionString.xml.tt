@@ -11,7 +11,8 @@
 		{"athena000", "DBAFFATHENA000.Affiliate_Athena000.bodbDownlineNet"},
 		{"aoncash", "DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet"},
 		{"itcbet", "DBAFFITCBET.Affiliate_itcbet.bodbDownlineNet"},
-		{"macaubet", "DBAFFMACAUBET.Affiliate_MacauBet.bodbDownlineNet"}
+		{"macaubet", "DBAFFMACAUBET.Affiliate_MacauBet.bodbDownlineNet"},
+		{"9bet", "DBAFF9BET.Affiliate_9Bet.bodbDownlineNet"}
 	};
 
 	var environments = new string[] { "uat", "production", "mnl" };

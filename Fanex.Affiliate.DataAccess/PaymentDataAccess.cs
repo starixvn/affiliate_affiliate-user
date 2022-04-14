@@ -5,6 +5,7 @@
     using Criteria.Payment;
     using Data;
     using DTO;
+    using Fanex.Data.SqlServer;
     using ViewModels;
 
     /// <summary>
@@ -20,10 +21,10 @@
         public PaymentViewModel GetPaymentRequest(PaymentCriteria criteria)
         {
             var payment = new PaymentViewModel();
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var param = criteria.GetSpParams();
-                payment.ListPayment = objectDb.Query<Payment>(param);
+                payment.ListPayment = objectDb.Query<Payment>(criteria);
+                var param = objectDb.GetOutputParams();
 
                 payment.PreferredPayment = param["preferredpayment"].ToString();
                 payment.BalanceBroughtForward = Convert.ToDecimal(param["balbroughtforward"]);
@@ -41,10 +42,10 @@
         public PaymentViewModel InsertPaymentRequest(PaymentRequestCriteria criteria)
         {
             var payment = new PaymentViewModel();
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var param = criteria.GetSpParams();
-                objectDb.ExecuteNonQuery(param);
+                objectDb.ExecuteNonQuery(criteria);
+                var param = objectDb.GetOutputParams();
 
                 criteria.ErrCode = Convert.ToInt16(param["errcode"]);
                 if (criteria.ErrCode == 0)
@@ -67,10 +68,10 @@
         public PaymentViewModel CancelPaymentRequest(PaymentCancelCriteria criteria)
         {
             var payment = new PaymentViewModel();
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var param = criteria.GetSpParams();
-                objectDb.ExecuteNonQuery(param);
+                objectDb.ExecuteNonQuery(criteria);
+                var param = objectDb.GetOutputParams();
 
                 criteria.ErrCode = Convert.ToInt16(param["errcode"]);
                 if (criteria.ErrCode == 0)
@@ -93,14 +94,14 @@
         public PaymentViewModel GetPaymentRequestPlayerInfo(PaymentPlayerInfoCriteria criteria)
         {
             var payment = new PaymentViewModel();
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var param = criteria.GetSpParams();
-                objectDb.ExecuteNonQuery(param);
+                objectDb.ExecuteNonQuery(criteria);
+                var param = objectDb.GetOutputParams();
 
                 payment.PlayerUsername = param["playerusername"].ToString();
                 payment.SystemName = param["systemname"].ToString();
-                payment.DummyBalAcc = param["dummybalacc"].ToString();
+                payment.DummyBalAcc = param["dummybalacc"]?.ToString();
                 payment.AffCurrency = param["affcurrency"].ToString();
             }
 
@@ -109,10 +110,9 @@
 
         public void WritePaymentLog(PaymentLogCriteria criteria)
         {
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var param = criteria.GetSpParams();
-                objectDb.ExecuteNonQuery(param);
+                objectDb.ExecuteNonQuery(criteria);
             }
         }
     }

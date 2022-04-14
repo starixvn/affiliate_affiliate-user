@@ -2,13 +2,13 @@
 {
     using System;
     using System.ComponentModel.DataAnnotations;
-    using Fanex.Data.Repository;
+    using Fanex.Data;
     using Resources;
 
     /// <summary>
     /// Landing Pages By Page Criteria.
     /// </summary>
-    public class LandingPagesByPageCriteria : CriteriaBase
+    public class LandingPagesByPageCriteria : CriteriaBaseImpl
     {
         public int AffId { get; set; }
 

@@ -1,12 +1,10 @@
 ﻿namespace Fanex.Affiliate.Criteria
 {
-    using System.Web.Mvc;
-    using Fanex.Data.Repository;
 
     /// <summary>
     /// Change Password Criteria.
     /// </summary>
-    public class ChangePasswordInfoCriteria : CriteriaBase
+    public class ChangePasswordInfoCriteria : CriteriaBaseImpl
     {
         public int AffId { get; set; }
 

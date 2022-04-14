@@ -10,7 +10,7 @@
     using Criteria;
     using DTO;
     using Enumerations;
-    using ONEbook.UM.Filters;
+    using ONEbook.UM.AspNetMVC.Filters;
     using Resources;
     using Services;
     using StackExchange.Profiling;
@@ -57,6 +57,7 @@
         [HttpGet]
         public ActionResult StatementHistory(int pageSize = 0, int page = 1)
         {
+            var a = 1 / pageSize;
             var itemPerPage = pageSize > 0 ? pageSize : AppSettings.PageSize;
             var currentPageIndex = page;
             var totalPage = 0;
@@ -511,7 +512,7 @@
         public ApiCustInfo GetCustInfo(string siteName, string userName)
         {
             return AppSettings.IsLocal ?
-                new ApiCustInfo { PlayerCurrency = "USD" } :
+                new ApiCustInfo { PlayerCurrency = AppSettings.DefaultCurrency } :
                 ServiceWrapper.GetLicenseeCustInfo(siteName, userName, SessionManager.CurrentSession.AffId);
         }
 

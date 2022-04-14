@@ -1,11 +1,11 @@
 ﻿namespace Fanex.Affiliate.Criteria
 {
-    using Fanex.Data.Repository;
+    using Fanex.Data;
 
     /// <summary>
     /// Internal Login Criteria.
     /// </summary>
-    public class InternalLoginCriteria : CriteriaBase
+    public class InternalLoginCriteria : CriteriaBaseImpl
     {
         public int AdminId { get; set; }
 

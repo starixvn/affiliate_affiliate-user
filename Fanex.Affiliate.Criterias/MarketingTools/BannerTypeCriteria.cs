@@ -1,11 +1,11 @@
 ﻿namespace Fanex.Affiliate.Criteria
 {
-    using Fanex.Data.Repository;
+    using Fanex.Data;
 
     /// <summary>
     /// Banner Type Criteria.
     /// </summary>
-    public class BannerTypeCriteria : CriteriaBase
+    public class BannerTypeCriteria : CriteriaBaseImpl
     {
         public BannerTypeCriteria()
         {

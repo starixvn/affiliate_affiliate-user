@@ -1,17 +1,16 @@
 ﻿namespace Fanex.Affiliate.Criteria
 {
-    using Fanex.Data.Repository;
 
     /// <summary>
     /// Criteria for getting the player's info for payout.
     /// </summary>
-    public class PaymentPlayerInfoCriteria : CriteriaBase
+    public class PaymentPlayerInfoCriteria : CriteriaBaseImpl
     {
         public int AffId { get; set; }
 
         // Output parameters
         public string PlayerUsername { get; set; }
-        
+
         public string SystemName { get; set; }
 
         public string DummyBalAcc { get; set; }

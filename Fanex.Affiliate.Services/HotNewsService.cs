@@ -6,6 +6,8 @@
     using Criteria;
     using DataAccess;
     using DTO;
+    using Fanex.Caching.Memory;
+    using System;
     using ViewModels;
 
     /// <summary>
@@ -32,7 +34,7 @@
         /// Initializes a new instance of the <see cref="HotNewsService" /> class.
         /// </summary>
         public HotNewsService()
-            : this(null)
+            : this(null, null)
         {
         }
 
@@ -40,9 +42,9 @@
         /// Initializes a new instance of the <see cref="HotNewsService" /> class.
         /// </summary>
         /// <param name="hotNewsUsDataAccess">HotNews DataAccess.</param>
-        private HotNewsService(IHotNewsDataAccess hotNewsUsDataAccess)
+        private HotNewsService(IHotNewsDataAccess hotNewsUsDataAccess, ICache cache)
         {
-            _cacheManager = CacheService.CreateInstance(CacheType.MemoryCache);
+            _cacheManager = cache ?? new MemoryCache(new MemoryCacheOptions());
             _hotNewsDataAccess = hotNewsUsDataAccess ?? new HotNewsDataAccess();
         }
 
@@ -56,12 +58,13 @@
         public HotNewsViewModel GetHotNews(HotNewsCriteria criteria)
         {
             Check.Argument.IsNotNull(criteria, "criteria");
-            var hotNews = _cacheManager.Get<HotNews>(HotNewsCacheKey);
+            _cacheManager.TryGet<HotNews>(HotNewsCacheKey, out HotNews hotNews);
 
             if (hotNews == null)
             {
                 hotNews = _hotNewsDataAccess.GetHotNews(criteria);
-                _cacheManager.Set<HotNews>(HotNewsCacheKey, hotNews,  AppSettings.TimeHotMessage);
+                var cachePolicy = new CacheItemOptions().SetAbsoluteExpiration(TimeSpan.FromSeconds(AppSettings.TimeHotMessage));
+                _cacheManager.Set<HotNews>(HotNewsCacheKey, hotNews, cachePolicy);
             }
 
             return new HotNewsViewModel

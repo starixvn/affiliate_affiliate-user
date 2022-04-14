@@ -4,6 +4,7 @@
     using Criteria;
     using Data;
     using DTO;
+    using Fanex.Data.SqlServer;
 
     /// <summary>
     /// Account data access.
@@ -18,10 +19,9 @@
         public Banner BannerSelectInfo(BannerInfoCriteria criteria)
         {
             var bannerInfo = new Banner();
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var param = criteria.GetSpParams();
-                var firstRowBannerInfo = objectDb.ExecuteReader(param);
+                var firstRowBannerInfo = objectDb.ExecuteReader(criteria);
 
                 // Get data to GroupSetting
                 while (firstRowBannerInfo.Read())
@@ -36,17 +36,16 @@
 
             return bannerInfo;
         }
-        
+
         /// <summary>
         /// Update Banner statistic.
         /// </summary>
         /// <param name="criteria">Banner criteria.</param>
         public void BannerUpdateStatistic(BannerUpdateStatisticCriteria criteria)
         {
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var param = criteria.GetSpParams();
-                objectDb.ExecuteNonQuery(param);
+                objectDb.ExecuteNonQuery(criteria);
             }
         }
 
@@ -57,7 +56,7 @@
         /// <returns>System name.</returns>
         public string BannerGetSystemName(string settingKey)
         {
-            using (var objectDb = new ObjectDb(settingKey))
+            using (var objectDb = new SqlObjectDb(settingKey))
             {
                 return objectDb.ExecuteScalar().ToString();
             }

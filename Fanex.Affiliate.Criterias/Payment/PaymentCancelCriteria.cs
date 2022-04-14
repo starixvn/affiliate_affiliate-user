@@ -1,12 +1,11 @@
 ﻿namespace Fanex.Affiliate.Criteria
 {
     using System;
-    using Fanex.Data.Repository;
 
     /// <summary>
     /// Criteria for cancelling the payment request.
     /// </summary>
-    public class PaymentCancelCriteria : CriteriaBase
+    public class PaymentCancelCriteria : CriteriaBaseImpl
     {
         public long TransID { get; set; }
 

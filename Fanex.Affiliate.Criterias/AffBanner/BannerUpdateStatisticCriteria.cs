@@ -1,11 +1,10 @@
 ﻿namespace Fanex.Affiliate.Criteria
 {
-    using Fanex.Data.Repository;
 
     /// <summary>
     /// Banner Update Statistic Criteria.
     /// </summary>
-    public class BannerUpdateStatisticCriteria : CriteriaBase
+    public class BannerUpdateStatisticCriteria : CriteriaBaseImpl
     {
         public int BannerID { get; set; }
 

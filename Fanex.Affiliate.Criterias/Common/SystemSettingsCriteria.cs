@@ -1,11 +1,10 @@
 ﻿namespace Fanex.Affiliate.Criteria
 {
-    using Fanex.Data.Repository;
 
     /// <summary>
     /// System Settings Criteria.
     /// </summary>
-    public class SystemSettingsCriteria : CriteriaBase
+    public class SystemSettingsCriteria : CriteriaBaseImpl
     {
         public string Environment { get; set; }
 

@@ -13,7 +13,9 @@
     using System.Web.Security;
     using CasinoSetting;
     using Configurations;
-    using Data.Configuration;
+    using Data.SqlServer;
+    using Fanex.Affiliate.Web.Helpers;
+    using Fanex.Data;
     using Logging;
     using Web;
     using Web.Mvc;
@@ -24,7 +26,11 @@
         protected void Application_Start()
         {
             LoggingConfig.RegisterSentry();
-            DbSettingProviderManager.Current.Start();
+            DbSettingProviderManager
+                .StartNewSession()
+                .WithSqlServer("~/Configurations/SpNames/SpName.xml")
+                .Run();
+            UMConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
@@ -54,9 +60,7 @@
                 return;
             }
 
-            var message = BuildErrorMessage(exception);
-
-            LogService.Error(message.ToString());
+            LogHelper.WriteError(exception);
 
             if (AppSettings.IsProduction && Request.RequestContext.HttpContext.Request.IsAjaxRequest())
             {
@@ -81,79 +85,6 @@
                 FormsAuthentication.RedirectToLoginPage("Session=Expired");
                 HttpContext.Current.Response.End();
             }
-        }
-
-        private StringBuilder BuildErrorMessage(Exception exception)
-        {
-            var message = new StringBuilder()
-                            .AppendLine($"Affiliate: {AppSettings.AffiliateName}")
-                            .AppendLine($"Error:{exception.Message}")
-                            .AppendLine($"Url: { Request.RawUrl}")
-                            .AppendLine($"UrlReferrer: {Request.UrlReferrer} ")
-                            .AppendLine($"QUERYSTRING: {Request.QueryString}")
-                            .AppendLine($"FORM: {string.Join("~", Request.Form)}")
-                            .AppendLine($"Browser:{Request.Browser.Type}")
-                            .AppendLine($"BrowserVer:{Request.Browser.Version}")
-                            .AppendLine($"Agent:{Request.UserAgent}")
-                            .AppendLine($"Source:{exception.Source}")
-                            .AppendLine($"TargetSite:{exception.TargetSite}");
-
-            var currenSession = SessionManager.CurrentSession;
-            if (currenSession != null)
-            {
-                message.AppendLine($"AffId: {currenSession.AffId}")
-                    .AppendLine($"AffType: { currenSession.AffType}")
-                    .AppendLine($"IsInternalSite: {currenSession.IsInternalSite}")
-                    .AppendLine($"Username: {currenSession.Username}")
-                    .AppendLine($"CurrencyID: {currenSession.CurrencyID}")
-                    .AppendLine($"Currency: {currenSession.Currency}");
-            }
-            else
-            {
-                var context = HttpContext.Current;
-                message.AppendLine($"IdentityName: {context?.User?.Identity?.Name}");
-
-                var session = context?.Session;
-
-                if (session != null)
-                {
-                    message.AppendLine($"SessionId: {session.SessionID}");
-
-                    var sessionKeyList = new List<string>();
-                    foreach (var key in session.Keys)
-                    {
-                        sessionKeyList.Add(key.ToString());
-                    }
-                    message.AppendLine($"SessionKey: {string.Join(",", sessionKeyList)}");
-                }
-
-                var cookies = Request.Cookies;
-                if (cookies != null)
-                {
-                    foreach (var key in cookies.AllKeys)
-                    {
-                        var cookie = cookies.Get(key);
-
-                        if (cookie != null)
-                        {
-                            message.AppendLine($"CookieKey:{key} && CookieValue={cookie.Value}");
-                        }
-                    }
-                }
-            }
-
-            var sqlException = exception as SqlException;
-            if (sqlException != null)
-            {
-                message.AppendLine($"Procedure: { sqlException.Procedure}")
-                    .AppendLine($"Line Number: {sqlException.LineNumber}")
-                    .AppendLine($"Server: {sqlException.Server}");
-            }
-
-            message.AppendLine($"StackTrace: {exception.StackTrace}");
-            message.AppendLine($"InnerException: {exception.InnerException}");
-
-            return message;
         }
     }
 }

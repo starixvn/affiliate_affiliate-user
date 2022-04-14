@@ -1,12 +1,12 @@
 ﻿namespace Fanex.Affiliate.Criteria
 {
     using System;
-    using Fanex.Data.Repository;
+    using Fanex.Data;
 
     /// <summary>
     /// Message Criteria.
     /// </summary>
-    public class MessageCriteria : CriteriaBase
+    public class MessageCriteria : CriteriaBaseImpl
     {
         public MessageCriteria()
         {
@@ -25,16 +25,16 @@
         public string Language { get; set; }
 
         public int PageSize { get; set; }
-        
+
         [SpParam(SqlParamName = "PageIndex")]
-        public int Page 
+        public int Page
         {
             get
             {
                 return _page;
             }
 
-            set 
+            set
             {
                 _page = value <= 0 ? 1 : value;
             }
@@ -42,7 +42,7 @@
 
         [SpParam(Ignored = true)]
         public int NRows { get; set; }
-        
+
         [SpParam(Ignored = true)]
         public int _page { get; set; }
 

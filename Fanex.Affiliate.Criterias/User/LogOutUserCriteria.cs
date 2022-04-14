@@ -1,11 +1,10 @@
 ﻿namespace Fanex.Affiliate.Criteria
 {
-    using Fanex.Data.Repository;
 
     /// <summary>
     /// Log Out User Criteria.
     /// </summary>
-    public class LogOutUserCriteria : CriteriaBase
+    public class LogOutUserCriteria : CriteriaBaseImpl
     {
         public int ServerId { get; set; }
 

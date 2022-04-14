@@ -23,6 +23,7 @@
     <UseGlobalApplicationHostFile />
     <JSLintSkip>\Scripts\|\Content\templates\</JSLintSkip>
     <TargetFrameworkProfile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,22 +49,26 @@
       <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.30\lib\net461\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="Fanex.Common, Version=1.0.404.97, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.Common.1.0.404.97\lib\net40\Fanex.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Fanex.Data, Version=0.5.404.63, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Data.0.5.404.63\lib\net40\Fanex.Data.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Fanex.Data, Version=4.2.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Data.4.2.2\lib\net461\Fanex.Data.dll</HintPath>
     </Reference>
-    <Reference Include="Fanex.Data.DbSettingProviderExtension, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Data.DbSettingProviderExtension.1.0.0.1\lib\net40\Fanex.Data.DbSettingProviderExtension.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Fanex.Data.SqlServer, Version=4.2.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Data.SqlServer.4.2.2\lib\net461\Fanex.Data.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Fanex.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Logging.1.0.0.0\lib\net40\Fanex.Logging.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Fanex.Logging, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Logging.2.0.1\lib\net461\Fanex.Logging.dll</HintPath>
     </Reference>
+    <Reference Include="Fanex.Logging.Sentry.RavenClient, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Logging.Sentry.RavenClient.1.0.1\lib\net461\Fanex.Logging.Sentry.RavenClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\EnterpriseLibrary.Common.5.0.414.0\lib\net40\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
       <Private>True</Private>
@@ -96,7 +101,11 @@
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="SharpRaven, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpRaven.2.4.0\lib\net45\SharpRaven.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -113,6 +122,11 @@
     </Reference>
     <Reference Include="System.Net.Http.WebRequest" />
     <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web">
       <Private>False</Private>
     </Reference>
@@ -161,6 +175,7 @@
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="WebGrease, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
@@ -169,6 +184,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\LoggingConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Common.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -179,21 +195,29 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Configurations\SPNames\SpNames.banner.9bet.sit.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.9bet.uat.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.9bet.production.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.9bet.local.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.aoncash.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.aoncash.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.aoncash.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.aoncash.sandbox.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.aoncash.local.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.athena000.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.itcbet.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.macaubet.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.spondemo.production.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.spondemo.local.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.spondemo.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.spondemo.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.athena000.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.athena000.sandbox.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.athena000.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.athena000.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.itcbet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.itcbet.sandbox.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.itcbet.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.itcbet.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.macaubet.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.macaubet.sandbox.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.macaubet.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.macaubet.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.xml">
       <SubType>Designer</SubType>
@@ -257,13 +281,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Configurations\WebConfigs\Web.banner.athena000.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.athena000.sandbox.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.athena000.sit.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.athena000.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.itcbet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.itcbet.sandbox.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.itcbet.local.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.itcbet.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.macaubet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.macaubet.sandbox.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.macaubet.local.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.macaubet.uat.config" />
   </ItemGroup>
   <ItemGroup>
@@ -274,8 +298,16 @@
     <Content Include="Configurations\WebConfigs\Web.banner.itcbet.sit.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.macaubet.sit.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.aoncash.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.aoncash.sandbox.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.aoncash.sit.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.aoncash.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.9bet.production.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.9bet.sit.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.9bet.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.spondemo.uat.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.spondemo.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.athena000.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.aoncash.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.9bet.local.config" />
     <None Include="Properties\PublishProfiles\a.pubxml" />
   </ItemGroup>
   <PropertyGroup>
@@ -305,7 +337,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/3/28" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2014/3/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />

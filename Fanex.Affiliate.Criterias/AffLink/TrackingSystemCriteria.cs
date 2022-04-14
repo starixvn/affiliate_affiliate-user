@@ -1,12 +1,10 @@
 ﻿namespace Fanex.Affiliate.Criteria
 {
-    using System;
-    using Fanex.Data.Repository;
 
     /// <summary>
     /// Criteria for getting the player's info.
     /// </summary>
-    public class TrackingSystemCriteria : CriteriaBase
+    public class TrackingSystemCriteria : CriteriaBaseImpl
     {
         public int AffiliateID { get; set; }
 

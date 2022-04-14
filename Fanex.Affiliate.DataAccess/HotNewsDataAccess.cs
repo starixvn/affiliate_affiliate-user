@@ -6,6 +6,7 @@
     using Criteria;
     using Data;
     using DTO;
+    using Fanex.Data.SqlServer;
 
     /// <summary>
     /// Hot News Data Access.
@@ -19,9 +20,9 @@
         /// <returns>Hot news object.</returns>
         public HotNews GetHotNews(HotNewsCriteria criteria)
         {
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var dataSet = objectDb.ExecuteDataSet(criteria.GetSpParams());
+                var dataSet = objectDb.ExecuteDataSet(criteria);
 
                 if (dataSet.Tables.Count <= 0)
                 {

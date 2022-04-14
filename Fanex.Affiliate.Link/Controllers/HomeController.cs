@@ -17,9 +17,9 @@
         #endregion Const
 
         #region Services
-        
+
         private readonly ITrackingSystemService _trackingSystemService;
-        
+
         #endregion Services
 
         #region Constructor

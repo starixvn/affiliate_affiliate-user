@@ -1,11 +1,10 @@
 ﻿namespace Fanex.Affiliate.Criteria
 {
-    using Fanex.Data.Repository;
 
     /// <summary>
     /// System Date Time Criteria.
     /// </summary>
-    public class SystemDateTimeCriteria : CriteriaBase
+    public class SystemDateTimeCriteria : CriteriaBaseImpl
     {
         /// <summary>
         /// Get SP name.

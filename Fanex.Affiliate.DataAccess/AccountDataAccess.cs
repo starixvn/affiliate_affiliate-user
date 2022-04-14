@@ -7,6 +7,7 @@
     using Criteria;
     using Data;
     using DTO;
+    using Fanex.Data.SqlServer;
     using ViewModels;
 
     /// <summary>
@@ -25,10 +26,10 @@
         public StatisticsOverview GetStatisticsOverview(AccountStatisticInfoCriteria criteria, ref List<Product> listProduct)
         {
             var statistics = new StatisticsOverview();
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var param = criteria.GetSpParams();
-                listProduct = objectDb.Query<Product>(param) as List<Product>;
+                listProduct = objectDb.Query<Product>(criteria) as List<Product>;
+                var param = objectDb.GetOutputParams();
 
                 // Get output parameters
                 statistics.TotalActivePlayer = Convert.ToInt32(param["totalactiveplayer"]);
@@ -58,10 +59,10 @@
         public AccountOverviewViewModel GetCommissionSetting(AccountCommGroupCriteria criteria)
         {
             var commResult = new AccountOverviewViewModel();
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var data = objectDb.ExecuteReader(criteria.GetSpParams());
-                
+                var data = objectDb.ExecuteReader(criteria);
+
                 // Get data to GroupSetting
                 while (data.Read())
                 {
@@ -107,10 +108,10 @@
         public IEnumerable<DailyEarning> GetDailyEarnings(DailyEarningCriteria criteria)
         {
             List<DailyEarning> data;
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var param = criteria.GetSpParams();
-                data = objectDb.Query<DailyEarning>(param) as List<DailyEarning>;
+                data = objectDb.Query<DailyEarning>(criteria) as List<DailyEarning>;
+                var param = objectDb.GetOutputParams();
                 criteria.AffCurrency = Convert.ToString(param["affcurrency"]);
             }
 
@@ -125,10 +126,10 @@
         public IEnumerable<DailyEarningsDetail> GetDailyEarningsDetail(DailyEarningsDetailCriteria criteria)
         {
             List<DailyEarningsDetail> data;
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var param = criteria.GetSpParams();
-                data = objectDb.Query<DailyEarningsDetail>(param) as List<DailyEarningsDetail>;
+                data = objectDb.Query<DailyEarningsDetail>(criteria) as List<DailyEarningsDetail>;
+                var param = objectDb.GetOutputParams();
                 criteria.AffCurrency = Convert.ToString(param["affcurrency"]);
             }
 
@@ -148,17 +149,16 @@
         {
             var oldPassword = string.Empty;
 
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var param = criteria.GetSpParams();
-                var reader = objectDb.ExecuteReader(param);
+                var reader = objectDb.ExecuteReader(criteria);
 
                 while (reader.Read())
                 {
                     oldPassword = reader["password"].ToString();
                 }
 
-                criteria.ErrCode = Converter.ToInt(objectDb.GetOuputParams()["errcode"]);
+                criteria.ErrCode = Converter.ToInt(objectDb.GetOutputParams()["errcode"]);
             }
 
             return oldPassword;
@@ -170,10 +170,10 @@
         /// <param name="criteria">Input criteria.</param>
         public void UpdateChangePasswordResult(ChangePasswordCriteria criteria)
         {
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var param = criteria.GetSpParams();
-                objectDb.ExecuteNonQuery(param);
+                objectDb.ExecuteNonQuery(criteria);
+                var param = objectDb.GetOutputParams();
                 criteria.ErrCode = Converter.ToInt(param["errcode"]);
             }
         }
@@ -191,9 +191,9 @@
         {
             var result = new DefaultProductCommissionViewModel();
 
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var reader = objectDb.ExecuteReader(criteria.GetSpParams());
+                var reader = objectDb.ExecuteReader(criteria);
 
                 // Get data to GroupSetting
                 while (reader.Read())
@@ -240,10 +240,10 @@
         public IEnumerable<CustomerInfo> GetCustomerInfo(CustomerInfoCriteria criteria)
         {
             List<CustomerInfo> data;
-            using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDb = new SqlObjectDb(criteria.GetSettingKey()))
             {
-                var param = criteria.GetSpParams();
-                data = objectDb.Query<CustomerInfo>(param) as List<CustomerInfo>;
+                data = objectDb.Query<CustomerInfo>(criteria) as List<CustomerInfo>;
+                var param = objectDb.GetOutputParams();
                 criteria.TotalPages = Converter.ToInt(param["totalpages"]);
             }
 

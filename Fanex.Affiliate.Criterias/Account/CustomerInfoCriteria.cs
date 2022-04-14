@@ -1,11 +1,10 @@
 ﻿namespace Fanex.Affiliate.Criteria
 {
-    using Fanex.Data.Repository;
 
     /// <summary>
     /// Customer Information Criteria.
     /// </summary>
-    public class CustomerInfoCriteria : CriteriaBase
+    public class CustomerInfoCriteria : CriteriaBaseImpl
     {
         public string AffUsername { get; set; }
 
