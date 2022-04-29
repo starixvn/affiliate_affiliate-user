@@ -200,7 +200,6 @@
                 {
                     result.GroupSetting.Add(new GroupSetting
                     {
-                        GroupId = reader.ToInt("groupid"),
                         ProductId = reader.ToByte("productid"),
                         TierId = reader.ToByte("tierid"),
                         MinAmount = reader.ToDecimal("minamount"),
