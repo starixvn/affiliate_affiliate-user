@@ -288,6 +288,10 @@
       <Project>{C47B10A7-DA2E-4619-A7E4-FDA66B098688}</Project>
       <Name>Fanex.Affiliate.ViewModels</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Fanex.Affiliate.Web\Fanex.Affiliate.Web.csproj">
+      <Project>{e48f3a91-0a49-4528-8973-77ade02c3d84}</Project>
+      <Name>Fanex.Affiliate.Web</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Fanex.Affiliate\Fanex.Affiliate.csproj">
       <Project>{ED4E400D-0509-4CEC-A2B7-1B8C71A380BA}</Project>
       <Name>Fanex.Affiliate</Name>
@@ -350,7 +354,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/3/28" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2014/3/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
