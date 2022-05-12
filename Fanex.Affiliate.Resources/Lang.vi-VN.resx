@@ -1086,8 +1086,8 @@ Nhóm hỗ trợ hội viên {0}</value>
   <data name="NumberGame" xml:space="preserve">
     <value>Number Game</value>
   </data>
-  <data name="RNGCasino" xml:space="preserve">
-    <value>RNG Casino</value>
+  <data name="SabaCasino" xml:space="preserve">
+    <value>Saba Casino</value>
   </data>
   <data name="Casino" xml:space="preserve">
     <value>Casino</value>
