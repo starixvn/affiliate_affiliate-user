@@ -82,14 +82,13 @@
             var targetDate = string.IsNullOrEmpty(monthDate) ? DateTime.Now.Date : DateTime.Parse(monthDate);
             var startDate = string.IsNullOrEmpty(monthDate) ? targetDate.AddMonths(-1) : DateTime.Parse(monthDate);
             startDate = new DateTime(startDate.Year, startDate.Month, 1);
-            DateTime? nullDateTime = null;
+
             var criteria = new DailyEarningCriteria
             {
                 AffId = CurrentSession.AffId,
                 ProductId = 0,
                 FromDate = startDate,
-                ToDate = targetDate,
-                MonthDate = string.IsNullOrEmpty(monthDate) ? nullDateTime : targetDate
+                ToDate = targetDate
             };
 
             return DailyEarnings(criteria);
@@ -101,8 +100,7 @@
             var productCriteria = new ProductCriteria
             {
                 Language = AppSession.Language,
-                AffId = CurrentSession.AffId,
-                MonthDate = criteria.MonthDate
+                AffId = CurrentSession.AffId
             };
 
             var model = new DailyEarningsKioskViewModel();
@@ -133,14 +131,10 @@
         [HttpGet]
         public ActionResult DailyEarningsDetail(int product, string winlostdate)
         {
-            DateTime winlostDate;
-            DateTime.TryParse(winlostdate, out winlostDate);
-
             var criteria = new DailyEarningsDetailCriteria
             {
                 AffId = CurrentSession.AffId,
-                ProductId = product,
-                MonthDate = winlostDate,
+                ProductId = product
             };
 
             return DailyEarningsDetail(criteria);
@@ -152,12 +146,13 @@
             var productCriteria = new ProductCriteria
             {
                 Language = AppSession.Language,
-                AffId = CurrentSession.AffId,
-                MonthDate = null
+                AffId = CurrentSession.AffId
             };
 
-            var model = new DailyEarningsKioskDetailViewModel();
-            model.ListProduct = _productService.GetProductList(productCriteria).ToList();
+            var model = new DailyEarningsKioskDetailViewModel
+            {
+                ListProduct = _productService.GetProductList(productCriteria).ToList()
+            };
             model.ListProduct.ForEach(i => i.OriginalProductName = i.ProductName);
             model.ListProduct.ForEach(i => i.ProductName = ProductsFormatter.Format(i.ProductName));
             if (criteria.MonthDate != null)
