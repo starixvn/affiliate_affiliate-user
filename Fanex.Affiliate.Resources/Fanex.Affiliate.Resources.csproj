@@ -53,36 +53,6 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RNGCasino.ko-KR.Designer.cs">
-      <DependentUpon>RNGCasino.ko-KR.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="RNGCasino.th-TH.Designer.cs">
-      <DependentUpon>RNGCasino.th-TH.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="RNGCasino.vi-VN.Designer.cs">
-      <DependentUpon>RNGCasino.vi-VN.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="RNGCasino.zh-CN.Designer.cs">
-      <DependentUpon>RNGCasino.zh-CN.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="RNGCasino.zh-TW.Designer.cs">
-      <DependentUpon>RNGCasino.zh-TW.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="RNGCasino.id-ID.Designer.cs">
-      <DependentUpon>RNGCasino.id-ID.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="Lang.ko-KR.Designer.cs">
       <DependentUpon>Lang.ko-KR.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -92,11 +62,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LangMap.resx</DependentUpon>
-    </Compile>
-    <Compile Include="RNGCasino.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RNGCasino.resx</DependentUpon>
     </Compile>
     <Compile Include="Terms.zh-TW.Designer.cs">
       <DependentUpon>Terms.zh-TW.resx</DependentUpon>
@@ -161,36 +126,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="RNGCasino.ko-KR.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>RNGCasino.ko-KR.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RNGCasino.th-TH.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>RNGCasino.th-TH.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RNGCasino.vi-VN.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>RNGCasino.vi-VN.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RNGCasino.zh-CN.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>RNGCasino.zh-CN.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RNGCasino.zh-TW.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>RNGCasino.zh-TW.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RNGCasino.id-ID.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>RNGCasino.id-ID.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Lang.ko-KR.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Lang.ko-KR.Designer.cs</LastGenOutput>
@@ -199,11 +134,6 @@
     <EmbeddedResource Include="LangMap.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>LangMap.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RNGCasino.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>RNGCasino.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Terms.zh-TW.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -288,7 +218,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/3/28" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2014/3/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
