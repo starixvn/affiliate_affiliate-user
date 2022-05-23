@@ -1887,4 +1887,7 @@
     <value>ยอดได้เสียปัดเศษใช้เป็นข้อมูลอ้างอิงเท่านั้น ดังนั้น ผลรวมยอดได้เสียทั้งหมดที่เกิดขึ้นจริงอาจจะแตกจากจำนวนยอดปัดเศษ</value>
     <comment>78976</comment>
   </data>
+  <data name="RNGKeno" xml:space="preserve">
+    <value>คีโน</value>
+  </data>
 </root>

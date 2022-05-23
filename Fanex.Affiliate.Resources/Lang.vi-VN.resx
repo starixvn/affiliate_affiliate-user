@@ -1884,4 +1884,7 @@ Nhóm hỗ trợ hội viên {0}</value>
   <data name="AF" xml:space="preserve">
     <value>Afghanistan</value>
   </data>
+  <data name="RNGKeno" xml:space="preserve">
+    <value>RNG Keno</value>
+  </data>
 </root>

@@ -4323,6 +4323,15 @@ namespace Fanex.Affiliate.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to RNG Keno.
+        /// </summary>
+        public static string RNGKeno {
+            get {
+                return ResourceManager.GetString("RNGKeno", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Romania.
         /// </summary>
         public static string RO {
