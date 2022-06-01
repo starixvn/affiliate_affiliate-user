@@ -1,28 +1,20 @@
 ﻿namespace Fanex.Affiliate.Site
 {
     using System;
-    using System.Collections.Generic;
-    using System.Data.SqlClient;
-    using System.Diagnostics.CodeAnalysis;
-    using System.Text;
     using System.Web;
     using System.Web.Mvc;
     using System.Web.Optimization;
     using System.Web.Routing;
     using System.Web.Script.Serialization;
     using System.Web.Security;
-    using CasinoSetting;
     using Configurations;
     using Data.SqlServer;
     using Fanex.Affiliate.Web.Helpers;
     using Fanex.Data;
-    using Logging;
-    using Web;
     using Web.Mvc;
 
     public class MvcApplication : HttpApplication
     {
-        [SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic", Justification = "Reviewed. Suppression is OK here.")]
         protected void Application_Start()
         {
             LoggingConfig.RegisterSentry();
@@ -40,22 +32,12 @@
             ViewEngines.Engines.Clear();
             ViewEngines.Engines.Add(new CustomRazorViewEngine());
             ViewEngines.Engines.Add(new RazorViewEngine());
-
-            log4net.Config.XmlConfigurator.Configure();
-            log4net.LogManager.GetLogger("GeneralLog").Info("Start");
-
-            if (AppSettings.Environment.IndexOf("Local", StringComparison.OrdinalIgnoreCase) < 0 &&
-                !AppSettings.Environment.Equals("SIT", StringComparison.OrdinalIgnoreCase))
-            {
-                SettingMgr.GetInstance().Initialize(SiteEnum.AgentSite);
-            }
         }
 
         protected void Application_Error(object sender, EventArgs e)
         {
             var exception = Server.GetLastError();
-            var httpException = exception as HttpException;
-            if (httpException != null && httpException.GetHttpCode() == 404)
+            if (exception is HttpException httpException && httpException.GetHttpCode() == 404)
             {
                 return;
             }
