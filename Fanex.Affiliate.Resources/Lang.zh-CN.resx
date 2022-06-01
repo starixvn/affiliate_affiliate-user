@@ -1090,8 +1090,8 @@
   <data name="NumberGame" xml:space="preserve">
     <value>百练赛</value>
   </data>
-  <data name="RNGCasino" xml:space="preserve">
-    <value>娱乐城</value>
+  <data name="SabaCasino" xml:space="preserve">
+    <value>沙巴娱乐城</value>
   </data>
   <data name="Casino" xml:space="preserve">
     <value>娱乐厅</value>
@@ -1935,5 +1935,8 @@
   <data name="SystemParlayDetailNote" xml:space="preserve">
     <value>输赢的进位值仅供参考。因此，所有输赢相加的总计有可能和小计有差数。</value>
     <comment>78976</comment>
+  </data>
+  <data name="RNGKeno" xml:space="preserve">
+    <value>快乐彩</value>
   </data>
 </root>

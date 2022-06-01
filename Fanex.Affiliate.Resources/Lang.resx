@@ -1085,8 +1085,8 @@
   <data name="NumberGame" xml:space="preserve">
     <value>Number Game</value>
   </data>
-  <data name="RNGCasino" xml:space="preserve">
-    <value>RNG Casino</value>
+  <data name="SabaCasino" xml:space="preserve">
+    <value>Saba Casino</value>
   </data>
   <data name="Casino" xml:space="preserve">
     <value>Casino</value>
@@ -1920,7 +1920,7 @@
     <value>Virtual Tennis</value>
   </data>
   <data name="TitleRngCasinoTicketDetail" xml:space="preserve">
-    <value>Bet List - RNG Casino - Ticket Detail</value>
+    <value>Bet List - Saba Casino - Ticket Detail</value>
     <comment>#54368</comment>
   </data>
   <data name="TitleAgCasinoTicketDetail" xml:space="preserve">
@@ -1942,5 +1942,8 @@
   <data name="SystemParlayDetailNote" xml:space="preserve">
     <value>Win Loss is rounded for reference only. Therefore, Sub Total amount may be different from the sum of Win Loss when it sums all the actual Win Loss amounts.</value>
     <comment>78976</comment>
+  </data>
+  <data name="RNGKeno" xml:space="preserve">
+    <value>RNG Keno</value>
   </data>
 </root>

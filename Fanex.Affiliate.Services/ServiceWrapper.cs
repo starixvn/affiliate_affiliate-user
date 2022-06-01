@@ -7,7 +7,7 @@
     using Criteria.Payment;
     using DataAccess;
     using DTO;
-    using Logging;
+    using Fanex.Affiliate.Web.Helpers;
     using MemberSiteService;
 
     /// <summary>
@@ -55,7 +55,7 @@
             }
             catch (Exception exception)
             {
-                LogService.Error(exception.Message, exception);
+                LogHelper.WriteError(exception);
             }
 
             return custInfo;

@@ -19,7 +19,7 @@ namespace Fanex.Affiliate.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Lang {
@@ -4323,11 +4323,11 @@ namespace Fanex.Affiliate.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to RNG Casino.
+        ///   Looks up a localized string similar to RNG Keno.
         /// </summary>
-        public static string RNGCasino {
+        public static string RNGKeno {
             get {
-                return ResourceManager.GetString("RNGCasino", resourceCulture);
+                return ResourceManager.GetString("RNGKeno", resourceCulture);
             }
         }
         
@@ -4373,6 +4373,15 @@ namespace Fanex.Affiliate.Resources {
         public static string SA {
             get {
                 return ResourceManager.GetString("SA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saba Casino.
+        /// </summary>
+        public static string SabaCasino {
+            get {
+                return ResourceManager.GetString("SabaCasino", resourceCulture);
             }
         }
         
@@ -4890,7 +4899,7 @@ namespace Fanex.Affiliate.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bet List - RNG Casino - Ticket Detail.
+        ///   Looks up a localized string similar to Bet List - Saba Casino - Ticket Detail.
         /// </summary>
         public static string TitleRngCasinoTicketDetail {
             get {
