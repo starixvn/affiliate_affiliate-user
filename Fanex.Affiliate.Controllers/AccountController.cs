@@ -131,9 +131,12 @@
         [HttpGet]
         public ActionResult DailyEarningsDetail(int product, string winlostdate)
         {
+            DateTime.TryParse(winlostdate, out DateTime winlostDate);
+
             var criteria = new DailyEarningsDetailCriteria
             {
                 AffId = CurrentSession.AffId,
+                MonthDate = winlostDate,
                 ProductId = product
             };
 
@@ -159,7 +162,6 @@
             {
                 model.MonthDate = (DateTime)criteria.MonthDate;
             }
-
             criteria.AffId = CurrentSession.AffId;
             model.ProductId = criteria.ProductId;
             model.ListDailyEarningDetail = _accountService.GetDailyEarningsDetail(criteria).ToList();
