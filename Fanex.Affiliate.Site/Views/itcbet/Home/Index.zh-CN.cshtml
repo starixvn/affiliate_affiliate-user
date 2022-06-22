@@ -44,9 +44,9 @@
                 <div class="line-block">
                 </div>
                 <div class="content-block">
-                    <p>我们提供下列基础货币: @AppSettings.AffiliateBaseCurrencyList.</p>
+                    <p>我们提供下列基础货币: @AppSettings.AffiliateBaseCurrencyExcludedUUSList.</p>
                     @{
-            var baseCurrencyList = AppSettings.AffiliateBaseCurrencyList.Split(',');
+            var baseCurrencyList = AppSettings.AffiliateBaseCurrencyExcludedUUSList;
             var multiplyByCurrencyList = AppSettings.AffiliateCurrencyListMultipliedBy.Split(',');
             var commonCurrencyList = baseCurrencyList.Intersect(multiplyByCurrencyList);
 
@@ -177,7 +177,7 @@
                 <div class="line-block">
                 </div>
                 <div class="content-block">
-                    <p>@string.Format("您可以要求按{0}付款。 付款适用支付日相应的汇率。", string.Join(", ", AppSettings.PlayerCurrencies.OrderBy(c => c.CurrencyCode).Select(x => x.CurrencyCode).ToArray()))</p>
+                    <p>@string.Format("您可以要求按{0}付款。 付款适用支付日相应的汇率。", string.Join(", ", AppSettings.PlayerCurrenciesExcludedUUS))</p>
                     <p>@string.Format("我们的提款方式仅通过您的{0}玩家账户提供给您。 提款请求的最低额度由每种加盟基础货币决定。", AppSettings.SystemDisplayName)</p>
                 </div>
             </div>

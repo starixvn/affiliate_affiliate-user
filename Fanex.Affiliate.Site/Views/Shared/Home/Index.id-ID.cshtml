@@ -14,7 +14,7 @@
         }
 
         productList = productList.Substring(0, productList.Length - 2);
-    }    
+    }
 }
 
 @{
@@ -44,9 +44,9 @@
                 <div class="line-block">
                 </div>
                 <div class="content-block">
-                    <p>Kami menawarkan mata uang dasar berikut: @AppSettings.AffiliateBaseCurrencyList.</p>
+                    <p>Kami menawarkan mata uang dasar berikut: @string.Join(",", AppSettings.AffiliateBaseCurrencyExcludedUUSList).</p>
                     @{
-                        var baseCurrencyList = AppSettings.AffiliateBaseCurrencyList.Split(',');
+                        var baseCurrencyList = AppSettings.AffiliateBaseCurrencyExcludedUUSList;
                         var multiplyByCurrencyList = AppSettings.AffiliateCurrencyListMultipliedBy.Split(',');
                         var commonCurrencyList = baseCurrencyList.Intersect(multiplyByCurrencyList);
 
@@ -178,7 +178,7 @@
                 <div class="line-block">
                 </div>
                 <div class="content-block">
-                    <p>@string.Format("Anda dapat meminta pembayaran dalam mata uang {0}. Pada tanggal pembayaran akan digunakan masing-2 kurs jual beli yang berlaku.", string.Join(", ", AppSettings.PlayerCurrencies.OrderBy(c => c.CurrencyCode).Select(x => x.CurrencyCode).ToArray()))</p>
+                    <p>@string.Format("Anda dapat meminta pembayaran dalam mata uang {0}. Pada tanggal pembayaran akan digunakan masing-2 kurs jual beli yang berlaku.", string.Join(", ", AppSettings.PlayerCurrenciesExcludedUUS))</p>
                     <p>@string.Format("Kami menawarkan metode penarikan hanya melalui akun pemain {0} Anda. Jumlah minimum dari permintaan penarikan tergantung pada setiap mata uang dasar afiliasi.", AppSettings.SystemDisplayName)</p>
                 </div>
             </div>

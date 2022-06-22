@@ -10,7 +10,7 @@
     }
     else
     {
-        linkApplicationForm = Lang.ApplicationForm; 
+        linkApplicationForm = Lang.ApplicationForm;
     }
 }
 @{
@@ -103,7 +103,7 @@
                 </p>
                 <b>인출 시 지원되는 통화의 종류는 무엇인가요?</b>
                 <br />
-                @string.Format("{0}로 금액을 인출할 수 있습니다. 지불일의 해당되는 환율이 적용됩니다.", string.Join(", ", AppSettings.PlayerCurrencies.OrderBy(c => c.CurrencyCode).Select(x => x.CurrencyCode).ToArray()))
+                @string.Format("{0}로 금액을 인출할 수 있습니다. 지불일의 해당되는 환율이 적용됩니다.", string.Join(", ", AppSettings.PlayerCurrenciesExcludedUUS))
                 <p>
                 </p>
                 <b id="f8">최저의 인출 요청 액수는 얼마인가요?</b>

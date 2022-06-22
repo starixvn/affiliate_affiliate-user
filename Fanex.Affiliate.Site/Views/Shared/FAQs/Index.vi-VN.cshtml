@@ -10,7 +10,7 @@
     }
     else
     {
-        linkApplicationForm = Lang.ApplicationForm; 
+        linkApplicationForm = Lang.ApplicationForm;
     }
 }
 @{
@@ -103,7 +103,7 @@
                 </p>
                 <b>Những loại tiền tệ nào được hỗ trợ khi rút tiền?</b>
                 <br />
-                @string.Format("Bạn có thể rút tiền thông qua các loại tiền tệ sau đây : {0}. Tỷ giá sẽ được áp dụng ngay ngày bạn rút tiền.", string.Join(", ", AppSettings.PlayerCurrencies.OrderBy(c => c.CurrencyCode).Select(x => x.CurrencyCode).ToArray()))
+                @string.Format("Bạn có thể rút tiền thông qua các loại tiền tệ sau đây : {0}. Tỷ giá sẽ được áp dụng ngay ngày bạn rút tiền.", string.Join(", ", AppSettings.PlayerCurrenciesExcludedUUS))
                 <p>
                 </p>
                 <b id="f8">Mức hoa hồng thấp nhất có thể rút là bao nhiêu?</b>

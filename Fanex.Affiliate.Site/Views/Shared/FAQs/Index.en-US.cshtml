@@ -10,7 +10,7 @@
     }
     else
     {
-        linkApplicationForm = Lang.ApplicationForm; 
+        linkApplicationForm = Lang.ApplicationForm;
     }
 }
 @{
@@ -103,7 +103,7 @@
                 </p>
                 <b>What kinds of currencies are supported when withdrawing?</b>
                 <br />
-                @string.Format("You can withdraw money in {0}. Respective exchange rate on payout date will be applied.", string.Join(", ", AppSettings.PlayerCurrencies.OrderBy(c => c.CurrencyCode).Select(x => x.CurrencyCode).ToArray()))
+                @string.Format("You can withdraw money in {0}. Respective exchange rate on payout date will be applied.", string.Join(", ", AppSettings.PlayerCurrenciesExcludedUUS))
                 <p>
                 </p>
                 <b id="f8">What is the minimum withdrawal request amount?</b>

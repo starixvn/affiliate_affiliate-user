@@ -44,9 +44,9 @@
                 <div class="line-block">
                 </div>
                 <div class="content-block">
-                    <p>저희는 @AppSettings.AffiliateBaseCurrencyList 에 나타난 기본 통화를 제공해드립니다.</p>
+                    <p>저희는 @AppSettings.AffiliateBaseCurrencyExcludedUUSList 에 나타난 기본 통화를 제공해드립니다.</p>
                     @{
-            var baseCurrencyList = AppSettings.AffiliateBaseCurrencyList.Split(',');
+            var baseCurrencyList = AppSettings.AffiliateBaseCurrencyExcludedUUSList;
             var multiplyByCurrencyList = AppSettings.AffiliateCurrencyListMultipliedBy.Split(',');
             var commonCurrencyList = baseCurrencyList.Intersect(multiplyByCurrencyList);
 
@@ -177,7 +177,7 @@
                 <div class="line-block">
                 </div>
                 <div class="content-block">
-                    <p>@string.Format("{0}에서 지불을 요청할 수 있습니다. 지불일의 해당 환율이 적용됩니다.", string.Join(", ", AppSettings.PlayerCurrencies.OrderBy(c => c.CurrencyCode).Select(x => x.CurrencyCode).ToArray()))</p>
+                    <p>@string.Format("{0}에서 지불을 요청할 수 있습니다. 지불일의 해당 환율이 적용됩니다.", string.Join(", ", AppSettings.PlayerCurrenciesExcludedUUS))</p>
                     <p>저희는 귀하의 @AppSettings.SystemDisplayName 경기자 계좌를 통해서만 인출 방법을 제공합니다. 인출 요청의 최저액수는 각 가맹자의 기본 통화에 따라 달라집니다.</p>
                 </div>
             </div>

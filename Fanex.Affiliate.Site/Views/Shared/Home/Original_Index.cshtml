@@ -9,7 +9,7 @@
     if (Model.ProductList.Count > 0)
     {
         productList = string.Join(", ", Model.ProductList.Select(t => t.ProductName));
-    }    
+    }
 }
 
 @{
@@ -39,16 +39,16 @@
                 <div class="line-block">
                 </div>
                 <div class="content-block">
-                    <p>@Terms.PD_WeOfferCurrency: @AppSettings.AffiliateBaseCurrencyList.</p>
+                    <p>@Terms.PD_WeOfferCurrency: @string.Join(",", AppSettings.AffiliateBaseCurrencyExcludedUUSList).</p>
                     @{
-                var baseCurrencyList = AppSettings.AffiliateBaseCurrencyList.Split(',');
-                var multiplyByCurrencyList = AppSettings.AffiliateCurrencyListMultipliedBy.Split(',');
-                var commonCurrencyList = baseCurrencyList.Intersect(multiplyByCurrencyList);
+                        var baseCurrencyList = AppSettings.AffiliateBaseCurrencyExcludedUUSList;
+                        var multiplyByCurrencyList = AppSettings.AffiliateCurrencyListMultipliedBy.Split(',');
+                        var commonCurrencyList = baseCurrencyList.Intersect(multiplyByCurrencyList);
 
-                if (commonCurrencyList.Any())
-                {
-                            <p>@string.Format(Terms.PD_DropSomeLastZeroDigits, AppSettings.AffiliateCurrencyListMultipliedBy, FormaterCurrency.GetCurrencySymbol(commonCurrencyList.First()), AppSettings.MulitpliedBy)</p>
-                }
+                        if (commonCurrencyList.Any())
+                        {
+                                    <p>@string.Format(Terms.PD_DropSomeLastZeroDigits, AppSettings.AffiliateCurrencyListMultipliedBy, FormaterCurrency.GetCurrencySymbol(commonCurrencyList.First()), AppSettings.MulitpliedBy)</p>
+                        }
                     }
                 </div>
             </div>
@@ -173,7 +173,7 @@
                 <div class="line-block">
                 </div>
                 <div class="content-block">
-                    <p>@string.Format(Terms.PD_YouRequestPayout, string.Join(", ", AppSettings.PlayerCurrencies.OrderBy(c => c.CurrencyCode).Select(x => x.CurrencyCode).ToArray()))</p>
+                    <p>@string.Format(Terms.PD_YouRequestPayout, string.Join(", ", AppSettings.PlayerCurrenciesExcludedUUS))</p>
                     <p>@string.Format(Terms.PD_WeOfferWithdrawalMethod, AppSettings.AffiliateName)</p>
                 </div>
             </div>
