@@ -44,9 +44,9 @@
                 <div class="line-block">
                 </div>
                 <div class="content-block">
-                    <p>We offer below base currency/currencies: @AppSettings.AffiliateBaseCurrencyList.</p>
+                    <p>We offer below base currency/currencies: @AppSettings.AffiliateBaseCurrencyExcludedUUSList.</p>
                     @{
-            var baseCurrencyList = AppSettings.AffiliateBaseCurrencyList.Split(',');
+            var baseCurrencyList = AppSettings.AffiliateBaseCurrencyExcludedUUSList;
             var multiplyByCurrencyList = AppSettings.AffiliateCurrencyListMultipliedBy.Split(',');
             var commonCurrencyList = baseCurrencyList.Intersect(multiplyByCurrencyList);
 
@@ -177,7 +177,7 @@
                 <div class="line-block">
                 </div>
                 <div class="content-block">
-                    <p>@string.Format("You can request payout in {0}. Respective exchange rate on the payout date will be applied.", string.Join(", ", AppSettings.PlayerCurrencies.OrderBy(c => c.CurrencyCode).Select(x => x.CurrencyCode).ToArray()))</p>
+                    <p>@string.Format("You can request payout in {0}. Respective exchange rate on the payout date will be applied.", string.Join(", ", AppSettings.PlayerCurrenciesExcludedUUS))</p>
                     <p>@string.Format("We offer withdrawal method via your {0} player account only. The minimum amount of withdrawal request depends on each affiliate base currency.", AppSettings.SystemDisplayName)</p>
                 </div>
             </div>

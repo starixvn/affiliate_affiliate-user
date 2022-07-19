@@ -14,7 +14,7 @@
         }
 
         productList = productList.Substring(0, productList.Length - 2);
-    }    
+    }
 }
 
 @{
@@ -44,16 +44,16 @@
                 <div class="line-block">
                 </div>
                 <div class="content-block">
-                    <p>Chúng tôi cung cấp những loại tiền tệ cơ bản sau: @AppSettings.AffiliateBaseCurrencyList.</p>
+                    <p>Chúng tôi cung cấp những loại tiền tệ cơ bản sau: @string.Join(",", AppSettings.AffiliateBaseCurrencyExcludedUUSList).</p>
                     @{
-            var baseCurrencyList = AppSettings.AffiliateBaseCurrencyList.Split(',');
-            var multiplyByCurrencyList = AppSettings.AffiliateCurrencyListMultipliedBy.Split(',');
-            var commonCurrencyList = baseCurrencyList.Intersect(multiplyByCurrencyList);
+                        var baseCurrencyList = AppSettings.AffiliateBaseCurrencyExcludedUUSList;
+                        var multiplyByCurrencyList = AppSettings.AffiliateCurrencyListMultipliedBy.Split(',');
+                        var commonCurrencyList = baseCurrencyList.Intersect(multiplyByCurrencyList);
 
-            if (commonCurrencyList.Any())
-            {
-                            <p>@string.Format("Trong các báo cáo và thiết lập hoa hồng, chúng tôi sẽ bỏ những chữ số 0 cuối cùng cho những loại tiền tệ như {0}. Ví dụ: 1{1} là {2}{1} theo giá trị thực.", AppSettings.AffiliateCurrencyListMultipliedBy, FormaterCurrency.GetCurrencySymbol(commonCurrencyList.First()), AppSettings.MulitpliedBy)</p>
-            }
+                        if (commonCurrencyList.Any())
+                        {
+                                        <p>@string.Format("Trong các báo cáo và thiết lập hoa hồng, chúng tôi sẽ bỏ những chữ số 0 cuối cùng cho những loại tiền tệ như {0}. Ví dụ: 1{1} là {2}{1} theo giá trị thực.", AppSettings.AffiliateCurrencyListMultipliedBy, FormaterCurrency.GetCurrencySymbol(commonCurrencyList.First()), AppSettings.MulitpliedBy)</p>
+                        }
                     }
                 </div>
             </div>
@@ -178,7 +178,7 @@
                 <div class="line-block">
                 </div>
                 <div class="content-block">
-                    <p>@string.Format("Bạn có thể yêu cầu rút tiền bằng đơn vị tiền tệ như {0}. Tỷ lệ ngoại tệ sẽ được đổi dựa vào tỷ lệ ngày rút tiền hôm đó. ", string.Join(", ", AppSettings.PlayerCurrencies.OrderBy(c => c.CurrencyCode).Select(x => x.CurrencyCode).ToArray()))</p>
+                    <p>@string.Format("Bạn có thể yêu cầu rút tiền bằng đơn vị tiền tệ như {0}. Tỷ lệ ngoại tệ sẽ được đổi dựa vào tỷ lệ ngày rút tiền hôm đó. ", string.Join(", ", AppSettings.PlayerCurrenciesExcludedUUS))</p>
                     <p>@string.Format("Chúng tôi cung cấp phương thức rút tiền thông qua tài khoản người chơi tại {0}. Số tiền tối thiểu cho mỗi đợt rút tiền được qui định cụ thể tùy theo loại tiền tệ mà bạn chọn.", AppSettings.SystemDisplayName)</p>
                 </div>
             </div>

@@ -10,7 +10,7 @@
     {
         foreach (var product in Model.ProductList)
         {
-            productList += ProductsFormatter.Format(product.ProductName) + ", "; 
+            productList += ProductsFormatter.Format(product.ProductName) + ", ";
         }
 
         productList = productList.Substring(0, productList.Length - 2);
@@ -44,16 +44,16 @@
                 <div class="line-block">
                 </div>
                 <div class="content-block">
-                    <p>我們提供下列基礎貨幣: @AppSettings.AffiliateBaseCurrencyList.</p>
+                    <p>我們提供下列基礎貨幣: @string.Join(",", AppSettings.AffiliateBaseCurrencyExcludedUUSList).</p>
                     @{
-            var baseCurrencyList = AppSettings.AffiliateBaseCurrencyList.Split(',');
-            var multiplyByCurrencyList = AppSettings.AffiliateCurrencyListMultipliedBy.Split(',');
-            var commonCurrencyList = baseCurrencyList.Intersect(multiplyByCurrencyList);
+                        var baseCurrencyList = AppSettings.AffiliateBaseCurrencyExcludedUUSList;
+                        var multiplyByCurrencyList = AppSettings.AffiliateCurrencyListMultipliedBy.Split(',');
+                        var commonCurrencyList = baseCurrencyList.Intersect(multiplyByCurrencyList);
 
-            if (commonCurrencyList.Any())
-            {
-                            <p>@string.Format("在我們的報告和傭金設置裡，我們會刪除下列貨幣的最後幾個零位：{0}例如：{1}1為 {1}1*{2} 實際價值。", AppSettings.AffiliateCurrencyListMultipliedBy, FormaterCurrency.GetCurrencySymbol(commonCurrencyList.First()), AppSettings.MulitpliedBy)</p>
-            }
+                        if (commonCurrencyList.Any())
+                        {
+                                        <p>@string.Format("在我們的報告和傭金設置裡，我們會刪除下列貨幣的最後幾個零位：{0}例如：{1}1為 {1}1*{2} 實際價值。", AppSettings.AffiliateCurrencyListMultipliedBy, FormaterCurrency.GetCurrencySymbol(commonCurrencyList.First()), AppSettings.MulitpliedBy)</p>
+                        }
                     }
                 </div>
             </div>
@@ -177,7 +177,7 @@
                 <div class="line-block">
                 </div>
                 <div class="content-block">
-                    <p>@string.Format("您可以要求按{0}付款。付款適用支付日相應的匯率。", string.Join(", ", AppSettings.PlayerCurrencies.OrderBy(c => c.CurrencyCode).Select(x => x.CurrencyCode).ToArray()))</p>
+                    <p>@string.Format("您可以要求按{0}付款。付款適用支付日相應的匯率。", string.Join(", ", AppSettings.PlayerCurrenciesExcludedUUS))</p>
                     <p>@string.Format("我們的提款方式僅通過您的{0}玩家帳戶提供給您。 提款請求的最低額度由每種加盟基礎貨幣決定。", AppSettings.SystemDisplayName)</p>
                 </div>
             </div>

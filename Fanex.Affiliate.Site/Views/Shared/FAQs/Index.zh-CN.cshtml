@@ -10,7 +10,7 @@
     }
     else
     {
-        linkApplicationForm = Lang.ApplicationForm; 
+        linkApplicationForm = Lang.ApplicationForm;
     }
 }
 @{
@@ -103,7 +103,7 @@
                 </p>
                 <b>提款支持哪些货币？</b>
                 <br />
-                @string.Format("您可以按照{0}提款。 提款适用支付日相应的汇率。", string.Join(", ", AppSettings.PlayerCurrencies.OrderBy(c => c.CurrencyCode).Select(x => x.CurrencyCode).ToArray()))
+                @string.Format("您可以按照{0}提款。 提款适用支付日相应的汇率。", string.Join(", ", AppSettings.PlayerCurrenciesExcludedUUS))
                 <p>
                 </p>
                 <b id="f8">最低的佣金提取额是多少？</b>

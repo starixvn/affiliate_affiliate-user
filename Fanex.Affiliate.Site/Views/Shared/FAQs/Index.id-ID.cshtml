@@ -10,7 +10,7 @@
     }
     else
     {
-        linkApplicationForm = Lang.ApplicationForm; 
+        linkApplicationForm = Lang.ApplicationForm;
     }
 }
 @{
@@ -103,7 +103,7 @@
                 </p>
                 <b>Mata uang apa saja yang dapat digunakan untuk penarikan?</b>
                 <br />
-                @string.Format("Anda dapat menarik uang dalam mata uang {0} Pada tanggal pembayaran akan digunakan masing-2 kurs jual beli yang berlaku.", string.Join(", ", AppSettings.PlayerCurrencies.OrderBy(c => c.CurrencyCode).Select(x => x.CurrencyCode).ToArray()))
+                @string.Format("Anda dapat menarik uang dalam mata uang {0} Pada tanggal pembayaran akan digunakan masing-2 kurs jual beli yang berlaku.", string.Join(", ", AppSettings.PlayerCurrenciesExcludedUUS))
                 <p>
                 </p>
                 <b id="f8">Berapakah jumlah minimum permohonan penarikan?</b>

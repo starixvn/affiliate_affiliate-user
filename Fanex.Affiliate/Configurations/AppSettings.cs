@@ -297,6 +297,14 @@
             }
         }
 
+        public static IEnumerable<string> AffiliateBaseCurrencyExcludedUUSList
+        {
+            get
+            {
+                return AffiliateSettings.AffiliateBaseCurrencyList.Split(',').Where(c => !string.Equals(c, "UUS", StringComparison.OrdinalIgnoreCase));
+            }
+        }
+
         public static string AffiliateCurrencyListMultipliedBy
         {
             get
@@ -390,6 +398,14 @@
             get
             {
                 return AffiliateSettings.PlayerCurrencies;
+            }
+        }
+
+        public static IEnumerable<string> PlayerCurrenciesExcludedUUS
+        {
+            get
+            {
+                return AffiliateSettings.PlayerCurrencies.Where(p => !string.Equals(p.CurrencyCode, "UUS", StringComparison.OrdinalIgnoreCase)).OrderBy(c => c.CurrencyCode).Select(x => x.CurrencyCode);
             }
         }
 
