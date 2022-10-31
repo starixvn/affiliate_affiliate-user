@@ -25,11 +25,15 @@
             <div class="content-block">
                 <table class="frmContact">
                     <tbody>
-                        <tr>
-                            <td colspan="4">
-                                @Html.Raw(string.Format(Lang.PleaseDirectAnyComment, string.Format("<a href='mailto:{0}'>{0}</a>", ViewData["mailContact"])))
-                            </td>
-                        </tr>
+
+                        @if (!AppSettings.AffiliateName.Equals("spondemo"))
+                        {
+                            <tr>
+                                <td colspan="4">
+                                    @Html.Raw(string.Format(Lang.PleaseDirectAnyComment, string.Format("<a href='mailto:{0}'>{0}</a>", ViewData["mailContact"])));
+                                </td>
+                            </tr>
+                        }
                         <tr>
                             <td class="lbl">
                                 <span>@Lang.Name</span>
