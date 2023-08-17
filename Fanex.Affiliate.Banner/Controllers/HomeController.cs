@@ -22,23 +22,28 @@
         [OutputCache(Duration = 300, VaryByParam = "encodedFilePath")]
         public ActionResult Banner(string encodedFilePath)
         {
-            var folderPath = ConfigurationManager.AppSettings["BannerFolder"];
+            var folderPaths = ConfigurationManager.AppSettings["BannerFolders"].Split(';');
             var filePath = HttpUtility.UrlDecode(encodedFilePath);
-            var fullPath = Path.Combine(folderPath, filePath);
-            var fileInfo = new FileInfo(fullPath);
-            if (string.IsNullOrEmpty(filePath) || !IsValidFileExtension(filePath) || !fileInfo.Exists)
-            {
-                return File(Server.MapPath(ErrorNotFoundImagePath), "image/png");
-            }
+            var fullPaths = folderPaths.Select(x => Path.Combine(x, filePath));
 
-            using (var stream = fileInfo.OpenRead())
+            foreach (var path in fullPaths)
             {
-                using (var memoryStream = new MemoryStream())
+                var fileInfo = new FileInfo(path);
+
+                if (!string.IsNullOrEmpty(filePath) && IsValidFileExtension(filePath) && fileInfo.Exists)
                 {
-                    stream.CopyTo(memoryStream);
-                    return new FileContentResult(memoryStream.ToArray(), MimeMapping.GetMimeMapping(fileInfo.Name));
+                    using (var stream = fileInfo.OpenRead())
+                    {
+                        using (var memoryStream = new MemoryStream())
+                        {
+                            stream.CopyTo(memoryStream);
+                            return new FileContentResult(memoryStream.ToArray(), MimeMapping.GetMimeMapping(fileInfo.Name));
+                        }
+                    }
                 }
             }
+
+            return File(Server.MapPath(ErrorNotFoundImagePath), "image/png");
         }
 
         private static bool IsValidFileExtension(string fileName)
