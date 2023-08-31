@@ -2,21 +2,15 @@
 
 // Generated helper templates
 // Generated items
-// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.9bet.mnl.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.9bet.production.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.9bet.uat.config
-// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.macaubet.mnl.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.macaubet.production.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.macaubet.uat.config
-// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.itcbet.mnl.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.itcbet.production.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.itcbet.uat.config
-// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.aoncash.mnl.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.aoncash.production.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.aoncash.uat.config
-// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.athena000.mnl.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.athena000.production.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.athena000.uat.config
-// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.spondemo.mnl.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.spondemo.production.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.spondemo.uat.config
