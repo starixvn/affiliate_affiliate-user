@@ -10,6 +10,7 @@
     using System.Runtime.Serialization.Formatters.Binary;
     using System.Security.Cryptography;
     using System.Text;
+    using System.Text.RegularExpressions;
     using System.Web;
     using Fanex.Affiliate.DTO;
     using Fanex.MailDeliver.MailClient;
@@ -22,6 +23,8 @@
     /// </summary>
     public static class Common
     {
+        private const string IpRegex = "((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\\.|$)){4}";
+
         /// <summary>
         /// The lang resource manager.
         /// </summary>
@@ -157,20 +160,37 @@
         }
 
         /// <summary>
+        /// Get Country.
+        /// </summary>
+        /// <returns>Country English Name.</returns>
+        public static string GetCountry()
+        {
+            var regionInfo = ResolveCountry();
+
+            return regionInfo != null ? regionInfo.EnglishName : CultureInfo.CurrentCulture.ToString();
+        }
+
+        /// <summary>
         /// Get region info.
         /// </summary>
         /// <returns>Region info.</returns>
-        public static RegionInfo ResolveCountry()
+        private static RegionInfo ResolveCountry()
         {
             var culture = ResolveCulture();
-            return culture != null ? new RegionInfo(culture.LCID) : null;
+
+            //solving a culture issue
+            if (culture != null && culture.LCID != 0x7F)
+            {
+                return new RegionInfo(culture.Name);
+            }
+            return null;
         }
 
         /// <summary>
         /// Get culture info.
         /// </summary>
         /// <returns>Culture info.</returns>
-        public static CultureInfo ResolveCulture()
+        private static CultureInfo ResolveCulture()
         {
             var languages = HttpContext.Current.Request.UserLanguages;
             
@@ -197,9 +217,7 @@
         public static string GetIPAddressOfClient()
         {
             string ips = HttpContext.Current.Request.ServerVariables["HTTP_X_FORWARDED_FOR"];
-            string ip = ips == null ?
-                HttpContext.Current.Request.UserHostAddress :
-                ips.Split(',').First().Trim();
+            string ip = GetForwardedIPAddress(ips) ?? HttpContext.Current.Request.UserHostAddress;
 
             if (ip == "::1")
             {
@@ -207,6 +225,37 @@
             }
 
             return ip;
+        }
+
+        private static string GetForwardedIPAddress(string ips)
+        {
+            if (string.IsNullOrEmpty(ips))
+            {
+                return null;
+            }
+
+            var ipList = ips.Split(',');
+
+            foreach (var ip in ipList)
+            {
+                if (Regex.IsMatch(ip, IpRegex))
+                {
+                    return ip;
+                }
+            }
+
+            return null;
+        }
+
+        public static string GetDomainReferrer(string urlReferrer)
+        {
+            if (Uri.IsWellFormedUriString(urlReferrer, UriKind.Absolute))
+            {
+                var referrerUri = new Uri(urlReferrer);
+                return string.IsNullOrEmpty(referrerUri.Host) ? null : referrerUri.Host;
+            }
+
+            return null;
         }
 
         /// <summary>
