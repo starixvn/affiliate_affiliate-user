@@ -15,7 +15,7 @@
 		{"9bet", "DBAFF9BET.Affiliate_9Bet.bodbDownlineNet"}
 	};
 
-	var environments = new string[] { "uat", "production", "mnl" };
+	var environments = new string[] { "uat", "production" };
 	foreach(var licenseeDbName in licenseeDbNameList)
 	{
 		foreach(var environment in environments)

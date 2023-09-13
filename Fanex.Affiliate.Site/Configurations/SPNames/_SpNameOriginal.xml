@@ -22,9 +22,6 @@
     <Setting Key="Aff_User_AffiliateStatementHistorySel" SpName="Aff_User_AffiliateStatementHistorySel" DbName="" Plain="0" />
     <Setting Key="Aff_User_EarningSelDaily" SpName="Aff_User_EarningSelDaily" DbName="" Plain="0" />
     <Setting Key="Aff_User_EarningSelDetail" SpName="Aff_User_EarningSelDetail" DbName="" Plain="0" />
-    <Setting Key="Aff_User_GetExchangeRate" SpName="Aff_User_GetExchangeRate" DbName="" Plain="0" />
-    <Setting Key="Aff_User_SelBalanceUpDay" SpName="Aff_User_SelBalanceUpDay" DbName="DBEXT.bodb02.bodbAdminNet" Plain="0" />
-    <Setting Key="Aff_User_DummyAccID" SpName="Aff_User_DummyAccID" DbName="DBEXT.bodb02.bodbAdminNet" Plain="0" />
   </Function>
 
   <Function Name="Aff-CustomerInfo">

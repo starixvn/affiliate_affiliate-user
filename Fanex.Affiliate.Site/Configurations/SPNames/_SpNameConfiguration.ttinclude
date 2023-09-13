@@ -14,7 +14,7 @@
 		{"9bet", "DBAFF9BET.Affiliate_9Bet.bodbDownlineNet"}
 	};
 
-	var environments = new string[] { "uat", "production", "mnl", "sit", "local" };
+	var environments = new string[] { "uat", "production", "sit", "local" };
 
 	var sites = new List<SiteInfo>();
 

@@ -12,6 +12,7 @@
     using System.Text;
     using System.Web;
     using Fanex.Affiliate.DTO;
+    using Fanex.MailDeliver.MailClient;
     using Fanex.MailDeliver.MailClient.API;
     using Fanex.MailDeliver.Model;
     using Resources;
@@ -77,6 +78,9 @@
                 Body = message,
                 MailBcc = mailBcc
             };
+
+            AppSettings.AppMailId = Configurations.AppSettings.AppMailId;
+            AppSettings.AppMailAddress = Configurations.AppSettings.AppMailAddress;
 
             using (var client = new MailDeliver())
             {

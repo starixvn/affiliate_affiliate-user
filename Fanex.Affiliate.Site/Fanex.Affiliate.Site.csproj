@@ -64,14 +64,9 @@
     </Reference>
     <Reference Include="dotless.Core, Version=1.3.1.0, Culture=neutral, PublicKeyToken=96b446c9e63eae34, processorArchitecture=MSIL">
       <HintPath>..\packages\dotless.1.3.1.0\lib\dotless.Core.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Fanex.Caching, Version=2.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Caching.2.2.2\lib\net461\Fanex.Caching.dll</HintPath>
-    </Reference>
-    <Reference Include="Fanex.Common, Version=1.0.404.97, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Common.1.0.404.97\lib\net40\Fanex.Common.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Fanex.Caching, Version=2.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Caching.2.2.3\lib\net461\Fanex.Caching.dll</HintPath>
     </Reference>
     <Reference Include="Fanex.Data, Version=4.2.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.Data.4.2.2\lib\net461\Fanex.Data.dll</HintPath>
@@ -107,10 +102,6 @@
       <HintPath>..\packages\NPOI.2.0.6\lib\net40\ICSharpCode.SharpZipLib.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=3.1.0.0, Culture=neutral">
-      <HintPath>..\packages\HandHistoryLibrary.1.0.0.43\lib\net40\Microsoft.ApplicationBlocks.Data.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\EnterpriseLibrary.Common.5.0.414.0\lib\net40\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
@@ -140,17 +131,8 @@
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="NetUtility, Version=1.0.4199.22106, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\HandHistoryLibrary.1.0.0.43\lib\net40\NetUtility.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Nini, Version=1.1.0.0, Culture=neutral, PublicKeyToken=691faec150a7fa7b, processorArchitecture=MSIL">
-      <HintPath>..\packages\HandHistoryLibrary.1.0.0.43\lib\net40\Nini.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NPOI, Version=2.0.6.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
       <HintPath>..\packages\NPOI.2.0.6\lib\net40\NPOI.dll</HintPath>
@@ -172,10 +154,6 @@
       <HintPath>..\packages\RazorEngine.3.7.3\lib\net45\RazorEngine.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="RemotingRef, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RemotingRef.1.0.0.10\lib\net40\RemotingRef.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\RestSharp.105.2.3\lib\net46\RestSharp.dll</HintPath>
       <Private>True</Private>
@@ -194,18 +172,6 @@
     </Reference>
     <Reference Include="SimpleInjector.Integration.Web.Mvc, Version=3.1.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
       <HintPath>..\packages\SimpleInjector.Integration.Web.Mvc.3.1.2\lib\net40\SimpleInjector.Integration.Web.Mvc.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="SPSRemoting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SPSRemoting.1.0.0\lib\net40\SPSRemoting.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Sunplus.Core.Common, Version=1.1.4505.19054, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sunplus.Core.Common.1.1.4505.19054\lib\net40\Sunplus.Core.Common.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Sunplus.Libraries.AOP, Version=1.0.4218.28561, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\HandHistoryLibrary.1.0.0.43\lib\net40\Sunplus.Libraries.AOP.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -294,10 +260,6 @@
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="TplCore, Version=1.0.4694.29951, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\TplCore.1.0.4694.29951\lib\net40\TplCore.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="WebGrease, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
       <Private>True</Private>
@@ -320,9 +282,6 @@
     <Content Include="Configurations\SPNames\SpName.9bet.local.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
-    <Content Include="Configurations\SPNames\SpName.9bet.mnl.xml">
-      <DependentUpon>_SpName.xml.tt</DependentUpon>
-    </Content>
     <Content Include="Configurations\SPNames\SpName.9bet.production.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
@@ -333,9 +292,6 @@
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.aoncash.local.xml">
-      <DependentUpon>_SpName.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\SPNames\SpName.aoncash.mnl.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.aoncash.production.xml">
@@ -350,9 +306,6 @@
     <Content Include="Configurations\SPNames\SpName.athena000.local.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
-    <Content Include="Configurations\SPNames\SpName.athena000.mnl.xml">
-      <DependentUpon>_SpName.xml.tt</DependentUpon>
-    </Content>
     <Content Include="Configurations\SPNames\SpName.athena000.production.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
@@ -363,9 +316,6 @@
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.itcbet.local.xml">
-      <DependentUpon>_SpName.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\SPNames\SpName.itcbet.mnl.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.itcbet.production.xml">
@@ -380,9 +330,6 @@
     <Content Include="Configurations\SPNames\SpName.macaubet.local.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
-    <Content Include="Configurations\SPNames\SpName.macaubet.mnl.xml">
-      <DependentUpon>_SpName.xml.tt</DependentUpon>
-    </Content>
     <Content Include="Configurations\SPNames\SpName.macaubet.production.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
@@ -393,9 +340,6 @@
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.spondemo.local.xml">
-      <DependentUpon>_SpName.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\SPNames\SpName.spondemo.mnl.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.spondemo.production.xml">
@@ -4110,21 +4054,17 @@
     <Content Include="Scripts\site\paging.js" />
     <Content Include="Scripts\site\query.string.js" />
     <Content Include="Scripts\site\sign-in.js" />
-    <Content Include="Configurations\WebConfigs\Web.master.config" />
     <Content Include="Configurations\WebConfigs\Web.production.config" />
     <Content Include="Configurations\WebConfigs\Web.uat.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.athena000.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.athena000.master.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.athena000.production.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.athena000.uat.config">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Configurations\AppSettings\Web.AppSetting.itcbet.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.itcbet.master.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.itcbet.production.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.itcbet.uat.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.macaubet.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.macaubet.master.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.macaubet.production.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.macaubet.uat.config" />
     <Content Include="App_Data\Fanex.Result\HorseRacing.xls" />
@@ -4149,7 +4089,6 @@
     <Content Include="Configurations\AppSettings\Web.AppSetting.athena000.sit.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.athena000.sit.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.spondemo.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.spondemo.master.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.spondemo.production.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.spondemo.sit.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.spondemo.uat.config">
@@ -4167,7 +4106,6 @@
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.itcbet.sit.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.macaubet.sit.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.master.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.production.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.uat.config">
       <SubType>Designer</SubType>
@@ -4179,72 +4117,38 @@
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.local.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.master.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.mnl.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.mnl.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.uat.config">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.production.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.sit.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.athena000.mnl.config" />
     <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.sit.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.itcbet.mnl.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.macaubet.mnl.config" />
-    <Content Include="Configurations\AppSettings\Web.AppSetting.spondemo.mnl.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.9bet.mnl.config">
-      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
-    </Content>
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.9bet.production.config">
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.9bet.uat.config">
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
     </Content>
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aoncash.mnl.config">
-      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.athena000.mnl.config">
-      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
-    </Content>
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aoncash.sit.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.9bet.sit.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.itcbet.mnl.config">
-      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.macaubet.mnl.config">
-      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
-    </Content>
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.9bet.local.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aoncash.local.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.itcbet.local.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.macaubet.local.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.athena000.local.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.spondemo.local.config" />
-    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.spondemo.mnl.config">
-      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
-    </Content>
     <None Include="Configurations\SPNames\_SpNameConfiguration.ttinclude" />
     <None Include="Configurations\TemplateFilemanager.CS.ttinclude" />
-    <Content Include="Configurations\WebConfigs\Web.athena000.master.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
     <Content Include="Configurations\WebConfigs\Web.athena000.production.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\WebConfigs\Web.athena000.uat.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
-    <Content Include="Configurations\WebConfigs\Web.itcbet.master.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
     <Content Include="Configurations\WebConfigs\Web.itcbet.production.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\WebConfigs\Web.itcbet.uat.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\WebConfigs\Web.macaubet.master.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\WebConfigs\Web.macaubet.production.config">
@@ -4257,9 +4161,6 @@
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\WebConfigs\Web.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.spondemo.master.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
     <Content Include="Configurations\WebConfigs\Web.spondemo.production.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
@@ -4270,9 +4171,6 @@
     <Content Include="Configurations\WebConfigs\Web.macaubet.sit.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
-    <Content Include="Configurations\WebConfigs\Web.aoncash.master.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
     <Content Include="Configurations\WebConfigs\Web.aoncash.production.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
@@ -4280,12 +4178,6 @@
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\WebConfigs\Web.9bet.local.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\WebConfigs\Web.9bet.master.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\WebConfigs\Web.9bet.mnl.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\WebConfigs\Web.9bet.production.config">
@@ -4300,22 +4192,13 @@
     <Content Include="Configurations\WebConfigs\Web.aoncash.local.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
-    <Content Include="Configurations\WebConfigs\Web.aoncash.mnl.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
     <Content Include="Configurations\WebConfigs\Web.aoncash.sit.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\WebConfigs\Web.athena000.local.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
-    <Content Include="Configurations\WebConfigs\Web.athena000.mnl.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
     <Content Include="Configurations\WebConfigs\Web.itcbet.local.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\WebConfigs\Web.itcbet.mnl.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\WebConfigs\Web.itcbet.sit.config">
@@ -4324,14 +4207,7 @@
     <Content Include="Configurations\WebConfigs\Web.macaubet.local.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
-    <Content Include="Configurations\WebConfigs\Web.macaubet.mnl.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\WebConfigs\Web.mnl.config" />
     <Content Include="Configurations\WebConfigs\Web.spondemo.local.config">
-      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\WebConfigs\Web.spondemo.mnl.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\WebConfigs\Web.spondemo.sit.config">
@@ -4658,7 +4534,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />

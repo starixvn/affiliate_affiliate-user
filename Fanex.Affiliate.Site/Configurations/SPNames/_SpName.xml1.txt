@@ -14,12 +14,6 @@
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.athena000.sit.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.aoncash.sit.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.spondemo.sit.xml
-// Fanex.Affiliate.Site\Configurations\SPNames\SpName.9bet.mnl.xml
-// Fanex.Affiliate.Site\Configurations\SPNames\SpName.macaubet.mnl.xml
-// Fanex.Affiliate.Site\Configurations\SPNames\SpName.itcbet.mnl.xml
-// Fanex.Affiliate.Site\Configurations\SPNames\SpName.athena000.mnl.xml
-// Fanex.Affiliate.Site\Configurations\SPNames\SpName.aoncash.mnl.xml
-// Fanex.Affiliate.Site\Configurations\SPNames\SpName.spondemo.mnl.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.9bet.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.macaubet.production.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.itcbet.production.xml
