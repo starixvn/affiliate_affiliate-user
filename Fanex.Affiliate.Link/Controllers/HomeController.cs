@@ -75,14 +75,13 @@
             if (Request.Url != null)
             {
                 var affDomain = Request.Url.ToString();
-                var urlReferrer = Request.UrlReferrer != null ? Request.UrlReferrer.AbsoluteUri : null;
-                var domainReferrer = Request.UrlReferrer != null ? Request.UrlReferrer.Host : null;
+                var urlReferrer = Request.UrlReferrer?.AbsoluteUri;
+                var domainReferrer = Request.UrlReferrer?.Host;
 
                 if (string.IsNullOrEmpty(urlReferrer) && !string.IsNullOrEmpty(Request["ref"]))
                 {
                     urlReferrer = Request["ref"];
-                    var referrerUri = new Uri(urlReferrer);
-                    domainReferrer = string.IsNullOrEmpty(referrerUri.Host) ? null : referrerUri.Host;
+                    domainReferrer = Common.GetDomainReferrer(urlReferrer);
                 }
 
                 var criteria = new TrackingSystemCriteria
@@ -103,9 +102,7 @@
                         ? string.Empty
                         : Request.ServerVariables["HTTP_ACCEPT_LANGUAGE"],
                     UserAgent = Request.UserAgent,
-                    Country = Common.ResolveCountry() != null
-                        ? Common.ResolveCountry().EnglishName
-                        : CultureInfo.CurrentCulture.ToString()
+                    Country = Common.GetCountry()
                 };
 
                 var redirectUrl = _trackingSystemService.InsertStatistic(criteria);
