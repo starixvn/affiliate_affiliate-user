@@ -44,7 +44,7 @@
                 <div class="line-block">
                 </div>
                 <div class="content-block">
-                    <p>我们提供下列基础货币: @AppSettings.AffiliateBaseCurrencyExcludedUUSList.</p>
+                    <p>我们提供下列基础货币: @string.Join(",", AppSettings.AffiliateBaseCurrencyExcludedUUSList).</p>
                     @{
             var baseCurrencyList = AppSettings.AffiliateBaseCurrencyExcludedUUSList;
             var multiplyByCurrencyList = AppSettings.AffiliateCurrencyListMultipliedBy.Split(',');

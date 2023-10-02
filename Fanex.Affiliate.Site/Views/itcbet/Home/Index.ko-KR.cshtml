@@ -44,7 +44,7 @@
                 <div class="line-block">
                 </div>
                 <div class="content-block">
-                    <p>저희는 @AppSettings.AffiliateBaseCurrencyExcludedUUSList 에 나타난 기본 통화를 제공해드립니다.</p>
+                    <p>저희는 @string.Join(",", AppSettings.AffiliateBaseCurrencyExcludedUUSList) 에 나타난 기본 통화를 제공해드립니다.</p>
                     @{
             var baseCurrencyList = AppSettings.AffiliateBaseCurrencyExcludedUUSList;
             var multiplyByCurrencyList = AppSettings.AffiliateCurrencyListMultipliedBy.Split(',');
