@@ -44,7 +44,7 @@
                 <div class="line-block">
                 </div>
                 <div class="content-block">
-                    <p>We offer below base currency/currencies: @AppSettings.AffiliateBaseCurrencyExcludedUUSList.</p>
+                    <p>We offer below base currency/currencies: @string.Join(",", AppSettings.AffiliateBaseCurrencyExcludedUUSList).</p>
                     @{
             var baseCurrencyList = AppSettings.AffiliateBaseCurrencyExcludedUUSList;
             var multiplyByCurrencyList = AppSettings.AffiliateCurrencyListMultipliedBy.Split(',');

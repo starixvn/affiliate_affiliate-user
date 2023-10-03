@@ -44,7 +44,7 @@
                 <div class="line-block">
                 </div>
                 <div class="content-block">
-                    <p>Chúng tôi cung cấp những loại tiền tệ cơ bản sau: @AppSettings.AffiliateBaseCurrencyExcludedUUSList.</p>
+                    <p>Chúng tôi cung cấp những loại tiền tệ cơ bản sau: @string.Join(",", AppSettings.AffiliateBaseCurrencyExcludedUUSList).</p>
                     @{
             var baseCurrencyList = AppSettings.AffiliateBaseCurrencyExcludedUUSList;
             var multiplyByCurrencyList = AppSettings.AffiliateCurrencyListMultipliedBy.Split(',');

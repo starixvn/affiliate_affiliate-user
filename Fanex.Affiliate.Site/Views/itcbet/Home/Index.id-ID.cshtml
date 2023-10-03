@@ -44,7 +44,7 @@
                 <div class="line-block">
                 </div>
                 <div class="content-block">
-                    <p>Kami menawarkan mata uang dasar berikut: @AppSettings.AffiliateBaseCurrencyExcludedUUSList.</p>
+                    <p>Kami menawarkan mata uang dasar berikut: @string.Join(",", AppSettings.AffiliateBaseCurrencyExcludedUUSList).</p>
                     @{
                         var baseCurrencyList = AppSettings.AffiliateBaseCurrencyExcludedUUSList;
                         var multiplyByCurrencyList = AppSettings.AffiliateCurrencyListMultipliedBy.Split(',');
