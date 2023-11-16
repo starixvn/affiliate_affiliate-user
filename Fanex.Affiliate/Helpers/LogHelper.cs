@@ -8,15 +8,19 @@ using System.Linq;
 using System.Text;
 using System.Web;
 
-namespace Fanex.Affiliate.Web.Helpers
+namespace Fanex.Affiliate.Helpers
 {
     public static class LogHelper
     {
         private const int LimitedLevelOfInnerException = 3;
 
-        public static void WriteError(Exception exception)
+        public static void WriteError(Exception exception, string additionalMessage = null)
         {
-            var content = BuildMessage(exception.Message);
+            var content = BuildMessage(exception);
+            if (!string.IsNullOrWhiteSpace(additionalMessage))
+            {
+                content.AppendLine(additionalMessage);
+            }
 
             AddDatabaseInfo(content, exception);
             AddExceptionInfo(content, exception, LimitedLevelOfInnerException);
@@ -24,11 +28,10 @@ namespace Fanex.Affiliate.Web.Helpers
             LogService.Error(content.ToString(), exception);
         }
 
-        private static StringBuilder BuildMessage(string message)
+        private static StringBuilder BuildMessage(Exception exception)
         {
             var request = HttpContext.Current.Request;
-            var builder = new StringBuilder().AppendLine($"Error Message: {message}").AppendLine();
-
+            var builder = new StringBuilder().AppendLine($"Error Message: {exception.Message}").AppendLine();
 
             builder.AppendLine("REQUEST INFO")
                    .AppendLine($"Affiliate: {AppSettings.AffiliateName}")
@@ -40,51 +43,9 @@ namespace Fanex.Affiliate.Web.Helpers
                    .AppendLine("Browser: " + request.Browser.Type)
                    .AppendLine("BrowserVer: " + request.Browser.Version)
                    .AppendLine("Agent: " + request.UserAgent)
-                   .AppendLine("IP Address: " + request.UserHostAddress);
-
-            var currenSession = SessionManager.CurrentSession;
-            if (currenSession != null)
-            {
-                builder.AppendLine($"AffId: {currenSession.AffId}")
-                    .AppendLine($"AffType: { currenSession.AffType}")
-                    .AppendLine($"IsInternalSite: {currenSession.IsInternalSite}")
-                    .AppendLine($"Username: {currenSession.Username}")
-                    .AppendLine($"CurrencyID: {currenSession.CurrencyID}")
-                    .AppendLine($"Currency: {currenSession.Currency}");
-            }
-            else
-            {
-                var context = HttpContext.Current;
-                builder.AppendLine($"IdentityName: {context?.User?.Identity?.Name}");
-
-                var session = context?.Session;
-
-                if (session != null)
-                {
-                    builder.AppendLine($"SessionId: {session.SessionID}");
-
-                    var sessionKeyList = new List<string>();
-                    foreach (var key in session.Keys)
-                    {
-                        sessionKeyList.Add(key.ToString());
-                    }
-                    builder.AppendLine($"SessionKey: {string.Join(",", sessionKeyList)}");
-                }
-
-                var cookies = request.Cookies;
-                if (cookies != null)
-                {
-                    foreach (var key in cookies.AllKeys)
-                    {
-                        var cookie = cookies.Get(key);
-
-                        if (cookie != null)
-                        {
-                            builder.AppendLine($"CookieKey:{key} && CookieValue={cookie.Value}");
-                        }
-                    }
-                }
-            }
+                   .AppendLine("IP Address: " + request.UserHostAddress)
+                   .AppendLine($"Source:{exception.Source}")
+                   .AppendLine($"TargetSite:{exception.TargetSite}");
 
             return builder;
         }

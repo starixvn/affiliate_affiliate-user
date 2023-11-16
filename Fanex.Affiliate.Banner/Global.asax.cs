@@ -1,13 +1,12 @@
 ﻿namespace Fanex.Affiliate.Banner
 {
     using System;
-    using System.Diagnostics.CodeAnalysis;
     using System.Web;
     using System.Web.Mvc;
     using System.Web.Routing;
+    using Fanex.Affiliate.Helpers;
     using Fanex.Data;
     using Fanex.Data.SqlServer;
-    using Logging;
 
     /// <summary>
     /// MVC Application.
@@ -17,14 +16,16 @@
         protected void Application_Start()
         {
             LoggingConfig.RegisterSentry();
+
+            UMConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            AreaRegistration.RegisterAllAreas();
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+
             DbSettingProviderManager
                 .StartNewSession()
                 .WithSqlServer("~/Configurations/SpNames/SpNames.xml")
                 .Run();
-            AreaRegistration.RegisterAllAreas();
-
-            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
 
         /// <summary>
@@ -40,8 +41,7 @@
                 return;
             }
 
-            //var message = exception.Message + Environment.NewLine + exception.StackTrace;
-            //LogService.Error("Affiliate Banner Error!" + Environment.NewLine + message + Environment.NewLine + Request.Url);
+            LogHelper.WriteError(exception, $"Request url: {Request.Url}");
         }
     }
 }

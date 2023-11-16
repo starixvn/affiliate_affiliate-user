@@ -1,15 +1,15 @@
 ﻿namespace Fanex.Affiliate.Link.Controllers
 {
-    using System;
-    using System.Globalization;
     using System.Web.Mvc;
     using Criteria;
+    using ONEbook.UM.AspNetMVC.Filters;
     using Services;
     using Utilities;
 
     /// <summary>
     /// Home controller for affiliate link.
     /// </summary>
+    [CheckUMFilter]
     public class HomeController : Controller
     {
         #region Const
@@ -38,7 +38,7 @@
         /// Main controller of this class.
         /// </summary>
         /// <returns>Action result.</returns>
-        public ActionResult Default()
+        public ActionResult Index()
         {
             return View();
         }
