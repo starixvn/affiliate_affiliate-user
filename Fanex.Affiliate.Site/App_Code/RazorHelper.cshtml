@@ -5,15 +5,15 @@
 @functions{
     public static string GetBannerUrl()
     {
-        var url = AppSettings.BannerDomain;
-        if (AppSettings.Environment.Equals("Production", StringComparison.OrdinalIgnoreCase))
-        {
-            var secondLevelDomain = Request.Url.Host.Split('.')[1];
-            var defaultSecondLevelDomain = url.Split('.')[1];
-            url = url.Replace("." + defaultSecondLevelDomain + ".", "." + secondLevelDomain + ".");
-        }
+        //var url = AppSettings.BannerDomain;
+        //if (AppSettings.Environment.Equals("Production", StringComparison.OrdinalIgnoreCase))
+        //{
+        //    var secondLevelDomain = Request.Url.Host.Split('.')[1];
+        //    var defaultSecondLevelDomain = url.Split('.')[1];
+        //    url = url.Replace("." + defaultSecondLevelDomain + ".", "." + secondLevelDomain + ".");
+        //}
 
-        return url;
+        return AppSettings.BannerDomain;
     }
 
     public static string EncodeBase64(string plainText)
