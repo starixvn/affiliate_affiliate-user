@@ -24,7 +24,7 @@
                 new
                 {
                     controller = "Home",
-                    action = "Default",
+                    action = "Index",
                     id = UrlParameter.Optional
                 });
 

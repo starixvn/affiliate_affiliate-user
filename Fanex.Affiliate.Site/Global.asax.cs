@@ -9,7 +9,7 @@
     using System.Web.Security;
     using Configurations;
     using Data.SqlServer;
-    using Fanex.Affiliate.Web.Helpers;
+    using Fanex.Affiliate.Services.Helpers;
     using Fanex.Data;
     using Web.Mvc;
 
@@ -42,7 +42,7 @@
                 return;
             }
 
-            LogHelper.WriteError(exception);
+            LogWebHelper.WriteError(exception);
 
             if (AppSettings.IsProduction && Request.RequestContext.HttpContext.Request.IsAjaxRequest())
             {
