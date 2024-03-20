@@ -2,10 +2,9 @@
 {
     using System;
     using System.Net;
-    using System.Web;
     using System.Web.Mvc;
     using System.Web.Security;
-    using Logging;
+    using Fanex.Affiliate.Helpers;
     using Resources;
 
     /// <summary>
@@ -30,7 +29,7 @@
             }
             catch (Exception exception)
             {
-                Logger.Log.Error(exception.Message, exception);
+                LogHelper.WriteError(exception);
                 throw;
             }
         }
