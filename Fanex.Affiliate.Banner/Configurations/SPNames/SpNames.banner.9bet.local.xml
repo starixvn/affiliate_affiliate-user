@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Functions>
   <Function Name="Aff-Banner">
-    <Setting Key="Aff_Banner_UpdateStatistic" SpName="Aff_Banner_UpdateStatistic" DbName="DBAFF9BET.Affiliate_9bet.bodbDownlineNet" Plain="0" />
-    <Setting Key="Aff_Banner_SelInfo" SpName="Aff_Banner_SelInfo" DbName="DBAFF9BET.Affiliate_9bet.bodbDownlineNet" Plain="0" />
+    <Setting Key="Aff_Banner_UpdateStatistic" SpName="Aff_Banner_UpdateStatistic" DbName="DBAFF9BET.Affiliate_9bet.wsv_aff" Plain="0" />
+    <Setting Key="Aff_Banner_SelInfo" SpName="Aff_Banner_SelInfo" DbName="DBAFF9BET.Affiliate_9bet.wsv_aff" Plain="0" />
   </Function>
 </Functions>

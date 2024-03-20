@@ -7,12 +7,12 @@
 	var manager = TemplateFileManager.Create(this);
 	var licenseeDbNameList = new System.Collections.Generic.Dictionary<string, string>
 	{
-		{"spondemo", "DBAFFSPONDEMO.Affiliate_Spondemo.bodbDownlineNet"},
-		{"athena000", "DBAFFATHENA000.Affiliate_Athena000.bodbDownlineNet"},
-		{"aoncash", "DBAFFAONCASH.Affiliate_Aoncash.bodbDownlineNet"},
-		{"itcbet", "DBAFFITCBET.Affiliate_itcbet.bodbDownlineNet"},
-		{"macaubet", "DBAFFMACAUBET.Affiliate_MacauBet.bodbDownlineNet"},
-		{"9bet", "DBAFF9BET.Affiliate_9Bet.bodbDownlineNet"}
+		{"spondemo", "DBAFFSPONDEMO.Affiliate_Spondemo.wsv_aff"},
+		{"athena000", "DBAFFATHENA000.Affiliate_Athena000.wsv_aff"},
+		{"aoncash", "DBAFFAONCASH.Affiliate_Aoncash.wsv_aff"},
+		{"itcbet", "DBAFFITCBET.Affiliate_itcbet.wsv_aff"},
+		{"macaubet", "DBAFFMACAUBET.Affiliate_MacauBet.wsv_aff"},
+		{"9bet", "DBAFF9BET.Affiliate_9Bet.wsv_aff"}
 	};
 
 	var environments = new string[] { "uat", "production" };
@@ -23,7 +23,7 @@
 			var fileName = string.Format("Web.ConnectionString.{0}.{1}.config", licenseeDbName.Key, environment);
 			manager.StartNewFile(fileName);
 
-			var licenseeDb = string.Format("<add name=\"{0}\" connectionString=\"packet size=4096; Data Source=10.40.40.86;Initial Catalog=Affiliate_{1};integrated security=false; user id=bodbDownlineNet; password=TBAw8F+PqCx3u382anlnOVRxKIJYMsMwXVn1hJpeyKk=;\" providerName=\"System.Data.SqlClient\" />", licenseeDbName.Value, licenseeDbName.Key);
+			var licenseeDb = string.Format("<add name=\"{0}\" connectionString=\"packet size=4096; Data Source=10.40.40.86;Initial Catalog=Affiliate_{1};integrated security=false; user id=wsv_aff; password=AGanu0JlCxksz7ug9dD8oNOVh4x7pEOjEcMOU8yhb9s=;\" providerName=\"System.Data.SqlClient\" />", licenseeDbName.Value, licenseeDbName.Key);
 #>
 <connectionStrings>
 	<#= licenseeDb #>
