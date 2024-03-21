@@ -7,7 +7,7 @@
     <Setting Key="Aff_User_Logout" SpName="Aff_User_Logout" DbName="DBAFFATHENA000.Affiliate_Athena000.wsv_aff" Plain="0" />
     <Setting Key="Aff_User_AffiliateForgotPwd" SpName="Aff_User_AffiliateForgotPwd" DbName="DBAFFATHENA000.Affiliate_Athena000.wsv_aff" Plain="0" />
     <Setting Key="Aff_User_AffiliateRecoverPwd" SpName="Aff_User_AffiliateRecoverPwd" DbName="DBAFFATHENA000.Affiliate_Athena000.wsv_aff" Plain="0" />
-    <Setting Key="Aff_User_OnUserSelNetSessionID" SpName="Aff_User_OnUserSelNetSessionID" DbName="DBCUST.bodb_Licensee.bodbLicenseeNet" Plain="0" />
+    <Setting Key="Aff_User_OnUserSelNetSessionID" SpName="Aff_User_OnUserSelNetSessionID" DbName="DBCUST.bodb_Licensee.wsv_lap" Plain="0" />
     <Setting Key="Aff_User_AffiliateInternalLogin" SpName="Aff_User_AffiliateInternalLogin" DbName="DBAFFATHENA000.Affiliate_Athena000.wsv_aff" Plain="0" />
     <Setting Key="Aff_User_SecureUpdPasswordInfo" SpName="Aff_User_SecureUpdPasswordInfo" DbName="DBAFFATHENA000.Affiliate_Athena000.wsv_aff" Plain="0" />
     <Setting Key="Aff_User_SecureUpdPasswordUpdate" SpName="Aff_User_SecureUpdPasswordUpdate" DbName="DBAFFATHENA000.Affiliate_Athena000.wsv_aff" Plain="0" />
@@ -85,7 +85,7 @@
   </Function>
 
   <Function name="Log">
-    <Setting Key="Aff_WebAPI_WriteLog" SpName="Aff_WebAPI_WriteLog" DbName="DBLOG.bodb_CustomerLog.bodbLicenseeNet" Plain="0" />
+    <Setting Key="Aff_WebAPI_WriteLog" SpName="Aff_WebAPI_WriteLog" DbName="DBLOG.bodb_CustomerLog.wsv_lap" Plain="0" />
   </Function>
 </Functions>
 		
