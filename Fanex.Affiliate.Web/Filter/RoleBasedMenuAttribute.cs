@@ -41,17 +41,12 @@
                     if ((menuItem.Roles != "All" && menuItem.Roles != userRole) 
                         || (requestAction == "dailyearningsdetail" && !AppSettings.IsShowDetailDailyEarnings))
                     {
-                        filterContext.HttpContext.Response.ClearHeaders();
-                        filterContext.HttpContext.Response.BufferOutput = true;
-                        filterContext.HttpContext.Response.Redirect(VirtualPathUtility.ToAbsolute("~/notify/accessdenied"));
-
-                        filterContext.Controller.ViewData.ModelState.AddModelError("ErrAuthorized", "Unauthorized.");
+                        filterContext.Result = RedirectHelper.RedirectToAccessDeniedRouteResult();
                     }
                 }
             }
             catch (Exception exception)
             {
-
                 LogHelper.WriteError(exception); ;
                 throw;
             }
