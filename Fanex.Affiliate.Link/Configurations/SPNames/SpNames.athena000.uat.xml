@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Functions>
   <Function Name="Aff-Link">
-    <Setting Key="Aff_Link_AffiliateInsClickStatistics" SpName="Aff_Link_AffiliateInsClickStatistics" DbName="DBAFFATHENA000.Affiliate_Athena000.wsv_aff" Plain="0" />
+    <Setting Key="Aff_Link_AffiliateInsClickStatistics" SpName="Aff_Link_AffiliateInsClickStatistics" DbName="DBAFFATHENA000.Affiliate_Athena000.wsv_afinet" Plain="0" />
   </Function>
 </Functions>
