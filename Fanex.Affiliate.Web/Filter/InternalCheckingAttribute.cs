@@ -2,7 +2,7 @@
 {
     using System;
     using System.Web.Mvc;
-    using Logging;
+    using Fanex.Affiliate.Helpers;
 
     /// <summary>
     /// Internal Checking Attribute.
@@ -20,15 +20,12 @@
                 var currentSession = SessionManager.CurrentSession;
                 if (currentSession != null && currentSession.IsInternalSite)
                 {
-                    filterContext.HttpContext.Response.BufferOutput = true;
-                    filterContext.HttpContext.Response.Redirect("~/notify/accessdenied");
-
-                    filterContext.Controller.ViewData.ModelState.AddModelError("ErrAuthorized", "Unauthorized.");
+                    filterContext.Result = RedirectHelper.RedirectToAccessDeniedRouteResult();
                 }
             }
             catch (Exception exception)
             {
-                Logger.Log.Error(exception.Message, exception);
+                LogHelper.WriteError(exception);
                 throw;
             }
 

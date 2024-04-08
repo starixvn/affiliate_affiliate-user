@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.Globalization;
     using System.Linq;
+    using Fanex.Affiliate.Helpers;
     using Logging;
 
     /// <summary>
@@ -44,7 +45,7 @@
                 }
                 catch (Exception ex)
                 {
-                    Logger.Log.Error(ex.Message, ex);
+                    LogHelper.WriteError(ex);
                 }
 
                 return _symbolsByCode;

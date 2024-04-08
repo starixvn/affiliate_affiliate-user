@@ -2,10 +2,11 @@
 {
     using System;
     using System.Linq;
+    using System.Web;
     using System.Web.Mvc;
     using Configurations;
     using DTO;
-    using Logging;
+    using Fanex.Affiliate.Helpers;
 
     /// <summary>
     /// Role Based Menu Attribute.
@@ -40,16 +41,13 @@
                     if ((menuItem.Roles != "All" && menuItem.Roles != userRole) 
                         || (requestAction == "dailyearningsdetail" && !AppSettings.IsShowDetailDailyEarnings))
                     {
-                        filterContext.HttpContext.Response.BufferOutput = true;
-                        filterContext.HttpContext.Response.Redirect("~/notify/accessdenied");
-
-                        filterContext.Controller.ViewData.ModelState.AddModelError("ErrAuthorized", "Unauthorized.");
+                        filterContext.Result = RedirectHelper.RedirectToAccessDeniedRouteResult();
                     }
                 }
             }
             catch (Exception exception)
             {
-                Logger.Log.Error(exception.Message, exception);
+                LogHelper.WriteError(exception); ;
                 throw;
             }
 
