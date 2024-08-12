@@ -15,8 +15,6 @@
 
         public int ServerId { get; set; }
 
-        public string Language { get; set; }
-
         public int InputAffType { get; set; }
 
         [SpParam(Ignored = true)]

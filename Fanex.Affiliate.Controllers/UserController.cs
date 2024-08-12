@@ -631,7 +631,6 @@
                     AdminId = Convert.ToInt32(criteria.AccId),
                     UserName = criteria.CustName,
                     LoginIp = Common.GetIPAddressOfClient(),
-                    Language = AppSettings.DefaultLanguage,
                     InputAffType = AppSettings.InputAffType
                 };
 
