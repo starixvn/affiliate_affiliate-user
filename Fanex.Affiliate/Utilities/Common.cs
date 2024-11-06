@@ -10,8 +10,8 @@
     using System.Runtime.Serialization.Formatters.Binary;
     using System.Security.Cryptography;
     using System.Text;
-    using System.Text.RegularExpressions;
     using System.Web;
+    using Fanex.Affiliate.Constants;
     using Fanex.Affiliate.DTO;
     using Fanex.MailDeliver.MailClient;
     using Fanex.MailDeliver.MailClient.API;
@@ -23,8 +23,6 @@
     /// </summary>
     public static class Common
     {
-        private const string IpRegex = "((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\\.|$)){4}";
-
         /// <summary>
         /// The lang resource manager.
         /// </summary>
@@ -216,35 +214,18 @@
         /// <returns>String of IP address.</returns>
         public static string GetIPAddressOfClient()
         {
-            string ips = HttpContext.Current.Request.ServerVariables["HTTP_X_FORWARDED_FOR"];
-            string ip = GetForwardedIPAddress(ips) ?? HttpContext.Current.Request.UserHostAddress;
+            var request = HttpContext.Current.Request;
+            var xActualIP = request.ServerVariables[HeaderKey.HTTP_X_ACTUAL_IP];
+            var xForwardedFor = !string.IsNullOrWhiteSpace(xActualIP) ? xActualIP : request.ServerVariables[HeaderKey.HTTP_X_FORWARDED_FOR];
 
-            if (ip == "::1")
+            var clientIP = xForwardedFor?.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)[0]?.Trim();
+
+            if (string.IsNullOrWhiteSpace(clientIP))
             {
-                ip = "127.0.0.1";
+                clientIP = request.UserHostAddress;
             }
 
-            return ip;
-        }
-
-        private static string GetForwardedIPAddress(string ips)
-        {
-            if (string.IsNullOrEmpty(ips))
-            {
-                return null;
-            }
-
-            var ipList = ips.Split(',');
-
-            foreach (var ip in ipList)
-            {
-                if (Regex.IsMatch(ip, IpRegex))
-                {
-                    return ip;
-                }
-            }
-
-            return null;
+            return clientIP.Equals("::1") ? "127.0.0.1" : clientIP;
         }
 
         public static string GetDomainReferrer(string urlReferrer)

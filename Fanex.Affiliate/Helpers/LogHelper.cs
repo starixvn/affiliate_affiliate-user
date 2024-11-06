@@ -44,6 +44,7 @@ namespace Fanex.Affiliate.Helpers
                    .AppendLine("BrowserVer: " + request.Browser.Version)
                    .AppendLine("Agent: " + request.UserAgent)
                    .AppendLine("IP Address: " + request.UserHostAddress)
+                   .AppendLine("Actual IP Address: " + Utilities.Common.GetIPAddressOfClient())
                    .AppendLine($"Source:{exception.Source}")
                    .AppendLine($"TargetSite:{exception.TargetSite}");
 
