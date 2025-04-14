@@ -1,29 +1,63 @@
 ﻿namespace Fanex.Affiliate.Services
 {
     using System;
+    using System.Configuration;
     using System.Globalization;
+    using System.Net;
+    using System.Net.Http;
     using System.Text;
     using System.Xml.Linq;
     using Criteria.Payment;
     using DataAccess;
     using DTO;
+    using Fanex.Affiliate.Services.Api;
     using Fanex.Affiliate.Services.Helpers;
-    using MemberSiteService;
+    using Refit;
 
     /// <summary>
     /// Service for getting info from Taiwan side's APIs.
     /// </summary>
     public static class ServiceWrapper
     {
-        private static ServiceSoapClient _client;
+        private static ISagaApi _sagaApi;
         private static ILoggerDataAccess _dbLogger;
 
-        private static ServiceSoapClient Client
+        private static readonly Lazy<ISagaApi> _instance = new Lazy<ISagaApi>(() =>
+        {
+            try
+            {
+                var apiUrl = ConfigurationManager.AppSettings["SagaApiUrl"];
+                if (string.IsNullOrEmpty(apiUrl))
+                {
+                    throw new ConfigurationErrorsException("SagaApiUrl is not configured in AppSettings");
+                }
+
+                var isUsingProxy = Convert.ToBoolean(ConfigurationManager.AppSettings["IsUseProxyToGetSagaApi"]);
+                var httpClientHandler = new HttpClientHandler
+                {
+                    Proxy = isUsingProxy ? GetConfiguredProxy() : null,
+                    AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate,
+                    UseCookies = false
+                };
+
+                var httpClient = new HttpClient(httpClientHandler)
+                {
+                    BaseAddress = new Uri(apiUrl)
+                };
+
+                return RestService.For<ISagaApi>(httpClient);
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException("Failed to initialize SagaApi client", ex);
+            }
+        });
+
+        private static ISagaApi SagaApi
         {
             get
             {
-                return _client ??
-                       (_client = new ServiceSoapClient("ServiceSoap"));
+                return _sagaApi ?? (_sagaApi = _instance.Value);
             }
         }
 
@@ -32,13 +66,26 @@
             get { return _dbLogger ?? (_dbLogger = new LoggerDataAccess()); }
         }
 
+        private static XElement GetLicenseeCustInfo(string siteName, string licenseeUserName)
+        {
+            var param = new LicenseCustInfoParam
+            {
+                StrSiteName = siteName,
+                StrLicenseeUserName = licenseeUserName
+            };
+
+            var rawXml = SagaApi.GetLicenseeCustInfo(param).Result;
+
+            return GetXElement(rawXml);
+        }
+
         public static ApiCustInfo GetLicenseeCustInfo(string siteName, string licenseeUserName, int userId)
         {
             var custInfo = new ApiCustInfo();
 
             try
             {
-                var xml = Client.GetLicenseeCustInfo(siteName, licenseeUserName);
+                var xml = GetLicenseeCustInfo(siteName, licenseeUserName);
                 WriteLogForCallingApi(siteName, licenseeUserName, xml?.ToString(), userId);
 
                 var isValid = IsValidApiResult(xml);
@@ -95,6 +142,28 @@
             }
 
             return true;
+        }
+        private static IWebProxy GetConfiguredProxy()
+        {
+            var proxyUrl = ConfigurationManager.AppSettings["ApiProxyUrl"];
+            if (string.IsNullOrEmpty(proxyUrl))
+            {
+                throw new ConfigurationErrorsException("ApiProxyUrl is not configured in AppSettings when proxy is enabled");
+            }
+
+            return new WebProxy(new Uri(proxyUrl));
+        }
+
+        private static XElement GetXElement(string xmlString)
+        {
+            try
+            {
+                return XDocument.Parse(xmlString).Root;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
     }
 }
