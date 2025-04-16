@@ -6,10 +6,12 @@
     using System.Net;
     using System.Net.Http;
     using System.Text;
+    using System.Threading.Tasks;
     using System.Xml.Linq;
     using Criteria.Payment;
     using DataAccess;
     using DTO;
+    using Fanex.Affiliate.Helpers;
     using Fanex.Affiliate.Services.Api;
     using Fanex.Affiliate.Services.Helpers;
     using Refit;
@@ -19,7 +21,6 @@
     /// </summary>
     public static class ServiceWrapper
     {
-        private static ISagaApi _sagaApi;
         private static ILoggerDataAccess _dbLogger;
 
         private static readonly Lazy<ISagaApi> _instance = new Lazy<ISagaApi>(() =>
@@ -53,20 +54,14 @@
             }
         });
 
-        private static ISagaApi SagaApi
-        {
-            get
-            {
-                return _sagaApi ?? (_sagaApi = _instance.Value);
-            }
-        }
+        private static ISagaApi SagaApi => _instance.Value;
 
         private static ILoggerDataAccess DbLogger
         {
             get { return _dbLogger ?? (_dbLogger = new LoggerDataAccess()); }
         }
 
-        private static XElement GetLicenseeCustInfo(string siteName, string licenseeUserName)
+        private static async Task<XElement> GetLicenseeCustInfo(string siteName, string licenseeUserName)
         {
             var param = new LicenseCustInfoParam
             {
@@ -74,18 +69,18 @@
                 StrLicenseeUserName = licenseeUserName
             };
 
-            var rawXml = SagaApi.GetLicenseeCustInfo(param).Result;
+            var rawXml = await SagaApi.GetLicenseeCustInfo(param);
 
-            return GetXElement(rawXml);
+            return ParseXml(rawXml);
         }
 
-        public static ApiCustInfo GetLicenseeCustInfo(string siteName, string licenseeUserName, int userId)
+        public static async Task<ApiCustInfo> GetLicenseeCustInfo(string siteName, string licenseeUserName, int userId)
         {
             var custInfo = new ApiCustInfo();
 
             try
             {
-                var xml = GetLicenseeCustInfo(siteName, licenseeUserName);
+                var xml = await GetLicenseeCustInfo(siteName, licenseeUserName);
                 WriteLogForCallingApi(siteName, licenseeUserName, xml?.ToString(), userId);
 
                 var isValid = IsValidApiResult(xml);
@@ -154,14 +149,15 @@
             return new WebProxy(new Uri(proxyUrl));
         }
 
-        private static XElement GetXElement(string xmlString)
+        private static XElement ParseXml(string xmlString)
         {
             try
             {
                 return XDocument.Parse(xmlString).Root;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                LogHelper.WriteError(ex);
                 return null;
             }
         }
