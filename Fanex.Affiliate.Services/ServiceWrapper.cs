@@ -1,44 +1,86 @@
 ﻿namespace Fanex.Affiliate.Services
 {
     using System;
+    using System.Configuration;
     using System.Globalization;
+    using System.Net;
+    using System.Net.Http;
     using System.Text;
+    using System.Threading.Tasks;
     using System.Xml.Linq;
     using Criteria.Payment;
     using DataAccess;
     using DTO;
+    using Fanex.Affiliate.Helpers;
+    using Fanex.Affiliate.Services.Api;
     using Fanex.Affiliate.Services.Helpers;
-    using MemberSiteService;
+    using Refit;
 
     /// <summary>
     /// Service for getting info from Taiwan side's APIs.
     /// </summary>
     public static class ServiceWrapper
     {
-        private static ServiceSoapClient _client;
         private static ILoggerDataAccess _dbLogger;
 
-        private static ServiceSoapClient Client
+        private static readonly Lazy<ISagaApi> _instance = new Lazy<ISagaApi>(() =>
         {
-            get
+            try
             {
-                return _client ??
-                       (_client = new ServiceSoapClient("ServiceSoap"));
+                var apiUrl = ConfigurationManager.AppSettings["SagaApiUrl"];
+                if (string.IsNullOrEmpty(apiUrl))
+                {
+                    throw new ConfigurationErrorsException("SagaApiUrl is not configured in AppSettings");
+                }
+
+                var isUsingProxy = Convert.ToBoolean(ConfigurationManager.AppSettings["IsUseProxyToGetSagaApi"]);
+                var httpClientHandler = new HttpClientHandler
+                {
+                    Proxy = isUsingProxy ? GetConfiguredProxy() : null,
+                    AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate,
+                    UseCookies = false
+                };
+
+                var httpClient = new HttpClient(httpClientHandler)
+                {
+                    BaseAddress = new Uri(apiUrl)
+                };
+
+                return RestService.For<ISagaApi>(httpClient);
             }
-        }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException("Failed to initialize SagaApi client", ex);
+            }
+        });
+
+        private static ISagaApi SagaApi => _instance.Value;
 
         private static ILoggerDataAccess DbLogger
         {
             get { return _dbLogger ?? (_dbLogger = new LoggerDataAccess()); }
         }
 
-        public static ApiCustInfo GetLicenseeCustInfo(string siteName, string licenseeUserName, int userId)
+        private static async Task<XElement> GetLicenseeCustInfo(string siteName, string licenseeUserName)
+        {
+            var param = new LicenseCustInfoParam
+            {
+                StrSiteName = siteName,
+                StrLicenseeUserName = licenseeUserName
+            };
+
+            var rawXml = await SagaApi.GetLicenseeCustInfo(param);
+
+            return ParseXml(rawXml);
+        }
+
+        public static async Task<ApiCustInfo> GetLicenseeCustInfo(string siteName, string licenseeUserName, int userId)
         {
             var custInfo = new ApiCustInfo();
 
             try
             {
-                var xml = Client.GetLicenseeCustInfo(siteName, licenseeUserName);
+                var xml = await GetLicenseeCustInfo(siteName, licenseeUserName);
                 WriteLogForCallingApi(siteName, licenseeUserName, xml?.ToString(), userId);
 
                 var isValid = IsValidApiResult(xml);
@@ -95,6 +137,29 @@
             }
 
             return true;
+        }
+        private static IWebProxy GetConfiguredProxy()
+        {
+            var proxyUrl = ConfigurationManager.AppSettings["ApiProxyUrl"];
+            if (string.IsNullOrEmpty(proxyUrl))
+            {
+                throw new ConfigurationErrorsException("ApiProxyUrl is not configured in AppSettings when proxy is enabled");
+            }
+
+            return new WebProxy(new Uri(proxyUrl));
+        }
+
+        private static XElement ParseXml(string xmlString)
+        {
+            try
+            {
+                return XDocument.Parse(xmlString).Root;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.WriteError(ex);
+                return null;
+            }
         }
     }
 }

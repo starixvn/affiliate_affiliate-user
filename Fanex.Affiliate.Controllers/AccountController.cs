@@ -5,6 +5,7 @@
     using System.Linq;
     using System.Net;
     using System.Text.RegularExpressions;
+    using System.Threading.Tasks;
     using System.Web.Mvc;
     using Configurations;
     using Criteria;
@@ -300,7 +301,7 @@
 
         [InternalChecking]
         [HttpPost]
-        public virtual ActionResult PaymentRequest(PaymentViewModel paymentModel)
+        public virtual async Task<ActionResult> PaymentRequest(PaymentViewModel paymentModel)
         {
             var success = true;
 
@@ -325,7 +326,7 @@
                         AffId = CurrentSession.AffId
                     });
 
-                    var custInfo = GetCustInfo(paymentInfo.SystemName, paymentInfo.PlayerUsername);
+                    var custInfo = await GetCustInfo(paymentInfo.SystemName, paymentInfo.PlayerUsername);
 
                     if (!IsValidCustomer(custInfo))
                     {
@@ -505,11 +506,11 @@
             ChangeSystemLanguage();
         }
 
-        public ApiCustInfo GetCustInfo(string siteName, string userName)
+        public async Task<ApiCustInfo> GetCustInfo(string siteName, string userName)
         {
             return AppSettings.IsLocal ?
                 new ApiCustInfo { PlayerCurrency = AppSettings.DefaultCurrency } :
-                ServiceWrapper.GetLicenseeCustInfo(siteName, userName, SessionManager.CurrentSession.AffId);
+                await ServiceWrapper.GetLicenseeCustInfo(siteName, userName, SessionManager.CurrentSession.AffId);
         }
 
         private static bool IsValidCustomer(ApiCustInfo custInfo)
