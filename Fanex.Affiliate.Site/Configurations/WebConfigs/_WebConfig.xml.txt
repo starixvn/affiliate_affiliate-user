@@ -2,26 +2,32 @@
 
 // Generated helper templates
 // Generated items
+// Fanex.Affiliate.Site\Configurations\WebConfigs\Web.9bet.kldr.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.9bet.local.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.9bet.sit.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.9bet.production.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.9bet.uat.config
+// Fanex.Affiliate.Site\Configurations\WebConfigs\Web.macaubet.kldr.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.macaubet.local.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.macaubet.sit.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.macaubet.production.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.macaubet.uat.config
+// Fanex.Affiliate.Site\Configurations\WebConfigs\Web.itcbet.kldr.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.itcbet.local.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.itcbet.sit.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.itcbet.production.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.itcbet.uat.config
+// Fanex.Affiliate.Site\Configurations\WebConfigs\Web.athena000.kldr.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.athena000.local.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.athena000.sit.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.athena000.production.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.athena000.uat.config
+// Fanex.Affiliate.Site\Configurations\WebConfigs\Web.aoncash.kldr.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.aoncash.local.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.aoncash.sit.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.aoncash.production.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.aoncash.uat.config
+// Fanex.Affiliate.Site\Configurations\WebConfigs\Web.spondemo.kldr.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.spondemo.local.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.spondemo.sit.config
 // Fanex.Affiliate.Site\Configurations\WebConfigs\Web.spondemo.production.config
