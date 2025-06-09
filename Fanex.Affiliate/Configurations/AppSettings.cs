@@ -293,6 +293,14 @@
             }
         }
 
+        public static bool IsUseProxyToGetSagaApi
+        {
+            get
+            {
+                return Convert.ToBoolean(GetValue("IsUseProxyToGetSagaApi"));
+            }
+        }
+
         #endregion AppSettings
 
         #region AffiliateSettings

@@ -242,10 +242,11 @@
                     result = GetResultModel((int)ErrorCode.WrongUserOrPassword);
                 }
 
-                var currentUserId = UpdateLoginInfo(user.AffId, result.Success);
+                //var currentUserId = UpdateLoginInfo(user.AffId, result.Success);
                 if (result.Success)
                 {
-                    user.OnUserID = currentUserId;
+                    //user.OnUserID = currentUserId;
+                    user.OnUserID = user.AffId + AppSettings.ServerId;
                     user.Username = username;
                     FormsAuthentication.SetAuthCookie(username, true);
                     SessionManager.CurrentSession = new CurrentSession(user, AppSession.Language);
@@ -318,6 +319,12 @@
         public ActionResult ReCheckIn()
         {
             var result = new ResultViewModel();
+
+            if(AppSettings.IsUseProxyToGetSagaApi)
+            {
+                return Json(result);
+            }    
+
             var criteria = new ReCheckInCriteria
             {
                 OnUserID = SessionManager.CurrentSession == null ? 0 : SessionManager.CurrentSession.OnUserID
