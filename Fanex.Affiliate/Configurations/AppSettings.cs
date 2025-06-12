@@ -293,11 +293,11 @@
             }
         }
 
-        public static bool IsUseProxyToGetSagaApi
+        public static bool IsApiDataModifiable
         {
             get
             {
-                return Convert.ToBoolean(GetValue("IsUseProxyToGetSagaApi"));
+                return Convert.ToBoolean(GetValue("IsApiDataModifiable"));
             }
         }
 

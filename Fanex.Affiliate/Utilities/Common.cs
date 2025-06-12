@@ -14,6 +14,7 @@
     using System.Web;
     using Fanex.Affiliate.Constants;
     using Fanex.Affiliate.DTO;
+    using Fanex.Affiliate.Helpers;
     using Fanex.MailDeliver.MailClient;
     using Fanex.MailDeliver.MailClient.API;
     using Fanex.MailDeliver.Model;
@@ -74,6 +75,12 @@
         /// <param name="mailBcc">Mail BCC parameter.</param>
         public static void SendEmail(string message, string mailTo, string subject, string mailBcc = "")
         {
+            if (!Configurations.AppSettings.IsApiDataModifiable)
+            {
+                LogHelper.WriteInfo($"The Aff User doesn't send the mail to {mailTo}: {subject}");
+                return;
+            }
+
             var mailItem = new MailRecord
             {
                 MailTo = mailTo,

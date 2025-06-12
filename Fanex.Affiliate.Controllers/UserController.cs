@@ -320,7 +320,7 @@
         {
             var result = new ResultViewModel();
 
-            if(AppSettings.IsUseProxyToGetSagaApi)
+            if(AppSettings.IsApiDataModifiable)
             {
                 return Json(result);
             }    
