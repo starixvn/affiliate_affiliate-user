@@ -221,7 +221,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Configurations\SPNames\SpNames.banner.9bet.klprod.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.aoncash.klprod.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.athena000.kldr.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.athena000.klprod.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.itcbet.klprod.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.macaubet.klprod.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.spondemo.kldr.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.macaubet.kldr.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.itcbet.kldr.xml" />
@@ -238,6 +243,7 @@
     <Content Include="Configurations\SPNames\SpNames.banner.athena000.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.itcbet.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.macaubet.sit.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.spondemo.klprod.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.spondemo.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.spondemo.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.spondemo.uat.xml" />
@@ -347,6 +353,12 @@
     <Content Include="Configurations\WebConfigs\Web.banner.itcbet.kldr.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.macaubet.kldr.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.spondemo.kldr.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.aoncash.klprod.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.athena000.klprod.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.itcbet.klprod.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.macaubet.klprod.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.spondemo.klprod.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.9bet.klprod.config" />
     <None Include="Properties\PublishProfiles\a.pubxml" />
   </ItemGroup>
   <PropertyGroup>
@@ -376,7 +388,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2014/3/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
+      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/3/28" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
