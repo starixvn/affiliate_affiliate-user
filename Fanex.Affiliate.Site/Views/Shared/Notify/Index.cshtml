@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = string.Format(Lang.AffiliateTitle, AppSettings.SystemDisplayName);
+    ViewBag.Title = string.Format(Lang.AffiliateTitle, AppSettings.AffiliateDisplayName);
     Layout = string.Format("../Layout/Layout{0}/_Layout_Notify.cshtml", AppSettings.Layout);
 }
 @section title
@@ -13,89 +13,135 @@
 </div>
 <div class="span5">
     <ul class="notify-content">
-        @foreach (var lang in AppSettings.BaseLanguages)
+        @try
         {
-            switch (lang.LanguageId)
+            foreach (var lang in AppSettings.BaseLanguages)
             {
-                case "en-US":
-                    <li>We are having server maintenance, website will be unavailable until <span class="cont2">
-                        @ViewBag.EndTime (HK Time GMT +8).</span><br />
-                    Please accept our apologies for the inconvenience caused!
-                    <br />
-                    To reach customer service, please <a href="@ViewBag.AffCustomerServiceUrl"
-                        target="_blank">click here</a> or email to
-                    <a href="@ViewBag.ContactEmail">
-                        @AppSettings.MailContact</a></li>
-                    break;
-                case "id-ID":
-                    <li>Kami sedang melakukan server maintenance, website tidak tersedia hingga pukul <span>@ViewBag.EndTime (HK Time GMT +8).</span><br />
-                                    Mohon maaf untuk ketidaknyamanan ini!
-                                    <br />
-                                    Untuk menghubungi Customer Service, mohon <a href="@ViewBag.AffCustomerServiceUrl"
-                                        target="_blank">klik disini</a> atau email ke 
-                                    <a href="@ViewBag.ContactEmail">
-                                        @AppSettings.MailContact</a></li>
-                    break;
-                case "th-TH":
-                    <li class="end">ทางเวบไซด์มีการปรับปรุงระบบขณะนี้ และไม่สามารถเข้าชมหรือใช้งานได้ไปจนถึงเวลา <span>@ViewBag.EndTime (HK Time GMT +8).</span><br />
-                                    ขออภัยในความไม่สะดวก คะ! <br />
-                                    ติอต่อฝ่ายบริการลูกค้าเราได้ที่<a href="@ViewBag.AffCustomerServiceUrl"
-                                        target="_blank">ห้องสนทนาสด</a>หรือ อีเมลล์
+                switch (lang.LanguageId)
+                {
+                    case "en-US":
+                        <li>
+                            We are having server maintenance, website will be unavailable until <span class="cont2">
+                                @ViewBag.EndTime (HK Time GMT +8).
+                            </span><br />
+                            Please accept our apologies for the inconvenience caused!
+                            <br />
+                            To reach customer service, please <a href="@ViewBag.AffCustomerServiceUrl"
+                                                                 target="_blank">click here</a> or email to
+                            <a href="@ViewBag.ContactEmail">
+                                @AppSettings.MailContact
+                            </a>
+                        </li>
+                        break;
+                    case "id-ID":
+                        <li>
+                            Kami sedang melakukan server maintenance, website tidak tersedia hingga pukul <span>@ViewBag.EndTime (HK Time GMT +8).</span><br />
+                            Mohon maaf untuk ketidaknyamanan ini!
+                            <br />
+                            Untuk menghubungi Customer Service, mohon <a href="@ViewBag.AffCustomerServiceUrl"
+                                                                         target="_blank">klik disini</a> atau email ke
+                            <a href="@ViewBag.ContactEmail">
+                                @AppSettings.MailContact
+                            </a>
+                        </li>
+                        break;
+                    case "th-TH":
+                        <li class="end">
+                            ทางเวบไซด์มีการปรับปรุงระบบขณะนี้ และไม่สามารถเข้าชมหรือใช้งานได้ไปจนถึงเวลา <span>@ViewBag.EndTime (HK Time GMT +8).</span><br />
+                            ขออภัยในความไม่สะดวก คะ! <br />
+                            ติอต่อฝ่ายบริการลูกค้าเราได้ที่<a href="@ViewBag.AffCustomerServiceUrl"
+                                                              target="_blank">ห้องสนทนาสด</a>หรือ อีเมลล์
 
-                                    <a href="@ViewBag.ContactEmail">
-                                        @AppSettings.MailContact</a></li>
-                    break;
-                case "vi-VN":
-                    <li>Hệ thống công ty chúng tôi đang trong thời gian bảo trì đến <span class="cont2">@ViewBag.EndTime (HK Time GMT +8).</span><br />
-                    Thành thật xin lỗi những bất tiện gây ra. 
-                    <br />
-                    Yêu cầu dịch vụ khách hàng, xin vui lòng <a href="@ViewBag.AffCustomerServiceUrl"
-                        target="_blank"> Nhấp vào đây</a> hoặc gửi Email đến 
-                    <a href="@ViewBag.ContactEmail">
-                        @AppSettings.MailContact</a></li>                                                                                      
-                    break;
-                case "zh-CN":
-                    <li>本公司正进行伺服器维护，时间至 <span>@ViewBag.EndTime (HK Time GMT +8).</span><br />
-                                    所有网页将无法登入，不便之处有请见谅！<br />
-                                    如需要在线帮助，有请<a href="@ViewBag.AffCustomerServiceUrl"
-                                        target="_blank">点击这里</a>或邮件至
+                            <a href="@ViewBag.ContactEmail">
+                                @AppSettings.MailContact
+                            </a>
+                        </li>
+                        break;
+                    case "vi-VN":
+                        <li>
+                            Hệ thống công ty chúng tôi đang trong thời gian bảo trì đến <span class="cont2">@ViewBag.EndTime (HK Time GMT +8).</span><br />
+                            Thành thật xin lỗi những bất tiện gây ra.
+                            <br />
+                            Yêu cầu dịch vụ khách hàng, xin vui lòng <a href="@ViewBag.AffCustomerServiceUrl"
+                                                                        target="_blank"> Nhấp vào đây</a> hoặc gửi Email đến
+                            <a href="@ViewBag.ContactEmail">
+                                @AppSettings.MailContact
+                            </a>
+                        </li>
 
-                                    <a href="@ViewBag.ContactEmail">
-                                        @AppSettings.MailContact</a>
-                                        
-                    </li>
-                                   break;
-                case "zh-TW":
-                    <li>本公司正進行伺服器維護，時間至 <span>@ViewBag.EndTime (HK Time GMT +8).</span><br />
-                                    所有網頁將無法登入，不便之處 有請見諒！<br />
-                                    如需要在線幫助，有請<a href="@ViewBag.AffCustomerServiceUrl"
-                                        target="_blank">點擊這裡</a>或郵件至
+                        break;
+                    case "zh-CN":
+                        <li>
+                            本公司正进行伺服器维护，时间至 <span>@ViewBag.EndTime (HK Time GMT +8).</span><br />
+                            所有网页将无法登入，不便之处有请见谅！<br />
+                            如需要在线帮助，有请<a href="@ViewBag.AffCustomerServiceUrl"
+                                         target="_blank">点击这里</a>或邮件至
 
-                                    <a href="@ViewBag.ContactEmail">
-                                        @AppSettings.MailContact</a></li>
-                                   break;
-                case "ko-KR":
-                    <li>서버 보전을 수행하고 있어, 웹사이트는 (홍콩 시간 GMT +8)까지 사용할 <span class="cont2">
-                        @ViewBag.EndTime 수</span> 없습니다. <br />
-                    불편을 초래한 데 대한 저희의 사죄를 받아주시기 바랍니다!
-                    <br />
-                    고객 서비스에 연락하시려면, <a href="@ViewBag.AffCustomerServiceUrl"
-                        target="_blank">이곳을</a> 클릭하시거나
-                    <a href="@ViewBag.ContactEmail"> 로 메일을 보내주시기 바랍니다.
-                        @AppSettings.MailContact</a></li>
-                   break;
-                   
-                default:
-                    <li>We are having server maintenance, website will be unavailable until <span class="cont2">
-                        @ViewBag.EndTime (HK Time GMT +8).</span><br />
-                    Please accept our apologies for the inconvenience caused!
-                    <br />
-                    To reach customer service, please <a href="@ViewBag.AffCustomerServiceUrl"
-                        target="_blank">click here</a> or email to
-                    <a href="@ViewBag.ContactEmail">
-                        @AppSettings.MailContact</a></li>
-                    break;
+                            <a href="@ViewBag.ContactEmail">
+                                @AppSettings.MailContact
+                            </a>
+
+                        </li>
+                        break;
+                    case "zh-TW":
+                        <li>
+                            本公司正進行伺服器維護，時間至 <span>@ViewBag.EndTime (HK Time GMT +8).</span><br />
+                            所有網頁將無法登入，不便之處 有請見諒！<br />
+                            如需要在線幫助，有請<a href="@ViewBag.AffCustomerServiceUrl"
+                                         target="_blank">點擊這裡</a>或郵件至
+
+                            <a href="@ViewBag.ContactEmail">
+                                @AppSettings.MailContact
+                            </a>
+                        </li>
+                        break;
+                    case "ko-KR":
+                        <li>
+                            서버 보전을 수행하고 있어, 웹사이트는 (홍콩 시간 GMT +8)까지 사용할 <span class="cont2">
+                                @ViewBag.EndTime 수
+                            </span> 없습니다. <br />
+                            불편을 초래한 데 대한 저희의 사죄를 받아주시기 바랍니다!
+                            <br />
+                            고객 서비스에 연락하시려면, <a href="@ViewBag.AffCustomerServiceUrl"
+                                               target="_blank">이곳을</a> 클릭하시거나
+                            <a href="@ViewBag.ContactEmail">
+                                로 메일을 보내주시기 바랍니다.
+                                @AppSettings.MailContact
+                            </a>
+                        </li>
+                        break;
+
+                    default:
+                        <li>
+                            We are having server maintenance, website will be unavailable until <span class="cont2">
+                                @ViewBag.EndTime (HK Time GMT +8).
+                            </span><br />
+                            Please accept our apologies for the inconvenience caused!
+                            <br />
+                            To reach customer service, please <a href="@ViewBag.AffCustomerServiceUrl"
+                                                                 target="_blank">click here</a> or email to
+                            <a href="@ViewBag.ContactEmail">
+                                @AppSettings.MailContact
+                            </a>
+                        </li>
+                        break;
+                }
             }
-        }      
+        }
+        catch (Exception)
+        {
+            <li>
+                We are having server maintenance, website will be unavailable until <span class="cont2">
+                    @ViewBag.EndTime (HK Time GMT +8).
+                </span><br />
+                Please accept our apologies for the inconvenience caused!
+                <br />
+                To reach customer service, please <a href="@ViewBag.AffCustomerServiceUrl"
+                                                     target="_blank">click here</a> or email to
+                <a href="@ViewBag.ContactEmail">
+                    @AppSettings.MailContact
+                </a>
+            </li>
+        }
     </ul>
 </div>

@@ -1,5 +1,6 @@
 ﻿namespace Fanex.Affiliate.Controllers
 {
+    using System;
     using System.Web.Mvc;
     using Configurations;
     using ONEbook.UM.Services;
@@ -25,10 +26,19 @@
             ViewBag.StartTime = underMaintenanceTime.From;
             ViewBag.EndTime = underMaintenanceTime.To;
             ViewBag.AffCustomerServiceUrl = AppSettings.AffCustomerServiceUrl;
-            ViewBag.ContactEmail = string.Format(
-                "mailto:{0}?subject=Enquiries%20sent%20from%20{1}%20website",
-                AppSettings.MailContact,
-                AppSettings.SystemDisplayName);
+            try
+            {
+                ViewBag.ContactEmail = string.Format(
+                    "mailto:{0}?subject=Enquiries%20sent%20from%20{1}%20website",
+                    AppSettings.MailContact,
+                    AppSettings.SystemDisplayName);
+            } catch (Exception)
+            {
+                ViewBag.ContactEmail = string.Format(
+                    "mailto:{0}?subject=Enquiries%20sent%20from%20{1}%20website",
+                    AppSettings.MailContact,
+                    AppSettings.AffiliateDisplayName);
+            }
 
             return View();
         }

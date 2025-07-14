@@ -45,6 +45,14 @@
             }
         }
 
+        public static string AffiliateDisplayName
+        {
+            get
+            {
+                return GetValue("AffiliateDisplayName");
+            }
+        }
+
         public static string Theme
         {
             get
