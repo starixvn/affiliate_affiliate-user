@@ -14,6 +14,11 @@ namespace Fanex.Affiliate.Helpers
     {
         private const int LimitedLevelOfInnerException = 3;
 
+        public static void WriteInfo(string message)
+        {
+            LogService.Info(message);
+        }
+
         public static void WriteError(Exception exception, string additionalMessage = null)
         {
             var content = BuildMessage(exception);

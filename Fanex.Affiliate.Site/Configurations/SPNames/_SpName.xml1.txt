@@ -2,6 +2,18 @@
 
 // Generated helper templates
 // Generated items
+// Fanex.Affiliate.Site\Configurations\SPNames\SpName.9bet.klprod.xml
+// Fanex.Affiliate.Site\Configurations\SPNames\SpName.macaubet.klprod.xml
+// Fanex.Affiliate.Site\Configurations\SPNames\SpName.itcbet.klprod.xml
+// Fanex.Affiliate.Site\Configurations\SPNames\SpName.athena000.klprod.xml
+// Fanex.Affiliate.Site\Configurations\SPNames\SpName.aoncash.klprod.xml
+// Fanex.Affiliate.Site\Configurations\SPNames\SpName.spondemo.klprod.xml
+// Fanex.Affiliate.Site\Configurations\SPNames\SpName.9bet.kldr.xml
+// Fanex.Affiliate.Site\Configurations\SPNames\SpName.macaubet.kldr.xml
+// Fanex.Affiliate.Site\Configurations\SPNames\SpName.itcbet.kldr.xml
+// Fanex.Affiliate.Site\Configurations\SPNames\SpName.athena000.kldr.xml
+// Fanex.Affiliate.Site\Configurations\SPNames\SpName.aoncash.kldr.xml
+// Fanex.Affiliate.Site\Configurations\SPNames\SpName.spondemo.kldr.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.9bet.local.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.macaubet.local.xml
 // Fanex.Affiliate.Site\Configurations\SPNames\SpName.itcbet.local.xml

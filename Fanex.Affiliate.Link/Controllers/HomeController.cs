@@ -1,5 +1,6 @@
 ﻿namespace Fanex.Affiliate.Link.Controllers
 {
+    using System.Configuration;
     using System.Web.Mvc;
     using Criteria;
     using ONEbook.UM.AspNetMVC.Filters;
@@ -40,7 +41,7 @@
         /// <returns>Action result.</returns>
         public ActionResult Index()
         {
-            return View();
+            return View(model: ConfigurationManager.AppSettings["SystemName"]);
         }
 
         /// <summary>

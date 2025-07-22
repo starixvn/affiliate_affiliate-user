@@ -221,6 +221,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Configurations\SPNames\SpNames.banner.9bet.klprod.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.aoncash.klprod.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.athena000.kldr.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.athena000.klprod.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.itcbet.klprod.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.macaubet.klprod.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.spondemo.kldr.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.macaubet.kldr.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.itcbet.kldr.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.aoncash.kldr.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.9bet.kldr.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.9bet.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.9bet.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.9bet.production.xml" />
@@ -232,6 +243,7 @@
     <Content Include="Configurations\SPNames\SpNames.banner.athena000.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.itcbet.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.macaubet.sit.xml" />
+    <Content Include="Configurations\SPNames\SpNames.banner.spondemo.klprod.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.spondemo.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.spondemo.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.spondemo.uat.xml" />
@@ -258,6 +270,7 @@
     <Content Include="Scripts\affiliate.media.js" />
     <Content Include="Scripts\SwfVersDetection.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="SpNames.aoncash.kldr.xml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -334,6 +347,18 @@
     <Content Include="Configurations\WebConfigs\Web.banner.athena000.local.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.aoncash.local.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.9bet.local.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.9bet.kldr.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.aoncash.kldr.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.athena000.kldr.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.itcbet.kldr.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.macaubet.kldr.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.spondemo.kldr.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.aoncash.klprod.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.athena000.klprod.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.itcbet.klprod.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.macaubet.klprod.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.spondemo.klprod.config" />
+    <Content Include="Configurations\WebConfigs\Web.banner.9bet.klprod.config" />
     <None Include="Properties\PublishProfiles\a.pubxml" />
   </ItemGroup>
   <PropertyGroup>

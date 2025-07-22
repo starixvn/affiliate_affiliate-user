@@ -274,10 +274,40 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>_ConnectionString.xml.txt</LastGenOutput>
     </Content>
-    <Content Include="Configurations\ConnectionStrings\_ConnectionString.xml.txt">
+    <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.klprod.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.klprod.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.athena000.klprod.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.itcbet.klprod.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.macaubet.klprod.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.spondemo.klprod.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.9bet.klprod.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aoncash.klprod.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.athena000.klprod.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.itcbet.klprod.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.macaubet.klprod.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.spondemo.klprod.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </Content>
+    <None Include="Configurations\ConnectionStrings\_ConnectionString.xml.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </None>
+    <Content Include="Configurations\SPNames\SpName.9bet.kldr.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.9bet.klprod.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.9bet.local.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
@@ -289,6 +319,12 @@
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.9bet.uat.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.aoncash.kldr.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.aoncash.klprod.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.aoncash.local.xml">
@@ -303,6 +339,12 @@
     <Content Include="Configurations\SPNames\SpName.aoncash.uat.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
+    <Content Include="Configurations\SPNames\SpName.athena000.kldr.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.athena000.klprod.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
     <Content Include="Configurations\SPNames\SpName.athena000.local.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
@@ -313,6 +355,12 @@
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.athena000.uat.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.itcbet.kldr.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.itcbet.klprod.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.itcbet.local.xml">
@@ -327,6 +375,12 @@
     <Content Include="Configurations\SPNames\SpName.itcbet.uat.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
+    <Content Include="Configurations\SPNames\SpName.macaubet.kldr.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.macaubet.klprod.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
     <Content Include="Configurations\SPNames\SpName.macaubet.local.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
@@ -337,6 +391,12 @@
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.macaubet.uat.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.spondemo.kldr.xml">
+      <DependentUpon>_SpName.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\SPNames\SpName.spondemo.klprod.xml">
       <DependentUpon>_SpName.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\SPNames\SpName.spondemo.local.xml">
@@ -358,11 +418,6 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>_SpName.xml1.txt</LastGenOutput>
     </Content>
-    <Content Include="Configurations\SPNames\_SpName.xml.txt">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_SpName.xml.tt</DependentUpon>
-    </Content>
     <Content Include="Configurations\SPNames\_SpName.xml1.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -378,11 +433,30 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>_WebConfig.xml.txt</LastGenOutput>
     </Content>
-    <Content Include="Configurations\WebConfigs\_WebConfig.xml.txt">
+    <Content Include="Configurations\WebConfigs\Web.9bet.klprod.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.aoncash.klprod.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.athena000.klprod.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.itcbet.klprod.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <None Include="Configurations\WebConfigs\Web.klprod.config" />
+    <Content Include="Configurations\WebConfigs\Web.macaubet.klprod.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.spondemo.klprod.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <None Include="Configurations\WebConfigs\_WebConfig.xml.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
-    </Content>
+    </None>
     <Content Include="Content\bootstrap\img\glyphicons-halflings-white.png" />
     <Content Include="Content\bootstrap\img\glyphicons-halflings.png" />
     <Content Include="Content\bootstrap\js\bootstrap-affix.js" />
@@ -4138,6 +4212,30 @@
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.macaubet.local.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.athena000.local.config" />
     <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.spondemo.local.config" />
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.9bet.kldr.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.aoncash.kldr.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.athena000.kldr.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.itcbet.kldr.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.macaubet.kldr.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\ConnectionStrings\Web.ConnectionString.spondemo.kldr.config">
+      <DependentUpon>_ConnectionString.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\AppSettings\Web.AppSetting.9bet.kldr.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.aoncash.kldr.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.athena000.kldr.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.itcbet.kldr.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.macaubet.kldr.config" />
+    <Content Include="Configurations\AppSettings\Web.AppSetting.spondemo.kldr.config" />
     <None Include="Configurations\SPNames\_SpNameConfiguration.ttinclude" />
     <None Include="Configurations\TemplateFilemanager.CS.ttinclude" />
     <Content Include="Configurations\WebConfigs\Web.athena000.production.config">
@@ -4212,6 +4310,25 @@
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\WebConfigs\Web.spondemo.sit.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.9bet.kldr.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.aoncash.kldr.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.athena000.kldr.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.itcbet.kldr.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <None Include="Configurations\WebConfigs\Web.kldr.config" />
+    <Content Include="Configurations\WebConfigs\Web.macaubet.kldr.config">
+      <DependentUpon>_WebConfig.xml.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\WebConfigs\Web.spondemo.kldr.config">
       <DependentUpon>_WebConfig.xml.tt</DependentUpon>
     </Content>
     <None Include="Content\bootstrap\js\.jshintrc" />
@@ -4535,7 +4652,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_StartDate="2014/1/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/1/28" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />

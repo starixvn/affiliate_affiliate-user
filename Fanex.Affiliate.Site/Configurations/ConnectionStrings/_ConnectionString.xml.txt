@@ -2,15 +2,27 @@
 
 // Generated helper templates
 // Generated items
+// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.9bet.klprod.config
+// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.9bet.kldr.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.9bet.production.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.9bet.uat.config
+// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.macaubet.klprod.config
+// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.macaubet.kldr.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.macaubet.production.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.macaubet.uat.config
+// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.itcbet.klprod.config
+// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.itcbet.kldr.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.itcbet.production.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.itcbet.uat.config
+// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.aoncash.klprod.config
+// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.aoncash.kldr.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.aoncash.production.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.aoncash.uat.config
+// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.athena000.klprod.config
+// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.athena000.kldr.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.athena000.production.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.athena000.uat.config
+// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.spondemo.klprod.config
+// Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.spondemo.kldr.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.spondemo.production.config
 // Fanex.Affiliate.Site\Configurations\ConnectionStrings\Web.ConnectionString.spondemo.uat.config

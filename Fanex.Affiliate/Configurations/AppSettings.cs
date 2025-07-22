@@ -45,6 +45,14 @@
             }
         }
 
+        public static string AffiliateDisplayName
+        {
+            get
+            {
+                return GetValue("AffiliateDisplayName");
+            }
+        }
+
         public static string Theme
         {
             get
@@ -290,6 +298,14 @@
             get
             {
                 return Convert.ToBoolean(GetValue("IsRegisterSentry"));
+            }
+        }
+
+        public static bool IsApiDataModifiable
+        {
+            get
+            {
+                return Convert.ToBoolean(GetValue("IsApiDataModifiable"));
             }
         }
 

@@ -15,7 +15,7 @@
         [HttpGet]
         public ActionResult Index()
         {
-            return View();
+            return View(model: ConfigurationManager.AppSettings["SystemName"]);
         }
 
         [HttpGet]

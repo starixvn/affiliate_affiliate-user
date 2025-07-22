@@ -192,10 +192,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\SpNames.xml" />
+    <Content Include="Configurations\SPNames\SpNames.9bet.klprod.xml" />
     <Content Include="Configurations\SPNames\SpNames.9bet.local.xml" />
+    <Content Include="Configurations\SPNames\SpNames.9bet.kldr.xml" />
+    <Content Include="Configurations\SPNames\SpNames.aoncash.klprod.xml" />
+    <Content Include="Configurations\SPNames\SpNames.athena000.klprod.xml" />
+    <Content Include="Configurations\SPNames\SpNames.itcbet.klprod.xml" />
+    <Content Include="Configurations\SPNames\SpNames.macaubet.kldr.xml" />
+    <Content Include="Configurations\SPNames\SpNames.itcbet.kldr.xml" />
+    <Content Include="Configurations\SPNames\SpNames.macaubet.klprod.xml" />
+    <Content Include="Configurations\SPNames\SpNames.spondemo.kldr.xml" />
+    <Content Include="Configurations\SPNames\SpNames.athena000.kldr.xml" />
     <Content Include="Configurations\SPNames\SpNames.aoncash.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.9bet.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.9bet.uat.xml" />
+    <Content Include="Configurations\SPNames\SpNames.aoncash.kldr.xml" />
     <Content Include="Configurations\SPNames\SpNames.athena000.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.aoncash.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.aoncash.uat.xml" />
@@ -203,6 +214,7 @@
     <Content Include="Configurations\SPNames\SpNames.aoncash.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.athena000.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.itcbet.sit.xml" />
+    <Content Include="Configurations\SPNames\SpNames.spondemo.klprod.xml" />
     <Content Include="Configurations\SPNames\SpNames.spondemo.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.macaubet.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.spondemo.production.xml" />
@@ -233,7 +245,14 @@
     <Content Include="Views\Home\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Configurations\WebConfigs\Web.spondemo.kldr.config" />
+    <Content Include="Configurations\WebConfigs\Web.athena000.kldr.config" />
+    <Content Include="Configurations\WebConfigs\Web.itcbet.kldr.config" />
+    <Content Include="Configurations\WebConfigs\Web.macaubet.kldr.config" />
+    <Content Include="Configurations\WebConfigs\Web.aoncash.kldr.config" />
+    <Content Include="Configurations\WebConfigs\Web.9bet.kldr.config" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
@@ -308,6 +327,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\UnderMaintenance\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configurations\WebConfigs\Web.9bet.klprod.config" />
+    <Content Include="Configurations\WebConfigs\Web.aoncash.klprod.config" />
+    <Content Include="Configurations\WebConfigs\Web.athena000.klprod.config" />
+    <Content Include="Configurations\WebConfigs\Web.itcbet.klprod.config" />
+    <Content Include="Configurations\WebConfigs\Web.macaubet.klprod.config" />
+    <Content Include="Configurations\WebConfigs\Web.spondemo.klprod.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
