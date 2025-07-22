@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Functions>
-  <Function Name="Aff-Banner">
-    <Setting Key="Aff_Banner_UpdateStatistic" SpName="Aff_Banner_UpdateStatistic" DbName="DBAFFSPONDEMO.Affiliate_Spondemo.wsv_afinet" Plain="0" />
-    <Setting Key="Aff_Banner_SelInfo" SpName="Aff_Banner_SelInfo" DbName="DBAFFSPONDEMO.Affiliate_Spondemo.wsv_afinet" Plain="0" />
-  </Function>
-</Functions>

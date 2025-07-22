@@ -223,38 +223,20 @@
   <ItemGroup>
     <Content Include="Configurations\SPNames\SpNames.banner.9bet.klprod.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.aoncash.klprod.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.athena000.kldr.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.athena000.klprod.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.itcbet.klprod.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.macaubet.klprod.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.spondemo.kldr.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.macaubet.kldr.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.itcbet.kldr.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.aoncash.kldr.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.9bet.kldr.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.9bet.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.9bet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.9bet.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.9bet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.aoncash.sit.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.aoncash.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.aoncash.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.aoncash.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.athena000.sit.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.itcbet.sit.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.macaubet.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.spondemo.klprod.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.spondemo.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.spondemo.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.spondemo.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.spondemo.sit.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.athena000.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.athena000.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.athena000.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.itcbet.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.itcbet.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.itcbet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.banner.macaubet.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.macaubet.local.xml" />
     <Content Include="Configurations\SPNames\SpNames.banner.macaubet.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.xml">
@@ -319,40 +301,22 @@
     <Content Include="Views\MarketingTools\PageNotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.banner.athena000.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.athena000.sit.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.athena000.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.itcbet.production.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.itcbet.local.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.itcbet.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.macaubet.production.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.macaubet.local.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.macaubet.uat.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="Deployment.ignore" />
-    <Content Include="Configurations\WebConfigs\Web.banner.spondemo.sit.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.spondemo.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.itcbet.sit.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.macaubet.sit.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.aoncash.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.aoncash.sit.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.aoncash.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.9bet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.9bet.sit.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.9bet.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.spondemo.uat.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.spondemo.local.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.athena000.local.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.aoncash.local.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.9bet.local.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.9bet.kldr.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.aoncash.kldr.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.athena000.kldr.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.itcbet.kldr.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.macaubet.kldr.config" />
-    <Content Include="Configurations\WebConfigs\Web.banner.spondemo.kldr.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.aoncash.klprod.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.athena000.klprod.config" />
     <Content Include="Configurations\WebConfigs\Web.banner.itcbet.klprod.config" />
@@ -388,7 +352,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/3/28" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2014/3/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />

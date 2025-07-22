@@ -194,39 +194,21 @@
     <Content Include="App_Data\SpNames.xml" />
     <Content Include="Configurations\SPNames\SpNames.9bet.klprod.xml" />
     <Content Include="Configurations\SPNames\SpNames.9bet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.9bet.kldr.xml" />
     <Content Include="Configurations\SPNames\SpNames.aoncash.klprod.xml" />
     <Content Include="Configurations\SPNames\SpNames.athena000.klprod.xml" />
     <Content Include="Configurations\SPNames\SpNames.itcbet.klprod.xml" />
-    <Content Include="Configurations\SPNames\SpNames.macaubet.kldr.xml" />
-    <Content Include="Configurations\SPNames\SpNames.itcbet.kldr.xml" />
     <Content Include="Configurations\SPNames\SpNames.macaubet.klprod.xml" />
-    <Content Include="Configurations\SPNames\SpNames.spondemo.kldr.xml" />
-    <Content Include="Configurations\SPNames\SpNames.athena000.kldr.xml" />
     <Content Include="Configurations\SPNames\SpNames.aoncash.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.9bet.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.9bet.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.aoncash.kldr.xml" />
     <Content Include="Configurations\SPNames\SpNames.athena000.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.aoncash.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.aoncash.uat.xml" />
-    <Content Include="Configurations\SPNames\SpNames.9bet.sit.xml" />
-    <Content Include="Configurations\SPNames\SpNames.aoncash.sit.xml" />
-    <Content Include="Configurations\SPNames\SpNames.athena000.sit.xml" />
-    <Content Include="Configurations\SPNames\SpNames.itcbet.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.spondemo.klprod.xml" />
     <Content Include="Configurations\SPNames\SpNames.spondemo.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.macaubet.sit.xml" />
-    <Content Include="Configurations\SPNames\SpNames.spondemo.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.athena000.production.xml" />
-    <Content Include="Configurations\SPNames\SpNames.spondemo.sit.xml" />
     <Content Include="Configurations\SPNames\SpNames.spondemo.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.athena000.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.itcbet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.itcbet.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.itcbet.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.macaubet.local.xml" />
-    <Content Include="Configurations\SPNames\SpNames.macaubet.production.xml" />
     <Content Include="Configurations\SPNames\SpNames.macaubet.uat.xml" />
     <Content Include="Configurations\SPNames\SpNames.xml" />
     <Content Include="Global.asax" />
@@ -244,14 +226,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.spondemo.kldr.config" />
-    <Content Include="Configurations\WebConfigs\Web.athena000.kldr.config" />
-    <Content Include="Configurations\WebConfigs\Web.itcbet.kldr.config" />
-    <Content Include="Configurations\WebConfigs\Web.macaubet.kldr.config" />
-    <Content Include="Configurations\WebConfigs\Web.aoncash.kldr.config" />
-    <Content Include="Configurations\WebConfigs\Web.9bet.kldr.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
@@ -285,37 +259,21 @@
     <Content Include="Views\Home\PageNotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.athena000.production.config" />
     <Content Include="Configurations\WebConfigs\Web.athena000.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.itcbet.production.config" />
     <Content Include="Configurations\WebConfigs\Web.itcbet.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.macaubet.production.config" />
     <Content Include="Configurations\WebConfigs\Web.macaubet.uat.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.spondemo.sit.config" />
-    <Content Include="Configurations\WebConfigs\Web.spondemo.production.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Configurations\WebConfigs\Web.spondemo.uat.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.itcbet.sit.config" />
-    <Content Include="Configurations\WebConfigs\Web.macaubet.sit.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.aoncash.production.config" />
     <Content Include="Configurations\WebConfigs\Web.aoncash.uat.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configurations\WebConfigs\Web.9bet.production.config" />
-    <Content Include="Configurations\WebConfigs\Web.9bet.sit.config" />
-    <Content Include="Configurations\WebConfigs\Web.aoncash.sit.config" />
     <Content Include="Configurations\WebConfigs\Web.9bet.uat.config" />
-    <Content Include="Configurations\WebConfigs\Web.athena000.sit.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Configurations\WebConfigs\Web.spondemo.local.config" />
@@ -363,7 +321,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2014/3/28" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
+      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2014/3/28" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
